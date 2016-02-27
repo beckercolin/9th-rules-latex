@@ -33,6 +33,8 @@
 \newcommand{\labels@trooptype}{Type de troupe}
 \newcommand{\labels@specialrules}{Règles spéciales}
 \newcommand{\labels@equipment}{Équipement}
+\newcommand{\labels@weapons}{Armes}
+\newcommand{\labels@armour}{Armure}
 \newcommand{\labels@options}{Options}
 \newcommand{\labels@commandgroup}{État-Major}
 \newcommand{\labels@mounts}{Montures}
@@ -254,7 +256,6 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 \newnamemacro{\inspiringpresence}{Présence Charismatique}
 \newnamemacro{\lightcover}{Couvert Léger}
 \newnamemacro{\monstrousrank}{Rang Monstrueux}
-\newnamemacro{\oneofakind}{Uni\-que}
 \newnamemacro{\ordnance}{Artillerie}
 \newnamemacro{\parry}{Parade}
 \newnamemacro{\raisewounds}{Ressusciter des Figurines}
@@ -266,24 +267,24 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 
 %%% Equipment %%%
 
-\newcommand{\innatedefence}[1]{Protection innée\ifblank{#1}{}{~(#1+)}}
-\newcommand{\mountsprotection}[1]{Protection de monture\ifblank{#1}{}{~(#1+)}}
-\newnamemacro{\la}{Armure légère}
-\newnamemacro{\ha}{Armure lourde}
-\newnamemacro{\platearmour}{Armure de plates}
-\newnamemacro{\hw}{Arme de base}
-\newnamemacro{\ahw}{Arme de base additionnelle}
+\newcommand{\innatedefence}[1]{Protection Innée\ifblank{#1}{}{~(#1+)}}
+\newcommand{\mountsprotection}[1]{Protection de Monture\ifblank{#1}{}{~(#1+)}}
+\newnamemacro{\la}{Armure Légère}
+\newnamemacro{\ha}{Armure Lourde}
+\newnamemacro{\platearmour}{Armure de Plates}
+\newnamemacro{\hw}{Arme de Base}
+\newnamemacro{\pw}{Paire d'Armes}
 \newnamemacro{\spear}{Lance}
 \newnamemacro{\halberd}{Hallebarde}
-\newnamemacro{\gw}{Arme lourde}
-\newnamemacro{\lance}{Lance de cavalerie}
-\newnamemacro{\lightlance}{Lance légère}
+\newnamemacro{\gw}{Arme Lourde}
+\newnamemacro{\lance}{Lance de Cavalerie}
+\newnamemacro{\lightlance}{Lance Légère}
 \newnamemacro{\shield}{Bouclier}
 \newnamemacro{\barding}{Caparaçon}
-\newnamemacro{\throwingweapons}{Armes de jet}
+\newnamemacro{\throwingweapons}{Armes de Jet}
 
 \newnamemacro{\boltthrower}{Baliste}
-\newnamemacro{\artilleryweapon}{Arme d'artillerie}
+\newnamemacro{\artilleryweapon}{Arme d'Artillerie}
 
 
 %%% Troop types %%%
@@ -309,18 +310,26 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 
 %%% Profile wording
 
-\newcommand{\magicalitemsallowance}{Peut prendre des Objets magiques}
-\newcommand{\magicalweaponallowance}{Peut prendre une Arme magique}
+\newnamemacro{\oneofakind}{(Uni\-que)}
+\newcommand{\onechoiceonly}{(un seul choix)}
+\newcommand{\onfootonly}{(à pied seulement)}
+\newcommand{\magicalitemsallowance}{Peut prendre des Objets Magiques}
+\newcommand{\magicalweaponallowance}{Peut prendre une Arme Magique}
 \newcommand{\anyofthefollowing}{\optionschoice{Peut prendre :}}
-\newcommand{\weapononechoice}{\optionschoice{Peut prendre une arme parmi :}}
-\newcommand{\armouronechoice}{\optionschoice{Peut prendre une armure parmi :}}
+\newcommand{\weapononechoice}{\optionschoice{Peut prendre une arme \onechoiceonly{} :}}
+\newcommand{\weaponschoice}{\optionschoice{Peut prendre des armes :}}
+\newcommand{\shootingweapononechoice}{\optionschoice{Peut prendre une arme de tir \onechoiceonly{} :}}
+\newcommand{\combatweapononechoice}{\optionschoice{Peut prendre une arme de corps à corps \onechoiceonly{} :}}
+\newcommand{\armouronechoice}{\optionschoice{Peut prendre une armure \onechoiceonly{} :}}
 \newcommand{\magiclevelchoice}{\optionschoice{Peut devenir, au choix :}}
 \newcommand{\bsboption}{Peut devenir Porteur de la Grande Bannière}
-\newcommand{\maybeupgradedto}{Peut être amélioré en}
+\newcommand{\mayupgradeto}{Peut être amélioré en}
 \newcommand{\mustbecomeoneofthefollowing}{\optionschoice{Doit devenir un choix parmi :}}
 \newcommand{\maytakeoneofthefollowing}{\optionschoice{Peut prendre un choix parmi :}}
 \newcommand{\maytakeuptotwoofthefollowing}{\optionschoice{Peut prendre jusqu'à deux choix parmi :}}
 \newcommand{\Maytakea}{Peut prendre un}
+\newcommand{\MayreplaceXwithY}[2]{Peut remplacer #1 par #2}
+\newcommand{\MayreplaceXwithList}[1]{\optionschoice{Peut remplacer #1 par :}}
 
 \newcommand{\veteranstandardbearernote}{%
 Un Porte-étendard Vétéran est Unique (un seul Vétéran dans toute l'armée) et peut choisir une Bannière Magique dans un budget de 25 pts.

@@ -217,6 +217,10 @@
 \def\endpricelist{\end{description}\end{samepage}}
 \newcommand{\pricelistitem}[2]{\item \option{\textbf{#1}}{#2}\newline}
 
+\newcommand{\startitemlist}{\begin{samepage}\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm]}
+\def\enditemlist{\end{description}\end{samepage}}
+\newcommand{\listitem}[1]{\item[#1\spacebeforecolon{}:]}
+
 \newenvironment{customitemize}{\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0cm]}{\end{description}}
 \newenvironment{customsubitemize}{\begin{itemize}[label={-}, labelsep=0.1cm, topsep=0cm, parsep=0cm, itemsep=0cm, leftmargin=0.4cm, labelindent=0cm]}{\end{itemize}}
 
@@ -379,7 +383,9 @@
 }
 
 % Equipment entry.
-\newcommand{\equipment}[1]{\unitentry{#1}{\textit{\labels@equipment\spacebeforecolon{}:}\newline\hspace*{-\fontdimen2\font}\expandafter\equipmentlist\expandafter{#1}.}}
+\newcommand{\weapons}[1]{\unitentry{#1}{\textit{\labels@weapons\spacebeforecolon{}:}\newline\hspace*{-\fontdimen2\font}\expandafter\equipmentlist\expandafter{#1}.}}
+
+\newcommand{\armour}[1]{\unitentry{#1}{\textit{\labels@armour\spacebeforecolon{}:}\newline\hspace*{-\fontdimen2\font}\expandafter\equipmentlist\expandafter{#1}.}}
 
 
 %%% Options %%%
@@ -620,6 +626,8 @@
 \define@key{unit}{magiclevel}{\def\unit@magiclevel{#1}}
 \define@key{unit}{magicpaths}{\def\unit@magicpaths{#1}}
 \define@key{unit}{equipment}{\def\unit@equipment{#1}}
+\define@key{unit}{weapons}{\def\unit@weapons{#1}}
+\define@key{unit}{armour}{\def\unit@armour{#1}}
 \define@key{unit}{wizardconclave}{\def\unit@wizardconclave{#1}}
 \define@key{unit}{unitequipment}{\def\unit@unitequipment{#1}}
 \define@key{unit}{options}{\def\unit@options{#1}}
@@ -691,7 +699,7 @@
 
 \newcommand{\defunit}{
 	\setkeys{unit}{%
-		name=, profile=, cost=, invocation=, costpermodel=, maxmodels=, type=, unitsize=, basesize=, commonspecialrules=, commontype=, specialrules=, magiclevel=, magicpaths=, equipment=, wizardconclave=, unitequipment=, options=, mounts=, commandgroup=, unitrules=, additional=%
+		name=, profile=, cost=, invocation=, costpermodel=, maxmodels=, type=, unitsize=, basesize=, commonspecialrules=, commontype=, specialrules=, magiclevel=, magicpaths=, equipment=, weapons=, armour=, wizardconclave=, unitequipment=, options=, mounts=, commandgroup=, unitrules=, additional=%
 	}%
 	\setkeys{unit}%
 }
@@ -723,13 +731,17 @@
 	\begin{multicols}{2}
 		\raggedcolumns
 		{\setlength{\parskip}{0.2cm}
+		\expandafter\ifblank\expandafter{\unit@equipment}{}{\noindent\parbox{\columnwidth}{\equipment{\unit@equipment}}}
+				
+		\expandafter\ifblank\expandafter{\unit@weapons}{}{\noindent\parbox{\columnwidth}{\weapons{\unit@weapons}}}
+		
+		\expandafter\ifblank\expandafter{\unit@armour}{}{\noindent\parbox{\columnwidth}{\armour{\unit@armour}}}
+		
 		\expandafter\ifblank\expandafter{\unit@commonspecialrules}{}{\noindent\parbox{\columnwidth}{\commonspecialrules{\unit@commontype}{\unit@commonspecialrules}}}
 		
 		\expandafter\ifblank\expandafter{\unit@specialrules}{}{\noindent\parbox{\columnwidth}{\specialrules{\unit@specialrules}}}
 		
 		\expandafter\ifblank\expandafter{\unit@magiclevel}{}{\noindent\parbox{\columnwidth}{\magic{\unit@magiclevel}{\unit@magicpaths}}}
-		
-		\expandafter\ifblank\expandafter{\unit@equipment}{}{\noindent\parbox{\columnwidth}{\equipment{\unit@equipment}}}
 		
 		\expandafter\ifblank\expandafter{\unit@wizardconclave}{}{\noindent\parbox{\columnwidth}{\magicwizardconclave{\unit@wizardconclave}}}
 		}
