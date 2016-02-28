@@ -6,7 +6,7 @@
 
 % Army special rules
 
-\newcommand{\sonsoftheavalanche}{\specialrule{Avalanche de Viande}\xspace} % Changer le nom français aussi ?
+\newcommand{\sonsoftheavalanche}{\specialrule{Avalanche de Viande}\xspace}
 \newcommand{\scraplinglookout}{\specialrule{Guetteur Scrapulin}}
 
 % Army common type special rules
@@ -41,7 +41,7 @@
 \newcommand{\battlescarred}{Balafres de Guerre}
 \newcommand{\touchoffrost}{Toucher de Givre}
 \newcommand{\itsatrap}{C'est un Piège !}
-\newcommand{\stoneskin}{Ossature de Granit} % Changer le nom ?
+\newcommand{\stoneskin}{Ossature de Granit}
 \newcommand{\freezingaura}{Aura Glaciale}
 
 %%% Names
@@ -49,9 +49,13 @@
 % Characters
 
 \newcommand{\greatkhan}{Grand Khan}
-\newcommand{\greatshaman{Grand Chaman}
+\newcommand{\greatkhans}{Grands Khans}
+\newcommand{\greatshaman}{Grand Chaman}
+\newcommand{\greatshamans}{Grands Chamans}
 \newcommand{\khan}{Khan}
+\newcommand{\khans}{Khans}
 \newcommand{\shaman}{Chaman}
+\newcommand{\shamans}{Chamans}
 \newcommand{\mammothhunter}{Chasseur de Mastodonte}
 \newcommand{\mammothhunters}{Chasseurs de Mastodonte}
 
@@ -76,6 +80,7 @@
 % Rare
 
 \newcommand{\thundercannon}{Crache-Tonnerre}
+\newcommand{\thundercannons}{Craches-Tonnerre}
 \newcommand{\scratapult}{Lance-Débris}
 \newcommand{\scratapults}{Lance-Débris}
 \newcommand{\rockaurochs}{Aurochs de Pierre}
@@ -103,7 +108,7 @@
 \newcommand{\onlyifpathoffireoralchemyischosen}{seulement si la Discipline \fire{} ou \alchemy{} est choisie}
 \newcommand{\maytakescraplingloukout}{Peut prendre un \scraplinglookout}
 \newcommand{\maytakefireblessing}{Peut prendre une \fireblessing}
-\newcommand{\onlyifpathoffireoralchemyischosen}{seulement si la Discipline \fire{} est choisie}
+\newcommand{\onlyifpathoffireischosen}{seulement si la Discipline \fire{} est choisie}
 \newcommand{\onlywithlightarmour}{(seulement avec une armure légère)}
 \newcommand{\riderchoice}{\optionschoice{Le \rider{} peut remplacer son \ogrecrossbow{} par :}}
 \newcommand{\anyriderchoice}{\optionschoice{Chaque \rider{} peut remplacer son arme par :}}
@@ -232,33 +237,60 @@ Les unités avec cette règle spéciale et disposant d'un Porte-étendard doiven
 
 \startarmyarmoury
 
-\startitemlist
+\startitemlistonecol
 
-\listitem{\ironfist} Arme de Corps à Corps. \requirestwohands{}. Cette arme ajoute +1 à la Sauvegarde d'Armure de la figurine, compte comme une \pw{} \newrule{et donne la règle \parry{}, même aux figurines montées}.
+\listitemonecol{\ironfist} Arme de Corps à Corps. \requirestwohands{}. Cette arme ajoute +1 à la Sauvegarde d'Armure de la figurine, compte comme une \pw{} \newrule{et donne la règle \parry{}, même aux figurines montées}.
 
-\listitem{\ogrepistol} Arme de Tir. \range{24}, Force 4, \quicktofire{}, \armourpiercing{1}, compte comme une \pw{} au corps à corps.
+\listitemonecol{\ogrepistol} Arme de Tir. \range{24}, Force 4, \quicktofire{}, \armourpiercing{1}, compte comme une \pw{} au Corps à Corps.
 
-\listitem{\braceofogrepistols} Arme de Tir. \range{24}, Force 4, \quicktofire{}, \armourpiercing{1}, \multipleshots{2}, compte comme une \pw{} au corps à corps.
+\listitemonecol{\braceofogrepistols} Arme de Tir. \range{24}, Force 4, \quicktofire{}, \armourpiercing{1}, \multipleshots{2}, compte comme une \pw{} au Corps à Corps.
 
-\listitem{\ogrecrossbow} Arme de Tir. \range{30}, Force 5, \newrule{\armourpiercing{1}}, pénètre les rangs comme une Baliste.
+\listitemonecol{\ogrecrossbow} Arme de Tir. \range{30}, Force 5, \newrule{\armourpiercing{1}}, pénètre les rangs comme une Baliste.
 
-\listitem{\huntingspear} Arme de Tir. \range{12}, Force de l'utilisateur +1, \quicktofire{}, \removedrule{\lethalstrike}, \newrule{\multiplewounds{1D3}{\monsters{}, \riddenmonsters{}}}.
+\listitemonecol{\huntingspear} Arme de Tir. \range{12}, Force de l'utilisateur +1, \quicktofire{}, \removedrule{\lethalstrike}, \newrule{\multiplewounds{1D3}{\monsters{}, \riddenmonsters{}}}.
 
-\enditemlist
+\enditemlistonecol
 
 \closearmyarmoury
 
 
 \startarmynewsection{Grands Noms}
 
-Chaque Personnage Ogre peut prendre un unique Grand Nom. \newrule{Un même Grand Nom ne peut être dupliqué au sens d'une même armée}.
+Chaque Personnage Ogre peut prendre un unique Grand Nom. \newrule{Un même Grand Nom ne peut être dupliqué au sein d'une même armée}.
 
-\startpricelist
+\begin{multicols}{2}
+\startpricelistNSP
 
-\pricelistitem{Poing de l'Enfer}}{50}
+\pricelistitem{Cœur Sauvage}{50}Seuls les \mammothhunters{} peuvent choisir ce Grand Nom.\newline Il perd alors la règle \notaleader{} et peut être promu Général de l'armée. Un autre \mammothhunter{} dans l'armée peut être promu Porteur de la Grande Bannière pour 25 pts. Une unité de \yetis{} et une seule unité de \sabretoothtigers{} peuvent être prises comme Unités de Base. Votre armée ne doit pas inclure de \greatkhans{}, de \khans{}, de \shamans{} avec la \fireblessing{}, de \greatshamans{} avec la \greaterfireblessing{}, de \bruisers{}, de \mercenaryveterans{}, de \bombardiers{} ou de \thundercannons{}.
 
-\endpricelist
+\pricelistitem{Poing de l'Enfer}{50}Seul un \greatkhan{} peut prendre ce Grand Nom.\newline Il prend possession d'une Arme Magique de type \ironfist{}. Toute figurine dans l'armée peut prendre une Marque des Dieux Sombres du Livre d'Armée des Guerriers des Dieux Sombres, pour \newrule{le coût suivant} :
+{\fontsize{6}{7.2}\selectfont
+\begin{center}\rowcolors{1}{white}{black!10}\begin{tabular}{@{}lllll@{}}
+& Pestilence & Courroux & Changement & Luxure \tabularnewline
+Inf. Monstrueuse & 6 & 6 & 3 & 4 \tabularnewline
+Cav. Monstrueuse & 8 & 6 & 4 & 6 \tabularnewline
+\chariot{} & 8 & 6 & 4 & 6 \tabularnewline
+\riddenmonster{} & 5 & 10 & 3 & 15 \tabularnewline
+Seigneur & 30 & 40 & 40 & 15 \tabularnewline
+Héros & 25 & 25 & 25 & 15 \tabularnewline
+\end{tabular}\end{center}
+}
+Toute figurine peut aussi choisir la Marque du Chaos Intégral pour \newrule{3 pts} par figurine.\newline
+Les \shamans{} et les \greatshamans{} avec une Marque différente du Chaos Intégral peuvent choisir une Discipline accessible normalement à cette Marque, en plus des Disciplines qui leurs sont habituellement proposées. Les \shamans{} et les \greatshamans{} ne peuvent pas prendre la Marque du Courroux.\newline
+L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scraplingtrappers{}, de \yetis{}, de \sabretoothtigers{} ou de \scratapults{}.
 
+\pricelistitem{Mâchoire Pourrie}{30}Le Personnage gagne des \poisonedattacks{}. Pour la durée d'une phase de Corps à Corps, toutes les figurines de son unité peuvent aussi gagner des \poisonedattacks{}. Le joueur doit déclarer au début de la phase de Corps à Corps qu'il a choisi qu'il utilise cette capacité.
+
+\pricelistitem{Chasseur de Têtes}{25}Le Personnage se gave de la chair de ses ennemis tombés, même au plus fort de la bataille. A la fin de toute phase de Corps à Corps durant laquelle le Personnage a tué une ou plusieurs figurines, et dans la mesure où il n'est pas en fuite, lancez 1D6. Sur un résultat de \newrule{3+}, il regagne un Point de Vie qu'il a perdu plus tôt dans la bataille.
+
+\pricelistitem{Mangeur de Troll}{25}Le Personnage, connu pour son régime peu savoureux, gagne \regeneration{5} et \stupidity{}. De plus, il obtient \multiplewounds{2}{\monstrousinfantry{}}.
+
+\pricelistitem{Maître des Trésors de Guerre}{20}Ce Grand Nom ne peut pas être pris par un \wizard{} ou un \mammothhunter{}.\newline Le Personnage avec ce Grand Nom gagne la règle spéciale \weaponmaster{} et une \platearmour{}, et peut acquérir autant d'armes standard de corps à corps et de tir auxquelles il peut accéder plutôt qu'une seule de chaque catégorie.
+
+\pricelistitem{Pourfendeur de Moelle Épinière}{20}\removedrule{Ce Grand Nom ne peut pas être pris par un \wizard{}}.\newline Seules les figurines à pied peuvent prendre ce Grand Nom. Le Personnage bénéficie des règles spéciales \devastatingcharge{} et \thunderouscharge{}, qui exceptionnellement affecte aussi les \impacthits{} et le \stomp{}.
+
+\endpricelistNSP
+\end{multicols}
 
 \closearmynewsection
 
@@ -268,9 +300,11 @@ Chaque Personnage Ogre peut prendre un unique Grand Nom. \newrule{Un même Grand
 
 \startpricelist
 
-\pricelistitem{Arc de Nepharet}{45} Type : \artilleryweapon{}, \boltthrower{}. \range{36}, Force 6, \armourpiercing{1}, \multiplewounds{1D3}{}.
+\pricelistitem{Masse de Khagadai}{50}Type : \gw{}. Les attaques portées avec cette arme ont \multiplewounds{1D3}{}. \removedrule{Le porteur peut choisir de faire une \crushattack{} à la place de ses attaques normales à chaque phase de Corps à Corps}.
 
-\pricelistitem{Lame de la Soif Rouge}{40} \only{Vampires}. Type: \hw{}. Le Vampire maniant cette lame gagne \vampiric{5} s'il est monté sur une \largetarget{}, \vampiric{3} sinon. L'élément de figurine lance 1D6 pour chaque blessure qu'il inflige dans le cadre de sa règle \vampiric{}. Tout excès de blessures ainsi soignées peut être utilisé pour \raisewounds{} dans l'unité que le personnage a rejointe.
+\pricelistitem{Transperce-Cœur}{30}Type : \ironfist{}. Les attaques réalisées avec cette arme toucheront toujours sur 3+ ou mieux au Corps à Corps, quels que soient les malus. De plus, le porteur bénéficie des règles spéciales \lethalstrike{} et \armourpiercing{1}.
+
+\pricelistitem{Gantelet Brise-Hache}{\newrule{20}}Type : \ironfist{}. Si le porteur réussit au moins une touche avec cette arme à une figurine ennemie possédant une Arme Magique, jetez 1D6. Sur un résultat de 4+, toutes les Armes Magiques de la figurine ennemie sont détruites.
 
 \endpricelist
 
@@ -278,7 +312,9 @@ Chaque Personnage Ogre peut prendre un unique Grand Nom. \newrule{Un même Grand
 
 \startpricelist
 
-\pricelistitem{Haubert Sanglant de Gilles de Raux}{40} Type : \platearmour{}. Le porteur gagne +1 Point de Vie.
+\pricelistitem{Armure en Peau de Mammouth}{\newrule{35}}Type : \ha{}. Ne peut être prise que par des figurines à pied.\newline Si le porteur est touché par une attaque dont la Force est de 6 ou plus, la Force de cette attaque est réduite à 5.
+
+\pricelistitem{Fourrure de Yéti}{\newrule{10}}Type : Aucun (Sauvegarde d'Armure 6+). \newrule{Les unités ennemies en contact socle à socle avec le porteur subissent -1 en Initiative jusqu'à un minimum de 1}.
 
 \endpricelist
 
@@ -286,7 +322,7 @@ Chaque Personnage Ogre peut prendre un unique Grand Nom. \newrule{Un même Grand
 
 \startpricelist
 
-\pricelistitem{Linceul de Nuit}{40} Figurine à pied uniquement. Les figurines au contact du porteur ainsi que toute figurine allouant ses attaques sur le porteur ne reçoivent aucun bonus de type +X en Force lié à leurs armes, qu'elles soient magiques ou ordinaires.
+\pricelistitem{Œil Aveugle de Nyanggai}{25}Une seule utilisation. Ce Talisman doit être activé au début de la phase de Magie de l'adversaire. Le porteur, l'unité dans laquelle il se trouve et tout autre Personnage également dans cette unité ne peuvent être ciblés par les sorts n'étant pas de type Aura lancés par des \wizards{} ennemis.
 
 \endpricelist
 
@@ -294,7 +330,7 @@ Chaque Personnage Ogre peut prendre un unique Grand Nom. \newrule{Un même Grand
 
 \startpricelist
 
-\pricelistitem{Dents de Tullius}{50} Le porteur et toute figurine ordinaire de son unité gagnent la règle \distracting{}.
+\pricelistitem{Sortilège de l'Aurochs}{15}Le porteur bénéficie de la règle spéciale \stoneskin{} (voir l'unité rare \rockaurochs{}).
 
 \endpricelist
 
@@ -302,11 +338,7 @@ Chaque Personnage Ogre peut prendre un unique Grand Nom. \newrule{Un même Grand
 
 \startpricelist
 
-\pricelistitem{Tome Impie}{35} \boundspell{4}. Cet objet permet de lancer \necromancyspelltwo{} (Discipline \necromancy{}).
-
-\pricelistitem{Baguette d'Asservissement Vengeur}{35} \boundspell{3}. Amélioration, \range{6}, Dure un tour. Toutes les figurines de l'unité ciblée gagnent +1 Attaque.
-
-\pricelistitem{Œil de Setesh}{20} À la fin de n'importe quelle Phase de Magie, vous pouvez mettre un dé de magie inutilisé de côté pour l'ajouter à votre réserve du tour suivant, juste après avoir déterminé les flux de magie.
+\pricelistitem{Cœur Démoniaque}{50}Une seule utilisation. Doit être activé au début d'une phase de Magie de l'adversaire. Au cours de cette phase, tous les \wizards{} ennemis dans un rayon de \distance{24} subiront un Fiasco lorsqu'ils obtiendront n'importe quel double lors du lancement d'un sort. Seul un double \result{6} compte comme un Pouvoir Irrésistible, et il n'est pas possible de subir plusieurs Fiascos pour un seul lancement. De plus, tous les Fiascos seront considérés comme ayant été obtenus en utilisant un Dé de Pouvoir supplémentaire par rapport au nombre de dés réellement utilisés pour établir leurs conséquences. \newrule{Les Objets de Sort ne sont pas affectés}.
 
 \endpricelist
 
@@ -314,9 +346,9 @@ Chaque Personnage Ogre peut prendre un unique Grand Nom. \newrule{Un même Grand
 
 \startpricelist
 
-\pricelistitem{Étendard Noir de Zagvozd}{75} L'unité gagne \bodyguard{\vampirelord{}, \vampirehero{}}. Les \vampireknights{} portant cette bannière gagnent à la place la règle \stubborn{}. Toutes les figurines de l'unité obtiennent de surcroît une \wardsave{4} contre toute attaque à distance. 
+\pricelistitem{Étendard en Peau de Dragon}{40}Les figurines de l'unité peuvent relancer les jets pour toucher, pour blesser et de \armoursave{} ayant donné \result{1} au cours \newrule{de la première manche de Corps à Corps, même pour leurs Attaques Spéciales}. \removedrule{Le porteur de la bannière bénéficie de la règle spéciale \breathweapon{Force 3, \flamingattacks{}}}.
 
-\pricelistitem{Bannière des Rois des Tertres}{50} Les figurines de \barrowknights{}, \barrowguards{} et \barrowkings{} de l'unité obtiennent +1 pour toucher au corps à corps.
+\pricelistitem{Crâne de Qenghet}{20}Les figurines de l'unité causent la \fear{} et réussissent automatiquement les tests de \terror{}.
 
 \endpricelist
 
@@ -326,53 +358,34 @@ Chaque Personnage Ogre peut prendre un unique Grand Nom. \newrule{Un même Grand
 
 %%% START OF THE ARMYLIST - Translators shouldn't have to edit it %%%
 
-\input{VampireCovenant_armylist.tex}
+%\input{OgreKhans_armylist.tex}
 
 
 %%% Quick Reference Sheet - AB_qrs.tex is automatic and shouldn't be edited %%%
 
 \quickrefsheettitle
 
-\input{../Layout/AB_qrs.tex}
+%\input{../Layout/AB_qrs.tex}
 \bigskip
-\noindent\begin{center}\Large{\textbf{\labels@Invocation}}\end{center}
+\noindent\begin{center}\Large{\textbf{Armes de Tir Ogres}}\end{center}
 \medskip
 
-\newcommand{\QRSinvoctable}[2]{%
 \rowcolors{1}{white}{black!10}
-\noindent\begin{tabular}{p{2.85cm}>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{1cm}@{}}%
-\antiquefont\Large{\textbf{#1\spacebeforecolon{}:}}&\vspace*{-0.2cm}%
-\DTLforeach*[#2]{profiles}{\rowname=name, \rowtrooptype=trooptype, \rowcategory=category, \rowinvocation=invocation}{%
-\tabularnewline\rowname{} & \rowinvocation{}}%
-\tabularnewline%
+\noindent\begin{tabular}{lcccccc}
+\textbf{Nom} & \textbf{Artillerie} & \textbf{Portée} & \textbf{\labels@S{}} & \textbf{\multipleshots{}} & \textbf{\multiplewounds{}} & \textbf{\armourpiercing{}} \tabularnewline
+\ogrepistol{} & - & \distance{24} & 4 & - & - & 1 \tabularnewline
+\braceofogrepistols{} & - & \distance{24} & 4 & 2 & - & 1 \tabularnewline
+\ogrecrossbow{} & * & \distance{30} & 5 & - & - & 1 \tabularnewline
+\huntingspear{} & - & \distance{12} & \labels@S{}+1 & - & {\fontsize{6}{7.2}\selectfont 1D3, \monsters{}, \riddenmonsters{}} & - \tabularnewline
+\handcannon{} (\bombardiers{}) & - & \distance{24} & 4 & 1D6 & - & 1 \tabularnewline
+\ogrepistol{} & - & \distance{24} & 4 & - & - & 1 \tabularnewline
+\thundercannon{} (1) & \cannon{} (\distance{2D6}) & \distance{48} & 10 & - & \ordnance{} & 2 \tabularnewline
+\thundercannon{} (2) & \volleygun{} & \distance{12} & 5 & - & - & 2 \tabularnewline
+\scratapult{} & \catapult{} (\distance{5}) & \distance{48} & 3 & - & - & \lethalstrike{} \tabularnewline
 \end{tabular}
+
 \medskip
-}
-
-\begin{multicols}{4}
-\QRSinvoctable{\infantry}{\DTLiseq{\rowtrooptype}{\infantry}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}}
-
-\QRSinvoctable{\monstrousinfantry}{\DTLiseq{\rowtrooptype}{\monstrousinfantry}}
-
-\QRSinvoctable{\warbeasts}{\DTLiseq{\rowtrooptype}{\warbeast}\and\not\DTLiseq{\rowcategory}{\labels@mounts}}
-
-\QRSinvoctable{\monstrousbeasts}{\DTLiseq{\rowtrooptype}{\monstrousbeast}\and\not\DTLiseq{\rowcategory}{\labels@mounts}}
-
-\QRSinvoctable{\monsters}{\DTLiseq{\rowtrooptype}{\monster}\and\not\DTLiseq{\rowcategory}{\labels@mounts}}
-
-\QRSinvoctable{\swarms}{\DTLiseq{\rowtrooptype}{\swarm}}
-
-\rowcolors{1}{white}{white}
-\noindent\begin{tabular}{p{2.85cm}>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{1cm}@{}}%
-\textbf{Toute la \cavalry}& 2 \tabularnewline
-\end{tabular}
-\medskip
-
-\noindent\begin{tabular}{p{2.85cm}>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{1cm}@{}}%
-\textbf{Tous les \chariots}& 1 \tabularnewline
-\end{tabular}
-\medskip
-\end{multicols}
+\noindent * L'\ogrecrossbow{} pénètre les rangs comme une \boltthrower{}.
 
 \restoregeometry
 
@@ -380,86 +393,70 @@ Chaque Personnage Ogre peut prendre un unique Grand Nom. \newrule{Un même Grand
 
 \startchangelog
 
+\newlog{0.99.0}{%
+Iron fist,
+Ogre crossbow,
+Headhunter,
+Hellfist prices due to updated marks,
+Spinesplitter,
+Khagadai’s Maul,
+Axe‐Breaker Gauntlet,
+Dragonskin Banner,
+Iron fist price,
+Great shaman,
+Paths for shamans and great shamans,
+Tribsemen,
+Bruisers,
+Bombardiers,
+Mercenary Veterans,
+Sabretooth Tigers,
+Kin‐Eater,
+Scrapling Trappers,
+Scratapult,
+Slave Giant,
+Mammoth Hunter ws,
+Daemon Heart,
+Yetis,
+Scratapult
+}
+
 \newlog{0.11.0}{%
-Armywide special rules streamlined with UD,
-Curse of the Blood,
-Wizard levels price,
-Zombie dragon price,
-Vampire spawn,
-Phantom host,
-Fell Wraith,
-Vampire knights unit size,
-Barrow guard Ld,
-Wraith,
-Winged Reapers,
-Dark tome,
-Mundane weapon cost streamlined,
-Dragon one of a kind,
-Unbearable scrutiny,
-Ghouls command option,
-Renamed Magic Items to Magical Items,
-Renamed Winds of Magic to Magic Flux,
-Renamed Blurry to Hard Target,
-}
-
-\newlog{0.10.2}{%
-Mantle of Night wording update,
-}
-
-\newlog{0.10.1}{%
-Cleaned up Quick Reference Sheet,
-Clarifications added on Von Karnstein{,} Vampiric{,} Ashes to Ashes{,} Blade of Red Thirst and Wake the Dead,
+Khagadai’s Maul and Axe‐Breaker Gauntlet clarifications,
+Daemon Heart 5 point drop,
+Spell casters points change,
+Thunder cannon point / range / T changes,
+Scratapult point / range / T+W changes,
+Changes on costs to various characters’ weapons,
+Tribesmen configuration,
+Great Khan 20pts reduction,
+AP1 to Heart‐Ripper,
+Scraplings configuration
 }
 
 \newlog{0.10.0}{%
-Leaders of the Undead (reworded),
-Nightshroud (clarification),
-Wraith Sentries, wizard conclave (typo),
-Barrow king special rules (typo),
-vampiric and hunger merged into one rule,
-Cadaver Wagon, Endless Horde,
-Vampire count and baron, lance cost,
-Infernal Tome,
-Otherworldly Scream, (reworded to a special attack),
-Acursed Book, points cost,
-Skeletal Steed options costs,
-Bat Swarm profile,
-Vargbeast Cost,
-Ghouls Vanguard allowance to Strigoi Vampire,
-Magic Banners for one core,
-Strigoi Regen,
-Hero Wraith mounting option,
-Blade of Red Thirst on Large Targets,
-Refined Taste on Large Targets,
-Cost on Bloody Hauberk,
-Reaper (clarification),
-Otherworldly Scream (clarification),
-Wraith Sentries, Wizard Conclave
-}
-
-\newlog{0.9.3}{%
-Skeletons, light armour (missing),
-Barrow guard, lethal strike (missing),
-Wraith, statline,
-}
-
-\newlog{0.9.2}{%
-Royal Blood thin power,
-Ghoul's invocation value
+Grabbing Fist point cost change,
+Frosthorn Cloak changes,
+Tribesmen access to heavy armour,
+Hill Goblins access to shields short bows and light armour,
+Outcast point increase,
+Lance on Rockhorn change,
+Beast Speaker changes,
+Rockhorn added as mount option for Tracker,
+Loner rule added to Tracker,
+Magic banners on core units,
+Mercenaries changed abilities,
+Skirmishing Yetis and Mountain Raiders max unit size
 }
 
 \newlog{0.9.1}{%
-Reaper,
-Strigoi Bloodline,
-Flying Terror points,
-Von Castelstein Bloodline,
-Nosferatu Bloodline,
-The Accursed Book,
-Nightshroud,
-Skeletons statline,
-Ghouls bloodline unit,
-Bat Swarm points,
-Wraith Sentries,
+Rottenjaw,
+Mammoth Armour,
+Ogre Mercenaries and magic standard,
+Mountain Raiders points and ironfist,
+Aura of Frost,
+Frozen Aura,
+Thundercracker and Scratapult no longer large targets,
+Hill Goblin Scratapult points
 }
 
 \endchangelog
