@@ -55,7 +55,7 @@
 
 \newcommand{\labels@lords}{Seigneurs}
 \newcommand{\labels@heroes}{Héros}
-\newcommand{\labels@coreunits}{Unités de bases}
+\newcommand{\labels@coreunits}{Unités de base}
 \newcommand{\labels@specialunits}{Unités spéciales}
 \newcommand{\labels@rareunits}{Unités rares}
 \newcommand{\labels@armyspecialrules}{Règles spéciales de l'armée}
@@ -145,6 +145,7 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 \newcommand{\breathweapon}[1]{Attaque de Souffle\ifblank{#1}{}{ (#1)}}
 \newnamemacro{\channel}{Canalisation}
 \newnamemacro{\crushattack}{Attaque Écrasante}
+\newnamemacro{\cumbersome}{Difficile à Manier}
 \newnamemacro{\devastatingcharge}{Charge Dévastatrice}
 \newnamemacro{\distracting}{Distrayant}
 \newnamemacro{\engineer}{Ingénieur}
@@ -189,7 +190,6 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 \newnamemacro{\scythes}{Faux}
 \newnamemacro{\scout}{Éclaireur}
 \newnamemacro{\scouts}{Éclaireurs}
-\newnamemacro{\slowtofire}{Tir Lent}
 \newcommand{\stomp}[1]{Piétinement\ifblank{#1}{}{ (#1)}}
 \newcommand{\strider}[1]{Guide\ifblank{#1}{}{ (#1)}}
 \newnamemacro{\stubborn}{Tenace}
@@ -238,7 +238,7 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 \newnamemacro\sands{des Sables}
 \newnamemacro\whitemagic{de la Magie Blanche}
 
-\newcommand{\magiclevel}[1]{\ifnumcomp{#1}{<}{3}{\newrule{Apprenti}}{\newrule{Maître}} Sorcier Niveau #1}
+\newcommand{\magiclevel}[1]{\ifnumcomp{#1}{<}{3}{Apprenti}{Maître} Sorcier Niveau #1}
 \newcommand{\Level}{Niveau}
 
 \newnamemacro{\wizard}{Sorcier}
@@ -282,6 +282,7 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 \newnamemacro{\shield}{Bouclier}
 \newnamemacro{\barding}{Caparaçon}
 \newnamemacro{\throwingweapons}{Armes de Jet}
+\newnamemacro{\shortbow}{Arc Court}
 
 \newnamemacro{\cannon}{Canon}
 \newnamemacro{\catapult}{Catapulte}
@@ -309,6 +310,8 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 \newnamemacro{\chariots}{Chars}
 \newnamemacro{\riddenmonster}{Monstre Monté}
 \newnamemacro{\riddenmonsters}{Monstres Montés}
+\newnamemacro{\warmachine}{Machine de Guerre}
+\newnamemacro{\warmachines}{Machines de Guerre}
 
 
 %%% Profile wording
@@ -330,9 +333,9 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 \newcommand{\mustbecomeoneofthefollowing}{\optionschoice{Doit devenir un choix parmi :}}
 \newcommand{\maytakeoneofthefollowing}{\optionschoice{Peut prendre un choix parmi :}}
 \newcommand{\maytakeuptotwoofthefollowing}{\optionschoice{Peut prendre jusqu'à deux choix parmi :}}
-\newcommand{\Maytakea}{Peut prendre un}
-\newcommand{\MayreplaceXwithY}[2]{Peut remplacer #1 par #2}
-\newcommand{\MayreplaceXwithList}[1]{\optionschoice{Peut remplacer #1 par :}}
+\newcommand{\maytakeashield}{Peut prendre un Bouclier}
+\newcommand{\maytakela}{Peut prendre une Armure Légère}
+\newcommand{\maytakeha}{Peut prendre une Armure Lourde}
 
 \newcommand{\veteranstandardbearernote}{%
 Un Porte-étendard Vétéran est Unique (un seul Vétéran dans toute l'armée) et peut choisir une Bannière Magique dans un budget de 25 pts.

@@ -43,6 +43,9 @@
 \newcommand{\itsatrap}{C'est un Piège !}
 \newcommand{\stoneskin}{Ossature de Granit}
 \newcommand{\freezingaura}{Aura Glaciale}
+\newcommand{\dowhatyouretold}{Fait ce qu'on te dis}
+\newcommand{\giantattacks}{Attaques de Géant}
+\newcommand{\wildbeasts}{Bêtes Sauvages} % a enlever apres la 0.99
 
 %%% Names
 
@@ -97,7 +100,7 @@
 \newcommand{\rider}{Cavalier}
 \newcommand{\bombardiercrew}{Équipage Ogre}
 \newcommand{\scraplingcrew}{Équipage Scrapulin}
-\newcommand{\woolyrhino}{Rhinocéros laineux}
+\newcommand{\woollyrhino}{Rhinocéros laineux}
 
 
 
@@ -109,9 +112,13 @@
 \newcommand{\maytakescraplingloukout}{Peut prendre un \scraplinglookout}
 \newcommand{\maytakefireblessing}{Peut prendre une \fireblessing}
 \newcommand{\onlyifpathoffireischosen}{seulement si la Discipline \fire{} est choisie}
+\newcommand{\mayreplacehuntingspearwithogrecrossbow}{Peut remplacer sa \huntingspear{} par une \ogrecrossbow{}}
+\newcommand{\maytakeironfist}{Peut prendre un \ironfist{}}
+\newcommand{\mayreplacethrowingweaponswith}{\optionschoice{Peut remplacer ses \throwingweapons{} par :}}
+\newcommand{\oneunitmayupgradetoforeman}{Une unité peut l'améliorer en \scraplingforeman{}}
 \newcommand{\onlywithlightarmour}{(seulement avec une armure légère)}
 \newcommand{\riderchoice}{\optionschoice{Le \rider{} peut remplacer son \ogrecrossbow{} par :}}
-\newcommand{\anyriderchoice}{\optionschoice{Chaque \rider{} peut remplacer son arme par :}}
+\newcommand{\anyriderchoice}{\optionschoice{\newrule{Chaque \rider{} peut remplacer son arme par :}}}
 
 % Profile rules
 
@@ -140,7 +147,7 @@ Les \scraplingforemen{} ont la règle \holdyourground{} bien qu'ils ne soient pa
 }
 
 \newcommand{\handcannonrule}{%
-\range{24}, Force 4, \armourpiercing{1}, \multipleshots{1D6}. Le Canon à la hanche ne subit pas de pénalité pour toucher due à un Mouvement ou aux \multipleshots{}.
+\range{24}, Force 4, \armourpiercing{1}, \multipleshots{1D6}, \removedrule{\cumbersome}. Le Canon à la hanche ne subit pas de pénalité pour toucher due à un Mouvement ou aux \multipleshots{}. \removedrule{Le \handcannon{} compte comme une \halberd qui frappe à Initiative 0 au Corps à Corps.}
 }
 
 \newcommand{\battlescarredrule}{%
@@ -184,9 +191,10 @@ Quand un Géant attaque au corps à corps, choisissez une unité en contact socl
 }
 
 \newcommand{\giantattackstable}{% to check
+\noindent \textbf{\giantattacks :}
 \setlength\multicolsep{12.0pt plus 4.0pt minus 3pt}
-\begin{multicols}{2}
-	Si l'unité est de type \infantry{}, \warbeast{}, \cavalry{}, \swarm{} ou \warmachine{}  :	
+\vspace*{-0.5cm}\begin{multicols}{2}
+	\noindent Si l'unité est de type \infantry{}, \warbeast{}, \cavalry{}, \swarm{} ou \warmachine{}  :	
 	\renewcommand{\arraystretch}{1.5}	
 	\begin{center}\begin{tabular}{cl}
    		\hline
@@ -196,7 +204,7 @@ Quand un Géant attaque au corps à corps, choisissez une unité en contact socl
 		4-6 & Frappe \tabularnewline
 		\hline
 	\end{tabular}\end{center}
-	Si l'unité est de type \mounstrousinfantry{}, \monstrouscavalry{}, \mounstrousbeast{}, \chariot{}, \monster{} ou \riddenmonster{} :
+	Si l'unité est de type \monstrousinfantry{}, \monstrouscavalry{}, \monstrousbeast{}, \chariot{}, \monster{} ou \riddenmonster{} :
 	\begin{center}\begin{tabular}{cl}
 		\hline	
 		1 & Hurle \tabularnewline
@@ -358,14 +366,14 @@ L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scrapli
 
 %%% START OF THE ARMYLIST - Translators shouldn't have to edit it %%%
 
-%\input{OgreKhans_armylist.tex}
+\input{OgreKhans_armylist.tex}
 
 
 %%% Quick Reference Sheet - AB_qrs.tex is automatic and shouldn't be edited %%%
 
 \quickrefsheettitle
 
-%\input{../Layout/AB_qrs.tex}
+\input{../Layout/AB_qrs.tex}
 \bigskip
 \noindent\begin{center}\Large{\textbf{Armes de Tir Ogres}}\end{center}
 \medskip
@@ -431,32 +439,6 @@ Tribesmen configuration,
 Great Khan 20pts reduction,
 AP1 to Heart‐Ripper,
 Scraplings configuration
-}
-
-\newlog{0.10.0}{%
-Grabbing Fist point cost change,
-Frosthorn Cloak changes,
-Tribesmen access to heavy armour,
-Hill Goblins access to shields short bows and light armour,
-Outcast point increase,
-Lance on Rockhorn change,
-Beast Speaker changes,
-Rockhorn added as mount option for Tracker,
-Loner rule added to Tracker,
-Magic banners on core units,
-Mercenaries changed abilities,
-Skirmishing Yetis and Mountain Raiders max unit size
-}
-
-\newlog{0.9.1}{%
-Rottenjaw,
-Mammoth Armour,
-Ogre Mercenaries and magic standard,
-Mountain Raiders points and ironfist,
-Aura of Frost,
-Frozen Aura,
-Thundercracker and Scratapult no longer large targets,
-Hill Goblin Scratapult points
 }
 
 \endchangelog

@@ -42,6 +42,9 @@
 \usepackage[colorlinks=true]{hyperref} % Links in PDF.
 
 
+%%% Update of the dotfill command to always get dots
+
+\newcommand{\predotfill}{\penalty0\hbox{}\nobreak}%
 
 
 %%% Command to avoid typing \xspace when creating a new name macro
@@ -436,7 +439,7 @@
 	}}}}}%
 }
 
-\newcommand{\option}[3][]{#2\dotfill%
+\newcommand{\option}[3][]{#2\predotfill\dotfill%
 	% Add \upto token if necessary.
 	\ifstrequal{#1}{\upto}{\upto~}{}%
 	% The option can be free, have an unlimited cost, or have a points cost.
@@ -564,9 +567,9 @@
 						\splitatinf{\commandgroup@condsinglebannerallowance}\local@option\local@cost%
 						\par\option[\upto]{\hspace*{0.3cm}- \labels@condsinglebannerallowance \local@option}{\local@cost}}%
 					% Additional option for the banner, such as Hill Goblin Lookouts for Ogres
-					\ifdefempty{\commandgroup@banneroption}{}{
-						\splitatinf{\commandgroup@banneroption}{\local@option}{\local@cost} 
-						\par\option{\hspace*{0.3cm}- \local@option}{\local@cost}
+					\ifdefempty{\commandgroup@banneroption}{}{%
+						\splitatinf{\commandgroup@banneroption}{\local@option}{\local@cost}%
+						\par\option{\hspace*{0.3cm}- \local@option}{\local@cost}%
 					}%
 			}%
 			\ifdefempty{\commandgroup@musician}{}{% We have a musician!
@@ -661,14 +664,14 @@
 		innertopmargin=1.2\baselineskip,
 		innerbottommargin=1.2\baselineskip,
 		singleextra={
-			\expandafter\ifstrequal\expandafter{\unit@cost}{-}{}{%
+			\expandafter\ifblank\expandafter{\unit@cost}{}{%
 				\node[unitprice,anchor=east,xshift=-0.5cm] at (P)%
 					{%
 						{\huge\pts{\textbf{\unit@cost}}}%
 					};
 				}%
 				\node[unittitle,xshift=0.5cm] at (P-|O)%
-					{\fontsize{16}{19.2}\selectfont\antiquefont\uppercase\expandafter\expandafter\expandafter{\unit@name}};
+					{\fontsize{14}{16.8}\selectfont\antiquefont\uppercase\expandafter\expandafter\expandafter{\unit@name}};
 				\node[unitlogo, xshift=8.1cm, yshift=0.1cm] at (P-|O)%
 					{\includegraphics[width=1.2cm]{\logolocalpath}};
 		}
@@ -715,15 +718,17 @@
 	\defunit{#1}
 	\begin{unitframe}[\unit@name]{\unit@cost}
 	\mdfsetup{style=defaultoptions}
+	\expandafter\ifblank\expandafter{\unit@unitsize}{}{%
 	\expandafter\ifstrequal\expandafter{\unit@unitsize}{1}{% single model
 		% Can you add model to this single model ?
 		\expandafter\ifblank\expandafter{\unit@maxmodels}{% no		
 			{\hspace*{0.25cm}\large\labels@Singlemodel}%
 		}{% yes
-			{\hspace*{0.25cm}\large \From{} \textbf{1} \wordto{} \textbf{\unit@maxmodels{}}} \labels@models \hfill\textbf{\unit@costpermodel{}} \pts{\textbf{\unit@costpermodel{}}}\permode\hspace*{0.1cm}%
+			{\hspace*{0.25cm}\large \From{} \textbf{1} \wordto{} \expandafter\ifblank\expandafter{\unit@maxmodels}{}{\textbf{\unit@maxmodels{}}} \labels@models \hfill\pts{\textbf{\unit@costpermodel{}}}\permodel\hspace*{0.1cm}}%
 		}%
 	}{% not single model					
 		{\hspace*{0.25cm}\large \From{} \textbf{\unit@unitsize}  \wordto{} \expandafter\ifblank\expandafter{\unit@maxmodels}{}{\textbf{\unit@maxmodels{}}} \labels@models \hfill\pts{\textbf{\unit@costpermodel{}}}\permodel\hspace*{0.1cm}}%
+	}%
 	}%
 	\vspace*{-0.1cm}
 	\noindent\begin{center}\textcolor{black!30}{\rule{\columnwidth}{1pt}}\end{center}

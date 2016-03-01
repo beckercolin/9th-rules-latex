@@ -176,6 +176,17 @@
 }% 
 
 \QRScheckifempty{%
+	\DTLiseq{\rowtrooptype}{\riddenmonster}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+}%
+\QRSifnotempty{%
+	\QRSstarttab{\riddenmonsters}%
+	\QRSprinttab{%
+		\DTLiseq{\rowtrooptype}{\riddenmonster}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+	}%
+	\QRSclosetab{}%
+}% 
+
+\QRScheckifempty{%
 	\DTLiseq{\rowtrooptype}{\swarm}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
 }%
 \QRSifnotempty{%
