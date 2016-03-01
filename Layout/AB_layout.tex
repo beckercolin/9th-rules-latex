@@ -87,7 +87,7 @@
 }
 
 
-%%% Commands for alphabetical order sorting %%%
+%%% Commands for alphabetical ordering %%%
 
 \newcommand{\sortitem}[2][\relax]{%
 	\DTLnewrow{list}% Create a new entry
@@ -153,63 +153,74 @@
 \newcommand{\pts}[1]{\unit{#1}{\expandafter\ifstrequal\expandafter{#1}{1}{\labels@point}{\labels@points}}}
 
 
+%%% Fonts and sizes %%%
+
+\newcommand{\bigtitle}[1]{\section*{}\noindent\begin{center}\fontsize{25}{30}\selectfont\textbf{\antiquefont\expandafter\uppercase\expandafter{#1}}\end{center}}
+
+\newcommand{\subtitle}[1]{\subsection*{}\noindent{\fontsize{18}{21.6}\selectfont\antiquefont #1}}
+
+\newcommand{\subsubtitle}[1]{\subsubsection*{}\noindent{\fontsize{15}{18}\selectfont\antiquefont #1}}
+
+\newcommand{\normalfontsize}{\fontsize{8}{9.6}\selectfont}
+\newcommand{\largerfontsize}{\fontsize{10}{12}\selectfont}
+
+
 %%% Titles %%%
 
-\newcommand{\armytitle}[1]{\noindent\begin{center}\Huge{\textbf{\antiquefont\expandafter\uppercase\expandafter{#1}}}\end{center}\medskip}
-\newcommand{\lordstitle}{\def\logolocalpath{../Layout/pics/logo_lord.png}\armytitle{\labels@lords}}
+\newcommand{\lordstitle}{\def\logolocalpath{../Layout/pics/logo_lord.png}\bigtitle{\labels@lords}}
 \newcommand{\heroestitle}{%
 \def\logolocalpath{../Layout/pics/logo_hero.png}%
-\clearpage\armytitle{\labels@heroes}%
+\clearpage\bigtitle{\labels@heroes}%
 \renewcommand{\profilecategory}{\labels@heroes}%
 }
 \newcommand{\coreunitstitle}{%
 \def\logolocalpath{../Layout/pics/logo_core.png}%
-\clearpage\armytitle{\labels@coreunits}%
+\clearpage\bigtitle{\labels@coreunits}%
 \renewcommand{\profilecategory}{\labels@coreunits}%
 }
 \newcommand{\specialunitstitle}{%
 \def\logolocalpath{../Layout/pics/logo_special.png}%
-\clearpage\armytitle{\labels@specialunits}%
+\clearpage\bigtitle{\labels@specialunits}%
 \renewcommand{\profilecategory}{\labels@specialunits}%
 }
 \newcommand{\rareunitstitle}{%
 \def\logolocalpath{../Layout/pics/logo_rare.png}%
-\clearpage\armytitle{\labels@rareunits}%
+\clearpage\bigtitle{\labels@rareunits}%
 \renewcommand{\profilecategory}{\labels@rareunits}%
 }
 \newcommand{\mountstitle}{%
 \def\logolocalpath{../Layout/pics/logo_mount.png}%
-\clearpage\armytitle{\labels@mounts}%
+\clearpage\bigtitle{\labels@mounts}\subtitle{}%
 \renewcommand{\profilecategory}{\labels@mounts}%
 }
 
-\newcommand{\startarmyspecialrules}{\newpage\armytitle{\labels@armyspecialrules}}
-\newcommand{\closearmyspecialrules}{}
-\newcommand{\armyspecialruleentry}[1]{\subsection*{\LARGE\antiquefont\textit{#1}}}
+\newcommand{\startarmyspecialrules}{\newpage\bigtitle{\labels@armyspecialrules}\largerfontsize}
+\newcommand{\closearmyspecialrules}{\normalfontsize}
+\newcommand{\armyspecialruleentry}[1]{\subtitle{#1}\vspace{5pt}}
 
-\newcommand{\startarmyarmoury}{\bigskip\armytitle{\labels@armoury}}
-\newcommand{\closearmyarmoury}{}
+\newcommand{\startarmyarmoury}{\bigtitle{\labels@armoury}\largerfontsize\subtitle{}}
+\newcommand{\closearmyarmoury}{\normalfontsize}
 
-\newcommand{\startarmymagicalitems}{\newpage\armytitle{\labels@magicalitems}\begin{multicols}{2}\raggedcolumns}
-\newcommand{\closearmymagicalitems}{\end{multicols}}
+\newcommand{\startarmymagicalitems}{\newpage\largerfontsize\bigtitle{\labels@magicalitems}\begin{multicols}{2}\raggedcolumns}
+\newcommand{\closearmymagicalitems}{\end{multicols}\normalfontsize}
 
-\newcommand{\armymagicalweapons}{\subsection*{\LARGE\antiquefont\labels@magicalweapons}}
-\newcommand{\armymagicalarmour}{\subsection*{\LARGE\antiquefont\labels@magicalarmour}}
-\newcommand{\armytalismans}{\subsection*{\LARGE\antiquefont\labels@talismans}}
-\newcommand{\armyenchanteditems}{\subsection*{\LARGE\antiquefont\labels@enchanteditems}}
-\newcommand{\armyarcaneitems}{\subsection*{\LARGE\antiquefont\labels@arcaneitems}}
-\newcommand{\armymagicalbanners}{\subsection*{\LARGE\antiquefont\labels@magicalbanners}}
+\newcommand{\armymagicalweapons}{\subtitle{\labels@magicalweapons}}
+\newcommand{\armymagicalarmour}{\subtitle{\labels@magicalarmour}}
+\newcommand{\armytalismans}{\subtitle{\labels@talismans}}
+\newcommand{\armyenchanteditems}{\subtitle{\labels@enchanteditems}}
+\newcommand{\armyarcaneitems}{\subtitle{\labels@arcaneitems}}
+\newcommand{\armymagicalbanners}{\subtitle{\labels@magicalbanners}}
 
-\newcommand{\startarmynewsection}[1]{\newpage\armytitle{#1}}
-\newcommand{\closearmynewsection}{}
+\newcommand{\startarmynewsection}[1]{\newpage\bigtitle{#1}\largerfontsize}
+\newcommand{\closearmynewsection}{\normalfontsize}
 
-\newcommand{\armynewsubsection}[1]{\subsection*{\LARGE\antiquefont#1}}
-\newcommand{\armynewsubsubsection}[1]{\subsubsection*{\antiquefont#1}}
+\newcommand{\armynewsubsection}[1]{\subtitle{#1}}
+\newcommand{\armynewsubsubsection}[1]{\subsubtitle{#1}}
 
 \newcommand{\armylist}{\clearpage}
 
-\newcommand{\quickrefsheettitle}{\clearpage\newgeometry{top=1.6cm, bottom=2cm, left=1cm, right=1cm}\armytitle{\labels@quickrefsheet}}
-\newcommand{\changelogtitle}{\clearpage\armytitle{\labels@changelog}}
+\newcommand{\quickrefsheettitle}{\clearpage\newgeometry{top=1.6cm, bottom=2cm, left=1cm, right=1cm}\bigtitle{\labels@quickrefsheet}\subtitle{}}
+\newcommand{\changelogtitle}{\clearpage\bigtitle{\labels@changelog}\subtitle{}}
 
 \newcommand{\separator}{\noindent\begin{center}\textcolor{black!30}{\rule{0.7\columnwidth}{2pt}}\end{center}}
 
