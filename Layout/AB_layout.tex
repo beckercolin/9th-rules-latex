@@ -9,7 +9,7 @@
 
 %% Font and typing packages
 \usepackage{fontspec}
-% \setmainfont[Ligatures=TeX]{Arial} % default is Latin Modern
+\setmainfont[Ligatures=TeX]{Cochin} % default is Latin Modern
 \newfontfamily\antiquefont[Ligatures=TeX]{Caslon Antique} % fancy font
 \usepackage{microtype}			% Greatly improves general appearance of the text.
 \usepackage{SIunits}			% Unit appearance.
@@ -155,14 +155,21 @@
 
 %%% Fonts and sizes %%%
 
-\newcommand{\bigtitle}[1]{\section*{}\noindent\begin{center}\fontsize{25}{30}\selectfont\textbf{\antiquefont\expandafter\uppercase\expandafter{#1}}\end{center}}
+\newcommand{\bigtitle}[1]{\vspace*{-1.5cm}\section*{}\noindent\begin{center}\Hugefontsize\textbf{\antiquefont\expandafter\uppercase\expandafter{#1}}\end{center}}
 
-\newcommand{\subtitle}[1]{\subsection*{}\noindent{\fontsize{18}{21.6}\selectfont\antiquefont #1}}
+\newcommand{\subtitle}[1]{\subsection*{}\noindent{\hugefontsize\antiquefont #1}}
 
-\newcommand{\subsubtitle}[1]{\subsubsection*{}\noindent{\fontsize{15}{18}\selectfont\antiquefont #1}}
+\newcommand{\subsubtitle}[1]{\subsubsection*{}\noindent{\Largerfontsize\antiquefont #1}}
 
+\newcommand{\verysmallfontsize}{\fontsize{4}{4.8}\selectfont}
+\newcommand{\smallfontsize}{\fontsize{6}{7.2}\selectfont}
 \newcommand{\normalfontsize}{\fontsize{8}{9.6}\selectfont}
-\newcommand{\largerfontsize}{\fontsize{10}{12}\selectfont}
+\newcommand{\largefontsize}{\fontsize{10}{12}\selectfont}
+\newcommand{\largerfontsize}{\fontsize{12}{14.4}\selectfont}
+\newcommand{\Largefontsize}{\fontsize{14}{16.8}\selectfont}
+\newcommand{\Largerfontsize}{\fontsize{15}{18}\selectfont}
+\newcommand{\hugefontsize}{\fontsize{18}{21.6}\selectfont}
+\newcommand{\Hugefontsize}{\fontsize{25}{30}\selectfont}
 
 
 %%% Titles %%%
@@ -194,14 +201,14 @@
 \renewcommand{\profilecategory}{\labels@mounts}%
 }
 
-\newcommand{\startarmyspecialrules}{\newpage\bigtitle{\labels@armyspecialrules}\largerfontsize}
+\newcommand{\startarmyspecialrules}{\newpage\bigtitle{\labels@armyspecialrules}\largefontsize}
 \newcommand{\closearmyspecialrules}{\normalfontsize}
 \newcommand{\armyspecialruleentry}[1]{\subtitle{#1}\vspace{5pt}}
 
-\newcommand{\startarmyarmoury}{\bigtitle{\labels@armoury}\largerfontsize\subtitle{}}
+\newcommand{\startarmyarmoury}{\vspace*{1.5cm}\bigtitle{\labels@armoury}\largefontsize\subtitle{}}
 \newcommand{\closearmyarmoury}{\normalfontsize}
 
-\newcommand{\startarmymagicalitems}{\newpage\largerfontsize\bigtitle{\labels@magicalitems}\begin{multicols}{2}\raggedcolumns}
+\newcommand{\startarmymagicalitems}{\newpage\largefontsize\bigtitle{\labels@magicalitems}\begin{multicols}{2}\raggedcolumns}
 \newcommand{\closearmymagicalitems}{\end{multicols}\normalfontsize}
 
 \newcommand{\armymagicalweapons}{\subtitle{\labels@magicalweapons}}
@@ -211,7 +218,7 @@
 \newcommand{\armyarcaneitems}{\subtitle{\labels@arcaneitems}}
 \newcommand{\armymagicalbanners}{\subtitle{\labels@magicalbanners}}
 
-\newcommand{\startarmynewsection}[1]{\newpage\bigtitle{#1}\largerfontsize}
+\newcommand{\startarmynewsection}[1]{\newpage\bigtitle{#1}\largefontsize}
 \newcommand{\closearmynewsection}{\normalfontsize}
 
 \newcommand{\armynewsubsection}[1]{\subtitle{#1}}
@@ -290,8 +297,8 @@
 	 &% \textbf{\labels@profile}
 	\labels@M & \labels@WS & \labels@BS & \labels@S & \labels@T & \labels@W & \labels@I & \labels@A & \labels@Ld &%
 	&%
-	\labels@trooptype &%
-	\labels@basesize%
+	{\smallfontsize\labels@trooptype} &%
+	{\smallfontsize\labels@basesize}%
 }
 
 % End of a profile table.
@@ -325,8 +332,8 @@
 	 &% \textbf{\labels@profile}
 	\labels@M & \labels@WS & \labels@BS & \labels@S & \labels@T & \labels@W & \labels@I & \labels@A & \labels@Ld & \labels@Invocation &%
 	&%
-	\labels@trooptype &%
-	\labels@basesize%
+	{\smallfontsize\labels@trooptype} &%
+	{\smallfontsize\labels@basesize}%
 }
 
 \newcommand{\invocprofileitem}[1]{%
@@ -387,7 +394,7 @@
 }
 
 % Magic entry.
-\newcommand{\magic}[2]{\unitentry{#2}{\textit{\labels@magic\spacebeforecolon{}: }\newline\ifdefempty{#1}{}{\magiclevel{#1}. }\labels@pathsused\expandafter\pathslist\expandafter{#2}.}}
+\newcommand{\magic}[2]{\unitentry{#2}{\textit{\labels@magic\spacebeforecolon{}: }\newline\ifdefempty{#1}{}{\textbf{\magiclevel{#1}}. }\labels@pathsused\expandafter\pathslist\expandafter{#2}.}}
 
 % Wizard Conclave.
 \newcommand{\magicwizardconclave}[1]{\unitentry{#1}{\textit{\labels@magic\spacebeforecolon{}: }\newline #1.}}
@@ -606,7 +613,7 @@
 \newcommand{\unitrule}[2]{\item[#1\spacebeforecolon{}:]#2}
 
 % Unit rule entry.
-\newcommand{\unitrules}[1]{\ifdefempty{#1}{}{\unitrulesframestart\vspace*{-0.05cm}\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=0cm, parsep=0cm]#1\end{description}\unitrulesframeend}}
+\newcommand{\unitrules}[1]{\ifdefempty{#1}{}{\unitrulesframestart\vspace*{-0.05cm}\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=0.2cm, parsep=0cm]#1\end{description}\unitrulesframeend}}
 
 
 %%% Special equipment %%%
@@ -619,7 +626,7 @@
 \newcommand{\equipmentdef}[2]{\item[#1\spacebeforecolon{}:]#2}
 
 % Special equipment entry.
-\newcommand{\unitequipment}[1]{\ifdefempty{#1}{}{\unitequipmentframestart\vspace*{-0.05cm}\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=0cm, parsep=0cm]#1\end{description}\unitequipmentframeend}}
+\newcommand{\unitequipment}[1]{\ifdefempty{#1}{}{\unitequipmentframestart\vspace*{-0.05cm}\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=0.2cm, parsep=0cm]#1\end{description}\unitequipmentframeend}}
 
 
 
@@ -678,11 +685,11 @@
 			\expandafter\ifblank\expandafter{\unit@cost}{}{%
 				\node[unitprice,anchor=east,xshift=-0.5cm] at (P)%
 					{%
-						{\huge\pts{\textbf{\unit@cost}}}%
+						{{\smallfontsize\minprice} \Largefontsize\pts{\textbf{\unit@cost}}}%
 					};
 				}%
 				\node[unittitle,xshift=0.5cm] at (P-|O)%
-					{\fontsize{14}{16.8}\selectfont\antiquefont\uppercase\expandafter\expandafter\expandafter{\unit@name}};
+					{\Largefontsize\antiquefont\uppercase\expandafter\expandafter\expandafter{\unit@name}};
 				\node[unitlogo, xshift=8.1cm, yshift=0.1cm] at (P-|O)%
 					{\includegraphics[width=1.2cm]{\logolocalpath}};
 		}
@@ -735,10 +742,10 @@
 		\expandafter\ifblank\expandafter{\unit@maxmodels}{% no		
 			{\hspace*{0.25cm}\large\labels@Singlemodel}%
 		}{% yes
-			{\hspace*{0.25cm}\large \From{} \textbf{1} \wordto{} \expandafter\ifblank\expandafter{\unit@maxmodels}{}{\textbf{\unit@maxmodels{}}} \labels@models \hfill\pts{\textbf{\unit@costpermodel{}}}\permodel\hspace*{0.1cm}}%
+			{\hspace*{0.25cm}\large \textbf{1} \wordto{} \textbf{\unit@maxmodels} \labels@models{}\hfill {\smallfontsize\pricepermodelabovemin{}} {\largefontsize\pts{\textbf{\unit@costpermodel{}}}\permodel}\hspace*{0.1cm}}%
 		}%
 	}{% not single model					
-		{\hspace*{0.25cm}\large \From{} \textbf{\unit@unitsize}  \wordto{} \expandafter\ifblank\expandafter{\unit@maxmodels}{}{\textbf{\unit@maxmodels{}}} \labels@models \hfill\pts{\textbf{\unit@costpermodel{}}}\permodel\hspace*{0.1cm}}%
+			{\hspace*{0.25cm}\large \textbf{\unit@unitsize} \wordto{} \textbf{\unit@maxmodels} \labels@models{}\hfill {\smallfontsize\pricepermodelabovemin{}} {\largefontsize\pts{\textbf{\unit@costpermodel{}}}\permodel}\hspace*{0.1cm}}%
 	}%
 	}%
 	\vspace*{-0.1cm}
@@ -753,7 +760,7 @@
 	\setlength\multicolsep{0pt}
 	\begin{multicols}{2}
 		\raggedcolumns
-		{\setlength{\parskip}{0.2cm}
+		{\setlength{\parskip}{0.3cm}
 		\expandafter\ifblank\expandafter{\unit@equipment}{}{\noindent\parbox{\columnwidth}{\equipment{\unit@equipment}}}
 				
 		\expandafter\ifblank\expandafter{\unit@weapons}{}{\noindent\parbox{\columnwidth}{\weapons{\unit@weapons}}}
