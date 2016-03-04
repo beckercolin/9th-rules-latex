@@ -201,11 +201,15 @@
 \renewcommand{\profilecategory}{\labels@mounts}%
 }
 
-\newcommand{\startarmyspecialrules}{\newpage\bigtitle{\labels@armyspecialrules}\largefontsize}
+\newcommand{\startarmywiderules}{\newpage\bigtitle{\labels@armyspecialrules}\largefontsize}
+\newcommand{\closearmywiderules}{\normalfontsize}
+\newcommand{\armywideruleentry}[1]{\subtitle{#1}\vspace{5pt}}
+
+\newcommand{\startarmyspecialrules}{\bigtitle{\labels@armyspecialrules}\largefontsize}
 \newcommand{\closearmyspecialrules}{\normalfontsize}
 \newcommand{\armyspecialruleentry}[1]{\subtitle{#1}\vspace{5pt}}
 
-\newcommand{\startarmyarmoury}{\vspace*{1.5cm}\bigtitle{\labels@armoury}\largefontsize\subtitle{}}
+\newcommand{\startarmyarmoury}{\bigtitle{\labels@armoury}\largefontsize\subtitle{}}
 \newcommand{\closearmyarmoury}{\normalfontsize}
 
 \newcommand{\startarmymagicalitems}{\newpage\largefontsize\bigtitle{\labels@magicalitems}\begin{multicols}{2}\raggedcolumns}
