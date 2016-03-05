@@ -4,10 +4,13 @@
 \newcommand{\version}{0.99.0}
 \newcommand{\translationteam}{\item \og Hasdrubal \fg \item \og Iluvatar \fg \item \og Eru \fg \item \og AEnoriel \fg \item \og Mammstein \fg}
 
+\newcommand{\logosize}{2.5cm}
+
 % Army wide special rules
 
 \newnamemacro{\masterofundeath}{Maître de la Non-Vie}
 \newcommand{\master}{Maître}
+\newcommand{\invocation}{Invocation}
 
 % Army special rules
 
@@ -43,7 +46,6 @@
 
 % Other rules
 
-\newcommand{\invocation}[1]{Invocation\ifblank{#1}{}{ (#1)}}
 \newnamemacro{\unlivingshield}{Bouclier Non-Vivant}
 \newnamemacro{\stormofwings}{Déluge d'Ailes}
 \newnamemacro{\wakethedead}{Debout les Morts}
@@ -73,6 +75,10 @@
 
 \newnamemacro{\deathsignaturespell}{Le Baiser de la Faucheuse}
 \newnamemacro{\shadowssignaturespell}{Miasmes Obscurs}
+
+\newnamemacro{\heavensspelltwo}{Choc Foudroyant}
+
+\newnamemacro{\lustspellfour}{Fantasmagorie}
 
 % Characters
 
@@ -139,7 +145,6 @@
 \newnamemacro{\wraithprofile}{Apparition}
 \newcommand{\ghoststeed}{Monture Fantôme}
 \newcommand{\altar}{Autel}
-\newnamemacro{\master}{Maître}
 \newnamemacro{\awakenedvampire}{Vampire Réveillé}
 
 
@@ -189,7 +194,7 @@ Les \wizards{} amis font Ressuscitent deux PVs supplémentaires aux cibles de ta
 Les figurines ordinaires d'Infanterie appartenant à des unités alliées situées dans un rayon de \distance{6} d'une ou plusieurs figurines avec une \bloodpool{} gagnent +1 en Capacité de Combat. Les unités ennemies à mois de \distance{6} d'une ou plusieurs figurines avec une \bloodpool{} subissent -2 en Initiative, jusqu'à un minimum de 1.
 }}
 
-\newcommand{\vampireknightbloodtiesoption{}}{%
+\newcommand{\vampireknightbloodtiesoption}{%
 Peut gagner une \platearmour{} et \devastatingcharge{} (\rider{} seulement)%
 }
 
@@ -201,11 +206,11 @@ La figurine monte une \ghoststeed{}. Son type d'unité change en \cavalry{}, sa 
 Les figurines avec cette règle subissent une blessure de moins lorsqu'elles appliquent les règles \unstable{} et \ashestoashes{}.
 }
 
-\newcommand{\autonomous}{\newrule{%
+\newcommand{\autonomousrule}{\newrule{%
 L'unité peut effectuer une Marche Forcée même si elle n'est pas à portée de la \insipringpresence{} du Général.%
 }}
 
-\newcommand{\chillingshriek}{%
+\newcommand{\chillingshriekrule}{%
 \newrule{L'élément de figurine avec cette règle spéciale peut effectuer une Attaque Spéciale de Tir et une Attaque Spéciale de Corps à Corps détaillés ci-dessous.}
 \begin{itemize}
 \item \newrule{Attaque Spéciale de Tir (normalement durant la Phase de Tir) : Choisissez une cible en utilisant les règles habituelles des Attaques de Tir. La Portée de l'attaque est de \distance{8}. Le tir est posible même si la figurine a effectué une Marche Forcée durant la Phase de Mouvement précédente.}
@@ -230,7 +235,7 @@ Au début de chacun de vos Tours de Joueur, vous pouvez choisir l'un des effets 
 	\end{itemize}
 }
 
-\newcommand{\balefuldarkcoach}{\newrule%
+\newcommand{\balefuldarkcoachrule}{\newrule{%
 La figurine gagne +1 Point de Vie et sa taille de socle change en \unit{50x150}{\milli\meter}.
 }}
 
@@ -258,7 +263,7 @@ Pour connaître les effets de cette règle spéciale, le joueur doit tenir le d�
 \end{tabular}\end{center}
 }
 
-\newcommand{\ancientrevenant}{\newrule{%
+\newcommand{\ancientrevenantrule}{\newrule{%
 Le \monstrousrevenant{} gagne \thunderouscharge{} et sa taille de socle change en \unit{60x100}{\milli\meter}.
 }}
 
@@ -280,7 +285,11 @@ Un Personnage doit être le \textbf{\master{}} de l'armée. Au début de la part
 
 \removedrule{Seules les figurines avec cette règle spéciale peuvent être choisies comme Général. Le Général devient automatiquement le Maître et doit échanger un de ses sorts pour \necromancysignaturespell{}, quelque soit la Discipline qu'il a choisi.}
 
-\endarmywiderules
+\armywideruleentry{\invocation}
+
+Les profils d'unité contiennent une catégorie appelée \invocation{} qui donne le nombre de Points de Vie Ressuscités grâce à l'\necromancysignaturespell{} de la Discipline \necromancy{}.
+
+\closearmywiderules
 
 \vspace*{1.5cm}
 \startarmyspecialrules
@@ -321,6 +330,8 @@ Toute les unités amies dans un rayon de \distance{6} d'une ou plusieurs figurin
 
 \startarmynewsection{Dynasties Vampiriques}
 
+\spaceaftersection{}
+
 Une armée des Conclaves Vampiriques peut choisir de représenter une unique Dynastie Vampirique. Dans ce cas, tous les \vampirelords{} et \vampireheroes{} de l'armée doivent prendre l'amélioration correspondant à la Dynastie.
 
 \armynewsubsection{Pouvoir Dynastique Ancien}
@@ -331,99 +342,155 @@ Les \vampirelords{} appartenant à une \bloodline{} peuvent accéder au \ancient
 
 Certaines troupes du Livre d'Armée sont notées comme étant des \bloodties{}, suivies entre parenthèses de la \bloodline{} à laquelle elles appartiennent. Si la \bloodline{} des Personnages \vampires{} de l'armée correspond à celle entre parenthèses, vous pouvez prendre l'option décrite à la suite.
 
-\armynewsubsection{\brotherhood{}\dotfill \pts{\newrule{30}/\newrule{10}}}
+\armynewsubsection{\brotherhood{}\dotfill\pts{\newrule{30}/\newrule{10}}}
 
+\begin{wrapfigure}[5]{L}{0cm}
+\centering
+\includegraphics[width=\logosize]{logos/logo_brotherhood.png}
+\end{wrapfigure}
 Un Vampire de la \brotherhood{} gagne +2 en Capacité de Combat et porte une \platearmour{}. Il ne peut acheter qu'un seul Niveau de Magie supplémentaire et ne peut utiliser que la Discipline \necromancy{}. Un Vampire de la \brotherhood{} ne peut jamais refuser de Défi et doit en lancer dès qu'il le peut, à moins qu'une autre \newrule{figurine} ne le fasse en premier.
 
+\vspace{0.5cm}
 \bloodtie{} : \textbf{\vampireknights{}}.
 
-\ancientbloodpower{} : \textbf{Rage Écarlate}\dotfill\pts{65}.\newline%
+\vspace{0.5cm}
+\ancientbloodpower{} : \textbf{Rage Écarlate}\dotfill\pts{65}\newline%
 \newrule{Chaque blessure non sauvegardée infligée par des attaques normales du Vampire autorise une nouvelle attaque à la même Initiative. Ces attaques additionnelles ne génèrent pas d'autres attaques.}
 
+\armynewsubsection{\bloodline{} \vonkarnstein{}\dotfill\pts{\newrule{25}/\newrule{10}}}
 
+\begin{wrapfigure}[5]{R}{0cm}
+\centering
+\includegraphics[width=\logosize]{logos/logo_vonkarnstein.png}
+\end{wrapfigure}
+La présence d'un ou plusieurs Vampires \vonkarnstein{} dans un corps à corps octroie un bonus de +1 au Résultat de Combat. Une unité avec la règle \undead{} rejointe par un \vonkarnstein{} peut effectuer une Marche Forcée comme si elle était \vampiric{}. La portée des éventuelles \inspiringpresence{} et \holdyourground{} du Vampire est augmentée de \distance{6}, et il peut relancer ses jets ratés pour la règle \vampiric{}. 
 
+\vspace{0.5cm}
+\bloodties{} : \textbf{\darkcoach{}}.
 
+\vspace{0.5cm}
+\ancientbloodpower{} : \textbf{Appel de la Tempête}\dotfill\pts{\newrule{65}}\newline%
+\newrule{Le Vampire possède le sort \heavensspelltwo{} (Discipline \heavens{}) comme \boundspell{4}. Toutes les unités dans un rayon de \distance{12} autour du Vampire gagnent la règle spéciale \hardtarget{}. De plus, une fois par partie, le Vampire peut donner à toutes les figurines ordinaires de son unité et lui-même les règles spéciales \lightningattacks{} et \lightningreflexes{}. Cette capacité doit être activée au début d'une Phase de Corps à Corps et dure jusqu'à la fin du tour de joueur suivant.}
 
+\newpage
+\armynewsubsection{\bloodline{} \lamia{}\dotfill\pts{\newrule{40}/\newrule{25}}}
 
+\begin{wrapfigure}[6]{L}{0cm}
+\centering
+\includegraphics[width=\logosize]{logos/logo_lamia.png}
+\end{wrapfigure}
+La Vampire perd une Attaque et obtient les \lightningreflexes{}. Si elle ne porte aucune Armure\newrule{, sans compter la \mountsprotection{} et la \innatedefence{}}, elle obtient également la règle \distracting{}. \newrule{Les Défis lancés par la Vampire doivent être acceptés si possible et les figurines en Défi contre une \lamia{} doivent réussir un test de Commandement avec un malus additionnel de -1. Dans le cas d'un échec, elles doivent relancer leurs jets pour toucher réussis pendant cette Manche de Corps à Corps. La Vampire doit choisir la Discipline \light{}, \shadows{} ou \necromancy{}.}
 
-\pricelistitem{Combattant Ultime}{35} \textbf{\bloodlinepower}. Le Vampire obtient les règles \weaponmaster{} et \lethalstrike{}. Il est équipé d'une \ahw{}, d'une \halberd{}, d'une \gw{}, d'une \lance{} et d'un \shield{}.
+\vspace{0.5cm}
+\bloodties{} : \textbf{\courtofthedamned{}}.
 
-\pricelistitem{Fine Lame}{30} \textbf{\bloodlinepower}. Lorsqu'il combat en défi, le Vampire peut relancer ses jets pour toucher et pour blesser ratés.
+\vspace{0.5cm}
+\ancientbloodpower{} : \textbf{Commandement}\dotfill\pts{50}\newline%
+Toute les figurines ordinaires de l'unité rejointe par la Vampire obtiennent une Capacité de Combat de 5. Si la Vampire n'est pas engagée au corps à corps, elle peut à la place, \newrule{au début d'une Phase de Corps à Corps et pour la durée de cette phase}, donner ce bonus à une unique unité amie située dans un rayon de \distance{6}.
 
-\armynewsubsection{\bloodline{} des \strigois{}\dotfill \pts{50/40}}
+\armynewsubsection{\bloodline{} des \strigois{}\dotfill\pts{50/\newrule{30}}}
 
-\noindent\parbox{\columnwidth}{
-La figurine du Vampire \strigoi{} gagne +1 Point de Vie, obtient une \regeneration{5} et est sujet à la \hatred{}. Le Vampire ne peut pas sélectionner de monture à l'exception d'une \shriekinghorror{}, ne peut porter aucune Armure, et ne peut acheter qu'un seul niveau de magie supplémentaire. Il doit utiliser les Disciplines \wilderness{} ou \necromancy{}.
+\begin{wrapfigure}[5]{R}{0cm}
+\centering
+\includegraphics[width=\logosize]{logos/logo_strigoi.png}
+\end{wrapfigure}
+La figurine du Vampire gagne +1 Point de Vie, obtient une \regeneration{5} et est sujet à la \hatred{}. Le Vampire ne peut pas prendre de monture à l'exception d'une \shriekinghorror{}, ne peut porter aucune Armure\newrule{, sans compter la \mountsprotection{}}, et ne peut acheter qu'un seul Niveau de Magie supplémentaire. Il doit utiliser la Discipline \wilderness{} ou \necromancy{}.
 
-\bloodties{}: \ghouls{}.
-}
+\vspace{0.5cm}
+\bloodties{} : \textbf{\ghouls{}}.
+
+\vspace{0.5cm}
+\ancientbloodpower{} : \textbf{Roi des Goules}\dotfill\pts{65}\newline%
+Le Vampire fait des \poisonedattacks{} et a \armourpiercing{1}. Les \ghouls{} de l'unité qu'il rejoint gagnent la \hatred{} et \armourpiercing{1}.
+
+\armynewsubsection{\bloodline{} \nosferatu{}\dotfill\pts{\newrule{120}/\newrule{60}}}
+
+\begin{wrapfigure}[8]{L}{0cm}
+\centering
+\includegraphics[width=\logosize]{logos/logo_nosferatu.png}
+\end{wrapfigure}
+Le Vampire perd une Attaque, subit un malus de -2 en Capacité de Combat et ne peut porter aucune Armure\newrule{, à l'exception de la \mountsprotection{} et de la \innatedefence{}}. \newrule{Il ne peut pas porter d'Arme standard.} Il devient un \magiclevel{2} si c'est un Héros et un \magiclevel{4} si c'est un Seigneur. Il génère un sort supplémentaire et gagne \awaken{\skeletons{}, \zombies{}}. Un Vampire \nosferatu{} peut choisir ses sorts dans toutes les Disciplines \newrule{qui lui sont ouvertes} au lieu d'une seule. Les informations sur les Disciplines choisies et combien de sorts sont générés dans chaque Discipline doivent figurer dans la Liste d'Armée. \newrule{Si cette capacité est combinée avec la règle \pathmaster{}, le nombre de sorts choisi dans chaque Discipline doit être inscrit sur la Liste d'Armée, et le Vampire peut ensuite sélectionner ses sorts au bon vouloir du joueur en suivant cette contrainte.}
+
+\vspace{0.5cm}
+\bloodties{} : \textbf{\wraiths{}}.
+
+\vspace{0.5cm}
+\ancientbloodpower{} : \textbf{\newrule{Pouvoir de l'Esprit}}\dotfill\pts{\newrule{75}}\newline%
+\newrule{Le Vampire compte toujours comme ayant utilisé un Dé de Pouvoir de moins en cas de Fiasco. Immédiatement après avoir lancé les dés pour déterminer la force des Flux Magiques pendant votre tour, vous pouvez choisir de relancer un des dés. Dans ce cas, le Vampire subit une blessure sans aucune sauvegarde possible à la fin de la Phase de Magie.}
+
+\closearmynewsection
+
+\newpage
+\startarmynewsection{Pouvoirs Dynastiques}
+
+\spaceaftersection{}
+
+Les \vampirelords{} et les \vampireheroes{} peuvent  acheter une unique amélioration appelé Pouvoir Dynastique Vampirique. Dans le cas d'une armée Indépendante, c'est à dire sans Dynastie, tous les Pouvoirs Dynastiques sont de type \oneofakind{}. Si votre armée représente une Dynastie, seuls les Pouvoirs de cette Dynastie peuvent être pris par vos Vampires, mais ils peuvent être dupliqués.
+
+\begin{multicols}{2}\raggedcolumns
+
+\begin{center}\includegraphics[width=2cm]{logos/logo_brotherhood.png}\end{center}
+\vspace*{-1.2cm}
+\armynewsubsection{\begin{center}Indépendant ou \brotherhood{}\end{center}}
 
 \startpricelist
 
-\pricelistitem{Roi des Goules}{65} \textbf{\ancientbloodpower}. Le Vampire fait des \poisonedattacks{} et a \armourpiercing{1}. Les Goules de l'unité qu'il rejoint gagnent la \hatred{} et \armourpiercing{1}.
+\pricelistitem{Combattant Ultime}{35} Le Vampire obtient les règles \weaponmaster{} et \lethalstrike{}. Il est équipé d'une \pw{}, d'une \halberd{}, d'une \gw{}, d'une \lance{} et d'un \shield{}.
 
-\pricelistitem{Malédiction du Sang}{70} \textbf{\bloodlinepower}. Le vampire gagne \regeneration{5}. Toutes les \ghouls{} dans la même unité que le Vampire et sa monture gagnent \regeneration{6}. \newrule{Si toute figurine affectée par cette règle} possède déjà la \regeneration{} leur sauvegarde de \regeneration{} est améliorée d'un point, pour obtenir 4+ au mieux.
-
-\pricelistitem{Forme de Chauve-Souris}{65/40} \textbf{\bloodlinepower}. Le Vampire a \thunderouscharge{} et \fly{8}.
+\pricelistitem{Fine Lame}{30} Lorsqu'il combat en défi, le Vampire peut relancer ses jets pour toucher et pour blesser ratés.
 
 \endpricelist
 
-\separator
-
-\armynewsubsection{\bloodline{} \vonkarnstein{}\dotfill \pts{25/20}}
-
-\noindent\parbox{\columnwidth}{
-La présence d'un ou plusieurs Vampires de cette \bloodline{} dans un corps à corps octroie un bonus de +1 au résultat de combat. Une unité avec la règle \undead{} rejointe par un \vonkarnstein{} peut effectuer une Marche Forcée comme si elle était \vampiric{}. La portée de la \inspiringpresence{} et de \holdyourground{} du Vampire est augmentée de \distance{6}, et il peut relancer ses jets ratés de \vampiric{}. 
-
-\bloodties{}: \darkcoach{}.
-}
+\begin{center}\includegraphics[width=2cm]{logos/logo_vonkarnstein.png}\end{center}
+\vspace*{-1.2cm}
+\armynewsubsection{\begin{center}Indépendant ou \vonkarnstein{}\end{center}}
 
 \startpricelist
 
-\pricelistitem{Appel de la Tempête}{50} \textbf{\ancientbloodpower}. Toutes les unités dans un rayon de \distance{12} autour du Vampire ont la règle spéciale \hardtarget{}. De plus, une fois par partie, le Vampire peut avoir, ainsi que toute unité qu'il aurait rejointe, les règles spéciales \lightningattacks{} et \armourpiercing{2}. Cette capacité doit être activée au début d'une Phase de Corps à Corps et dure jusqu'à la fin du tour de joueur.
+\pricelistitem{Goût Raffiné}{25} Le Vampire obtient \vampiric{2}\removedrule{, ou \vampiric{4} s'il est monté sur une \largetarget{}}.
 
-\pricelistitem{Goût Raffiné}{25} \textbf{\bloodlinepower}. Le Vampire obtient \vampiric{2}, ou \vampiric{4} s'il est monté sur une \largetarget{}.
-
-\pricelistitem{L'Heure du Loup}{20} \textbf{\bloodlinepower}. Le Vampire gagne \awaken{\zombies, \direwolves, \batswarms, \greatbats}, et le Vampire ainsi que l'unité qu'il rejoint gagnent la règle \swiftstride{}.
+\pricelistitem{L'Heure du Loup}{20} Le Vampire gagne \awaken{\zombies, \direwolves, \batswarms, \greatbats}, et le Vampire ainsi que l'unité qu'il rejoint gagnent la règle \swiftstride{}\newrule{, à l'exception des autres Personnages ayant la règle \vampiric{}}.
 
 \endpricelist
 
-\armynewsubsection{\bloodline{} \lamia{}\dotfill \pts{35/25}}
-
-\noindent\parbox{\columnwidth}{
-La Vampire gagne +2 en Capacité de Tir, perd une Attaque, et obtient la règle \lightningreflexes{} et des \throwingweapons{}. Si elle ne porte aucune Armure, elle obtient également la règle \distracting{}.
-
-\bloodties{}: \courtofthedamned{}.
-}
+\begin{center}\includegraphics[width=2cm]{logos/logo_lamia.png}\end{center}
+\vspace*{-1.2cm}
+\armynewsubsection{\begin{center}Indépendant ou \lamia{}\end{center}}
 
 \startpricelist
 
-\pricelistitem{Commandement}{50} \textbf{\ancientbloodpower}. Toute les figurines ordinaires de l'unité rejointe par la Vampire obtiennent une Capacité de Combat de 5. Si la Vampire n'est pas engagée au corps à corps, elle peut à la place, \newrule{au début d'une Phase de Corps à Corps}, choisir de donner ce bonus à une unique unité située dans un rayon de \distance{6}.
+\pricelistitem{Regard Hypnotique}{\newrule{35}} \newrule{Le Vampire possède le sort \lustspellfour{} (Discipline \lust{}) comme \boundspell{4}.}
 
-\pricelistitem{Masque d'Innocence}{25} \textbf{\bloodlinepower}. Les unités au contact d'un ou plusieurs Vampires avec ce pouvoir ont -1 en Commandement.
-
-\pricelistitem{Regard Hypnotique}{25} \textbf{\bloodlinepower}. Une unité chargeant ou fuyant face à une unité avec un ou plusieurs Vampires ayant ce pouvoir lance un dé supplémentaire pour son mouvement de charge ou fuite et retire le dé avec le plus haut résultat.
+\pricelistitem{Masque d'Innocence}{25} Les unités au contact d'un ou plusieurs Vampires avec ce pouvoir subissent un malus de -1 en Commandement.
 
 \endpricelist
 
-\armynewsubsection{\bloodline{} \nosferatu{}\dotfill \pts{140/70}}
-
-\noindent\parbox{\columnwidth}{
-Le Vampire est un \wizard{} de Niveau 4/2, il a -1 Attaque et -2 en Capacité de Combat, et ne peut porter aucune Armure. Il génère un sort supplémentaire et a la règle spéciale \awaken{\zombies, \skeletons}. Un Vampire \nosferatu{} peut générer ses sorts dans plusieurs Disciplines magiques. Les Disciplines choisies et combien de sorts sont générés dans chaque Discipline doivent figurer dans la liste d'armée.
-
-\bloodties{}: \wraiths{}.
-}
+\columnbreak
+\begin{center}\includegraphics[width=2cm]{logos/logo_strigoi.png}\end{center}
+\vspace*{-1.2cm}
+\armynewsubsection{\begin{center}Indépendant ou \strigoi{}\end{center}}
 
 \startpricelist
 
-\pricelistitem{Regard Insoutenable}{50} \textbf{\ancientbloodpower}. Au début de chaque Phase de Magie, le joueur peut désigner un \wizard{} ennemi, situé en ligne de vue et dans un rayon de \distance{18} du Vampire. Ce Sorcier ne peut ajouter son Niveau de magie ou utiliser la règle \removedrule{\aideddispel{}} contre les sorts lancés par le Vampire durant cette phase. 
+\pricelistitem{Malédiction du Sang}{70} Le Vampire gagne \regeneration{5}. \newrule{S'il possédait déjà une \regeneration{}, il gagne \regeneration{4}}. Toutes les \ghouls{} dans la même unité que le Vampire et son éventuelle monture gagnent \regeneration{6}. Si une figurine affectée par cette capacité possède déjà la \regeneration{}, sa sauvegarde de \regeneration{} est améliorée d'un point, pour obtenir 4+ au mieux.
 
-\pricelistitem{Connaissance des Arcanes}{25} \textbf{\bloodlinepower}. Les sorts lancés par le Vampire et n'étant pas de type Vortex voient leur Portée augmentée de \distance{6} pour les sorts de Dommages, et de \distance{3} pour les autres types de sorts.
-
-\pricelistitem{Discipline Interdite}{20} \textbf{\bloodlinepower}. Sélectionnez une Discipline \battle{} autre que celle \nature{}. Le Vampire peut également choisir cette Discipline pour générer ses sorts en plus de celles normalement accessibles.
+\pricelistitem{\newrule{Forme Bestiale}}{\newrule{55}} \newrule{Figurines à pied uniquement. Le type de troupe du Vampire devient \monstrousinfantry{} et la taille de son socle passe à \unit{40x40}{\milli\meter}. Il gagne +1 PV, +1 en Force, \regeneration{5} et son Endurance passe à 5. Il est équipé d'une \pw{} et ne peut manier aucune autre Arme, standard ou magique. Il n'a accès à aucune monture et ne peut porter aucune sorte d'Armure.}
 
 \endpricelist
 
+\begin{center}\includegraphics[width=2cm]{logos/logo_nosferatu.png}\end{center}
+\vspace*{-1.2cm}
+\armynewsubsection{\begin{center}Indépendant ou \nosferatu{}\end{center}}
+
+\startpricelist
+
+\pricelistitem{Connaissance des Arcanes}{25} \newrule{Les sorts lancés par le Vampire ont une Portée augmentée de \distance{6}. Cet effet est réduit à \distance{3} pour les sorts de type Aura. Les sorts de Vortex, les Objets de Sort et les sorts sans Portée ne sont pas affectés}.
+
+\pricelistitem{Discipline Interdite}{20} Sélectionnez une Discipline \battle{} autre que celle \nature{}. Le Vampire peut également choisir cette Discipline pour générer ses sorts en plus de celles normalement accessibles.
+
+\endpricelist
+
+\end{multicols}
 
 \closearmynewsection
 
@@ -433,9 +500,9 @@ Le Vampire est un \wizard{} de Niveau 4/2, il a -1 Attaque et -2 en Capacité de
 
 \startpricelist
 
-\pricelistitem{Arc de Nepharet}{45} Type : \artilleryweapon{}, \boltthrower{}. \range{36}, Force 6, \armourpiercing{1}, \multiplewounds{1D3}{}.
+\pricelistitem{\removedrule{Arc de Nepharet}}{\removedrule{45}}
 
-\pricelistitem{Lame de la Soif Rouge}{40} \only{Vampires}. Type: \hw{}. Le Vampire maniant cette lame gagne \vampiric{5} s'il est monté sur une \largetarget{}, \vampiric{3} sinon. L'élément de figurine lance 1D6 pour chaque blessure qu'il inflige dans le cadre de sa règle \vampiric{}. Tout excès de blessures ainsi soignées peut être utilisé pour \raisewounds{} dans l'unité que le personnage a rejointe.
+\pricelistitem{Lame de la Soif Rouge}{40} Vampires uniquement.\newline Type: \hw{}. Le Vampire maniant cette lame \newrule{gagne \vampiric{3}}. L'élément de figurine lance 1D6 pour chaque blessure qu'il inflige dans le cadre de sa règle \vampiric{}. Tout excès de PV ainsi Ressuscité peut être utilisé pour \raisewounds{} dans l'unité que le personnage a rejointe.
 
 \endpricelist
 
@@ -451,7 +518,9 @@ Le Vampire est un \wizard{} de Niveau 4/2, il a -1 Attaque et -2 en Capacité de
 
 \startpricelist
 
-\pricelistitem{Linceul de Nuit}{40} Figurine à pied uniquement. Les figurines au contact du porteur ainsi que toute figurine allouant ses attaques sur le porteur ne reçoivent aucun bonus de type +X en Force lié à leurs armes, qu'elles soient magiques ou ordinaires.
+\pricelistitem{\newrule{Anneau d'Éternité}}{\newrule{60/50}} \newrule{Vampires uniquement.\newline Le porteur possède une \wardsave{2} contre la première blessure subie (après les Sauvegardes d'Armure) de la partie, et est immunisé aux effets du \lethalstrike{} et des \multiplewounds{}{}.}
+
+\pricelistitem{Linceul de Nuit}{40} Figurine à pied uniquement.\newline Les figurines au contact du porteur ainsi que toute figurine allouant des attaques de Corps à Corps au porteur ne reçoivent aucun bonus de type +X en Force lié à leurs Armes, qu'elles soient magiques ou ordinaires.
 
 \endpricelist
 
@@ -459,7 +528,7 @@ Le Vampire est un \wizard{} de Niveau 4/2, il a -1 Attaque et -2 en Capacité de
 
 \startpricelist
 
-\pricelistitem{Dents de Tullius}{50} Le porteur et toute figurine ordinaire de son unité gagnent la règle \distracting{}.
+\pricelistitem{Dents de Tullius}{50} Le porteur et toutes les figurines ordinaires de son unité gagnent la règle \distracting{}.
 
 \endpricelist
 
@@ -467,11 +536,13 @@ Le Vampire est un \wizard{} de Niveau 4/2, il a -1 Attaque et -2 en Capacité de
 
 \startpricelist
 
+\pricelistitem{\newrule{Baguette de Gerhard Langue Noire}}{\newrule{50}} \newrule{Une armée possédant cet objet peut relancer ses jets de Canalisation ratés. De plus, quand le porteur lance le sort \necromancysignaturespell{} (Discipline \necromancy{}), le dé pour déterminer le nombre de Points de Vie Ressuscités peut être relancé pour chaque unité concernée.}
+
 \pricelistitem{Tome Impie}{35} \boundspell{4}. Cet objet permet de lancer \necromancyspelltwo{} (Discipline \necromancy{}).
 
-\pricelistitem{Baguette d'Asservissement Vengeur}{35} \boundspell{3}. Amélioration, \range{6}, Dure un tour. Toutes les figurines de l'unité ciblée gagnent +1 Attaque.
+\pricelistitem{\removedrule{Baguette d'Asservissement Vengeur}}{\removedrule{35}}
 
-\pricelistitem{Œil de Setesh}{20} À la fin de n'importe quelle Phase de Magie, vous pouvez mettre un dé de magie inutilisé de côté pour l'ajouter à votre réserve du tour suivant, juste après avoir déterminé les flux de magie.
+\pricelistitem{Œil de Setesh}{20} À la fin de n'importe quelle Phase de Magie, vous pouvez mettre un Dé de Magie inutilisé de côté pour l'ajouter à votre réserve du tour suivant, juste après avoir déterminé les Flux de Magie.
 
 \endpricelist
 
@@ -479,9 +550,9 @@ Le Vampire est un \wizard{} de Niveau 4/2, il a -1 Attaque et -2 en Capacité de
 
 \startpricelist
 
-\pricelistitem{Étendard Noir de Zagvozd}{75} L'unité gagne \bodyguard{\vampirelord{}, \vampirehero{}}. Les \vampireknights{} portant cette bannière gagnent à la place la règle \stubborn{}. Toutes les figurines de l'unité obtiennent de surcroît une \wardsave{4} contre toute attaque à distance. 
+\pricelistitem{Étendard Noir de Zagvozd}{\newrule{40}} \newrule{Toutes les figurines de l'unité obtiennent une \wardsave{4} contre les Attaques de Tir}. 
 
-\pricelistitem{Bannière des Rois des Tertres}{50} Les figurines de \barrowknights{}, \barrowguards{} et \barrowkings{} de l'unité obtiennent +1 pour toucher au corps à corps.
+\pricelistitem{Bannière des Rois des Tertres}{\newrule{25}} Les figurines de \barrowknights{} et de \barrowguards{} \removedrule{et de \barrowkings{}} de l'unité obtiennent +1 pour toucher au Corps à Corps.
 
 \endpricelist
 
@@ -491,59 +562,120 @@ Le Vampire est un \wizard{} de Niveau 4/2, il a -1 Attaque et -2 en Capacité de
 
 %%% START OF THE ARMYLIST - Translators shouldn't have to edit it %%%
 
-\input{VampireCovenant_armylist.tex}
+%\input{VampireCovenant_armylist.tex}
 
 
 %%% Quick Reference Sheet - AB_qrs.tex is automatic and shouldn't be edited %%%
 
-\quickrefsheettitle
-
-\input{../Layout/AB_qrs.tex}
-\bigskip
-\noindent\begin{center}\Large{\textbf{\labels@Invocation}}\end{center}
-\medskip
-
-\newcommand{\QRSinvoctable}[2]{%
-\rowcolors{1}{white}{black!10}
-\noindent\begin{tabular}{p{2.85cm}>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{1cm}@{}}%
-\antiquefont\Large{\textbf{#1\spacebeforecolon{}:}}&\vspace*{-0.2cm}%
-\DTLforeach*[#2]{profiles}{\rowname=name, \rowtrooptype=trooptype, \rowcategory=category, \rowinvocation=invocation}{%
-\tabularnewline\rowname{} & \rowinvocation{}}%
-\tabularnewline%
-\end{tabular}
-\medskip
-}
-
-\begin{multicols}{4}
-\QRSinvoctable{\infantry}{\DTLiseq{\rowtrooptype}{\infantry}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}}
-
-\QRSinvoctable{\monstrousinfantry}{\DTLiseq{\rowtrooptype}{\monstrousinfantry}}
-
-\QRSinvoctable{\warbeasts}{\DTLiseq{\rowtrooptype}{\warbeast}\and\not\DTLiseq{\rowcategory}{\labels@mounts}}
-
-\QRSinvoctable{\monstrousbeasts}{\DTLiseq{\rowtrooptype}{\monstrousbeast}\and\not\DTLiseq{\rowcategory}{\labels@mounts}}
-
-\QRSinvoctable{\monsters}{\DTLiseq{\rowtrooptype}{\monster}\and\not\DTLiseq{\rowcategory}{\labels@mounts}}
-
-\QRSinvoctable{\swarms}{\DTLiseq{\rowtrooptype}{\swarm}}
-
-\rowcolors{1}{white}{white}
-\noindent\begin{tabular}{p{2.85cm}>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{1cm}@{}}%
-\textbf{Toute la \cavalry}& 2 \tabularnewline
-\end{tabular}
-\medskip
-
-\noindent\begin{tabular}{p{2.85cm}>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{1cm}@{}}%
-\textbf{Tous les \chariots}& 1 \tabularnewline
-\end{tabular}
-\medskip
-\end{multicols}
-
-\restoregeometry
+%\quickrefsheettitle
+%
+%\input{../Layout/AB_qrs.tex}
+%\bigskip
+%\noindent\begin{center}\Large{\textbf{\labels@Invocation}}\end{center}
+%\medskip
+%
+%\newcommand{\QRSinvoctable}[2]{%
+%\rowcolors{1}{white}{black!10}
+%\noindent\begin{tabular}{p{2.85cm}>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{1cm}@{}}%
+%\antiquefont\Large{\textbf{#1\spacebeforecolon{}:}}&\vspace*{-0.2cm}%
+%\DTLforeach*[#2]{profiles}{\rowname=name, \rowtrooptype=trooptype, \rowcategory=category, \rowinvocation=invocation}{%
+%\tabularnewline\rowname{} & \rowinvocation{}}%
+%\tabularnewline%
+%\end{tabular}
+%\medskip
+%}
+%
+%\begin{multicols}{4}
+%\QRSinvoctable{\infantry}{\DTLiseq{\rowtrooptype}{\infantry}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}}
+%
+%\QRSinvoctable{\monstrousinfantry}{\DTLiseq{\rowtrooptype}{\monstrousinfantry}}
+%
+%\QRSinvoctable{\warbeasts}{\DTLiseq{\rowtrooptype}{\warbeast}\and\not\DTLiseq{\rowcategory}{\labels@mounts}}
+%
+%\QRSinvoctable{\monstrousbeasts}{\DTLiseq{\rowtrooptype}{\monstrousbeast}\and\not\DTLiseq{\rowcategory}{\labels@mounts}}
+%
+%\QRSinvoctable{\monsters}{\DTLiseq{\rowtrooptype}{\monster}\and\not\DTLiseq{\rowcategory}{\labels@mounts}}
+%
+%\QRSinvoctable{\swarms}{\DTLiseq{\rowtrooptype}{\swarm}}
+%
+%\rowcolors{1}{white}{white}
+%\noindent\begin{tabular}{p{2.85cm}>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{1cm}@{}}%
+%\textbf{Toute la \cavalry}& 2 \tabularnewline
+%\end{tabular}
+%\medskip
+%
+%\noindent\begin{tabular}{p{2.85cm}>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{1cm}@{}}%
+%\textbf{Tous les \chariots}& 1 \tabularnewline
+%\end{tabular}
+%\medskip
+%\end{multicols}
+%
+%\restoregeometry
 
 \changelogtitle
 
 \startchangelog
+
+\newlog{0.99.0}{%
+Master of Undeath,
+Chilling Shriek redesign,
+Wail of Woe: new scream on Banshee,
+Awaken: max limit,
+Reaper: clarification,
+Vampire: redistribution,
+Bloodlines: Layout,
+Brotherhood of the Dragon: cost and clarification,
+Crimson Rage: clarification,
+Eternal Duelist: clarification,
+Strigoi: cost and clarification,
+Curse of the Blood: clarification,
+Bestial Revenant: New power that replaces Bat Form,
+Von Karstein: cost,
+Storm Caller: redesign,
+Hour of the Wolf: clarification,
+Refined Taste: redistribution,
+Lamia: redesign and clarification,
+Mesmerizing Gaze: Redesign,
+Nosferatu: cost and clarification,
+Power of the Mind: new power,
+Arcane Knowledge: clarification and slight redesign,
+Blade of Red Thirst: redistribution,
+Eternal Ring: new item replace Bow of Nepharet,
+Staff of Gerhard Black Tongue: new item replaces Staff of Vengeful Death,
+Banner of the Barrows: slight redesign,
+Black Standard of Zagvozd: slight redesign,
+Vampire Count: cost of lvl3 wizard,
+Necromancer Lord: cost,
+Vampire Courtier: BSB limit,
+Barrow King: Weapon Skill,
+Unliving Shield: redesign,
+Banshee: Wail of Woe,
+Zombies: cost,
+Skeletons: cost,
+Ghouls: Initiative and cost,
+Dire Wolves: cost,
+Barrow Knights: cost and Invocation,
+Barrow Guard: cost,
+Ghasts: cost,
+Vampire Spawn: cost and size,
+Phantom Host: AP(1),
+Varkolak: cost and slight redesign,
+Cadaver Wagon: cost and clarification,
+Court of the damned: moved to Special and redesign,
+Vampire Knights: cost and size,
+Wraiths: merged with Mounted Wraiths and redesign,
+Winged Reapers: cost and special rules,
+Shrieking Horror: cost,
+Dark Coach: cost{,} base size{,} upgrade and clarification,
+Monstrous Revenant: new options,
+}
+
+\newlog{0.11.1}{%
+Barrow Knights,
+Dark Coach,
+Altar of Undeath,
+Reaper rules clarification,
+}
 
 \newlog{0.11.0}{%
 Armywide special rules streamlined with UD,
@@ -565,66 +697,6 @@ Ghouls command option,
 Renamed Magic Items to Magical Items,
 Renamed Winds of Magic to Magic Flux,
 Renamed Blurry to Hard Target,
-}
-
-\newlog{0.10.2}{%
-Mantle of Night wording update,
-}
-
-\newlog{0.10.1}{%
-Cleaned up Quick Reference Sheet,
-Clarifications added on Von Karnstein{,} Vampiric{,} Ashes to Ashes{,} Blade of Red Thirst and Wake the Dead,
-}
-
-\newlog{0.10.0}{%
-Leaders of the Undead (reworded),
-Nightshroud (clarification),
-Wraith Sentries, wizard conclave (typo),
-Barrow king special rules (typo),
-vampiric and hunger merged into one rule,
-Cadaver Wagon, Endless Horde,
-Vampire count and baron, lance cost,
-Infernal Tome,
-Otherworldly Scream, (reworded to a special attack),
-Acursed Book, points cost,
-Skeletal Steed options costs,
-Bat Swarm profile,
-Vargbeast Cost,
-Ghouls Vanguard allowance to Strigoi Vampire,
-Magic Banners for one core,
-Strigoi Regen,
-Hero Wraith mounting option,
-Blade of Red Thirst on Large Targets,
-Refined Taste on Large Targets,
-Cost on Bloody Hauberk,
-Reaper (clarification),
-Otherworldly Scream (clarification),
-Wraith Sentries, Wizard Conclave
-}
-
-\newlog{0.9.3}{%
-Skeletons, light armour (missing),
-Barrow guard, lethal strike (missing),
-Wraith, statline,
-}
-
-\newlog{0.9.2}{%
-Royal Blood thin power,
-Ghoul's invocation value
-}
-
-\newlog{0.9.1}{%
-Reaper,
-Strigoi Bloodline,
-Flying Terror points,
-Von Castelstein Bloodline,
-Nosferatu Bloodline,
-The Accursed Book,
-Nightshroud,
-Skeletons statline,
-Ghouls bloodline unit,
-Bat Swarm points,
-Wraith Sentries,
 }
 
 \endchangelog

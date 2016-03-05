@@ -31,6 +31,7 @@
 \usepackage{framed}				% Boxes.
 \usepackage[framemethod=TikZ]{mdframed}% For fancy frames.
 \usepackage{tikz}				% For fancy frames.
+\usepackage{wrapfig}			% Fancy insertion of pics in text.
 
 %% Page utilities
 \usepackage{multicol}			% Allows to divide a part of the page in multiple columns.
@@ -150,7 +151,7 @@
 \newcommand{\range}[1] {\labels@range~\unit{#1}{\inch}}
 \newcommand{\distance}[1] {\unit{#1}{\inch}}
 \newcommand{\result}[1] {\texttt{'}$ #1 $\texttt{'}}
-\newcommand{\pts}[1]{\unit{#1}{\expandafter\ifstrequal\expandafter{#1}{1}{\labels@point}{\labels@points}}}
+\newcommand{\pts}[1]{#1 \expandafter\ifstrequal\expandafter{#1}{1}{\labels@point}{\labels@points}}
 
 
 %%% Fonts and sizes %%%
@@ -201,7 +202,7 @@
 \renewcommand{\profilecategory}{\labels@mounts}%
 }
 
-\newcommand{\startarmywiderules}{\newpage\bigtitle{\labels@armyspecialrules}\largefontsize}
+\newcommand{\startarmywiderules}{\newpage\bigtitle{\labels@armywiderules}\largefontsize}
 \newcommand{\closearmywiderules}{\normalfontsize}
 \newcommand{\armywideruleentry}[1]{\subtitle{#1}\vspace{5pt}}
 
@@ -225,13 +226,15 @@
 \newcommand{\startarmynewsection}[1]{\newpage\bigtitle{#1}\largefontsize}
 \newcommand{\closearmynewsection}{\normalfontsize}
 
-\newcommand{\armynewsubsection}[1]{\subtitle{#1}}
-\newcommand{\armynewsubsubsection}[1]{\subsubtitle{#1}}
+\newcommand{\armynewsubsection}[1]{\subtitle{#1}\vspace{5pt}}
+\newcommand{\armynewsubsubsection}[1]{\subsubtitle{#1}\vspace{3pt}}
 
 \newcommand{\armylist}{\clearpage}
 
 \newcommand{\quickrefsheettitle}{\clearpage\newgeometry{top=1.6cm, bottom=2cm, left=1cm, right=1cm}\bigtitle{\labels@quickrefsheet}\subtitle{}}
 \newcommand{\changelogtitle}{\clearpage\bigtitle{\labels@changelog}\subtitle{}}
+
+\newcommand{\spaceaftersection}{\vspace{0.8cm}}
 
 \newcommand{\separator}{\noindent\begin{center}\textcolor{black!30}{\rule{0.7\columnwidth}{2pt}}\end{center}}
 
