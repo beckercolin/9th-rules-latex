@@ -145,6 +145,7 @@
 
 \newcommand{\newrule}{\textcolor{green!50!black}}
 \newcommand{\removedrule}[1]{\textcolor{green!50!black}{\sout{#1}}}
+\newcommand{\refsymbol}{$\star$}
 
 \newcommand{\inch}{\arcsecond}
 \newcommand{\foot}{\arcminute}
@@ -198,7 +199,7 @@
 }
 \newcommand{\mountstitle}{%
 \def\logolocalpath{../Layout/pics/logo_mount.png}%
-\clearpage\bigtitle{\labels@mounts}\subtitle{}%
+\clearpage\bigtitle{\labels@mounts}\spaceaftersection{}%
 \renewcommand{\profilecategory}{\labels@mounts}%
 }
 
@@ -231,8 +232,8 @@
 
 \newcommand{\armylist}{\clearpage}
 
-\newcommand{\quickrefsheettitle}{\clearpage\newgeometry{top=1.6cm, bottom=2cm, left=1cm, right=1cm}\bigtitle{\labels@quickrefsheet}\subtitle{}}
-\newcommand{\changelogtitle}{\clearpage\bigtitle{\labels@changelog}\subtitle{}}
+\newcommand{\quickrefsheettitle}{\clearpage\newgeometry{top=1.6cm, bottom=2cm, left=1cm, right=1cm}\bigtitle{\labels@quickrefsheet}\vspace*{0.4cm}}
+\newcommand{\changelogtitle}{\clearpage\bigtitle{\labels@changelog}\spaceaftersection{}}
 
 \newcommand{\spaceaftersection}{\vspace{0.8cm}}
 
@@ -304,8 +305,8 @@
 	 &% \textbf{\labels@profile}
 	\labels@M & \labels@WS & \labels@BS & \labels@S & \labels@T & \labels@W & \labels@I & \labels@A & \labels@Ld &%
 	&%
-	{\smallfontsize\labels@trooptype} &%
-	{\smallfontsize\labels@basesize}%
+	{\textit{\labels@trooptype}} &%
+	{\textit{\labels@basesize}}%
 }
 
 % End of a profile table.
@@ -337,10 +338,10 @@
 	\noindent %
 	\begin{tabular}{@{}p{3cm}@{}M{\profilecellsize}@{}M{\profilecellsize}@{}M{\profilecellsize}@{}M{\profilecellsize}@{}M{\profilecellsize}@{}M{\profilecellsize}@{}M{\profilecellsize}@{}M{\profilecellsize}@{}M{\profilecellsize}@{}M{2.2cm}@{}p{0.5cm}@{}p{3.3cm}@{}p{2cm}@{}}%
 	 &% \textbf{\labels@profile}
-	\labels@M & \labels@WS & \labels@BS & \labels@S & \labels@T & \labels@W & \labels@I & \labels@A & \labels@Ld & \labels@Invocation &%
+	\labels@M & \labels@WS & \labels@BS & \labels@S & \labels@T & \labels@W & \labels@I & \labels@A & \labels@Ld & \textit{\labels@Invocation} &%
 	&%
-	{\smallfontsize\labels@trooptype} &%
-	{\smallfontsize\labels@basesize}%
+	{\textit{\labels@trooptype}} &%
+	{\textit{\labels@basesize}}%
 }
 
 \newcommand{\invocprofileitem}[1]{%
@@ -404,7 +405,7 @@
 \newcommand{\magic}[2]{\unitentry{#2}{\textit{\labels@magic\spacebeforecolon{}: }\newline\ifdefempty{#1}{}{\textbf{\magiclevel{#1}}. }\labels@pathsused\expandafter\pathslist\expandafter{#2}.}}
 
 % Wizard Conclave.
-\newcommand{\magicwizardconclave}[1]{\unitentry{#1}{\textit{\labels@magic\spacebeforecolon{}: }\newline #1.}}
+\newcommand{\magicwizardconclave}[1]{\unitentry{#1}{\textit{\labels@magic\spacebeforecolon{}: }\newline\textbf{\wizardconclave{}}\spacebeforecolon{}: #1.}}
 
 
 %%% Equipment %%%
@@ -557,7 +558,7 @@
 				    % Cost of a champion
 				    }{\commandgroup@champion}%
 				    % Magical allowance of the champion. Should probably not be used, champion option can do it as well and is more flexible.
-					\ifdefempty{\commandgroup@championallowance}{}{\par\option[\upto]{vspace{0.3cm}- \labels@championallowance}{\commandgroup@championallowance}}%
+					\ifdefempty{\commandgroup@championallowance}{}{\par\option[\upto]{\hspace*{0.3cm}- \labels@championallowance}{\commandgroup@championallowance}}%
 					% Any option available to the champion, in the form option:cost
 					\ifdefempty{\commandgroup@championoption}{}{%
 						\splitatinf{\commandgroup@championoption}\local@option\local@cost%
@@ -566,7 +567,7 @@
 				\item \hspace*{-0.04cm}\commandgroup@championprerestriction	\newline%
 				\option{\labels@champion}{\commandgroup@champion}%
 				% Magical allowance of the champion. Should probably not be used, champion option can do it as well and is more flexible.
-				\ifdefempty{\commandgroup@championallowance}{}{\par\option[\upto]{vspace{0.3cm}- \labels@championallowance}{\commandgroup@championallowance}}%
+				\ifdefempty{\commandgroup@championallowance}{}{\par\option[\upto]{\hspace*{0.3cm}- \labels@championallowance}{\commandgroup@championallowance}}%
 				% Any option available to the champion, in the form option:cost
 				\ifdefempty{\commandgroup@championoption}{}{%
 					\splitatinf{\commandgroup@championoption}\local@option\local@cost%

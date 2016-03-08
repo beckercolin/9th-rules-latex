@@ -2,7 +2,8 @@
 
 \newcommand{\booktitle}{Conclaves Vampiriques}
 \newcommand{\version}{0.99.0}
-\newcommand{\translationteam}{\item \og Hasdrubal \fg \item \og Iluvatar \fg \item \og Eru \fg \item \og AEnoriel \fg \item \og Mammstein \fg}
+\newcommand{\frenchversion}{2.0}
+\newcommand{\translationteam}{\item \og AEnoriel \fg \item \og Anglachel \fg \item \og Astadriel \fg \item \og Batcat \fg \item \og Eru \fg  \item \og Gandarin \fg \item \og Groumbahk \fg \item \og Iluvatar \fg \item \og Lamronchak \fg \item \og Mammstein \fg}
 
 \newcommand{\logosize}{2.5cm}
 
@@ -15,7 +16,7 @@
 % Army special rules
 
 \newnamemacro{\ashestoashes}{Poussière Tu Redeviendras Poussière}
-\newcommand{\wailofwoe}{Plainte Stridente}
+\newcommand{\wailofwoe}{\newrule{Plainte Stridente}}
 \newcommand{\awaken}[1]{Sombre Réveil\ifblank{#1}{}{ (#1)}}
 \newnamemacro{\reaper}{Moissonneur}
 \newcommand{\vampiric}[1]{Vampirique\ifblank{#1}{}{ (#1+)}}
@@ -59,10 +60,10 @@
 \newcommand{\autonomous}{Autonome}
 \newnamemacro{\darktome}{Sombre Recueil}
 \newnamemacro{\auraofundeath}{Aura Nécrotique}
-\newcommand{\balefuldarkcoach}{Carrosse Maléfique}
+\newcommand{\extendedchassis}{Chassis Renforcé}
 \newnamemacro{\soulsyphon}{Syphon d'Âmes}
-\newcommand{\chillingshriek}[1]{Hurlement Glaçant\ifblank{#1}{}{ (#1)}}
-\newcommand{\ancientrevenant}{Revenant Ancien}
+\newcommand{\chillingshriek}{Hurlement Glaçant}
+\newcommand{\greatmonstrousrevenant}{Revenant Immense}
 \newnamemacro{\colossalzombiedragon}{Gigantesque Dragon Zombie}
 
 %%% Names
@@ -135,7 +136,6 @@
 % Short names and multiprofiles names
 
 \newnamemacro{\steed}{Monture}
-\newnamemacro{\knight}{Chevalier}
 \newnamemacro{\rider}{Cavalier}
 \newnamemacro{\cadavermaster}{Maître des Cadavres}
 \newnamemacro{\shamblinghorde}{Horde Chancelante}
@@ -145,16 +145,26 @@
 \newnamemacro{\wraithprofile}{Apparition}
 \newcommand{\ghoststeed}{Monture Fantôme}
 \newcommand{\altar}{Autel}
+\newcommand{\coach}{Carrosse}
 \newnamemacro{\awakenedvampire}{Vampire Réveillé}
 
+
+% QRS Invocation table
+
+\newcommand{\allchariots}{Tous les \chariots{}}
 
 
 % Profile wording
 
 \newcommand{\bloodlinechoice}{Peut choisir une \bloodline}
+\newcommand{\asinglebloodpower}{Un seul \bloodpower}
+\newcommand{\asingleancientbloodpower}{Un seul \ancientbloodpower}
 \newcommand{\bloodpowerchoice}{Peut choisir un seul \bloodpower}
+\newcommand{\bloodlinenote}{%
+Ne peut être pris que si l'armée représente une Dynastie.
+}
 \newcommand{\strigoivanguardnote}{%
-Les Vampires \strigoi{} dans la même unité peuvent faire le mouvement d'\vanguard{} avec elle.
+Les Vampires \strigois{} dans la même unité peuvent faire le mouvement d'\vanguard{} avec elle.
 }
 \newcommand{\maytakebloodpool}{Peut prendre la \bloodpool}
 \newcommand{\seeshriekinghorrorinraresection}{(voir la \shriekinghorror{} dans les unités rares)}
@@ -163,7 +173,7 @@ Les Vampires \strigoi{} dans la même unité peuvent faire le mouvement d'\vangu
 % Profile rules
 
 \newcommand{\unlivingshieldrule}{\newrule{%
-Les figurines ennemies qui pourraient allouer des attaques à une figurine avec cette règle spéciale ne peuvent pas choisir de cibler plutôt un \necromancer{} ou un \necromancerlord{}. Cette règle ne peut pas être utilisée s'il y a des figurines avec la règle \vampiric{} dans la même unité.
+Les figurines ennemies qui pourraient allouer des attaques de Corps à Corps à une figurine avec cette règle spéciale ne peuvent pas choisir de cibler plutôt un \necromancer{} ou un \necromancerlord{}. Cette règle ne peut pas être utilisée s'il y a des figurines avec la règle \vampiric{} dans la même unité.
 }}
 
 \newcommand{\stormofwingsrule}{%
@@ -190,24 +200,24 @@ Les \wizards{} ennemis dans un rayon de \distance{24} d'une ou plusieurs \cadave
 Les \wizards{} amis font Ressuscitent deux PVs supplémentaires aux cibles de taille Petite et un aux cibles de taille Moyenne lorsqu'ils lancent le sort \necromancysignaturespell{} avec succès dans un rayon de \distance{6} d'une ou plusieurs \cadaverwagons{} avec cette option.
 }
 
-\newcommand{\bloodpoolrule}{\newrule{%
+\newcommand{\bloodpoolrule}{%
 Les figurines ordinaires d'Infanterie appartenant à des unités alliées situées dans un rayon de \distance{6} d'une ou plusieurs figurines avec une \bloodpool{} gagnent +1 en Capacité de Combat. Les unités ennemies à mois de \distance{6} d'une ou plusieurs figurines avec une \bloodpool{} subissent -2 en Initiative, jusqu'à un minimum de 1.
-}}
+}
 
 \newcommand{\vampireknightbloodtiesoption}{%
-Peut gagner une \platearmour{} et \devastatingcharge{} (\rider{} seulement)%
+Peut gagner une \platearmour{} et \devastatingcharge{} \newrule{(\rider{} seulement)}%
 }
 
 \newcommand{\ghoststeedsrule}{\newrule{%
-La figurine monte une \ghoststeed{}. Son type d'unité change en \cavalry{}, sa taille de socle en \unit{25x25}{\milli\meter}, elle perd la règle \skirmishers{} et gagne une \mountsprotection{6}.%
+La figurine monte une \ghoststeed{}. Son type d'unité change en \cavalry{}, sa taille de socle en \unit{25x50}{\milli\meter}, elle perd la règle \skirmishers{} et gagne une \mountsprotection{6}.%
 }}
 
-\newcommand{\undeadconstructsrule}{%
+\newcommand{\undeadconstructrule}{%
 Les figurines avec cette règle subissent une blessure de moins lorsqu'elles appliquent les règles \unstable{} et \ashestoashes{}.
 }
 
 \newcommand{\autonomousrule}{\newrule{%
-L'unité peut effectuer une Marche Forcée même si elle n'est pas à portée de la \insipringpresence{} du Général.%
+L'unité peut effectuer une Marche Forcée même si elle n'est pas à portée de la \inspiringpresence{} du Général.%
 }}
 
 \newcommand{\chillingshriekrule}{%
@@ -224,7 +234,7 @@ Une unique \banshee{} avec la règle spéciale \newrule{\wailofwoe{}} rejoint l'
 }
 
 \newcommand{\darktomerule}{%
-Les \wizards{} amis à moins de \distance{12} d'au moins un \altarofundeath{} équipé d'un \darktome{} ajoutent +2 à leurs tentatives de Lancement de Sorts de la Discipline \necromancy{} \removedrule{(jusqu'à un maximum de +3)}. Tout \wizard{} subissant un Fiasco à moins de \distance{12} d'un \altarofundeath{} équipé d'un \darktome{} compte comme ayant utilisé deux dés de pouvoirs supplémentaires pour lancer le sort (maximum 5).
+Les \wizards{} amis à moins de \distance{12} d'au moins un \altarofundeath{} équipé d'un \darktome{} ajoutent +2 à leurs tentatives de lancement de Sorts de la Discipline \necromancy{} \removedrule{(jusqu'à un maximum de +3)}. Tout \wizard{} subissant un Fiasco à moins de \distance{12} d'un \altarofundeath{} équipé d'un \darktome{} compte comme ayant utilisé deux Dés de Pouvoir supplémentaires pour lancer le sort (maximum 5).
 }
 
 \newcommand{\auraofundeathrule}{%
@@ -235,7 +245,7 @@ Au début de chacun de vos Tours de Joueur, vous pouvez choisir l'un des effets 
 	\end{itemize}
 }
 
-\newcommand{\balefuldarkcoachrule}{\newrule{%
+\newcommand{\extendedchassisrule}{\newrule{%
 La figurine gagne +1 Point de Vie et sa taille de socle change en \unit{50x150}{\milli\meter}.
 }}
 
@@ -252,7 +262,7 @@ Pour connaître les effets de cette règle spéciale, le joueur doit tenir le d�
 
 \textbf{1 - 3}		   & \textit{L'air est empli de pulsations meurtrières}. Le \darkcoach{} gagne \lethalstrike{} et \multiplewounds{2}{\infantry , \warbeasts , \cavalry}. \tabularnewline
 
-\textbf{4 - 6}		   & \textit{La nuit s'illumine de feux impurs}. Le \darkcoach{} gagne \grindingattacks{1D3} \newrule{(résolues à l'Initiative de l'\fellwraith{})} et \flamingattacks{}. \tabularnewline
+\textbf{4 - 6}		   & \textit{La nuit s'illumine de feux impurs}. Le \darkcoach{} gagne \grindingattacks{1D3} \newrule{(résolues à l'Initiative de l'\wraithprofile{})} et \flamingattacks{}. \tabularnewline
 
 \textbf{7 - 9}		   & \textit{Un mal ancien se réveille!} Le \darkcoach{} ajoute le \awakenedvampire{} (1) à son équipage, il possède \vampiric{2}. \tabularnewline
 
@@ -263,7 +273,7 @@ Pour connaître les effets de cette règle spéciale, le joueur doit tenir le d�
 \end{tabular}\end{center}
 }
 
-\newcommand{\ancientrevenantrule}{\newrule{%
+\newcommand{\greatmonstrousrevenantrule}{\newrule{%
 Le \monstrousrevenant{} gagne \thunderouscharge{} et sa taille de socle change en \unit{60x100}{\milli\meter}.
 }}
 
@@ -307,7 +317,7 @@ Au début de votre Tour de Joueur suivant la mort du \master{}, un nouveau \mast
 
 \armyspecialruleentry{\awaken{X}}
 
-Une figurine avec cette règle spéciale peut Ressusciter des PVs au-delà de l'effectif de départ de toutes les unités mentionnées entre parenthèses, en suivant les modalités de \raisewounds{}. L'effectif de départ est le nombre de figurines choisi sur la liste d'armée. \removedrule{Les unités peuvent même dépasser l'effectif maximal autorisé sur leur fiche d'unité.}\newrule{La taille des unités ne peut pas être augmentée au delà de deux fois l'effectif de départ.}
+Une figurine avec cette règle spéciale peut Ressusciter des PVs au-delà de l'effectif de départ de toutes les unités mentionnées entre parenthèses, en suivant les modalités de \raisewounds{}. L'effectif de départ est le nombre de figurines choisi sur la liste d'armée. \removedrule{Les unités peuvent même dépasser l'effectif maximal autorisé sur leur fiche d'unité.} \newrule{La taille des unités ne peut pas être augmentée au delà de deux fois l'effectif de départ.}
 
 
 \armyspecialruleentry{\reaper}
@@ -415,7 +425,7 @@ Le Vampire perd une Attaque, subit un malus de -2 en Capacité de Combat et ne p
 \bloodties{} : \textbf{\wraiths{}}.
 
 \vspace{0.5cm}
-\ancientbloodpower{} : \textbf{\newrule{Pouvoir de l'Esprit}}\dotfill\pts{\newrule{75}}\newline%
+\ancientbloodpower{} : \textbf{\newrule{Occultisme du Sang}}\dotfill\pts{\newrule{75}}\newline%
 \newrule{Le Vampire compte toujours comme ayant utilisé un Dé de Pouvoir de moins en cas de Fiasco. Immédiatement après avoir lancé les dés pour déterminer la force des Flux Magiques pendant votre tour, vous pouvez choisir de relancer un des dés. Dans ce cas, le Vampire subit une blessure sans aucune sauvegarde possible à la fin de la Phase de Magie.}
 
 \closearmynewsection
@@ -562,55 +572,51 @@ Les \vampirelords{} et les \vampireheroes{} peuvent  acheter une unique amélior
 
 %%% START OF THE ARMYLIST - Translators shouldn't have to edit it %%%
 
-%\input{VampireCovenant_armylist.tex}
+\input{VampireCovenant_armylist.tex}
 
 
 %%% Quick Reference Sheet - AB_qrs.tex is automatic and shouldn't be edited %%%
 
-%\quickrefsheettitle
-%
-%\input{../Layout/AB_qrs.tex}
-%\bigskip
-%\noindent\begin{center}\Large{\textbf{\labels@Invocation}}\end{center}
-%\medskip
-%
-%\newcommand{\QRSinvoctable}[2]{%
-%\rowcolors{1}{white}{black!10}
-%\noindent\begin{tabular}{p{2.85cm}>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{1cm}@{}}%
-%\antiquefont\Large{\textbf{#1\spacebeforecolon{}:}}&\vspace*{-0.2cm}%
-%\DTLforeach*[#2]{profiles}{\rowname=name, \rowtrooptype=trooptype, \rowcategory=category, \rowinvocation=invocation}{%
-%\tabularnewline\rowname{} & \rowinvocation{}}%
-%\tabularnewline%
-%\end{tabular}
-%\medskip
-%}
-%
-%\begin{multicols}{4}
-%\QRSinvoctable{\infantry}{\DTLiseq{\rowtrooptype}{\infantry}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}}
-%
-%\QRSinvoctable{\monstrousinfantry}{\DTLiseq{\rowtrooptype}{\monstrousinfantry}}
-%
-%\QRSinvoctable{\warbeasts}{\DTLiseq{\rowtrooptype}{\warbeast}\and\not\DTLiseq{\rowcategory}{\labels@mounts}}
-%
-%\QRSinvoctable{\monstrousbeasts}{\DTLiseq{\rowtrooptype}{\monstrousbeast}\and\not\DTLiseq{\rowcategory}{\labels@mounts}}
-%
-%\QRSinvoctable{\monsters}{\DTLiseq{\rowtrooptype}{\monster}\and\not\DTLiseq{\rowcategory}{\labels@mounts}}
-%
-%\QRSinvoctable{\swarms}{\DTLiseq{\rowtrooptype}{\swarm}}
-%
-%\rowcolors{1}{white}{white}
-%\noindent\begin{tabular}{p{2.85cm}>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{1cm}@{}}%
-%\textbf{Toute la \cavalry}& 2 \tabularnewline
-%\end{tabular}
-%\medskip
-%
-%\noindent\begin{tabular}{p{2.85cm}>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{1cm}@{}}%
-%\textbf{Tous les \chariots}& 1 \tabularnewline
-%\end{tabular}
-%\medskip
-%\end{multicols}
-%
-%\restoregeometry
+\quickrefsheettitle
+
+\input{../Layout/AB_qrs.tex}
+\bigskip
+\begin{center}\noindent{\antiquefont\Largefontsize\textbf{\labels@Invocation}}\end{center}
+
+\newcommand{\QRSinvoctable}[2]{%
+\rowcolors{1}{white}{black!10}
+\noindent\begin{tabular}{p{4cm}>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{1cm}@{}}%
+\antiquefont\Large{\textbf{#1\spacebeforecolon{}:}}&\vspace*{-0.2cm}%
+\DTLforeach*[#2]{profiles}{\rowname=name, \rowtrooptype=trooptype, \rowcategory=category, \rowinvocation=invocation}{%
+\tabularnewline\rowname{} & \rowinvocation{}}%
+\tabularnewline%
+\end{tabular}
+\medskip
+}
+
+\begin{multicols}{3}
+\QRSinvoctable{\infantry}{\DTLiseq{\rowtrooptype}{\infantry}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}}
+
+\QRSinvoctable{\swarms}{\DTLiseq{\rowtrooptype}{\swarm}}
+
+\QRSinvoctable{\monstrousinfantry}{\DTLiseq{\rowtrooptype}{\monstrousinfantry}}
+
+\QRSinvoctable{\cavalry}{\DTLiseq{\rowtrooptype}{\cavalry}\and\not\DTLiseq{\rowcategory}{\labels@mounts}}
+
+\QRSinvoctable{\warbeasts}{\DTLiseq{\rowtrooptype}{\warbeast}\and\not\DTLiseq{\rowcategory}{\labels@mounts}}
+
+\QRSinvoctable{\monstrousbeasts}{\DTLiseq{\rowtrooptype}{\monstrousbeast}\and\not\DTLiseq{\rowcategory}{\labels@mounts}}
+
+\QRSinvoctable{\monsters}{\DTLiseq{\rowtrooptype}{\monster}\and\not\DTLiseq{\rowcategory}{\labels@mounts}}
+
+\rowcolors{1}{white}{white}
+\noindent\begin{tabular}{p{4cm}>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{1cm}@{}}%
+{\antiquefont\Large\textbf{\allchariots{}\spacebeforecolon{}:}}& 1 \tabularnewline
+\end{tabular}
+\medskip
+\end{multicols}
+
+\restoregeometry
 
 \changelogtitle
 

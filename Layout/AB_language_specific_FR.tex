@@ -47,9 +47,9 @@
 \newcommand{\labels@musician}{Musicien}
 \newcommand{\labels@singlebannerallowance}{Une seule unité de ce type peut prendre une Bannière magique}
 \newcommand{\labels@condsinglebannerallowance}{Une seule unité de ce type peut prendre une Bannière magique si}
-\newcommand{\labels@bannerallowance}{Peut prendre une Bannière magique}
+\newcommand{\labels@bannerallowance}{Peut prendre une Bannière Magique}
 \newcommand{\labels@veteranstandardbearer}{Peut devenir Porte-étendard Vétéran}
-\newcommand{\labels@championallowance}{Peut prendre des objets magiques}
+\newcommand{\labels@championallowance}{Peut prendre une Arme Magique}
 
 % Titles
 
@@ -102,7 +102,7 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 \vspace{0.1cm}
 
 \ifdef{\translationteam}{
-	\begin{multicols}{2}
+	\begin{multicols}{3}
 	\begin{itemize}
 		\translationteam
 	\end{itemize}
@@ -339,12 +339,15 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 \newcommand{\maytakeoneofthefollowing}{\optionschoice{Peut prendre un choix parmi :}}
 \newcommand{\maytakeuptotwoofthefollowing}{\optionschoice{Peut prendre jusqu'à deux choix parmi :}}
 \newcommand{\maygain}{Peut gagner la règle}
+\newcommand{\maytake}{Peut prendre}
 \newcommand{\maytakeashield}{Peut prendre un Bouclier}
 \newcommand{\maytakela}{Peut prendre une Armure Légère}
 \newcommand{\maytakeha}{Peut prendre une Armure Lourde}
 \newcommand{\maytakemountsprotectionX}[1]{Peut prendre une \mountsprotection{#1}}
 \newcommand{\maytakeagw}{Peut prendre une Arme Lourde}
 \newcommand{\replaceshieldwithhalberd}{Remplacer le Bouclier par une Hallebarde}
+
+\newcommand{\maytakeonechoiceonly}{\optionschoice{\maytake{} \onechoiceonly{}\spacebeforecolon{}:}}
 
 \newcommand{\veteranstandardbearernote}{%
 Un Porte-étendard Vétéran est Unique (un seul Vétéran dans toute l'armée) et peut choisir une Bannière Magique dans un budget de 25 pts.

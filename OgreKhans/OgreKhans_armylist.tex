@@ -17,16 +17,16 @@
 	specialrules={\fear},
 	armour={\ha},
 	options={
-		\bignamechoice = \unlimited,
-		\magicalitemsallowance = \upto < 100,
+		\bignamechoice{}=\unlimited,
+		\magicalitemsallowance{}=\upto{}<100,
 		\shootingweapononechoice{
-			\ogrepistol =6,
-			\braceofogrepistols =8,
-			\ogrecrossbow =8,
+			\ogrepistol{}=6,
+			\braceofogrepistols{}=8,
+			\ogrecrossbow{}=8,
 		},
 		\combatweapononechoice{
-			\ironfist =\newrule{15},
-			\gw =20,
+			\ironfist{}=\newrule{15},
+			\gw{}=20,
 		},
 	},
 }
@@ -43,15 +43,15 @@
 	magiclevel=3,
 	magicpaths={\newrule{\alchemy}, \death, \heavens, \wilderness, \newrule{\fire}, \butchery},
 	options={
-		\bignamechoice = \unlimited,
+		\bignamechoice{}=\unlimited,
 		\magiclevel{4}=\newrule{30},
-		\magicalitemsallowance = \upto < 100,
+		\magicalitemsallowance{}=\upto{}<100,
 		\combatweapononechoice{
-			\pw =5,
-			\gw =15,
+			\pw{}=5,
+			\gw{}=15,
 		},
-		\maytakegreaterfireblessing{}* = 35,
-		\newrule{*\onlyifpathoffireoralchemyischosen} =,
+		\maytakegreaterfireblessing{}*=35,
+		\newrule{*\onlyifpathoffireoralchemyischosen}=,
 	},
 	unitrules={
 		\unitrule{\greaterfireblessing}{\greaterfireblessingrule}
@@ -72,18 +72,18 @@
 	commonspecialrules={\sonsoftheavalanche},
 	armour={\ha},
 	options={
-		\bsboption = 25,
-		\hspace*{0.7cm}- \maytakescraplingloukout = 5,
-		\bignamechoice = \unlimited,
-		\magicalitemsallowance = \upto < 50,
+		\bsboption{}=25,
+		\hspace*{0.7cm}- \maytakescraplingloukout{}=5,
+		\bignamechoice{}=\unlimited,
+		\magicalitemsallowance{}=\upto{}<50,
 		\shootingweapononechoice{
-			\ogrepistol =6,
-			\braceofogrepistols =8,
-			\ogrecrossbow =8,
+			\ogrepistol{}=6,
+			\braceofogrepistols{}=8,
+			\ogrecrossbow{}=8,
 		},
 		\combatweapononechoice{
-			\ironfist =\newrule{15},
-			\gw =15,
+			\ironfist{}=\newrule{15},
+			\gw{}=15,
 		},
 	},
 }
@@ -101,15 +101,15 @@
 	magiclevel=1,
 	magicpaths={\wilderness, \newrule{\fire}, \butchery},
 	options={
-		\bignamechoice = \unlimited,
+		\bignamechoice{}=\unlimited,
 		\magiclevel{2}=25,
-		\magicalitemsallowance = \upto < 50,
+		\magicalitemsallowance{}=\upto{}<50,
 		\weapononechoice{
-			\pw =3,
-			\gw =6,
+			\pw{}=3,
+			\gw{}=6,
 		},
-		\maytakefireblessing{}* = 25,
-		\newrule{*\onlyifpathoffireischosen} =,
+		\maytakefireblessing{}*=25,
+		\newrule{*\onlyifpathoffireischosen}=,
 	},
 	unitrules={
 		\unitrule{\fireblessing}{\fireblessingrule}
@@ -129,24 +129,24 @@
 	armour={\la},
 	weapons={\huntingspear},
 	options={
-		\bignamechoice = \unlimited,
-		\magicalitemsallowance = \upto < 50,
-		\mayupgradeto{} \scout{} \onfootonly = 10,
-		\mayreplacehuntingspearwithogrecrossbow = \free,
+		\bignamechoice{}=\unlimited,
+		\magicalitemsallowance{}=\upto{}<50,
+		\mayupgradeto{} \scout{} \onfootonly{}=10,
+		\mayreplacehuntingspearwithogrecrossbow{}=\free,
 		\weapononechoice{
-			\pw =5,
-			\ironfist =\newrule{15},
-			\lance =15,
-			\gw =15,
+			\pw{}=5,
+			\ironfist{}=\newrule{15},
+			\lance{}=15,
+			\gw{}=15,
 		},
 	},
-	mounts={\tusker = 60, \rockaurochs{} (\oneofakind{})*= 250},
+	mounts={\tusker{}=60, \rockaurochs{} (\oneofakind{})*=250},
 	unitrules={
 		\unitrule{\loner}{\lonerrule}
 		\unitrule{\leaderofthepack}{\leaderofthepackrule}
 	},
 	additional={
-		* \mammothhunternote
+		* \mammothhunternote{}
 	}
 }
 
