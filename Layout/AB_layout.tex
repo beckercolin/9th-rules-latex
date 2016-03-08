@@ -87,6 +87,7 @@
   \restoreexpandmode
 }
 
+\def\removespaces#1{\zap@space#1 \@empty}
 
 %%% Commands for alphabetical ordering %%%
 
@@ -112,7 +113,8 @@
 \pdfstringdefDisableCommands{\def\textcolor#1{}}
 
 \newcommand{\addtosortedlist}[1]{%
-	\pdfstringdef\plaintexttemp{#1}%
+	\def\textwithoutspace{\expandafter\removespaces\expandafter{#1}}%
+	\pdfstringdef\plaintexttemp{\textwithoutspace}%
 	\expandafter\sortitem\expandafter[\plaintexttemp]{#1}%
 }%
 
@@ -152,7 +154,13 @@
 \newcommand{\range}[1] {\labels@range~\unit{#1}{\inch}}
 \newcommand{\distance}[1] {\unit{#1}{\inch}}
 \newcommand{\result}[1] {\texttt{'}$ #1 $\texttt{'}}
-\newcommand{\pts}[1]{#1 \expandafter\ifstrequal\expandafter{#1}{1}{\labels@point}{\labels@points}}
+\newcommand{\pts}[1]{#1~% First step is to remove spaces if there are some
+	\def\numberwithoutspaces{\expandafter\removespaces\expandafter{#1}}%
+	% Next step is getting rid of formatting if there are any (bold, color, ...)
+	\pdfstringdef\cleannumber{\numberwithoutspaces}%
+	% Now we can try if it is 1 or not
+	\expandafter\ifstrequal\expandafter{\cleannumber}{1}{\labels@point}{\labels@points}%
+}
 
 
 %%% Fonts and sizes %%%
@@ -750,10 +758,10 @@
 		\expandafter\ifblank\expandafter{\unit@maxmodels}{% no		
 			{\hspace*{0.25cm}\large\labels@Singlemodel}%
 		}{% yes
-			{\hspace*{0.25cm}\large \textbf{1} \wordto{} \textbf{\unit@maxmodels} \labels@models{}\hfill {\smallfontsize\pricepermodelabovemin{}} {\largefontsize\pts{\textbf{\unit@costpermodel{}}}\permodel}\hspace*{0.1cm}}%
+			{\hspace*{0.25cm}\mincostfor{} \textbf{1} \labels@model{}. \maxunitsize{}\spacebeforecolon{}: \textbf{\unit@maxmodels} \labels@models{}.\hfill \additionalfigscost{} {\largefontsize\pts{\textbf{\unit@costpermodel{}}}\permodel}\hspace*{0.1cm}}%
 		}%
 	}{% not single model					
-			{\hspace*{0.25cm}\large \textbf{\unit@unitsize} \wordto{} \textbf{\unit@maxmodels} \labels@models{}\hfill {\smallfontsize\pricepermodelabovemin{}} {\largefontsize\pts{\textbf{\unit@costpermodel{}}}\permodel}\hspace*{0.1cm}}%
+			{\hspace*{0.25cm}\mincostfor{} \textbf{\unit@unitsize} \labels@models{}. \maxunitsize{}\spacebeforecolon{}: \textbf{\unit@maxmodels} \labels@models{}.\hfill \additionalfigscost{} {\largefontsize\pts{\textbf{\unit@costpermodel{}}}\permodel}\hspace*{0.1cm}}%
 	}%
 	}%
 	\vspace*{-0.1cm}

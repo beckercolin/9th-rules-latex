@@ -50,8 +50,8 @@
 			\pw{}=5,
 			\gw{}=15,
 		},
-		\maytakegreaterfireblessing{}*=35,
-		\newrule{*\onlyifpathoffireoralchemyischosen}=,
+		\maytakegreaterfireblessing{}\refsymbol{}=35,
+		\newrule{\refsymbol{}\onlyifpathoffireoralchemyischosen}=,
 	},
 	unitrules={
 		\unitrule{\greaterfireblessing}{\greaterfireblessingrule}
@@ -108,8 +108,8 @@
 			\pw{}=3,
 			\gw{}=6,
 		},
-		\maytakefireblessing{}*=25,
-		\newrule{*\onlyifpathoffireischosen}=,
+		\maytakefireblessing{}\refsymbol{}=25,
+		\newrule{\refsymbol{}\onlyifpathoffireischosen}=,
 	},
 	unitrules={
 		\unitrule{\fireblessing}{\fireblessingrule}
@@ -140,13 +140,13 @@
 			\gw{}=15,
 		},
 	},
-	mounts={\tusker{}=60, \rockaurochs{} (\oneofakind{})*=250},
+	mounts={\tusker{}=60, \rockaurochs{} (\oneofakind{})\refsymbol{}=250},
 	unitrules={
 		\unitrule{\loner}{\lonerrule}
 		\unitrule{\leaderofthepack}{\leaderofthepackrule}
 	},
 	additional={
-		* \mammothhunternote{}
+		\refsymbol{} \mammothhunternote{}
 	}
 }
 
@@ -167,10 +167,10 @@
 	weapons={\pw},
 	armour={\la},
 	options={
-		\maytakeha = \permodel < \newrule{3},
-		\maytakeironfist = \permodel < \newrule{6},
+		\maytakeha{}=\permodel{}<\newrule{3},
+		\maytakeironfist{}=\permodel{}<\newrule{6},
 	},
-	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir, banneroption=\maytakescraplingloukout < 5}
+	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir, banneroption=\maytakescraplingloukout{}<5}
 }
 
 \showunit{
@@ -186,7 +186,7 @@
 	commonspecialrules={\sonsoftheavalanche},
 	weapons={\gw},
 	armour={\ha},
-	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir, banneroption=\maytakescraplingloukout < 5}
+	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir, banneroption=\maytakescraplingloukout{}<5}
 }
 
 \showunit{
@@ -201,14 +201,14 @@
 	specialrules={\insignificant},
 	weapons={\throwingweapons},
 	options={
-		\maytakela = \permodel < 1,
+		\maytakela{}=\permodel{}<1,
 		\mayreplacethrowingweaponswith{
-			\shortbow = \free,
-			\newrule{\shield}= \permodel < \newrule{1},
-			\newrule{\spear}= \permodel < \newrule{1},
+			\shortbow{}=\free,
+			\newrule{\shield}=\permodel{}<1,
+			\newrule{\spear}=\permodel{}<1,
 		}
 	},
-	commandgroup={champion=10, championoption=\oneunitmayupgradetoforeman < 20, musician=10, banner=10},
+	commandgroup={champion=10, championoption=\oneunitmayupgradetoforeman{}<20, musician=10, banner=10},
 }
 
 \showunit{
@@ -223,8 +223,8 @@
 	armour={\la},
 	options={
 		\weapononechoice{
-			\halberd = 3,
-			\gw = 3,
+			\halberd{}=3,
+			\gw{}=3,
 		}
 	},
 	unitrules={
@@ -250,7 +250,7 @@
 	unitequipment={
 		\equipmentdef{\handcannon}{\handcannonrule}
 	},
-	commandgroup={champion=10, musician=10, banner=10, bannerallowance=25, banneroption=\maytakescraplingloukout < 5}
+	commandgroup={champion=10, musician=10, banner=10, bannerallowance=25, banneroption=\maytakescraplingloukout{}<5}
 }
 
 \showunit{
@@ -268,17 +268,17 @@
 	armour={\ha},
 	options={
 		\weaponschoice{
-			\pw = \permodel < 3,
-			\ogrepistol = \permodel < 5,
-			\ironfist = \permodel < \newrule{7},
-			\braceofogrepistols = \permodel < \newrule{7},
-			\gw = \permodel < \newrule{7},
+			\pw{}=\permodel{}<3,
+			\ogrepistol{}=\permodel{}<5,
+			\ironfist{}=\permodel{}<\newrule{7},
+			\braceofogrepistols{}=\permodel{}<\newrule{7},
+			\gw{}=\permodel{}<\newrule{7},
 		}
 	},
 	unitrules={
 		\unitrule{\battlescarred}{\battlescarredrule}
 	},
-	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50, banneroption=\maytakescraplingloukout < 5}
+	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50, banneroption=\maytakescraplingloukout{}<5}
 }
 
 \showunit{
@@ -296,13 +296,13 @@
 	armour={\la, \mountsprotection{5}},
 	specialrules={\fear, \impacthits{1D3}},
 	options={
-		\maytakeha = \permodel < 10,
+		\maytakeha{}=\permodel{}<10,
 		\weapononechoice{
-			\gw = \permodel < 10,
-			\ironfist{} \onlywithlightarmour = \permodel < \newrule{15},
+			\gw{}=\permodel{}<10,
+			\ironfist{} \onlywithlightarmour{}=\permodel{}<\newrule{15},
 		},
 	},
-	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50, banneroption=\removedrule{\maytakescraplingloukout} < 5}
+	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50, banneroption=\removedrule{\maytakescraplingloukout}<5}
 }
 
 \showunit{
@@ -325,7 +325,7 @@
 	type= \monstrousinfantry ,
 	basesize=40x40,
 	unitsize=1,
-	specialrules={\regeneration{5}, \fear, \ambush, \hatred, \unbreakable},
+	specialrules={\fear{},\ambush{},\hatred{},\unbreakable{},\regeneration{5}},
 }
 
 \showunit{
@@ -415,11 +415,11 @@
 	unitsize=1,
 	weapons={\ogrecrossbow},
 	armour={\innatedefence{4}},
-	specialrules={\impacthits{3D3}, \frenzy{} \only{\rockaurochs}, \stubborn, \swiftstride, \stoneskin},
+	specialrules={\impacthits{3D3},\frenzy{} \only{\rockaurochs{}},\stubborn{},\swiftstride{},\stoneskin{}},
 	options={
 		\riderchoice{
-			\huntingspear = \free,
-			\lance = 5,
+			\huntingspear{}=\free,
+			\lance{}=5,
 		},
 	},
 	unitrules={\unitrule{\stoneskin}{\stoneskinrule}},
@@ -440,8 +440,8 @@
 	specialrules={\impacthits{3D3}, \freezingaura},
 	options={
 		\anyriderchoice{
-			\newrule{\huntingspear} = \free,
-			\newrule{\lance} = \free,
+			\newrule{\huntingspear}=\free,
+			\newrule{\lance}=\free,
 		}
 	},
 	unitrules={\unitrule{\freezingaura}{\freezingaurarule}},
@@ -450,19 +450,26 @@
 \showunit{
 	name={\slavegiant},
 	cost=150,
-	profile={
-		 < 6 3 - 6 5 6 3 * 8,
-	},
+	profile={< 6 3 - 6 5 6 3 \refsymbol{} 8,},
 	type=\monster,
 	basesize=50x75,
 	unitsize=1,
 	armour={\ha},
 	specialrules={\immunetopsychology, \stubborn, \newrule{\insignificant}},
-	unitrules={
-		\unitrule{\dowhatyouretold}{\dowhatyouretoldrule}
-		\unitrule{\giantattacks}{\giantattacksrule}
+	additional={%
+		\def\tempunitrules{%
+			\unitrule{\dowhatyouretold}{\dowhatyouretoldrule}
+			\unitrule{\giantattacks}{\giantattacksrule}
+			\unitrule{\bellow}{\bellowrule}
+			\unitrule{\jump}{\jumprule}
+			\unitrule{\grab}{\grabrule}
+			\unitrule{\swing}{\swingrule}
+			\unitrule{\thump}{\thumprule}
+			\unitrule{\smashname}{\smashrule}
+		}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\giantattackstable
 	},
-	additional={\giantattackstable},
 }
 
 

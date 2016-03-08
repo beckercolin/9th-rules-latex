@@ -2,7 +2,8 @@
 
 \newcommand{\booktitle}{Khans Ogres}
 \newcommand{\version}{0.99.0}
-\newcommand{\translationteam}{\item \og Gandarin \fg \item \og Hasdrubal \fg \item \og Iluvatar \fg \item \og Eru \fg \item \og AEnoriel \fg \item \og Mammstein \fg \item \og Gg \fg}
+\newcommand{\frenchversion}{2.0}
+\newcommand{\translationteam}{\item \og AEnoriel \fg \item \og Anglachel \fg \item \og Astadriel \fg \item \og Batcat \fg \item \og Eru \fg  \item \og Gandarin \fg \item \og Groumbahk \fg \item \og Iluvatar \fg \item \og Lamronchak \fg \item \og Mammstein \fg}
 
 % Army special rules
 
@@ -43,9 +44,15 @@
 \newcommand{\itsatrap}{C'est un Piège !}
 \newcommand{\stoneskin}{Ossature de Granit}
 \newcommand{\freezingaura}{Aura Glaciale}
-\newcommand{\dowhatyouretold}{Fait ce qu'on te dis}
+\newcommand{\dowhatyouretold}{Fait ce qu'on te dit}
 \newcommand{\giantattacks}{Attaques de Géant}
 \newcommand{\wildbeasts}{Bêtes Sauvages} % a enlever apres la 0.99
+\newcommand{\bellow}{Hurle}
+\newcommand{\jump}{Saute}
+\newcommand{\grab}{Ramasse}
+\newcommand{\swing}{Frappe}
+\newcommand{\thump}{Tape comme un Sourd}
+\newcommand{\smashname}{Fracasse}
 
 %%% Names
 
@@ -64,7 +71,7 @@
 
 % Core
 
-\newcommand{\tribesmen}{Guerrier Tribaux}
+\newcommand{\tribesmen}{Guerriers Tribaux}
 \newcommand{\bruisers}{Brise-Crânes}
 \newcommand{\scraplings}{Scrapulins}
 \newcommand{\scraplingforeman}{Chef Scrapulin}
@@ -125,11 +132,11 @@
 % Profile rules
 
 \newcommand{\greaterfireblessingrule}{%
-Le \greatshaman{} gagne \flamingattacks{}, \fireborn{} et \breathweapon{Force 4, \flamingattacks{}}.
+Le \greatshaman{} gagne \breathweapon{Force 4, \flamingattacks{}}, \flamingattacks{} et \fireborn{}.
 }
 
 \newcommand{\fireblessingrule}{%
-Le \shaman{} gagne \flamingattacks{}, \fireborn{} et \breathweapon{Force 3, \flamingattacks{}}.
+Le \shaman{} gagne \breathweapon{Force 3, \flamingattacks{}}, \flamingattacks{} et \fireborn{}.
 }
 
 \newcommand{\lonerrule}{%
@@ -189,41 +196,56 @@ Tous les \slavegiants{} peuvent relancer leur premier jet d'Attaques de Géant, 
 }
 
 \newcommand{\giantattacksrule}{%
-Quand un Géant attaque au corps à corps, choisissez une unité en contact socle à socle pour subir son attaque et lancez 1D6. Déterminez ci-dessous la table à utiliser selon le Type de Troupe de l'unité visée, et trouvez l'attaque correspondant au résultat du dé. Il est important de noter que les Attaques de Géant comptent comme des attaques de corps à corps et suivent ainsi normalement les règles affectant ces attaques. Le Géant peut également faire son \stomp{}.
+Quand un Géant attaque au Corps à Corps, choisissez une unité en contact socle à socle pour subir son attaque et lancez 1D6. Déterminez ci-dessous la table à utiliser selon le Type de Troupe de l'unité visée, et trouvez l'attaque correspondant au résultat du dé. Il est important de noter que les Attaques de Géant comptent comme des attaques de Corps à Corps et suivent ainsi normalement les règles affectant ces attaques. Le Géant peut également faire son \stomp{}.
 }
 
 \newcommand{\giantattackstable}{% to check
-\noindent \textbf{\giantattacks :}
 \setlength\multicolsep{12.0pt plus 4.0pt minus 3pt}
 \vspace*{-0.5cm}\begin{multicols}{2}
 	\noindent Si l'unité est de type \infantry{}, \warbeast{}, \cavalry{}, \swarm{} ou \warmachine{}  :	
 	\renewcommand{\arraystretch}{1.5}	
 	\begin{center}\begin{tabular}{cl}
    		\hline
-		1 & Hurle \tabularnewline
-		2 & Saute \tabularnewline
-		3 & Ramasse \tabularnewline
-		4-6 & Frappe \tabularnewline
+		1 & \bellow{} \tabularnewline
+		2 & \jump{} \tabularnewline
+		3 & \grab{} \tabularnewline
+		4-6 & \swing{} \tabularnewline
 		\hline
 	\end{tabular}\end{center}
 	Si l'unité est de type \monstrousinfantry{}, \monstrouscavalry{}, \monstrousbeast{}, \chariot{}, \monster{} ou \riddenmonster{} :
 	\begin{center}\begin{tabular}{cl}
 		\hline	
-		1 & Hurle \tabularnewline
-		2-3 & Tape comme un sourd \tabularnewline
-		4-6 & Fracasse \tabularnewline
+		1 & \bellow{} \tabularnewline
+		2-3 & \thump{} \tabularnewline
+		4-6 & \smashname{} \tabularnewline
 		\hline
 	\end{tabular}\end{center}
 	\renewcommand{\arraystretch}{1.2} % return to default
 \end{multicols}
-\begin{description}
-	\item[Hurle :] Ni le Géant, ni l'unité sélectionnée ne peuvent faire d'attaques de Corps à Corps pendant cette phase. Les attaques déjà réalisées, incluant celles réalisées simultanément avec cette attaque, ne sont pas concernées. Le camp du Géant gagne automatiquement le combat de 2. Si deux Géants opposés, ou plus, \og{} Hurlent \fg{}, le combat est un match nul.
-	\item[Saute :]  L'unité sélectionnée subit 1D6 touches de la Force du Géant, réalisées comme si elles suivaient la règle spéciale \grindingattacks{}. Le Géant doit faire un test de Terrain Dangereux.
-	\item[Ramasse :] Choisissez une figurine dans l'unité sélectionnée et en contact socle à socle avec le Géant. Cette figurine doit faire un test de Force et un test de Capacité de Combat. Pour chaque test raté, la figurine subit une touche de la Force du Géant et suivant la règle spéciale \multiplewounds{1D3}{}.
-	\item[Frappe :] Le Géant fait 2D6 attaques sur l'unité choisie.
-	\item [Tape comme un sourd :] Choisissez une figurine en contact socle à socle avec le Géant dans l'unité sélectionnée. Cette figurine doit faire un test d'Initiative. Si elle échoue, la figurine subit 2D6 blessures avec \armourpiercing{6}.
-	\item[Fracasse :] Choisissez une figurine dans l'unité sélectionnée et en contact socle à socle avec le Géant. Cette figurine subit une blessure avec \armourpiercing{6}. Si la figurine n'a pas encore attaqué, elle ne peut pas le faire au cours de cette manche. Si la figurine a déjà réalisé ses attaques, elle ne pourra pas attaquer au cours du tour de  joueur à venir.
-\end{description}
+}
+
+\newcommand{\bellowrule}{%
+Ni le Géant, ni l'unité sélectionnée ne peuvent faire d'attaques de Corps à Corps pendant cette phase. Les attaques déjà réalisées, incluant celles réalisées simultanément avec cette attaque, ne sont pas concernées. Le camp du Géant gagne automatiquement le combat de 2. Si deux Géants opposés, ou plus, \og{} Hurlent \fg{}, le combat est un match nul.
+}
+
+\newcommand{\jumprule}{%
+L'unité sélectionnée subit 1D6 touches de la Force du Géant, réalisées comme si elles suivaient la règle spéciale \grindingattacks{}. Le Géant doit faire un test de Terrain Dangereux.
+}
+
+\newcommand{\grabrule}{%
+Choisissez une figurine dans l'unité sélectionnée et en contact socle à socle avec le Géant. Cette figurine doit faire un test de Force et un test de Capacité de Combat. Pour chaque test raté, la figurine subit une touche de la Force du Géant et suivant la règle spéciale \multiplewounds{1D3}{}.
+}
+
+\newcommand{\swingrule}{%
+Le Géant fait 2D6 attaques sur l'unité choisie.
+}
+
+\newcommand{\thumprule}{%
+Choisissez une figurine en contact socle à socle avec le Géant dans l'unité sélectionnée. Cette figurine doit faire un test d'Initiative. Si elle échoue, la figurine subit 2D6 blessures avec \armourpiercing{6}.
+}
+
+\newcommand{\smashrule}{%
+Choisissez une figurine dans l'unité sélectionnée et en contact socle à socle avec le Géant. Cette figurine subit une blessure avec \armourpiercing{6}. Si la figurine n'a pas encore attaqué, elle ne peut pas le faire au cours de cette manche. Si la figurine a déjà réalisé ses attaques, elle ne pourra pas attaquer au cours du tour de  joueur à venir.
 }
 
 
@@ -279,21 +301,21 @@ Chaque Personnage Ogre peut prendre un unique Grand Nom. \newrule{Un même Grand
 \pricelistitem{Poing de l'Enfer}{50}Seul un \greatkhan{} peut prendre ce Grand Nom.\newline Il prend possession d'une Arme Magique de type \ironfist{}. Toute figurine dans l'armée peut prendre une Marque des Dieux Sombres du Livre d'Armée des \textit{Guerriers des Dieux Sombres}, pour \newrule{le coût suivant} :
 \vspace*{-0.3cm}{\normalfontsize
 \begin{center}\rowcolors{1}{white}{black!10}\begin{tabular}{@{}lllll@{}}
-& Pestilence & Courroux & Changement & Luxure \tabularnewline
-Inf. Monstr.& 6 & 6 & 3 & 4 \tabularnewline
-Cav. Monstr. & 8 & 6 & 4 & 6 \tabularnewline
-\chariot{} & 8 & 6 & 4 & 6 \tabularnewline
-\monster{} & 5 & 10 & 3 & 15 \tabularnewline
-\riddenmonster{} & 5 & 10 & 3 & 15 \tabularnewline
-Seigneur & 30 & 40 & 40 & 15 \tabularnewline
-Héros & 25 & 25 & 25 & 15 \tabularnewline
+& Changement & Luxure & Pestilence & Courroux \tabularnewline
+Seigneur & 40 & 15 & 30 & 40 \tabularnewline
+Héros & 25 & 15 & 25 & 25 \tabularnewline
+Inf. Monstr.& 3 & 4 & 6 & 6 \tabularnewline
+Cav. Monstr. & 4 & 6 & 8 & 6 \tabularnewline
+\chariot{} & 4 & 6 & 8 & 6 \tabularnewline
+\monster{} & 3 & 15 & 5 & 10 \tabularnewline
+\riddenmonster{} & 3 & 15 & 5 & 10 \tabularnewline
 \end{tabular}\end{center}
 }
 Toute figurine peut aussi choisir la Marque du Chaos Intégral pour \newrule{3 pts} par figurine.\newline
-Les \shamans{} et les \greatshamans{} avec une Marque différente du Chaos Intégral peuvent choisir une Discipline accessible normalement à cette Marque, en plus des Disciplines qui leurs sont habituellement proposées. Les \shamans{} et les \greatshamans{} ne peuvent pas prendre la Marque du Courroux.\newline
+Les \shamans{} et les \greatshamans{} avec une Marque différente du Chaos Intégral peuvent choisir une Discipline accessible normalement à cette Marque, en plus des Disciplines qui leur sont habituellement proposées. Les \shamans{} et les \greatshamans{} ne peuvent pas prendre la Marque du Courroux.\newline
 L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scraplingtrappers{}, de \yetis{}, de \sabretoothtigers{} ou de \scratapults{}.
 
-\pricelistitem{Mâchoire Pourrie}{30}Le Personnage gagne des \poisonedattacks{}. Pour la durée d'une phase de Corps à Corps, toutes les figurines de son unité peuvent aussi gagner des \poisonedattacks{}. Le joueur doit déclarer au début de la phase de Corps à Corps qu'il a choisi qu'il utilise cette capacité.
+\pricelistitem{Mâchoire Pourrie}{30}Le Personnage gagne des \poisonedattacks{}. Pour la durée d'une phase de Corps à Corps, toutes les figurines de son unité peuvent aussi gagner des \poisonedattacks{}. Le joueur doit déclarer au début de la phase de Corps à Corps choisi qu'il utilise cette capacité.
 
 \pricelistitem{Chasseur de Têtes}{25}Le Personnage se gave de la chair de ses ennemis tombés, même au plus fort de la bataille. A la fin de toute phase de Corps à Corps durant laquelle le \newrule{porteur} a tué une ou plusieurs figurines, et dans la mesure où il n'est pas en fuite, lancez 1D6. Sur un résultat de \newrule{3+}, il \newrule{Récupère} un Point de Vie qu'il a perdu plus tôt dans la bataille.
 
@@ -301,7 +323,7 @@ L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scrapli
 
 \pricelistitem{Maître des Trésors de Guerre}{20}Ce Grand Nom ne peut pas être pris par un \wizard{} ou un \mammothhunter{}.\newline Le Personnage avec ce Grand Nom gagne la règle spéciale \weaponmaster{} et une \platearmour{}, et peut acquérir autant d'armes standard de corps à corps et de tir auxquelles il peut accéder plutôt qu'une seule de chaque catégorie.
 
-\pricelistitem{Pourfendeur de Moelle Épinière}{20}\removedrule{Ce Grand Nom ne peut pas être pris par un \wizard{}}.\newline Seules les figurines à pied peuvent prendre ce Grand Nom. Le Personnage bénéficie des règles spéciales \devastatingcharge{} et \thunderouscharge{}, qui exceptionnellement affecte aussi les \impacthits{} et le \stomp{}.
+\pricelistitem{Pourfendeur de Moelle Épinière}{20}\removedrule{Ce Grand Nom ne peut pas être pris par un \wizard{}}.\newline Seules les figurines à pied peuvent prendre ce Grand Nom. Le Personnage bénéficie des règles spéciales \devastatingcharge{} et \thunderouscharge{}. Cette dernière affecte aussi exceptionnellement les \impacthits{} et le \stomp{}.
 
 \endpricelistNSP
 \end{multicols}
@@ -390,7 +412,7 @@ L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scrapli
 \textbf{Nom} & \textbf{Artillerie} & \textbf{Portée} & \textbf{\labels@S{}} & \textbf{\multipleshots{}} & \textbf{\multiplewounds{}} & \textbf{\armourpiercing{}} \tabularnewline
 \ogrepistol{} & - & \distance{24} & 4 & - & - & 1 \tabularnewline
 \braceofogrepistols{} & - & \distance{24} & 4 & 2 & - & 1 \tabularnewline
-\ogrecrossbow{} & * & \distance{30} & 5 & - & - & 1 \tabularnewline
+\ogrecrossbow{} & \refsymbol{} & \distance{30} & 5 & - & - & 1 \tabularnewline
 \huntingspear{} & - & \distance{12} & \labels@S{}+1 & - & {\smallfontsize 1D3, \monsters{}, \riddenmonsters{}} & - \tabularnewline
 \handcannon{} (\bombardiers{}) & - & \distance{24} & 4 & 1D6 & - & 1 \tabularnewline
 \ogrepistol{} & - & \distance{24} & 4 & - & - & 1 \tabularnewline
@@ -400,7 +422,7 @@ L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scrapli
 \end{tabular}
 
 \medskip
-\noindent *L'\ogrecrossbow{} pénètre les rangs comme une \boltthrower{}.
+\noindent \refsymbol{}L'\ogrecrossbow{} pénètre les rangs comme une \boltthrower{}.
 \end{center}
 
 \restoregeometry
