@@ -1,0 +1,800 @@
+
+\input{../Formatage/format_LA.tex}
+
+%Mise en page pour les cultes
+\newcommand{\cultdescription}{\newpage\begin{center}\LARGE{\textbf{\emph{Cultes}}}\end{center}}
+
+\newcommand{\booktitle}{Elfes des Ténèbres}
+\newcommand{\version}{0.99.0}
+\newcommand{\frenchversion}{0.99.1}
+
+
+\newcommand{\translationteam}{\item \og AEnoriel \fg \item \og Anglachel \fg \item \og Astadriel \fg \item \og Batcat \fg \item \og Eru \fg\item \og Gandarin \fg \item \og Groumbahk \fg \item \og Iluvatar \fg \item \og Lamronchak \fg \item \og Mammstein \fg}
+
+
+\newcommand{\killerinstinct}{\specialrule{Instinct Meurtrier}\xspace}
+\newcommand{\masterofthedarkarts}{\specialrule{Maître des Arts Noirs}\xspace}
+\newcommand{\auraofdespair}{\specialrule{Aura Funeste}\xspace}
+\newcommand{\alphapredator}{\specialrule{Prédateur Dominant}\xspace}
+\newcommand{\fleetcommander}{\specialrule{Amiral}\xspace}
+\newcommand{\beastmaster}{\specialrule{Maître des Bêtes}\xspace}
+\newcommand{\cultofnabh}{\specialrule{Culte de Nabh}\xspace}
+\newcommand{\cultofyema}{\specialrule{Culte de Yema}\xspace}
+\newcommand{\divineblessings}{\specialrule{Faveurs Impies}\xspace}
+
+\newcommand{\cultrivalry}[1]{\specialrule{Cultes Rivaux\ifblank{#1}{}{~(#1)}}\xspace}
+
+\newcommand{\cultgeneral}[1]{\specialrule{Général de Culte\ifblank{#1}{}{~(#1)}}\xspace}
+
+\newcommand{\cultalignment}[1]{\specialrule{Alignement au Culte\ifblank{#1}{}{~(#1)}}\xspace}
+
+\newcommand{\cultchosen}[1]{\specialrule{Élu du Culte\ifblank{#1}{}{~(#1)}}\xspace}
+
+\begin{document}
+
+\input{../Formatage/titlepage_LA.tex}
+
+\armyspecialrules
+
+
+\armyspecialruleentry{\fleetcommander}
+
+\newrule{Les figurines dotées de cette règle spéciale ont \innatedefence{5} et ne peuvent pas avoir de monture. Les unités ennemies qui sont démoralisées lors d'un combat contre une telle unité doivent lancer un D6 supplémentaire pour leur jet de fuite et ignorer le dé ayant le plus grand résultat.\\\\
+Pour chaque personnage doté de cette règle spéciale présent dans votre armée, une unité de Corsaires peut gagner la règle \vanguard.}
+
+\armyspecialruleentry{\auraofdespair}
+
+Toute unité ennemie en contact avec au moins une \newrule{figurine} dotée de cette règle spéciale doit jeter 1D6 supplémentaire lors de ses tests de Commandement et retirer le plus petit dé (ne s'applique pas aux tests de Moral).
+
+\armyspecialruleentry{\divineblessings}
+Au début de chaque Tour de Jeu, choisissez l'une des faveurs ci-dessous. Elle s'applique jusqu'à la fin du tour de jeu. 
+\newrule{Une seule unité amie (sauf un Monstre) à \distance{12} ou moins de l'Autel gagne l'une des faveurs ci-dessous. Une unité ne peut recevoir qu'une seule faveur à la fois. De plus, une faveur d'un Autel de Nabh ne peut pas affecter une unité ou figurine du \cultofyema et inversement.}
+\begin{itemize}[label={-}]
+	\item l'unité gagne \wardsave{5} ou
+	\item l'unité gagne +1 Attaque \newrule{(sauf les montures)} ou
+	\item \newrule{l'unité gagne +1 en Commandement.}
+\end{itemize}
+\newrule{Sinon, une unité enemie à \distance{12} peut être ciblée par les faveurs. Dans ce cas, l'unité ciblée a -1 en Commandement jusqu'à la fin du tour de jeu.}
+
+\armyspecialruleentry{\killerinstinct}
+
+Un élément de figurine possédant cette règle peut relancer ses jets pour blesser au corps à corps ayant donné \result{1}.
+
+\armyspecialruleentry{\masterofthedarkarts}
+
+Si votre armée comporte une ou plusieurs figurines bénéficiant de cette règle spéciale, ajoutez +1 lors de vos jets de \channel pour les dés de pouvoir (pas de dissipation).
+
+\armyspecialruleentry{\beastmaster}
+
+\newrule{Les figurines montées, les Bêtes de Guerre ainsi que les Monstres alliés à \distance{12} d'une figurine avec cette règle spéciale lancent 3D6 et ignorent le dé avec le plus grand résultat pour leurs tests de Commandement dus aux règles \frenzy et \stupidity .} \\\\
+Au début de chaque manche de corps à corps, une unité \newrule{alliée} de Cavalerie, de Cavalerie Monstrueuse ou de Monstre à \distance{6} d'une figurine ayant cette règle peut gagner la \hatred pour le reste de la manche. Si une unité de Cavalerie ou de Cavalerie Monstrueuse est choisie, seules les montures sont affectées. \newrule{À noter que la \hatred n'a d'effet que lors de la première phase d'un corps à corps et qu'un Monstre Monté ne peut pas être choisis comme cible.}
+
+\armyspecialruleentry{\alphapredator}
+
+Un Monstre doté de cette règle spéciale gagne +1 en Capacité de Combat, Initiative et Commandement.
+
+
+\cultdescription
+\newrule{Une figurine ne peut rejoindre qu'un seul culte. Une unité contenant une ou plusieures figurines appartenant à un culte ne peut pas bénéficier des règles spéciales \holdyourground, \inspiringpresence et \divineblessings de figurines d'un autre culte. Un personnage appartenant à un culte ne peut pas rejoindre d'unité contenant une ou plusieures figurines d'un autre culte.\\\\Si le Général de l'armée appartient à un culte, l'armée ne peut pas contenir d'unités de l'autre culte. Touts les éléments de figurine des unités de base ayant la règle spéciale \killerinstinct doivent rejoindre gratuitement le même culte que le Général. De plus, toute unité qui a l'option de rejoindre le culte du Général doit le faire.}
+
+\armyspecialruleentry{\cultofnabh}
+\newrule{Un élément de figurine doté de la règle spéciale \cultofnabh gagne la règle spéciale \hatred mais ne peut plus bénéficier de la règle spéciale \killerinstinct.}
+
+\armyspecialruleentry{\cultofyema}
+\newrule{Une figurine dotée de la règle spéciale \cultofyema gagne +1 en Mouvement ainsi que la règle spéciale \emph{Guide} mais ne peut plus bénéficier de la règle spéciale \killerinstinct.}
+
+\armyarmoury
+
+\begin{customdescription}
+	\item[Arbalète écorcheuse :] Arme de tir. \range{24}, Force 3, \armourpiercing{1}, \multipleshots{2}.
+	\item[Armes de rétiaire :] Arme de corps à corps. Le porteur gagne la règle spéciale \weaponmaster . Il peut choisir d'utiliser une Arme de base \newrule{ou une lance} avec Bouclier, un Fléau, une Arme de base additionnelle, une Arme lourde ou enfin une Hallebarde.
+	\item[Lame du bourreau :] Arme lourde. \multiplewounds{2}{Bête Monstrueuse, Cavalerie, Infanterie}, \lethalstrike.
+	\item[Regard pétrifiant :] Arme de tir. \range{12}, Force 4, \armourpiercing{6}, \multipleshots{2}. Les jets pour blesser des attaques portées par le Regard Pétrifiant sont effectués contre l'Initiative de la cible à la place de l'Endurance.
+\end{customdescription}
+
+\armymagicitems
+
+\armynewsubsection{Armes magiques}
+
+\begin{customitemize}
+	\item \optiondef{Hache du Bourreau}{60/40}{Type : Arme lourde. Figurine d’Infanterie uniquement. Les attaques effectuées avec cette arme sont résolues avec un bonus de +3 en Force au lieu de +2. De plus, ces attaques suivent la règle \multiplewounds{2}{}.}
+	\item \optiondef{Fouet \newrule{de Domination}}{40}{Type : Arme de base. Le porteur gagne +1 Attaque. Les attaques effectuées avec cette arme sont toujours résolues avec une Force de 5 (ignorez tout type de modificateur). \newrule{Toute figurine subissant une blessure non sauvegardée par cette arme voit sa CC réduite à 1 jusqu'à la fin de la Phase de corps à corps.}}
+\end{customitemize}
+
+\armynewsubsection{Armures magiques}
+
+\begin{customitemize}
+	\item \optiondef{Armure Pourpre}{20}{Type : Armure lourde. Figurine d'Infanterie uniquement. Pour chaque blessure non sauvegardée que le porteur inflige pendant la Phase de corps à corps, ce dernier gagne +1 en Sauvegarde d'Armure, jusqu'à obtenir 1+ au mieux, pour le reste de la partie.}
+\end{customitemize}
+
+\armynewsubsection{Objets enchantés}
+
+\begin{customitemize}
+
+	\item \optiondef{Anneau d'Obscurité}{35}{L'unité du porteur bénéficie d'un couvert léger. Si elle bénéficiait déjà d'un couvert léger, elle bénéficie alors d'un couvert lourd à la place. Les attaques de corps à corps portées contre l'unité du porteur sont résolues avec un malus de -1 en Capacité de Combat.}
+\end{customitemize}
+
+\armynewsubsection{Objets cabalistiques}
+
+\begin{customitemize}
+	\item \optiondef{Dague de Moraec}{\newrule{35}/25}{Au début de la Phase de Magie, le porteur peut infliger à son unité 1D3 blessures sans sauvegarde d'aucune sorte. \newrule{Dans ce cas, les sorts lancés par le porteur  voient leur valeur de lancement réduite de 1 par blessure infligée jusqu'à la fin de cette Phase de Magie.}}
+	\item \optiondef{Familier Mystique}{25}{Au début de chacune de vos Phases de Magie, placez un familier \newrule{ de petite taille} de \unit{20x20}{\milli\meter} à moins de \distance{6} du porteur, et à plus de \distance{1} de toute figurine ou de tout Terrain Infranchissable. Quand il lance un sort (\newrule{sauf un sort lié à un \emph{Objet de Sort}}), le porteur peut choisir d'utiliser la position de ce familier pour déterminer les lignes de vue, les portées et l'arc frontal. Désignez l'avant du familier lorsque vous le placez, pour connaître l'arc frontal. À la fin de la phase, retirez le familier.}
+\end{customitemize}
+
+\armynewsubsection{Talismans}
+
+\begin{customitemize}
+	\item \optiondef{Manteau de Minuit}{\newrule{50}}{Le porteur gagne une \wardsave{3} qu'il peut uniquement utiliser contre les attaques à distance. \newrule{De plus, lors de la première manche d'un corps à corps,} le porteur gagne \multiplewounds{1D3}{} et \lethalstrike .}
+	\item \optiondef{Amulette Malveillante}{35}{\newrule{Si un sorcier ennemi à moins de \distance{12} lance un sort avec succès et résout ses effets, et qu'au moins deux des Dés de Pouvoirs utilisés ont eu pour résultat \result{1}, le lanceur subit un Fiasco de sort lancé avec deux Dés de Pouvoir. Un sort ne peut pas générer plus d'un Fiasco.}}
+\end{customitemize}
+
+\armynewsubsection{Bannières magiques}
+
+\begin{customitemize}
+	\item \optiondef{Étendard de l'Armada Cauchemardesque}{\newrule{55}}{\fleetcommander uniquement. Toutes les unités de Corsaires et de Légionnaires de l'Effroi \newrule{à \distance{6} reçoivent un bonus de +1 pour blesser au corps à corps.}}
+	\item \optiondef{\newrule{Bannière Ensanglantée}}{35}{Les éléments des figurines de l'unité dotés de la règle spéciale \killerinstinct relancent les résultats de \result{1} ou \result{2} des jets pour blesser ratés.}
+\end{customitemize}
+
+\armylist
+
+\lordstitle
+
+\showunit{
+	name={\newrule{Seigneur} de l'Effroi},
+	cost={140},
+	profile={Seigneur de l'Effroi: 5 7 7 4 3 3 8 4 10},
+	type=Infanterie,
+	basesize=20x20,
+	unitsize=1,
+	specialrules={\killerinstinct,\lightningreflexes},
+	equipment={Armure légère},
+	options={
+		Peut prendre des objets magiques=\upto: 100,
+		\optionschoice{Peut devenir\newrule{/rejoindre} (un seul choix)}{
+			\newrule{\fleetcommander} =50 ,
+			s'il est \fleetcommander, peut gagner \vanguard =20,
+			\newrule{\cultofnabh} =20 ,
+			\newrule{\cultofyema} =20 ,			
+			\newrule{\beastmaster} =40 ,
+		},
+		Peut être équipé d'un Bouclier=5,
+		Peut être équipé d'une Armure lourde=8,
+	    \optionschoice{Peut choisir une arme de tir (un seul choix)}{
+			Arbalète écorcheuse=4,
+			Armes de jet=4,
+		},
+	    \optionschoice{Peut choisir une arme de corps à corps (un seul choix)}{
+			Paire d'armes=5,
+			Hallebarde=10,
+			Arme lourde=10,
+			Lance de cavalerie=15,
+		},
+	},
+	mounts={
+	Cheval elfique=20,
+	Raptor=35,
+	\newrule{Char Prédateur}=40,	
+	\newrule{Pégase}=55, 
+	Manticore=120,  
+	\newrule{Dragon} =250, 
+	},
+}
+
+		
+\showunit{
+	name={Oracle Exalté},
+	cost={\newrule{185}},
+	profile={Oracle Exalté: 5 4 4 3 3 3 5 1 9},
+	type=Infanterie,
+	basesize=20x20,
+	unitsize=1,
+	magiclevelmaster=3,
+	magicpaths={\battle, \blackmagic},
+	specialrules={\killerinstinct, \masterofthedarkarts, \lightningreflexes},
+	unitrules={\unitrule{\cultofyema}{\newrule{L'Oracle Exalté ne peut générer ses sorts que depuis les Disciplines \lust, \blackmagic, \death  ou \shadows.}}},
+	options={
+		Peut prendre des objets magiques=\upto: 100,
+		\newrule{Peut rejoindre le \cultofyema} =20 ,
+		\newrule{Peut devenir \magiclevelmaster{4}}=30,
+	},	
+	mounts={
+		Cheval elfique=20,
+		Raptor=25, 
+		\newrule{Pégase}=50, 
+		Manticore=100, 
+		\newrule{Dragon} =300, 
+	}
+}
+
+\heroestitle
+
+\showunit{
+	name={Capitaine},
+	cost={\newrule{75}},
+	profile={Capitaine: 5 6 6 4 3 2 7 3 9},
+	type=Infanterie,
+	basesize=20x20,
+	unitsize=1,
+	specialrules={\killerinstinct, \lightningreflexes},
+	equipment={Armure légère},
+	options={
+		Peut prendre des objets magiques=\upto: 50,
+		Peut devenir Porteur de la Grande Bannière=25,
+		\optionschoice{Peut devenir\newrule{/rejoindre} (un seul choix)}{
+			\newrule{\fleetcommander} =40 ,
+			s'il est \fleetcommander, peut gagner \vanguard =20,
+			\newrule{\cultofnabh} =10 ,
+			\newrule{\cultofyema} =10 ,	
+			\newrule{\beastmaster} =40 ,
+		},
+		Peut être équipé d'un Bouclier=3,
+		Peut être équipé d'une Armure lourde=5,
+		\optionschoice{Peut choisir une arme de tir (un seul choix)}{
+			Arbalète écorcheuse=4,
+			Armes de jet=4,
+		},
+	    \optionschoice{Peut choisir une arme de corps à corps (un seul choix)}{
+			Paire d'armes=5,
+			Arme lourde=8,
+			Hallebarde=8,
+			Lance de cavalerie=10,
+		},
+	},
+	mounts={
+		Cheval elfique=15,
+		Raptor=25, 
+		\newrule{Pégase}=55, 
+		\newrule{Char Prédateur}=65, 		
+		Manticore=150, 
+	},
+}
+
+\showunit{
+	name={Prêtresse du Culte},
+	cost={95},
+	profile={Prêtresse: 5 6 6 4 3 2 7 3 8},
+	type=Infanterie,
+	basesize=20x20,
+	unitsize=1,
+	specialrules={\lightningreflexes},	
+	equipment={Paire d'armes},
+	unitrules={
+		\unitrule{\cultofnabh}{\newrule{\devastatingcharge, \cultofnabh.}}
+		\unitrule{\cultofyema}{\newrule{\auraofdespair, \cultofyema.}}
+	},
+	options={
+		Peut prendre des objets magiques=\upto: 50,
+		Porteuse de la Grande Bannière =25,
+		Doit \newrule{rejoindre} un culte =\free ,	
+		\optionschoice{\cultofnabh}{
+			Peut être équipée d'une Armure légère=4,
+			Peut être équipée d'une Lame du bourreau=15,
+		},
+		\optionschoice{\cultofyema}{
+			Peut être équipée d'une Bouclier=3,
+			Peut être équipée d'une Armure légère=4,
+			Peut être équipée d'Armes de rétiaire=15,
+		},
+	},
+	mounts={
+	   	\optionschoice{\cultofnabh}{
+	   		Manticore=150,
+	   		Autel de Nabh=200,
+	   	},
+		\optionschoice{\cultofyema}{
+	   		Cheval elfique=15, 
+	   		Raptor=20, 
+	   		\newrule{Pégase}=55,
+	   		Autel de Yema=200
+	   	},	   	
+	}
+}
+
+\showunit{
+	name={Oracle},
+	cost={70},
+	profile={Oracle: 5 4 4 3 3 2 5 1 8},
+	type=Infanterie,
+	basesize=20x20,
+	unitsize=1,
+	magiclevelapprentice=1,
+	magicpaths={\battle, \blackmagic},
+	specialrules={\killerinstinct, \masterofthedarkarts, \lightningreflexes},
+	unitrules={\unitrule{\cultofyema}{\newrule{L'Oracle ne peut générer ses sorts que depuis les Disciplines \lust, \blackmagic, \death  ou \shadows.}}},
+	options={
+		Peut prendre des objets magiques=\upto: 50,
+		\newrule{Peut rejoindre le \cultofyema} =10,
+		Peut devenir \magiclevelapprentice{2}=25,
+	},
+	mounts={
+		Cheval elfique=15,
+		Raptor=20, 
+		\newrule{Pégase}=35, 
+	}
+}
+
+\showunit{
+	name={\newrule{Assassin}},
+	cost={\newrule{75}},
+	profile={Assassin: 6 7 7 4 3 2 9 3 9},
+	type=Infanterie,
+	basesize=20x20,
+	unitsize=1,
+	specialrules={\poisonedattacks, \hidden, \scout, \killerinstinct, \specialrule{Maître des Venins}, \notaleader, \armourpiercing{1}, \lightningreflexes},
+	options={
+		Peut prendre des objets magiques (pas d'armure)=\upto: 50,
+		Peut rejoindre le \cultofnabh=20 ,
+		\optionschoice{Peut devenir (un seul choix)}{
+			\newrule{Maître du Meurtre Sanglant}=\free,
+			\newrule{Maître de la Mort Silencieuse}=20,
+		},
+		Peut être équipé d'une Paire d'armes =6,
+		\optionschoice{Peut être équipé des Venins suivants}{
+			Aconit=20,
+			Grémil sanguin=20,
+			\newrule{Voile-de-nuit}=40,			
+		},
+	},
+	unitrules={
+		\unitrule{\specialrule{Maître des Venins}}{Un assassin peut être équipé d'un ou plusieurs Venins. Au début de chaque tour de joueur, déclarez quel Venin l'Assassin va utiliser ce tour-ci. Les Venins ne peuvent être appliqués que sur des armes ordinaires et s'utilisent au tir comme au corps à corps.}
+		\unitrule{\specialrule{Maître du Meurtre Sanglant}}{				\optionschoice{Peut choisir}{
+			\newrule{\distracting}=25,		
+			\newrule{\wardsave{4} (corps à corps)}=25,
+		}}
+		\unitrule{\specialrule{Maître de la Mort Silencieuse}}{Est équipé d'Armes de jet d'assassin}				
+	},
+	unitequipment={
+		\equipmentdef{Armes de jet d'assassin}{\range{12}, Force de l'utilisateur, \armourpiercing{1}, \multipleshots{3}, \quicktofire. Peuvent être enduites de Venin.}
+		\equipmentdef{Venin Voile-de-nuit}{Les attaques sont résolues avec une Force égale à l'Endurance de la cible +1 (jusqu'à une Force de 6 maximum). \newrule{Ne peut pas être combiné avec d'autres bonus affectant la Force.}}
+		\equipmentdef{Venin Aconit}{\lethalstrike , relancez les jets pour blesser ratés.}
+		\equipmentdef{Venin Grémil sanguin}{\multiplewounds{2}{\newrule{Monstre Monté, Personnage}}, bonus de +1 aux jets pour blesser.}	
+	}
+}
+	
+\baseunitstitle
+
+
+\showunit{
+	name={Légionnaires de l'Effroi},
+	cost=\newrule{95},
+	profile={Légionnaire : 5 4 4 3 3 1 5 1 8},
+	type=Infanterie,
+	basesize=20x20,
+	unitsize=\newrule{15},
+	additionalmodels=\newrule{35},
+	costpermodel=8,
+	specialrules={\killerinstinct, \lightningreflexes},
+	equipment={Armure légère, Bouclier},
+	options={
+		Armure lourde=\permodel:2,
+		\newrule{Lance}=\permodel:1,
+	},
+	commandgroup={\commandgroup{champion=10, musician=10, banner=10, standardbeareroption=\veteranstandardbearer*25}, 
+	}
+	
+}
+
+\showunit{
+	name={Écorcheurs},
+	cost=110,
+	profile={Écorcheur: 5 4 4 3 3 1 5 1 8},
+	type=Infanterie,
+	basesize=20x20,
+	unitsize=10,
+	additionalmodels=20,
+	costpermodel=10,
+	specialrules={\killerinstinct, \lightningreflexes},
+	equipment={Arbalète écorcheuse, Armure légère},
+	options={
+		\newrule{Bouclier}=\permodel:1,
+	},
+	commandgroup={\commandgroup{champion=10, musician=10, banner=10, standardbeareroption=\veteranstandardbearer*25}}
+	
+}		
+
+\showunit{
+	name={Corsaires},
+	cost=80,
+	profile={Corsaire: 5 4 4 3 3 1 5 1 8},
+	type=Infanterie,
+	basesize=20x20,
+	unitsize=10,
+	additionalmodels=30,
+	costpermodel=10,
+	specialrules={\killerinstinct, \innatedefence{5}, \lightningreflexes},
+	equipment={Armure légère},
+	options={
+			Paire d'armes=\permodel:1,
+			\newrule{Armes de jet}=\permodel:2,
+			Pour chaque personnage avec la règle \fleetcommander :,
+			Une unité de Corsaires peut gagner \vanguard =\permodel:1
+	},
+	commandgroup={\commandgroup{champion=10, musician=10, banner=10, standardbeareroption=\veteranstandardbearer*25}}
+	
+	}
+
+\showunit{
+	name={Lames de Nabh},
+	cost=\newrule{130},
+	profile={Lame: 5 4 4 3 3 1 5 1 8},
+	type=Infanterie,
+	basesize=20x20,
+	unitsize=10,
+	additionalmodels=20,
+	costpermodel=12,
+	specialrules={\poisonedattacks, \cultofnabh, \newrule{\frenzy}, \lightningreflexes},
+	equipment={Paire d'armes},
+	commandgroup={\commandgroup{champion=10, musician=10, banner=10, standardbeareroption=\veteranstandardbearer*25}}
+}
+
+\showunit{
+	name={Pillards des Ténèbres},
+	cost=85,
+	profile={Pillard: 5 4 4 3 3 1 5 1 8,
+		Cheval elfique: 9 3 - 3 3 1 4 1 3},
+	type=Cavalerie,
+	basesize=25x50,
+	unitsize=5,
+	additionalmodels=10,
+	costpermodel=16,
+	specialrules={\fastcavalry, \killerinstinct \only{Pillard}, \lightningreflexes \only{Pillard}},
+	equipment={Armure légère, Lance légère, \mountprotection{6}},
+	options={
+		\newrule{Bouclier}=\permodel:3 ,
+		Arbalète écorcheuse=\permodel:3 ,
+	},
+	commandgroup={\commandgroup{champion=10, musician=10, banner=10}}
+}	
+
+\specialunitstitle
+	
+
+\showunit{
+	name={Danseuses de Yema},
+	cost=\newrule{110},
+	profile={Danseuse: 5 5 4 3 3 1 5 1 8},
+	type=Infanterie,
+	basesize=20x20,
+	unitsize=10,
+	additionalmodels=20,
+	costpermodel=15,
+	specialrules={\newrule{\cultofyema}, \lightningreflexes, \wardsave{4} \only{corps à corps}},
+	equipment={Armes de rétiaire, Armure légère, Bouclier},
+	options={
+			\newrule{Une unité d'un maximum de 15 modèles (\oneofakind):},
+			\newrule{Peut gagner \skirmisher} =\permodel:2,
+	},		
+	commandgroup={\commandgroup{champion=10, musician=10, banner=10, bannerallowance=\newrule{50}}}
+}	
+
+\showunit{
+	name={Bourreaux},
+	cost=\newrule{135},
+	profile={Bourreau: 5 5 4 4 3 1 5 1 8},
+	type=Infanterie,
+	basesize=20x20,
+	unitsize=10,
+	additionalmodels=20,
+	costpermodel=16,
+	specialrules={\newrule{\cultofnabh}, \lightningreflexes},
+	equipment={Lame du bourreau, Armure lourde},
+	commandgroup={\commandgroup{champion=10, musician=10, banner=10, bannerallowance=50}}
+}
+
+\showunit{
+	name={Gardes des Tours Noires},
+	cost=\newrule{110},
+	profile={Garde: 5 5 4 3 3 1 6 2 9},
+	type=Infanterie,
+	basesize=20x20,
+	unitsize=10,
+	additionalmodels=20,
+	costpermodel=15,
+	specialrules={\bodyguard{}, \killerinstinct, \immunetopsychology, \armourpiercing{1}, \lightningreflexes},
+	equipment={Hallebarde, Armure lourde},
+	unitrules={
+		\unitrule{\specialrule{Gardien Effroyable}}{\newrule{Gagne +1 en Capacité de Combat et \fightinextrarank}}
+	},
+	options={
+		Peut être promu en \specialrule{Gardien Effroyable}=\permodel:3
+	},
+	commandgroup={\commandgroup{champion=10,championoption=Peut prendre une Arme magique:25, musician=10, banner=10, bannerallowance=50}}
+}
+
+\showunit{
+	name={Chevaliers Prédateurs},
+	cost=130,
+	profile={Chevalier Prédateur: 5 5 4 4 3 1 6 1 9,
+		Raptor: 7 3 - 4 4 1 2 2 5},
+	type=Cavalerie,
+	basesize=25x50,
+	unitsize=5,
+	additionalmodels=10,
+	costpermodel=26,
+	specialrules={\killerinstinct \only{Chevalier}, \lightningreflexes \only{Chevalier}, \stupidity},
+	equipment={Lance de cavalerie, Armure lourde, Bouclier, \mountprotection{5}},
+	commandgroup={\commandgroup{champion=10,championoption=Peut prendre une Arme magique:25, musician=10, banner=10, bannerallowance=50}}
+}		
+
+\showunit{
+	name={Rôdeurs de l'Ombre},
+	cost=80,
+	profile={Rôdeur de l'Ombre: 5 5 5 3 3 1 5 1 8},
+	type=Infanterie,
+	basesize=20x20,
+	unitsize=5,
+	additionalmodels=5,
+	costpermodel=16,
+	specialrules={\scout, \killerinstinct, \lightningreflexes, \skirmishers},
+	equipment={Arbalète écorcheuse},
+	options={
+		Armure légère=\permodel:1 ,
+		\optionschoice{Peut être equipé (\newrule{un seul choix})}{
+			Paire d'armes=\permodel:1 ,
+			\newrule{Arme lourde}=\permodel:2 ,			
+		},				
+		\poisonedattacks (corps à corps seulement)=\permodel:1
+	},
+	commandgroup={\commandgroup{champion=10}}
+}
+
+\showunit{
+	name={Char Prédateur},
+	cost=100,
+	profile={Char: - - - 5 5 4 - - -,
+		Aurige (2): - 5 4 4 - - 6 1 9,
+		Raptor (2): 7 3 - 4 - - 2 2 5},
+	type=Char,
+	basesize=50x100,
+	unitsize=1,
+	specialrules={\killerinstinct \only{Aurige}, \lightningreflexes \only{Aurige}, \stupidity, \impacthits{+1}},
+	equipment={Lance de cavalerie, Arbalète écorcheuse, Armure lourde, \mountprotection{5}},
+}
+
+\showunit{
+	name={Char des Veneurs},
+	cost=100,
+	profile={Char: - - - 5 4 4 - - -,
+		Veneur (2): - 4 4 3 - - 5 1 8,
+		Cheval elfique (2): 9 3 - 3 - - 4 1 3},
+	type=Char,
+	basesize=50x100,
+	unitsize=1,
+	specialrules={\killerinstinct \only{Veneur}, \lightningreflexes \only{Veneur}, \impacthits{+1}},
+	equipment={Lance légère, Arbalète écorcheuse, Armure légère, \mountprotection{5}},
+	unitequipment={
+		\equipmentdef{Arc géant}{Arme d'artillerie de type Baliste avec le profil suivant : \range{24}, Force 5, \multiplewounds{1D3}{}, \armourpiercing{6}, \newrule{\quicktofire}.}
+		\equipmentdef{Lance-harpon}{Arme de tir avec le profil suivant : \range{24}, Force 7,  \multiplewounds{1D3}{}, \emph{Rechargez !}, \newrule{\quicktofire}.}
+	},
+	options={
+		\optionschoice{Doit prendre l'une des options suivantes}{
+			Arc géant=\free,
+			Lance-harpon=20}
+	},
+}
+
+\showunit{
+	name={Baliste Écorcheuse},
+	cost=60,
+	profile={Baliste: - - - - 7 2 - - -,
+		Servant (2): 5 4 4 3 3 1 5 1 8},
+	type=Machine de guerre,
+	basesize=60,
+	unitsize=1,
+	specialrules={\killerinstinct \only{Servant}, \lightningreflexes \only{Servant}},
+	unitrules={
+		\unitrule{\specialrule{Balise écorcheuse}}{Arme d'artillerie de type Baliste avec le profil suivant : \range{48}, Force 6, \multiplewounds{1D3}{}, \armourpiercing{6}{}.}
+		\unitrule{\specialrule{Tir à répétition}}{Si la Baliste écorcheuse est équipée du \specialrule{Tir à répétition}, elle peut tirer comme une Arme d'artillerie de type Batterie de tir avec le profil suivant : \range{48}, Force 4, \armourpiercing{1}, \multipleshots{6}{}.}
+	},
+	options={\specialrule{\newrule{Tir à répétition}}=20,
+	},
+}
+	
+\showunit{
+	name={Harpies},
+	cost=70,
+	profile={Harpie: 5 3 - 3 3 1 5 2 6},
+	type=Infanterie,
+	basesize=20x20,
+	unitsize=5,
+	additionalmodels=10,
+	costpermodel=10,
+	specialrules={\newrule{\insignificant}, \skirmishers, \fly{10}},
+}
+	
+\rareunitstitle
+
+\showunit{
+	name={Kraken},
+	cost=\newrule{180},
+	profile={Kraken: 6 4 1 7 5 5 3 4 6},
+	type=Monstre,
+	basesize=50x100,
+	unitsize=1,
+	specialrules={\poisonedattacks ,\multiplewounds{1D3}{}, \newrule{\hardtarget}, \newrule{\distracting}, \strider{Eau}},
+	equipment={\innatedefence{4}},
+	options={Peut devenir un \alphapredator =25}
+}
+
+\showunit{
+	name={Hydre},
+	cost=180,
+	profile={Hydre: 6 4 1 5 5 5 2 7 6},
+	type=Monstre,
+	basesize=50x100,
+	unitsize=1,
+	specialrules={\regeneration{4}},
+	equipment={\innatedefence{4}},
+	options={Peut devenir un \alphapredator =25,
+	Peut prendre une \\\breathweapon{Force 4, \flamingattacks}=30}
+}
+
+\showunit{
+	name={Disciples des Arts Interdits},
+	cost=120,
+	profile={Disciple: 5 4 4 4 3 1 5 2 8,
+		Cheval elfique: 9 3 - 3 3 1 4 1 3},
+	type=Cavalerie,
+	basesize=25x50,
+	unitsize=5,
+	additionalmodels=5,
+	costpermodel=24,
+	specialrules={\poisonedattacks \only{Disciple}, Conclave de Sorciers, \killerinstinct \only{Disciple}, \lightningreflexes \only{Disciple}, \lighttroops, \wardsave{4}},
+	unitrules={
+		\unitrule{Conclave de Sorciers}{\wizardconclave{niveau 2 : Malédiction Létale (Discipline \death), Trait d'Énergie Sombre (Discipline \blackmagic)}.\\ Si l'unité a la règle spéciale \cultchosen{Yema}, l'unité gagne à la place \wizardconclave{niveau 2 : Râle d'Agonie (Discipline \blackmagic), Flagellation (Discipline \lust)}.}	
+	},
+	options={
+		\newrule{Peut rejoindre le \cultofyema} =\permodel:1
+	},
+	commandgroup={\commandgroup{champion=60}}
+}	
+
+\showunit{
+	name={Méduses},
+	cost=120,
+	profile={Méduse: 6 5 4 5 4 3 5 4 8},
+	type=Infanterie Monstrueuse,
+	basesize=40x40,
+	unitsize=2,
+	additionalmodels=3,
+	costpermodel=60,
+	specialrules={\auraofdespair, \newrule{\cultofyema}, \distracting,  \fear, \swiftstride, \newrule{\lighttroops}},
+	equipment={Regard pétrifiant},
+	commandgroup={\commandgroup{champion=15}}
+}
+
+\showunit{
+	name={Autel Divin},
+	cost=200,
+	profile={Autel: - - - 5 5 5 - - -,
+		Disciple de Nabh  (3): - 5 4 3 - - 5 1 8,
+		Disciple de Yema (2): - 4 4 3 - - 5 1 8,
+		Méduse du Culte de Yema (1):- 5 4 5 - - 5 4 8,
+		Volonté Divine : 8 - - - - - - - -},
+	type=Char,
+	basesize=60x100,
+	unitsize=1,
+	specialrules={Allégeance, \divineblessings, \largetarget,  \fear, \lightningreflexes \only{Equipage}, \wardsave{4}, \impacthits{+1}},
+	equipment={Armure légère, \mountprotection{6}},
+unitrules={
+		\unitrule{\specialrule{Allégeance}}{Un Autel Divin doit avoir une allégeance, soit au culte de Nabh, soit au culte de Yema. La figurine gagne alors les règles spéciales et l'équipage correspondant.}\\
+		\unitrule{\specialrule{Autel de Nabh}}{}
+Équipement: Paire d'armes (Disciple de Nabh)\\		
+Règles spéciales: \poisonedattacks \only{Equipage}, \devastatingcharge \only{Equipage}, \newrule{\cultofnabh}, \magicresistance{1}.	\\	
+		\unitrule{\specialrule{Autel de Yema}}{}
+Équipement: Lance de cavalerie (Disciple de Yema), Regard pétrifiant (Méduse du Culte de Yema)\\		
+Règles spéciales: \auraofdespair, \newrule{\cultofyema}.		
+},
+}
+
+
+
+\mountstitle
+
+Cette section est réservée aux montures de personnages. Les figurines qui n'en sont pas suivent les règles de leurs entrées d'armées respectives. 
+
+\showunit{
+	name={Cheval elfique},
+	cost={-},
+	profile={
+		Cheval elfique: 9 3 - 3 3 1 4 1 3
+	},
+	type=Bête de guerre,
+	basesize=25x50,
+	specialrules={\mountprotection{6}},
+	options={
+		Peut obtenir \mountprotection{5} =10,
+		\newrule{Si le Général a la règle \cultofyema} :,
+		\newrule{peut gagner \lighttroops} * =25,
+		\newrule{* Seulement si monté par un Seigneur de l'Effroi, un Capitaine ou une Prêtresse.}
+		}
+}
+
+\showunit{
+	name={Raptor},
+	cost={-},
+	profile={
+		Raptor: 7 3 - 4 4 1 2 2 5},
+	type=Bête de guerre,
+	basesize=25x50,
+	specialrules={\mountprotection{5} , \stupidity}
+}
+
+
+\showunit{
+	name={Pégase},
+	cost={-},
+	profile={
+		Pégase: 7 4 - 4 4 3 4 2 6,
+	},
+	type=Bête monstrueuse,
+	basesize=40x40,
+	specialrules={\mountprotection{6}, \fly{8}},
+	options={Peut obtenir \thunderouscharge =10,
+			\newrule{Peut être équipé d'un Caparaçon} = 20,}
+}
+
+\showunit{
+	name={Manticore},
+	cost={-},
+	profile={
+		Manticore: 6 5 - 5 5 4 5 3 5
+	},
+	type=Bête monstrueuse,
+	basesize=50x100,
+	specialrules={\multiplewounds{1D3}{}, \lethalstrike, \frenzy, \largetarget, \fear, \fly{8}},
+	options={Peut devenir un \alphapredator (monture de \beastmaster uniquement)=20}
+}
+
+\showunit{
+	name={Char Prédateur},
+	cost={-},	
+	profile={Char: - - - 5 5 4 - - -,
+		Aurige (2): - 5 4 4 - - 6 1 9,
+		Raptor (2): 7 3 - 4 - - 2 2 5},
+	type=Char,
+	basesize=50x100,
+	unitsize=1,
+	specialrules={\killerinstinct \only{Aurige}, \lightningreflexes \only{Aurige}, \stupidity, \impacthits{+1}},
+	equipment={Lance de cavalerie, Arbalète écorcheuse, Armure lourde, \mountprotection{5}},
+}
+
+\showunit{
+	name={Autel Divin},
+	cost=(-),
+	profile={Autel: - - - 5 5 5 - - -,
+		Disciple de Nabh  (3): - 5 4 3 - - 5 1 8,
+		Disciple de Yema (2): - 4 4 3 - - 5 1 8,
+		Méduse du Culte de Yema (1):- 5 4 5 - - 5 4 8,
+		Volonté Divine : 8 - - - - - - - -},
+	type=Char,
+	basesize=60x100,
+	unitsize=1,
+	specialrules={Allégeance, \divineblessings, \largetarget,  \fear, \lightningreflexes \only{Equipage}, \wardsave{4}, \impacthits{+1}},
+	equipment={Armure légère, \mountprotection{6}},
+unitrules={
+		\unitrule{\specialrule{Allégeance}}{Un Autel Divin doit avoir une allégeance, soit au culte de Nabh, soit au culte de Yema. La figurine gagne alors les règles spéciales et l'équipage correspondant.}\\
+		\unitrule{\specialrule{Autel de Nabh}}{}
+Équipement: Paire d'armes (Disciple de Nabh)\\		
+Règles spéciales: \poisonedattacks \only{Equipage}, \devastatingcharge \only{Equipage}, \newrule{\cultofnabh}, \magicresistance{1}.	\\	
+		\unitrule{\specialrule{Autel de Yema}}{}
+Équipement: Lance de cavalerie (Disciple de Yema), Regard pétrifiant (Méduse du Culte de Yema)\\		
+Règles spéciales: \auraofdespair, \newrule{\cultofyema}.		
+},
+}
+
+\showunit{
+	name={Dragon (\oneofakind)},
+	cost={-},
+	profile={
+		Dragon: 6 5 1 6 6 6 3 5 9,
+	},
+	type=Monstre,
+	basesize=50x100,
+	specialrules={\breathweapon{Force 4, \flamingattacks}, \innatedefence{3}, \fly{7}},
+	options={Peut devenir un \alphapredator (monture de \beastmaster uniquement)=35}
+}		
+
+
+
+\end{document}
