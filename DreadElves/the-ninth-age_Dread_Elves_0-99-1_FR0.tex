@@ -2,7 +2,7 @@
 \input{../Layout/AB_layout.tex}
 
 \newcommand{\booktitle}{Elfes des Ténèbres}
-\newcommand{\version}{0.99.0}
+\newcommand{\version}{0.99.1}
 \newcommand{\frenchversion}{2.0}
 \newcommand{\translationteam}{\item \og AEnoriel \fg \item \og Anglachel \fg \item \og Astadriel \fg \item \og Batcat \fg \item \og Eru \fg  \item \og Gandarin \fg \item \og Groumbahk \fg \item \og Iluvatar \fg \item \og Lamronchak \fg \item \og Mammstein \fg}
 
@@ -75,11 +75,11 @@
 \newcommand{\repeaterauxiliaries}{Écorcheurs}
 \newcommand{\corsairs}{Corsaires}
 \newcommand{\darkraiders}{Pillards des Ténèbres}
-\newcommand{\bladesofnabh}{Lames de \nabh}
+\newcommand{\bladesofnabh}{Lames de Nabh}
 
 % Special
 
-\newcommand{\dancersofyema}{Danseuses de \yema}
+\newcommand{\dancersofyema}{Danseuses de Yema}
 \newcommand{\executioners}{Bourreaux}
 \newcommand{\towerguard}{Gardes des Tours Noires}
 \newcommand{\ravencloaks}{Rôdeurs de l'Ombre}
@@ -113,7 +113,10 @@
 \newcommand{\altar}{Autel}
 \newcommand{\discipleofnabh}{Disciple de \nabh}
 \newcommand{\discipleofyema}{Disciple de \yema}
-\newcommand{\cultofyemamedusa}{\medusa{} du \cultofyema}
+\newcommand{\disciples}{Disciples}
+\newcommand{\cultofyemamedusa}{\medusa{} (\yema{})}
+\newcommand{\divinealtarofnabh}{Autel Divin de \nabh}
+\newcommand{\divinealtarofyema}{Autel Divin de \yema}
 \newcommand{\altarofnabh}{Autel de \nabh}
 \newcommand{\altarofyema}{Autel de \yema}
 
@@ -122,19 +125,22 @@
 
 \newcommand{\mayjointhecultofnabh}{Peut rejoindre le \cultofnabh}
 \newcommand{\mayjointhecultofyema}{Peut rejoindre le \cultofyema}
+\newcommand{\oracleyemanote}{Dans le cas d'une allégeance au \cultofyema{}, seules les Disciplines \lust{}, \shadows{}, \death{} ou \blackmagic{} sont accessibles.}
 \newcommand{\acultpriestmustjoinoneofthefollowingcults}{Une \cultpriest{} doit rejoindre l'un des Cultes suivants}
-\newcommand{\seeexecutionerspecialunit}{(voir l'unité spéciale \executioner{})}
+\newcommand{\seeexecutionerspecialunit}{(voir l'unité spéciale \executioners{})}
 \newcommand{\seedancersofyemaspecialunit}{(voir l'unité spéciale \dancersofyema{})}
 \newcommand{\maypurchaseanynumberofpoisonsseebelow}{Peut utiliser n'importe quel nombre de \poisons{} (voir ci-dessous)}
+\newcommand{\assassinforkpaths}{Peut devenir au choix :}
 \newcommand{\canonlybeusedagainstclosecombatattacks}{Ne peut être utilisé que contre des Attaques de Corps a Corps}
-\newcommand{\foreachcharacterwiththefleetcommanderupgradeoneunitofcorsairsmaygainvanguard}{Pour chaque Personnage amélioré en \textbf{\fleetcommander}, une unité de \corsairs{} peut gagner la règle \vanguard{}}
+\newcommand{\corsairsvanguardnote}{Une unité de \corsairs{} peut prendre cette option pour chaque Personnage amélioré en \textbf{\fleetcommander}}
 \newcommand{\maytakearepeatercrossbow}{Peut prendre une \repeatercrossbow}
-\newcommand{\maxmodelsoneofakind}{(max. 15 figurines, \onofakind{})}
+\newcommand{\maxmodelsoneofakind}{(max. 15 figs., \oneofakind{})}
+\newcommand{\huntingchariotforkchoice}{Doit prendre une des armes suivantes :}
 \newcommand{\darkacolytesnote}{%
 Si l'unité rejoint le \cultofyema{}, Le Conclave de Sorciers connait à la place les sorts \blackmagicspellthree{} (Discipline \blackmagic{}) et \lustsignaturespell{} (Discipline \lust{}).
 }
 \newcommand{\divinealtaralignment}{%
-Un \divinealtar{} doit rejoindre un Culte. La figurine gagne alors les règles spéciales et l'équipage correspondant.
+Un \divinealtar{} doit rejoindre un Culte. La figurine gagne alors les règles spéciales, l'allégeance et l'équipage correspondant.
 }
 \newcommand{\elvenhorsenote}{%
 Seulement si le Général a rejoint le \cultofyema{} et si le \elvenhorse{} est monté par un \dreadprince{}, un \captain{} ou une \cultpriest{}.
@@ -148,6 +154,10 @@ Seulement si le Général a rejoint le \cultofyema{} et si le \elvenhorse{} est 
 \range{12}, Force de l'utilisateur, \armourpiercing{1}, \multipleshots{3}, \quicktofire{}. Peuvent être enduites de \poison{}.
 }
 
+\newcommand{\masterpoisonerrule}{%
+Un \assassin{} peut être équipé d'un ou plusieurs \poisons{}. Au début de chaque Tour de Joueur, déclarez un seul \poison{} que l'\assassin{} va utiliser. Les \poisons{} ne peuvent être appliqués que sur des armes standard et font effet au tir comme au corps à corps.
+}
+
 \newcommand{\nightshaderule}{%
 Les attaques faites avec ce \poison{} sont résolues avec une Force égale à l'Endurance de la cible +1, jusqu'à une Force de 6 maximum.
 }
@@ -157,7 +167,7 @@ Les attaques faites avec ce \poison{} ont \lethalstrike{}, et vous pouvez relanc
 }
 
 \newcommand{\bloodrootrule}{%
-Les attaques faites avec ce \poison{} ont un bonus de +1 pour blesser et ont \multiplewounds{2}{\characters{}, \rideenmonsters{}}.
+Les attaques faites avec ce \poison{} ont un bonus de +1 pour blesser et ont \multiplewounds{2}{\characters{}, \riddenmonsters{}}.
 }
 
 \newcommand{\gladiatorweaponsrule}{%
@@ -191,11 +201,11 @@ La \dreadreaper{} peut aussi tirer tirer comme une \textbf{\artilleryweapon} de 
 \newcommand{\divineblessingsrule}{%
 Au début de chaque Tour de Jeu, choisissez l'une des faveurs ci-dessous. Elle s'applique jusqu'à la fin du Tour de Jeu. 
 Une seule unité amie (sauf un \monster{}) à \distance{12} ou moins de l'Autel gagne cette faveur. Une unité ne peut recevoir qu'une seule faveur à la fois. De plus, seules les figurines n'appartenant à aucun Culte ou appartenant au même Culte que l'Autel peuvent être ciblées.
-\begin{customitemize}
+\begin{customsubitemize}
 	\item L'unité gagne une \wardsave{5}.
 	\item L'unité gagne +1 Attaque (sauf les Montures).
 	\item L'unité gagne +1 en Commandement.
-\end{customitemize}
+\end{customsubitemize}
 Sinon, une unité ennemie à moins de \distance{12} peut être ciblée à la place. Dans ce cas, l'unité ciblée subit un malus de -1 en Commandement jusqu'à la fin du Tour de Jeu.
 }
 
@@ -315,7 +325,7 @@ Si le Général de l'armée appartient à un Culte, l'armée ne peut pas conteni
 
 \pricelistitem{Manteau de Minuit}{50}Le porteur gagne une \wardsave{3} qu'il peut uniquement utiliser contre les Attaques à Distance. De plus, le porteur gagne \multiplewounds{1D3}{} et \lethalstrike{} lors des premières manches de Corps à Corps.
 
-\pricelistitem{Amulette Malveillante}{35}Si un Sorcier ennemi à moins de \distance{12} lance un sort avec succès et résout ses effets, et qu'au moins deux des Dés de Pouvoirs utilisés ont eu pour résultat non modifié \result{1}, le lanceur subit un Fiasco. [Le sort compte comme ayant été lancé avec deux Dés de Pouvoir pour ce Fiasco. A confirmer] Un sort ne peut pas générer plus d'un Fiasco.
+\pricelistitem{Amulette Malveillante}{35}Si un Sorcier ennemi à moins de \distance{12} lance un sort avec succès et résout ses effets, et qu'au moins deux des Dés de Pouvoirs utilisés ont eu pour résultat non modifié \result{1}, le lanceur subit un Fiasco. Un sort ne peut pas générer plus d'un Fiasco.
 
 \endpricelist
 

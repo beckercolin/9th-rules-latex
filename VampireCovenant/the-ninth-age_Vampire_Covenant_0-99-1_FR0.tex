@@ -1,7 +1,7 @@
 \input{../Layout/AB_layout.tex}
 
 \newcommand{\booktitle}{Conclaves Vampiriques}
-\newcommand{\version}{0.99.0}
+\newcommand{\version}{0.99.1}
 \newcommand{\frenchversion}{2.0}
 \newcommand{\translationteam}{\item \og AEnoriel \fg \item \og Anglachel \fg \item \og Astadriel \fg \item \og Batcat \fg \item \og Eru \fg  \item \og Gandarin \fg \item \og Groumbahk \fg \item \og Iluvatar \fg \item \og Lamronchak \fg \item \og Mammstein \fg}
 
@@ -16,7 +16,7 @@
 % Army special rules
 
 \newnamemacro{\ashestoashes}{Poussière Tu Redeviendras Poussière}
-\newcommand{\wailofwoe}{\newrule{Plainte Stridente}}
+\newcommand{\wailofwoe}{Plainte Stridente}
 \newcommand{\awaken}[1]{Sombre Réveil\ifblank{#1}{}{ (#1)}}
 \newnamemacro{\reaper}{Moissonneur}
 \newcommand{\vampiric}[1]{Vampirique\ifblank{#1}{}{ (#1+)}}
@@ -172,9 +172,9 @@ Les Vampires \strigois{} dans la même unité peuvent faire le mouvement d'\vang
 
 % Profile rules
 
-\newcommand{\unlivingshieldrule}{\newrule{%
+\newcommand{\unlivingshieldrule}{%
 Les figurines ennemies qui pourraient allouer des attaques de Corps à Corps à une figurine avec cette règle spéciale ne peuvent pas choisir de cibler plutôt un \necromancer{} ou un \necromancerlord{}. Cette règle ne peut pas être utilisée s'il y a des figurines avec la règle \vampiric{} dans la même unité.
-}}
+}
 
 \newcommand{\stormofwingsrule}{%
 Les unités ennemies au contact d'une ou plusieurs figurines d'\batswarm{} subissent -1 en Capacité de Combat (jusqu'à un minimum de 1).
@@ -205,36 +205,36 @@ Les figurines ordinaires d'Infanterie appartenant à des unités alliées situé
 }
 
 \newcommand{\vampireknightbloodtiesoption}{%
-Peut gagner une \platearmour{} et \devastatingcharge{} \newrule{(\rider{} seulement)}%
+Peut gagner une \platearmour{} et \devastatingcharge{} (\rider{} seulement)%
 }
 
-\newcommand{\ghoststeedsrule}{\newrule{%
+\newcommand{\ghoststeedsrule}{%
 La figurine monte une \ghoststeed{}. Son type d'unité change en \cavalry{}, sa taille de socle en \unit{25x50}{\milli\meter}, elle perd la règle \skirmishers{} et gagne une \mountsprotection{6}.%
-}}
+}
 
 \newcommand{\undeadconstructrule}{%
 Les figurines avec cette règle subissent une blessure de moins lorsqu'elles appliquent les règles \unstable{} et \ashestoashes{}.
 }
 
-\newcommand{\autonomousrule}{\newrule{%
+\newcommand{\autonomousrule}{%
 L'unité peut effectuer une Marche Forcée même si elle n'est pas à portée de la \inspiringpresence{} du Général.%
-}}
+}
 
 \newcommand{\chillingshriekrule}{%
-\newrule{L'élément de figurine avec cette règle spéciale peut effectuer une Attaque Spéciale de Tir et une Attaque Spéciale de Corps à Corps détaillés ci-dessous.}
+L'élément de figurine avec cette règle spéciale peut effectuer une Attaque Spéciale de Tir et une Attaque Spéciale de Corps à Corps détaillés ci-dessous.
 \begin{itemize}
-\item \newrule{Attaque Spéciale de Tir (normalement durant la Phase de Tir) : Choisissez une cible en utilisant les règles habituelles des Attaques de Tir. La Portée de l'attaque est de \distance{8}. Le tir est posible même si la figurine a effectué une Marche Forcée durant la Phase de Mouvement précédente.}
-\item \newrule{Attaque Spéciale de Corps à Corps (normalement durant la Phase de Corps à Corps) : Si le joueur choisit de l'utiliser, cette attaque est portée à l'Initiative de l'élément de figurine et remplace les attaques normales non-Spéciales de l'élément de figurine. Sélectionnez une unique unité en contact socle à socle avec la figurine comme cible.}
+\item Attaque Spéciale de Tir (normalement durant la Phase de Tir) : Choisissez une cible en utilisant les règles habituelles des Attaques de Tir. La Portée de l'attaque est de \distance{8}. Le tir est posible même si la figurine a effectué une Marche Forcée durant la Phase de Mouvement précédente.
+\item Attaque Spéciale de Corps à Corps (normalement durant la Phase de Corps à Corps) : Si le joueur choisit de l'utiliser, cette attaque est portée à l'Initiative de l'élément de figurine et remplace les attaques normales non-Spéciales de l'élément de figurine. Sélectionnez une unique unité en contact socle à socle avec la figurine comme cible.
 \end{itemize}
-\newrule{Que ce soit en tant qu'Attaque de Tir ou de Corps à Corps, le \chillingshriek{} inflige une touche automatique à la cible pour chaque Point de Vie que la \shriekinghorror{} possède au moment de l'attaque. Ces touches sont résolues à Force 10 et ont \armourpiercing{6} et \magicalattacks{}. Les jets pour blesser sont faits contre le Commandement de la cible au lieu de son Endurance.}
+Que ce soit en tant qu'Attaque de Tir ou de Corps à Corps, le \chillingshriek{} inflige une touche automatique à la cible pour chaque Point de Vie que la \shriekinghorror{} possède au moment de l'attaque. Ces touches sont résolues à Force 10 et ont \armourpiercing{6} et \magicalattacks{}. Les jets pour blesser sont faits contre le Commandement de la cible au lieu de son Endurance.
 }
 
 \newcommand{\bansheerule}{%
-Une unique \banshee{} avec la règle spéciale \newrule{\wailofwoe{}} rejoint l'équipage.%
+Une unique \banshee{} avec la règle spéciale \wailofwoe{} rejoint l'équipage.%
 }
 
 \newcommand{\darktomerule}{%
-Les \wizards{} amis à moins de \distance{12} d'au moins un \altarofundeath{} équipé d'un \darktome{} ajoutent +2 à leurs tentatives de lancement de Sorts de la Discipline \necromancy{} \removedrule{(jusqu'à un maximum de +3)}. Tout \wizard{} subissant un Fiasco à moins de \distance{12} d'un \altarofundeath{} équipé d'un \darktome{} compte comme ayant utilisé deux Dés de Pouvoir supplémentaires pour lancer le sort (maximum 5).
+Les \wizards{} amis à moins de \distance{12} d'au moins un \altarofundeath{} équipé d'un \darktome{} ajoutent +2 à leurs tentatives de lancement de Sorts de la Discipline \necromancy{}. Tout \wizard{} subissant un Fiasco à moins de \distance{12} d'un \altarofundeath{} équipé d'un \darktome{} compte comme ayant utilisé deux Dés de Pouvoir supplémentaires pour lancer le sort (maximum 5).
 }
 
 \newcommand{\auraofundeathrule}{%
@@ -245,9 +245,9 @@ Au début de chacun de vos Tours de Joueur, vous pouvez choisir l'un des effets 
 	\end{itemize}
 }
 
-\newcommand{\extendedchassisrule}{\newrule{%
+\newcommand{\extendedchassisrule}{%
 La figurine gagne +1 Point de Vie et sa taille de socle change en \unit{50x150}{\milli\meter}.
-}}
+}
 
 \newcommand{\soulsyphonrule}{%
 Pour connaître les effets de cette règle spéciale, le joueur doit tenir le décompte des blessures infligées par la figurine. À la fin de chaque Phase de Corps à Corps, observez le nombre total de blessures infligées pour déterminer le niveau de \soulsyphon{} qu'obtient la figurine. Le \darkcoach{} accumule toutes les améliorations jusqu'à son niveau actuel de \soulsyphon{}.
@@ -262,7 +262,7 @@ Pour connaître les effets de cette règle spéciale, le joueur doit tenir le d�
 
 \textbf{1 - 3}		   & \textit{L'air est empli de pulsations meurtrières}. Le \darkcoach{} gagne \lethalstrike{} et \multiplewounds{2}{\infantry , \warbeasts , \cavalry}. \tabularnewline
 
-\textbf{4 - 6}		   & \textit{La nuit s'illumine de feux impurs}. Le \darkcoach{} gagne \grindingattacks{1D3} \newrule{(résolues à l'Initiative de l'\wraithprofile{})} et \flamingattacks{}. \tabularnewline
+\textbf{4 - 6}		   & \textit{La nuit s'illumine de feux impurs}. Le \darkcoach{} gagne \grindingattacks{1D3} (résolues à l'Initiative de l'\wraithprofile{}) et \flamingattacks{}. \tabularnewline
 
 \textbf{7 - 9}		   & \textit{Un mal ancien se réveille!} Le \darkcoach{} ajoute le \awakenedvampire{} à son équipage. Il possède \vampiric{2}. \tabularnewline
 
@@ -273,9 +273,9 @@ Pour connaître les effets de cette règle spéciale, le joueur doit tenir le d�
 \end{tabular}\end{center}
 }
 
-\newcommand{\greatmonstrousrevenantrule}{\newrule{%
+\newcommand{\greatmonstrousrevenantrule}{%
 Le \monstrousrevenant{} gagne \thunderouscharge{} et sa taille de socle change en \unit{60x100}{\milli\meter}.
-}}
+}
 
 \newcommand{\colossalzombiedragonrule}{%
 La figurine gagne +1 en Capacité de Combat, la valeur de sa \innatedefence{} passe à ($ 3+ $), et sa taille de socle change en \unit{100x150}{\milli\meter}.
@@ -293,8 +293,6 @@ La figurine gagne +1 en Capacité de Combat, la valeur de sa \innatedefence{} pa
 
 Un Personnage doit être le \textbf{\master{}} de l'armée. Au début de la partie, le Général est toujours le \master{}.
 
-\removedrule{Seules les figurines avec cette règle spéciale peuvent être choisies comme Général. Le Général devient automatiquement le Maître et doit échanger un de ses sorts pour \necromancysignaturespell{}, quelque soit la Discipline qu'il a choisi.}
-
 \armywideruleentry{\invocation}
 
 Les profils d'unité contiennent une catégorie appelée \invocation{} qui donne le nombre de Points de Vie Ressuscités grâce à l'\necromancysignaturespell{} de la Discipline \necromancy{}.
@@ -310,29 +308,29 @@ Les profils d'unité contiennent une catégorie appelée \invocation{} qui donne
 
 Au début de votre Tour de Joueur suivant la mort du \master{}, un nouveau \master{} peut être choisi. Pour faire ceci, vous devez nommer un autre Personnage éligible, c'est à dire un \wizard{} utilisant la Discipline \necromancy{}. Ce Personnage est le nouveau \master{}. Si l'armée ne possède pas de Personnage faisant l'affaire, toute unité qui possède au moins une figurine avec la règle \ashestoashes{} doit faire un nouveau test de Commandement, et subir des blessures comme décrit ci-dessus. Cet effet devra se répéter au début de chacun de vos Tours de Joueur jusqu'à la fin de la partie.
 
-\armyspecialruleentry{\newrule{\wailofwoe}}
+\armyspecialruleentry{\wailofwoe}
 
-\newrule{Attaque Spéciale. Les éléments de figurine possédant cette règle peuvent effectuer une Attaque Spéciale de Tir. Elle peut être faite après une Marche Forcée, et touche automatiquement avec le profil suivant : \range{8}, Force 4, \multipleshots{1D6+2}, \magicalattacks{}.}
+Attaque Spéciale. Les éléments de figurine possédant cette règle peuvent effectuer une Attaque Spéciale de Tir. Elle peut être faite après une Marche Forcée et touche automatiquement avec le profil suivant : \range{8}, Force 4, \magicalattacks{}, \multipleshots{1D6+2}.
 
 
 \armyspecialruleentry{\awaken{X}}
 
-Une figurine avec cette règle spéciale peut Ressusciter des PVs au-delà de l'effectif de départ de toutes les unités mentionnées entre parenthèses, en suivant les modalités de \raisewounds{}. L'effectif de départ est le nombre de figurines choisi sur la liste d'armée. \removedrule{Les unités peuvent même dépasser l'effectif maximal autorisé sur leur fiche d'unité.} \newrule{La taille des unités ne peut pas être augmentée au delà de deux fois l'effectif de départ.}
+Une figurine avec cette règle spéciale peut Ressusciter des PVs au-delà de l'effectif de départ de toutes les unités mentionnées entre parenthèses, en suivant les modalités de \raisewounds{}. L'effectif de départ est le nombre de figurines choisi sur la liste d'armée. La taille des unités ne peut pas être augmentée au delà de deux fois l'effectif de départ.
 
 
 \armyspecialruleentry{\reaper}
 
-Une unité composée uniquement de figurines suivant cette règle spéciale peut se déplacer au travers d'unités amies ou ennemies durant l'étape des Autres Mouvements. \newrule{L'unité peut alors effectuer une \sweepingattack{}, à l'exception qu'elle est considérée comme une Attaque Spéciale de Corps à Corps plutôt qu'une Attaque Spéciale de Tir. L'ennemi subit une touche par figurine dans l'unité attaquante. Ces touches comptent comme si elles avaient été infligées au corps à corps, avec la Force, les Règles Spéciales et les bonus d'arme des figurines.}
+Une unité composée uniquement de figurines suivant cette règle spéciale peut se déplacer au travers d'unités amies ou ennemies durant l'étape des Autres Mouvements. L'unité peut alors effectuer une \sweepingattack{}, à l'exception qu'elle est considérée comme une Attaque Spéciale de Corps à Corps plutôt qu'une Attaque Spéciale de Tir. L'ennemi subit une touche par figurine dans l'unité attaquante. Ces touches comptent comme si elles avaient été infligées au corps à corps, avec la Force, les Règles Spéciales et les bonus d'arme des figurines.
 
 \armyspecialruleentry{\vampiric{X}}
 
 Une unité \vampiric{} peut effectuer des Marches Forcées même lorsqu'elle se trouve hors de portée de la \inspiringpresence{} du Général. Elle doit toujours effectuer un test de Commandement si elle se trouve dans un rayon de \distance{8} d'une unité ennemie.
 
-\newrule{À la fin de chaque Phase de Corps à Corps, les unités avec cette règle spéciale peuvent faire des jets pour la règle \vampiric{}. Lancez 1D6 pour chaque Personnage \vampiric{} qui a infligé au moins une blessure non sauvegardée durant cette Phase de Corps à Corps, et 1D6 si au moins une figurine ordinaire \vampiric{} de l'unité l'a fait. Un jet \vampiric{} est réussi si le résultat du dé est de X ou plus, où X est le nombre entre parenthèses. Un résultat de \result{1} est toujours un échec, tandis qu'un \result{6} est toujours un succès. Les figurines avec la règle \largetarget{} ont un malus de -2 sur le résultat des dés de leur jet \vampiric{}, jusqu'à un minimum de 1. Un Personnage qui réussit un jet \vampiric{} Récupère un Point de Vie. Une unité qui a réussi un jet \vampiric{} provenant de ses figurines ordinaires Ressuscite un unique PV dans l'unité.}
+À la fin de chaque Phase de Corps à Corps, les unités avec cette règle spéciale peuvent faire des jets pour la règle \vampiric{}. Lancez 1D6 pour chaque Personnage \vampiric{} qui a infligé au moins une blessure non sauvegardée durant cette Phase de Corps à Corps, et 1D6 si au moins une figurine ordinaire \vampiric{} de l'unité l'a fait. Un jet \vampiric{} est réussi si le résultat du dé est de X ou plus, où X est le nombre entre parenthèses. Un résultat de \result{1} est toujours un échec, tandis qu'un \result{6} est toujours un succès. Les figurines avec la règle \largetarget{} ont un malus de -2 sur le résultat des dés de leur jet \vampiric{}, jusqu'à un minimum de 1. Un Personnage qui réussit un jet \vampiric{} Récupère un Point de Vie. Une unité qui a réussi un jet \vampiric{} provenant de ses figurines ordinaires Ressuscite un unique PV dans l'unité.
 
 \armyspecialruleentry{\necromanticaura}
 
-Toute les unités amies dans un rayon de \distance{6} d'une ou plusieurs figurines avec cette règle spéciale réduit le nombre de blessures qu'elle subit par les règles \ashestoashes{} et \unstable{} de 1. Les figurines avec la règle \necromanticaura{} ne peuvent pas en bénéficier elles-mêmes.
+Toutes les unités amies dans un rayon de \distance{6} d'une ou plusieurs figurines avec cette règle spéciale réduisent le nombre de blessures qu'elle subissent par les règles \ashestoashes{} et \unstable{} de 1. Les figurines avec la règle \necromanticaura{} ne peuvent pas en bénéficier elles-mêmes.
 
 
 \closearmyspecialrules
@@ -352,59 +350,59 @@ Les \vampirelords{} appartenant à une \bloodline{} peuvent accéder au \ancient
 
 Certaines troupes du Livre d'Armée sont notées comme étant des \bloodties{}, suivies entre parenthèses de la \bloodline{} à laquelle elles appartiennent. Si la \bloodline{} des Personnages \vampires{} de l'armée correspond à celle entre parenthèses, vous pouvez prendre l'option décrite à la suite.
 
-\armynewsubsection{\brotherhood{}\dotfill\pts{\newrule{30}/\newrule{10}}}
+\armynewsubsection{\brotherhood{}\dotfill\pts{30/10}}
 
 \begin{wrapfigure}[5]{L}{0cm}
 \centering
 \includegraphics[width=\logosize]{logos/logo_brotherhood.png}
 \end{wrapfigure}
-Un Vampire de la \brotherhood{} gagne +2 en Capacité de Combat et porte une \platearmour{}. Il ne peut acheter qu'un seul Niveau de Magie supplémentaire et ne peut utiliser que la Discipline \necromancy{}. Un Vampire de la \brotherhood{} ne peut jamais refuser de Défi et doit en lancer dès qu'il le peut, à moins qu'une autre \newrule{figurine} ne le fasse en premier.
+Un Vampire de la \brotherhood{} gagne +2 en Capacité de Combat et porte une \platearmour{}. Il ne peut acheter qu'un seul Niveau de Magie supplémentaire et ne peut utiliser que la Discipline \necromancy{}. Un Vampire de la \brotherhood{} ne peut jamais refuser de Défi et doit en lancer dès qu'il le peut, à moins qu'une autre figurine ne le fasse en premier.
 
 \vspace{0.5cm}
 \bloodtie{} : \textbf{\vampireknights{}}.
 
 \vspace{0.5cm}
 \ancientbloodpower{} : \textbf{Rage Écarlate}\dotfill\pts{65}\newline%
-\newrule{Chaque blessure non sauvegardée infligée par des attaques normales du Vampire autorise une nouvelle attaque à la même Initiative. Ces attaques additionnelles ne génèrent pas d'autres attaques.}
+Chaque blessure non sauvegardée infligée par des attaques normales du Vampire autorise une nouvelle attaque à la même Initiative. Ces attaques additionnelles ne génèrent pas d'autres attaques.
 
-\armynewsubsection{\bloodline{} \vonkarnstein{}\dotfill\pts{\newrule{25}/\newrule{10}}}
+\armynewsubsection{\bloodline{} \vonkarnstein{}\dotfill\pts{25/10}}
 
 \begin{wrapfigure}[5]{R}{0cm}
 \centering
 \includegraphics[width=\logosize]{logos/logo_vonkarnstein.png}
 \end{wrapfigure}
-La présence d'un ou plusieurs Vampires \vonkarnstein{} dans un corps à corps octroie un bonus de +1 au Résultat de Combat. Une unité avec la règle \undead{} rejointe par un \vonkarnstein{} peut effectuer une Marche Forcée comme si elle était \vampiric{}. La portée des éventuelles \inspiringpresence{} et \holdyourground{} du Vampire est augmentée de \distance{6}, et il peut relancer ses jets ratés pour la règle \vampiric{}. 
+La présence d'un ou plusieurs Vampires \vonkarnstein{} dans un corps à corps octroie un bonus de +1 au Résultat de Combat. Une unité avec la règle \undead{} rejointe par un \vonkarnstein{} peut effectuer une Marche Forcée comme si elle était \vampiric{}. La portée des éventuelles \inspiringpresence{} et \holdyourground{} du Vampire est augmentée de \distance{6} et il peut relancer ses jets ratés pour la règle \vampiric{}. 
 
 \vspace{0.5cm}
 \bloodties{} : \textbf{\darkcoach{}}.
 
 \vspace{0.5cm}
-\ancientbloodpower{} : \textbf{Appel de la Tempête}\dotfill\pts{\newrule{65}}\newline%
-\newrule{Le Vampire possède le sort \heavensspelltwo{} (Discipline \heavens{}) comme \boundspell{4}. Toutes les unités dans un rayon de \distance{12} autour du Vampire gagnent la règle spéciale \hardtarget{}. De plus, une fois par partie, le Vampire peut donner à toutes les figurines ordinaires de son unité et lui-même les règles spéciales \lightningattacks{} et \lightningreflexes{}. Cette capacité doit être activée au début d'une Phase de Corps à Corps et dure jusqu'à la fin du tour de joueur suivant.}
+\ancientbloodpower{} : \textbf{Appel de la Tempête}\dotfill\pts{65}\newline%
+Le Vampire possède le sort \heavensspelltwo{} (Discipline \heavens{}) comme \boundspell{4}. Toutes les unités dans un rayon de \distance{12} autour du Vampire gagnent la règle spéciale \hardtarget{}. De plus, une fois par partie, le Vampire peut donner à toutes les figurines ordinaires de son unité et lui-même les règles spéciales \lightningattacks{} et \lightningreflexes{}. Cette capacité doit être activée au début d'une Phase de Corps à Corps et dure jusqu'à la fin du tour de joueur suivant.
 
 \newpage
-\armynewsubsection{\bloodline{} \lamia{}\dotfill\pts{\newrule{40}/\newrule{25}}}
+\armynewsubsection{\bloodline{} \lamia{}\dotfill\pts{40/25}}
 
 \begin{wrapfigure}[6]{L}{0cm}
 \centering
 \includegraphics[width=\logosize]{logos/logo_lamia.png}
 \end{wrapfigure}
-La Vampire perd une Attaque et obtient les \lightningreflexes{}. Si elle ne porte aucune Armure\newrule{, sans compter la \mountsprotection{} et la \innatedefence{}}, elle obtient également la règle \distracting{}. \newrule{Les Défis lancés par la Vampire doivent être acceptés si possible et les figurines en Défi contre une \lamia{} doivent réussir un test de Commandement avec un malus additionnel de -1. Dans le cas d'un échec, elles doivent relancer leurs jets pour toucher réussis pendant cette Manche de Corps à Corps. La Vampire doit choisir la Discipline \light{}, \shadows{} ou \necromancy{}.}
+La Vampire perd une Attaque et obtient les \lightningreflexes{}. Si elle ne porte aucune Armure, sans compter la \mountsprotection{} et la \innatedefence{}, elle obtient également la règle \distracting{}. Les Défis lancés par la Vampire doivent être acceptés si possible et les figurines en Défi contre une \lamia{} doivent réussir un test de Commandement avec un malus additionnel de -1. Dans le cas d'un échec, elles doivent relancer leurs jets pour toucher réussis pendant cette Manche de Corps à Corps. La Vampire doit choisir la Discipline \light{}, \shadows{} ou \necromancy{}.
 
 \vspace{0.5cm}
 \bloodties{} : \textbf{\courtofthedamned{}}.
 
 \vspace{0.5cm}
 \ancientbloodpower{} : \textbf{Commandement}\dotfill\pts{50}\newline%
-Toute les figurines ordinaires de l'unité rejointe par la Vampire obtiennent une Capacité de Combat de 5. Si la Vampire n'est pas engagée au corps à corps, elle peut à la place, \newrule{au début d'une Phase de Corps à Corps et pour la durée de cette phase}, donner ce bonus à une unique unité amie située dans un rayon de \distance{6}.
+Toute les figurines ordinaires de l'unité rejointe par la Vampire obtiennent une Capacité de Combat de 5. Si la Vampire n'est pas engagée au corps à corps, elle peut à la place, au début d'une Phase de Corps à Corps et pour la durée de cette phase, donner ce bonus à une unique unité amie située dans un rayon de \distance{6}.
 
-\armynewsubsection{\bloodline{} des \strigois{}\dotfill\pts{50/\newrule{30}}}
+\armynewsubsection{\bloodline{} des \strigois{}\dotfill\pts{50/30}}
 
 \begin{wrapfigure}[5]{R}{0cm}
 \centering
 \includegraphics[width=\logosize]{logos/logo_strigoi.png}
 \end{wrapfigure}
-La figurine du Vampire gagne +1 Point de Vie, obtient une \regeneration{5} et est sujet à la \hatred{}. Le Vampire ne peut pas prendre de monture à l'exception d'une \shriekinghorror{}, ne peut porter aucune Armure\newrule{, sauf une \mountsprotection{}}, et ne peut acheter qu'un seul Niveau de Magie supplémentaire. Il doit utiliser la Discipline \wilderness{} ou \necromancy{}.
+La figurine du Vampire gagne +1 Point de Vie, obtient une \regeneration{5} et est sujet à la \hatred{}. Le Vampire ne peut pas prendre de monture à l'exception d'une \shriekinghorror{}, ne peut porter aucune Armure, sauf une \mountsprotection{}, et ne peut acheter qu'un seul Niveau de Magie supplémentaire. Il doit utiliser la Discipline \wilderness{} ou \necromancy{}.
 
 \vspace{0.5cm}
 \bloodties{} : \textbf{\ghouls{}}.
@@ -413,20 +411,20 @@ La figurine du Vampire gagne +1 Point de Vie, obtient une \regeneration{5} et es
 \ancientbloodpower{} : \textbf{Roi des Goules}\dotfill\pts{65}\newline%
 Le Vampire fait des \poisonedattacks{} et a \armourpiercing{1}. Les \ghouls{} de l'unité qu'il rejoint gagnent la \hatred{} et \armourpiercing{1}.
 
-\armynewsubsection{\bloodline{} \nosferatu{}\dotfill\pts{\newrule{120}/\newrule{60}}}
+\armynewsubsection{\bloodline{} \nosferatu{}\dotfill\pts{120/60}}
 
 \begin{wrapfigure}[8]{L}{0cm}
 \centering
 \includegraphics[width=\logosize]{logos/logo_nosferatu.png}
 \end{wrapfigure}
-Le Vampire perd une Attaque, subit un malus de -2 en Capacité de Combat et ne peut porter aucune Armure\newrule{, à l'exception de la \mountsprotection{} et de la \innatedefence{}}. \newrule{Il ne peut pas porter d'Arme standard.} Il devient un \magiclevel{2} si c'est un Héros et un \magiclevel{4} si c'est un Seigneur. Il génère un sort supplémentaire et gagne \awaken{\skeletons{}, \zombies{}}. Un Vampire \nosferatu{} peut choisir ses sorts dans toutes les Disciplines \newrule{qui lui sont ouvertes} au lieu d'une seule. Les informations sur les Disciplines choisies et combien de sorts sont générés dans chaque Discipline doivent figurer dans la Liste d'Armée.
+Le Vampire perd une Attaque, subit un malus de -2 en Capacité de Combat et ne peut porter aucune Armure, à l'exception de la \mountsprotection{} et de la \innatedefence{}. Il ne peut pas porter d'Arme standard. Il devient un \magiclevel{2} si c'est un Héros ; un \magiclevel{4} si c'est un Seigneur. Il génère un sort supplémentaire et gagne \awaken{\skeletons{}, \zombies{}}. Un Vampire \nosferatu{} peut choisir ses sorts dans toutes les Disciplines qui lui sont ouvertes au lieu d'une seule. Les informations sur les Disciplines choisies et combien de sorts sont générés dans chaque Discipline doivent figurer dans la Liste d'Armée.
 
 \vspace{0.5cm}
 \bloodties{} : \textbf{\wraiths{}}.
 
 \vspace{0.5cm}
-\ancientbloodpower{} : \textbf{\newrule{Occultisme du Sang}}\dotfill\pts{\newrule{75}}\newline%
-\newrule{Le Vampire compte toujours comme ayant utilisé un Dé de Pouvoir de moins en cas de Fiasco. Immédiatement après avoir lancé les dés pour déterminer la force des Flux Magiques pendant votre tour, vous pouvez choisir de relancer un des dés. Dans ce cas, le Vampire subit une blessure sans aucune sauvegarde possible à la fin de la Phase de Magie.}
+\ancientbloodpower{} : \textbf{Occultisme du Sang}\dotfill\pts{75}\newline%
+Le Vampire compte toujours comme ayant utilisé un Dé de Pouvoir de moins en cas de Fiasco. Immédiatement après avoir lancé les dés pour déterminer la force des Flux Magiques pendant votre tour, vous pouvez choisir de relancer un des dés. Dans ce cas, le Vampire subit une blessure sans aucune sauvegarde possible à la fin de la Phase de Magie.
 
 \closearmynewsection
 
@@ -457,9 +455,9 @@ Les \vampirelords{} et les \vampireheroes{} peuvent  acheter une unique amélior
 
 \startpricelist
 
-\pricelistitem{Goût Raffiné}{25} Le Vampire obtient \vampiric{2}\removedrule{, ou \vampiric{4} s'il est monté sur une \largetarget{}}.
+\pricelistitem{Goût Raffiné}{25} Le Vampire obtient \vampiric{2}.
 
-\pricelistitem{L'Heure du Loup}{20} Le Vampire gagne \awaken{\zombies, \direwolves, \batswarms, \greatbats}, et le Vampire ainsi que l'unité qu'il rejoint gagnent la règle \swiftstride{}\newrule{, à l'exception des autres Personnages ayant la règle \vampiric{}}.
+\pricelistitem{L'Heure du Loup}{20} Le Vampire gagne \awaken{\zombies, \direwolves, \batswarms, \greatbats}. Le Vampire ainsi que l'unité qu'il rejoint gagnent la règle \swiftstride{}, à l'exception des autres Personnages ayant la règle \vampiric{}.
 
 \endpricelist
 
@@ -469,7 +467,7 @@ Les \vampirelords{} et les \vampireheroes{} peuvent  acheter une unique amélior
 
 \startpricelist
 
-\pricelistitem{Regard Hypnotique}{\newrule{35}} \newrule{Le Vampire possède le sort \lustspellfour{} (Discipline \lust{}) comme \boundspell{4}.}
+\pricelistitem{Regard Hypnotique}{35} Le Vampire possède le sort \lustspellfour{} (Discipline \lust{}) comme \boundspell{4}.
 
 \pricelistitem{Masque d'Innocence}{25} Les unités au contact d'un ou plusieurs Vampires avec ce pouvoir subissent un malus de -1 en Commandement.
 
@@ -482,9 +480,9 @@ Les \vampirelords{} et les \vampireheroes{} peuvent  acheter une unique amélior
 
 \startpricelist
 
-\pricelistitem{Malédiction du Sang}{70} Le Vampire gagne \regeneration{5}. \newrule{S'il possédait déjà une \regeneration{}, il gagne \regeneration{4}}. Toutes les \ghouls{} dans la même unité que le Vampire ainsi que son éventuelle monture gagnent \regeneration{6}. Si une figurine affectée par cette capacité possède déjà la \regeneration{}, sa sauvegarde de \regeneration{} est améliorée d'un point, pour obtenir 4+ au mieux.
+\pricelistitem{Malédiction du Sang}{70} Le Vampire gagne \regeneration{5}. S'il possédait déjà une \regeneration{}, il gagne \regeneration{4}. Toutes les \ghouls{} dans la même unité que le Vampire ainsi que son éventuelle monture gagnent \regeneration{6}. Si une figurine affectée par cette capacité possède déjà la \regeneration{}, sa sauvegarde de \regeneration{} est améliorée d'un point, pour obtenir 4+ au mieux.
 
-\pricelistitem{\newrule{Forme Bestiale}}{\newrule{55}} \newrule{Figurines à pied uniquement. Le type de troupe du Vampire devient \monstrousinfantry{} et la taille de son socle passe à \unit{40x40}{\milli\meter}. Il gagne +1 PV, +1 en Force, \regeneration{5} et son Endurance passe à 5. Il est équipé d'une \pw{} et ne peut manier aucune autre Arme, standard ou magique. Il n'a accès à aucune monture et ne peut porter aucune sorte d'Armure.}
+\pricelistitem{Forme Bestiale}{55} Figurines à pied uniquement. Le type de troupe du Vampire devient \monstrousinfantry{} et la taille de son socle passe à \unit{40x40}{\milli\meter}. Il gagne +1 PV, +1 en Force, \regeneration{5} et son Endurance passe à 5. Il est équipé d'une \pw{} et ne peut manier aucune autre Arme, standard ou magique. Il n'a accès à aucune monture et ne peut porter aucune sorte d'Armure.
 
 \endpricelist
 
@@ -494,7 +492,7 @@ Les \vampirelords{} et les \vampireheroes{} peuvent  acheter une unique amélior
 
 \startpricelist
 
-\pricelistitem{Connaissance des Arcanes}{25} \newrule{Les sorts lancés par le Vampire ont une Portée augmentée de \distance{6}. Cet effet est réduit à \distance{3} pour les sorts de type Aura. Les sorts de Vortex, les Objets de Sort et les sorts sans Portée ne sont pas affectés}.
+\pricelistitem{Connaissance des Arcanes}{25} Les sorts lancés par le Vampire ont une Portée augmentée de \distance{6}. Cet effet est réduit à \distance{3} pour les sorts de type Aura. Les sorts de Vortex, les Objets de Sort et les sorts sans Portée ne sont pas affectés.
 
 \pricelistitem{Discipline Interdite}{20} Sélectionnez une Discipline \battle{} autre que celle \nature{}. Le Vampire peut également choisir cette Discipline pour générer ses sorts en plus de celles normalement accessibles.
 
@@ -510,9 +508,7 @@ Les \vampirelords{} et les \vampireheroes{} peuvent  acheter une unique amélior
 
 \startpricelist
 
-\pricelistitem{\removedrule{Arc de Nepharet}}{45}
-
-\pricelistitem{Lame de la Soif Rouge}{40} Vampires uniquement.\newline Type: \hw{}. Le Vampire maniant cette lame \newrule{gagne \vampiric{3}}. L'élément de figurine lance 1D6 pour chaque blessure qu'il inflige dans le cadre de sa règle \vampiric{}, au lieu d'un seul dé. Tout excès de PV ainsi Ressuscité peut être utilisé pour \raisewounds{} dans l'unité que le personnage a rejointe.
+\pricelistitem{Lame de la Soif Rouge}{40} Vampires uniquement.\newline Type: \hw{}. Le Vampire maniant cette lame gagne \vampiric{3}. L'élément de figurine lance 1D6 pour chaque blessure qu'il inflige dans le cadre de sa règle \vampiric{}, au lieu d'un seul dé. Tout excès de PV ainsi Ressuscité peut être utilisé pour \raisewounds{} dans l'unité que le personnage a rejointe.
 
 \endpricelist
 
@@ -528,7 +524,7 @@ Les \vampirelords{} et les \vampireheroes{} peuvent  acheter une unique amélior
 
 \startpricelist
 
-\pricelistitem{\newrule{Anneau d'Éternité}}{\newrule{60/50}} \newrule{Vampires uniquement.\newline Le porteur possède une \wardsave{2} contre la première blessure subie (après les Sauvegardes d'Armure) de la partie, et est immunisé aux effets du \lethalstrike{} et des \multiplewounds{}{}.}
+\pricelistitem{Anneau d'Éternité}{60/50} Vampires uniquement.\newline Le porteur possède une \wardsave{2} contre la première blessure subie (après les Sauvegardes d'Armure) de la partie. Il est immunisé aux effets du \lethalstrike{} et des \multiplewounds{}{}.
 
 \pricelistitem{Linceul de Nuit}{40} Figurine à pied uniquement.\newline Les figurines au contact du porteur ainsi que toute figurine allouant des attaques de Corps à Corps au porteur ne reçoivent aucun bonus de type +X en Force lié à leurs Armes, qu'elles soient magiques ou ordinaires.
 
@@ -546,11 +542,9 @@ Les \vampirelords{} et les \vampireheroes{} peuvent  acheter une unique amélior
 
 \startpricelist
 
-\pricelistitem{\newrule{Baguette de Gerhard Langue Noire}}{\newrule{50}} \newrule{Une armée possédant cet objet peut relancer ses jets de Canalisation ratés. De plus, quand le porteur lance le sort \necromancysignaturespell{} (Discipline \necromancy{}), le dé pour déterminer le nombre de Points de Vie Ressuscités peut être relancé pour chaque unité concernée.}
+\pricelistitem{Baguette de Gerhard Langue Noire}{50} Une armée possédant cet objet peut relancer ses jets de Canalisation ratés. De plus, quand le porteur lance le sort \necromancysignaturespell{} (Discipline \necromancy{}), le dé pour déterminer le nombre de Points de Vie Ressuscités peut être relancé pour chaque unité concernée.
 
 \pricelistitem{Tome Impie}{35} \boundspell{4}. Cet objet permet de lancer \necromancyspelltwo{} (Discipline \necromancy{}).
-
-\pricelistitem{\removedrule{Baguette d'Asservissement Vengeur}}{35}
 
 \pricelistitem{Œil de Setesh}{20} À la fin de n'importe quelle Phase de Magie, vous pouvez mettre un Dé de Magie inutilisé de côté pour l'ajouter à votre réserve du tour suivant, juste après avoir déterminé les Flux de Magie.
 
@@ -560,9 +554,9 @@ Les \vampirelords{} et les \vampireheroes{} peuvent  acheter une unique amélior
 
 \startpricelist
 
-\pricelistitem{Étendard Noir de Zagvozd}{\newrule{40}} \newrule{Toutes les figurines de l'unité obtiennent une \wardsave{4} contre les Attaques de Tir}. 
+\pricelistitem{Étendard Noir de Zagvozd}{40} Toutes les figurines de l'unité obtiennent une \wardsave{4} contre les Attaques de Tir. 
 
-\pricelistitem{Bannière des Rois des Tertres}{\newrule{25}} Les figurines de \barrowknights{} et de \barrowguards{} \removedrule{et de \barrowkings{}} de l'unité obtiennent +1 pour toucher au Corps à Corps.
+\pricelistitem{Bannière des Rois des Tertres}{25} Les figurines de \barrowknights{} et de \barrowguards{} de l'unité obtiennent +1 pour toucher au Corps à Corps.
 
 \endpricelist
 
@@ -622,6 +616,12 @@ Les \vampirelords{} et les \vampireheroes{} peuvent  acheter une unique amélior
 
 \startchangelog
 
+\newlog{0.99.1}{%
+Green text reverted to black,
+Ld on chariot mounts,
+Altar of Undeath and dark coach{,} name of charioteers,
+}
+
 \newlog{0.99.0}{%
 Master of Undeath,
 Chilling Shriek redesign,
@@ -674,35 +674,6 @@ Winged Reapers: cost and special rules,
 Shrieking Horror: cost,
 Dark Coach: cost{,} base size{,} upgrade and clarification,
 Monstrous Revenant: new options,
-}
-
-\newlog{0.11.1}{%
-Barrow Knights,
-Dark Coach,
-Altar of Undeath,
-Reaper rules clarification,
-}
-
-\newlog{0.11.0}{%
-Armywide special rules streamlined with UD,
-Curse of the Blood,
-Wizard levels price,
-Zombie dragon price,
-Vampire spawn,
-Phantom host,
-Fell Wraith,
-Vampire knights unit size,
-Barrow guard Ld,
-Wraith,
-Winged Reapers,
-Dark tome,
-Mundane weapon cost streamlined,
-Dragon one of a kind,
-Unbearable scrutiny,
-Ghouls command option,
-Renamed Magic Items to Magical Items,
-Renamed Winds of Magic to Magic Flux,
-Renamed Blurry to Hard Target,
 }
 
 \endchangelog
