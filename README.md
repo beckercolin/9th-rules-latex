@@ -1,5 +1,4 @@
-Le LA OgreKhans est fonctionnel et compile. Il faut compiler le fichier ninthage_Ogre_Khans_blabla.tex
 
-ATTENTION a bien avoir installé la police Caslon Antique et à compiler avec XeLaTeX, pas pdfLatex, sinon ça ne fonctionne pas :D
+ATTENTION à compiler avec XeLaTeX, pas pdfLatex, sinon ça ne fonctionne pas !
 
-La partie VampireCounts n'est pas à jour, pas la peine d'essayer de la compiler pour le moment ;)
+Les polices utilisées doivent être installées avant tout compilation. Elles peuvent être trouvées dans le dossier Layout, puis dossier fonts.

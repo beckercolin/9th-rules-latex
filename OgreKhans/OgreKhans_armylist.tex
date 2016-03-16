@@ -1,5 +1,5 @@
 
-%%% v0.99.0
+%%% v0.99.1
 
 \armylist
 
@@ -25,7 +25,7 @@
 			\ogrecrossbow{}=8,
 		},
 		\combatweapononechoice{
-			\ironfist{}=\newrule{15},
+			\ironfist{}=15,
 			\gw{}=20,
 		},
 	},
@@ -33,25 +33,25 @@
 
 \showunit{
 	name={\greatshaman},
-	cost={\newrule{245}},
-	profile={ < 6 \newrule{3} 3 4 5 5 3 \newrule{3} 8},
+	cost={245},
+	profile={ < 6 3 3 4 5 5 3 3 8},
 	type= \monstrousinfantry ,
 	basesize=40x40,
 	unitsize=1,
 	commontype=\ogrecommonrules ,
 	commonspecialrules={\sonsoftheavalanche},
 	magiclevel=3,
-	magicpaths={\newrule{\alchemy}, \death, \heavens, \wilderness, \newrule{\fire}, \butchery},
+	magicpaths={\alchemy, \death, \heavens, \wilderness, \fire, \butchery},
 	options={
 		\bignamechoice{}=\unlimited,
-		\magiclevel{4}=\newrule{30},
+		\magiclevel{4}=30,
 		\magicalitemsallowance{}=\upto{}<100,
 		\combatweapononechoice{
 			\pw{}=5,
 			\gw{}=15,
 		},
 		\maytakegreaterfireblessing{}\refsymbol{}=35,
-		\newrule{\refsymbol{}\onlyifpathoffireoralchemyischosen}=,
+		\refsymbol{}\onlyifpathoffireoralchemyischosen{}=,
 	},
 	unitrules={
 		\unitrule{\greaterfireblessing}{\greaterfireblessingrule}
@@ -82,7 +82,7 @@
 			\ogrecrossbow{}=8,
 		},
 		\combatweapononechoice{
-			\ironfist{}=\newrule{15},
+			\ironfist{}=15,
 			\gw{}=15,
 		},
 	},
@@ -99,7 +99,7 @@
 	commontype=\ogrecommonrules ,
 	commonspecialrules={\sonsoftheavalanche},
 	magiclevel=1,
-	magicpaths={\wilderness, \newrule{\fire}, \butchery},
+	magicpaths={\wilderness, \fire, \butchery},
 	options={
 		\bignamechoice{}=\unlimited,
 		\magiclevel{2}=25,
@@ -109,7 +109,7 @@
 			\gw{}=6,
 		},
 		\maytakefireblessing{}\refsymbol{}=25,
-		\newrule{\refsymbol{}\onlyifpathoffireischosen}=,
+		\refsymbol{}\onlyifpathoffireischosen{}=,
 	},
 	unitrules={
 		\unitrule{\fireblessing}{\fireblessingrule}
@@ -119,7 +119,7 @@
 \showunit{
 	name={\mammothhunter},
 	cost=120,
-	profile={ < 7 \newrule{5} 5 5 5 4 4 4 9},
+	profile={ < 7 5 5 5 5 4 4 4 9},
 	type=\monstrousinfantry ,
 	basesize=40x40,
 	unitsize=1,
@@ -135,7 +135,7 @@
 		\mayreplacehuntingspearwithogrecrossbow{}=\free,
 		\weapononechoice{
 			\pw{}=5,
-			\ironfist{}=\newrule{15},
+			\ironfist{}=15,
 			\lance{}=15,
 			\gw{}=15,
 		},
@@ -155,33 +155,33 @@
 
 \showunit{
 	name={\tribesmen},
-	cost=\newrule{75},
+	cost=75,
 	profile={ < 6 3 3 4 4 3 2 3 7},
 	type=\monstrousinfantry ,
 	basesize=40x40,
 	unitsize=3,
-	maxmodels=\newrule{14},
-	costpermodel=\newrule{27},
+	maxmodels=14,
+	costpermodel=27,
 	commontype=\ogrecommonrules ,
 	commonspecialrules={\sonsoftheavalanche},
 	weapons={\pw},
 	armour={\la},
 	options={
-		\maytakeha{}=\permodel{}<\newrule{3},
-		\maytakeironfist{}=\permodel{}<\newrule{6},
+		\maytakeha{}=\permodel{}<3,
+		\maytakeironfist{}=\permodel{}<6,
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir, banneroption=\maytakescraplingloukout{}<5}
 }
 
 \showunit{
 	name={\bruisers},
-	cost=\newrule{100},
+	cost=100,
 	profile={ < 6 3 3 4 4 3 2 3 8},
 	type=\monstrousinfantry ,
 	basesize=40x40,
 	unitsize=3,
-	maxmodels=\newrule{12},
-	costpermodel=\newrule{44},
+	maxmodels=12,
+	costpermodel=44,
 	commontype=\ogrecommonrules ,
 	commonspecialrules={\sonsoftheavalanche},
 	weapons={\gw},
@@ -204,8 +204,8 @@
 		\maytakela{}=\permodel{}<1,
 		\mayreplacethrowingweaponswith{
 			\shortbow{}=\free,
-			\newrule{\shield}=\permodel{}<1,
-			\newrule{\spear}=\permodel{}<1,
+			\shield{}=\permodel{}<1,
+			\spear{}=\permodel{}<1,
 		}
 	},
 	commandgroup={champion=10, championoption=\oneunitmayupgradetoforeman{}<20, musician=10, banner=10},
@@ -236,13 +236,13 @@
 
 \showunit{
 	name={\bombardiers},
-	cost=\newrule{120},
+	cost=120,
 	profile={ < 6 3 3 4 4 3 2 3 7},
 	type=\monstrousinfantry ,
 	basesize=40x40,
 	unitsize=3,
-	maxmodels=\newrule{10},
-	costpermodel=\newrule{40},
+	maxmodels=10,
+	costpermodel=40,
 	commontype=\ogrecommonrules ,
 	commonspecialrules={\sonsoftheavalanche},
 	armour={\la},
@@ -255,13 +255,13 @@
 
 \showunit{
 	name={\mercenaryveterans},
-	cost=\newrule{135},
+	cost=135,
 	profile={ < 6 4 4 5 4 3 3 4 8},
 	type=\monstrousinfantry ,
 	basesize=40x40,
 	unitsize=3,
 	maxmodels=8,
-	costpermodel=\newrule{55},
+	costpermodel=55,
 	commontype=\ogrecommonrules ,
 	commonspecialrules={\sonsoftheavalanche},
 	specialrules={\battlescarred},
@@ -270,9 +270,9 @@
 		\weaponschoice{
 			\pw{}=\permodel{}<3,
 			\ogrepistol{}=\permodel{}<5,
-			\ironfist{}=\permodel{}<\newrule{7},
-			\braceofogrepistols{}=\permodel{}<\newrule{7},
-			\gw{}=\permodel{}<\newrule{7},
+			\ironfist{}=\permodel{}<7,
+			\braceofogrepistols{}=\permodel{}<7,
+			\gw{}=\permodel{}<7,
 		}
 	},
 	unitrules={
@@ -291,37 +291,36 @@
 	type=\monstrouscavalry ,
 	basesize=40x40,
 	unitsize=2,
-	maxmodels=\newrule{4},
-	costpermodel=\newrule{65},
+	maxmodels=4,
+	costpermodel=65,
 	armour={\la, \mountsprotection{5}},
 	specialrules={\fear, \impacthits{1D3}},
 	options={
 		\maytakeha{}=\permodel{}<10,
 		\weapononechoice{
 			\gw{}=\permodel{}<10,
-			\ironfist{} \onlywithlightarmour{}=\permodel{}<\newrule{15},
+			\ironfist{} \onlywithlightarmour{}=\permodel{}<15,
 		},
 	},
-	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50, banneroption=\removedrule{\maytakescraplingloukout}<5}
+	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50}
 }
 
 \showunit{
 	name={\sabretoothtigers},
-	cost={\newrule{40}},
+	cost={40},
 	profile={< 8 4 - 4 4 2 4 3 5},
 	type= \warbeast ,
 	basesize=25x50,
 	unitsize=1,
-	maxmodels=\newrule{15},
-	costpermodel=\newrule{20},
+	maxmodels=15,
+	costpermodel=20,
 	specialrules={\insignificant},
-	additional={\vspace*{-0.05cm}\removedrule{\wildbeasts}},
 }
 
 \showunit{
 	name={\kineater},
 	cost=90,
-	profile={< 6 3 - 5 5 4 3 4 \newrule{7}},
+	profile={< 6 3 - 5 5 4 3 4 7},
 	type= \monstrousinfantry ,
 	basesize=40x40,
 	unitsize=1,
@@ -330,32 +329,31 @@
 
 \showunit{
 	name={\yetis},
-	cost=\newrule{80},
-	profile={ < 7 3 - 5 4 3 \newrule{3} 3 8},
+	cost=80,
+	profile={ < 7 3 - 5 4 3 3 3 8},
 	type=\monstrousinfantry ,
 	basesize=40x40,
-	unitsize=\newrule{2},
-	maxmodels=\newrule{5},
+	unitsize=2,
+	maxmodels=5,
 	costpermodel=40,
-	armour={\newrule{\innatedefence{5}}},
+	armour={\innatedefence{5}},
 	weapons={\pw},
 	specialrules={\swiftstride, \fear, \skirmishers, \vanguard, \touchoffrost},
 	commandgroup={champion=10},
 	unitrules={
 		\unitrule{\touchoffrost}{\touchoffrostrule}
 	},
-	additional={\vspace*{-0.6cm}\removedrule{\strider{}}, \removedrule{\magicalattacks}},% astuce, a supprimer apres la 0.99
 }
 
 \showunit{
 	name={\scraplingtrappers},
-	cost=\newrule{40},
-	profile={ < \newrule{4} 2 \newrule{4} 3 3 1 3 1 6},
+	cost=40,
+	profile={ < 4 2 4 3 3 1 3 1 6},
 	type=\infantry ,
 	basesize=20x20,
-	unitsize=\newrule{5},
-	maxmodels=\newrule{10},
-	costpermodel=\newrule{6},
+	unitsize=5,
+	maxmodels=10,
+	costpermodel=6,
 	weapons={\pw},
 	specialrules={\skirmishers, \scouts, \insignificant, \itsatrap},
 	commandgroup={champion=10},
@@ -389,7 +387,7 @@
 	name={\scratapult},
 	cost=130,
 	profile={
-		\chariot < -  - - 5 4 \newrule{5} - - -,
+		\chariot < -  - - 5 4 5 - - -,
 		\scraplingcrew{} (7) < -  2 3 3 - - 3 1 6,
 		\woollyrhino{} (1) < 6 3 - 5 - - 2 3 5
 	},
@@ -397,7 +395,7 @@
 	basesize=50x100,
 	unitsize=1,
 	armour={\innatedefence{5}, \mountsprotection{6}},
-	specialrules={\newrule{\insignificant}},
+	specialrules={\insignificant},
 	unitequipment={
 		\equipmentdef{\scratapult}{\scratapultrule}
 	},
@@ -440,8 +438,8 @@
 	specialrules={\impacthits{3D3}, \freezingaura},
 	options={
 		\anyriderchoice{
-			\newrule{\huntingspear}=\free,
-			\newrule{\lance}=\free,
+			\huntingspear{}=\free,
+			\lance{}=\free,
 		}
 	},
 	unitrules={\unitrule{\freezingaura}{\freezingaurarule}},
@@ -455,7 +453,7 @@
 	basesize=50x75,
 	unitsize=1,
 	armour={\ha},
-	specialrules={\immunetopsychology, \stubborn, \newrule{\insignificant}},
+	specialrules={\immunetopsychology, \stubborn, \insignificant},
 	additional={%
 		\def\tempunitrules{%
 			\unitrule{\dowhatyouretold}{\dowhatyouretoldrule}
@@ -484,7 +482,7 @@
 	},
 	type=\monstrousbeast ,
 	basesize=50x100,
-	specialrules={\fear, \newrule{\impacthits{1D3}}},
+	specialrules={\fear, \impacthits{1D3}},
 	armour={\mountsprotection{5}},
 }
 

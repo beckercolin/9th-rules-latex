@@ -1,7 +1,7 @@
 \input{../Layout/AB_layout.tex}
 
 \newcommand{\booktitle}{Khans Ogres}
-\newcommand{\version}{0.99.0}
+\newcommand{\version}{0.99.1}
 \newcommand{\frenchversion}{2.0}
 \newcommand{\translationteam}{\item \og AEnoriel \fg \item \og Anglachel \fg \item \og Astadriel \fg \item \og Batcat \fg \item \og Eru \fg  \item \og Gandarin \fg \item \og Groumbahk \fg \item \og Iluvatar \fg \item \og Lamronchak \fg \item \og Mammstein \fg}
 
@@ -12,7 +12,7 @@
 
 % Army common type special rules
 
-\newcommand{\ogrecommonrules}{Règles spéciales des Ogres\xspace}
+\newcommand{\ogrecommonrules}{Règles spéciales des Ogres}
 
 % Armoury
 
@@ -46,7 +46,6 @@
 \newcommand{\freezingaura}{Aura Glaciale}
 \newcommand{\dowhatyouretold}{Fait ce qu'on te dit}
 \newcommand{\giantattacks}{Attaques de Géant}
-\newcommand{\wildbeasts}{Bêtes Sauvages} % a enlever apres la 0.99
 \newcommand{\bellow}{Hurle}
 \newcommand{\jump}{Saute}
 \newcommand{\grab}{Ramasse}
@@ -127,7 +126,7 @@
 \newcommand{\oneunitmayupgradetoforeman}{Une unité peut l'améliorer en \scraplingforeman{}}
 \newcommand{\onlywithlightarmour}{(seulement avec une armure légère)}
 \newcommand{\riderchoice}{\optionschoice{Le \rider{} peut remplacer son \ogrecrossbow{} par :}}
-\newcommand{\anyriderchoice}{\optionschoice{\newrule{Chaque \rider{} peut remplacer son arme par :}}}
+\newcommand{\anyriderchoice}{\optionschoice{Chaque \rider{} peut remplacer son arme par :}}
 
 % Profile rules
 
@@ -156,7 +155,7 @@ Les \scraplingforemen{} ont la règle \holdyourground{} bien qu'ils ne soient pa
 }
 
 \newcommand{\handcannonrule}{%
-\range{24}, Force 4, \armourpiercing{1}, \multipleshots{1D6}, \removedrule{\cumbersome}. Le Canon à la hanche ne subit pas de pénalité pour toucher due à un Mouvement ou aux \multipleshots{}. \removedrule{Le \handcannon{} compte comme une \halberd qui frappe à Initiative 0 au Corps à Corps.}
+\range{24}, Force 4, \armourpiercing{1}, \multipleshots{1D6}. Le Canon à la hanche ne subit pas de pénalité pour toucher due à un Mouvement ou aux \multipleshots{}.
 }
 
 \newcommand{\battlescarredrule}{%
@@ -164,7 +163,7 @@ Chaque unité de \mercenaryveterans{} peut choisir jusqu'à deux règles spécia
 }
 
 \newcommand{\touchoffrostrule}{%
-Toute unité ennemie en contact socle à socle avec une figurine possédant cette règle subit -1 en Initiative, jusqu'à un minimum de 1.
+Les unités ennemies subissent un malus de -1 en Initiative, jusqu'à un minimum de 1, pour chaque unité de \yetis{} en contact socle à socle avec elles.
 }
 
 \newcommand{\itsatraprule}{%
@@ -174,13 +173,13 @@ Tout Champ, Forêt ou Ruine devient un Terrain Dangereux pour le reste de la par
 \newcommand{\thundercannonrule}{%
 Cette arme peut être employée de deux manières :
 	\begin{customsubitemize}
-		\item Comme une Arme d'Artillerie du type Canon (\distance{2D6}) avec le profil suivant : \range{48}, Force 10, \multiplewounds{\ordnance}{}, \armourpiercing{2}.
-		\item Comme une Arme d'Artillerie du type Batterie de Tir avec le profil suivant : \range{12}, Force 5, \armourpiercing{2}, \multipleshots{2D6}.
+		\item Comme une \textbf{\artilleryweapon} de type \textbf{\cannon} (\distance{2D6}) avec le profil suivant : \range{48}, Force 10, \multiplewounds{\ordnance}{}, \armourpiercing{2}.
+		\item Comme une \textbf{\artilleryweapon} de type \textbf{\volleygun} avec le profil suivant : \range{12}, Force 5, \armourpiercing{2}, \multipleshots{2D6}.
 	\end{customsubitemize}
 }
 
 \newcommand{\scratapultrule}{%
-Arme d'Artillerie du type Catapulte (\distance{5}) avec \range{48}, Force 3, \lethalstrike{}.
+\textbf{\artilleryweapon} de type \textbf{\catapult} (\distance{5}) avec \range{48}, Force 3, \lethalstrike{}.
 }
 
 \newcommand{\stoneskinrule}{%
@@ -196,10 +195,10 @@ Tous les \slavegiants{} peuvent relancer leur premier jet d'Attaques de Géant, 
 }
 
 \newcommand{\giantattacksrule}{%
-Quand un Géant attaque au Corps à Corps, choisissez une unité en contact socle à socle pour subir son attaque et lancez 1D6. Déterminez ci-dessous la table à utiliser selon le Type de Troupe de l'unité visée, et trouvez l'attaque correspondant au résultat du dé. Il est important de noter que les Attaques de Géant comptent comme des attaques de Corps à Corps et suivent ainsi normalement les règles affectant ces attaques. Le Géant peut également faire son \stomp{}.
+Quand un Géant attaque au Corps à Corps, au lieu d'attaquer normalement, choisissez une unité en contact socle à socle à attaquer et lancez 1D6. Déterminez ci-dessous la table à utiliser selon le Type de Troupe de l'unité visée, et trouvez l'attaque correspondant au résultat du dé. Il est important de noter que les Attaques de Géant comptent comme des attaques de Corps à Corps et suivent ainsi normalement les règles affectant ces attaques. Le Géant peut également faire son \stomp{}.
 }
 
-\newcommand{\giantattackstable}{% to check
+\newcommand{\giantattackstable}{%
 \setlength\multicolsep{12.0pt plus 4.0pt minus 3pt}
 \vspace*{-0.5cm}\begin{multicols}{2}
 	\noindent Si l'unité est de type \infantry{}, \warbeast{}, \cavalry{}, \swarm{} ou \warmachine{}  :	
@@ -258,7 +257,7 @@ Choisissez une figurine dans l'unité sélectionnée et en contact socle à socl
 
 \armyspecialruleentry{\sonsoftheavalanche}
 
-Les figurines \newrule{à pied} bénéficient de la règle spéciale \impacthits{1} si ce sont des figurines ordinaires et \impacthits{1D3} si ce sont des Personnages.
+Les figurines à pied bénéficient de la règle spéciale \impacthits{1} si ce sont des figurines ordinaires et \impacthits{1D3} si ce sont des Personnages.
 
 
 \armyspecialruleentry{\scraplinglookout}
@@ -272,15 +271,15 @@ Les unités avec cette règle spéciale et disposant d'un Porte-étendard doiven
 
 \startitemlistonecol
 
-\listitemonecol{\ironfist} Arme de Corps à Corps. \requirestwohands{}. Cette arme ajoute +1 à la Sauvegarde d'Armure de la figurine, compte comme une \pw{} \newrule{et donne la règle \parry{}, même aux figurines montées}.
+\listitemonecol{\ironfist} Arme de Corps à Corps. \requirestwohands{}. Cette arme ajoute +1 à la Sauvegarde d'Armure de la figurine, compte comme une \pw{} et donne la règle \parry{}, même aux figurines montées et même si cette arme est magique.
 
 \listitemonecol{\ogrepistol} Arme de Tir. \range{24}, Force 4, \quicktofire{}, \armourpiercing{1}, compte comme une \pw{} au Corps à Corps.
 
 \listitemonecol{\braceofogrepistols} Arme de Tir. \range{24}, Force 4, \quicktofire{}, \armourpiercing{1}, \multipleshots{2}, compte comme une \pw{} au Corps à Corps.
 
-\listitemonecol{\ogrecrossbow} Arme de Tir. \range{30}, Force 5, \newrule{\armourpiercing{1}}, pénètre les rangs comme une Baliste.
+\listitemonecol{\ogrecrossbow} Arme de Tir. \range{30}, Force 5, \armourpiercing{1}, pénètre les rangs comme une Baliste.
 
-\listitemonecol{\huntingspear} Arme de Tir. \range{12}, Force de l'utilisateur +1, \quicktofire{}, \removedrule{\lethalstrike}, \newrule{\multiplewounds{1D3}{\monsters{}, \riddenmonsters{}}}.
+\listitemonecol{\huntingspear} Arme de Tir. \range{12}, Force de l'utilisateur +1, \quicktofire{}, \multiplewounds{1D3}{\monsters{}, \riddenmonsters{}}.
 
 \enditemlistonecol
 
@@ -291,16 +290,16 @@ Les unités avec cette règle spéciale et disposant d'un Porte-étendard doiven
 
 \spaceaftersection{}
 
-Chaque Personnage Ogre peut prendre un unique Grand Nom. \newrule{Un même Grand Nom ne peut être dupliqué au sein d'une même armée}.
+Chaque Personnage Ogre peut prendre un unique Grand Nom. Un même Grand Nom ne peut pas être dupliqué au sein d'une même armée.
 
 \begin{multicols}{2}
 \startpricelistNSP
 
 \pricelistitem{Cœur Sauvage}{50}Seuls les \mammothhunters{} peuvent choisir ce Grand Nom.\newline Il perd alors la règle \notaleader{} et peut être promu Général de l'armée. Un autre \mammothhunter{} dans l'armée peut être promu Porteur de la Grande Bannière pour 25 pts. Une unité de \yetis{} et une seule unité de \sabretoothtigers{} peuvent être prises comme Unités de Base. Votre armée ne doit pas inclure de \greatkhans{}, de \khans{}, de \shamans{} avec la \fireblessing{}, de \greatshamans{} avec la \greaterfireblessing{}, de \bruisers{}, de \mercenaryveterans{}, de \bombardiers{} ou de \thundercannons{}.
 
-\pricelistitem{Poing de l'Enfer}{50}Seul un \greatkhan{} peut prendre ce Grand Nom.\newline Il prend possession d'une Arme Magique de type \ironfist{}. Toute figurine dans l'armée peut prendre une Marque des Dieux Sombres du Livre d'Armée des \textit{Guerriers des Dieux Sombres}, pour \newrule{le coût suivant} :
+\pricelistitem{Poing de l'Enfer}{50}Seul un \greatkhan{} peut prendre ce Grand Nom.\newline Il prend possession d'une Arme Magique de type \ironfist{}. Toute figurine dans l'armée peut prendre une Marque des Dieux Sombres du Livre d'Armée des Guerriers des Dieux Sombres, pour le coût suivant :
 \vspace*{-0.3cm}{\normalfontsize
-\begin{center}\rowcolors{1}{white}{black!10}\begin{tabular}{@{}lllll@{}}
+\begin{center}\rowcolors{1}{white}{black!10}\hspace*{-0.1cm}\begin{tabular}{@{}lllll@{}}
 & Changement & Luxure & Pestilence & Courroux \tabularnewline
 Seigneur & 40 & 15 & 30 & 40 \tabularnewline
 Héros & 25 & 15 & 25 & 25 \tabularnewline
@@ -311,19 +310,19 @@ Cav. Monstr. & 4 & 6 & 8 & 6 \tabularnewline
 \riddenmonster{} & 3 & 15 & 5 & 10 \tabularnewline
 \end{tabular}\end{center}
 }
-Toute figurine peut aussi choisir la Marque du Chaos Intégral pour \newrule{3 pts} par figurine.\newline
+Toute figurine peut aussi choisir la Marque du Chaos Intégral pour 3 pts par figurine.\newline
 Les \shamans{} et les \greatshamans{} avec une Marque différente du Chaos Intégral peuvent choisir une Discipline accessible normalement à cette Marque, en plus des Disciplines qui leur sont habituellement proposées. Les \shamans{} et les \greatshamans{} ne peuvent pas prendre la Marque du Courroux.\newline
 L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scraplingtrappers{}, de \yetis{}, de \sabretoothtigers{} ou de \scratapults{}.
 
 \pricelistitem{Mâchoire Pourrie}{30}Le Personnage gagne des \poisonedattacks{}. Pour la durée d'une phase de Corps à Corps, toutes les figurines de son unité peuvent aussi gagner des \poisonedattacks{}. Le joueur doit déclarer au début de la phase de Corps à Corps choisi qu'il utilise cette capacité.
 
-\pricelistitem{Chasseur de Têtes}{25}Le Personnage se gave de la chair de ses ennemis tombés, même au plus fort de la bataille. A la fin de toute phase de Corps à Corps durant laquelle le \newrule{porteur} a tué une ou plusieurs figurines, et dans la mesure où il n'est pas en fuite, lancez 1D6. Sur un résultat de \newrule{3+}, il \newrule{Récupère} un Point de Vie qu'il a perdu plus tôt dans la bataille.
+\pricelistitem{Chasseur de Têtes}{25}Le Personnage se gave de la chair de ses ennemis tombés, même au plus fort de la bataille. A la fin de toute phase de Corps à Corps durant laquelle le porteur a tué une ou plusieurs figurines, et dans la mesure où il n'est pas en fuite, lancez 1D6. Sur un résultat de 3+, il Récupère un Point de Vie qu'il a perdu plus tôt dans la bataille.
 
 \pricelistitem{Mangeur de Troll}{25}Le Personnage, connu pour son régime peu savoureux, gagne \regeneration{5} et \stupidity{}. De plus, il obtient \multiplewounds{2}{\monstrousinfantry{}}.
 
 \pricelistitem{Maître des Trésors de Guerre}{20}Ce Grand Nom ne peut pas être pris par un \wizard{} ou un \mammothhunter{}.\newline Le Personnage avec ce Grand Nom gagne la règle spéciale \weaponmaster{} et une \platearmour{}, et peut acquérir autant d'armes standard de corps à corps et de tir auxquelles il peut accéder plutôt qu'une seule de chaque catégorie.
 
-\pricelistitem{Pourfendeur de Moelle Épinière}{20}\removedrule{Ce Grand Nom ne peut pas être pris par un \wizard{}}.\newline Seules les figurines à pied peuvent prendre ce Grand Nom. Le Personnage bénéficie des règles spéciales \devastatingcharge{} et \thunderouscharge{}. Cette dernière affecte aussi exceptionnellement les \impacthits{} et le \stomp{}.
+\pricelistitem{Pourfendeur de Moelle Épinière}{20}Seules les figurines à pied peuvent prendre ce Grand Nom.\newline Le Personnage bénéficie des règles spéciales \devastatingcharge{} et \thunderouscharge{}. Cette dernière affecte aussi exceptionnellement les \impacthits{} et le \stomp{}.
 
 \endpricelistNSP
 \end{multicols}
@@ -336,11 +335,11 @@ L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scrapli
 
 \startpricelist
 
-\pricelistitem{Masse de Khagadai}{50}Type : \gw{}. Les attaques portées avec cette arme ont \multiplewounds{1D3}{}. \removedrule{Le porteur peut choisir de faire une \crushattack{} à la place de ses attaques normales à chaque phase de Corps à Corps}.
+\pricelistitem{Masse de Khagadai}{50}Type : \gw{}. Les attaques portées avec cette arme ont \multiplewounds{1D3}{}.
 
-\pricelistitem{Transperce-Cœur}{30}Type : \ironfist{}. Les attaques réalisées avec cette arme toucheront toujours sur 3+ ou mieux au Corps à Corps, quels que soient les malus. De plus, le porteur bénéficie des règles spéciales \lethalstrike{} et \armourpiercing{1}.
+\pricelistitem{Transperce-Cœur}{30}Type : \ironfist{}. Les attaques réalisées avec cette arme toucheront toujours sur 3+ ou mieux au Corps à Corps, quels que soient les malus pour toucher, et malgré la règle \parry{}. De plus, le porteur bénéficie des règles spéciales \lethalstrike{} et \armourpiercing{1}.
 
-\pricelistitem{Gantelet Brise-Hache}{\newrule{20}}Type : \ironfist{}. Si le porteur réussit au moins une touche avec cette arme à une figurine ennemie possédant une Arme Magique, jetez 1D6. Sur un résultat de 4+, toutes les Armes Magiques de la figurine ennemie sont détruites.
+\pricelistitem{Gantelet Brise-Hache}{20}Type : \ironfist{}. Si le porteur réussit au moins une touche avec cette arme à une figurine ennemie possédant une Arme Magique, jetez 1D6 avant les jets pour blesser. Sur un résultat de 4+, toutes les Armes Magiques de la figurine ennemie sont détruites.
 
 \endpricelist
 
@@ -348,9 +347,9 @@ L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scrapli
 
 \startpricelist
 
-\pricelistitem{Armure en Peau de Mammouth}{\newrule{35}}Type : \ha{}. Ne peut être prise que par des figurines à pied.\newline Si le porteur est touché par une attaque dont la Force est de 6 ou plus, la Force de cette attaque est réduite à 5.
+\pricelistitem{Armure en Peau de Mammouth}{35}Type : \ha{}. Ne peut être prise que par des figurines à pied.\newline Si le porteur est touché par une attaque dont la Force est de 6 ou plus, la Force de cette attaque est réduite à 5.
 
-\pricelistitem{Fourrure de Yéti}{\newrule{10}}Type : Aucun (Sauvegarde d'Armure 6+). \newrule{Les unités ennemies en contact socle à socle avec le porteur subissent -1 en Initiative jusqu'à un minimum de 1}.
+\pricelistitem{Fourrure de Yéti}{10}Type : Aucun (Sauvegarde d'Armure 6+). Les unités ennemies en contact socle à socle avec le porteur subissent -1 en Initiative jusqu'à un minimum de 1.
 
 \endpricelist
 
@@ -374,7 +373,7 @@ L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scrapli
 
 \startpricelist
 
-\pricelistitem{Cœur Démoniaque}{50}Une seule utilisation. Doit être activé au début d'une phase de Magie de l'adversaire. Au cours de cette phase, tous les \wizards{} ennemis dans un rayon de \distance{24} subiront un Fiasco lorsqu'ils obtiendront n'importe quel double lors du lancement d'un sort. Seul un double \result{6} compte comme un Pouvoir Irrésistible, et il n'est pas possible de subir plusieurs Fiascos pour un seul lancement. De plus, tous les Fiascos seront considérés comme ayant été obtenus en utilisant un Dé de Pouvoir supplémentaire par rapport au nombre de dés réellement utilisés pour établir leurs conséquences. \newrule{Les Objets de Sort ne sont pas affectés}.
+\pricelistitem{Cœur Démoniaque}{50}Une seule utilisation. Doit être activé au début d'une phase de Magie de l'adversaire. Au cours de cette phase, tous les \wizards{} ennemis dans un rayon de \distance{24} subiront un Fiasco lorsqu'ils obtiendront n'importe quel double lors du lancement d'un sort. Seul un double \result{6} compte comme un Pouvoir Irrésistible, et il n'est pas possible de subir plusieurs Fiascos pour un seul lancement. De plus, tous les Fiascos seront considérés comme ayant été obtenus en utilisant un Dé de Pouvoir supplémentaire par rapport au nombre de dés réellement utilisés pour établir leurs conséquences. Les Objets de Sort ne sont pas affectés.
 
 \endpricelist
 
@@ -382,7 +381,7 @@ L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scrapli
 
 \startpricelist
 
-\pricelistitem{Étendard en Peau de Dragon}{40}Les figurines de l'unité peuvent relancer les jets pour toucher, pour blesser et de \armoursave{} ayant donné \result{1} au cours \newrule{de la première manche de Corps à Corps, même pour leurs Attaques Spéciales}. \removedrule{Le porteur de la bannière bénéficie de la règle spéciale \breathweapon{Force 3, \flamingattacks{}}}.
+\pricelistitem{Étendard en Peau de Dragon}{40}Les figurines de l'unité peuvent relancer les jets pour toucher, pour blesser et de \armoursave{} ayant donné \result{1} au cours de la première manche de Corps à Corps, même pour leurs attaques spéciales.
 
 \pricelistitem{Crâne de Qenghet}{20}Les figurines de l'unité causent la \fear{} et réussissent automatiquement les tests de \terror{}.
 
@@ -430,6 +429,15 @@ L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scrapli
 
 \startchangelog
 
+\newlog{0.99.1}{%
+Green text reverted to black,
+Iron Fist clarification,
+Heart-Ripper clarification,
+Axe-Breaker Gauntlet clarification,
+Giant attacks clarification,
+Yetis frost touch clarification,
+}
+
 \newlog{0.99.0}{%
 Iron fist,
 Ogre crossbow,
@@ -437,7 +445,7 @@ Headhunter,
 Hellfist prices due to updated marks,
 Spinesplitter,
 Khagadai’s Maul,
-Axe‐Breaker Gauntlet,
+Axe-Breaker Gauntlet,
 Dragonskin Banner,
 Iron fist price,
 Great shaman,
@@ -447,7 +455,7 @@ Bruisers,
 Bombardiers,
 Mercenary Veterans,
 Sabretooth Tigers,
-Kin‐Eater,
+Kin-Eater,
 Scrapling Trappers,
 Scratapult,
 Slave Giant,
@@ -457,18 +465,6 @@ Yetis,
 Scratapult
 }
 
-\newlog{0.11.0}{%
-Khagadai’s Maul and Axe‐Breaker Gauntlet clarifications,
-Daemon Heart 5 point drop,
-Spell casters points change,
-Thunder cannon point / range / T changes,
-Scratapult point / range / T+W changes,
-Changes on costs to various characters’ weapons,
-Tribesmen configuration,
-Great Khan 20pts reduction,
-AP1 to Heart‐Ripper,
-Scraplings configuration
-}
 
 \endchangelog
 
