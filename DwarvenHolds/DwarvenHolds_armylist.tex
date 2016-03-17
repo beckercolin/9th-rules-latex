@@ -1,0 +1,541 @@
+
+%%% v0.99.1
+
+\armylist
+
+\lordstitle
+
+\showunit{
+	name={\king},
+	cost={125},
+	profile={< 3 7 4 4 5 3 4 4 10},
+	type=\infantry{},
+	unitsize={1},
+	basesize=20x20,
+	commontype=\dwarwenholdscommonrules{},
+	commonspecialrules={\relentless{},\shieldwall{},\sturdy{}},
+	armour={\platearmour},
+	options={
+		Peut prendre des Objets Runiques=\upto < 125,%M% Il faut éliminer tous les espaces pour éviter des problèmes d'affichage. Par exemple ici, écrit =\upto{}<125,
+		Peut prendre une \holdstone=30,%M% Il ne doit y avoir aucun terme en français ici. Il faut faire des macros dans le document principal. Ça permet d'avoir une présentation plus uniforme, de faire des changements facilement, et de traduire plus facilement.
+		\maytakeashield=10,%M% met des {} après la macro, comme ça le =10 n'apparait pas en rouge c'est plus lisible
+		\shootingweapononechoice{%M% Pareil pour la lisibilité, des {}, et une indentation des options c'est plus lisible (une tabulation quand on rentre dans un nouveau groupe)
+		\pistol=4,
+		\crossbow=8,
+		\handgun=8},%M% met à la ligne la fermeture du groupe }, pour bien qu'on la voit.
+		\maytakeagw=10,
+			},%M% l'indentation est bizarre, j'ai cru qu'il manquait un } mais non. Etre ultra rigoureux sur l'indentation permet de voir les erreurs très vite. La par exemple il y a deux tabulation de trop.
+	mounts={\shieldsbearers=50, \warthrone=150}
+	}
+
+\showunit{
+	name={\runicmaster},
+	cost={125},
+	profile={ < 3 6 4 4 5 3 3 2 9},
+	type= \infantry ,
+	basesize=20x20,
+	unitsize=1,
+	commontype=\dwarwenholdscommonrules,
+	commonspecialrules={\relentless, \shieldwall, \sturdy},%M% Ça doit marcher comme ça, mais pour être sur, met des {} après les macros et vire les espaces, voir au dessus.
+	specialrules={\channel, \magicresistance{2}, \runecraftmastery},
+	armour={\platearmour},
+		options={
+		Peut prendre des Objets Runiques=\upto < 125,			
+		\maytakeashield=3,
+		\maytakeagw=8,
+		\masterrunechoice=5,
+		},
+	unitrules={
+		\unitrule{\runecraftmastery}{\runecraftmasteryrule}
+		},
+	}
+	
+\showunit{
+	name={\masterengineer},
+	cost={120},
+	profile={ < 3 6 4 4 5 3 3 2 9},
+	type=\infantry,
+	unitsize={1},
+	basesize=20x20,
+	commontype=\dwarwenholdscommonrules,
+	commonspecialrules={\relentless, \mastermarksman, \shieldwall, \entrench, \sturdy},
+	specialrules={\engineer},
+	equipment={\platearmour},
+	options={
+		Peut prendre des Objets Runiques=\upto < 100,
+		\maytakeashield=3,
+		\shootingweapononechoice{
+		\pistol=4,
+		\braceofpistol=5, 
+		\crossbow=8,
+		\handgun=8,
+		\forgerepeater=20,
+		\wyrmslayerrocket=20},
+		\maytakeagw=8,
+		},
+		unitrules={
+		\unitrule{\mastermarksman}{\mastermarksmanrule}
+		},
+	}	
+	
+	\showunit{ %M% Faut garder l'ordre des unités des LAs VO, cette base va servir à toutes les trads. Si c'est génant, on fait changer la VO en justifiant.
+	name={\daemonseeker},
+	cost={130},
+	profile={ < 3 7 4 5 5 3 5 5 10},
+	type=\infantry,
+	unitsize={1},
+	basesize=20x20,
+	commontype=\dwarwenholdscommonrules,
+	commonspecialrules={ \relentless, \thebiggertheyare, \sturdy, \comewithme},
+	specialrules={\vanguard, \lethalstrike, \hatred(Livre d'Armée : Légion Démoniaque), \unbreakable, \weaponmaster,  \notaleader,\swiftstride, \wardsave{6}},%M% il va manquer un espace après Haine. Il faut une macro dans le document principal pour Livre d'Armée ...
+	equipment={ \gw, \pairedweapons},
+	options={
+		Peut prendre des Runes d'armes=\upto < 125,
+		\optionschoice{Peut choisir une règle spéciale parmi les suivantes}{ %M% Il y a une macro pour ça, \maytakeuptotwoofthefollowing{....}. D'ailleurs dans la VO c'est deux règles spéciales, pas une !
+		\magicresistance{1}=15,
+		\fear=20,
+		\monsterseeker=30,
+		\grimresolve=40,}
+		},
+	unitrules={
+	\unitrule{\monsterseeker}{\monsterseekerrule}
+	\unitrule{\grimresolve}{\grimresolverule}
+	}
+	}	
+	
+
+\heroestitle
+
+\showunit{
+	name={\thane},
+	cost={70},
+	profile={ < 3 6 4 4 5 2 3 3 9},
+	type=\infantry,
+	unitsize={1},
+	basesize=20x20,
+	commontype=\dwarwenholdscommonrules,
+	commonspecialrules={ \relentless, \shieldwall, \sturdy},
+	equipment={\platearmour},
+	options={
+		Peut prendre des Objets Runiques=\upto < 75,
+		\optionschoice{Peut devenir (un seul choix)}{
+		\clanleader=30,		
+		\bsboption = 25},
+		Peut prendre une \holdstone=25,
+		\maytakeashield=8,
+		\shootingweapononechoice{
+		\pistol=4,
+		\crossbow=8,
+		\handgun=8},
+		\maytakeagw=10,
+		},
+		unitrules={
+		\unitrule{\clanleader}{\clanleaderrule}
+		},
+	}
+
+\showunit{
+	name={\runicsmith},
+	cost={70},
+	profile={ < 3 5 3 4 4 2 3 2 9},
+	type=\infantry,
+	unitsize={1},
+	basesize=20x20,
+	commontype=\dwarwenholdscommonrules,
+	commonspecialrules={ \runecraft,  \relentless, \shieldwall, \sturdy},
+	specialrules={ \channel, \magicresistance{1}},
+		equipment={ \platearmour},
+		options={
+		Peut prendre des Objets Runiques=\upto < 75,			
+		\maytakeashield=2,
+		\maytakeagw=6,
+		\runechoice=5,
+		},
+	unitrules={
+		\unitrule{\runecraft}{\runecraftrule}
+		},
+		}
+
+\showunit{
+	name={\dwarfengineer},
+	cost={65},
+	profile={ < 3 5 4 4 4 2 3 2 9},
+	type=\infantry,
+	unitsize={1},
+	basesize=20x20,
+	commontype=\dwarwenholdscommonrules,
+	commonspecialrules={\relentless, \shieldwall, \entrench, \sturdy},
+	specialrules={\engineer},
+	equipment={\platearmour},
+	options={
+		Peut prendre des Objets Runiques=\upto < 50,
+		\maytakeashield=2,
+		\shootingweapononechoice{
+		\pistol=4,
+		\braceofpistol=5, 
+		\crossbow=8,
+		\handgun=8,
+		\forgerepeater=20,
+		\wyrmslayerrocket=20},
+		\maytakeagw=6,
+		},
+	}
+
+\showunit{
+	name={\dragonseeker},
+	cost={50},
+	profile={ < 3 6 3 4 5 2 4 4 10},
+	type=\infantry,
+	unitsize={1},
+	basesize=20x20,
+	commontype=\dwarwenholdscommonrules,
+	commonspecialrules={ \relentless, \thebiggertheyare, \sturdy, \comewithme},
+	specialrules={\vanguard, \lethalstrike, \unbreakable, \weaponmaster,  \notaleader, \swiftstride, \wardsave{6}},
+	unitrules=
+	\unitrule{\monsterseeker}{\monsterseekerrule},
+	equipment={ \gw, \pairedweapons},
+	options={
+	options={
+		Peut prendre des Runes d'armes=\upto < 125,
+		\optionschoice{Peut choisir une règle spéciale parmi les suivantes}{ 
+		\magicresistance{1}=15,
+		\fear=20,
+		\monsterseeker=20,
+		\grimresolve=25,}
+		},
+		unitrules={
+	\unitrule{\monsterseeker}{\monsterseekerrule}
+	\unitrule{\grimresolve}{\grimresolverule}
+	}
+	}
+
+\coreunitstitle
+
+\showunit{
+	name={\clanwarriors},
+	cost={60},
+	profile={ < 3 4 3 3 4 1 2 1 9},
+	costpermodel=7 ,
+	maxmodels=40,
+	type=\infantry,
+	unitsize={10},
+	basesize=20x20,
+	commontype=\dwarwenholdscommonrules,
+	commonspecialrules={ \relentless, \shieldwall, \sturdy},
+	armour={\ha},
+	options={
+		Une seule unité peut choisir la règle \vanguard \Xmodelsorless{30}=\permodel < 1,
+		\maytakeashield=\permodel < 1,
+		\weapononechoice{
+		\pw =\permodel < 1,
+		\spear=\permodel < 1,
+		\gw=\permodel < 3
+		},
+		},
+		commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
+}
+
+\showunit{
+	name={\greybeards},
+	cost={85},
+	profile={ < 3 5 3 4 4 1 2 1 9},
+	costpermodel=11 ,
+	maxmodels=30,
+	type=\infantry,
+	unitsize={10},
+	basesize=20x20,
+	commontype=\dwarwenholdscommonrules,
+	commonspecialrules={ \seenitall, \immunetopsychology, \relentless, \shieldwall, \sturdy},
+	armour={\ha},
+	options={
+		Si aucune unité de Guerriers Nains n'a choisi la règle \vanguard{,} une seule unité de Barbes-Grises peut choisir cette règle \Xmodelsorless{20}=\permodel <1,
+		\maytakeashield=\permodel < 1,
+		\maytakethrowingweapons=\permodel < 2,
+		\maytakeagw=\permodel < 3
+		},
+		unitrules={
+	\unitrule{\seenitall}{\seenitallrule}
+	}
+		commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
+}
+
+\showunit{
+	name={\clanmarksmen},
+	cost={60},
+	profile={ < 3 4 3 3 4 1 2 1 9},
+	costpermodel=12 ,
+	maxmodels=25,
+	type=\infantry,
+	unitsize={10},
+	basesize=20x20,
+	commontype=\dwarwenholdscommonrules,
+	commonspecialrules={ \relentless,\sturdy},
+	weapons={\crossbow)
+	armour={\ha},
+	options={
+		\optionschoice{Peut remplacer son \crossbow}{
+		\handgun= \free},
+		\maytakeashield=\permodel < 1,
+		\maytakeagw=\permodel < 3
+		},
+		commandgroup={champion=10, musician=10, banner=10}
+}	
+
+\specialunitstitle
+
+\showunit{
+	name={\bombardiers},
+	cost=\newrule{120},
+	profile={ < 6 3 3 4 4 3 2 3 7},
+	type=\monstrousinfantry ,
+	basesize=40x40,
+	unitsize=3,
+	maxmodels=\newrule{10},
+	costpermodel=\newrule{40},
+	commontype=\ogrecommonrules ,
+	commonspecialrules={\sonsoftheavalanche},
+	armour={\la},
+	weapons={\handcannon},
+	unitequipment={
+		\equipmentdef{\handcannon}{\handcannonrule}
+	},
+	commandgroup={champion=10, musician=10, banner=10, bannerallowance=25, banneroption=\maytakescraplingloukout < 5}
+}
+
+\showunit{
+	name={\mercenaryveterans},
+	cost=\newrule{135},
+	profile={ < 6 4 4 5 4 3 3 4 8},
+	type=\monstrousinfantry ,
+	basesize=40x40,
+	unitsize=3,
+	maxmodels=8,
+	costpermodel=\newrule{55},
+	commontype=\ogrecommonrules ,
+	commonspecialrules={\sonsoftheavalanche},
+	specialrules={\battlescarred},
+	armour={\ha},
+	options={
+		\weaponschoice{
+			\pw = \permodel < 3,
+			\ogrepistol = \permodel < 5,
+			\ironfist = \permodel < \newrule{7},
+			\braceofogrepistols = \permodel < \newrule{7},
+			\gw = \permodel < \newrule{7},
+		}
+	},
+	unitrules={
+		\unitrule{\battlescarred}{\battlescarredrule}
+	},
+	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50, banneroption=\maytakescraplingloukout < 5}
+}
+
+\showunit{
+	name={\tuskercavalry},
+	cost=130,
+	profile={
+		\rider < 6 3 3 4 4 3 2 3 8,
+		\tusker < 8 3 - 5 5 3 2 4 5,
+	},
+	type=\monstrouscavalry ,
+	basesize=40x40,
+	unitsize=2,
+	maxmodels=\newrule{4},
+	costpermodel=\newrule{65},
+	armour={\la, \mountsprotection{5}},
+	specialrules={\fear, \impacthits{1D3}},
+	options={
+		\maytakeha = \permodel < 10,
+		\weapononechoice{
+			\gw = \permodel < 10,
+			\ironfist{} \onlywithlightarmour = \permodel < \newrule{15},
+		},
+	},
+	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50, banneroption=\removedrule{\maytakescraplingloukout} < 5}
+}
+
+\showunit{
+	name={\sabretoothtigers},
+	cost={\newrule{40}},
+	profile={< 8 4 - 4 4 2 4 3 5},
+	type= \warbeast ,
+	basesize=25x50,
+	unitsize=1,
+	maxmodels=\newrule{15},
+	costpermodel=\newrule{20},
+	specialrules={\insignificant},
+	additional={\vspace*{-0.05cm}\removedrule{\wildbeasts}},
+}
+
+\showunit{
+	name={\kineater},
+	cost=90,
+	profile={< 6 3 - 5 5 4 3 4 \newrule{7}},
+	type= \monstrousinfantry ,
+	basesize=40x40,
+	unitsize=1,
+	specialrules={\regeneration{5}, \fear, \ambush, \hatred, \unbreakable},
+}
+
+\showunit{
+	name={\yetis},
+	cost=\newrule{80},
+	profile={ < 7 3 - 5 4 3 \newrule{3} 3 8},
+	type=\monstrousinfantry ,
+	basesize=40x40,
+	unitsize=\newrule{2},
+	maxmodels=\newrule{5},
+	costpermodel=40,
+	armour={\newrule{\innatedefence{5}}},
+	weapons={\pw},
+	specialrules={\swiftstride, \fear, \newrule{\skirmishers}, \newrule{\vanguard}, \touchoffrost},
+	commandgroup={champion=10},
+	unitrules={
+		\unitrule{\touchoffrost}{\touchoffrostrule}
+	},
+	additional={\vspace*{-0.6cm}\removedrule{\strider{}}, \removedrule{\magicalattacks}},% astuce, a supprimer apres la 0.99
+}
+
+\showunit{
+	name={\scraplingtrappers},
+	cost=\newrule{40},
+	profile={ < \newrule{4} 2 \newrule{4} 3 3 1 3 1 6},
+	type=\infantry ,
+	basesize=20x20,
+	unitsize=\newrule{5},
+	maxmodels=\newrule{10},
+	costpermodel=\newrule{6},
+	weapons={\pw},
+	specialrules={\skirmishers, \scouts, \insignificant, \itsatrap},
+	commandgroup={champion=10},
+	unitrules={
+		\unitrule{\itsatrap}{\itsatraprule}
+	},
+}
+
+\rareunitstitle
+
+
+\showunit{
+	name={\thundercannon},
+	cost=200,
+	profile={
+		\chariot < -  - - 5 5 5 - - -,
+       	\bombardiercrew{} (1) < -  3 3 4 - - 2 3 7,
+		\scraplingcrew{} (1) < -  2 3 3 - - 3 1 6,
+		\woollyrhino{} (1) < 6 3 - 5 - - 2 3 5
+	},
+	type=\chariot ,
+	basesize=50x100,
+	unitsize=1,
+	armour={\innatedefence{5}, \mountsprotection{6}},
+	unitequipment={
+		\equipmentdef{\thundercannon}{\thundercannonrule}
+	}
+}
+
+\showunit{
+	name={\scratapult},
+	cost=130,
+	profile={
+		\chariot < -  - - 5 4 \newrule{5} - - -,
+		\scraplingcrew{} (7) < -  2 3 3 - - 3 1 6,
+		\woollyrhino{} (1) < 6 3 - 5 - - 2 3 5
+	},
+	type=\chariot ,
+	basesize=50x100,
+	unitsize=1,
+	armour={\innatedefence{5}, \mountsprotection{6}},
+	specialrules={\newrule{\insignificant}},
+	unitequipment={
+		\equipmentdef{\scratapult}{\scratapultrule}
+	},
+}
+
+\showunit{
+	name={\rockaurochs},
+	cost=250,
+	profile={
+        \aurochs < 7 3 - 7 6 6 2 5 5,
+        \rider{} (1) < - 3 4 4 - - 3 3 8,
+	},
+	type=\riddenmonster ,
+	basesize=100x150,
+	unitsize=1,
+	weapons={\ogrecrossbow},
+	armour={\innatedefence{4}},
+	specialrules={\impacthits{3D3}, \frenzy{} \only{\rockaurochs}, \stubborn, \swiftstride, \stoneskin},
+	options={
+		\riderchoice{
+			\huntingspear = \free,
+			\lance = 5,
+		},
+	},
+	unitrules={\unitrule{\stoneskin}{\stoneskinrule}},
+}
+
+\showunit{
+	name={\frostmammoth},
+	cost=200,
+	profile={
+        \mammoth < 6 3 - 6 6 6 2 4 5,
+        \rider{} (2) < - 3 4 4 - - 3 3 8,
+	},
+	type=\riddenmonster ,
+	basesize=100x150,
+	unitsize=1,
+	weapons={\ogrecrossbow{} (\rider{} 1), \huntingspear{} (\rider{} 2)},
+	armour={\innatedefence{4}},
+	specialrules={\impacthits{3D3}, \freezingaura},
+	options={
+		\anyriderchoice{
+			\newrule{\huntingspear} = \free,
+			\newrule{\lance} = \free,
+		}
+	},
+	unitrules={\unitrule{\freezingaura}{\freezingaurarule}},
+}
+
+\showunit{
+	name={\slavegiant},
+	cost=150,
+	profile={
+		 < 6 3 - 6 5 6 3 * 8,
+	},
+	type=\monster,
+	basesize=50x75,
+	unitsize=1,
+	armour={\ha},
+	specialrules={\immunetopsychology, \stubborn, \newrule{\insignificant}},
+	unitrules={
+		\unitrule{\dowhatyouretold}{\dowhatyouretoldrule}
+		\unitrule{\giantattacks}{\giantattacksrule}
+	},
+	additional={\giantattackstable},
+}
+
+
+\mountstitle
+
+\mountssectionannouncement
+
+\showunit{
+	name={\tusker},
+	profile={
+        		 < 8 3 - 5 5 3 2 4 5,
+	},
+	type=\monstrousbeast ,
+	basesize=50x100,
+	specialrules={\fear, \newrule{\impacthits{1D3}}},
+	armour={\mountsprotection{5}},
+}
+
+\showunit{
+	name={\rockaurochs},
+	profile={ < 7 3 - 7 6 6 2 5 5,},
+	type=\monster ,
+	basesize=100x150,
+	armour={\innatedefence{4}},
+	specialrules={\stoneskin, \frenzy, \impacthits{3D3}, \stubborn, \swiftstride},
+	unitrules={\unitrule{\stoneskin}{\stoneskinrule}},
+}
