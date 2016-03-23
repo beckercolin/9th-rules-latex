@@ -160,7 +160,7 @@
 \newcommand{\range}[1] {\labels@range~\unit{#1}{\inch}}
 \newcommand{\distance}[1] {\unit{#1}{\inch}}
 \newcommand{\result}[1] {\texttt{'}$ #1 $\texttt{'}}
-\newcommand{\pts}[1]{#1 % First step is to remove spaces if there are some
+\newcommand{\pts}[1]{#1~% First step is to remove spaces if there are some
 	\def\numberwithoutspaces{\expandafter\removespaces\expandafter{#1}}%
 	% Next step is getting rid of formatting if there are any (bold, color, ...)
 	\pdfstringdef\cleannumber{\numberwithoutspaces}%
@@ -483,13 +483,13 @@
 	}}}}}%
 }
 
-\newcommand{\option}[3][]{#2\predotfill\dotfill%
+\newcommand{\option}[3][]{#2\predotfill\dotfill\nobreak%
 	% Add \upto token if necessary.
 	\ifstrequal{#1}{\upto}{\upto~}{}%
 	% The option can be free, have an unlimited cost, or have a points cost.
 	\ifstrequal{#1}{\free}{\free}{\ifstrequal{#1}{\unlimited}{\unlimited}{\pts{#3}}}%
 	% Add \permodel if necessary.
-	\ifstrequal{#1}{\permodel}{\permodel}{}%
+	\ifstrequal{#1}{\permodel}{\nobreak\permodel}{}%
 }
 \newcommand\optionschoice[2]{%
 	\parselist[,]{#2}{\locallists@optionschoice}%

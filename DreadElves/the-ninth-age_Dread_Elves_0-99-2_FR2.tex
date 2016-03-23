@@ -2,8 +2,8 @@
 \input{../Layout/AB_layout.tex}
 
 \newcommand{\booktitle}{Elfes des Ténèbres}
-\newcommand{\version}{0.99.1}
-\newcommand{\frenchversion}{2.1}
+\newcommand{\version}{0.99.2}
+\newcommand{\frenchversion}{2.2}
 \newcommand{\translationteam}{\item \og AEnoriel \fg \item \og Anglachel \fg \item \og Astadriel \fg \item \og Batcat \fg \item \og Eru \fg  \item \og Gandarin \fg \item \og Groumbahk \fg \item \og Iluvatar \fg \item \og Lamronchak \fg \item \og Mammstein \fg}
 
 % Army special rules
@@ -27,7 +27,7 @@
 \newcommand{\nabh}{Nabh}
 \newcommand{\yema}{Yema}
 \newcommand{\cultrivalry}{Cultes Rivaux}
-\newcommand{\cultistgeneral}{Général de Culte}
+\newcommand{\cultistgeneral}{Zélote}
 
 % Army common type special rules
 
@@ -42,7 +42,7 @@
 \newcommand{\pathofbloodymurder}{Maître du Meurtre Sanglant}
 \newcommand{\pathofsilentdeath}{Maître de la Mort Silencieuse}
 \newcommand{\assassinthrowingweapons}{Armes de Jet d'Assassin}
-\newcommand{\masterpoisoner}{Maître des Venins} % Autre chose que maitre
+\newcommand{\masterpoisoner}{Virtuose des Poisons}
 \newcommand{\nightshade}{Venin Voile-de-nuit}
 \newcommand{\wolfsbane}{Venin Aconit}
 \newcommand{\bloodroot}{Venin Grémil Sanguin}
@@ -62,17 +62,17 @@
 
 % Characters
 
-\newcommand{\dreadprince}{Seigneur de l'Effroi}
+\newcommand{\dreadprince}{Oppresseur}
 \newcommand{\exaltedoracle}{Oracle Exaltée}
-\newcommand{\captain}{Capitaine}
+\newcommand{\captain}{Tourmenteur}
 \newcommand{\cultpriest}{Prêtresse du Culte}
 \newcommand{\oracle}{Oracle}
 \newcommand{\assassin}{Assassin}
 
 % Core
 
-\newcommand{\dreadlegionnaires}{Légionnaires de l'Effroi}
-\newcommand{\repeaterauxiliaries}{Écorcheurs}
+\newcommand{\dreadlegionnaires}{Légionnaires Sadiques}
+\newcommand{\repeaterauxiliaries}{Perce-Cœurs}
 \newcommand{\corsairs}{Corsaires}
 \newcommand{\darkraiders}{Pillards des Ténèbres}
 \newcommand{\bladesofnabh}{Lames de Nabh}
@@ -86,7 +86,7 @@
 \newcommand{\harpies}{Harpies}
 \newcommand{\dreadknights}{Chevaliers Prédateurs}
 \newcommand{\raptorchariot}{Char Prédateur}
-\newcommand{\huntingchariot}{Char des Veneurs}
+\newcommand{\huntingchariot}{Char Veneur}
 \newcommand{\dreadreaper}{Baliste Écorcheuse}
 
 % Rare
@@ -135,7 +135,7 @@
 \newcommand{\corsairsvanguardnote}{Une unité de \corsairs{} peut prendre cette option pour chaque Personnage amélioré en \textbf{\fleetcommander}}
 \newcommand{\maytakearepeatercrossbow}{Peut prendre une \repeatercrossbow}
 \newcommand{\maxmodelsoneofakind}{(max. 15 figs., \oneofakind{})}
-\newcommand{\huntingchariotforkchoice}{Doit prendre une des armes suivantes :}
+\newcommand{\huntingchariotforkchoice}{Le Char doit être équipé d'une des armes suivantes :}
 \newcommand{\darkacolytesnote}{%
 Si l'unité rejoint le \cultofyema{}, Le Conclave de Sorciers connait à la place les sorts \blackmagicspellthree{} (Discipline \blackmagic{}) et \lustsignaturespell{} (Discipline \lust{}).
 }
@@ -155,15 +155,15 @@ Seulement si le Général a rejoint le \cultofyema{} et si le \elvenhorse{} est 
 }
 
 \newcommand{\masterpoisonerrule}{%
-Un \assassin{} peut être équipé d'un ou plusieurs \poisons{}. Au début de chaque Tour de Joueur, déclarez un seul \poison{} que l'\assassin{} va utiliser. Les \poisons{} ne peuvent être appliqués que sur des armes standard et font effet au tir comme au corps à corps.
+Un \assassin{} peut être équipé d'un ou plusieurs \poisons{}. Au début de chaque Tour de Joueur, si l'\assassin{} dispose de plusieurs \poisons{}, déclarez un seul \poison{} qu'il va utiliser. Les \poisons{} ne peuvent être appliqués que sur des armes standard et font effet au Tir comme au Corps à Corps.
 }
 
 \newcommand{\nightshaderule}{%
-Les attaques faites avec ce \poison{} sont résolues avec une Force égale à l'Endurance de la cible +1, jusqu'à une Force de 6 maximum.
+Les attaques faites avec ce \poison{} sont résolues avec une Force égale à l'Endurance de la cible +1, jusqu'à une Force de 6 maximum. Ignorez cette règle si la Force des attaques devait être plus grande sans elle.
 }
 
 \newcommand{\wolfsbanerule}{%
-Les attaques faites avec ce \poison{} ont \lethalstrike{}, et vous pouvez relancer les jets pour blesser ratés.
+Les attaques faites avec ce \poison{} ont \lethalstrike{} et vous pouvez relancer les jets pour blesser ratés.
 }
 
 \newcommand{\bloodrootrule}{%
@@ -223,7 +223,7 @@ L'élément de figurine peut relancer ses jets pour blesser ayant donné un \res
 
 \armyspecialruleentry{\masterofthedarkarts}
 
-Si votre armée comporte une ou plusieurs figurines bénéficiant de cette règle, ajoutez +1 à vos jets de \channel{} pour les Dés de Pouvoir (mais pas de Dissipation).
+Si votre armée comporte au moins une figurine bénéficiant de cette règle, ajoutez un bonus de +1 additionnel à vos jets de \channel{} pour les Dés de Pouvoir (mais pas de Dissipation).
 
 \armyspecialruleentry{\auraofdespair}
 
@@ -231,7 +231,7 @@ Toute unité ennemie en contact socle à socle avec au moins une figurine dotée
 
 \armyspecialruleentry{\alphapredator}
 
-Le \monster{} gagne +1 en Capacité de Combat, Initiative et Commandement.
+L'élément de figurine gagne +1 en Capacité de Combat, Initiative et Commandement.
 
 \begin{multicols}{2}\raggedcolumns
 \armyspecialruleentry{\fleetcommander}
@@ -243,9 +243,9 @@ Pour chaque Personnage doté de cette règle, une unité de \corsairs{} peut gag
 \columnbreak
 \armyspecialruleentry{\beastmaster}
 
-Les unités alliées de figurines montées, de \monsters{} et de \warbeasts{} à moins de \distance{12} de la figurine lancent un dé supplémentaire pour leurs tests de \frenzy{} et de \stupidity{} et ignorent le dé avec le résultat le plus grand.
+Les unités alliées constituées uniquement de figurines montées, de \monsters{} et de \warbeasts{} à moins de \distance{12} de cette figurine lancent un dé supplémentaire pour leurs tests de \frenzy{} et de \stupidity{} et ignorent le dé avec le résultat le plus grand.
 
-Au début de chaque manche de Corps à Corps, une unité alliée de \cavalry{}, \monstrouscavalry{} ou un \monster{} à moins de \distance{6} de la figurine peut gagner la \hatred{} pour le reste de la manche. Seules les montures sont affectées. Remarquez que la \hatred{} n'a d'effet que lors de la première manche de Corps à Corps et qu'il n'est pas possible de cibler un \riddenmonster{}.
+Au début de chaque Phase de Corps à Corps, une unité alliée de \cavalry{}, \monstrouscavalry{} ou un \monster{} à moins de \distance{6} de cette figurine peut gagner la \hatred{} pour le reste de la manche. Seules les montures sont affectées. Remarquez que la \hatred{} n'a d'effet que lors de la première manche de Corps à Corps et qu'il n'est pas possible de cibler un \riddenmonster{}.
 
 \end{multicols}
 
@@ -278,14 +278,14 @@ Au début de chaque manche de Corps à Corps, une unité alliée de \cavalry{}, 
 \includegraphics[width=\logosize]{pics/cultofnabh.png}
 \armyspecialruleentry{\cultofnabh}
 
-L'élément de figurine gagne la \hatred{} mais ne peut plus bénéficier de la règle \killerinstinct{}.
+L'élément de figurine gagne la \hatred{} et perd la règle \killerinstinct{} s'il l'avait.
 \end{center}
 
 \begin{center}
 \includegraphics[width=\logosize]{pics/cultofyema.png}
 \armyspecialruleentry{\cultofyema}
 
-La figurine gagne +1 en Mouvement ainsi que la règle \strider{}, mais ne peut plus bénéficier de la règle \killerinstinct{}.
+La figurine, montures comprises, gagne +1 en Mouvement ainsi que la règle \strider{}. Elle perd la règle \killerinstinct{} si elle l'avait.
 \end{center}
 \end{multicols}
 
@@ -295,7 +295,7 @@ Une figurine ne peut rejoindre qu'un seul Culte. Une unité contenant une ou plu
 
 \armyspecialruleentry{\cultistgeneral}
 
-Si le Général de l'armée appartient à un Culte, l'armée ne peut pas contenir d'unités de l'autre Culte. Touts les éléments de figurine des unités de base ayant la règle \killerinstinct{} rejoignent gratuitement le même Culte que le Général. De plus, toute unité possédant l'option de rejoindre le Culte du Général doit le faire.
+Si le Général de l'armée appartient à un Culte, l'armée ne peut pas contenir d'unités de l'autre Culte. Toutes les figurines des unités de base, sauf les \bladesofnabh{}, rejoignent gratuitement le même Culte que le Général. De plus, toute unité possédant l'option de rejoindre le Culte du Général doit le faire.
 
 \closearmynewsection
 
@@ -315,7 +315,7 @@ Si le Général de l'armée appartient à un Culte, l'armée ne peut pas conteni
 
 \startpricelist
 
-\pricelistitem{Armure Pourpre}{20}\infantry{} uniquement.\newline Type : \ha{}. Pour chaque blessure non sauvegardée que le porteur inflige en Corps à Corps, il gagne +1 en Sauvegarde d'Armure, jusqu'à obtenir 1+ au mieux, pour le reste de la partie.
+\pricelistitem{Armure Pourpre}{20}\infantry{} uniquement.\newline Type : \ha{}. Pour chaque blessure non sauvegardée que le porteur inflige en Corps à Corps, il gagne +1 en Sauvegarde d'Armure pour le reste de la partie. La Sauvegarde d'Armure ne peut être au mieux que de 1+.
 
 \endpricelist
 
@@ -341,9 +341,9 @@ Si le Général de l'armée appartient à un Culte, l'armée ne peut pas conteni
 
 \startpricelist
 
-\pricelistitem{Dague de Moraec}{35/25}Au début de la Phase de Magie, le porteur peut infliger 1D3 blessures sans aucune sauvegarde à son unité. Dans ce cas, les sorts lancés par le porteur voient leur valeur de lancement réduite d'autant que le nombre de blessures infligées de cette manière, jusqu'à la fin de cette Phase de Magie.
+\pricelistitem{Dague de Moraec}{35/25}Au début de chacune de vos Phases de Magie, le porteur peut infliger 1D3 blessures sans aucune sauvegarde à son unité. Dans ce cas, les sorts lancés par le porteur voient leur valeur de lancement réduite d'autant que le nombre de blessures infligées de cette manière, jusqu'à la fin de cette Phase de Magie.
 
-\pricelistitem{Familier Mystique}{25}Au début de chacune de vos Phases de Magie, placez un Familier, figurine avec un socle de \unit{20x20}{\milli\meter}, à moins de \distance{6} du porteur, et à plus de \distance{1} de toute figurine ou de tout Terrain Infranchissable. Le Familier est de taille Petite. Quand il lance un sort, à l'exception d'un sort lié à un Objet de Sort, le porteur peut choisir de déterminer les lignes de vue, les portées et l'arc frontal depuis le Familier. À la fin de la Phase, retirez le Familier du champ de bataille.
+\pricelistitem{Familier Mystique}{25}Au début de chacune de vos Phases de Magie, placez un Familier, figurine avec un socle de \unit{20x20}{\milli\meter}, à moins de \distance{6} du porteur, et à plus de \distance{1} de toute figurine ou de tout Terrain Infranchissable. Le Familier est de taille Petite. Quand il lance un sort, à l'exception d'un sort lié à un Objet de Sort, le porteur peut choisir de déterminer la ligne de vue, la portée \textbf{et} l'arc frontal depuis le Familier. Il doit utiliser toutes les caractéristiques du Familier ou les siennes, il n'est pas possible de combiner. À la fin de la Phase, retirez le Familier du champ de bataille.
 
 \endpricelist
 
@@ -351,9 +351,9 @@ Si le Général de l'armée appartient à un Culte, l'armée ne peut pas conteni
 
 \startpricelist
 
-\pricelistitem{Étendard de l'Armada Cauchemardesque}{55}\fleetcommander{} uniquement.\newline Toutes les unités de \corsairs{} et de \dreadlegionnaires{} à moins de \distance{6} reçoivent un bonus de +1 pour blesser au Corps à Corps.
+\pricelistitem{Étendard de l'Armada Cauchemardesque}{55}\fleetcommander{} uniquement.\newline Toutes les unités de \corsairs{} et de \dreadlegionnaires{} à moins de \distance{6} du porteur reçoivent un bonus de +1 pour blesser au Corps à Corps.
 
-\pricelistitem{Bannière Ensanglantée}{35}Les éléments de figurine dotés de la règle \killerinstinct{} de l'unité peuvent relancer les résultats de \result{1} ou \result{2} de leur jets pour blesser ratés.
+\pricelistitem{Bannière Ensanglantée}{35}Les éléments de figurine dotés de la règle \killerinstinct{} de l'unité du porteur peuvent relancer les résultats de \result{1} ou \result{2} de leur jets pour blesser ratés au Corps à Corps.
 
 \endpricelist
 
@@ -393,6 +393,30 @@ Si le Général de l'armée appartient à un Culte, l'armée ne peut pas conteni
 \changelogtitle
 
 \startchangelog
+
+\newlog{0.99.2}{%
+Raptor Chariot{,} clarified which part has what weapon,
+Hunting Chariot{,} clarified which part has what weapon,
+Master of the Dark Arts clarification,
+Fleet Commander clarification,
+Beast Master clarification,
+Cult of Yema clarification,
+Cultist General clarification,
+Beastmaster’s Lash clarification,
+Dagger of Moraec clarification,
+Wandering Familiar clarification,
+Banner of Gar Daecos clarification,
+Banner of Blood clarification,
+Master Poisoner clarification,
+Nighthade clarification
+Divine Blessings clarification,
+Crimson Mail,
+}
+
+\newlog{0.99.1}{%
+Divine Altar special rules,
+Dark acolytes has been given mount’s protection (editorial mistake),
+}
 
 \newlog{0.99.0}{%
 Fleet commander,

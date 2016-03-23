@@ -17,10 +17,10 @@
 	options={
 		\magicalitemsallowance =\upto{}<100,
 		\maytakeonechoiceonly{
-			\mayjointhecultofnabh{}=20,
-			\mayjointhecultofyema{}=20,
-			\maybecome{} \beastmaster{}=40,
-			\maybecome{} \fleetcommander{}=50,
+			\cultofnabh{}=20,
+			\cultofyema{}=20,
+			\beastmaster{}=40,
+			\fleetcommander{}=50,
 			\hspace*{0.3cm}- \maygain{} \vanguard{}=20,
 		},
 		\maytakeashield{}=5,
@@ -87,12 +87,13 @@
 	commonspecialrules={\killerinstinct{},\lightningreflexes{}},
 	armour={\la},
 	options={
+		\bsboption{}=25,	
 		\magicalitemsallowance =\upto{}<50,
 		\maytakeonechoiceonly{
-			\mayjointhecultofnabh{}=10,
-			\mayjointhecultofyema{}=10,
-			\maybecome{} \beastmaster{}=40,
-			\maybecome{} \fleetcommander{}=40,
+			\cultofnabh{}=10,
+			\cultofyema{}=10,
+			\beastmaster{}=40,
+			\fleetcommander{}=40,
 			\hspace*{0.3cm}- \maygain{} \vanguard{}=20,
 		},
 		\maytakeashield{}=3,
@@ -105,7 +106,7 @@
 			\pw{}=5,
 			\gw{}=8,
 			\halberd{}=8,
-			\lance{}=15,
+			\lance{}=10,
 		},
 	},
 	mounts={
@@ -215,7 +216,7 @@
 	commonspecialrules={\killerinstinct{},\lightningreflexes{}},
 	specialrules={\scout{},\armourpiercing{1},\poisonedattacks{},\notaleader{},\hidden{},\masterpoisoner{}},
 	options={
-		\mayjointhecultofnabh{}=10,
+		\mayjointhecultofnabh{}=20,
 		\magicalitemsallowance{} \notmagicalarmour{}=\upto{}<50,
 		\maytakepw{}=6,
 		\maypurchaseanynumberofpoisonsseebelow{}=,
@@ -225,7 +226,7 @@
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
 		\begin{center}\assassinforkpaths{}\end{center}
 		\begin{multicols}{2}\raggedcolumns
-		\begin{center}\Largefontsize{\antiquefont\pathofbloodymurder{}} (\free{})\end{center}%
+		\begin{center}\Largefontsize{\antiquefont\pathofbloodymurder{} (\free{})}\end{center}%
 
 		\def\tempoptions{%
 			\maygain{} \distracting{}=25,			
@@ -236,12 +237,12 @@
 		\noindent\refsymbol{} \canonlybeusedagainstclosecombatattacks{}.
 			
 		\columnbreak
-		\begin{center}\Largefontsize{\antiquefont\pathofsilentdeath{}} (\pts{20})\end{center}
+		\begin{center}\Largefontsize{\antiquefont\pathofsilentdeath{} (\pts{20})}\end{center}
 
 		\def\tempweapons{\assassinthrowingweapons{}}%
 		\weapons{\tempweapons}
 
-		\def\tempequipmentrules{\equipmentdef{\assassinthrowingweapons}{\assassinthrowingweaponsrule}},
+		\def\tempequipmentrules{\equipmentdef{\assassinthrowingweapons}{\assassinthrowingweaponsrule}}
 		\unitequipment{\tempequipmentrules}
 		
 		\end{multicols}
@@ -495,7 +496,7 @@
 	commontype=\elvencommonrules{},
 	commonspecialrules={\killerinstinct{} \only{\crew},\lightningreflexes{} \only{\crew}},
 	specialrules={\stupidity{},\impacthits{+1}},
-	weapons={\lance{},\repeatercrossbow{}},
+	weapons={\lance{},\repeatercrossbow{} \only{\crew}},
 	armour={\ha{}, \mountsprotection{5}},
 }
 
@@ -513,19 +514,19 @@
 	commontype=\elvencommonrules{},
 	commonspecialrules={\killerinstinct{} \only{\crew},\lightningreflexes{} \only{\crew}},
 	specialrules={\impacthits{+1}},
-	weapons={\lightlance{},\repeatercrossbow{}},
+	weapons={\lightlance{},\repeatercrossbow{} \only{\crew}},
 	armour={\la{}, \mountsprotection{5}},
 	additional={%
 		\setlength{\columnseprule}{1pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
 		\begin{center}\huntingchariotforkchoice{}\end{center}
 		\begin{multicols}{2}\raggedcolumns
-		\begin{center}\Largefontsize{\antiquefont\giantbow{}} (\free{})\end{center}%
+		\begin{center}\Largefontsize{\antiquefont\giantbow{} (\free{})}\end{center}%
 
 		\noindent\giantbowrule{}
 			
 		\columnbreak
-		\begin{center}\Largefontsize{\antiquefont\harpoonlauncher{}} (\pts{20})\end{center}
+		\begin{center}\Largefontsize{\antiquefont\harpoonlauncher{} (\pts{20})}\end{center}
 
 		\noindent\harpoonlauncherrule{}
 		
@@ -640,7 +641,7 @@
 	unitsize=1,
 	armour={\la{},\mountsprotection{6}},
 	commontype=\elvencommonrules{},
-	commonspecialrules={\lightningreflexes{} \only{\crew}},	
+	commonspecialrules={\lightningreflexes{} \only{\disciples}},	
 	specialrules={\largetarget{},\fear{},\impacthits{+1},\wardsave{4},\divineblessings{}},
 	additional={%
 		\def\tempunitrules{\unitrule{\divineblessings}{\divineblessingsrule}}
@@ -750,7 +751,7 @@
 	commontype=\elvencommonrules{},
 	commonspecialrules={\killerinstinct{} \only{\crew},\lightningreflexes{} \only{\crew}},
 	specialrules={\stupidity{},\impacthits{+1}},
-	weapons={\lance{},\repeatercrossbow{}},
+	weapons={\lance{},\repeatercrossbow{} \only{\crew}},
 	armour={\ha{}, \mountsprotection{5}},
 }
 

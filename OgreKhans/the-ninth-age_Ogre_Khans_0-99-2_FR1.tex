@@ -1,8 +1,8 @@
 \input{../Layout/AB_layout.tex}
 
 \newcommand{\booktitle}{Khans Ogres}
-\newcommand{\version}{0.99.1}
-\newcommand{\frenchversion}{2.0}
+\newcommand{\version}{0.99.2}
+\newcommand{\frenchversion}{2.1}
 \newcommand{\translationteam}{\item \og AEnoriel \fg \item \og Anglachel \fg \item \og Astadriel \fg \item \og Batcat \fg \item \og Eru \fg  \item \og Gandarin \fg \item \og Groumbahk \fg \item \og Iluvatar \fg \item \og Lamronchak \fg \item \og Mammstein \fg}
 
 % Army special rules
@@ -143,7 +143,7 @@ Les \mammothhunters{} à pied ne peuvent rejoindre que des unités de \yetis{} e
 }
 
 \newcommand{\leaderofthepackrule}{%
-Si un \mammothhunter{} est déployé dans une unité \sabretoothtigers{}, et seulement tant qu'il reste avec elle, cette unité perd \insignificant{} et gagne \vanguard{}. De plus, le \mammothhunter{}  compte comme étant de Type de Troupe \warbeast{} pour les allocations de touches classiques et de gabarit à l'unité combinée.
+Si un \mammothhunter{} rejoint une unité de \sabretoothtigers{}, et seulement tant qu'il reste avec elle, cette unité perd \insignificant{} et gagne \vanguard{}. De plus, le \mammothhunter{}  compte comme étant de Type de Troupe \warbeast{} pour les allocations de touches classiques et de gabarit à l'unité combinée.
 }
 
 \newcommand{\mammothhunternote}{%
@@ -167,7 +167,7 @@ Les unités ennemies subissent un malus de -1 en Initiative, jusqu'à un minimum
 }
 
 \newcommand{\itsatraprule}{%
-Tout Champ, Forêt ou Ruine devient un Terrain Dangereux pour le reste de la partie si, au moment du déploiement ou à la fin d'une Phase de Mouvement, une unité non en fuite de \scraplingtrappers{} est en contact avec l'élément de décor concerné. Les figurines qui traitent normalement ces éléments de décor comme des Terrains Dangereux souffrent d'un malus de -1 à leurs jets de Terrain Dangereux (jusqu'à un résultat minimal de 1). Les \scraplingtrappers{}  n'ont pas à faire de test de Terrain Dangereux lorsqu'ils entrent ou sortent d'un élément de décor qu'ils ont piégé.
+Tout Champ, Forêt ou Ruine devient un Terrain Dangereux (1) pour le reste de la partie si, au moment du déploiement ou à la fin d'une Phase de Mouvement, une unité non en fuite de \scraplingtrappers{} est en contact avec l'élément de décor concerné. Les figurines qui traitent normalement ces éléments de décor comme des Terrains Dangereux (1) les traitent comme des Terrains Dangereux (2) à la place. Les \scraplingtrappers{}  n'ont pas à faire de test de Terrain Dangereux lorsqu'ils entrent ou sortent d'un élément de décor qu'ils ont piégé.
 }
 
 \newcommand{\thundercannonrule}{%
@@ -228,7 +228,7 @@ Ni le Géant, ni l'unité sélectionnée ne peuvent faire d'attaques de Corps à
 }
 
 \newcommand{\jumprule}{%
-L'unité sélectionnée subit 1D6 touches de la Force du Géant, réalisées comme si elles suivaient la règle spéciale \grindingattacks{}. Le Géant doit faire un test de Terrain Dangereux.
+L'unité sélectionnée subit 1D6 touches de la Force du Géant. Le Géant doit faire un test de Terrain Dangereux.
 }
 
 \newcommand{\grabrule}{%
@@ -244,7 +244,7 @@ Choisissez une figurine en contact socle à socle avec le Géant dans l'unité s
 }
 
 \newcommand{\smashrule}{%
-Choisissez une figurine dans l'unité sélectionnée et en contact socle à socle avec le Géant. Cette figurine subit une blessure avec \armourpiercing{6}. Si la figurine n'a pas encore attaqué, elle ne peut pas le faire au cours de cette manche. Si la figurine a déjà réalisé ses attaques, elle ne pourra pas attaquer au cours du tour de  joueur à venir.
+Choisissez une figurine en contact socle à socle avec le Géant dans l'unité sélectionnée. Cette figurine subit une blessure avec \armourpiercing{6}. Si la figurine n'a pas encore attaqué, elle ne peut pas le faire au cours de cette manche. Si la figurine a déjà réalisé ses attaques, elle ne pourra pas attaquer au cours du tour de  joueur à venir.
 }
 
 
@@ -314,7 +314,7 @@ Toute figurine peut aussi choisir la Marque du Chaos Intégral pour 3 pts par fi
 Les \shamans{} et les \greatshamans{} avec une Marque différente du Chaos Intégral peuvent choisir une Discipline accessible normalement à cette Marque, en plus des Disciplines qui leur sont habituellement proposées. Les \shamans{} et les \greatshamans{} ne peuvent pas prendre la Marque du Courroux.\newline
 L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scraplingtrappers{}, de \yetis{}, de \sabretoothtigers{} ou de \scratapults{}.
 
-\pricelistitem{Mâchoire Pourrie}{30}Le Personnage gagne des \poisonedattacks{}. Pour la durée d'une phase de Corps à Corps, toutes les figurines de son unité peuvent aussi gagner des \poisonedattacks{}. Le joueur doit déclarer au début de la phase de Corps à Corps choisi qu'il utilise cette capacité.
+\pricelistitem{Mâchoire Pourrie}{30}Le Personnage gagne des \poisonedattacks{}. Pour la durée d'une Phase de Corps à Corps, toutes les figurines de son unité peuvent aussi gagner des \poisonedattacks{}. Le joueur doit déclarer au début de la manche de Corps à Corps s'il utilise cette capacité.
 
 \pricelistitem{Chasseur de Têtes}{25}Le Personnage se gave de la chair de ses ennemis tombés, même au plus fort de la bataille. A la fin de toute phase de Corps à Corps durant laquelle le porteur a tué une ou plusieurs figurines, et dans la mesure où il n'est pas en fuite, lancez 1D6. Sur un résultat de 3+, il Récupère un Point de Vie qu'il a perdu plus tôt dans la bataille.
 
@@ -322,7 +322,7 @@ L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scrapli
 
 \pricelistitem{Maître des Trésors de Guerre}{20}Ce Grand Nom ne peut pas être pris par un \wizard{} ou un \mammothhunter{}.\newline Le Personnage avec ce Grand Nom gagne la règle spéciale \weaponmaster{} et une \platearmour{}, et peut acquérir autant d'armes standard de corps à corps et de tir auxquelles il peut accéder plutôt qu'une seule de chaque catégorie.
 
-\pricelistitem{Pourfendeur de Moelle Épinière}{20}Seules les figurines à pied peuvent prendre ce Grand Nom.\newline Le Personnage bénéficie des règles spéciales \devastatingcharge{} et \thunderouscharge{}. Cette dernière affecte aussi exceptionnellement les \impacthits{} et le \stomp{}.
+\pricelistitem{Pourfendeur de Moelle Épinière}{20}Seules les figurines à pied peuvent prendre ce Grand Nom.\newline Le Personnage bénéficie des règles spéciales \devastatingcharge{} et \thunderouscharge{}. Le bonus de Force affecte aussi exceptionnellement les \impacthits{} et le \stomp{}.
 
 \endpricelistNSP
 \end{multicols}
@@ -357,7 +357,7 @@ L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scrapli
 
 \startpricelist
 
-\pricelistitem{Œil Aveugle de Nyanggai}{25}Une seule utilisation. Ce Talisman doit être activé au début de la phase de Magie de l'adversaire. Le porteur, l'unité dans laquelle il se trouve et tout autre Personnage également dans cette unité ne peuvent être ciblés par les sorts n'étant pas de type Aura lancés par des \wizards{} ennemis.
+\pricelistitem{Œil Aveugle de Nyanggai}{25}Une seule utilisation. Ce Talisman doit être activé au début de la Phase de Magie de l'adversaire. Le porteur et toutes les figurines de l'unité dans laquelle il se trouve ne peuvent pas être ciblés par les sorts n'étant pas de type Aura lancés par des \wizards{} ennemis pendant cette phase.
 
 \endpricelist
 
@@ -381,9 +381,9 @@ L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scrapli
 
 \startpricelist
 
-\pricelistitem{Étendard en Peau de Dragon}{40}Les figurines de l'unité peuvent relancer les jets pour toucher, pour blesser et de \armoursave{} ayant donné \result{1} au cours de la première manche de Corps à Corps, même pour leurs attaques spéciales.
+\pricelistitem{Étendard en Peau de Dragon}{40}Les figurines de l'unité du porteur peuvent relancer les jets pour toucher, pour blesser et de \armoursave{} ayant donné \result{1} au cours de la première manche de Corps à Corps, même pour leurs attaques spéciales.
 
-\pricelistitem{Crâne de Qenghet}{20}Les figurines de l'unité causent la \fear{} et réussissent automatiquement les tests de \terror{}.
+\pricelistitem{Crâne de Qenghet}{20}Les figurines de l'unité du porteur causent la \fear{} et réussissent automatiquement les tests de \terror{}.
 
 \endpricelist
 
@@ -428,6 +428,18 @@ L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scrapli
 \changelogtitle
 
 \startchangelog
+
+\newlog{0.99.2}{%
+Thunder Cannon each part does not gain its own cannon,
+Scratapult each part does not gain its own catapult,
+Leader of the Pack clarification,
+Rottenjaw clarification,
+Spinesplitter clarification,
+Blind Eye of Nyanggai clarification,
+Dragonskin Banner clarification,
+Skull of Qenghet clarification,
+Giant attacks clarifications,
+}
 
 \newlog{0.99.1}{%
 Green text reverted to black,
