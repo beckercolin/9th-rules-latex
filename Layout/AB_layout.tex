@@ -153,6 +153,7 @@
 
 \newcommand{\newrule}{\textcolor{green!50!black}}
 \newcommand{\removedrule}[1]{\textcolor{green!50!black}{\sout{#1}}}
+\newcommand{\starsymbol}{$\star$}
 \newcommand{\refsymbol}{$^\star$}
 
 \newcommand{\inch}{\arcsecond}
@@ -337,7 +338,13 @@
 	\local@unitname \expandafter\caraclistbold\expandafter{\local@unitprofile}%
 	&%
 	& \ifbool{profilefirst}{\unit@type}{}%
-	& \ifbool{profilefirst}{\unit{\unit@basesize}{\milli\meter}}{}%
+	& \ifbool{profilefirst}{%
+		\ifsubstring{\unit@basesize}{x}{% Rectangular base
+			\unit{\unit@basesize}{\milli\meter}%
+		}{% Circular base
+			\unit{\unit@basesize}{\milli\meter} \labels@roundbase%
+		}%
+	}{}%
 	\global\boolfalse{profilefirst}%
 }
 \newcommand{\profile}[1]{%
@@ -426,9 +433,9 @@
 % Equipment listing.
 \newcommand{\equipmentlist}[1]{%
 	\parselist[,]{#1}{\locallists@equipmentlist}%
-	\begin{itemize*}[label={}, itemjoin={,}]%
-	\forlistloop{\item}{\locallists@equipmentlist}%
-	\end{itemize*}%
+	\begin{sortedlist}%
+		\forlistloop{\addtosortedlist}{\locallists@equipmentlist}%
+	\end{sortedlist}%
 }
 
 % Equipment entry.
@@ -440,6 +447,10 @@
 %%% Alignment %%%
 
 \newcommand{\alignment}[1]{\unitentry{#1}{\unitentryformat{\labels@alignment\spacebeforecolon{}:}\newline\textbf{#1}.}}
+
+%%% Green Hide Race %%%
+
+\newcommand{\greenhideraceentry}[1]{\unitentry{#1}{\unitentryformat{\labels@greenhiderace\spacebeforecolon{}:}\newline\textbf{#1}.}}
 
 
 %%% Options %%%
@@ -479,8 +490,16 @@
 		\splitatinf{\optionvalue}\myoption\myvalue%
 		\option[\permodel]{\optiontext}{\myvalue}%
 	}{%
+	\ifsubstring{\optionvalue}{\pershadygit}{% For Orcs N Goblins
+		\splitatinf{\optionvalue}\myoption\myvalue%
+		\option[\pershadygit]{\optiontext}{\myvalue}%
+	}{%
+	\ifsubstring{\optionvalue}{\permadgit}{% For Orcs N Goblins
+		\splitatinf{\optionvalue}\myoption\myvalue%
+		\option[\permadgit]{\optiontext}{\myvalue}%
+	}{%		
 		\option{\optiontext}{\optionvalue}%
-	}}}}}%
+	}}}}}}}%
 }
 
 \newcommand{\option}[3][]{#2\predotfill\dotfill\nobreak%
@@ -490,6 +509,9 @@
 	\ifstrequal{#1}{\free}{\free}{\ifstrequal{#1}{\unlimited}{\unlimited}{\pts{#3}}}%
 	% Add \permodel if necessary.
 	\ifstrequal{#1}{\permodel}{\nobreak\permodel}{}%
+	% Add \persomething if necessary.
+	\ifstrequal{#1}{\pershadygit}{\nobreak\pershadygit}{}% For Orcs N Goblins
+	\ifstrequal{#1}{\permadgit}{\nobreak\permadgit}{}% For Orcs N Goblins
 }
 \newcommand\optionschoice[2]{%
 	\parselist[,]{#2}{\locallists@optionschoice}%
@@ -663,7 +685,9 @@
 
 %%% Input parameters %%%
 
+\define@key{unit}{notinQRS}{\def\unit@notinQRS{#1}}
 \define@key{unit}{name}{\def\unit@name{#1}}
+\define@key{unit}{QRSname}{\def\unit@QRSname{#1}}
 \define@key{unit}{profile}{\def\unit@profile{#1}}
 \define@key{unit}{cost}{\def\unit@cost{#1}}
 \define@key{unit}{invocation}{\def\unit@invocation{#1}}
@@ -679,6 +703,7 @@
 \define@key{unit}{magicpaths}{\def\unit@magicpaths{#1}}
 \define@key{unit}{equipment}{\def\unit@equipment{#1}}
 \define@key{unit}{alignment}{\def\unit@alignment{#1}}
+\define@key{unit}{greenhiderace}{\def\unit@greenhiderace{#1}}
 \define@key{unit}{weapons}{\def\unit@weapons{#1}}
 \define@key{unit}{armour}{\def\unit@armour{#1}}
 \define@key{unit}{wizardconclave}{\def\unit@wizardconclave{#1}}
@@ -752,7 +777,7 @@
 
 \newcommand{\defunit}{
 	\setkeys{unit}{%
-		name=, profile=, cost=, invocation=, costpermodel=, maxmodels=, type=, unitsize=, basesize=, commonspecialrules=, commontype=, specialrules=, magiclevel=, magicpaths=, alignment=, equipment=, weapons=, armour=, wizardconclave=, unitequipment=, options=, mounts=, commandgroup=, unitrules=, additional=%
+		notinQRS=, name=, QRSname=, profile=, cost=, invocation=, costpermodel=, maxmodels=, type=, unitsize=, basesize=, commonspecialrules=, commontype=, specialrules=, magiclevel=, magicpaths=, alignment=, greenhiderace=, equipment=, weapons=, armour=, wizardconclave=, unitequipment=, options=, mounts=, commandgroup=, unitrules=, additional=%
 	}%
 	\setkeys{unit}%
 }
@@ -765,12 +790,17 @@
 	\expandafter\ifstrequal\expandafter{\unit@unitsize}{1}{% single model
 		% Can you add model to this single model ?
 		\expandafter\ifblank\expandafter{\unit@maxmodels}{% no		
-			{\hspace*{0.25cm}\large\labels@Singlemodel}%
+			{\hspace*{0.25cm}\labels@Singlemodel}%
 		}{% yes
 			{\hspace*{0.25cm}\mincostfor{} \textbf{1} \labels@model{}. \maxunitsize{}\spacebeforecolon{}: \textbf{\unit@maxmodels} \labels@models{}.\hfill \additionalfigscost{} {\largefontsize\pts{\textbf{\unit@costpermodel{}}}\permodel}\hspace*{0.1cm}}%
 		}%
-	}{% not single model					
+	}{% not single model
+		% Test if we wanna print a sentence instead of unit number
+		\ifsubstring{\unit@unitsize}{SPECIAL-}{%
+			\hspace*{0.25cm}\StrDel{\unit@unitsize}{SPECIAL-}%
+		}{%	
 			{\hspace*{0.25cm}\mincostfor{} \textbf{\unit@unitsize} \labels@models{}. \maxunitsize{}\spacebeforecolon{}: \textbf{\unit@maxmodels} \labels@models{}.\hfill \additionalfigscost{} {\largefontsize\pts{\textbf{\unit@costpermodel{}}}\permodel}\hspace*{0.1cm}}%
+		}%
 	}%
 	}%
 	\vspace*{-0.1cm}
@@ -785,8 +815,10 @@
 	\setlength\multicolsep{0pt}
 	\begin{multicols}{2}
 		\raggedcolumns
-		{\setlength{\parskip}{0.3cm}
+		\vspace*{-0.3cm}{\setlength{\parskip}{0.3cm}
 		\expandafter\ifblank\expandafter{\unit@alignment}{}{\noindent\parbox{\columnwidth}{\alignment{\unit@alignment}}}
+		
+		\expandafter\ifblank\expandafter{\unit@greenhiderace}{}{\noindent\parbox{\columnwidth}{\greenhideraceentry{\unit@greenhiderace}}}
 		
 		\expandafter\ifblank\expandafter{\unit@equipment}{}{\noindent\parbox{\columnwidth}{\equipment{\unit@equipment}}}
 				
@@ -812,12 +844,18 @@
 	\vspace*{0.1cm}\unit@additional
 	\end{unitframe}
 	% Database filling for auto QRS
+	\expandafter\ifblank\expandafter{\unit@notinQRS}{%
 	\DTLnewrow{profiles}%
-	\expandafter\profiledtbfillname\expandafter{\unit@name}%
+	\expandafter\ifblank\expandafter{\unit@QRSname}{%
+		\expandafter\profiledtbfillname\expandafter{\unit@name}%
+	}{%
+		\expandafter\profiledtbfillname\expandafter{\unit@QRSname}%
+	}
 	\expandafter\profiledtbfillcategory\expandafter{\profilecategory}%
 	\expandafter\profiledtbfilltrooptype\expandafter{\unit@type}%
 	\expandafter\ifblank\expandafter{\unit@invocation}{}{\expandafter\profiledtbfillinvocation\expandafter{\unit@invocation}}%
 	\expandafter\profiledtbfillcarac\expandafter{\unit@profile}
+	}{}%
 }
 
 

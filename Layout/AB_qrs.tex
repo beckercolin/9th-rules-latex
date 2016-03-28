@@ -80,10 +80,10 @@
 {\antiquefont\bfseries \labels@coreunitsInitial}\spacebeforecolon{}: \labels@coreunits{} - %
 {\antiquefont\bfseries \labels@specialunitsInitial}\spacebeforecolon{}: \labels@specialunits{} - %
 {\antiquefont\bfseries \labels@rareunitsInitial}\spacebeforecolon{}: \labels@rareunits{} - %
-{\antiquefont\bfseries \labels@mountsInitial}\spacebeforecolon{}: \labels@mounts{}%
+{\antiquefont\bfseries \labels@mountsInitial}\spacebeforecolon{}: \labels@mounts{} \labels@only{}%
 \end{center}
 
-\begin{multicols}{2}
+\begin{multicols}{2}\raggedcolumns
 
 \QRScheckifempty{%
 	\DTLiseq{\rowcategory}{\labels@lords}\or\DTLiseq{\rowcategory}{\labels@heroes}%
@@ -205,5 +205,7 @@
 	}%
 	\QRSclosetab{}%
 }% 
+
+\ifdef{\QRSnote}{\QRSnote}{}
 
 \end{multicols}

@@ -31,6 +31,7 @@
 \newcommand{\labels@A}{A}
 \newcommand{\labels@Ld}{Cd}
 \newcommand{\labels@Invocation}{Invocation} % For Vampire Covenant profiles
+\newcommand{\labels@roundbase}{rond} % printed after XX mm for round bases
 
 \newcommand{\Strength}{Force}
 
@@ -52,12 +53,14 @@
 \newcommand{\labels@trooptype}{Type de troupe}
 \newcommand{\labels@specialrules}{Règles spéciales}
 \newcommand{\labels@alignment}{Allégeance}
+\newcommand{\labels@greenhiderace}{Race Peau Verte}
 \newcommand{\labels@equipment}{Équipement}
 \newcommand{\labels@weapons}{Armes}
 \newcommand{\labels@armour}{Armure}
 \newcommand{\labels@options}{Options}
 \newcommand{\labels@commandgroup}{État-Major}
 \newcommand{\labels@mounts}{Montures}
+\newcommand{\labels@mount}{Monture}
 \newcommand{\labels@specialequipment}{Équipement spécial}
 
 % Command groups
@@ -381,15 +384,19 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 \newcommand{\mustbecomeoneofthefollowing}{\optionschoice{Doit devenir au choix :}}
 \newcommand{\maybecomeoneofthefollowing}{\optionschoice{Peut devenir au choix :}}
 \newcommand{\maytakeoneofthefollowing}{\optionschoice{Peut prendre au choix :}}
-\newcommand{\maytakeuptotwoofthefollowing}{\optionschoice{Peut prendre jusqu'à deux choix parmi :}}
+\newcommand{\musttakeoneormoreofthefollowing}{\optionschoice{\textbf{Doit} prendre au moins un choix :}}
+\newcommand{\musttakeoneofthefollowingNOC}{Doit choisir entre :}
+\newcommand{\maytakeuptotwoofthefollowing}{\optionschoice{Peut prendre jusqu'à deux choix :}}
 \newcommand{\maygain}{Peut gagner la règle}
 \newcommand{\maytake}{Peut prendre}
 \newcommand{\maytakeashield}{Peut prendre un Bouclier}
 \newcommand{\maytakela}{Peut prendre une Armure Légère}
 \newcommand{\maytakeha}{Peut prendre une Armure Lourde}
+\newcommand{\maytakeplatearmour}{Peut prendre une Armure de Plates}
 \newcommand{\maytakemountsprotectionX}[1]{Peut prendre une \mountsprotection{#1}}
 \newcommand{\maytakeagw}{Peut prendre une Arme Lourde}
 \newcommand{\maytakeaspear}{Peut prendre une Lance}
+\newcommand{\maytakealance}{Peut prendre une Lance de Cavalerie}
 \newcommand{\maytakepw}{Peut prendre une Paire d'Armes}
 \newcommand{\maytakeapistol}{Peut prendre un Pistolet}
 \newcommand{\maytakeabraceofpistols}{Peut prendre une Paire de Pistolets}
@@ -406,3 +413,11 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 \newcommand{\mountssectionannouncement}{%
 La section Montures concerne les montures de Personnages. Les montures pour non-Personnages suivent les règles données dans leur description d'unité.
 }
+
+
+
+
+%%% Orcs N Goblins debug, let it as it is
+
+\newcommand{\pershadygit}{debug}
+\newcommand{\permadgit}{debug}
