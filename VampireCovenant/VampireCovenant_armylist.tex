@@ -1,5 +1,5 @@
 
-%%% v0.99.1
+%%% v0.99.2
 
 \armylist
 
@@ -48,7 +48,7 @@
 		\shriekinghorror{} \only{\strigoi}=230,
 		\zombiedragon{}=270,
 	},
-	additional={\refsymbol{}\bloodlinenote{}},
+	additional={\refsymbol{} \bloodlinenote{}},
 }
 
 \showunit{
@@ -114,7 +114,7 @@
 		\spectralsteed{}=55,
 		\monstrousrevenant{}=120
 	},
-	additional={\refsymbol{}\bloodlinenote{}},
+	additional={\refsymbol{} \bloodlinenote{}},
 }
 
 
@@ -272,7 +272,7 @@
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
 	additional={%
-		\refsymbol{}\strigoivanguardnote
+		\refsymbol{} \strigoivanguardnote
 	}
 }
 
@@ -306,7 +306,7 @@
 	costpermodel=15,
 	commontype=\undeadcommonrules ,
 	commonspecialrules={\undead, \ashestoashes},
-	specialrules={\fly{6}},
+	specialrules={\fly{6}, \stormofwings},
 	unitrules={
 		\unitrule{\stormofwings}{\stormofwingsrule}
 	}
@@ -451,11 +451,12 @@
 
 \showunit{
 	name={\cadaverwagon},
+	QRSname={\cadaverwagon{}$^{1}$},
 	cost=80,
 	profile={
 		\cart			< - - - 4 4 4 - - -,
    		\cadavermaster 	< - 3 - 3 - -  3 1 5,
-		\shamblinghorde < 4 1 - 3 3 -  1 \refsymbol{} 2	
+		\shamblinghorde < 4 1 - 3 3 -  1 \starsymbol{} 2	
 	},
 	invocation=1,
 	type=\chariot ,
@@ -487,11 +488,12 @@
 
 \showunit{
 	name={\courtofthedamned},
+	QRSname={\courtofthedamned{}$^{2}$},
 	cost=200,
 	profile={
 		\floatingcourt{}	< - - - 5 5 5 - - -,
        		\paramour{} (3) 	< - 5 5 5 - - 6 2 7,
-		\ghoststeeds{}	< 8 2 - 3 - - 2 \refsymbol{} 3
+		\ghoststeeds{}	< 8 2 - 3 - - 2 \starsymbol{} 3
 	},
 	invocation=1,
 	type=\chariot ,
@@ -620,7 +622,7 @@
 		\altar 		< -  - - 5 5 5 - - -,
        		\master{} 		< -  3 1 3 - - 3 1 5,
 		[\banshee{}] 	< -  3 - 3 - - 3 3 5,
-		\ghoststeeds{} 	< 8 2 - 3 - - 2 \refsymbol{} 3
+		\ghoststeeds{} 	< 8 2 - 3 - - 2 \starsymbol{} 3
 	},
 	invocation=1,
 	type=\chariot ,
@@ -692,7 +694,6 @@
 	profile={< 8 2 - 3 3 1 2 1 3,},
 	type=\warbeast ,
 	basesize=25x50,
-	unitsize=1,
 	commontype=\undeadcommonrules ,
 	commonspecialrules={\undead},
 	specialrules={\ethereal{}},
@@ -707,7 +708,6 @@
 	profile={< 8 2 - 3 3 1 2 1 3,},
 	type=\warbeast ,
 	basesize=25x50,
-	unitsize=1,
 	commontype=\undeadcommonrules ,
 	commonspecialrules={\undead},
 	specialrules={\ethereal{}, \fly{8}},
@@ -719,7 +719,6 @@
 	profile={< 6  4 - 5 5 4 2 4 4,},
 	type=\monstrousbeast ,
 	basesize=50x50,
-	unitsize=1,
 	commontype=\undeadcommonrules ,
 	commonspecialrules={\undead},
 	specialrules={\largetarget, \fear},
@@ -738,11 +737,11 @@
 
 
 \showunit{
+	notinQRS=yes,
 	name={\shriekinghorror},
 	profile={< 6 4 - 5 6 6 2 4 4,},
 	type=\monster,
 	basesize=100x150,
-	unitsize=1,
 	commontype=\undeadcommonrules ,
 	commonspecialrules={\undead},
 	additional={%
@@ -754,14 +753,14 @@
 }
 
 \showunit{
+	notinQRS=yes,
 	name={\cadaverwagon},
 	profile={
 		\cart < - - - 4 4 4 - - -,
-		\shamblinghorde < 4 1 - 3 3 -  1 \refsymbol{} 2	
+		\shamblinghorde < 4 1 - 3 3 -  1 \starsymbol{} 2	
 	},
 	type=\chariot ,
 	basesize=50x100,
-	unitsize=1,
 	commontype=\undeadcommonrules ,
 	commonspecialrules={\undead},
 	specialrules={\randomattacks{2D6} \only{\shamblinghorde}, \wakethedead, \cart, \regeneration{4}},
@@ -780,15 +779,15 @@
 }
 
 \showunit{
+	notinQRS=yes,
 	name={\courtofthedamned},
 	profile={
 		\floatingcourt{}	< - - - 5 5 5 - - -,
        		\paramour{} (2) 	< - 5 5 5 - - 6 2 7,
-		\ghoststeeds{}	< 8 2 - 3 - - 2 \refsymbol{} 3
+		\ghoststeeds{}	< 8 2 - 3 - - 2 \starsymbol{} 3
 	},
 	type=\chariot ,
 	basesize=50x100,
-	unitsize=1,
 	commontype=\vampiriccommonrules ,
 	commonspecialrules={\undead , \vampiric{6}},
 	specialrules={\randomattacks{2D6} \only{\ghoststeeds}, \ethereal{} \only{\ghoststeeds}, \largetarget, \wardsave{4}, \terror},
@@ -804,9 +803,8 @@
 \showunit{
 	name={\zombiedragon{} (\oneofakind)},
 	profile={< 6  4 - 6 6 6 2 5 4,},
-	type=\monster ,
+	type=\monster{},
 	basesize=50x100,
-	unitsize={1},
 	commontype=\undeadcommonrules ,
 	commonspecialrules={\undead},
 	specialrules={\breathweapon{\Strength{} 2, \armourpiercing{6}}, \distracting, \regeneration{6}, \fly{7}},

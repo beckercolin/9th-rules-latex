@@ -282,6 +282,16 @@ Le \monstrousrevenant{} gagne \thunderouscharge{} et sa taille de socle change e
 La figurine gagne +1 en Capacité de Combat, la valeur de sa \innatedefence{} passe à ($ 3+ $), et sa taille de socle change en \unit{100x150}{\milli\meter}.
 }
 
+% QRS
+
+\newcommand{\QRSnote}{%
+\noindent$^{1}$ En Monture, le Personnage remplace le \cadavermaster{}.
+
+\noindent$^{2}$ En Monture, le Personnage remplace une \paramour{}.
+}
+
+
+
 
 
 \begin{document}
@@ -386,7 +396,7 @@ Le Vampire possède le sort \heavensspelltwo{} (Discipline \heavens{}) comme \bo
 \newpage
 \armynewsubsection{\bloodline{} \lamia{}\dotfill\pts{40/25}}
 
-\begin{wrapfigure}[6]{L}{0cm}
+\begin{wrapfigure}[7]{L}{0cm}
 \centering
 \includegraphics[width=\logosize]{logos/logo_lamia.png}
 \end{wrapfigure}
@@ -416,7 +426,7 @@ Le Vampire et sa monture font des \poisonedattacks{} et gagnent \armourpiercing{
 
 \armynewsubsection{\bloodline{} \nosferatu{}\dotfill\pts{120/60}}
 
-\begin{wrapfigure}[8]{L}{0cm}
+\begin{wrapfigure}[7]{L}{0cm}
 \centering
 \includegraphics[width=\logosize]{logos/logo_nosferatu.png}
 \end{wrapfigure}
@@ -476,11 +486,11 @@ Les \vampirelords{} et les \vampireheroes{} peuvent  acheter une unique amélior
 
 \endpricelist
 
-\columnbreak
-\begin{center}\includegraphics[width=2cm]{logos/logo_strigoi.png}\end{center}
-\vspace*{-1.2cm}
-\armynewsubsection{\begin{center}Indépendant ou \strigoi{}\end{center}}
 
+\begin{center}\includegraphics[width=2cm]{logos/logo_strigoi.png}\end{center}
+\vspace*{-1.4cm} % Manual adjustment, change it for your own translation
+\armynewsubsection{\begin{center}Indépendant ou \strigoi{}\end{center}}
+\vspace*{-0.15cm} % Manual adjustment, change it for your own translation
 \startpricelist
 
 \pricelistitem{Malédiction du Sang}{70} Le Vampire gagne \regeneration{5}. S'il possédait déjà une \regeneration{}, il gagne \regeneration{4}. Toutes les \ghouls{} dans la même unité que le Vampire ainsi que son éventuelle monture gagnent \regeneration{6}. Si une figurine affectée par cette capacité possède déjà la \regeneration{}, sa sauvegarde de \regeneration{} est améliorée d'un point, pour obtenir 4+ au mieux.
@@ -591,7 +601,7 @@ Les \vampirelords{} et les \vampireheroes{} peuvent  acheter une unique amélior
 \medskip
 }
 
-\begin{multicols}{3}
+\begin{multicols}{3}\raggedcolumns
 \QRSinvoctable{\infantry}{\DTLiseq{\rowtrooptype}{\infantry}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}}
 
 \QRSinvoctable{\swarms}{\DTLiseq{\rowtrooptype}{\swarm}}

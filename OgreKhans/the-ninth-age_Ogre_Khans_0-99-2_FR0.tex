@@ -80,7 +80,7 @@
 
 \newcommand{\bombardiers}{Gueules d'Acier}
 \newcommand{\mercenaryveterans}{Balafrés}
-\newcommand{\tuskercavalry}{Chevaucheurs de Razor-Buffle}
+\newcommand{\tuskercavalry}{Monteurs de Razor-Buffle}
 \newcommand{\sabretoothtigers}{Tigres à Dents de Sabre}
 \newcommand{\kineater}{Dévoreur de Chair}
 \newcommand{\yetis}{Yétis}
@@ -124,7 +124,8 @@
 \newcommand{\maytakeironfist}{Peut prendre un \ironfist{}}
 \newcommand{\mayreplacethrowingweaponswith}{\optionschoice{Peut remplacer ses \throwingweapons{} par :}}
 \newcommand{\oneunitmayupgradetoforeman}{Une unité peut l'améliorer en \scraplingforeman{}}
-\newcommand{\onlywithlightarmour}{(seulement avec une armure légère)}
+\newcommand{\foremannote}{\textbf{Option} pour les unités de \scraplings{}}
+\newcommand{\onlywithlightarmour}{(seulement avec une Armure Légère)}
 \newcommand{\riderchoice}{\optionschoice{Le \rider{} peut remplacer son \ogrecrossbow{} par :}}
 \newcommand{\anyriderchoice}{\optionschoice{Chaque \rider{} peut remplacer son arme par :}}
 
@@ -155,7 +156,7 @@ Les \scraplingforemen{} ont la règle \holdyourground{} bien qu'ils ne soient pa
 }
 
 \newcommand{\handcannonrule}{%
-\range{24}, Force 4, \armourpiercing{1}, \multipleshots{1D6}. Le Canon à la hanche ne subit pas de pénalité pour toucher due à un Mouvement ou aux \multipleshots{}.
+\range{24}, Force 4, \armourpiercing{1}, \multipleshots{1D6}. Le \handcannon{} ne subit pas de pénalité pour toucher suite à un Mouvement ou aux \multipleshots{}.
 }
 
 \newcommand{\battlescarredrule}{%
@@ -199,7 +200,6 @@ Quand un Géant attaque au Corps à Corps, au lieu d'attaquer normalement, chois
 }
 
 \newcommand{\giantattackstable}{%
-\setlength\multicolsep{12.0pt plus 4.0pt minus 3pt}
 \vspace*{-0.5cm}\begin{multicols}{2}
 	\noindent Si l'unité est de type \infantry{}, \warbeast{}, \cavalry{}, \swarm{} ou \warmachine{}  :	
 	\renewcommand{\arraystretch}{1.5}	
@@ -220,6 +220,7 @@ Quand un Géant attaque au Corps à Corps, au lieu d'attaquer normalement, chois
 		\hline
 	\end{tabular}\end{center}
 	\renewcommand{\arraystretch}{1.2} % return to default
+	\vspace*{\fill}
 \end{multicols}
 }
 
@@ -246,6 +247,14 @@ Choisissez une figurine en contact socle à socle avec le Géant dans l'unité s
 \newcommand{\smashrule}{%
 Choisissez une figurine en contact socle à socle avec le Géant dans l'unité sélectionnée. Cette figurine subit une blessure avec \armourpiercing{6}. Si la figurine n'a pas encore attaqué, elle ne peut pas le faire au cours de cette manche. Si la figurine a déjà réalisé ses attaques, elle ne pourra pas attaquer au cours du tour de  joueur à venir.
 }
+
+% QRS
+
+\newcommand{\QRSnote}{%
+\noindent$^{1}$ Un Chasseur qui le prend en Monture remplace le \rider{}.
+}
+
+
 
 
 
@@ -411,7 +420,7 @@ L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scrapli
 \textbf{Nom} & \textbf{Artillerie} & \textbf{Portée} & \textbf{\labels@S{}} & \textbf{\multipleshots{}} & \textbf{\multiplewounds{}} & \textbf{\armourpiercing{}} \tabularnewline
 \ogrepistol{} & - & \distance{24} & 4 & - & - & 1 \tabularnewline
 \braceofogrepistols{} & - & \distance{24} & 4 & 2 & - & 1 \tabularnewline
-\ogrecrossbow{} & \refsymbol{} & \distance{30} & 5 & - & - & 1 \tabularnewline
+\ogrecrossbow{} & \starsymbol{} & \distance{30} & 5 & - & - & 1 \tabularnewline
 \huntingspear{} & - & \distance{12} & \labels@S{}+1 & - & {\smallfontsize 1D3, \monsters{}, \riddenmonsters{}} & - \tabularnewline
 \handcannon{} (\bombardiers{}) & - & \distance{24} & 4 & 1D6 & - & 1 \tabularnewline
 \thundercannon{} (1) & \cannon{} (\distance{2D6}) & \distance{48} & 10 & - & \ordnance{} & 2 \tabularnewline
@@ -420,7 +429,7 @@ L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scrapli
 \end{tabular}
 
 \medskip
-\noindent \refsymbol{}L'\ogrecrossbow{} pénètre les rangs comme une \boltthrower{}.
+\noindent \refsymbol{} L'\ogrecrossbow{} pénètre les rangs comme une \boltthrower{}.
 \end{center}
 
 \restoregeometry

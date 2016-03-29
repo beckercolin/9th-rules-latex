@@ -1,5 +1,5 @@
 
-%%% v0.99.1
+%%% v0.99.2
 
 \armylist
 
@@ -51,7 +51,7 @@
 			\gw{}=15,
 		},
 		\maytakegreaterfireblessing{}\refsymbol{}=35,
-		\refsymbol{}\onlyifpathoffireoralchemyischosen{}=,
+		\refsymbol{} \onlyifpathoffireoralchemyischosen{}=,
 	},
 	unitrules={
 		\unitrule{\greaterfireblessing}{\greaterfireblessingrule}
@@ -109,7 +109,7 @@
 			\gw{}=6,
 		},
 		\maytakefireblessing{}\refsymbol{}=25,
-		\refsymbol{}\onlyifpathoffireischosen{}=,
+		\refsymbol{} \onlyifpathoffireischosen{}=,
 	},
 	unitrules={
 		\unitrule{\fireblessing}{\fireblessingrule}
@@ -132,7 +132,7 @@
 		\bignamechoice{}=\unlimited,
 		\magicalitemsallowance{}=\upto{}<50,
 		\mayupgradeto{} \scout{} \onfootonly{}=10,
-		\mayreplacehuntingspearwithogrecrossbow{}=\free,
+		\mayreplacehuntingspearwithogrecrossbow{}.=\free,
 		\weapononechoice{
 			\pw{}=5,
 			\ironfist{}=15,
@@ -217,7 +217,7 @@
 		< 4 3 4 3 3 2 4 3 7},
 	type=\infantry ,
 	basesize=20x20,
-	unitsize=1,
+	unitsize=SPECIAL-\foremannote{},
 	specialrules={\insignificant, \backtowork},
 	weapons={\throwingweapons},
 	armour={\la},
@@ -403,6 +403,7 @@
 
 \showunit{
 	name={\rockaurochs},
+	QRSname={\rockaurochs{}$^{1}$},
 	cost=250,
 	profile={
         \aurochs < 7 3 - 7 6 6 2 5 5,
@@ -448,12 +449,12 @@
 \showunit{
 	name={\slavegiant},
 	cost=150,
-	profile={< 6 3 - 6 5 6 3 \refsymbol{} 8,},
+	profile={< 6 3 - 6 5 6 3 \starsymbol{} 8,},
 	type=\monster,
 	basesize=50x75,
 	unitsize=1,
 	armour={\ha},
-	specialrules={\immunetopsychology, \stubborn, \insignificant},
+	specialrules={\immunetopsychology{},\stubborn{},\insignificant{},\dowhatyouretold{},\giantattacks{}},
 	additional={%
 		\def\tempunitrules{%
 			\unitrule{\dowhatyouretold}{\dowhatyouretoldrule}
@@ -466,7 +467,7 @@
 			\unitrule{\smashname}{\smashrule}
 		}
 		\vspace*{0.1cm}\unitrules{\tempunitrules}
-		\giantattackstable
+		\vspace*{0.2cm}\giantattackstable
 	},
 }
 
@@ -487,6 +488,7 @@
 }
 
 \showunit{
+	notinQRS=yes,
 	name={\rockaurochs},
 	profile={ < 7 3 - 7 6 6 2 5 5,},
 	type=\monster ,
