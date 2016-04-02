@@ -1,0 +1,696 @@
+
+%%% v0.99.1
+
+\armylist
+
+\lordstitle
+
+\showunit{
+	name={\highprince},
+	cost={135},
+	profile={ < 5 7 7 4 3 3 8 4 10},
+	type=\infantry ,
+	basesize=20x20,
+	unitsize=1,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightningreflexes},
+	armour={\la},
+	options={
+		\honourchoice{}=\unlimited,
+		\magicalitemsallowance{}=\upto{}<100,
+		\anyofthefollowing{
+			\shield{}=5,
+			\ha{}=8,
+			\dragonforgedarmour{}=15,
+		},
+		\longbow{}=3,
+		\combatweapononechoice{
+			\pw{}=5,
+			\spear{}=5,
+			\lightlance{}=5,
+			\gw{}=10,
+			\halberd{}=10,
+			\lance{}=15,
+		},
+	},
+	mounts={
+		\elvenhorse{}=20,
+		\reaverchariot{}=25,
+		\gianteagle{}=50,
+		\griffon{}=120,
+		\youngdragon{}=170,
+		\dragon{}=250,
+		},
+}
+
+\showunit{
+	name={\archmage},
+	cost={185},
+	profile={ < 5 4 4 3 3 3 5 1 9},
+	type= \infantry ,
+	basesize=20x20,
+	unitsize=1,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightningreflexes},
+	specialrules={\masterofbalance},
+	magiclevel=3,
+	magicpaths={\battle, \whitemagic},
+	options={
+		\honourchoice{}=\unlimited,
+		\magiclevel{4}=30,
+		\magicalitemsallowance{}=\upto{}<100,
+	},
+	mounts={
+		\elvenhorse{}=20,
+		\reaverchariot{}=25,
+		\gianteagle{}=45,
+		\griffon{}=100,
+		\youngdragon{}=170,
+		\dragon{}=300,
+		},
+}
+
+\heroestitle
+
+
+\showunit{
+	name={\commander},
+	cost={70},
+	profile={ < 5 6 6 4 3 2 7 3 9},
+	type=\infantry ,
+	basesize=20x20,
+	unitsize=1,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightningreflexes},
+	armour={\la},
+	options={
+		\bsboption{}=25,
+		\honourchoice{}=\unlimited,
+		\magicalitemsallowance{}=\upto{}<50,
+		\anyofthefollowing{
+			\shield{}=2,
+			\ha{}=5,
+			\dragonforgedarmour{}=12,
+		},
+		\longbow{}=2,
+		\combatweapononechoice{
+			\pw{}=5,
+			\spear{}=5,
+			\lightlance{}=5,
+			\gw{}=8,
+			\halberd{}=8,
+			\lance{}=10,
+		},
+	},
+	mounts={
+		\elvenhorse{}=15,
+		\reaverchariot{}=40,
+		\gianteagle{}=50,
+		\griffon{}=150,
+		},
+}
+
+
+\showunit{
+	name={\mage},
+	cost={70},
+	profile={ < 5 4 4 3 3 2 5 1 8},
+	type= \infantry ,
+	basesize=20x20,
+	unitsize=1,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightningreflexes},
+	specialrules={\masterofbalance},
+	magiclevel=1,
+	magicpaths={\battle, \whitemagic},
+	options={
+		\honourchoice{}=\unlimited,
+		\magiclevel{2}=25,
+		\magicalitemsallowance{}=\upto{}<50,
+	},
+	mounts={
+		\elvenhorse{}=15,
+		\gianteagle{}=35,
+		\reaverchariot{}=40,
+		},
+}
+
+
+
+\coreunitstitle
+
+\showunit{
+	name={\citizenspears},
+	cost=105,
+	profile={ < 5 4 4 3 3 1 5 1 8},
+	type=\infantry ,
+	basesize=20x20,
+	unitsize=15,
+	maxmodels=50,
+	costpermodel=9,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightiningreflexes},
+	specialrules={\fightinextrarank{}},
+	weapons={\spear},
+	armour={\la, \shield},
+	options={
+		\maytakeha{}=\permodel{}<2,
+	},
+	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
+}
+
+\showunit{
+	name={\citizenarchers},
+	cost=90,
+	profile={ < 5 4 4 3 3 1 5 1 8},
+	type=\infantry ,
+	basesize=20x20,
+	unitsize=10,
+	maxmodels=30,
+	costpermodel=9,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightiningreflexes},
+	weapons={\longbow},
+	armour={\la},
+	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
+}
+
+\showunit{
+	name={\seaguard},
+	cost=120,
+	profile={ < 5 4 4 3 3 1 5 1 8},
+	type=\infantry ,
+	basesize=20x20,
+	unitsize=10,
+	maxmodels=40,
+	costpermodel=12,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightiningreflexes},
+	specialrules={\fightinextrarank{}, \weaponmaster{}, \steadyaim},
+	weapons={\bow, \spear},
+	armour={\la, \shield},
+	options={
+		\maytakeha{}=\permodel{}<2,
+		\maytakeambushseaguardoption{}=\permodel{}<3,
+	},
+	unitrules={
+		\unitrule{\steadyaim}{\steadyaimrule}
+	},
+	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
+}
+
+\showunit{
+	name={\highbornlancers},
+	cost=95,
+	profile={ 
+		\rider < 5 4 4 3 3 1 5 1 8,
+		\elvenhorse < 9 3 - 3 3 1 4 1 3,
+		},
+	type=\cavalry ,
+	basesize=25x50,
+	unitsize=5,
+	maxmodels=15,
+	costpermodel=18,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightiningreflexes \only{\rider{}}},
+	weapons={\lance},
+	armour={\ha, \shield, \mountsprotection{6}},
+	options={
+		\maytakemountsprotectionX{5}=\permodel{}<4,
+	},
+	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
+}
+
+\showunit{
+	name={\eleinreavers},
+	cost=85,
+	profile={ 
+		\rider < 5 4 4 3 3 1 5 1 8,
+		\elvenhorse < 9 3 - 3 3 1 4 1 3,
+		},
+	type=\cavalry ,
+	basesize=25x50,
+	unitsize=5,
+	maxmodels=10,
+	costpermodel=14,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightiningreflexes \only{\rider{}}},
+	specialrules={\fastcavalry{}},
+	weapons={\lightlance},
+	armour={\la, \mountsprotection{6}},
+	options={
+		\maytakebow{}=\permodel{}<1,
+		\maytakemountsprotectionX{5}=\permodel{}<3,
+	},
+	commandgroup={champion=10, musician=10, banner=10}
+}
+
+
+\specialunitstitle
+
+\showunit{
+	name={\swordmasters},
+	cost=65,
+	profile={ < 5 6 4 3 3 1 6 2 8},
+	type=\infantry ,
+	basesize=20x20,
+	unitsize=5,
+	maxmodels=30,
+	costpermodel=13,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightiningreflexes},
+	specialrules={\swordsworn},
+	weapons={\gw},
+	armour={\ha},
+	unitrules={
+		\unitrule{\swordsworn}{\swordswornrule}
+	},
+	commandgroup={champion=10, championallowance=25, musician=10, banner=10, bannerallowance=50}
+}
+
+\showunit{
+	name={\lionguards},
+	cost=120,
+	profile={ < 5 5 4 4 3 1 5 1 8},
+	type=\infantry ,
+	basesize=20x20,
+	unitsize=10,
+	maxmodels=30,
+	costpermodel=14,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightiningreflexes},
+	specialrules={\multiplewounds{2}{\monstrousbeast, \monstrouscavalry, \monster et \riddenmonster}, \strider{\forest{}}, \valiant},
+	weapons={\gw},
+	armour={\ha, \lionsfur},
+	options={
+		\maytakeskirmishlionguardoption{}=\permodel{}<3,
+	},
+	unitrules={
+		\unitrule{\lionsfur}{\lionsfurrule}
+	},
+	commandgroup={champion=10, championallowance=25, musician=10, banner=10, bannerallowance=50}
+}
+
+\showunit{
+	name={\flamewardens},
+	cost=135,
+	profile={ < 5 5 4 3 3 1 6 1 9},
+	type=\infantry ,
+	basesize=20x20,
+	unitsize=10,
+	maxmodels=25,
+	costpermodel=16,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightiningreflexes},
+	specialrules={\fightinextrarank{}, \immunetopsychology{}, \wardsave{4}},
+	weapons={\halberd},
+	armour={\ha},
+	commandgroup={champion=10, championallowance=25, musician=10, banner=10, bannerallowance=50}
+}
+
+\showunit{
+	name={\greywatchers},
+	cost=80,
+	profile={ < 5 5 5 3 3 1 5 1 8},
+	type=\infantry ,
+	basesize=20x20,
+	unitsize=5,
+	maxmodels=10,
+	costpermodel=16,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightiningreflexes},
+	specialrules={\skirmishers{}, \scout{}},
+	weapons={\bow, \bitterarrows},
+	armour={\la},
+	options={
+		\maytakelongbow{}=\permodel{}<1,
+		\maytakepw{}=\permodel{}<1,
+	},
+	commandgroup={champion=10}
+}
+
+\showunit{
+	name={\knightsofryma},
+	cost=135,
+	profile={ 
+		\knight < 5 5 4 4 3 1 6 1 9,
+		\elvenhorse < 9 3 - 3 3 1 4 1 3,
+		},
+	type=\cavalry ,
+	basesize=25x50,
+	unitsize=5,
+	maxmodels=12,
+	costpermodel=27,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightiningreflexes \only{\rider{}}},
+	weapons={\lance},
+	armour={\dragonforgedarmour, \shield, \mountsprotection{5}},
+	options={
+		\maytakedevastatingcharge{}=\permodel{}<5,
+	},
+	commandgroup={champion=10, championallowance=25, musician=10, banner=10, bannerallowance=50}
+}
+
+\showunit{
+	name={\reaverchariot},
+	cost=65,
+	profile={
+		\chariot < - - - 5 4 4 - - -,
+		\crew (2) < - 4 4 3 - - 5 1 8,
+		\elvenhorse (2) < 9 3 - 3 - - 4 1 3,
+		},
+	type=\chariot ,
+	basesize=50x100,
+	unitsize=1,
+	maxmodels=4,
+	costpermodel=60,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightiningreflexes \only{\crew{}}},
+	specialrules={\lighttroops},
+	weapons={\lightlance \only{\crew{}}, \longbow \only{\crew{}}},
+	armour={\la, \mountsprotection{6}},
+	options={
+		\maytakevanguard{}=\permodel{}<15,
+	},
+}
+
+\showunit{
+	name={\lionchariot},
+	cost=100,
+	profile={
+		\chariot < - - - 5 4 4 - - -,
+		\crew (2) < - 5 4 5 - - 5 1 8,
+		\lion (2) < 8 5 - 5 - - 4 2 8,
+		},
+	type=\chariot ,
+	basesize=50x100,
+	unitsize=1,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightiningreflexes \only{\crew{}}},
+	specialrules={\multiplewounds{2}{\monstrousbeast, \monstrouscavalry, \monster et \riddenmonster} \only{\crew{}}, \impacthits{+1}, \valiant},
+	weapons={\gw \only{\crew{}}},
+	armour={\ha, \mountsprotection{5}},
+}
+
+\showunit{
+	name={\seaguardreaper},
+	cost=60,
+	profile={
+		\reaper < - - - - 7 2 - - -,
+		\crew (2) < 5 4 4 3 3 - 5 1 8,
+		},
+	type=\warmachine ,
+	basesize=60,
+	unitsize=1,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightiningreflexes},
+	weapons={\elvenboltthrower},
+	unitequipment={
+		\equipmentdef{\elvenboltthrower}{\elvenboltthrowerrule}
+		\equipmentdef{\repeatingshots}{\repeatingshotsrule}
+	},
+	armour={\la},
+	options={
+		\maytakerepeatingshots{}=20,
+	},
+}
+
+
+\rareunitstitle
+
+
+\showunit{
+	name={\queensguards},
+	cost=65,
+	profile={ < 5 5 5 3 3 1 5 1 8},
+	type=\infantry ,
+	basesize=20x20,
+	unitsize=5,
+	maxmodels=20,
+	costpermodel=13,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightiningreflexes},
+	weapons={\bow, \moonlightarrows},
+	armour={\la},
+	options={
+		\maytakespear{}=\permodel{}<1,
+		\maytakelongbow{}=\permodel{}<2,
+	},
+	commandgroup={champion=10, musician=10, banner=10, bannerallowance=25}
+}
+
+\showunit{
+	name={\skysloop},
+	cost=120,
+	profile={
+		\chariot < - - - 5 4 4 - - -,
+		\crew (2) < - 4 4 3 - - 5 1 8,
+		\hawk (1) < 2 4 - 4 - - 4 2 8,
+		},
+	type=\chariot ,
+	basesize=50x100,
+	unitsize=1,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightiningreflexes \only{\crew{}}},
+	specialrules={\hardtarget, \fly{9}},
+	unitrules={
+		\unitrule{\aldanwarhorn}{\aldanwarhornrule}
+		\unitrule{\stormpennant}{\stormpennantrule}
+	},
+	weapons={\lightlance \only{\crew{}}, \skyreaper \only{\chariot{}}},
+	unitequipment={
+		\equipmentdef{\skyreaper}{\skyreaperrule}
+	},
+	armour={\la, \mountsprotection{6}},
+	options={
+		\maytakeoneofthefollowing{
+			\aldanwarhorn{}=40,
+			\stormpennant{}=40,
+			},
+	},
+}
+
+
+\showunit{
+	name={\gianteagle},
+	cost=50,
+	profile={ < 2 5 - 4 4 3 4 2 8},
+	type=\monstrousbeast ,
+	basesize=50x50,
+	unitsize=1,
+	maxmodels=4,
+	costpermodel=30,
+	specialrules={\fly{9}},
+	options={
+		\maytakearmourpiercing{}=\permodel{}<5,
+		\maytakelightningreflexes{}=\permodel{}<5,
+	},
+}
+
+
+\showunit{
+	name={\firephoenix},
+	cost=160,
+	profile={ < 2 5 - 5 5 5 4 3 8},
+	type=\monster ,
+	basesize=50x100,
+	unitsize=1,
+	specialrules={\fly{9}, \magicalattacks, \wardsave{5}, \fireborn, \flamingattacks, \flameswoop, \rebirth, \lastoftheirkind},
+	unitrules={
+		\unitrule{\flameswoop}{\flameswooprule}
+		\unitrule{\rebirth}{\rebirthrule}
+	},
+}
+
+\showunit{
+	name={\frostphoenix},
+	cost=200,
+	profile={ < 2 5 - 5 5 5 3 5 8},
+	type=\monster ,
+	basesize=50x100,
+	unitsize=1,
+	specialrules={\fly{8}, \magicalattacks, \wardsave{5}, \chillaura, \lastoftheirkind},
+	unitrules={
+		\unitrule{\chillaura}{\chillaurarule}
+	},
+	armour={\innatedefence{5}},
+}
+
+
+\mountstitle
+
+\mountssectionannouncement
+
+\showunit{
+	name={\gianteagle},
+	profile={ < 2 5 - 4 4 3 4 2 8},
+	type=\monstrousbeast ,
+	basesize=50x50,
+	specialrules={\fly{9}},
+	armour={\mountsprotection{6}},
+	options={
+		\maytakearmourpiercing{}=5,
+		\maytakelightningreflexes{}=<5,
+	},
+}
+
+\showunit{
+	name={\griffon},
+	profile={ < 6 5 - 5 5 4 5 4 5},
+	type=\monstrousbeast ,
+	basesize=50x50,
+	specialrules={\fly{8}, \largetarget, \fear},
+	options={
+		\anyofthefollowing{
+			\armourpiercing{1}=5,
+			\lightningreflexes{}=10,
+			\devastatingchargeandthunderouscharge{}=25,
+		},
+	},
+}
+
+\showunit{
+	name={\elvenhorse},
+	profile={ < 9 3 - 3 3 1 4 1 3},
+	type=\warbeast ,
+	basesize=25x50,
+	armour={\mountsprotection{6}},
+	options={
+		\maytakemountsprotectionX{5}=10,
+	},
+}
+
+\showunit{
+	name={\reaverchariot},
+	profile={
+		\chariot < - - - 5 4 4 - - -,
+		\crew (2) < - 4 4 3 - - 5 1 8,
+		\elvenhorse (2) < 9 3 - 3 - - 4 1 3,
+		},
+	type=\chariot ,
+	basesize=50x100,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightiningreflexes \only{\crew{}}},
+	specialrules={\lighttroops},
+	weapons={\lightlance \only{\crew{}}, \longbow \only{\crew{}}},
+	armour={\la, \mountsprotection{6}},
+	options={
+		\maytakevanguard{}=10,
+	},
+}
+
+\showunit{
+	name={\lionchariot},
+	profile={
+		\chariot < - - - 5 4 4 - - -,
+		\crew (2) < - 5 4 5 - - 5 1 8,
+		\lion (2) < 8 5 - 5 - - 4 2 -,
+		},
+	type=\chariot ,
+	basesize=50x100,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightiningreflexes \only{\crew{}}},
+	specialrules={\multiplewounds{2}{\monstrousbeast, \monstrouscavalry, \monster et \riddenmonster} \only{\crew{}}, \impacthits{+1}, \valiant},
+	weapons={\gw \only{\crew{}}},
+	armour={\ha, \mountsprotection{5}},
+}
+
+\showunit{
+	name={\skysloop},
+	profile={
+		\chariot < - - - 5 4 4 - - -,
+		\crew (2) < - 4 4 3 - - 5 1 8,
+		\hawk (1) < 2 4 - 4 - - 4 2 8,
+		},
+	type=\chariot ,
+	basesize=50x100,
+	commontype=\elvencommonrules ,
+	commonspecialrules={\martialdiscipline, \lightiningreflexes \only{\crew{}}},
+	specialrules={\hardtarget, \fly{9}},
+	unitrules={
+		\unitrule{\aldanwarhorn}{\aldanwarhornrule}
+		\unitrule{\stormpennant}{\stormpennantrule}
+	},
+	weapons={\lightlance \only{\crew{}}, \skyreaper \only{\chariot{}}},
+	unitequipment={
+		\equipmentdef{\skyreaper}{\skyreaperrule}
+	},
+	armour={\la, \mountsprotection{6}},
+	options={
+		\maytakeoneofthefollowing{
+			\aldanwarhorn{}=40,
+			\stormpennant{}=40,
+			},
+	},
+}
+
+\showunit{
+	name={\firephoenix},
+	profile={ < 2 5 - 5 5 5 4 3 8},
+	type=\monster ,
+	basesize=50x100,
+	unitsize=1,
+	specialrules={\fly{9}, \magicalattacks, \wardsave{4}, \fireborn, \flamingattacks, \flameswoop, \rebirth, \lastoftheirkind},
+	unitrules={
+		\unitrule{\flameswoop}{\seephoenixrareunit}
+		\unitrule{\rebirth}{\seephoenixrareunit}
+	},
+}
+
+\showunit{
+	name={\frostphoenix},
+	profile={ < 2 5 - 5 5 5 3 5 8},
+	type=\monster ,
+	basesize=50x100,
+	specialrules={\fly{8}, \magicalattacks, \wardsave{4}, \chillaura, \lastoftheirkind},
+	unitrules={
+		\unitrule{\chillaura}{\seephoenixrareunit}
+	},
+	armour={\innatedefence{5}},
+}
+
+\showunit{
+	name={\youngdragon},
+	profile={ < 6 5 1 5 5 4 3 4 9},
+	type=\monstrousbeast ,
+	basesize=50x100,
+	specialrules={\fly{7}, \fear, \largetarget, \stomp{1D3}, \breathweaponyoungdragon, \lastoftheirkind},
+	armour={\innatedefence{6}},
+}
+
+\showunit{
+	name={\dragon},
+	profile={ 
+		\dragon < 6 5 1 6 6 6 3 5 9,
+		\ancientdragon < 6 6 1 7 7 7 3 6 9,
+	},
+	type=\monster ,
+	basesize=50x100,
+	unitsize=\oneofakind,
+	specialrules={\fly{7}, \breathweapondragon},
+	armour={\innatedefence{3}},
+	options={
+		\ifmounterdbyhighprinceupgradetoancientdragon{}=100,
+	},
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

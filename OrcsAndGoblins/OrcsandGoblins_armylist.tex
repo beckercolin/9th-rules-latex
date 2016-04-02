@@ -105,7 +105,7 @@
 	armour={\la},
 	options={
 		\magicalitemsallowance{}=\upto{}<100,
-		\maygain{} \greentide{} \only{\general}=20,
+		\maygain{} \greentide{} \only{\general}=10,
 		\anyofthefollowing{
 			\shield{}=5,
 			\ha{}=8,
@@ -121,14 +121,14 @@
 		\startraceforking{3}%
 			\forkraceCommonGoblin{\free}%
 
-			\def\tempmounts{\wolf{}=15,\goblinwolfchariot{}=30}%
+			\def\tempmounts{\wolf{}=15,\goblinwolfchariot{}=25}%
 			\mounts{\tempmounts}
 
 		\vspace*{\fill}		
 		\columnbreak
 			\forkraceCaveGoblin{\pts{5}}%
 
-			\profilemodification{+1 \labels@I{}}
+			\profilemodification{+1 \labelforinit{}}
 
 			\def\tempmounts{\cavegnasher{}=20}%
 			\mounts{\tempmounts}
@@ -173,7 +173,7 @@
 		\columnbreak
 			\forkraceCaveGoblin{\free}%
 
-			\profilemodification{+1 \labels@I{} \wordand{} -1 \labels@Ld{}}
+			\profilemodification{+1 \labelforinit{} \wordand{} -1 \labels@Ld{}}
 
 			\def\tempoptions{\powershrooms{}=15}
 			\options{\tempoptions}
@@ -286,7 +286,7 @@
 \showunit{
 	name={\goblinchief},
 	QRSname={\goblinchief{}$^{3}$},
-	cost={60},
+	cost={35},
 	profile={ < 4 4 4 4 4 2 3 3 7},
 	type=\infantry{},
 	basesize=20x20,
@@ -319,7 +319,7 @@
 		\columnbreak
 			\forkraceCaveGoblin{\free}%
 
-			\profilemodification{+1 \labels@I{} \wordand{} -1 \labels@Ld{}}
+			\profilemodification{+1 \labelforinit{} \wordand{} -1 \labels@Ld{}}
 
 			\def\tempmounts{\cavegnasher{}=35}%
 			\mounts{\tempmounts}
@@ -364,7 +364,7 @@
 		\columnbreak
 			\forkraceCaveGoblin{\free}%
 
-			\profilemodification{+1 \labels@I{} \wordand{} -1 \labels@Ld{}}
+			\profilemodification{+1 \labelforinit{} \wordand{} -1 \labels@Ld{}}
 
 			\def\tempoptions{\powershrooms{}=15}
 			\options{\tempoptions}
@@ -395,9 +395,9 @@
 	options={
 		\anyofthefollowing{
 			\shield{}=\permodel{}<1,
+			\bow{}=\permodel{}<1,
 			\pw{}=\permodel{}<1,
 			\spear{}=\permodel{}<1,
-			\bow{}=\permodel{}<1,
 		},
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
@@ -433,33 +433,26 @@
 	maxmodels=40,
 	costpermodel=9,
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
+	options={%
+		\anyofthefollowing{
+			\shield{}=\permodel{}<1,
+			\pw{}=\permodel{}<1,
+			\spear{}=\permodel{}<1,
+		},
+	},
 	additional={%
 		\startraceforking{2}%
 			\forkraceCommonOrc{\free}%
 
 			\def\temparmour{\la}%
 			\armour{\temparmour}%
-			
-			\def\tempoptions{%
-				\anyofthefollowing{
-					\shield{}=\permodel{}<1,
-					\pw{}=\permodel{}<1,
-					\spear{}=\permodel{}<1,
-				},
-			}%
-			\vspace*{0.1cm}\options{\tempoptions}%
 
 		\vspace*{\fill}
 		\columnbreak
-			\forkraceFeralOrc{\pts{2}\permodel}%
+			\forkraceFeralOrc{\pts{1}\permodel}%
 
 			\def\tempoptions{%
 				\maytakeamammothstabber{}=15,
-				\anyofthefollowing{
-					\shield{}=\permodel{}<1,
-					\pw{}=\permodel{}<1,
-					\spear{}=\permodel{}<1,
-				},
 			}%
 			\options{\tempoptions}%
 
@@ -503,7 +496,7 @@
 		\columnbreak
 			\forkraceCaveGoblin{\free}%
 
-			\profilemodification{+1 \labels@I{} \wordand{} -1 \labels@Ld{}}
+			\profilemodification{+1 \labelforinit{} \wordand{} -1 \labels@Ld{}}
 
 			\def\tempoptions{%
 				\takemadgits{}=\permadgit{}<30,
@@ -739,13 +732,13 @@
 	cost={85},
 	profile={%
 		\chariot{}< - - - 5 5 4 - - -,
-		\rider{} (2)< - 4 3 4 - - 2 1 7,
+		\eadbasherrider{} (2)< - 4 3 4 - - 2 1 7,
 		\warboar{} (2)< 7 3 - 3 - - 3 1 3,
 	},
 	type=\chariot{},
 	basesize=50x100,
 	unitsize=1,
-	greenhiderace={\commonorc{} \textnormal{\only{\rider}}},
+	greenhiderace={\commonorc{} \textnormal{\only{\eadbasherrider}}},
 	weapons={\lance},
 	armour={\la{},\mountsprotection{5}},
 	specialrules={\thunderouscharge{} \only{\warboar},\impacthits{+1}},
@@ -760,7 +753,7 @@
 	cost={60},
 	profile={%
 		\chariot{}< - - - 5 4 4 - - -,
-		\rider{} (3)< - 2 3 3 - - 2 1 6,
+		\goblin{} (3)< - 2 3 3 - - 2 1 6,
 		\wolf{} (2)< 9 3 - 3 - - 3 1 3,
 	},
 	type=\chariot{},
@@ -768,7 +761,7 @@
 	unitsize=1,
 	maxmodels=4,
 	costpermodel=60,
-	greenhiderace={\commongoblin{} \textnormal{\only{\rider}}},
+	greenhiderace={\commongoblin{} \textnormal{\only{\goblin}}},
 	weapons={\shortbow{},\lightlance{}},
 	armour={\la{},\mountsprotection{6}},
 	specialrules={\lighttroops{},\insignificant{},\impacthits{+1}},
@@ -788,7 +781,7 @@
 	costpermodel=10,
 	greenhiderace={\cavegoblin{} \textnormal{\only{\rider}}},
 	armour={\la{},\mountsprotection{6}},
-	specialrules={\impacthits{+1},\immunetopsychology{},\fly{6},\skirmishers{},\oiitbites{},\rowsofteeth{}},
+	specialrules={\impacthits{1},\immunetopsychology{},\fly{6},\skirmishers{},\oiitbites{},\rowsofteeth{}},
 	unitrules={%
 		\unitrule{\oiitbites}{\oiitbitesrule}
 		\unitrule{\rowsofteeth}{\rowsofteethrule}
@@ -900,6 +893,7 @@
 	unitsize=1,
 	maxmodels=10,
 	costpermodel=38,
+	specialrules={\fear{},\stupidity{},\regeneration{4},\trollbelch{}},
 	additional={%
 		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
 		\setlength{\columnseprule}{1pt}
@@ -908,8 +902,7 @@
 		
 			\begin{center}\largerfontsize\antiquefont\commontrolls{} (\free{})\end{center}
 
-			\def\tempspecialrules{\fear{},\stupidity{},\regeneration{4},\trollbelch{}}
-			\specialrules{\tempspecialrules}
+			\begin{center}-\end{center}
 
 		\vspace*{\fill}
 		\columnbreak
@@ -919,7 +912,7 @@
 			\def\temparmour{\innatedefence{4}}
 			\armour{\temparmour}
 
-			\def\tempspecialrules{\fear{},\stupidity{},\regeneration{4},\trollbelch{},\magicresistance{3}}
+			\def\tempspecialrules{\magicresistance{3}}
 			\specialrules{\tempspecialrules}
 			}
 
@@ -927,7 +920,7 @@
 		\columnbreak
 			\begin{center}\largerfontsize\antiquefont\bridgetrolls{} (\pts{8}\permodel)\end{center}
 
-			\def\tempspecialrules{\fear{},\stupidity{},\regeneration{4},\trollbelch{},\distracting{},\strider{\water}}
+			\def\tempspecialrules{\distracting{},\strider{\water}}
 			\specialrules{\tempspecialrules}
 
 		\vspace*{\fill}
@@ -1057,12 +1050,12 @@
 	name={\orcboarchariot},
 	profile={%
 		\chariot{}< - - - 5 5 4 - - -,
-		\rider{} (1)< - 4 3 4 - - 2 1 7,
+		\eadbasherrider{} (1)< - 4 3 4 - - 2 1 7,
 		\warboar{} (2)< 7 3 - 3 - - 3 1 3,
 	},
 	type=\chariot{},
 	basesize=50x100,
-	greenhiderace={\commonorc{} \textnormal{\only{\rider}}},
+	greenhiderace={\commonorc{} \textnormal{\only{\eadbasherrider}}},
 	weapons={\lance},
 	armour={\la{},\mountsprotection{5}},
 	specialrules={\thunderouscharge{} \only{\warboar},\impacthits{+1}},
@@ -1082,12 +1075,12 @@
 	name={\goblinwolfchariot},
 	profile={%
 		\chariot{}< - - - 5 4 4 - - -,
-		\rider{} (2)< - 2 3 3 - - 2 1 6,
+		\goblin{} (2)< - 2 3 3 - - 2 1 6,
 		\wolf{} (2)< 9 3 - 3 - - 3 1 3,
 	},
 	type=\chariot{},
 	basesize=50x100,
-	greenhiderace={\commongoblin{} \textnormal{\only{\rider}}},
+	greenhiderace={\commongoblin{} \textnormal{\only{\goblin}}},
 	weapons={\shortbow{},\lightlance{}},
 	armour={\la{},\mountsprotection{6}},
 	specialrules={\lighttroops{},\insignificant{},\impacthits{+1}},

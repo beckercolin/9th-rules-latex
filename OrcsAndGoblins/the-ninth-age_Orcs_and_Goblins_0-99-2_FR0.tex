@@ -80,13 +80,13 @@
 
 \newcommand{\orcwarlord}{Seigneur de Guerre Orque}
 \newcommand{\orcwarlordinQRS}{Seigneur Orque} % Too long for QRS in French
-\newcommand{\orcbigshaman}{Grand Chaman Orque}
+\newcommand{\orcbigshaman}{Grand Chamane Orque}
 \newcommand{\goblinking}{Roi Gobelin}
-\newcommand{\goblinbigshaman}{Grand Chaman Gobelin}
+\newcommand{\goblinbigshaman}{Grand Chamane Gobelin}
 \newcommand{\orcchief}{Caïd Orque}
-\newcommand{\orcshaman}{Chaman Orque}
+\newcommand{\orcshaman}{Chamane Orque}
 \newcommand{\goblinchief}{Meneur Gobelin}
-\newcommand{\goblinshaman}{Chaman Gobelin}
+\newcommand{\goblinshaman}{Chamane Gobelin}
 
 % Core
 
@@ -219,6 +219,8 @@
 \end{center}
 }
 
+\newcommand{\labelforinit}{Init.} % \labels@I usually
+
 \newcommand{\profilemodification}[1]{%
 \begin{center}\textbf{#1 sur le profil}\end{center}
 \vspace{-0.2cm}
@@ -251,9 +253,9 @@
 \newcommand{\netsrule}{%
 Au début de chaque Manche de Corps à Corps, choisissez une unité en contact socle à socle avec l'unité possédant des \nets{}. Jetez 1D6.
 
-Sur 2+ la cible subit un malus de -1 en Force (jusqu'à un minimum de 1) jusqu'à la fin du tour de joueur.
+Sur 2+, la cible subit un malus de -1 en Force (jusqu'à un minimum de 1) jusqu'à la fin du tour de joueur.
 
-Sur un résultat de \result{1}, l'unité qui a utilisé les \nets{} subit le malus à la place. Une unité ne peut être affectée par des \nets{} qu'une seule fois par Phase.
+Sur un résultat de \result{1}, l'unité qui a utilisé les \nets{} subit le malus à sa place. Une unité ne peut être affectée par des \nets{} qu'une seule fois par Phase.
 }
 
 \newcommand{\motherskissrule}{%
@@ -269,14 +271,14 @@ Les \shadygits{} comptent comme des Champions et sont obligatoirement déployés
 }
 
 \newcommand{\surpriserule}{%
-Les \madgits{} ne sont pas déployés normalement mais cachés dans leur unité. Ce sont des options d'unité donc ils sont ignorés quand ils sont détruits pour le calcul des Points de Victoire, leurs points étant déjà inclus dans l'unité de \goblins{} les cachant. Il faut donc détruire cette dernière unité pour gagner les Points de Victoire leur correspondant. Avant d'être lâchés hors de leur unité, les \madgits{} ne peuvent pas être affectés par quoi que ce soit ni avoir d'effet sur la partie. Les \madgits{} détruits ne provoquent pas de tests de Panique. Ils ne comptent pas dans le nombre de figurines de leur unité. Une fois relâchés, ils bougent, agissent et suivent leur règles spéciales indépendamment comme toute autre unité individuelle.
+Les \madgits{} ne sont pas déployés normalement mais cachés dans leur unité. Ce sont des options d'unité, donc ils sont ignorés quand ils sont détruits pour le calcul des Points de Victoire, leur valeur étant déjà incluse dans l'unité de \goblins{} les cachant. Il faut donc détruire cette dernière unité pour gagner leurs Points de Victoire. Avant d'être lâchés hors de leur unité, les \madgits{} ne peuvent pas être affectés par quoi que ce soit, ni avoir d'effet sur la partie. Les \madgits{} détruits ne provoquent pas de tests de Panique. Ils ne comptent pas dans le nombre de figurines de leur unité. Une fois relâchés, ils bougent, agissent et suivent leur règles spéciales indépendamment comme toute autre unité individuelle.
 
 Ils peuvent être relâchés de deux façons :
 \begin{customsubitemize}
 \item N'importe quel nombre de \madgits{} peut être relâché quand leur unité déclare comme réaction à une charge Tenir la Position ou Tenir la Position et Tirer.
 \item Tous les \madgits{} doivent être relâchés si l'unité les cachant n'est ni en fuite ni engagée au Corps à Corps au début de la Phase de Tir du propriétaire et qu'elle est à moins de \distance{8} d'une unité ennemie.
 \end{customsubitemize}
-Occupez-vous des \madgits{} l'un après l'autre. Placer le \madgit{} en contact socle à socle avec son unité (il ne lui inflige aucune touche pour ce contact), et choisissez une direction. Déplacez-le de \distance{2D6} dans cette direction. Le \madgit{} suit ensuite ses propres règles pour son déplacement lors des tours suivants.
+Occupez-vous des \madgits{} l'un après l'autre. Placez le \madgit{} en contact socle à socle avec son unité (il ne lui inflige aucune touche pour ce contact), et choisissez une direction. Déplacez-le de \distance{2D6} dans cette direction. Le \madgit{} suit ensuite ses propres règles pour son déplacement lors des tours suivants.
 }
 
 \newcommand{\oiitbitesrule}{%
@@ -288,7 +290,7 @@ Les \gnashers{} font les Attaques de Soutien à la place de leurs Cavaliers.
 }
 
 \newcommand{\theyreeverywhererule}{%
-Quand une \gnasherherd{} est démoralisée au Corps à Corps, elle est immédiatement retirée du champ de bataille comme perte, et toutes les unités à moins de \distance{6} subissent une touche de Force 5 par tranches de 5 \gnashers{} qui restaient dans la \gnasherherd{}.
+Quand une \gnasherherd{} est démoralisée au Corps à Corps, elle est immédiatement retirée du champ de bataille comme perte, et toutes les unités à moins de \distance{6} subissent une touche de Force 5 par tranche de 5 \gnashers{} qui restaient dans la \gnasherherd{}.
 }
 
 \newcommand{\orcoverseerrule}{%
@@ -303,11 +305,11 @@ La \warmachine{} peut choisir de perdre 1 PV pour relancer un jet sur la Table d
 
 \newcommand{\gitlauncherrule}{%
 \textbf{\artilleryweapon} de type \textbf{\catapult{} (\distance{1})}. \newline\range{12-60}, Force 5, \armourpiercing{2}.\newline
-Après avoir fait dévié le gabarit, vous pouvez le déplacer dans la direction de votre choix sur une distance de \distance{1D6}. Vous ne pouvez cependant pas le déplacer délibérément sur des unités au Corps à Corps ou des unités amies, si cela peut être évité. Une fois la position finale obtenue, au lieu de suivre les règles habituelles des gabarits, toute unité sous le gabarit subit 1D3+1 touches.
+Après avoir fait dévier le gabarit, vous pouvez le déplacer dans la direction de votre choix sur une distance de \distance{1D6}. Vous ne pouvez cependant pas le déplacer délibérément sur des unités au Corps à Corps ou des unités amies, si cela peut être évité. Une fois la position finale obtenue, au lieu de suivre les règles habituelles des gabarits, toute unité sous le gabarit subit 1D3+1 touches.
 }
 
 \newcommand{\greenhidecatapultsnote}{%
-Une armée ne peut pas contenir plus de deux \splatterers{} ni plus de deux \gitlaunchers{}. Ces nombres sont changés en un et quatre respectivement pour les Patrouilles et les Grandes Armées.
+Une armée ne peut pas contenir plus de deux \splatterers{}, ni plus de deux \gitlaunchers{}. Ces nombres sont changés en un et quatre respectivement pour les Patrouilles et les Grandes Armées.
 }
 
 \newcommand{\pointedsticksrule}{%
@@ -327,7 +329,7 @@ La \scrapwagon{} obtient Force 5.
 }
 
 \newcommand{\trollbelchrule}{%
-Au lieu d'attaquer normalement au Corps a Corps, un Troll peut choisir de faire une unique Attaque Spéciale de Corps à Corps qui touche automatiquement avec Force 5 et \armourpiercing{6}.
+Au lieu d'attaquer normalement au Corps à Corps, un Troll peut choisir de faire une unique Attaque Spéciale de Corps à Corps qui touche automatiquement avec Force 5 et \armourpiercing{6}.
 }
 
 
@@ -399,7 +401,7 @@ Le \gnasherwreckingteam{} gagne la règle \runningamok{} quand il touche une uni
 }
 
 \newcommand{\smashemflatrule}{%
-Si l'\greatgreenidol{} est engagé au Corps à Corps, toutes les unités amies à moins de \distance{8} gagnent la \devastatingcharge{}.
+Si l'\greatgreenidol{} est engagée au Corps à Corps, toutes les unités amies à moins de \distance{8} gagnent la règle \devastatingcharge{}.
 }
 
 \newcommand{\wevegotthegreenlightrule}{%
@@ -423,7 +425,7 @@ Le Sorcier gagne la règle \pathmaster{}. Toutes les figurines amies avec la cap
 
 \noindent$^{3}$ Un \cavegoblin{} gagne +1 I et -1 Cd.
 
-\noindent$^{4}$ Un \rider{} de moins en tant que monture.
+\noindent$^{4}$ Un membre d'équipage de moins quand il sert de monture.
 }
 
 
@@ -500,21 +502,21 @@ Certaines figurines de l'armée disposent d'un ensemble de règles spéciales qu
 
 \armyspecialruleentry{\unruly}
 
-L'unité a un malus de -1 en Commandement pour les tests de \frenzy{} et pour réfréner une Poursuite. Si l'unité est en formation de Horde, jetez trois dés pour les tests de Panique en ignorez le dé ayant donné le plus grand résultat.
+L'unité a un malus de -1 en Commandement pour les tests de \frenzy{} et pour se réfréner de poursuivre. Si l'unité est en formation de Horde, jetez trois dés pour les tests de Panique et ignorez le dé ayant donné le plus grand résultat.
 
 \armyspecialruleentry{\borntofight}
 
-L'élément de figurine gagne +1 en Force la première Manche de Corps à Corps.
+L'élément de figurine gagne +1 en Force lors de la première Manche de Corps à Corps.
 
 \begin{multicols}{2}\raggedcolumns
 \armyspecialruleentry{\waaargh}
 
-Une fois par partie, le Général peut déclarer une \waaargh{} au début du tour de n'importe quel joueur. Toutes les figurines ayant des éléments appartenant à une \greenhiderace{} gagnent +1 en Mouvement et la règle \swiftstride{} jusqu'à la fin du Tour de Joueur.
+Une fois par partie, le Général peut déclarer une \waaargh{} au début du tour de n'importe quel joueur. Toutes les figurines ayant des éléments appartenant à une Race de Peaux Vertes gagnent +1 en Mouvement et la règle \swiftstride{} jusqu'à la fin du Tour de Joueur.
 
 \columnbreak
 \armyspecialruleentry{\greentide}
 
-Une fois par partie, le Général peut déclarer une \greentide{} au début du tour de n'importe quel joueur. Tous les éléments de figurine appartenant à un \greenhiderace{} de \goblins{} gagnent la règle \fightinextrarank{} jusqu'à la fin du Tour de Joueur suivant.
+Une fois par partie, le Général peut déclarer une \greentide{} au début du tour de n'importe quel joueur. Tous les éléments de figurine appartenant à une Race Peau Verte de \goblins{} gagnent la règle \fightinextrarank{} jusqu'à la fin du Tour de Joueur suivant.
 
 \end{multicols}
 
@@ -536,11 +538,11 @@ Une unité avec \shambolic{} et \runningamok{} se déplace toujours dans une dir
 
 Les figurines avec \shambolic{} et \ricochet{} ignorent l'écart d'\distance{1} entre unités pendant leur \randommovement{}. Si une figurine avec cette règle touche une autre unité, amie ou ennemie, elle continue son mouvement dans la même direction jusqu'à respecter la règle des \distance{1} d'écart entre unités. Cela peut amener cette figurine à traverser plusieurs unités lors du même mouvement. Si elle ne peut être placée à la fin, elle est retirée comme perte.
 
-Toute unité traversée qui est dans la distance de déplacement obtenue aux dés est touchée. Les unités touchées subissent X touches, X étant la valeur entre les parenthèses. Les unités touchées engagées dans un même Corps à Corps ne comptent que comme une seule unité pour la détermination des touches. Le joueur possédant la figurine avec \ricochet{} répartit les touches infligées entre les unités aussi équitablement que possible, puis applique les règles normales de distribution des touches dans chaque unité.
+Toute unité traversée durant le déplacement jusqu'à la distance obtenue sur les dés pour le \randommovement{} est touchée. Les unités touchées subissent X touches, X étant la valeur entre les parenthèses. Les unités touchées engagées dans un même Corps à Corps ne comptent que comme une seule unité pour la détermination des touches. Le joueur possédant la figurine avec \ricochet{} répartit les touches infligées entre les unités aussi équitablement que possible, puis applique les règles normales de distribution des touches dans chaque unité.
 
-Il n'est pas possible de charger une figurine avec \ricochet{}, mais on peut charger, fuir, poursuivre ou se déplacer à travers elle. Les unités faisant ainsi subissent X+1D6 touches, puis retirez la figurine avec \ricochet{} du champ de bataille en tant que perte.
+Il n'est pas possible de charger une figurine avec \ricochet{}, mais une unité peut charger, fuir, poursuivre ou se déplacer à travers elle. L'unité subit alors X+1D6 touches, puis la figurine avec \ricochet{} est retirée du champ de bataille en tant que perte.
 
-Toutes les touches infligées sont faites avec la Force non modifiée de la figurine et ont \armourpiercing{1}.
+Toutes les touches sont infligées avec la Force non modifiée de la figurine et ont \armourpiercing{1}.
 
 
 \closearmyspecialrules
@@ -551,9 +553,9 @@ Toutes les touches infligées sont faites avec la Force non modifiée de la figu
 
 \startitemlistonecol
 
-\listitemonecol{\powershrooms} Générez 1D3+1 \powershrooms{} à la fin du déploiement pour le porteur. Avant de jeter les dés pour lancer un sort, le porteur peut décider d'utiliser un seul \powershroom{} pour ajouter 1 au résultat de lancement du sort. C'est une exception à la limitation des Modificateurs Magiques. Le \powershroom{} utilisé ne peut pas être réutilisé à nouveau. Après l'avoir utilisé, lancez 1D6. Si le dé donne un \result{1}, le Sorcier subit une touche de Force 3 sans sauvegarde d'aucune sorte.
+\listitemonecol{\powershrooms} Générez 1D3+1 \powershrooms{} à la fin du déploiement pour le porteur. Avant de jeter les dés pour lancer un sort, le porteur peut décider d'utiliser un seul \powershroom{} pour ajouter +1 au résultat de lancement du sort. C'est une exception à la limitation des Modificateurs Magiques. Un \powershroom{} est à usage unique. Après l'avoir utilisé, lancez 1D6. Si le dé donne un \result{1}, le Sorcier subit une touche de Force 3 sans sauvegarde d'aucune sorte.
 
-\listitemonecol{\mammothstabber} Si l'unité possède au moins un Rang Complet, elle gagne des \impacthits{1D3} de Force 5 avec \multiplewounds{\ordnance}{\largetarget}.
+\listitemonecol{\mammothstabber} Si l'unité possède au moins un Rang Complet, elle gagne 1D3 \impacthits{} de Force 5 avec \multiplewounds{\ordnance}{\largetarget}.
 
 \enditemlistonecol
 
@@ -572,7 +574,7 @@ Toutes les touches infligées sont faites avec la Force non modifiée de la figu
 
 \pricelistitem{Arc Zap de Maza}{30}Type : Arc. \range{24}, Force 3, \lightningattacks{}, \multipleshots{3}. L'unité du porteur gagne la règle spéciale \quicktofire{}.
 
-\pricelistitem{Dague de Sournois}{15}Type : \hw{}. Les attaques faites avec cette arme ont \armourpiercing{1}. Si le porteur attaque une unité ennemie de flanc ou de dos, ses attaques avec cette arme gagnent +2 en Force.
+\pricelistitem{Dague de Sournois}{15}Type : \hw{}. Les attaques portées avec cette arme ont \armourpiercing{1}. Si le porteur attaque une unité ennemie de flanc ou de dos, ses attaques avec cette arme gagnent +2 en Force.
 
 \endpricelist
 
@@ -582,7 +584,7 @@ Toutes les touches infligées sont faites avec la Force non modifiée de la figu
 
 \pricelistitem{Couronne du Roi des Cavernes}{40}\goblin{} uniquement. Ne peut pas être pris par une \largetarget{}.\newline Type : Aucun. Sauvegarde d'Armure de 6+. Le porteur ne peut rejoindre ou être rejoint que par une unité dont toutes les figurines ont au moins un élément qui partage la même \greenhiderace{} que lui. L'unité du porteur gagne alors la règle \vanguard{} et peut se déplacer après un ralliement, mais elle ne peut alors ni tirer, ni faire de Marche Forcée. De plus, la portée de la \inspiringpresence{} ou de \holdyourground{} du porteur est augmentée de \distance{6}.
 
-\pricelistitem{Plaques de Tuktek}{35}Type : \ha{}. Le porteur gagne +1 en Endurance et la figurine du porteur gagne des \impacthits{1D3}.
+\pricelistitem{Plaques de Tuktek}{35}Type : \ha{}. Le porteur gagne +1 en Endurance et la figurine du porteur gagne 1D3 \impacthits{}.
 
 \endpricelist
 

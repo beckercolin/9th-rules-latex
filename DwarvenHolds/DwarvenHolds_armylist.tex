@@ -10,51 +10,52 @@
 	cost={125},
 	profile={< 3 7 4 4 5 3 4 4 10},
 	type=\infantry{},
-	unitsize={1},
+	unitsize=1,
 	basesize=20x20,
-	commontype=\dwarwenholdscommonrules{},
+	commontype=\dwarvencommonrules{},
 	commonspecialrules={\relentless{},\shieldwall{},\sturdy{}},
 	armour={\platearmour{}},
 	options={
-		\maytakerunicstuff{}=\upto<125,
-		\maytakeanholdstone{}=30,
+		\maytakerunicitems{}=\upto{}<125,
+		\maytakeaholdstone{}=30,
 		\maytakeashield{}=10,
 		\shootingweapononechoice{
 			\pistol{}=4,
 			\crossbow{}=8,
 			\handgun{}=8,
-			},
+		},
 		\maytakeagw{}=10,
 	},
-	mounts={\shieldbearers{}=50, \warthrone{}=150},
-	}
+	mounts={\shieldbearers{}=50,\warthrone{}=150},
+}
 
 \showunit{
 	name={\daemonseeker{}},
 	cost={130},
 	profile={< 3 7 4 5 5 3 5 5 10},
 	type=\infantry{},
-	unitsize={1},
+	unitsize=1,
 	basesize=20x20,
-	commontype=\dwarwenholdscommonrules{},
-	commonspecialrules={\relentless{},\thebiggertheyare{},\sturdy{},\comewithme{}},
-	specialrules={\vanguard{},\lethalstrike{},\hatreddeamon{},\unbreakable{},\weaponmaster{},\notaleader{},\swiftstride{},\wardsave{6}},
-	weapons={\gw{}},
+	commontype=\dwarvencommonrules{},
+	commonspecialrules={\relentless{},\sturdy{}},
+	commontypeB=\seekerscommonrules{},
+	commonspecialrulesB={\unbreakable{},\weaponmaster{},\wardsave{6},\thebiggertheyare{},\comewithme{}},
+	specialrules={\vanguard{},\lethalstrike{},\hatred{} (\daemonlegion{}),\notaleader{}},
+	weapons={\pw{},\gw{}},
 	options={
-		\maytakerunicweapon{}=\upto<125,
+		\maytakearunicweapon{}=\upto{}<125,
 		\maytakeuptotwoofthefollowing{
 			\magicresistance{1}=15,
 			\fear{}=20,
 			\monsterseeker{}=30,
 			\grimresolve{}=40,
-			},
 		},
-	unitrules={
-	\unitrule{\monsterseeker{}}{\monsterseekerrule{}}
-	\unitrule{\grimresolve{}}{\grimresolverule{}}
 	},
-	}	
-
+	unitrules={
+		\unitrule{\monsterseeker{}}{\monsterseekerrule{}}
+		\unitrule{\grimresolve{}}{\grimresolverule{}}
+	},
+}	
 
 \showunit{
 	name={\runicmaster{}},
@@ -63,49 +64,50 @@
 	type= \infantry{} ,
 	basesize=20x20,
 	unitsize=1,
-	commontype=\dwarwenholdscommonrules{},
+	commontype=\dwarvencommonrules{},
 	commonspecialrules={\relentless{},\shieldwall{},\sturdy{}},
 	specialrules={\channel{},\magicresistance{2},\runecraftmastery{}},
 	armour={\platearmour{}},
-		options={
-		\maytakerunicstuff{}=\upto<125,			
+	options={
+		\maytakerunicitems{}=\upto{}<125,			
 		\maytakeashield{}=3,
 		\maytakeagw{}=8,
-		\masterrunechoice{}=\perrune{5},
-		},
+		\battleruneschoice{4}=\perrune{}<5,
+	},
 	unitrules={
 		\unitrule{\runecraftmastery{}}{\runecraftmasteryrule{}}
-		},
-	}
-	
+	},
+}
+
 \showunit{
 	name={\masterengineer{}},
 	cost={120},
 	profile={< 3 6 4 4 5 3 3 2 9},
 	type=\infantry{},
-	unitsize={1},
+	unitsize=1,
 	basesize=20x20,
-	commontype=\dwarwenholdscommonrules{},
-	commonspecialrules={\relentless{},\mastermarksman{},\shieldwall{},\entrench{},\sturdy{}},
-	specialrules={\engineer{}},
+	commontype=\dwarvencommonrules{},
+	commonspecialrules={\relentless{},\shieldwall{},\sturdy{}},
+	specialrules={\engineer{},\mastermarksman{},\entrench{}},
 	armour={\platearmour{}},
 	options={
-		\maytakerunicstuff{}=\upto<100,
+		\maytakerunicitems{}=\upto{}<100,
 		\maytakeashield{}=3,
 		\shootingweapononechoice{
 			\pistol{}=4,
 			\braceofpistols{}=5, 
 			\crossbow{}=8,
 			\handgun{}=8,
-			\forgerepeater{}=20,
 			\wyrmslayerrocket{}=20,
-			},
+			\forgerepeater{}=20,
+		},
 		\maytakeagw{}=8,
-		},
-		unitrules={
-		\unitrule{\mastermarksman{}}{\mastermarksmanrule{}}
-		},
-	}	
+	},
+	additional={
+		\def\tempunitrules{\unitrule{\mastermarksman{}}{\mastermarksmanrule{}}}
+		\unitrules{\tempunitrules}
+	},
+}	
 	
 
 	
@@ -117,106 +119,106 @@
 	cost={70},
 	profile={< 3 6 4 4 5 2 3 3 9},
 	type=\infantry{},
-	unitsize={1},
+	unitsize=1,
 	basesize=20x20,
-	commontype=\dwarwenholdscommonrules{},
+	commontype=\dwarvencommonrules{},
 	commonspecialrules={\relentless{},\shieldwall{},\sturdy{}},
 	armour={\platearmour{}},
 	options={
-		\maytakerunicstuff{}=\upto<75,
-		\maytakeanholdstone{}=25,
+		\maytakerunicitems{}=\upto{}<75,
+		\maytakeaholdstone{}=25,
 		\maybecomeoneofthefollowing{
-			\clanleader{}=30,		
-			\bsboption{}=25,
-			},
+			\bsb{}=25,
+			\clanleader{}=30,
+		},
 		\maytakeashield{}=8,
 		\shootingweapononechoice{
 			\pistol{}=4,
 			\crossbow{}=8,
 			\handgun{}=8,
-			},
+		},
 		\maytakeagw{}=10,
-		},
-		unitrules={
+	},
+	unitrules={
 		\unitrule{\clanleader{}}{\clanleaderrule{}}
-		},
-	}
+	},
+}
 
 \showunit{
 	name={\dwarfengineer{}},
 	cost={65},
 	profile={< 3 5 4 4 4 2 3 2 9},
 	type=\infantry{},
-	unitsize={1},
+	unitsize=1,
 	basesize=20x20,
-	commontype=\dwarwenholdscommonrules{},
-	commonspecialrules={\relentless{},\shieldwall{},\entrench{},\sturdy{}},
-	specialrules={\engineer{}},
+	commontype=\dwarvencommonrules{},
+	commonspecialrules={\relentless{},\shieldwall{},\sturdy{}},
+	specialrules={\entrench{},\engineer{}},
 	armour={\platearmour{}},
 	options={
-		\maytakerunicstuff{}=\upto< 50,
+		\maytakerunicitems{}=\upto{}<50,
 		\maytakeashield{}=2,
 		\shootingweapononechoice{
 			\pistol{}=4,
 			\braceofpistols{}=5, 
 			\crossbow{}=8,
 			\handgun{}=8,
-			\forgerepeater{}=20,
 			\wyrmslayerrocket{}=20,
-			},
-		\maytakeagw{}=6,
+			\forgerepeater{}=20,
 		},
-	}
+		\maytakeagw{}=6,
+	},
+}
 
 \showunit{
 	name={\runicsmith{}},
 	cost={70},
 	profile={< 3 5 3 4 4 2 3 2 9},
 	type=\infantry{},
-	unitsize={1},
+	unitsize=1,
 	basesize=20x20,
-	commontype=\dwarwenholdscommonrules{},
-	commonspecialrules={\runecraft{},\relentless{},\shieldwall{},\sturdy{}},
-	specialrules={\channel{},\magicresistance{1}},
-		armour={\platearmour{}},
-		options={
-		\maytakerunicstuff{}=\upto < 75,			
+	commontype=\dwarvencommonrules{},
+	commonspecialrules={\relentless{},\shieldwall{},\sturdy{}},
+	specialrules={\runecraft{},\channel{},\magicresistance{1}},
+	armour={\platearmour{}},
+	options={
+		\maytakerunicitems{}=\upto{}<75,			
 		\maytakeashield{}=2,
 		\maytakeagw{}=6,
-		\runechoice{}=\perrune{5},
-		},
+		\battleruneschoice{2}=\perrune{}<5,
+	},
 	unitrules={
 		\unitrule{\runecraft{}}{\runecraftrule{}}
-		},
-	}
-
-
+	},
+}
 
 \showunit{
 	name={\dragonseeker{}},
 	cost={50},
 	profile={< 3 6 3 4 5 2 4 4 10},
 	type=\infantry{},
-	unitsize={1},
+	unitsize=1,
 	basesize=20x20,
-	commontype=\dwarwenholdscommonrules{},
-	commonspecialrules={\relentless{},\thebiggertheyare{},\sturdy{},\comewithme{}},
-	specialrules={\vanguard{},\lethalstrike{},\unbreakable{},\weaponmaster{},\notaleader{},\swiftstride{},\wardsave{6}},
+	commontype=\dwarvencommonrules{},
+	commonspecialrules={\relentless{},\sturdy{}},
+	commontypeB=\seekerscommonrules{},
+	commonspecialrulesB={\unbreakable{},\weaponmaster{},\wardsave{6},\thebiggertheyare{},\comewithme{}},
+	specialrules={\vanguard{},\lethalstrike{},\notaleader{}},
 	weapons={\gw{},\pw{}},
 	options={
-		\maytakerunicweapon{}=\upto<75,
+		\maytakearunicweapon{}=\upto{}<75,
 		\maytakeuptotwoofthefollowing{
 			\magicresistance{1}=15,
 			\fear{}=20,
 			\monsterseeker{}=20,
 			\grimresolve{}=25,
-			},
 		},
-		unitrules={
+	},
+	unitrules={
 		\unitrule{\monsterseeker{}}{\monsterseekerrule{}}
 		\unitrule{\grimresolve{}}{\grimresolverule{}}
-		},
-	}
+	},
+}
 
 \coreunitstitle
 
@@ -224,70 +226,71 @@
 	name={\clanwarriors{}},
 	cost={60},
 	profile={< 3 4 3 3 4 1 2 1 9},
-	costpermodel=7 ,
+	costpermodel=7,
 	maxmodels=40,
 	type=\infantry{},
-	unitsize={10},
+	unitsize=10,
 	basesize=20x20,
-	commontype=\dwarwenholdscommonrules{},
+	commontype=\dwarvencommonrules{},
 	commonspecialrules={\relentless{},\shieldwall{},\sturdy{}},
 	armour={\ha{}},
 	options={
-		\onlyonemaytakevanguard{} \Xmodelsorless{30}=\permodel < 1,
-		\maytakeashield=\permodel < 1,
+		\onlyonemaytakevanguard{} \Xmodelsorless{30}=\permodel{}<1,
+		\maytakeashield{}=\permodel{}<1,
+		\maytakethrowingweapons{}=\permodel{}<1,
 		\weapononechoice{
-			\pw{} =\permodel < 1,
-			\spear{}=\permodel < 1,
-			\gw{}=\permodel < 3
-			},
+			\pw{}=\permodel{}<1,
+			\spear{}=\permodel{}<1,
+			\gw{}=\permodel{}<3,
 		},
-		commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
+	},
+	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
 }
 
 \showunit{
 	name={\greybeards{}},
 	cost={85},
 	profile={< 3 5 3 4 4 1 2 1 9},
-	costpermodel=11 ,
+	costpermodel=11,
 	maxmodels=30,
 	type=\infantry{},
-	unitsize={10},
+	unitsize=10,
 	basesize=20x20,
-	commontype=\dwarwenholdscommonrules{},
-	commonspecialrules={\seenitall{},\relentless{},\shieldwall{},\sturdy{}},
-	specialrules={\immunetopsychology{}},
+	commontype=\dwarvencommonrules{},
+	commonspecialrules={\relentless{},\shieldwall{},\sturdy{}},
+	specialrules={\seenitall{},\immunetopsychology{}},
 	armour={\ha{}},
 	options={
-		Si aucune unité de Guerriers Nains ne l'a fait{,} \onlyonemaytakevanguard \Xmodelsorless{20}=\permodel <1,
-		\maytakeashield{}=\permodel < 1,
-		\maytakethrowingweapons{}=\permodel < 2,
-		\maytakeagw{}=\permodel < 3
-		},
-		unitrules={
-	\unitrule{\seenitall{}}{\seenitallrule{}}
+		\onlyonemaytakevanguard{} \Xmodelsorless{20}=\permodel{}<1,
+		\maytakeashield{}=\permodel{}<1,
+		\maytakethrowingweapons{}=\permodel{}<2,
+		\maytakeagw{}=\permodel{}<3,
+	},
+	unitrules={
+		\unitrule{\seenitall{}}{\seenitallrule{}}
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
 }
 
 \showunit{
 	name={\clanmarksmen{}},
-	cost={60},
+	cost={120},
 	profile={ < 3 4 3 3 4 1 2 1 9},
-	costpermodel=12 ,
+	costpermodel=12,
 	maxmodels=25,
 	type=\infantry{},
-	unitsize={10},
+	unitsize=10,
 	basesize=20x20,
-	commontype=\dwarwenholdscommonrules{},
+	commontype=\dwarvencommonrules{},
 	commonspecialrules={\relentless{},\sturdy{}},
 	weapons={\crossbow{}},
 	armour={\ha{}},
 	options={
-		\mayremplacecrossbowbyhandgun{}=\free{},
-		\maytakeashield{}=\permodel<1,
-		\maytakeagw{}=\permodel<3
-		},
-		commandgroup={champion=10, musician=10, banner=10},
+		\mayswapcrossbowforhandgun{}=\free{},
+		\maytakeashield{}=\permodel{}<1,
+		\maytakeagw{}=\permodel{}<3,
+	},
+	commandgroup={champion=10, musician=10, banner=10},
 }	
 
 \specialunitstitle
@@ -296,41 +299,40 @@
 	name={\deepwatch{}},
 	cost={110},
 	profile={ < 3 5 3 4 4 1 2 1 9},
-	costpermodel=15 ,
+	costpermodel=15,
 	maxmodels=30,
 	type=\infantry{},
-	unitsize={10},
+	unitsize=10,
 	basesize=20x20,
-	commontype=\dwarwenholdscommonrules{},
-	commonspecialrules={\seenitall{},\relentless{},\shieldwall{},\shieldskill{},\sturdy{}},
-	specialrules={\bodyguard{}},
+	commontype=\dwarvencommonrules{},
+	commonspecialrules={\relentless{},\shieldwall{},\sturdy{}},
+	specialrules={\bodyguard{},\shieldskill{}},
 	armour={\platearmour{},\shield{}},
 	unitrules={
-	\unitrule{\shieldskill{}}{\shieldskillrule{}}
+		\unitrule{\shieldskill{}}{\shieldskillrule{}}
 	},
 	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
 }
 
 \showunit{
-	name={\kingsguards{}},
+	name={\kingsguard{}},
 	cost={130},
 	profile={ < 3 5 3 4 4 1 2 2 9},
-	costpermodel=16 ,
+	costpermodel=16,
 	maxmodels=30,
 	type=\infantry{},
-	unitsize={10},
+	unitsize=10,
 	basesize=20x20,
-	commontype=\dwarwenholdscommonrules{},
+	commontype=\dwarvencommonrules{},
 	commonspecialrules={\relentless{},\sturdy{}},
-	specialrules={\bodyguard{Général, \king{}}},
+	specialrules={\bodyguard{\general{}, \king{}}},
 	armour={\platearmour{}},
 	weapons={\gw{}},
 	options={
-		\shield=\permodel<1,
-		},
+		\maytakeashield{}=\permodel{}<1,
+	},
 	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
 }
-
 
 \showunit{
 	name={\forgewardens{}},
@@ -339,141 +341,172 @@
 	costpermodel=15,
 	maxmodels=25,
 	type=\infantry{},
-	unitsize={10},
+	unitsize=10,
 	basesize=20x20,
-	commontype=\dwarwenholdscommonrules{},
-	commonspecialrules={\relentless{},\sturdy{},\wardsave{6}},
-	specialrules={\fireborn{}},
+	commontype=\dwarvencommonrules{},
+	commonspecialrules={\relentless{},\sturdy{}},
+	specialrules={\fireborn{},\wardsave{6}},
 	armour={\platearmour{}},
 	weapons={\forgegun{}},
 	unitequipment={
-	\equipmentdef{\forgegun{}}{\forgegunrule{}}
+		\equipmentdef{\forgegun{}}{\forgegunrule{}}
 	},
-	commandgroup={champion=10,championoption=\wyrmslayerrocket<20, musician=10, banner=10, bannerallowance=50},
+	commandgroup={champion=10, championoption=\wyrmslayerrocket{}<20, musician=10, banner=10, bannerallowance=25},
 }
 
 \showunit{
 	name={\seekers{}},
-	cost={65},
+	cost={55},
 	profile={ < 3 4 3 4 4 1 2 1 10},
 	costpermodel=11,
 	maxmodels=30,
 	type=\infantry{},
-	unitsize={5},
+	unitsize=5,
 	basesize=20x20,
-	commontype=\dwarwenholdscommonrules{},
-	commonspecialrules={\relentless{},\thebiggertheyare{},\sturdy{},\comewithme{}},
-	specialrules={\unbreakable{},\weaponmaster{},\wardsave{6}},
+	commontype=\dwarvencommonrules{},
+	commonspecialrules={\relentless{},\sturdy{}},
+	commontypeB=\seekerscommonrules{},
+	commonspecialrulesB={\unbreakable{},\weaponmaster{},\wardsave{6},\thebiggertheyare{},\comewithme{}},
 	weapons={\gw{},\pw{}},
 	options={
-		\maytakevanguard{}=\permodel<2,
-		\onemaytakeskirmirshers \Xmodelsorless{15}=\permodel<2,
-		},
+		\maygain{} \vanguard{}=\permodel{}<2,
+		\seekersskirmishersoption{}=\permodel{}<2,
+	},
 	commandgroup={champion=10,musician=10, banner=10, bannerallowance=25},
 }
 
 \showunit{
 	name={\steamcopters{}},
-	cost={-},
 	profile={
 		\copter{} < 1 - - - 5 3 - - -,
-		\pilot{}  < - 4 3 4 4 - 2 2 9,
+		\pilot{} < - 4 3 4 4 - 2 2 9,
 		},
-	type=\cavalry,
-	unitsize={1},
+	type=\cavalry{},
 	basesize=40x40,
 	specialrules={\fly{8}},
-	weapons={\flameculverin{}\only{\reconcopter}, \forgerepeater{} \only{\attackcopter}},
 	armour={\ha{},\mountsprotection{6}},
-	unitequipment={
-	\equipmentdef{\flameculverin{}}{\flameculverinrule{}}
-	\equipmentdef{\forgerepeater{}}{\forgerepeaterrule{}}
-	},
-	options={
-		\mustchooseconfigcopter{
-			 {\newline \textbf{\attackcopter}}=70,
-				\anyofthefollowing{
-					\uptotwomodels=\permodel{} < 65,
-					\bombingrun{}= 30,
-					\iftwomodelscopters{}=\permodel < 5,
-					}
-			 \textbf{\reconcopter}=85,
-			 		}
-				},
-			}
+	additional={
+		\begin{center}\copterchoice{}\end{center}
+		\setlength{\columnseprule}{1pt}
+		\renewcommand{\columnseprulecolor}{\color{black!30}}	
+		\begin{multicols}{2}
+		\raggedcolumns
+		\begin{center}\largerfontsize\antiquefont\attackcopters{} (\pts{70})\end{center}
+		\mincostfor{} \textbf{1} \labels@model{}. \maxunitsize{}\spacebeforecolon{}: \textbf{3} \labels@models{}.\newline \additionalfigscost{} {\pts{\textbf{65}}\permodel}
 		
-	
+		\vspace{0.15cm}
+		\def\tempweapons{\forgerepeater}
+		\weapons{\tempweapons}
+		
+		\def\tempoptions{%
+			\copterskirmishoption{}=\permodel{}<5,
+			\maygain{} \bombingrun{}=30,
+		}
+		\vspace*{0.1cm}\options{\tempoptions}
+		
+		\def\tempunitrules{\unitrule{\bombingrun}{\bombingrunrule}}
+		\unitrules{\tempunitrules}
+		
+		\begin{center}\largerfontsize\antiquefont\reconcopter{} (\pts{85})\end{center}
+		\labels@Singlemodel{}.
+		
+		\vspace{0.15cm}
+		\def\tempweapons{\flameculverin}
+		\weapons{\tempweapons}
+		
+		\def\tempunitequipment{\equipmentdef{\flameculverin}{\flameculverinrule}}
+		\unitequipment{\tempunitequipment}	
+		
+		\end{multicols}
+		\setlength{\columnseprule}{0pt}
+	},
+}
+
 \showunit{
 	name={\miners{}},
 	cost={100},
 	profile={ < 3 4 3 4 4 1 2 1 9},
-	costpermodel=10 ,
+	costpermodel=10,
 	maxmodels=20,
 	type=\infantry{},
-	unitsize={10},
+	unitsize=10,
 	basesize=20x20,
-	commontype=\dwarwenholdscommonrules{},
+	commontype=\dwarvencommonrules{},
 	commonspecialrules={\relentless{},\sturdy{}},
 	specialrules={\ambush{}},
 	armour={\ha{}},
 	options={
-		\maytakeashield{}=\permodel < 1,
-		\maytakethrowingweapons{}=\permodel < 2,
-		\maytakeapistol{}=\permodel < 2,		
-		\maytakeagw{}=\permodel < 2
-		},
+		\maytakeashield{}=\permodel{}<1,
+		\maytakethrowingweapons{}=\permodel{}<2,
+		\maytakeapistol{}=\permodel{}<2,	
+		\maytakeagw{}=\permodel{}<2,
+	},
 	commandgroup={champion=10, musician=10, banner=10},
 }
 
-
 \showunit{
 	name={\fieldartillery{}},
-	cost={-},
 	profile={
-		\artillery{} < - - - - 7 3 - - -,
-		\crew(3) < 3 4 3 3 4 - 2 1 9,},
+		\machine{} < - - - - 7 3 - - -,
+		\crew{} (3) < 3 4 3 3 4 - 2 1 9,
+	},
 	type=\warmachine{},
-	unitsize={1},
+	unitsize=1,
 	basesize=60,
 	specialrules={\stubborn{}},
-		armour={\ha{}},
-		options={
-		\fieldartilleryoptions
-			{
-			\textbf{\flammingfire}=5,
-			Donne les règles \flamingattacks{} et \magicalattacks{} aux tirs de l'\fieldartillery{},	
-			\textbf{\engineerrune}=15,
-			Ajoute +4 aux jets de dés sur le tableau des incidents de tir.\newline},
-		\mustchooseconfigartillery
-			{
-			\textbf \newline \textbf{\catapulte}=90,
-			Maximum deux exemplaires par armée standard, une seule par patrouille et quatre par grande armée.
-			\newline Catapulte{,} \range{12-60}{,} Gabarit \distance{3}{,} Force 3(9){,} (\multiplewounds{\ordnance}{}).
-				\newline{} \anyofthefollowing
-			{
-			\textbf{\runeforged}=50,
-					Toutes les tirs de la Catapulte Naine ont +1 en Force et suivent les règles \magicalattacks{} et \armourpiercing{1}.}
-			\textbf \newline \textbf{\dwarfcanon}=100,
-			Maximum deux exemplaires par armée standard, un seul par patrouille et quatre par grande armée.
-			\newline Un canon Nain peut tirer de deux façons:
-			\begin{customsubitemize}
-			\item Comme un Canon (1D6){,} \range{60}{,} Force 10{,} \multiplewounds{\ordnance}{}{,} \armourpiercing{2}.
-			\item Comme une Batterie de tir{,} \range{12}{,} Force 4{,} \armourpiercing{3}{,} \multipleshots{2D6}.
-			\end{customsubitemize}
-				\anyofthefollowing
-					{\textbf{\runeforged}=20,
-					Toutes les tirs du Canon Nain ont +1 en Force (maximum 10) et suivent la règle \magicalattacks{}.}\newline
-					\textbf \newline \textbf{\organgun}=125,
-			Maximum deux exemplaires par armée standard, une seule par patrouille et quatre par grande armée.
-			\newline Batterie de tir{,} \range{30}{,} Force 5{,} \armourpiercing{1}{,} \multipleshots{2D6X2}.\newline
-				\anyofthefollowing
-					{\textbf{\runeforged}=45,
-					Accorde +1 pour blesser et la règle \magicalattacks{} aux tirs du Canon Orgue.}
-			}
-		}
- 	}
- 	
- 	
+	armour={\ha{}},
+	options={
+		\maygain{} \flamingshot{}=5,
+		\maygain{} \engineeringrune{}=15,
+	},
+	unitrules={
+		\unitrule{\flamingshot}{\flamingshotrule}
+		\unitrule{\engineeringrune}{\engineeringrunerule}
+	},
+	additional={
+		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
+		\setlength{\columnseprule}{1pt}
+		\renewcommand{\columnseprulecolor}{\color{black!30}}	
+		\begin{multicols}{3}
+		\raggedcolumns		
+
+		\begin{center}\largerfontsize\antiquefont\catapult{} (\pts{90}) 0-2\refsymbol{}\end{center}
+
+		\noindent\catapultrule{}
+		
+		\def\tempunitrules{\unitrule{\runecrafted{} \textnormal{(\pts{50})}}{\catapultrunecraftedrule}}
+		\vspace{0.2cm}\noindent\maytake{}\spacebeforecolon{}:
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
+
+		\vspace*{\fill}\columnbreak
+		\begin{center}\largerfontsize\antiquefont\cannon{} (\pts{100}) 0-2\refsymbol{}\end{center}
+		
+		\noindent\cannonrule{}
+		
+		\def\tempunitrules{\unitrule{\runecrafted{} \textnormal{(\pts{20})}}{\cannonrunecraftedrule}}
+		\vspace{0.2cm}\noindent\maytake{}\spacebeforecolon{}:
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		
+		\columnbreak
+		\begin{center}\largerfontsize\antiquefont\organgun{} (\pts{125}) 0-2\refsymbol{}\end{center}
+		
+		\noindent\organgunrule{}
+		
+		\def\tempunitrules{\unitrule{\runecrafted{} \textnormal{(\pts{45})}}{\organgunrunecraftedrule}}
+		\vspace{0.2cm}\noindent\maytake{}\spacebeforecolon{}:
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
+
+		\vspace*{\fill}
+		\end{multicols}
+		\setlength{\columnseprule}{0pt}
+		\vspace*{0.2cm}\noindent\refsymbol{} \fieldartillerynote{}
+	},
+}
+
+
+
+	
+	
 	
 
 \rareunitstitle
@@ -481,18 +514,20 @@
 \showunit{
 	name={\vengeanceseeker},
 	cost={60},
-	profile={< 3 5 3 4 4 2 2 * 10},
-	type=Infanterie,
-	unitsize={1},
+	profile={< 3 5 3 4 4 3 2 \starsymbol{} 10},
+	type=\infantry{},
+	unitsize=1,
 	basesize=20x20,
-	commontype=\dwarwenholdscommonrules{},
-	commonspecialrules={\relentless{},\thebiggertheyare{},\comewithme{}},
-	specialrules={\hardtarget{},\distracting{},\unbreakable{},\wardsave{6}},
+	commontype=\dwarvencommonrules{},
+	commonspecialrules={\relentless{}},
+	commontypeB=\seekerscommonrules{},
+	commonspecialrulesB={\thebiggertheyare{},\comewithme{},\unbreakable{},\wardsave{6}},
+	specialrules={\hardtarget{},\distracting{}},
 	weapons={\whirlingchainsofdoom},
 	unitequipment={
-	\equipmentdef{\whirlingchainsofdoom{}}{\whirlingchainsofdoomrule{}}
+		\equipmentdef{\whirlingchainsofdoom{}}{\whirlingchainsofdoomrule{}}
 	},
-	}
+}
 	
 \showunit{
 	name={\rangers},
@@ -500,25 +535,25 @@
 	profile={ < 3 4 4 3 4 1 2 1 9},
 	costpermodel=10,
 	maxmodels=20,
-	type=Infanterie,
-	unitsize={5},
+	type=\infantry{},
+	unitsize=5,
 	basesize=20x20,
-	commontype=\dwarwenholdscommonrules{},
+	commontype=\dwarvencommonrules{},
 	commonspecialrules={\relentless{},\sturdy{}},
-	specialrules={\scout{},\strider{forêt}},
+	specialrules={\scouts{},\strider{\forest}},
 	armour={\ha},
 	options={
-		\maybecome{} \skirmisher{} \Xmodelsorless{10}=\permodel<2,
-		\maytakeashield=\permodel<1,
-		\maytakethrowingweapons=\permodel<1,
-		\maytakeacrossbow=\permodel<2,
+		\skirmishers{} \Xmodelsorless{10}=\permodel{}<2,
+		\maytakeashield{}=\permodel{}<1,
+		\maytakethrowingweapons{}=\permodel{}<1,
+		\maytakeacrossbow{}=\permodel{}<2,
 		\combatweapononechoice{
-			\pw{}=\permodel<1,
-			\gw{}=\permodel<2
-			},
+			\pw{}=\permodel{}<1,
+			\gw{}=\permodel{}<2,
 		},
-commandgroup={champion=10, musician=10, banner=10},
-	}				
+	},
+	commandgroup={champion=10, musician=10, banner=10},
+}				
 
 \showunit{
 	name={\holdguardians},
@@ -527,97 +562,109 @@ commandgroup={champion=10, musician=10, banner=10},
 	costpermodel=60 ,
 	maxmodels=8,
 	type=\monstrousinfantry,
-	unitsize={3},
+	unitsize=3,
 	basesize=40x40,
-	specialrules={\magicalattacks, \multiplewounds{1D3}{}, \immunetopsychology},
+	specialrules={\magicalattacks{},\multiplewounds{1D3}{},\immunetopsychology{}},
 	armour={\platearmour{},\innatedefence{6}},
 	options={
-		\maytake{} \flamingattacks et \fireborn=\permodel<5,
-		},
-commandgroup={champion=10, musician=10, banner=10},
-	}	
+		\flamingattacks{} \wordand{} \fireborn{}=\permodel{}<5,
+	},
+	commandgroup={champion=10, musician=10, banner=10},
+}	
 
 \showunit{
 	name={\grudgebuster},
 	cost={165},
 	profile={
-		\buster < 1 - - 5 5 5 2 - -,
-		\pilot (2) < - 4 3 4 4 - 2 2 9,
-		},
+		\chariot{}< 1 - - 5 5 5 2 - -,
+		\grudgebustercrew{} (2)< - 4 3 4 4 - 2 2 9,
+	},
 	type=\chariot{},
-	unitsize={1},
+	unitsize=1,
 	basesize=50x100,
-	specialrules={\grindingattacks{3D3} \only{\buster},\impacthits{+1},\fly{8}},
-	weapons={\swiwelgun{} \only{\buster{}}},
+	specialrules={\grindingattacks{3D3} \only{\chariot},\impacthits{+1},\fly{8}},
+	weapons={\swiwelgun{} \only{\chariot}},
 	armour={\innatedefence{3}},
 	unitequipment={
-	\equipmentdef{\swiwelgun{}}{\swiwelgunrule{}}
+		\equipmentdef{\swiwelgun{}}{\swiwelgunrule{}}
 	},
-	}		
+}		
 
 \showunit{
 	name={\grudgemachines},
-	cost={-},
 	profile={
-		\artillery < - - - - 7 3 - - -,
-		\crew(3) < 3 4 3 3 4 - 2 1 9,},
-	type=\warmachine,
-	unitsize={1},
+		\machine{}< - - - - 7 3 - - -,
+		\crew{} (3)< 3 4 3 3 4 - 2 1 9,
+	},
+	type=\warmachine{},
+	unitsize=1,
 	basesize=60,
 	specialrules={\stubborn{}},
-		armour={\ha{}},
-		options={
-	\grudgemachinesoptions
-	{
-	\textbf{\engineerrune}=15,
-Ajoute +4 aux jets de dés sur le tableau des incidents de tir.\newline}	
-	\mustchooseconfigrudgemachines
-	{
-\textbf \newline \textbf{\dwarfbalist}=55,
-{Baliste, \range{48}, Force 6, \multiplewounds{1D3}{}, \armourpiercing{6}.
-\newline \anyofthefollowing
-{\textbf{\flammingfire}=5,
-Donne les règles \flamingattacks et \magicalattacks aux tirs de la Baliste Naine.,
-\textbf{\runeforged}=10,
-Les tirs de la Baliste Naine sont des \magicalattacks et ont +1 pour toucher les unités suivant la règle \fly{}.}
-},
-\textbf \newline \textbf{\dwarfflamethrower}=110,
-{Canon à flammes. \range{12}, Force 5, \flamingattacks, \multiplewounds{1D3}{}.
-\newline \anyofthefollowing
-{\textbf{\runeforged}=5,
-Donne la règle \magicalattacks aux tirs du Lance-flammes Nain. 
-\newline \textbf{\runebeated}=20,
-La Portée du Lance-flammes Nain est augmentée de \distance {3} et ses tirs gagnent la règle \magicalattacks.}
-}
-}
- 	}
-	}	
+	armour={\ha{}},
+	options={
+		\maygain{} \engineeringrune{}=15,
+	},
+	unitrules={
+		\unitrule{\engineeringrune}{\engineeringrunerule}
+	},
+	additional={
+		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
+		\setlength{\columnseprule}{1pt}
+		\renewcommand{\columnseprulecolor}{\color{black!30}}	
+		\begin{multicols}{2}
+		\raggedcolumns		
+
+		\begin{center}\largerfontsize\antiquefont\flamecannon{} (\pts{110})\end{center}
+
+		\noindent\flamecannonrule{}
+		
+		\def\tempunitrules{%
+			\unitrule{\runecrafted{} \textnormal{(\pts{5})}}{\flamecannonrunecraftedrule}
+			\unitrule{\runestruck{} \textnormal{(\pts{20})}}{\runestruckrule}
+		}
+		\vspace{0.2cm}\noindent\maytake{}\spacebeforecolon{}:
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
+
+		\vspace*{\fill}\columnbreak
+		\begin{center}\largerfontsize\antiquefont\dwarfballista{} (\pts{55})\end{center}
+		
+		\noindent\dwarfballistarule{}
+		
+		\def\tempunitrules{%
+			\unitrule{\flamingshot{} \textnormal{(\pts{5})}}{\flamingshotrule}
+			\unitrule{\runecrafted{} \textnormal{(\pts{10})}}{\dwarfballistarunecraftedrule}
+		}
+		\vspace{0.2cm}\noindent\maytake{}\spacebeforecolon{}:
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{\fill}
+		\end{multicols}
+		\setlength{\columnseprule}{0pt}
+	},		
+}	
 
 \showunit{
 	name={\anvilofpower},
 	cost={150},
 	profile={
-		\anvilofpower < - - - - 7 3 - - -,
-		\anvilcrew (4) < 3 5 3 4 4 - 2 1 9},
-	type=\warmachine,
-	unitsize={1},
-	basesize=60,
-	specialrules={\channel,\runicanvil,\unbreakable,\magicresistance{2},\wardsave{5}},
-	armour={\platearmour},
-		options={
-		\anviloptions
-		{N'importe quelle Rune de Bataille=\free,		
-		Rune d'Apaisement=\free,
-		Rune des Tempêtes=5,
-		Rune de la Terre Brisée=5},
-		},
-unitrules={
-	\unitrule{\runicanvil{}}{\runicanvilrule{}}
+		\anvil{}< - - - - 7 3 - - -,
+		\anvilcrew{} (4)< 3 5 3 4 4 - 2 1 9,
 	},
-unitequipment={
-	\equipmentdef{\anvilrunes{}}{\anvilrunesrule{}}
+	type=\warmachine{},
+	unitsize=1,
+	basesize=60,
+	specialrules={\channel{},\runicanvil{},\unbreakable{},\magicresistance{2},\wardsave{5}},
+	armour={\platearmour},
+	additional={%
+		\def\tempunitrules{\unitrule{\runicanvil}{\runicanvilrule}}
+		\unitrules{\tempunitrules}
+	
+		\anvilrunes{}
 	},			
-	}	
+}	
+
+
+
+
 
 
 \mountstitle
@@ -627,29 +674,24 @@ unitequipment={
 \showunit{
 	name={\shieldbearers},
 	profile={ < 3 5 3 4 4 4 2 2 10},
-	cost={-},	
-	type=\infantry,
-	unitsize={1},
+	type=\infantry{},
 	basesize=40x20,
-	commontype=\dwarwenholdscommonrules{},
+	commontype=\dwarvencommonrules{},
 	commonspecialrules={\relentless{},\sturdy{}},
 	armour={\mountsprotection{5}},
-		}
-
+}
 
 \showunit{
 	name={\warthrone},
-	profile={ < 3 5 3 4 4 6 2 4 10},
-	cost={-},	
-	type=\infantry,
-	unitsize={1},
+	profile={ < 3 5 3 4 4 6 2 4 10},	
+	type=\infantry{},
 	basesize=40x60,
-	commontype=\dwarwenholdscommonrules{},
-	commonspecialrules={\majestyofhighkings{},\sturdy{}},
-	specialrules={\hatred{}}, 
-	equipment={\mountsprotection{5}},
+	commontype=\dwarvencommonrules{},
+	commonspecialrules={\relentless{},\sturdy{}},
+	specialrules={\hatred{},\majestyofhighkings{}}, 
+	armour={\mountsprotection{5}},
 	unitrules={
-	\unitrule{\majestyofhighkings{}}{\majestyofhighkingsrule{}}
+		\unitrule{\majestyofhighkings{}}{\majestyofhighkingsrule{}}
 	},
-	}	
+}	
 

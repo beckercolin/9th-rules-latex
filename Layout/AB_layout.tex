@@ -497,9 +497,13 @@
 	\ifsubstring{\optionvalue}{\permadgit}{% For Orcs N Goblins
 		\splitatinf{\optionvalue}\myoption\myvalue%
 		\option[\permadgit]{\optiontext}{\myvalue}%
-	}{%		
+	}{%	
+	\ifsubstring{\optionvalue}{\perrune}{% For Dwarven Holds
+		\splitatinf{\optionvalue}\myoption\myvalue%
+		\option[\perrune]{\optiontext}{\myvalue}%
+	}{%	
 		\option{\optiontext}{\optionvalue}%
-	}}}}}}}%
+	}}}}}}}}%
 }
 
 \newcommand{\option}[3][]{#2\predotfill\dotfill\nobreak%
@@ -512,6 +516,7 @@
 	% Add \persomething if necessary.
 	\ifstrequal{#1}{\pershadygit}{\nobreak\pershadygit}{}% For Orcs N Goblins
 	\ifstrequal{#1}{\permadgit}{\nobreak\permadgit}{}% For Orcs N Goblins
+	\ifstrequal{#1}{\perrune}{\nobreak\perrune}{}% For Dwarven Holds
 }
 \newcommand\optionschoice[2]{%
 	\parselist[,]{#2}{\locallists@optionschoice}%
@@ -698,6 +703,8 @@
 \define@key{unit}{basesize}{\def\unit@basesize{#1}}
 \define@key{unit}{commonspecialrules}{\def\unit@commonspecialrules{#1}}
 \define@key{unit}{commontype}{\def\unit@commontype{#1}}
+\define@key{unit}{commonspecialrulesB}{\def\unit@commonspecialrulesB{#1}}
+\define@key{unit}{commontypeB}{\def\unit@commontypeB{#1}}
 \define@key{unit}{specialrules}{\def\unit@specialrules{#1}}
 \define@key{unit}{magiclevel}{\def\unit@magiclevel{#1}}
 \define@key{unit}{magicpaths}{\def\unit@magicpaths{#1}}
@@ -777,7 +784,7 @@
 
 \newcommand{\defunit}{
 	\setkeys{unit}{%
-		notinQRS=, name=, QRSname=, profile=, cost=, invocation=, costpermodel=, maxmodels=, type=, unitsize=, basesize=, commonspecialrules=, commontype=, specialrules=, magiclevel=, magicpaths=, alignment=, greenhiderace=, equipment=, weapons=, armour=, wizardconclave=, unitequipment=, options=, mounts=, commandgroup=, unitrules=, additional=%
+		notinQRS=, name=, QRSname=, profile=, cost=, invocation=, costpermodel=, maxmodels=, type=, unitsize=, basesize=, commonspecialrules=, commontype=, commonspecialrulesB=, commontypeB=, specialrules=, magiclevel=, magicpaths=, alignment=, greenhiderace=, equipment=, weapons=, armour=, wizardconclave=, unitequipment=, options=, mounts=, commandgroup=, unitrules=, additional=%
 	}%
 	\setkeys{unit}%
 }
@@ -827,6 +834,8 @@
 		\expandafter\ifblank\expandafter{\unit@armour}{}{\noindent\parbox{\columnwidth}{\armour{\unit@armour}}}
 		
 		\expandafter\ifblank\expandafter{\unit@commonspecialrules}{}{\noindent\parbox{\columnwidth}{\commonspecialrules{\unit@commontype}{\unit@commonspecialrules}}}
+		
+		\expandafter\ifblank\expandafter{\unit@commonspecialrulesB}{}{\noindent\parbox{\columnwidth}{\commonspecialrules{\unit@commontypeB}{\unit@commonspecialrulesB}}}
 		
 		\expandafter\ifblank\expandafter{\unit@specialrules}{}{\noindent\parbox{\columnwidth}{\specialrules{\unit@specialrules}}}
 		
