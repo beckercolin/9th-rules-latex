@@ -1,0 +1,278 @@
+% Base sur la VO 0.11.9
+% Relecture technique: 
+% Relecture syntaxique: 
+
+\part{Phase de corps à corps}
+
+Durant la \emph{Phase de Corps à Corps}, toutes les figurines des deux camps engagées au combat avec une unité ennemie peuvent (et doivent) attaquer.
+
+\section{Étapes de la phase de corps à corps}
+
+Une \emph{Phase de Corps à Corps} est divisée selon les étapes de la table \ref{table/etapes_cac}.
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{c|m{12cm}}
+\textbf{1} & Début de la \emph{Phase de Corps à Corps}. Appliquez la règle \emph{Plus Engagés} si nécessaire. \tabularnewline
+\textbf{2} & Choisissez un combat où des figurines engagées au corps à corps ne se sont pas encore battues. \tabularnewline
+\textbf{3} & Effectuez cette manche de corps à corps. \tabularnewline
+\textbf{4} & Répétez les étapes 2 et 3 pour chaque combat qui n'a pas encore eu lieu pendant cette phase. \tabularnewline
+\textbf{5} & Une fois que toutes les unités engagées au corps à corps ont combattu, la \emph{Phase de Corps à Corps} prend fin. \tabularnewline
+\end{tabular}
+\caption{\label{table/etapes_cac}Étapes de la phase de corps à corps.}
+\end{table}
+
+Un combat est défini comme un groupe d'unités de camps différents connectées via des contacts socle à socle. Ce groupe peut être simplement constitué de deux unités ennemies l'une de l'autre, de plusieurs unités contre une seule unité ennemie, ou encore d'une longue chaîne d'unités des deux camps. Exécutez toutes les étapes d'une manche de corps à corps pour toutes les unités impliquées avant de passer à un autre combat.
+
+Les unités sont considérées comme \textbf{engagées au corps à corps} si une ou plusieurs figurines d'une unité sont en contact socle à socle avec une unité ennemie. Si une unité est engagée au corps à corps, toutes ses figurines comptent comme engagées au corps à corps. Les unités qui sont engagées au corps à corps ne peuvent pas se déplacer (sauf exceptions, lors des reformations de combat ou en cas de fuite par exemple).
+
+\subsection{Plus engagés}
+
+Une unité qui était engagée dans un combat auparavant, mais dont tous les adversaires ont bougé ou ont été retirés comme perte entre la \emph{Phase de Mouvement} précédente et cette \emph{Phase de Corps à Corps}, et dont le contact socle à socle n'a pas pu être maintenu en décalant légèrement les figurines, en suivant les instructions de la règle \emph{Plus au Corps à Corps}, suit la règle \emph{Plus d'Ennemis} (voir le paragraphe \ref{cac/moral} à la page \pageref{cac/plus_ennemis}). Avant que n'importe quel combat soit effectué, cette unité peut faire un \emph{Pivot Post-Combat}, une \emph{Reformation Post-Combat}, ou une \emph{Charge Irrésistible} si elle venait de charger. \nouveau{Ces actions ne peuvent pas être effectuées si l'unité a bougé après que l'unité ennemie a été retirée du combat, par exemple avec un \emph{Mouvement Magique}}.
+
+\section{Étapes d'une manche de corps à corps}
+\label{etapes_manche_cac}
+
+Chaque manche de corps à corps est divisée de la manière suivante. Suivez les étapes dans l'ordre de la table \ref{table/etapes_manche_cac}.
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{c|m{12cm}}
+\textbf{1} & Début de la manche de corps à corps. \tabularnewline
+\textbf{2} & Choisissez les armes (voir le paragraphe \ref{equipement/cac} à la page \pageref{equipement/cac}). \tabularnewline
+\textbf{3} & \emph{Faites Place} (voir la section \ref{personnages} à la page \pageref{personnages}). \tabularnewline
+\textbf{4} & Lancez et relevez ou refusez les \emph{Défis} (voir la section \ref{personnages} à la page \pageref{personnages}). \tabularnewline
+\vspace*{-0.4cm}
+\textbf{5} & Exécutez les attaques par paliers d'Initiative :
+	\begin{itemize}[label={-}, parsep=0cm,itemsep=0.05cm,topsep=0cm]
+		\item Répartissez les cibles des attaques.
+		\item Lancez les jets pour toucher, pour blesser, les jets de sauvegarde et retirez les pertes.
+		\item Recommencez ces deux opérations pour le prochain palier d'Initiative.
+ 	\end{itemize}\tabularnewline
+\textbf{6} & Déterminez quel camp a gagné cette manche de combat. Le(s) perdant(s) font un test de \emph{Moral}. \tabularnewline
+\textbf{7} & Effectuez les tests de \emph{Panique} pour les unités proches. \tabularnewline
+\textbf{8} & En cas de fuite, choisissez de poursuivre ou non. \tabularnewline
+\textbf{9} & Jet des distances de fuite. \tabularnewline
+\textbf{10} & Jet des distances de poursuite. \tabularnewline
+\textbf{11} & Déplacement des unités en fuite. \tabularnewline
+\textbf{12} & Déplacement des unités poursuivantes. \tabularnewline
+\textbf{13} & \emph{Pivots Post-Combat} ou \emph{Reformations Post-Combat}. \tabularnewline
+\textbf{14} & \emph{Reformations de Combat}. \tabularnewline
+\textbf{15} & Fin de la manche, passez au prochain corps à corps. \tabularnewline
+\end{tabular}
+\caption{\label{table/etapes_manche_cac}Étapes d'une manche de corps à corps.}
+\end{table}
+
+Les combats ont lieu dans un ordre prédéfini, en commençant par les attaques des figurines ayant la plus haute valeur d'Initiative (10) jusqu'à la plus basse. Les attaques appartenant à chaque palier d'Initiative sont résolues simultanément. En situation normale, une figurine attaque à la valeur d'Initiative présente sur son profil. Certaines attaques peuvent cependant être résolues à une autre valeur d'Initiative que celle du profil, par exemple les \emph{Touches d'Impact} d'un char. Pour les figurines ayant plusieurs profils, comme un cavalier et sa monture, chaque élément de la figurine frappe à sa propre Initiative.
+
+\subsection{Qui peut frapper}
+
+Les figurines en contact socle à socle avec un adversaire peuvent attaquer au palier d'Initiative qui leur correspond. Les figurines des deux camps attaquent à chaque \emph{Phase de Corps à Corps}.
+
+\subsubsection*{Attaques de soutien}
+
+Les figurines au deuxième rang peuvent faire des \emph{Attaques de Soutien} par dessus des figurines du premier rang. Les \emph{Attaques de Soutien} ne peuvent être faites que contre des ennemis engagés avec le front de l'unité qui veut faire des \emph{Attaques de Soutien}. Une figurine ne peut faire qu'une seule attaque dans le cadre d'\emph{Attaques de Soutien}.
+
+\subsubsection*{Formation en horde}
+
+Les figurines déployées en formation de \emph{Horde} (voir le paragraphe \ref{horde} à la page \pageref{horde}) ont la règle \emph{Combat avec un Rang Supplémentaire}.
+
+\subsubsection*{Rangs incomplets et attaques au-dessus des vides}
+
+Parfois des rangs incomplets ou des \emph{Personnages} avec un socle incompatible peuvent créer des espaces vides au milieu d'unités engagées au corps à corps. Si deux unités sont en contact socle à socle, les figurines qui composent ces unités sont autorisées à attaquer à travers les vides, mais pas à attaquer à travers d'autres unités ou un \emph{Terrain Infranchissable}. Ces figurines sont considérées comme étant en contact socle à socle malgré les vides. La figure \ref{figure/combat_vides} illustre ce paragraphe.
+
+\begin{figure}[!htbp]
+\centering
+\def\svgwidth{8cm}
+\input{combat_vides.pdf_tex}
+\caption{Toutes les figurines dont les couleurs sont dans une nuance un peu plus sombre peuvent attaquer. Remarquez que l'unité en rose est en formation de \emph{Horde}, et peut donc faire des \emph{Attaques de Soutien} avec son troisième rang. Notez aussi que l'unité verte n'est pas engagée via son front, et donc ne peut pas faire d'\emph{Attaques de Soutien} sur le flanc ou l'arrière. Les figurines dont les bordures sont en gras comptent comme étant en contact socle à socle avec leurs ennemis, même au-dessus des vides, et les autres peuvent faire des \emph{Attaques de Soutien}.}
+\label{figure/combat_vides}
+\end{figure}
+
+\subsection{Répartir les attaques}
+
+À chaque palier d'Initiative, avant que les jets d'attaques ne soient lancés, il faut annoncer comment sont réparties ces attaques. Si une figurine est au contact socle à socle avec plus d'une figurine, elle peut choisir laquelle frapper. Le nombre d'attaques qu'une figurine peut faire est égal à sa caractéristique Attaques. L'équipement, les règles spéciales, les sorts, etc., peuvent augmenter ou diminuer le nombre d'attaques. Si une figurine a plusieurs attaques, elle peut les répartir comme elle le souhaite entre les cibles en contact socle à socle avec elle. Une figurine qui fait des \emph{Attaques de Soutien} choisit ses cibles comme si elle était au premier rang, dans la même colonne. Si une figurine peut à la fois attaquer une figurine en contact socle à socle ou effectuer une \emph{Attaque de Soutien}, elle doit attaquer en priorité les figurines en contact. Assignez toutes les attaques d'un palier d'Initiative donné avant de lancer les jets pour toucher.
+
+\nouveau{Si une figurine ordinaire peut assigner ses attaques à un \emph{Personnage} ou un champion, elle peut toujours choisir de faire ses attaques contre des figurines ordinaires de la même unité à la place. C'est-à-dire que les figurines ordinaires ne sont pas obligées d'attaquer les figurines avec lesquelles elles sont en contact socle à socle et peuvent toujours attaquer l'unité en tant qu'entité à la place. Dans le cas où les figurines ordinaires d'une même unité n'ont pas toutes les mêmes Caractéristiques ou règles (si elles ont un équipement différent, par exemple), les figurines attaquées sont celles qui sont les plus nombreuses. L'attaquant choisit en cas d'égalité. Notez que cela ne s'applique pas aux \emph{Personnages}, qui ne peuvent répartir leurs attaques que contre les figurines avec lesquelles ils sont en contact socle à socle}.
+
+\subsection{Jets pour toucher}
+
+Pour faire les jets pour toucher, lancez un D6 pour chaque attaque, et comparez la CC de la figurine portant l'attaque avec la CC de la figurine qui défend.
+\begin{itemize}[label={-}]
+\item Si le défenseur a une CC \textbf{inférieure} à celle de l'attaquant, l'attaque touche sur \textbf{3+}.
+\item Si le défenseur a une CC \textbf{égale} ou supérieure à celle de l'attaquant, l'attaque touche sur \textbf{4+}.
+\item Si le défenseur a une CC \textbf{strictement supérieure au double} de celle de l'attaquant, l'attaque touche sur \textbf{5+}.
+\end{itemize}
+
+Cette règle est utilisée pour composer la table \ref{table/jetpourtoucher}.
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{c|cccccccccc}
+\backslashbox{D}{A} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+\hline
+1 & \yel 4+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ \\
+2 & \yel 4+ & \yel 4+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ \\
+3 & \ora 5+ & \yel 4+ & \yel 4+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ \\
+4 & \ora 5+ & \yel 4+ & \yel 4+ & \yel 4+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ \\
+5 & \ora 5+ & \ora 5+ & \yel 4+ & \yel 4+ & \yel 4+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ \\
+6 & \ora 5+ & \ora 5+ & \yel 4+ & \yel 4+ & \yel 4+ & \yel 4+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ \\
+7 & \ora 5+ & \ora 5+ & \ora 5+ & \yel 4+ & \yel 4+ & \yel 4+ & \yel 4+ & \lem 3+ & \lem 3+ & \lem 3+ \\
+8 & \ora 5+ & \ora 5+ & \ora 5+ & \yel 4+ & \yel 4+ & \yel 4+ & \yel 4+ & \yel 4+ & \lem 3+ & \lem 3+ \\
+9 & \ora 5+ & \ora 5+ & \ora 5+ & \ora 5+ & \yel 4+ & \yel 4+ & \yel 4+ & \yel 4+ & \yel 4+ & \lem 3+ \\
+10 & \ora 5+ & \ora 5+ & \ora 5+ & \ora 5+ & \yel 4+ & \yel 4+ & \yel 4+ & \yel 4+ & \yel 4+ & \yel 4+ \\
+\end{tabular}
+\caption{\label{table/jetpourtoucher}Résultat à obtenir pour toucher selon la CC (A : CC de l'Attaquant, D : CC du Défenseur.}
+\end{table}
+
+Des modificateurs pour toucher peuvent affecter ces chiffres. À moins qu'il ne soit mentionné autrement, un modificateur pour toucher s'applique aux jets pour toucher de tir et de corps à corps. Un jet pour toucher au corps à corps qui donne un \result{1} est toujours un échec, tandis qu'un \result{6} est toujours un succès.
+
+Par exemple, une figurine avec 2 attaques et une CC de 3, équipée d'une Arme additionnelle (+1 Attaque), aura 3 attaques au total. Elle attribue 2 touches à une figurine avec une CC de 2, qu'elle touchera sur 3+, et la dernière attaque à une figurine avec une CC de 7, qu'elle touchera sur 5+. Si un ou plusieurs de ces jets pour toucher sont un succès, suivez la procédure décrite dans la section \ref{attaque_et_blessure} à la page \pageref{attaque_et_blessure}.
+
+La figure \ref{figure/attribution} illustre l'attribution des attaques.
+
+\begin{figure}[!htbp]
+\centering
+\def\svgwidth{8cm}
+\input{attribution.pdf_tex}
+\caption{Le \emph{Champion} de l'unité violette Ch et le \emph{Personnage} $ P_{2} $ sont bloqués dans un duel, indiqué par le damier en fond, ce qui signifie qu'ils ne peuvent que s'attaquer mutuellement. Les figurines roses et vertes peuvent attaquer les figurines ordinaires de l'unité ennemie. Les figurines avec des bords en gras peuvent attaquer un \emph{Personnage}, parfois \emph{Champion}. Les figurines en jaune et en violet qui n'ont pas de contour gras ne peuvent pas attaquer. Le \emph{Personnage} $ P_{1} $ ne peut pas attaquer parce que la seule figurine en contact socle à socle avec lui est le \emph{Champion} Ch rose qui est déjà en duel avec $ P_{2} $.}
+\label{figure/attribution}
+\end{figure}
+
+\subsection{Plus au corps à corps}
+
+Quand on retire les pertes, ou quand on bouge des figurines pour d'autres raisons, des unités engagées dans un corps à corps perdent parfois le contact socle à socle avec leurs adversaires. Quand cela arrive, les unités sont rapprochées de la manière suivante :
+\begin{enumerate}
+\item L'unité qui est en train de quitter le corps à corps sans avoir subi de pertes est déplacée vers l'avant, l'arrière ou sur un côté, voir une combinaison de deux directions, sur une distance minimale pour rétablir le contact socle à socle.
+\item Si cela ne permet pas de rétablir le contact socle à socle, c'est l'unité qui a subi des pertes qui est déplacée à la place, de la même manière.
+\end{enumerate}
+
+Les unités qui sont en contact socle à socle avec d'autres unités ennemies ne peuvent jamais effectuer cette manœuvre. Elles ne peuvent pas non plus bouger au travers d'une autre unité ou d'un \emph{Terrain Infranchissable}, mais elles peuvent bouger à moins d'\unit{1}{\pouce} des autres unités participant au même combat. Ce déplacement ne peut pas être utilisé pour changer le côté par lequel une unité est engagée, ce qui signifie que si une unité était engagée de flanc, elle doit le rester. Si plusieurs unités quittent le corps à corps en même temps, rapprochez-les dans l'ordre qui permet qu'un maximum d'unités reste au corps à corps. S'il y a plusieurs possibilités, le joueur actif décide de l'ordre. S'il n'y a pas moyen de rapprocher les unités en suivant ces règles au point de retrouver le contact socle à socle, les unités sont considérées comme n'étant plus au corps à corps. Elles doivent alors suivre la règle  \emph{Plus d'Ennemis} (voir \ref{cac/moral} à la page \pageref{cac/moral}).
+
+\section{Gagner une manche de combat}
+
+Une fois que tous les paliers d'Initiative sont passés, et qu'ainsi toutes les figurines ont eu la possibilité d'attaquer, le vainqueur de la manche de combat est déterminé par le calcul du \emph{Résultat de Combat} de chaque camp. Additionnez simplement tous les bonus de \emph{Résultat de Combat}. Le camp avec le \emph{Résultat de Combat} le plus élevé gagne la manche, l'autre camp la perd. S'il y a égalité, les deux camps sont considérés comme vainqueurs de cette manche (un Musicien peut faire pencher la balance en faveur d'un camp, voir la partie "Etat-major"). Les bonus de \emph{Résultat de Combat} sont résumés dans la table \ref{table/resultat_combat}.
+
+\begin{multicols}{2}
+\begin{itemize}[label={-}]
+\item \emph{Blessures infligées} \\ .\dotfill \textbf{+1 pour chaque blessure} \\
+Chaque joueur additionne toutes les blessures non-sauvegardées causées à l'unité ennemie engagée dans le même combat pendant cette manche. Les ennemis qui étaient engagés dans ce corps à corps mais qui en sont sortis ou ont été exterminés pendant cette manche comptent aussi.
+\bigskip
+\bigskip
+\item \emph{Massacre} \\ .\dotfill \textbf{+1 pour chaque blessure (max. \nouveau{3})} \\
+Dans le cas d'un \emph{Défi}, les blessures infligées au delà du nécessaire pour tuer l'adversaire comptent aussi, jusqu'à un maximum de \nouveau{+3}. Remarquez que c'est le seul cas où les blessures excédentaires sont comptées, elles sont normalement perdues dans d'autres situations.
+\bigskip
+\item \emph{Charge} \dotfill \textbf{+1 ou +2} \\
+Si c'est la première manche de corps à corps pour l'unité qui charge, alors cette unité reçoit +1 à son \emph{Résultat de Combat}. Si la charge est initiée avec la moitié ou plus de l'unité sur une colline, et que la charge finit avec la moitié ou plus de l'unité hors de la colline, elle reçoit un bonus de +2 à la place. Chaque camp ne peut obtenir le bonus de charge que d'une seule unité pour un même corps à corps pendant une manche.
+\item \emph{Bonus de rang} \\ .\dotfill \textbf{+1 pour chaque rang (max. +3)} \\
+Pour chaque camp, ajoutez +1 au \emph{Résultat de Combat} pour chaque \emph{Rang Complet} après le premier rang de l'unité, jusqu'à un maximum de +3. Ne comptez ce bonus que pour une seule unité par camp et par corps à corps, prenez l'unité donnant le meilleur \emph{Bonus de Rang}.
+\bigskip
+\item \emph{Étendards} \dotfill \textbf{+1} \\
+Chaque camp peut ajouter +1 à son \emph{Résultat de Combat} s'il possède un ou plusieurs \emph{Porte-Étendards} engagés dans le corps à corps.
+\item \emph{Grande bannière} \dotfill \textbf{+1} \\
+Chaque camp peut ajouter +1 à son \emph{Résultat de Combat} s'il possède un ou plusieurs \emph{Porteurs de la Grande Bannière} engagés dans le corps à corps.
+\item \emph{Attaque de flanc} \dotfill \textbf{+1 \nouveau{ou +2}} \\
+Chaque camp peut ajouter +1 à son \emph{Résultat de Combat} s'il a une ou plusieurs unités engagées sur le flanc d'une unité ennemie dans le corps à corps. \nouveau{Si au moins une de ces unités a au moins un \emph{Rang Complet}, ajoutez +2 à place}.
+\item \emph{Attaque sur l'arrière} \dotfill \textbf{+2 \nouveau{ou +3}} \\
+Chaque camp peut ajouter +2 à son \emph{Résultat de Combat} s'il a une ou plusieurs unités engagées sur l'arrière d'une unité ennemie dans le corps à corps. \nouveau{Si au moins une de ces unités a au moins un \emph{Rang Complet}, ajoutez +3 à place}.
+\end{itemize}
+\end{multicols}
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{r|l}
+Blessures infligées & +1 pour chaque blessure \tabularnewline
+Massacre & +1 pour chaque blessure (max. +3) \tabularnewline
+Charge & +1 (+2 depuis une colline) \tabularnewline
+Bonus de rang & +1 pour chaque rang (max. +3) \tabularnewline
+Étendard & +1 \tabularnewline
+Grande Bannière & +1 \tabularnewline
+Attaque de flanc & +1 ou +2 \tabularnewline
+Attaque sur l'arrière & +2 ou +3 \tabularnewline
+\end{tabular}
+\caption{\label{table/resultat_combat}Résumé des bonus au \emph{Résultat de Combat}.}
+\end{table}
+
+\section{Test de moral}
+\label{cac/moral}
+
+Chaque unité engagée dans un corps à corps du camp qui a perdu la manche de corps à corps doit effectuer un test de \emph{Moral}. L'ordre des tests est choisi par le propriétaire des unités. Un test de \emph{Moral} est un test de Commandement, avec comme malus la différence entre les deux \emph{Résultats de Combat}. Par exemple, si les \emph{Résultats de Combat} sont de 6 et 3, les unités du camp perdant effectuent un test de \emph{Moral} avec un modificateur de -3. Si le test de \emph{Moral} est raté, l'unité fuit. Si le test de \emph{Moral} est réussi, l'unité reste engagée au corps à corps.
+
+\subsubsection*{Indomptable}
+
+Toute unité possédant plus de \emph{Rangs Complets} que chaque unité ennemie engagée dans le même corps à corps est \emph{Indomptable} et \nouveau{ignore le modificateur de Commandement issu des \emph{Résultats de Combat}}.
+
+\subsubsection*{Désorganisée}
+
+\nouveau{Si une unité est engagée dans un corps à corps par une unité ennemie qui est sur son flanc ou son arrière, et qui possède au moins deux \emph{Rangs complets}, alors elle est \emph{Désorganisée} et ne peut pas bénéficier de la règle \emph{Indomptable}}.
+
+\subsubsection*{Plus d'ennemis}
+\label{cac/plus_ennemis}
+Parfois, une unité extermine toutes les unités ennemies au contact socle à socle et se retrouve désengagée de tout corps à corps. Elle ne peut alors pas fournir de bonus sur le \emph{Résultat de Combat}, comme \emph{Étendards} ou \emph{Attaque de flanc}. Cette unité compte toujours comme ayant gagné le combat, et peut soit faire une \emph{Charge Irrésistible}, si elle y est autorisée, soit faire un \nouveau{\emph{Pivot Post-Combat}} ou une \emph{Reformation Post-Combat}.
+
+Quand cela arrive dans des combats multiples, les blessures infligées à et par l'unité en question comptent pour le \emph{Résultat de Combat}, mais les autres bonus sont ignorés. Souvenez-vous que l'unité elle-même ne doit pas passer de test de \emph{Moral}, puisqu'elle compte toujours comme ayant gagné le combat.
+
+\section{Poursuites et charges irrésistibles}
+
+Avant de déplacer les unités qui ont raté leur test de \emph{Moral}, les unités ennemies qui sont au contact socle à socle avec celles-ci peuvent déclarer qu'elles poursuivent une des unités en fuite. Pour pouvoir poursuivre une unité en fuite, une unité ne doit pas être engagée avec une unité ennemie qui a réussi son test de \emph{Moral}. Il est possible de décider de ne pas poursuivre des ennemis en fuite, à condition de réussir un test de Commandement. Si le test de Commandement est raté, l'unité devra poursuivre une des unités ennemies en fuite. Si le test de Commandement est réussi, l'unité peut faire un \nouveau{\emph{Pivot Post-Combat}} ou une \emph{Reformation Post-Combat}. 
+
+\subsubsection*{Pivot Post-Combat}
+Une unité qui effectue un \emph{Pivot Post-Combat} pivote sur son centre et réorganise ses figurines avec la règle \emph{Au Premier Rang}, lesquelles doivent bien sûr rester positionnées de façon réglementaire. Ce mouvement est effectué après les mouvements de fuite et de poursuite.
+
+\subsubsection*{Reformation Post-Combat}
+Une unité qui effectue une \emph{Reformation Post-Combat} peut faire une manoeuvre de Reformation. Cependant, elle ne pourra pas déclarer de charge durant le tour de joueur suivant. Ce mouvement est effectué après les mouvements de fuite et de poursuite.
+
+\subsubsection*{Charge Irrésistible}
+Si une unité annihile toutes les unités avec lesquelles elle était en contact socle à socle à sa première manche de corps à corps, alors qu'elle a chargé, elle peut effectuer un mouvement de poursuite particulier qui s'appelle \emph{Charge Irrésistible}. La \emph{Charge Irrésistible} suit les règles de mouvement de poursuite, à l'exception de la direction. Une \emph{Charge Irrésistible} doit être dirigée droit devant.
+
+\subsection*{Jet de distance de fuite et de poursuite}
+
+Toute unité en fuite lance 2D6 pour déterminer sa distance de fuite et chaque unité qui a déclaré une poursuite jette 2D6 pour déterminer sa distance de poursuite. Si au moins une unité poursuivante obtient un résultat égal ou supérieur à la distance de fuite de l'unité qu'elle poursuit, alors cette dernière est rattrapée et détruite. Retirez l'unité du jeu, aucune sauvegarde ou règle spéciale ne peut la sauver. Placez cependant un marqueur à l'emplacement où le centre de l'unité qui vient d'être détruite serait arrivé après son mouvement de fuite si elle n'avait pas été rattrapée (voir ci-dessous).
+
+\subsection*{Distance et déplacement des unités en fuite}
+Chaque unité en fuite (qui n'a pas été détruite) doit fuir directement à l'opposé de l'unité ennemie en contact socle à socle qui a le plus de rangs. En cas d'égalité de nombre de rangs entre plusieurs unités, c'est le vainqueur du corps à corps qui décide à l'opposé de quelle unité la fuite doit se faire. Pivotez l'unité en fuite dans l'axe passant par son centre et le centre de l'unité adverse, puis déplacez-la d'un nombre de pouces égal au jet de fuite. Suivez les règles de mouvement de fuite, à l'exception du fait que la traversée des unités qui sont engagées dans le même corps à corps ne provoquent pas de test de \emph{Terrain Dangereux}. Si plusieurs unités fuient d'un même combat, les unités se déplacent dans le même ordre que celui des jets de distance de fuite (leur propriétaire ayant choisi l'ordre dans lequel il a jeté les dés).
+
+\subsection*{Distance et déplacement des unités en poursuite}
+
+Chaque unité poursuivante effectue une rotation autour de son centre, par le sens le plus court, pour faire face au centre de l'unité poursuivie ou au marqueur placé à sa destruction. Cette rotation ignore tout obstacle et peut être faite à travers des figurines ou des décors.
+\begin{itemize}[label={-}]
+\item Cependant, si cette rotation fait finir le front de l'unité poursuivante sur une unité ennemie, elle compte comme l'ayant chargé. Retirez l'unité poursuivante du champ de bataille, puis replacez-la avec son front en contact socle à socle avec l'unité chargée, face au bon arc, et en maximisant le nombre de figurines engagées comme d'habitude. Cependant, s'il n'y a pas assez de place pour permettre cette charge, alors l'unité qui devait être chargée compte plutôt comme un \emph{Terrain Infranchissable} (voir plus bas).
+\item Si la rotation ne fait pas finir le front de l'unité poursuivante sur une unité ennemie, mais sur une unité alliée ou un \emph{Terrain Infranchissable}, alors elle doit tourner pour faire le plus possible face à l'unité poursuivie, en s'arrêtant à \unit{1}{\pouce} de tout obstacle. Son mouvement de poursuite s'arrête ici.
+\item Si aucun des cas ci-dessus n'est rencontré, l'unité ignore tout obstacle pendant sa rotation, puis se déplace droit vers l'unité en fuite. Si durant ce déplacement, elle ne peut pas éviter un obstacle ignoré pendant la rotation initiale, en faisant attention à la \emph{Règle du Pouce d'Écart}, à moins qu'il y ait charge, suivez la procédure habituelle pour maintenir l'espacement de \unit{1}{\pouce}. Revenez en arrière jusqu'à la dernière position réglementaire de l'unité en respectant l'espacement de \unit{1}{\pouce}. La plupart du temps, l'unité ne bouge finalement pas, mais tourne pour faire face à l'unité poursuivie autant que possible.
+\end{itemize}
+
+Si ce mouvement de poursuite devait amener l'unité poursuivante en contact avec un nouvel ennemi, elle déclare automatiquement une charge contre cette unité, en utilisant le jet de poursuite comme équivalent au jet de distance de charge. Cette charge suit les règles de charge habituelles, hormis que l'unité chargée ne peut déclarer aucune réaction. Si cela crée un nouveau corps à corps, il devra être effectué au prochain tour de joueur. Cependant, si l'unité poursuivante arrive ainsi dans un corps à corps qui existait déjà et n'a pas encore été résolu, elle y participera normalement, ce qui lui permet de combattre à nouveau dans une même \emph{Phase de Corps à Corps}, voire de poursuivre à nouveau. Cette charge spéciale ne peut être faite contre une unité qui vient de fuir d'un combat impliquant l'unité poursuivante. Traiter l'unité en fuite comme une unité alliée pour le mouvement de poursuite (y compris pour la rotation initiale).
+
+Si l'unité poursuivante ne se retrouve pas en situation de charge comme décrite dans le paragraphe ci-dessus, elle est déplacée directement vers l'unité en fuite, en respectant la \emph{Règle du Pouce d'Écart}. 
+
+Si plusieurs unités venant d'un même corps à corps poursuivent, le propriétaire décide dans quel ordre elles seront déplacées, puis effectue les jets de distance de poursuite. Le joueur actif décide qui commence à déterminer l'ordre de mouvement de ses unités. Chaque joueur choisit l'ordre de mouvement de ses propres unités.
+
+La figure \ref{figure/poursuite} illustre quelques cas de poursuite.
+
+\subsubsection*{Poursuite hors de la table}
+
+Si une unité qui poursuit rencontre un bord de table, elle quitte le champ de bataille. Elle reviendra à la prochaine étape des \emph{Autres Mouvements} du joueur la contrôlant, en utilisant la règle d'unité en \emph{Embuscade} arrivant (elle arrive automatiquement). Elle doit par contre être placée avec le rang arrière centré le plus proche possible sur le point de la table d'où elle est sortie, sans changer de formation. Les figurines qui sont sorties de la table lors d'une poursuite ne peuvent effectuer aucune action, ni utiliser d'objet magique, de capacités ou de règles spéciales tant qu'elles sont en dehors de la table.
+
+
+\begin{figure}[!htbp]
+\centering
+\def\svgwidth{7.7cm}
+\input{poursuite.pdf_tex}
+\caption{Dans tous ces exemples, l'unité en violet est engagée sur le flanc de l'unité verte. L'unité verte gagne le combat. L'unité violette rate son test de \emph{Moral} et fuit de \unit{9}{\pouce}. L'unité verte la poursuit sur \unit{8}{\pouce}. \\
+a) Dans ce premier exemple, il n'y a pas d'obstacle. L'unité verte est tournée vers l'unité violette et fait son mouvement de poursuite. \\
+b) Dans ce deuxième exemple, la rotation de l'unité verte fait finir son front sur une unité ennemie, en rouge. L'unité verte doit donc charger l'unité rouge, déplacez-la en contact socle à socle avec celle-ci. \\
+c) Dans ce troisième exemple, la rotation de l'unité verte fait finir son front sur une unité alliée, en vert clair. Dans ce cas, la rotation doit être arrêtée à \unit{1}{\pouce} de l'unité alliée. \\
+d) Dans ce quatrième exemple, la rotation de l'unité verte fait finir une partie de ses figurines sur une autre unité, en bleu, alliée ou ennemie. Cependant, son front est dégagé, donc elle peut faire son mouvement de poursuite droit devant.}
+\label{figure/poursuite}
+\end{figure}
+
+\section{Reformation de combat}
+
+Après que toutes les fuites et poursuites ont été résolues, les unités restant dans des corps à corps peuvent tenter de faire une \emph{Reformation de Combat}. Les unités engagées sur plus d'un côté, par exemple de front et de flanc, ne peuvent jamais se reformer en combat. Pour pouvoir faire une \emph{Reformation de Combat}, les unités qui ont perdu la manche de corps à corps doivent réussir au préalable un test de Commandement, avec un Commandement équivalent à celui qui a du être utilisé pour le test de \emph{Moral}.
+
+\nouveau{Si les deux camps veulent effectuer une \emph{Reformation de Combat}, le jouer actif décide qui commence}. Ce joueur doit alors faire les reformations de toutes ses unités, une par une, dans l'ordre qui lui plaît, avant que l'autre joueur puisse faire les siennes.
+
+Quand une unité fait une \emph{Reformation de Combat}, retirez-la du champ de bataille, puis replacez-la dans une formation réglementaire, en contact socle à socle avec la ou les unités ennemies avec lesquelles elle était au corps à corps auparavant, en respectant les arcs engagés des unités ennemies. Vous pouvez ignorer la \emph{Règle du Pouce d'Écart} pour les unités appartenant à un même corps à corps, mais vous ne pouvez pas créer un contact socle à socle avec une unité avec laquelle votre unité en reformation n'en avait pas auparavant. Aucune figurine ne doit finir à plus de deux fois sa valeur de Mouvement de sa position de départ.
+
+\nouveau{À la fin de toute \emph{Reformation de Combat}, vous devez avoir au moins autant de figurines en contact socle à socle avec des ennemis qu'il y en avait avant la reformation. Tout \emph{Personnage} qui était au corps à corps doit le rester, même si cela peut être avec des figurines différentes}. De plus, à la fin de toute \emph{Reformation de Combat}, toute figurine ennemie qui était au corps à corps avant la reformation doit toujours l'être, même si c'est avec d'autres figurines, voire même une autre unité.
+
