@@ -540,14 +540,8 @@
 \newcommand{\mountslist}[1]{%
 	\parselist[,]{#1}{\locallists@mountslist}%
 	\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0cm, itemsep=0cm, parsep=0cm]%
-		\forlistloop{\item\setmount}{\locallists@mountslist}%
+		\forlistloop{\item\setoption}{\locallists@mountslist}%
 	\end{description}%
-}
-
-% Mount specific command.
-\newcommand{\setmount}[1]{%
-	\splitatequal{#1}\mountname\mountvalue%
-	\option{\mountname}{\mountvalue}%
 }
 
 % Mount entry.
