@@ -31,9 +31,30 @@ Vérifiez la ligne de vue de chaque figurine. Souvenez-vous que la ligne de vue 
 
 \section{Jets de dé pour toucher}
 
-Quand vous lancez le jet pour toucher, utilisez la Capacité de Tir (CT) de la figurine qui tire. Si la figurine a plusieurs profils, comme par exemple un cavalier et sa monture, utilisez la CT de l'élément qui tire. Le joueur contrôlant l'unité qui tente de toucher jette un dé par figurine. Si le résultat est supérieur ou égal à \result{7 moins la CT} de la figurine, le tir touche sa cible. Un résultat de \result{1} est toujours un échec. La table \ref{table/tir_pour_toucher} référence les résultats nécessaires pour toucher.
+Quand vous lancez le jet pour toucher, utilisez la Capacité de Tir (CT) de la figurine qui tire. Si la figurine a plusieurs profils, comme par exemple un cavalier et sa monture, utilisez la CT de l'élément qui tire. 
+
+\subsection{Modificateurs au jet pour toucher}
+\label{tir/modificateurs}
+
+Les attaques de tir peuvent subir un ou plusieurs modificateurs sur leurs jets pour toucher. Additionnez simplement les modificateurs à la CT du tireur. La liste de ce paragraphe décrit les modificateurs usuels, mais les sorts et capacités peuvent ajouter d'autres modificateurs. Si les modificateurs provoquent des résultats de 7+, 8+ ou 9+, lancez les jets comme décrit dans la table \ref{table/tir_pour_toucher}. La table \ref{table/modificateur_tir} résume les modificateurs.
+
+Le joueur contrôlant l'unité qui tente de toucher jette un dé par figurine. Si le résultat est supérieur ou égal à \result{7 moins la CT} de la figurine, le tir touche sa cible. Un résultat de \result{1} est toujours un échec. La table \ref{table/tir_pour_toucher} référence les résultats nécessaires pour toucher.
 
 Si au moins un tir a touché, suivez la procédure décrite dans la section \ref{attaque_et_blessure} à la page \pageref{attaque_et_blessure}.
+
+\renewcommand{\arraystretch}{1.2}
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{r|c}
+Longue portée & -1 \\
+Bouger et tirer & -1 \\
+Tenir la position et tirer & -1 \\
+Couvert léger & -1 \\
+Couvert lourd & -2 \\
+\end{tabular}
+\caption{\label{table/modificateur_tir}Modificateurs au jet pour toucher.}
+\end{table}
+\renewcommand{\arraystretch}{1.5}
 
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[!htbp]
@@ -58,24 +79,7 @@ Si au moins un tir a touché, suivez la procédure décrite dans la section \ref
 \end{table}
 \renewcommand{\arraystretch}{1.5}
 
-\subsection{Modificateurs au jet pour toucher}
-\label{tir/modificateurs}
 
-Les attaques de tir peuvent subir un ou plusieurs modificateurs sur leurs jets pour toucher. Additionnez simplement les modificateurs à la CT du tireur. La liste de ce paragraphe décrit les modificateurs usuels, mais les sorts et capacités peuvent ajouter d'autres modificateurs. Si les modificateurs provoquent des résultats de 7+, 8+ ou 9+, lancez les jets comme décrit dans la table \ref{table/tir_pour_toucher}. La table \ref{table/modificateur_tir} résume les modificateurs.
-
-\renewcommand{\arraystretch}{1.2}
-\begin{table}[!htbp]
-\centering
-\begin{tabular}{r|c}
-Longue portée & -1 \\
-Bouger et tirer & -1 \\
-Tenir la position et tirer & -1 \\
-Couvert léger & -1 \\
-Couvert lourd & -2 \\
-\end{tabular}
-\caption{\label{table/modificateur_tir}Modificateurs au jet pour toucher.}
-\end{table}
-\renewcommand{\arraystretch}{1.5}
 
 \subsubsection*{Longue portée}
 
@@ -106,7 +110,7 @@ Le couvert est déterminé individuellement, pour chaque figurine de l'unité qu
 Une figurine tirant sur une cible derrière un \emph{Couvert Léger} subit un modificateur pour toucher de -1. Le \emph{Couvert Léger} s'applique si au moins la moitié de l'empreinte au sol de l'unité ciblée est cachée par un ou plusieurs des éléments suivants (voir figure \ref{figure/couvert_leger}) :
 \begin{itemize}[label={-}]
 \item Terrain offrant un \emph{Couvert Léger}.
-\item Figurines, de n'importe quelle taille. Si vous tirez avec ou sur des figurines de \emph{Grande Taille} (voir le paragraphe \ref{hauteur_figs} à la page \pageref{hauteur_figs}), ignorez les figurines de \emph{Petite Taille} pour déterminer s'il y a un \emph{Couvert Léger}.
+\item \nouveau{Figurines, de n'importe quelle taille. Si vous tirez avec ou sur des figurines de \emph{Grande Taille} (voir le paragraphe \ref{hauteur_figs} à la page \pageref{hauteur_figs}), ignorez les figurines de \emph{Petite Taille} pour déterminer s'il y a un \emph{Couvert Léger}.}
 \end{itemize}
 
 \subsubsection*{Cible derrière un couvert lourd}

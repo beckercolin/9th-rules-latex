@@ -18,9 +18,9 @@ Les armées qui s'affrontent correspondent généralement à un même total de p
 
 Dans ce jeu, nous utilisons des montants en points pour chaque unité, arme, option, objet magique, etc. Le coût d'une unité est la somme des points que coûtent les figurines et options qu'elle contient. Le total des valeurs en points de toutes les unités d'une armée donne la valeur en points de l'armée.
 
-\textbf{Demi-point}. Le coût d'une unité doit être entier. Si une amélioration coûte 0,5 point, le coût final de l'unité est arrondi à la valeur supérieure.
+\nouveau{\textbf{Demi-point}. Le coût d'une unité doit être entier. Si une amélioration coûte 0,5 point, le coût final de l'unité est arrondi à la valeur supérieure.}
 
-\textbf{Seigneur / Héros}. Si le prix d'une option ou d'un objet magique est écrit avec un "/" (par exemple, \emph{Épée de Géant} (\unit{60}{pts} / \unit{50}{pts})), la première valeur est le coût pour un \emph{Seigneur}, et la seconde pour un \emph{Héros} ou un \emph{Champion}.
+\nouveau{\textbf{Seigneur / Héros}. Si le prix d'une option ou d'un objet magique est écrit avec un "/" (par exemple, \emph{Épée de Géant} (60 {pts} / 50 {pts})), la première valeur est le coût pour un \emph{Seigneur}, et la seconde pour un \emph{Héros} ou un \emph{Champion}.}
 
 \section{Restrictions}
 
@@ -47,11 +47,12 @@ Dans \emph{Batailles Fantastiques : Le 9\ieme Âge}, une armée doit suivre des 
 
 \begin{itemize}[label={-}]
 \item \textbf{Valeur en points de l'armée} : Le total des valeurs en points de toutes les unités de l'armée, en comptant les options et équipements, ne doit pas dépasser la limite de points décidée pour la bataille. Il peut être en dessous de 20 points au maximum. Les limites en pourcentage des différentes catégories, comme les unités de base, sont toujours calculées par rapport à la limite en points de la bataille, même si le total de l'armée est inférieur.
-\item \textbf{Catégories d'unités} : Chaque unité du jeu appartient à une des 5 catégories. La limite maximum des points qu'on peut dépenser est différent d'une catégorie à une autre. De plus, une même unité ne peut être sélectionnée qu'un nombre limité de fois qui dépend aussi de sa catégorie. Parfois, certaines unités peuvent être déplacées d'une catégorie à une autre. Par exemple, une armée de Guerriers des Dieux Sombres commandée par un Général sur Char est autorisée à prendre un Char comme choix d'unité de base au lieu de choix d'unité spéciale. Dans de tels cas, il faut respecter à la fois la limite de duplication de son ancienne catégorie et de sa nouvelle. La limite de points est prise, quant à elle, à partir de la nouvelle catégorie. Dans notre exemple précédent, vous ne pouvez pas inclure plus de 3 Chars, mais ceux-ci compteront dans les 25 \% d'unités de base.
+\item \textbf{Catégories d'unités} : Chaque unité du jeu appartient à une des 5 catégories. La limite maximum des points qu'on peut dépenser est différent d'une catégorie à une autre. De plus, une même unité ne peut être sélectionnée qu'un nombre limité de fois qui dépend aussi de sa catégorie. Parfois, certaines unités peuvent être déplacées d'une catégorie à une autre. Par exemple, certaines conditions peuvent autoriser un joueur à prendre un Char comme choix d’unité de base au lieu de choix d’unité spéciale. Dans de tels cas, il faut respecter à la fois la limite de duplication de son ancienne catégorie et de sa nouvelle. La limite de points est prise, quant à elle, à partir de la nouvelle catégorie. Dans notre exemple précédent, vous ne pouvez pas inclure plus de 3 Chars, mais ceux-ci compteront dans les 25 \% d'unités de base.
 \item \textbf{Taille d'armée minimale} : \nouveau{Chaque armée doit contenir \textbf{au moins 4 unités}, sans compter les \emph{Personnages}. On ne peut pas comptabiliser qu'une seule unité du type \emph{Machine de Guerre} pour atteindre ce minimum}.
 \item \textbf{Général} : Un \emph{Personnage} de l'armée doit être nommé \emph{Général}. Il faut donc qu'il y ait au moins un \emph{Personnage} dans l'armée capable de porter ce titre. Il ne peut y avoir qu'un seul \emph{Général}.
 \item \textbf{Unique} : \nouveau{Les unités marquées \emph{Unique} ne peuvent être représentées qu'une fois par armée}.
-\item \textbf{Limite spéciale} : Certaines unités disposent d'une limite de duplication différente qui est alors spécifiée.
+\item \textbf{Un par armée} : \nouveau{Les unités ou options marqués \emph{Un par armée} ne peuvent être représentés qu'une fois par armée, y compris dans une \emph{Grande Armée}}.
+\item \textbf{\newrule{0 - X Choix}} : \newrule{Certaines unités disposent d'une limite de duplication différente, spécifiée par (0 - X Choix) (Par exemple (0 - 2 Choix)). Cela signifie que ces unités  peuvent être sélectionnées entre 0 et X fois, en ignorant les limites de duplication classiques. La limite maximale de X est divisée par 2 pour des Patrouilles (arrondir à l'entier supérieur) et multipliée par 2 pour des Grandes Armées.}
 \end{itemize}
 
 \section{Patrouilles et grandes armées}
@@ -75,7 +76,8 @@ La table \ref{table/patrouille_et_grande_armee} résume les limites de duplicati
 \textbf{Rare} 				& max. 1	 			& max. 4	 			\tabularnewline
 \textbf{Héros et Seigneurs} & max. 2	 			& max. 6	 			\tabularnewline
 \textbf{Unique}			    & max. 1	 			& max. 2	 			\tabularnewline
-\textbf{Limite spéciale} 	& divisée par 2			& doublée				\tabularnewline
+\textbf{Un par armée}		& max. 1	 			& max. 1	 			\tabularnewline
+\textbf{0 - X Choix} 		& divisée par 2			& doublée				\tabularnewline
 \hline
 \end{tabular}
 \caption{\label{table/patrouille_et_grande_armee}Limites extrêmes de duplication des armées.}

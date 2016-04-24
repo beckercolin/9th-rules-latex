@@ -1,0 +1,196 @@
+\select@language {french}
+\contentsline {part}{1\hspace {1em}Introduction}{2}{part.1}
+\contentsline {section}{\numberline {1.1}BF : Le 9\up {e}\xspace \IeC {\^A}ge, qu'est-ce que c'est ?}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Note des traducteurs sur les distances}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}L'\IeC {\'e}chelle du jeu...}{3}{section.1.3}
+\contentsline {part}{2\hspace {1em}Figurines, unit\IeC {\'e}s et formations}{4}{part.2}
+\contentsline {section}{\numberline {2.1}Figurines}{4}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Socles et contact socle \IeC {\`a} socle}{4}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Figurines en plusieurs \IeC {\'e}l\IeC {\'e}ments}{4}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Unit\IeC {\'e}s}{4}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Figurines ordinaires}{4}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Rangs complets}{4}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Formation en horde}{5}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Empreinte au sol}{5}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Centre de l'unit\IeC {\'e}}{5}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}Avant, arri\IeC {\`e}re, flancs et arcs de vision}{5}{subsection.2.2.6}
+\contentsline {part}{3\hspace {1em}Principes g\IeC {\'e}n\IeC {\'e}raux}{6}{part.3}
+\contentsline {section}{\numberline {3.1}Jeu au tour par tour}{6}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Tour de joueur}{6}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Joueurs actif et r\IeC {\'e}actif}{6}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Capacit\IeC {\'e}s simultan\IeC {\'e}es}{6}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Les d\IeC {\'e}s}{7}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Lancer les d\IeC {\'e}s}{7}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Le d\IeC {\'e} de d\IeC {\'e}viation}{7}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}D\IeC {\'e}viation}{8}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Direction al\IeC {\'e}atoire}{8}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Gabarits}{8}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Touches des Gabarits Circulaires}{8}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Gabarit lin\IeC {\'e}aire}{9}{subsection.3.3.2}
+\contentsline {part}{4\hspace {1em}Logistique du champ de bataille}{10}{part.4}
+\contentsline {section}{\numberline {4.1}Distances}{10}{section.4.1}
+\contentsline {section}{\numberline {4.2}Champ de vision}{10}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Hauteur des figurines}{10}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}R\IeC {\`e}gle du pouce d'\IeC {\'e}cart}{10}{section.4.3}
+\contentsline {section}{\numberline {4.4}Bords de table}{11}{section.4.4}
+\contentsline {part}{5\hspace {1em}Caract\IeC {\'e}ristiques}{12}{part.5}
+\contentsline {section}{\numberline {5.1}Profil de caract\IeC {\'e}ristiques}{12}{section.5.1}
+\contentsline {section}{\numberline {5.2}Test de caract\IeC {\'e}ristique}{13}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Caract\IeC {\'e}ristique non modifi\IeC {\'e}e}{13}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Caract\IeC {\'e}ristiques emprunt\IeC {\'e}es}{13}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Tests de Commandement}{13}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Priorit\IeC {\'e} des modificateurs}{13}{subsection.5.2.4}
+\contentsline {part}{6\hspace {1em}Pr\IeC {\'e}parer une partie}{15}{part.6}
+\contentsline {section}{\numberline {6.1}Construire votre liste d'arm\IeC {\'e}e}{15}{section.6.1}
+\contentsline {section}{\numberline {6.2}Co\IeC {\^u}t en points}{15}{section.6.2}
+\contentsline {section}{\numberline {6.3}Restrictions}{15}{section.6.3}
+\contentsline {section}{\numberline {6.4}Patrouilles et grandes arm\IeC {\'e}es}{16}{section.6.4}
+\contentsline {section}{\numberline {6.5}Liste d'arm\IeC {\'e}e ouverte ?}{17}{section.6.5}
+\contentsline {part}{7\hspace {1em}Mise en place de la partie}{19}{part.7}
+\contentsline {section}{\numberline {7.1}\IeC {\'E}tapes de la pr\IeC {\'e}paration}{19}{section.7.1}
+\contentsline {section}{\numberline {7.2}Taille de la partie}{19}{section.7.2}
+\contentsline {section}{\numberline {7.3}D\IeC {\'e}voiler les listes}{19}{section.7.3}
+\contentsline {section}{\numberline {7.4}Placer les d\IeC {\'e}cors}{20}{section.7.4}
+\contentsline {section}{\numberline {7.5}Type de d\IeC {\'e}ploiement}{20}{section.7.5}
+\contentsline {section}{\numberline {7.6}Objectifs secondaires}{21}{section.7.6}
+\contentsline {section}{\numberline {7.7}Zones de d\IeC {\'e}ploiement}{21}{section.7.7}
+\contentsline {section}{\numberline {7.8}G\IeC {\'e}n\IeC {\'e}rer les sorts}{22}{section.7.8}
+\contentsline {part}{8\hspace {1em}D\IeC {\'e}ploiement}{23}{part.8}
+\contentsline {part}{9\hspace {1em}Phase de mouvement}{25}{part.9}
+\contentsline {section}{\numberline {9.1}\IeC {\'E}tapes de la phase}{25}{section.9.1}
+\contentsline {section}{\numberline {9.2}D\IeC {\'e}claration des charges}{25}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}R\IeC {\'e}actions aux charges}{25}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}D\IeC {\'e}placement des unit\IeC {\'e}s en charge}{26}{subsection.9.2.2}
+\contentsline {section}{\numberline {9.3}Mouvements obligatoires}{28}{section.9.3}
+\contentsline {subsection}{\numberline {9.3.1}Test de ralliement}{31}{subsection.9.3.1}
+\contentsline {subsection}{\numberline {9.3.2}Mouvements de fuite}{31}{subsection.9.3.2}
+\contentsline {subsection}{\numberline {9.3.3}Unit\IeC {\'e}s en fuite}{31}{subsection.9.3.3}
+\contentsline {section}{\numberline {9.4}Autres mouvements}{32}{section.9.4}
+\contentsline {subsection}{\numberline {9.4.1}Mouvement simple}{32}{subsection.9.4.1}
+\contentsline {subsection}{\numberline {9.4.2}Marche forc\IeC {\'e}e}{32}{subsection.9.4.2}
+\contentsline {subsection}{\numberline {9.4.3}Reformation}{32}{subsection.9.4.3}
+\contentsline {section}{\numberline {9.5}Pivots et roues}{33}{section.9.5}
+\contentsline {part}{10\hspace {1em}Phase de magie}{34}{part.10}
+\contentsline {section}{\numberline {10.1}Sorciers}{34}{section.10.1}
+\contentsline {section}{\numberline {10.2}Sorts}{34}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Am\IeC {\'e}lioration de sort}{35}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}Types de sorts}{35}{subsection.10.2.2}
+\contentsline {subsection}{\numberline {10.2.3}Dur\IeC {\'e}e des sorts}{37}{subsection.10.2.3}
+\contentsline {section}{\numberline {10.3}\IeC {\'E}tapes de la phase de magie}{38}{section.10.3}
+\contentsline {subsection}{\numberline {10.3.1}D\IeC {\'e}s de magie : flux magiques et canalisation}{38}{subsection.10.3.1}
+\contentsline {subsection}{\numberline {10.3.2}Dissipation d'un sort restant en jeu}{38}{subsection.10.3.2}
+\contentsline {section}{\numberline {10.4}\IeC {\'E}tapes de lancement d'un sort}{39}{section.10.4}
+\contentsline {subsection}{\numberline {10.4.1}Modificateurs magiques}{40}{subsection.10.4.1}
+\contentsline {subsection}{\numberline {10.4.2}Perte de concentration (voir la table \ref {table/etapes_lancement_sort}, page \pageref {table/etapes_lancement_sort})}{40}{subsection.10.4.2}
+\contentsline {subsection}{\numberline {10.4.3}Pas assez de puissance !}{40}{subsection.10.4.3}
+\contentsline {subsection}{\numberline {10.4.4}Pouvoir irr\IeC {\'e}sistible}{40}{subsection.10.4.4}
+\contentsline {subsection}{\numberline {10.4.5}Fiasco}{40}{subsection.10.4.5}
+\contentsline {section}{\numberline {10.5}Attributs de discipline}{40}{section.10.5}
+\contentsline {section}{\numberline {10.6}Objets de sort}{40}{section.10.6}
+\contentsline {section}{\numberline {10.7}Effets magiques particuliers}{41}{section.10.7}
+\contentsline {subsection}{\numberline {10.7.1}Mouvement magique}{41}{subsection.10.7.1}
+\contentsline {subsection}{\numberline {10.7.2}R\IeC {\'e}cup\IeC {\'e}rer des PV et ressusciter des figurines}{42}{subsection.10.7.2}
+\contentsline {subsection}{\numberline {10.7.3}Unit\IeC {\'e}s invoqu\IeC {\'e}es}{42}{subsection.10.7.3}
+\contentsline {part}{11\hspace {1em}Phase de tir}{43}{part.11}
+\contentsline {section}{\numberline {11.1}\IeC {\'E}tapes de la phase de tir}{43}{section.11.1}
+\contentsline {subsection}{\numberline {11.1.1}Comment tirer}{43}{subsection.11.1.1}
+\contentsline {section}{\numberline {11.2}Jets de d\IeC {\'e} pour toucher}{43}{section.11.2}
+\contentsline {subsection}{\numberline {11.2.1}Modificateurs au jet pour toucher}{44}{subsection.11.2.1}
+\contentsline {subsection}{\numberline {11.2.2}Lignes de vues et couverts}{47}{subsection.11.2.2}
+\contentsline {part}{12\hspace {1em}Phase de corps \IeC {\`a} corps}{49}{part.12}
+\contentsline {section}{\numberline {12.1}\IeC {\'E}tapes de la phase de corps \IeC {\`a} corps}{49}{section.12.1}
+\contentsline {subsection}{\numberline {12.1.1}Plus engag\IeC {\'e}s}{49}{subsection.12.1.1}
+\contentsline {section}{\numberline {12.2}\IeC {\'E}tapes d'une manche de corps \IeC {\`a} corps}{50}{section.12.2}
+\contentsline {subsection}{\numberline {12.2.1}Qui peut frapper}{50}{subsection.12.2.1}
+\contentsline {subsection}{\numberline {12.2.2}R\IeC {\'e}partir les attaques}{51}{subsection.12.2.2}
+\contentsline {subsection}{\numberline {12.2.3}Jets pour toucher}{52}{subsection.12.2.3}
+\contentsline {subsection}{\numberline {12.2.4}Plus au corps \IeC {\`a} corps}{52}{subsection.12.2.4}
+\contentsline {section}{\numberline {12.3}Gagner une manche de combat}{54}{section.12.3}
+\contentsline {section}{\numberline {12.4}Test de moral}{55}{section.12.4}
+\contentsline {section}{\numberline {12.5}Poursuites et charges irr\IeC {\'e}sistibles}{56}{section.12.5}
+\contentsline {section}{\numberline {12.6}Reformation de combat}{58}{section.12.6}
+\contentsline {part}{13\hspace {1em}Attaques et blessures}{60}{part.13}
+\contentsline {section}{\numberline {13.1}\IeC {\'E}tapes d'une attaque}{60}{section.13.1}
+\contentsline {section}{\numberline {13.2}R\IeC {\'e}partition des touches}{61}{section.13.2}
+\contentsline {section}{\numberline {13.3}Jets pour blesser}{61}{section.13.3}
+\contentsline {section}{\numberline {13.4}Sauvegarde d'armure et modificateurs}{62}{section.13.4}
+\contentsline {section}{\numberline {13.5}R\IeC {\'e}g\IeC {\'e}n\IeC {\'e}ration et sauvegarde invuln\IeC {\'e}rable}{62}{section.13.5}
+\contentsline {section}{\numberline {13.6}Retirer les points de vie}{62}{section.13.6}
+\contentsline {section}{\numberline {13.7}Retirer les pertes}{63}{section.13.7}
+\contentsline {section}{\numberline {13.8}Test de panique}{64}{section.13.8}
+\contentsline {part}{14\hspace {1em}Types de troupe}{65}{part.14}
+\contentsline {section}{\numberline {14.1}Figurines \IeC {\`a} pied ou mont\IeC {\'e}es}{65}{section.14.1}
+\contentsline {subsection}{\numberline {14.1.1}Personnage mont\IeC {\'e}}{66}{subsection.14.1.1}
+\contentsline {section}{\numberline {14.2}R\IeC {\`e}gles sp\IeC {\'e}ciales des types de troupe}{66}{section.14.2}
+\contentsline {part}{15\hspace {1em}\IeC {\'E}quipement standard}{70}{part.15}
+\contentsline {section}{\numberline {15.1}Armes de corps \IeC {\`a} corps}{70}{section.15.1}
+\contentsline {section}{\numberline {15.2}Armes de tir}{71}{section.15.2}
+\contentsline {section}{\numberline {15.3}Armes d'artillerie}{72}{section.15.3}
+\contentsline {subsection}{\numberline {15.3.1}Tableau des Incidents}{74}{subsection.15.3.1}
+\contentsline {section}{\numberline {15.4}Armures}{75}{section.15.4}
+\contentsline {part}{16\hspace {1em}Personnages}{77}{part.16}
+\contentsline {section}{\numberline {16.1}Personnages isol\IeC {\'e}s}{77}{section.16.1}
+\contentsline {section}{\numberline {16.2}Rejoindre une unit\IeC {\'e}}{77}{section.16.2}
+\contentsline {subsection}{\numberline {16.2.1}\leavevmode {\color {blue}Au premier rang}}{79}{subsection.16.2.1}
+\contentsline {subsection}{\numberline {16.2.2}Faites place}{80}{subsection.16.2.2}
+\contentsline {section}{\numberline {16.3}Le g\IeC {\'e}n\IeC {\'e}ral}{81}{section.16.3}
+\contentsline {subsection}{\numberline {16.3.1}Choisir le g\IeC {\'e}n\IeC {\'e}ral de l'arm\IeC {\'e}e}{81}{subsection.16.3.1}
+\contentsline {subsection}{\numberline {16.3.2}Pr\IeC {\'e}sence charismatique}{81}{subsection.16.3.2}
+\contentsline {section}{\numberline {16.4}Le porteur de la grande banni\IeC {\`e}re}{81}{section.16.4}
+\contentsline {subsection}{\numberline {16.4.1}Choisir le porteur de la grande banni\IeC {\`e}re}{81}{subsection.16.4.1}
+\contentsline {subsection}{\numberline {16.4.2}Tenez les rangs}{81}{subsection.16.4.2}
+\contentsline {subsection}{\numberline {16.4.3}Banni\IeC {\`e}re magique}{81}{subsection.16.4.3}
+\contentsline {subsection}{\numberline {16.4.4}Leur banni\IeC {\`e}re est \IeC {\`a} terre}{81}{subsection.16.4.4}
+\contentsline {section}{\numberline {16.5}D\IeC {\'e}fis}{82}{section.16.5}
+\contentsline {subsection}{\numberline {16.5.1}Lancer un d\IeC {\'e}fi}{82}{subsection.16.5.1}
+\contentsline {subsection}{\numberline {16.5.2}Accepter ou refuser un d\IeC {\'e}fi}{82}{subsection.16.5.2}
+\contentsline {subsection}{\numberline {16.5.3}Relever un d\IeC {\'e}fi}{82}{subsection.16.5.3}
+\contentsline {subsection}{\numberline {16.5.4}Carnage}{83}{subsection.16.5.4}
+\contentsline {part}{17\hspace {1em}\IeC {\'E}tat-majors}{84}{part.17}
+\contentsline {section}{\numberline {17.1}\IeC {\'E}tat-major et pertes}{84}{section.17.1}
+\contentsline {section}{\numberline {17.2}Musiciens}{84}{section.17.2}
+\contentsline {section}{\numberline {17.3}Porte-\IeC {\'e}tendard}{85}{section.17.3}
+\contentsline {subsection}{\numberline {17.3.1}\leavevmode {\color {blue}Porte-\IeC {\'e}tendard V\IeC {\'e}t\IeC {\'e}ran}}{85}{subsection.17.3.1}
+\contentsline {section}{\numberline {17.4}Champions}{85}{section.17.4}
+\contentsline {part}{18\hspace {1em}Terrains et d\IeC {\'e}cors}{86}{part.18}
+\contentsline {section}{\numberline {18.1}Types de terrain}{86}{section.18.1}
+\contentsline {section}{\numberline {18.2}Liste des terrains particuliers}{87}{section.18.2}
+\contentsline {subsection}{\numberline {18.2.1}Terrain d\IeC {\'e}couvert}{87}{subsection.18.2.1}
+\contentsline {subsection}{\numberline {18.2.2}Terrain infranchissable}{87}{subsection.18.2.2}
+\contentsline {subsection}{\numberline {18.2.3}\leavevmode {\color {blue}Champs}}{87}{subsection.18.2.3}
+\contentsline {subsection}{\numberline {18.2.4}Collines}{87}{subsection.18.2.4}
+\contentsline {subsection}{\numberline {18.2.5}For\IeC {\^e}ts}{88}{subsection.18.2.5}
+\contentsline {subsection}{\numberline {18.2.6}\leavevmode {\color {blue}Ruines}}{88}{subsection.18.2.6}
+\contentsline {subsection}{\numberline {18.2.7}Eaux peu profondes}{88}{subsection.18.2.7}
+\contentsline {subsection}{\numberline {18.2.8}Murs}{88}{subsection.18.2.8}
+\contentsline {subsection}{\numberline {18.2.9}B\IeC {\^a}timents}{89}{subsection.18.2.9}
+\contentsline {part}{19\hspace {1em}Conditions de victoire et points}{91}{part.19}
+\contentsline {section}{\numberline {19.1}Gagner des points de victoire}{91}{section.19.1}
+\contentsline {subsection}{\numberline {19.1.1}Objectifs secondaires}{91}{subsection.19.1.1}
+\contentsline {subsection}{\numberline {19.1.2}\leavevmode {\color {blue}Unit\IeC {\'e}s de capture}}{92}{subsection.19.1.2}
+\contentsline {section}{\numberline {19.2}Qui a gagn\IeC {\'e} ?}{92}{section.19.2}
+\contentsline {subsection}{\numberline {19.2.1}Table des Points de Bataille}{93}{subsection.19.2.1}
+\contentsline {subsection}{\numberline {19.2.2}R\IeC {\`e}gles optionnelles simplifi\IeC {\'e}es pour d\IeC {\'e}terminer le vainqueur}{93}{subsection.19.2.2}
+\contentsline {part}{20\hspace {1em}R\IeC {\`e}gles sp\IeC {\'e}ciales}{94}{part.20}
+\contentsline {section}{\numberline {20.1}Liste des r\IeC {\`e}gles sp\IeC {\'e}ciales}{94}{section.20.1}
+\contentsline {section}{\numberline {20.2}Appliquer les r\IeC {\`e}gles sp\IeC {\'e}ciales}{109}{section.20.2}
+\contentsline {subsection}{\numberline {20.2.1}R\IeC {\`e}gles sp\IeC {\'e}ciales et figurines en plusieurs \IeC {\'e}l\IeC {\'e}ments}{109}{subsection.20.2.1}
+\contentsline {subsection}{\numberline {20.2.2}Effets et unit\IeC {\'e}s}{110}{subsection.20.2.2}
+\contentsline {subsection}{\numberline {20.2.3}Armes et r\IeC {\`e}gles sp\IeC {\'e}ciales}{110}{subsection.20.2.3}
+\contentsline {subsection}{\numberline {20.2.4}R\IeC {\`e}gles sp\IeC {\'e}ciales dupliqu\IeC {\'e}es}{110}{subsection.20.2.4}
+\contentsline {part}{21\hspace {1em}Objets magiques}{111}{part.21}
+\contentsline {section}{\numberline {21.1}Cat\IeC {\'e}gories d'objets magiques}{111}{section.21.1}
+\contentsline {subsection}{\numberline {21.1.1}Types d'objets magiques}{112}{subsection.21.1.1}
+\contentsline {subsection}{\numberline {21.1.2}Restrictions}{112}{subsection.21.1.2}
+\contentsline {subsection}{\numberline {21.1.3}Co\IeC {\^u}t en points}{112}{subsection.21.1.3}
+\contentsline {subsection}{\numberline {21.1.4}Qui est affect\IeC {\'e} ?}{112}{subsection.21.1.4}
+\contentsline {subsection}{\numberline {21.1.5}Usage Unique}{112}{subsection.21.1.5}
+\contentsline {subsection}{\numberline {21.1.6}Objets magiques communs}{112}{subsection.21.1.6}
+\contentsline {subsection}{\numberline {21.1.7}Armes magiques}{113}{subsection.21.1.7}
+\contentsline {subsection}{\numberline {21.1.8}Armures magiques}{114}{subsection.21.1.8}
+\contentsline {subsection}{\numberline {21.1.9}Talismans}{115}{subsection.21.1.9}
+\contentsline {subsection}{\numberline {21.1.10}Objets enchant\IeC {\'e}s}{116}{subsection.21.1.10}
+\contentsline {subsection}{\numberline {21.1.11}Objets cabalistiques}{117}{subsection.21.1.11}
+\contentsline {subsection}{\numberline {21.1.12}Banni\IeC {\`e}res magiques}{118}{subsection.21.1.12}
+\contentsline {part}{22\hspace {1em}R\IeC {\'e}sum\IeC {\'e} des R\IeC {\`e}gles}{119}{part.22}
+\contentsline {part}{23\hspace {1em}Journal des modifications}{124}{part.23}

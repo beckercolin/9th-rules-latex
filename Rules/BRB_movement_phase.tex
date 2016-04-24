@@ -53,7 +53,7 @@ Quand une unité choisit de fuir en réaction à une charge, l'unité chargeant 
 
 \subsection{Déplacement des unités en charge}
 
-Maintenant que toutes les charges et leurs réactions ont été déclarées, les unités en charge vont essayer d'atteindre leur cible. Le joueur actif choisit une unité qui a déclaré une charge et jette les dés pour déterminer la portée de charge de cette unité, \newrule{puis la déplace. Répétez ce procédé pour chaque unité qui a déclaré une charge durant cette phase}.
+Maintenant que toutes les charges et leurs réactions ont été déclarées, les unités en charge vont essayer d'atteindre leur cible. Le joueur actif choisit une unité qui a déclaré une charge et jette les dés pour déterminer la portée de charge de cette unité, puis la déplace. Répétez ce procédé pour chaque unité qui a déclaré une charge durant cette phase.
 
 \subsubsection*{Portée de charge}
 
@@ -64,23 +64,23 @@ La portée de charge d'une unité est normalement sa valeur de Mouvement à laqu
 Un mouvement de charge consiste à se déplacer jusqu'à entrer en contact socle à socle avec l'unité chargée. Les règles suivantes s'appliquent :
 \begin{itemize}[label={-}]
 \item L'unité chargeant peut avancer droit autant qu'elle le souhaite.
-\item Une seule roue peut être effectuée pendant ce mouvement de charge. Cette roue ne peut dépasser un angle de \unit{90}{\text{\degree}}.
+\item Une seule roue peut être effectuée pendant ce mouvement de charge. Cette roue ne peut dépasser un angle de 90{\text{\degree}}.
 \item L'ennemi doit se trouver en contact socle à socle, avec l'avant de l'unité en charge, \nouveau{du côté de l'arc où se trouvait la majorité de l'avant de l'unité en charge quand la charge a été déclarée}.
 \item L'unité en charge ignore la \emph{Règle du Pouce d'Écart}. Elle ne peut cependant entrer en contact socle à socle avec un ennemi que si elle lui a déclaré une charge.
 \end{itemize}
 
 \subsubsection*{Alignement}
 
-Si l'unité en charge arrive à entrer en contact socle à socle, les unités doivent être alignées l'une avec l'autre, de manière à ce que leurs deux côtés soient parallèles et en contact. Tournez l'unité en charge autour du point de contact des deux unités (voir figure \ref{figure/charge}). Si cela ne suffit pas à amener les deux unités en contact complet, parce que d'autres unités ou des décors bloquent la rotation, tournez l'unité chargée à la place si cela résout le problème, ou encore une combinaison des deux, en tournant l'unité chargée le moins possible. L'unité chargée ne doit être déplacée que si c'est le seul moyen d'aligner les unités. Toutefois, l'unité chargée ne peut jamais être tournée si elle était déjà engagée au corps à corps. \newrule{Ces mouvements d'alignement font partie du mouvement de charge de l'unité et, de ce fait, ignorent la \emph{Règle du Pouce d'Écart}. Une unité chargée ne fait jamais de tests de terrain dangereux lors d'un mouvement d'alignement.}
+Si l'unité en charge arrive à entrer en contact socle à socle, les unités doivent être alignées l'une avec l'autre, de manière à ce que leurs deux côtés soient parallèles et en contact. Tournez l'unité en charge autour du point de contact des deux unités (voir figure \ref{figure/charge}). Si cela ne suffit pas à amener les deux unités en contact complet, parce que d'autres unités ou des décors bloquent la rotation, tournez l'unité chargée à la place si cela résout le problème, \nouveau{ou encore une combinaison des deux, en tournant l'unité chargée le moins possible.} L'unité chargée ne doit être déplacée que si c'est le seul moyen d'aligner les unités. Toutefois, l'unité chargée ne peut jamais être tournée si elle était déjà engagée au corps à corps. Ces mouvements d'alignement font partie du mouvement de charge de l'unité et, de ce fait, ignorent la \emph{Règle du Pouce d'Écart}. Une unité chargée ne fait jamais de tests de terrain dangereux lors d'un mouvement d'alignement.
 
 \subsubsection*{Maximiser le contact}
 
 Les mouvements de charge doivent être effectués de manière à satisfaire les conditions suivantes, par ordre décroissant de priorité :
 
 \begin{itemize}[label={-}]
-\item Première priorité : L'unité chargée ne doit pas effectuer de rotation (voir la partie Alignement d'unités). Si la rotation de l'unité chargée est inévitable, faire pivoter cette dernière aussi peu que possible.
-\item Deuxième priorité : Le nombre total d'unités dans le combat doit être maximisé (notez que ceci n'est applicable que si plusieurs unités chargent la même unité).
-\item Troisième priorité : Le maximum de figurines des deux camps doit être en contact socle à socle avec un ennemi.
+\item \nouveau{Première priorité : L'unité chargée ne doit pas effectuer de rotation (voir la partie Alignement d'unités). Si la rotation de l'unité chargée est inévitable, faire pivoter cette dernière aussi peu que possible.}
+\item \nouveau{Deuxième priorité : Le nombre total d'unités dans le combat doit être maximisé (notez que ceci n'est applicable que si plusieurs unités chargent la même unité).}
+\item \nouveau{Troisième priorité : Le maximum de figurines des deux camps doit être en contact socle à socle avec un ennemi (en comptant celles qui peuvent faire des \emph{Attaques de soutien}.}
 \end{itemize}
 
 Du moment que toutes les conditions ci-dessus sont remplies du mieux possible, les unités qui chargent sont libres de se déplacer à leur guise (en respectant les règles des mouvements de charge).
@@ -110,7 +110,7 @@ Si une unité obtient une portée de charge insuffisante, ou si la charge est un
 \centering
 \def\svgwidth{\columnwidth}
 \input{charge.pdf_tex}
-\caption{a) La majorité de l'unité en charge (jaune) est dans l'arc frontal de l'unité ennemie, en vert, donc l'unité jaune doit entrer en contact avec la face avant de l'unité verte. La portée de charge nécessaire est de \unit{1}{\pouce}. \\
+\caption{a) La majorité de l'unité en charge (jaune) est dans l'arc frontal de l'unité ennemie, en vert, donc l'unité jaune doit entrer en contact avec la face avant de l'unité verte. La portée de charge nécessaire est de 1{\pouce}. \\
 b) Elle avance d'abord puis fait une roue pour entrer en contact. \\
 c) L'alignement se fait ensuite en tournant l'unité en charge autour du point de contact.}
 \label{figure/charge}
@@ -150,12 +150,13 @@ Au début de l'étape des \emph{Mouvements obligatoires}, toutes les unités en 
 
 \subsection{Mouvements de fuite}
 
-Déplacez chaque unité en fuite droit devant de \unit{2D6}{\pouce}. Si ce mouvement devait faire terminer l'unité à moins de \unit{1}{\pouce} d'une autre unité ou d'un \emph{Terrain Infranchissable}, augmentez la distance de fuite du minimum nécessaire pour éviter cette infraction. \nouveau{Si des figurines d'une unité en fuite traversent des figurines ennemies ou un \emph{Terrain Infranchissable}, elles doivent faire un test de \emph{Terrain Dangereux} qui échoue sur un jet de '1' à '3'}. Si ce mouvement de fuite amène l'unité en contact d'un bord de table, voire le dépasse, l'unité est détruite au moment du contact, provoquant éventuellement des tests de \emph{Panique} aux unités aux alentours. Notez que ce mouvement de fuite est souvent précédé d'un pivot, qui suit les mêmes règles que le mouvement de fuite. Les mouvements de fuite ignorent tout obstacle.
+Déplacez chaque unité en fuite droit devant de 2D6{\pouce}. Si ce mouvement devait faire terminer l'unité à moins de 1{\pouce} d'une autre unité ou d'un \emph{Terrain Infranchissable}, augmentez la distance de fuite du minimum nécessaire pour éviter cette infraction. \nouveau{Si des figurines d'une unité en fuite traversent des figurines ennemies ou un \emph{Terrain Infranchissable}, elles doivent faire un test de \emph{Terrain Dangereux (3)}}. Si ce mouvement de fuite amène l'unité en contact d'un bord de table, voire le dépasse, l'unité est détruite au moment du contact, provoquant éventuellement des tests de \emph{Panique} aux unités aux alentours. Notez que ce mouvement de fuite est souvent précédé d'un pivot, qui suit les mêmes règles que le mouvement de fuite. Les mouvements de fuite ignorent tout obstacle.
 
 \subsection{Unités en fuite}
 
 Quand une unité fuit, elle ne peut faire aucune action volontaire. Cela inclut, par exemple, déclarer des charges, faire une réaction à une charge autre que la fuite, se déplacer d'une autre façon qu'avec un mouvement de fuite, tirer, canaliser un dé de magie, lancer des sorts, dissiper des sorts ou encore utiliser des objets à \emph{Usage Unique} qui n'ont pas besoin d'être activés. Enfin, un \emph{Général} ou un \emph{Porteur de la Grande Bannière} en fuite ne peut pas faire profiter les unités proches de leur \emph{Présence Charismatique} ou de \emph{Tenez les Rangs}.
 
+\newpage
 \section{Autres mouvements}
 
 Les unités qui n'ont pas encore bougé durant cette phase ont l'occasion de le faire dans l'étape des \emph{Autres Mouvements}. Suivez les points de la table \ref{table/autres_mouvements} dans l'ordre.
@@ -173,15 +174,15 @@ Les unités qui n'ont pas encore bougé durant cette phase ont l'occasion de le 
 
 \subsection{Mouvement simple}
 
-Pendant un \emph{Mouvement Simple}, une unité peut avancer, reculer ou faire des pas de côté. Elle ne peut pas combiner ces directions. Les unités composées d'une seule figurine peuvent toujours faire autant de pivots qu'elles le souhaitent pendant un \emph{Mouvement Simple}.
+Pendant un \emph{Mouvement Simple}, une unité peut avancer, reculer ou faire des pas de côté. Elle ne peut pas combiner ces directions. Les unités composées d'une seule figurine peuvent toujours faire autant de pivots qu'elles le souhaitent pendant un \emph{Mouvement Simple}. \newrule{Aucune figurine d'une unité effectuant un \emph{Mouvement Simple} ne peut se déplacer au delà de sa valeur de mouvement (depuis sa position initiale). Si le déplacement fait partie d'une \emph{Reformation Rapide}, la distance est mesurée depuis la position après la \emph{Reformation}}.
 
 Quand elle avance, une unité peut le faire sur une distance maximale de sa caractéristique de Mouvement, en pouces. Elle peut faire autant de roues qu'elle le désire pendant le mouvement. Quand elle recule ou qu'elle fait des pas de côté, la distance maximale est \nouveau{la moitié de sa caractéristique de Mouvement}. L'unité ne peut alors pas faire de roue.
 
 \subsection{Marche forcée}
 
-Pendant une \emph{Marche Forcée}, une unité ne peut qu'avancer, et sur une distance maximale de deux fois sa caractéristique de Mouvement, en pouces. Elle peut faire autant de roues qu'elle le souhaite.
+Pendant une \emph{Marche Forcée}, une unité ne peut qu'avancer, et sur une distance maximale de deux fois sa caractéristique de Mouvement, en pouces. Elle peut faire autant de roues qu'elle le souhaite.\newrule{Aucune figurine d'une unité effectuant une \emph{Marche Forcée} ne peut se déplacer au delà du double de sa valeur de mouvement (depuis sa position initiale).}
 
-Si des unités ennemies se trouvent à moins de \unit{8}{\pouce} de l'unité voulant faire une \emph{Marche Forcée} (avant de la bouger), cette dernière doit faire un test de \emph{Marche Forcée}. Faites un test de Commandement. S'il est réussi, l'unité peut faire une \emph{Marche Forcée} normalement. Sinon, l'unité doit fait une \emph{Marche Forcée} avec une pénalité de mouvement, la distance maximale est sa caractéristique de Mouvement. Une unité qui a fait une \emph{Marche Forcée} ne peut pas tirer dans la \emph{Phase de Tir} qui suit. Une unité composée d'une figurine seule peut faire autant de pivots qu'elle le souhaite durant sa \emph{Marche Forcée}.
+Si des unités ennemies se trouvent à moins de 8{\pouce} de l'unité voulant faire une \emph{Marche Forcée} (avant de la bouger), cette dernière doit faire un test de \emph{Marche Forcée}. Faites un test de Commandement. S'il est réussi, l'unité peut faire une \emph{Marche Forcée} normalement. Sinon, l'unité doit fait une \emph{Marche Forcée} avec une pénalité de mouvement, la distance maximale est sa caractéristique de Mouvement. Une unité qui a fait une \emph{Marche Forcée} ne peut pas tirer dans la \emph{Phase de Tir} qui suit. Une unité composée d'une figurine seule peut faire autant de pivots qu'elle le souhaite durant sa \emph{Marche Forcée}.
 
 \subsection{Reformation}
 
@@ -189,16 +190,15 @@ Repérez le centre de l'unité, puis retirez l'unité du champ de bataille. Vous
 
 \section{Pivots et roues}
 
-Un \emph{Pivot} est pratiqué principalement par les figurines seules. Pour faire un \emph{Pivot}, repérez le centre de l'unité, et \nouveau{retirez l'unité du champ de bataille. Replacez là ensuite dans la même formation, orientée dans la direction de votre choix, avec son centre toujours à l'emplacement repéré. Suivez normalement la \emph{Règle du Pouce d'Écart}}.
-
-Quand une unité fait une \emph{Roue}, tournez l'unité autour d'un de ses coins avant. La distance parcourue par l'unité correspond à celle parcourue par la figurine du coin avant opposé. \nouveau{En plus de ceci, quand un déplacement comprend une ou plusieurs \emph{Roues}, aucune figurine ne doit bouger de plus de sa valeur de Mouvement (ou deux fois pendant une \emph{Marche Forcée} réussie) depuis sa position initiale (voir figure \ref{figure/roue}). Si le déplacement fait partie d'une \emph{Reformation Rapide}, la distance est mesurée depuis la position après la \emph{Reformation}}.
+Un \emph{Pivot} est pratiqué principalement par les figurines seules. Pour faire un \emph{Pivot}, repérez le centre de l'unité, et \nouveau{retirez l'unité du champ de bataille. Replacez là ensuite dans la même formation, orientée dans la direction de votre choix, avec son centre toujours à l'emplacement repéré. Suivez normalement la \emph{Règle du Pouce d'Écart}}. 
+Quand une unité fait une \emph{Roue}, tournez l'unité autour d'un de ses coins avant (\newrule{N'oubliez pas que l'unité doit avancer)}. La distance parcourue par l'unité correspond à celle parcourue par la figurine du coin avant opposé. \newrule{On considère que toutes les figurines de l'unité ont parcouru cette distance.}
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=15.5cm]{roue.png}
 \caption{Les unités de cet exemple ont toutes un Mouvement de 5. \\
-L'unité verte fait deux \emph{Roues} pendant une \emph{Marche Forcée}. L'unité compte comme ayant bougé de \unit{10}{\pouce}, puisque la mesure de distance est prise au niveau du coin opposé au coin qui sert de point de rotation. \\
-L'unité turquoise fait une \emph{Roue} pendant une \emph{Marche Forcée}. Cependant, ce mouvement est non réglementaire, car même si la figurine du coin opposé n'a bougé que de \unit{10}{\pouce}, certaines figurines de l'unité se sont déplacées de plus de \unit{10}{\pouce}. \\
-L'unité jaune fait une \emph{Roue} pendant une \emph{Marche Forcée}. Elle compte comme ayant bougé de \unit{10}{\pouce}, puisque la mesure de distance est prise au niveau du coin opposé au coin qui sert de point de rotation. Remarquez qu'aucune figurine n'a bougé de plus de \unit{10}{\pouce} depuis sa position initiale.}
+L'unité verte fait deux \emph{Roues} pendant une \emph{Marche Forcée}. L'unité compte comme ayant bougé de 10{\pouce}, puisque la mesure de distance est prise au niveau du coin opposé au coin qui sert de point de rotation. \\
+L'unité turquoise fait une \emph{Roue} pendant une \emph{Marche Forcée}. Cependant, ce mouvement est non réglementaire, car même si la figurine du coin opposé n'a bougé que de 10{\pouce}, certaines figurines de l'unité se sont déplacées de plus de 10{\pouce}. \\
+L'unité jaune fait une \emph{Roue} pendant une \emph{Marche Forcée}. Elle compte comme ayant bougé de 10{\pouce}, puisque la mesure de distance est prise au niveau du coin opposé au coin qui sert de point de rotation. Remarquez qu'aucune figurine n'a bougé de plus de 10{\pouce} depuis sa position initiale.}
 \label{figure/roue}
 \end{figure}
