@@ -1,4 +1,6 @@
 
+\newcommand{\translationteam}{\item \og AEnoriel \fg \item \og Anglachel \fg \item \og Astadriel \fg \item \og Batcat \fg \item \og Eru \fg  \item \og Gandarin \fg \item \og Groumbahk \fg \item \og Iluvatar \fg \item \og Kingcheese \fg \item \og Lamronchak \fg \item \og Mammstein \fg}
+
 %%% Commands %%%
 
 \newcommand{\addtosortedlist}[1]{%
@@ -59,6 +61,7 @@
 \newcommand{\labels@armour}{Armure}
 \newcommand{\labels@options}{Options}
 \newcommand{\labels@commandgroup}{État-Major}
+\newcommand{\labels@charactermounts}{Montures de Personnages}
 \newcommand{\labels@mounts}{Montures}
 \newcommand{\labels@mount}{Monture}
 \newcommand{\labels@specialequipment}{Équipement spécial}
@@ -106,14 +109,20 @@
 
 \newcommand{\labels@fantasybattles}{Batailles Fantastiques}
 \newcommand{\labels@NinthAge}{Le 9\ieme Âge}
-\newcommand{\labels@creators}{Une collaboration des créateurs de l'ETC et du Swedish Comp System}
+\newcommand{\labels@armyrules}{Règles de l'Armée}
+\newcommand{\labels@frontpagecredits}{%
+\labels@fantasybattles{} : \labels@NinthAge{} est un jeu créé et entretenu par la communauté qui met en scène des affrontements de figurines.\newline
+Toutes les règles sont disponibles gratuitement sur le site suivant. Vos retours et suggestions sont les bienvenus : \url{http://www.the-ninth-age.com/}\newline
+Les changements récents sont décris en anglais sur le Change Log à la page : \newline\url{http://www.the-ninth-age.com/pdf/archive/}
+}
+\newcommand{\labels@license}{Copyright Creative Commons license : \url{the-ninth-age.com/license.html}}
 \newcommand{\labels@introduction}{%
 \noindent {\Largerfontsize\textbf{Note des traducteurs}}
 \vspace{0.5cm}
 
-Nous souhaitons remercier chaleureusement l'équipe à l'initiative du 9\ieme Âge pour leur motivation et leur travail continu pour faire vivre notre passion. Nous espérons que ce jeu saura développer les qualités pour plaire au plus grand nombre et réunir les joueurs, amateurs comme habitués des tournois, autour de règles amusantes et équilibrées, pour finalement s'imposer comme un standard du jeu de figurines. Une grande ambition qui ne pourra s'accomplir que \textbf{grâce à vous}, la communauté, via des retours constructifs, afin de modeler le jeu selon nos désirs. N'étant \textbf{en aucun cas à but lucratif}, le 9\ieme Âge part avec un avantage considérable. Les règles des éventuelles nouvelles sorties ne seront pas dictées par le besoin de vendre ces nouveautés. Vous pouvez choisir et acheter vos figurines où bon vous semble, il n'y a pas un unique revendeur toléré. Vous n'êtes pas bloqués dans une spirale infernale où pour continuer à jouer à un jeu, dans lequel vous vous êtes tant investis, vous devez payer toujours plus cher pour entretenir votre collection. Enfin, vous pouvez être assurés que tant que 9\ieme Âge sera joué, vous disposerez d'un \textbf{support continu et régulier}, celui-ci étant offert par la communauté.
+Nous souhaitons remercier chaleureusement l'équipe à l'initiative du 9\ieme Âge pour leur motivation et leur travail continu pour faire vivre notre passion. Nous espérons que ce jeu saura développer les qualités pour plaire au plus grand nombre et réunir les joueurs, amateurs comme habitués des tournois, autour de règles amusantes et équilibrées, pour finalement s'imposer comme un standard du jeu de figurines. Une grande ambition qui ne pourra s'accomplir que \textbf{grâce à vous}, la communauté, via des retours constructifs, afin de modeler le jeu selon nos désirs. N'étant \textbf{en aucun cas à but lucratif}, le 9\ieme Âge part avec un avantage considérable. Les règles des éventuelles nouvelles sorties ne sont pas dictées par le besoin de vendre ces nouveautés. Vous pouvez choisir et acheter vos figurines où bon vous semble, il n'y a pas un unique revendeur toléré. Enfin, vous pouvez être assurés que tant que le 9\ieme Âge sera joué, vous disposerez d'un \textbf{support continu et régulier}, celui-ci étant offert par la communauté.
 
-Nous attirons votre attention sur le fait que ce jeu en est encore à ses débuts et dans un \textbf{stade de développement}. Ce document correspond à une version de brouillon \textbf{\og{} beta \fg{}}, dont le but et de tester le jeu et le modifier jusqu'à atteindre une version satisfaisante. Attendez-vous donc à trouver des déséquilibres, des incohérences, et à obtenir des mises à jour régulières avec éventuellement des changements importants. N'hésitez pas à nous donner vos avis ! Ce livre d'armée n'est utilisable qu'en compagnie du livre de Règles et du livre de Magie.
+Nous attirons votre attention sur le fait que ce jeu arrive à la fin de son \textbf{stade de développement}. Ce document correspond à une version de brouillon \textbf{\og{} beta \fg{}} finale, dont le but est de repérer toute erreur qui a pu nous échapper. N'hésitez pas à nous aider à les trouver ! Ce livre d'armée n'est utilisable qu'en compagnie du livre de Règles et du livre de Magie.
 
 Concernant la traduction en elle-même, nous avons fait de notre mieux pour vous offrir une version de qualité, dont nous espérons qu'elle surpasse celle de la version originale ! Si vous constatez des coquilles, des erreurs, merci de nous les signaler en nous contactant sur le forum du 9\ieme Âge, dans le \textbf{sous-forum français} (\url{http://www.the-ninth-age.com/index.php?board/117-french/}). Vous y trouverez aussi les dernières mises à jour. \textbf{En cas de conflit d'interprétation avec la version originale, la version originale fait référence}.
 
@@ -132,12 +141,8 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 	\end{multicols}
 }{}
 }
-\newcommand{\labels@secondpageannouncement}{%
-	\labels@fantasybattles{} : \labels@NinthAge{} est un jeu créé et entretenu par la communauté qui met en scène des affrontements de figurines. Toutes les règles sont disponibles gratuitement sur le site suivant. Vos retours et suggestions sont les bienvenus.
-	\newline\url{http://www.the-ninth-age.com/}
-}
 \newcommand{\labels@rulechanges}{%
-	Les changements de règles entre versions sont colorés comme ce paragraphe. Une liste des changements est ajoutée à la fin de cet ouvrage, en anglais, classés par version.
+Les changements de règles entre versions sont colorés comme ce paragraphe.
 }
 \newcommand{\labels@latexcredit}{Document réalisé à l'aide de \LaTeX .}
 

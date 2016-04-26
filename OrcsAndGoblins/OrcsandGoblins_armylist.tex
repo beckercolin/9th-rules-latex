@@ -221,7 +221,7 @@
 			\def\tempoptions{\ha{}=5,}%
 			\vspace*{0.1cm}\options{\tempoptions}
 
-			\def\tempmounts{\warboar{}=15,\orcboarchariot{}=60,\wyvern{} (\oneofakind)*=\newrule{135}}%
+			\def\tempmounts{\warboar{}=15,\orcboarchariot{}=60,\wyvern{} (\oneofakind)\refsymbol{}=\newrule{135}}%
 			\mounts{\tempmounts}
 
 		\vspace*{\fill}		
@@ -236,19 +236,20 @@
 			\def\tempoptions{\platearmour{}=15,}%
 			\vspace*{0.1cm}\options{\tempoptions}
 
-			\def\tempmounts{\warboar{}=15,\wyvern{} (\oneofakind)*=\newrule{140}}%
+			\def\tempmounts{\warboar{}=15,\wyvern{} (\oneofakind)\refsymbol{}=\newrule{140}}%
 			\mounts{\tempmounts}
 
 		\vspace*{\fill}
 		\columnbreak
 			\forkraceFeralOrc{\pts{5}}%
 
-			\def\tempmounts{\warboar{}=15,\wyvern{} (\oneofakind)*=\newrule{125}}%
+			\def\tempmounts{\warboar{}=15,\wyvern{} (\oneofakind)\refsymbol{}=\newrule{125}}%
 			\mounts{\tempmounts}
 
 		\vspace*{\fill}
 		\closeraceforking{}%
-	\newrule{*Les \wyverns{} montées par des \orcchiefs{} sont Uniques (Cela n'a aucune incidence sur le nombre de \wyverns{} qui peuvent être montées par des \orcwarlords.} },
+		\newrule{\refsymbol{} \wyvernnote{}}
+	},
 }
 
 \showunit{
@@ -381,6 +382,116 @@
 	},
 }
 
+\mountstitle
+
+\showunit{
+	name={\wyvern},
+	profile={< 4 5 - 6 5 4 3 3 6},
+	type=\monstrousbeast{},
+	basesize=50x50,
+	specialrules={\fear{},\fly{8},\largetarget{},\poisonedattacks{},\venomousfangs{}},
+}
+
+\showunit{
+	name={\warboar},
+	profile={< 7 3 - 3 3 1 3 1 3},
+	type=\warbeast{},
+	basesize=25x50,
+	armour={\mountsprotection{5}},
+	specialrules={\thunderouscharge},
+}
+
+\showunit{
+	notinQRS=yes,
+	name={\orcboarchariot},
+	profile={%
+		\chariot{}< - - - 5 5 4 - - -,
+		\eadbasherrider{} (1)< - 4 3 4 - - 2 1 7,
+		\warboar{} (2)< 7 3 - 3 - - 3 1 3,
+	},
+	type=\chariot{},
+	basesize=50x100,
+	greenhiderace={\commonorc{} \textnormal{\only{\eadbasherrider}}},
+	weapons={\lance},
+	armour={\la{},\mountsprotection{5}},
+	specialrules={\thunderouscharge{} \only{\warboar},\impacthits{+1}},
+}
+
+\showunit{
+	name={\wolf},
+	profile={< 9 3 - 3 3 1 3 1 3},
+	type=\warbeast{},
+	basesize=25x50,
+	armour={\mountsprotection{6}},
+	specialrules={\fastcavalry},
+}
+
+\showunit{
+	notinQRS=yes,
+	name={\goblinwolfchariot},
+	profile={%
+		\chariot{}< - - - 5 4 4 - - -,
+		\goblin{} (2)< - 2 3 3 - - 2 1 6,
+		\wolf{} (2)< 9 3 - 3 - - 3 1 3,
+	},
+	type=\chariot{},
+	basesize=50x100,
+	greenhiderace={\commongoblin{} \textnormal{\only{\goblin}}},
+	weapons={\shortbow{},\lightlance{}},
+	armour={\la{},\mountsprotection{6}},
+	specialrules={\lighttroops{},\insignificant{},\impacthits{+1}},
+}
+
+\showunit{
+	name={\cavegnasher},
+	profile={< 5 4 - 6 4 3 3 3 3},
+	type=\monstrousbeast{},
+	basesize=40x40,
+	armour={\mountsprotection{6}},
+	specialrules={\impacthits{1},\immunetopsychology{},\fly{6},\hardtarget{},\oiitbites{},\bouncers{}},
+	unitrules={%
+		\unitrule{\oiitbites}{\oiitbitesrule}
+		\unitrule{\bouncers}{\bouncersrule}
+	}
+}
+
+\showunit{
+	name={\scuttlerspider},
+	profile={< 7 3 - 3 3 1 4 1 2},
+	type=\warbeast{},
+	basesize=25x50,
+	armour={\mountsprotection{6}},
+	specialrules={\fastcavalry{},\poisonedattacks{},\scout{},\strider{}},
+}
+
+\showunit{
+	name={\huntsmenspider},
+	profile={< 7 3 - 4 4 3 4 3 7},
+	type=\monstrousbeast{},
+	basesize=50x50,
+	armour={\mountsprotection{5}},
+	specialrules={\poisonedattacks{},\strider{}},
+}
+
+\showunit{
+	notinQRS=yes,
+	name={\gargantula{} (\oneofakind{})},
+	profile={
+		\spider{}< 7 4 - 5 6 8 4 8 -,
+		\forestgoblin{} (8)< - 2 3 3 - - 2 1 6,
+	},
+	type=\riddenmonster{},
+	basesize=100x150,
+	greenhiderace={\forestgoblin{} \textnormal{\only{\goblins}}},
+	weapons={\shortbow{},\lightlance{} \only{\goblins}},
+	armour={\innatedefence{4}},
+	specialrules={\venomousfangs{},\immunetopsychology{},\poisonedattacks{} \only{\spider},\strider{},\stubborn{},\swiftstride{}},
+	options={\spidermothershrineoption{}=40},
+	unitrules={%
+		\unitrule{\spidermothershrine}{\spidermothershrinerule}
+	},
+}
+
 \coreunitstitle
 
 \showunit{
@@ -474,8 +585,8 @@
 	options={
 		\maytakeoneofthefollowing{
 			\shortbow{}=\free{},
-			\shield{}=\permodel{}<\newrule{0,5},
-			\spear{} \&{} \shield{}=\permodel{}<\newrule{0,5},
+			\shield{}=\permodel{}<\newrule{0.5},
+			\spear{} \&{} \shield{}=\permodel{}<\newrule{0.5},
 		},
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
@@ -487,9 +598,9 @@
 			\armour{\temparmour}
 			
 			\def\tempoptions{%
-				\exchangeallweaponsforshieldandshortbow{}=\permodel{}<\newrule{0,5},
+				\exchangeallweaponsforshieldandshortbow{}=\permodel{}<\newrule{0.5},
 				\takeshadygits{}\dotfill{}=\pershadygit{}<\newrule{10},
-				\newrule{Maximum 1 \shadygit{} par tranche de 10 \commongoblins{} dans l'unité}.	
+				\newrule{\shadygitlimitation{}}
 			}%
 			\vspace*{0.1cm}\options{\tempoptions}
 
@@ -502,7 +613,7 @@
 			\def\tempoptions{%
 				\takenets{}=\permodel{}<1,
 				\takemadgits{}=\permadgit{}<\newrule{20},
-				\newrule{Maximum 1 \madgit{} par tranche de 15 \cavegoblins{} dans l'unité}.	
+				\newrule{\madgitlimitation{}}
 			}%
 			\options{\tempoptions}
 
@@ -511,8 +622,8 @@
 			\forkraceForestGoblin{\free}%
 
 			\def\tempoptions{%
-				\throwingweapons{}=\permodel{}<\newrule{0,5},
-				\motherskiss{}=\permodel{}<\newrule{1,5},
+				\throwingweapons{}=\permodel{}<\newrule{0.5},
+				\motherskiss{}=\permodel{}<\newrule{1.5},
 				\skirmishers{} \ifNmodelsorless{20}\dotfill{}=\permodel{}<1,
 			}
 			\options{\tempoptions}
@@ -961,7 +1072,8 @@
 \rareunitstitle
 
 \showunit{
-	name={\skewerer{} \newrule{(0 - 3 choix)}},
+	name={\skewerer{} \newrule{\zerotothreechoice}},
+	QRSname={\skewerer{}},
 	cost={45},
 	profile={%
 		\machine{}< - - - - 7 3 - - -,
@@ -1012,6 +1124,7 @@
 
 \showunit{
 	name={\greatgreenidol{} (\oneofakind{})},
+	QRSname={\greatgreenidol{}},
 	cost={\newrule{215}},
 	profile={< 6 2 - 6 8 6 2 3 8},
 	type=\monster{},
@@ -1024,118 +1137,6 @@
 	unitrules={%
 		\unitrule{\iconofthewaaargh}{\iconofthewaaarghrule}
 		\unitrule{\smashemflat}{\smashemflatrule}
-	},
-}
-
-\mountstitle
-
-\mountssectionannouncement
-
-\showunit{
-	name={\wyvern},
-	profile={< 4 5 - 6 5 4 3 3 6},
-	type=\monstrousbeast{},
-	basesize=50x50,
-	specialrules={\fear{},\fly{8},\largetarget{},\poisonedattacks{},\venomousfangs{}},
-}
-
-\showunit{
-	name={\warboar},
-	profile={< 7 3 - 3 3 1 3 1 3},
-	type=\warbeast{},
-	basesize=25x50,
-	armour={\mountsprotection{5}},
-	specialrules={\thunderouscharge},
-}
-
-\showunit{
-	notinQRS=yes,
-	name={\orcboarchariot},
-	profile={%
-		\chariot{}< - - - 5 5 4 - - -,
-		\eadbasherrider{} (1)< - 4 3 4 - - 2 1 7,
-		\warboar{} (2)< 7 3 - 3 - - 3 1 3,
-	},
-	type=\chariot{},
-	basesize=50x100,
-	greenhiderace={\commonorc{} \textnormal{\only{\eadbasherrider}}},
-	weapons={\lance},
-	armour={\la{},\mountsprotection{5}},
-	specialrules={\thunderouscharge{} \only{\warboar},\impacthits{+1}},
-}
-
-\showunit{
-	name={\wolf},
-	profile={< 9 3 - 3 3 1 3 1 3},
-	type=\warbeast{},
-	basesize=25x50,
-	armour={\mountsprotection{6}},
-	specialrules={\fastcavalry},
-}
-
-\showunit{
-	notinQRS=yes,
-	name={\goblinwolfchariot},
-	profile={%
-		\chariot{}< - - - 5 4 4 - - -,
-		\goblin{} (2)< - 2 3 3 - - 2 1 6,
-		\wolf{} (2)< 9 3 - 3 - - 3 1 3,
-	},
-	type=\chariot{},
-	basesize=50x100,
-	greenhiderace={\commongoblin{} \textnormal{\only{\goblin}}},
-	weapons={\shortbow{},\lightlance{}},
-	armour={\la{},\mountsprotection{6}},
-	specialrules={\lighttroops{},\insignificant{},\impacthits{+1}},
-}
-
-\showunit{
-	name={\cavegnasher},
-	profile={< 5 4 - 6 4 3 3 3 3},
-	type=\monstrousbeast{},
-	basesize=40x40,
-	armour={\mountsprotection{6}},
-	specialrules={\impacthits{1},\immunetopsychology{},\fly{6},\hardtarget{},\oiitbites{},\bouncers{}},
-	unitrules={%
-		\unitrule{\oiitbites}{\oiitbitesrule}
-		\unitrule{\bouncers}{\bouncersrule}
-	}
-}
-
-\showunit{
-	name={\scuttlerspider},
-	profile={< 7 3 - 3 3 1 4 1 2},
-	type=\warbeast{},
-	basesize=25x50,
-	armour={\mountsprotection{6}},
-	specialrules={\fastcavalry{},\poisonedattacks{},\scout{},\strider{}},
-}
-
-\showunit{
-	name={\huntsmenspider},
-	profile={< 7 3 - 4 4 3 4 3 7},
-	type=\monstrousbeast{},
-	basesize=50x50,
-	armour={\mountsprotection{5}},
-	specialrules={\poisonedattacks{},\strider{}},
-}
-
-\showunit{
-	notinQRS=yes,
-	name={\gargantula{} (\oneofakind{})},
-	profile={
-		\spider{}< 7 4 - 5 6 8 4 8 -,
-		\forestgoblin{} (8)< - 2 3 3 - - 2 1 6,
-	},
-	type=\riddenmonster{},
-	basesize=100x150,
-	greenhiderace={\forestgoblin{} \textnormal{\only{\goblins}}},
-	weapons={\shortbow{},\lightlance{} \only{\goblins}},
-	armour={\innatedefence{4}},
-	specialrules={\venomousfangs{},\immunetopsychology{},\poisonedattacks{} \only{\spider},\strider{},\stubborn{},\swiftstride{}},
-	options={\spidermothershrineoption{}=40},
-	unitrules={%
-		\unitrule{\spidermothershrine}{\spidermothershrinerule}
 	},
 }
 

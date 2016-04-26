@@ -1,14 +1,16 @@
 
 \input{../Layout/AB_layout.tex}
 
-\newcommand{\booktitle}{Peaux Vertes}
-\newcommand{\version}{0.99.2}
+\newcommand{\booktitle}{Orques et Gobelins}
+\newcommand{\booklogo}{pics/logo_big_OnG.png}
+\newcommand{\version}{0.99.5}
 \newcommand{\frenchversion}{2.0}
-\newcommand{\translationteam}{\item \og AEnoriel \fg \item \og Anglachel \fg \item \og Astadriel \fg \item \og Batcat \fg \item \og Eru \fg  \item \og Gandarin \fg \item \og Groumbahk \fg \item \og Iluvatar \fg \item \og Lamronchak \fg \item \og Mammstein \fg}
+
+\newcommand{\frontpageaddstuff}{Les Gobelins \sout{n'}ont \sout{pas} été maltraités lors de la création de cet ouvrage.}
 
 % Army special rules
 
-\newcommand{\greenhiderace}{Race Peau Verte}
+\newcommand{\greenhiderace}{Race de Peaux Vertes}
 \newcommand{\greenhideraces}{Races de Peaux Vertes}
 
 \newcommand{\commonorc}{Orque Commun}
@@ -16,7 +18,9 @@
 \newcommand{\feralorc}{Orque Primitif}
 \newcommand{\feralorcs}{Orques Primitifs}
 \newcommand{\commongoblin}{Gobelin Commun}
+\newcommand{\commongoblins}{Gobelins Communs}
 \newcommand{\cavegoblin}{Gobelin des Cavernes}
+\newcommand{\cavegoblins}{Gobelins des Cavernes}
 \newcommand{\forestgoblin}{Gobelin des Forêts}
 
 \newcommand{\unruly}{Indiscipliné}
@@ -68,7 +72,7 @@
 \newcommand{\weblauncher}{Lance-Toile}
 \newcommand{\weblaunchers}{Lance-Toiles}
 \newcommand{\smashemflat}{Vert de Rage}
-\newcommand{\wevegotthegreenlight}{On a le Feu Vert}
+\newcommand{\iconofthewaaargh}{Incarnation de la Waaaargh !}
 \newcommand{\bouncers}{Bondisseur}
 \newcommand{\spidermothershrine}{Autel de la Mère-Araignée}
 
@@ -79,11 +83,13 @@
 % Characters
 
 \newcommand{\orcwarlord}{Seigneur de Guerre Orque}
+\newcommand{\orcwarlords}{Seigneurs de Guerre Orques}
 \newcommand{\orcwarlordinQRS}{Seigneur Orque} % Too long for QRS in French
 \newcommand{\orcbigshaman}{Grand Chamane Orque}
 \newcommand{\goblinking}{Roi Gobelin}
 \newcommand{\goblinbigshaman}{Grand Chamane Gobelin}
 \newcommand{\orcchief}{Caïd Orque}
+\newcommand{\orcchiefs}{Caïds Orques}
 \newcommand{\orcshaman}{Chamane Orque}
 \newcommand{\goblinchief}{Meneur Gobelin}
 \newcommand{\goblinshaman}{Chamane Gobelin}
@@ -107,6 +113,7 @@
 \newcommand{\mountedeadbashers}{Brutes sur Sangliers}
 \newcommand{\orcboarchariot}{Char à Sangliers}
 \newcommand{\goblinwolfchariot}{Char à Loups}
+\newcommand{\gnasherdasher}{Barjo sur Gniark}
 \newcommand{\gnasherdashers}{Barjos sur Gniark}
 \newcommand{\gnasherherd}{Meute de Gniarks}
 \newcommand{\greenhidecatapults}{Catapultes des Peaux Vertes}
@@ -125,6 +132,7 @@
 % Mounts
 
 \newcommand{\wyvern}{Vouivre}
+\newcommand{\wyverns}{Vouivres}
 \newcommand{\warboar}{Sanglier}
 \newcommand{\wolf}{Loup}
 \newcommand{\cavegnasher}{Gros Gniark}
@@ -233,10 +241,13 @@
 
 % Profile wording
 
+\newcommand{\wyvernnote}{Les \wyverns{} montées par des \orcchiefs{} ont la règle Unique. Cela n'a aucune incidence sur le nombre de \wyverns{} qui peuvent être montées par des \orcwarlords{}.}
 \newcommand{\mayexchangeallequipmentforcrossbowandha}{Peut échanger tout son équipement contre une \crossbow{} et une \ha{}}
 \newcommand{\maytakeamammothstabber}{L'unité peut prendre un \mammothstabber{}}
 \newcommand{\takeshadygits}{Jusqu'à 3 \shadygits{}}
+\newcommand{\shadygitlimitation}{Maximum 1 \shadygit{} par tranche de 10 \commongoblins{} dans l'unité.}
 \renewcommand{\pershadygit}{/Vengeur}
+\newcommand{\madgitlimitation}{Maximum 1 \madgit{} par tranche de 15 \cavegoblins{} dans l'unité.}
 \newcommand{\exchangeallweaponsforshieldandshortbow}{Échanger les armes contre un Arc Court et un Bouclier}
 \newcommand{\takemadgits}{Jusqu'à 3 \madgits{}}
 \renewcommand{\permadgit}{/Fou}
@@ -245,6 +256,7 @@
 \newcommand{\ironorcwarlord}{Seigneur de Guerre \ironorc{}}
 \newcommand{\ironorcchief}{Caïd \ironorc{}}
 \newcommand{\maytakeanorcoverseer}{Peut prendre un \orcoverseer{}}
+\newcommand{\zerotothreechoice}{(Jusqu'à 3)}
 \newcommand{\maytakeweblauncher}{Peut prendre un \weblauncher{}}
 \newcommand{\spidermothershrineoption}{Si le Cavalier est un Sorcier, peut prendre un \spidermothershrine}
 
@@ -271,7 +283,7 @@ Les \shadygits{} comptent comme des Champions et sont obligatoirement déployés
 }
 
 \newcommand{\surpriserule}{%
-Les \madgits{} ne sont pas déployés normalement mais cachés dans leur unité. Ce sont des options d'unité, donc ils sont ignorés quand ils sont détruits pour le calcul des Points de Victoire, leur valeur étant déjà incluse dans l'unité de \goblins{} les cachant. Il faut donc détruire cette dernière unité pour gagner leurs Points de Victoire. Avant d'être lâchés hors de leur unité, les \madgits{} ne peuvent pas être affectés par quoi que ce soit, ni avoir d'effet sur la partie. Les \madgits{} détruits ne provoquent pas de tests de Panique. Ils ne comptent pas dans le nombre de figurines de leur unité. Une fois relâchés, ils bougent, agissent et suivent leur règles spéciales indépendamment comme toute autre unité individuelle.
+Les \madgits{} ne sont pas déployés normalement mais cachés dans leur unité. Ce sont des options d'unité, donc ils sont ignorés quand ils sont détruits pour le calcul des Points de Victoire, leur valeur étant déjà incluse dans l'unité de \goblins{} les cachant. Il faut donc détruire cette dernière unité pour gagner leurs Points de Victoire. Avant d'être lâchés hors de leur unité, les \madgits{} ne peuvent pas être affectés par quoi que ce soit, ni avoir d'effet sur la partie. Les \madgits{} détruits ne provoquent pas de tests de Panique. Ils ne comptent pas dans le nombre de figurines de leur unité. Une fois relâchés, ils bougent, agissent et suivent leurs règles spéciales indépendamment comme toute autre unité individuelle.
 
 Ils peuvent être relâchés de deux façons :
 \begin{customsubitemize}
@@ -286,7 +298,7 @@ Aucun Personnage ne peut rejoindre cette unité.
 }
 
 \newcommand{\rowsofteethrule}{%
-Les \gnashers{} font les Attaques de Soutien à la place de leurs Cavaliers.
+Les \gnashers{} peuvent faire les Attaques de Soutien à la place de leurs Cavaliers.\newline \newrule{Les \gnasherdashers{} infligent des Touches d'Impact lorsqu'ils chargent. Au lieu d'infliger une touche par \gnasherdasher{} en charge au contact d'un ennemi, le nombre de Touches d'Impact dépend du nombre de figurines dans l'unité. L'unité inflige 1D3 Touches d'Impact par tranche de 5 \gnasherdashers{}, en arrondissant au supérieur, à une unique unité ennemie en contact.}
 }
 
 \newcommand{\theyreeverywhererule}{%
@@ -338,6 +350,7 @@ Quand un Géant attaque au Corps à Corps, au lieu d'attaquer normalement, chois
 }
 
 \newcommand{\giantattackstable}{%
+\setlength{\columnseprule}{1pt}
 \vspace*{-0.2cm}\begin{multicols}{2}
 	\noindent Si l'unité est de type \infantry{}, \warbeast{}, \cavalry{}, \swarm{} ou \warmachine{}  :	
 	\renewcommand{\arraystretch}{1.5}	
@@ -369,7 +382,7 @@ Ni le Géant, ni l'unité sélectionnée ne peuvent faire d'attaques de Corps à
 }
 
 \newcommand{\jumprule}{%
-L'unité sélectionnée subit 1D6 touches de la Force du Géant. Le Géant doit faire un test de Terrain Dangereux.
+L'unité sélectionnée subit 1D6 touches de la Force du Géant. Le Géant doit faire un test de Terrain Dangereux (1).
 }
 
 \newcommand{\grabrule}{%
@@ -385,7 +398,7 @@ Choisissez une figurine en contact socle à socle avec le Géant dans l'unité s
 }
 
 \newcommand{\smashrule}{%
-Choisissez une figurine en contact socle à socle avec le Géant dans l'unité sélectionnée. Cette figurine subit une blessure avec \armourpiercing{6}. Si la figurine n'a pas encore attaqué, elle ne peut pas le faire au cours de cette manche. Si la figurine a déjà réalisé ses attaques, elle ne pourra pas attaquer au cours du tour de  joueur à venir.
+Choisissez une figurine en contact socle à socle avec le Géant dans l'unité sélectionnée. Cette figurine subit une blessure avec \armourpiercing{6}. Si la figurine n'a pas encore attaqué, elle ne peut plus le faire au cours de cette manche. Si la figurine a déjà réalisé ses attaques, elle ne pourra pas attaquer au cours du tour de  joueur à venir.
 }
 
 \newcommand{\ballistarule}{%
@@ -401,11 +414,11 @@ Le \gnasherwreckingteam{} gagne la règle \runningamok{} quand il touche une uni
 }
 
 \newcommand{\smashemflatrule}{%
-Si l'\greatgreenidol{} est engagée au Corps à Corps, toutes les unités amies à moins de \distance{8} gagnent la règle \devastatingcharge{}.
+Si l'\greatgreenidol{} est engagée au Corps à Corps, toutes les unités amies à moins de \distance{8} \newrule{peuvent gagner la règle \devastatingcharge{} ou un bonus de +1 pour blesser. Chaque unité choisit quel bonus utiliser au début de chaque Round de Corps à Corps.}
 }
 
-\newcommand{\wevegotthegreenlightrule}{%
-Si l'\greatgreenidol{} a déclaré une charge durant cette phase, toutes les unités amies à moins de \distance{8} peuvent relancer les dés pour déterminer leur distance de charge.
+\newcommand{\iconofthewaaarghrule}{%
+\newrule{Une \greatgreenidol{} bénéficie des avantages de la \waaargh{} comme si elle appartenait à une \greenhiderace.}
 }
 
 \newcommand{\bouncersrule}{%
@@ -439,7 +452,7 @@ Le Sorcier gagne la règle \pathmaster{}. Toutes les figurines amies avec la cap
 
 \armyspecialruleentry{\greenhideraces}
 
-Certaines figurines de l'armée disposent d'un ensemble de règles spéciales qui correspondent à leur race.
+Certaines figurines de l'armée disposent de règles spéciales qui correspondent à leur race.
 
 \newcommand{\logosize}{3cm}
 \begin{multicols}{3}\raggedcolumns
@@ -508,7 +521,10 @@ L'unité a un malus de -1 en Commandement pour les tests de \frenzy{} et pour se
 
 L'élément de figurine gagne +1 en Force lors de la première Manche de Corps à Corps.
 
+
 \begin{multicols}{2}\raggedcolumns
+\setlength{\columnseprule}{1pt}
+\renewcommand{\columnseprulecolor}{\color{black!30}}
 \armyspecialruleentry{\waaargh}
 
 Une fois par partie, le Général peut déclarer une \waaargh{} au début du tour de n'importe quel joueur. Toutes les figurines ayant des éléments appartenant à une Race de Peaux Vertes gagnent +1 en Mouvement et la règle \swiftstride{} jusqu'à la fin du Tour de Joueur.
@@ -528,7 +544,7 @@ Désignez une des attaques de Corps à Corps de l'élément de figurine avant de
 
 L'unité a \randommovement{X}. Elle gagne la règle \immunetopsychology{} et ne peut pas être rejointe par des Personnages. Si elle obtient le même résultat sur tous les dés lors de son jet de \randommovement{}, elle subit 1D3 blessures sans sauvegarde d'aucune sorte, puis se déplace de cette distance dans une direction aléatoire.
 
-Si elle arrive au contact d'un élément de décor autre qu'un Terrain Découvert ou une Colline, si elle arrive au contact d'un bord de table, ou si elle s'arrête à \distance{1} d'un Terrain Infranchissable, elle doit faire un test de Terrain Dangereux (2).
+Si elle arrive au contact d'un élément de décor autre qu'un Terrain Découvert ou une Colline, si elle arrive au contact d'un bord de table ou si elle s'arrête à \distance{1} d'un Terrain Infranchissable, elle doit faire un test de Terrain Dangereux (2).
 
 \armyspecialruleentry{\runningamok}
 
@@ -553,7 +569,7 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine et
 
 \startitemlistonecol
 
-\listitemonecol{\powershrooms} Générez 1D3+1 \powershrooms{} à la fin du déploiement pour le porteur. Avant de jeter les dés pour lancer un sort, le porteur peut décider d'utiliser un seul \powershroom{} pour ajouter +1 au résultat de lancement du sort. C'est une exception à la limitation des Modificateurs Magiques. Un \powershroom{} est à usage unique. Après l'avoir utilisé, lancez 1D6. Si le dé donne un \result{1}, le Sorcier subit une touche de Force 3 sans sauvegarde d'aucune sorte.
+\listitemonecol{\powershroom} \newrule{Une seule utilisation. Avant de jeter les dés pour lancer un sort qui ne vient pas d'un Objet de Sort, le porteur peut décider d'utiliser un \powershroom{}. Toute tentative de dissipation de ce sort voit sa valeur réduite de 1D3. Si un \result{1} naturel est obtenu, le Sorcier utilisant le \powershroom{} subit une touche avec la règle Attaques Toxiques.}
 
 \listitemonecol{\mammothstabber} Si l'unité possède au moins un Rang Complet, elle gagne 1D3 \impacthits{} de Force 5 avec \multiplewounds{\ordnance}{\largetarget}.
 
@@ -570,9 +586,10 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine et
 
 \startpricelist
 
-\pricelistitem{Hache de l'Aporcalypse}{65/50}Type : \hw{}. Le porteur gagne +1D3 en Force et +1D3 Attaques. Ces bonus sont déterminés et prennent effet au palier d'Initiative auquel le porteur attaque avec cette arme.
+\pricelistitem{Hache de l'Aporcalypse}{65/\newrule{45}}Type : \hw{}. Le porteur gagne +1D3 en Force et +1D3 Attaques. Ces bonus sont déterminés et prennent effet au palier d'Initiative auquel le porteur attaque avec cette arme.
 
-\pricelistitem{Arc Zap de Maza}{30}Type : Arc. \range{24}, Force 3, \lightningattacks{}, \multipleshots{3}. L'unité du porteur gagne la règle spéciale \quicktofire{}.
+\pricelistitem{Arc Zap de Maza}{30} \newrule{\goblin{} uniquement}.
+\newline Type : Arc. \range{24}, Force 3, \lightningattacks{}, \multipleshots{3}. L'unité du porteur gagne la règle spéciale \quicktofire{}.
 
 \pricelistitem{Dague de Sournois}{15}Type : \hw{}. Les attaques portées avec cette arme ont \armourpiercing{1}. Si le porteur attaque une unité ennemie de flanc ou de dos, ses attaques avec cette arme gagnent +2 en Force.
 
@@ -592,7 +609,7 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine et
 
 \startpricelist
 
-\pricelistitem{Chapardeur de Défense}{25}\goblin{} uniquement.\newline Si le porteur subit une blessure, il peut utiliser la Sauvegarde d'Armure, la \wardsave{}, la \regeneration{} et la \magicresistance{} de la figurine lui ayant infligé cette blessure.
+\pricelistitem{Chapardeur de Défense}{\newrule{15}}\goblin{} uniquement.\newline Si le porteur subit une blessure, il peut utiliser la Sauvegarde d'Armure, la \wardsave{}, la \regeneration{} et la \magicresistance{} de la figurine lui ayant infligé cette blessure.
 
 \endpricelist
 
@@ -600,9 +617,9 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine et
 
 \startpricelist
 
-\pricelistitem{Peintures Waaargh!}{30}\feralorc{} uniquement.\newline Le porteur gagne la \frenzy{} et ne peut jamais la perdre. De plus, tous les \feralorcs{} de l'unité du porteur gagnent la \frenzy{} tant que ce dernier est dans l'unité. Enfin, l'unité gagne la règle \swiftstride{} pour les mouvements de Poursuite et de Charge Irrésistible.
-
 \pricelistitem{Patte de Sanglier}{20}Figurine montée uniquement.\newline Toutes les figurines alliées de type Cavalerie à moins de \distance{18} du porteur peuvent relancer leurs tests de Terrain Dangereux.
+
+\pricelistitem{Peintures Waaargh!}{\newrule{15}}\feralorc{} uniquement.\newline Le porteur gagne la \frenzy{} et ne peut jamais la perdre. De plus, tous les \feralorcs{} de l'unité du porteur gagnent la \frenzy{} tant que ce dernier est dans l'unité. Enfin, l'unité gagne la règle \swiftstride{} pour les mouvements de Poursuite et de Charge Irrésistible.
 
 \endpricelist
 
@@ -646,30 +663,6 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine et
 \end{center}
 
 \restoregeometry
-
-\changelogtitle
-
-\startchangelog
-
-\newlog{0.99.2}{%
-Waaargh clarification,
-Plates of Tuktek clarification,
-Crown of the Cavern King clarification,
-Lucky Boar’s Leg clarification,
-Mad Git clarification,
-Unruly clarification,
-Smash ‘Em Flat clarification,
-We’ve Got The Green Light clarification,
-Venomous Fangs clarification,
-Git Launcher clarification,
-Troll Belch clarification,
-Cave Gnasher Immune to Psychology had been removed,
-Web Launcher clarified which part has what weapon,
-Goblin Wolf Chariot clarified which part has what weapon,
-Giant attacks clarification,
-}
-
-\endchangelog
 
 \end{document}
 
