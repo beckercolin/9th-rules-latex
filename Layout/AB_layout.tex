@@ -167,9 +167,8 @@
 	\pdfstringdef\cleannumber{\numberwithoutspaces}%
 	% Now we can try if it is 1 or not
 	\expandafter\ifstrequal\expandafter{\cleannumber}{1}{#1~\labels@point}{%
-	\expandafter\ifstrequal\expandafter{\cleannumber}{0.5}{$ \dfrac{1}{2} $~\labels@point}{%
-	\expandafter\ifstrequal\expandafter{\cleannumber}{1.5}{$ \dfrac{3}{2} $~\labels@points}{%
-	#1~\labels@points}}}%
+	\expandafter\ifstrequal\expandafter{\cleannumber}{0.5}{#1~\labels@point}{%
+	#1~\labels@points}}%
 }
 
 
