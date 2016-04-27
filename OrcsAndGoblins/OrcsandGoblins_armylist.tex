@@ -693,8 +693,7 @@
 		\musttakeoneormoreofthefollowing{
 			\shield{}=\permodel{}<1,
 			\lightlance{}=\permodel{}<1,
-			\shortbow{}=\permodel{}<1,
-			\throwingweapons{} \only{\forestgoblin}=\permodel{}<1,
+			\shortbow{}=\permodel{}<1,		
 		},
 	},
 	commandgroup={champion=10, musician=10, banner=10},
@@ -712,7 +711,7 @@
 		\vspace*{\fill}
 		\columnbreak
 			\forkraceForestGoblin{\free}%
-
+						
 			\vspace*{-0.3cm}{\setlength{\parskip}{0.3cm}
 			\def\temparmour{\mountsprotection{6}}
 			\armour{\temparmour}
@@ -721,6 +720,9 @@
 			\specialrules{\tempspecialrules}
 			
 			\noindent\unitentryformat{\labels@mount\spacebeforecolon{}:}\newline\scuttlerspider{}.
+			
+			\def\tempoptions{\vspace*{-0.3cm}\throwingweapons{}=\permodel{}<1,}%
+			\vspace*{0.1cm}\options{\tempoptions}
 			}
 
 		\vspace*{\fill}			
