@@ -161,15 +161,6 @@
 \newcommand{\range}[1] {\labels@range~\unit{#1}{\inch}}
 \newcommand{\distance}[1] {\unit{#1}{\inch}}
 \newcommand{\result}[1] {\texttt{'}$ #1 $\texttt{'}}
-\newcommand{\pts}[1]{% First step is to remove spaces if there are some
-	\def\numberwithoutspaces{\expandafter\removespaces\expandafter{#1}}%
-	% Next step is getting rid of formatting if there are any (bold, color, ...)
-	\pdfstringdef\cleannumber{\numberwithoutspaces}%
-	% Now we can try if it is 1 or not
-	\expandafter\ifstrequal\expandafter{\cleannumber}{1}{#1~\labels@point}{%
-	\expandafter\ifstrequal\expandafter{\cleannumber}{0.5}{#1~\labels@point}{%
-	#1~\labels@points}}%
-}
 
 
 %%% Fonts and sizes %%%
