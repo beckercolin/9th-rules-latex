@@ -1,5 +1,5 @@
 
-%%% v0.99.2
+%%% v0.99.5
 
 \armylist
 
@@ -7,7 +7,7 @@
 
 \showunit{
 	name={\king{}},
-	cost={125},
+	cost={135},
 	profile={< 3 7 4 4 5 3 4 4 10},
 	type=\infantry{},
 	unitsize=1,
@@ -40,7 +40,7 @@
 	commonspecialrules={\relentless{},\sturdy{}},
 	commontypeB=\seekerscommonrules{},
 	commonspecialrulesB={\unbreakable{},\weaponmaster{},\wardsave{6},\thebiggertheyare{},\comewithme{}},
-	specialrules={\vanguard{},\lethalstrike{},\hatred{} (\daemonlegion{}),\notaleader{}},
+	specialrules={\vanguard{},\lethalstrike{},\hatred{} (\otherworldlymodels{}),\notaleader{}},
 	weapons={\pw{},\gw{}},
 	options={
 		\maytakearunicweapon{}=\upto{}<125,
@@ -81,7 +81,7 @@
 
 \showunit{
 	name={\masterengineer{}},
-	cost={120},
+	cost={100},
 	profile={< 3 6 4 4 5 3 3 2 9},
 	type=\infantry{},
 	unitsize=1,
@@ -98,9 +98,9 @@
 			\braceofpistols{}=5, 
 			\crossbow{}=8,
 			\handgun{}=8,
+			\forgerepeater{}=10,
 			\wyrmslayerrocket{}=20,
-			\forgerepeater{}=20,
-		},
+			},
 		\maytakeagw{}=8,
 	},
 	additional={
@@ -109,6 +109,36 @@
 	},
 }	
 	
+
+
+
+\mountstitle
+
+\showunit{
+	name={\shieldbearers},
+	profile={ < 3 5 3 4 4 4 2 2 10},
+	type=\infantry{},
+	basesize=40x20,
+	commontype=\dwarvencommonrules{},
+	commonspecialrules={\relentless{},\sturdy{}},
+	armour={\mountsprotection{5}},
+}
+
+\showunit{
+	name={\warthrone},
+	profile={ < 3 5 3 4 4 6 2 4 10},	
+	type=\infantry{},
+	basesize=40x60,
+	commontype=\dwarvencommonrules{},
+	commonspecialrules={\relentless{},\sturdy{}},
+	specialrules={\hatred{},\majestyofhighkings{}}, 
+	armour={\mountsprotection{5}},
+	unitrules={
+		\unitrule{\majestyofhighkings{}}{\majestyofhighkingsrule{}}
+	},
+}	
+
+
 
 	
 
@@ -163,8 +193,8 @@
 			\braceofpistols{}=5, 
 			\crossbow{}=8,
 			\handgun{}=8,
+			\forgerepeater{}=10,
 			\wyrmslayerrocket{}=20,
-			\forgerepeater{}=20,
 		},
 		\maytakeagw{}=6,
 	},
@@ -249,7 +279,7 @@
 
 \showunit{
 	name={\greybeards{}},
-	cost={85},
+	cost={90},
 	profile={< 3 5 3 4 4 1 2 1 9},
 	costpermodel=11,
 	maxmodels=30,
@@ -274,9 +304,9 @@
 
 \showunit{
 	name={\clanmarksmen{}},
-	cost={120},
+	cost={110},
 	profile={ < 3 4 3 3 4 1 2 1 9},
-	costpermodel=12,
+	costpermodel=11,
 	maxmodels=25,
 	type=\infantry{},
 	unitsize=10,
@@ -286,11 +316,17 @@
 	weapons={\crossbow{}},
 	armour={\ha{}},
 	options={
-		\mayswapcrossbowforhandgun{}=\free{},
+		\mayswapcrossbowfor{
+			\handgun{}=\free,
+			\guildcraftedhandgun{} (\oneofakind{})=\permodel{}<2,
+		},
 		\maytakeashield{}=\permodel{}<1,
 		\maytakeagw{}=\permodel{}<3,
 	},
-	commandgroup={champion=10, musician=10, banner=10},
+	unitequipment={
+		\equipmentdef{\guildcraftedhandgun{}}{\guildcraftedhandgunrule{}}
+	},
+	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
 }	
 
 \specialunitstitle
@@ -336,10 +372,10 @@
 
 \showunit{
 	name={\forgewardens{}},
-	cost={150},
+	cost={140},
 	profile={ < 3 5 3 4 4 1 2 1 9},
-	costpermodel=15,
-	maxmodels=25,
+	costpermodel=14,
+	maxmodels=20,
 	type=\infantry{},
 	unitsize=10,
 	basesize=20x20,
@@ -359,7 +395,7 @@
 	cost={55},
 	profile={ < 3 4 3 4 4 1 2 1 10},
 	costpermodel=11,
-	maxmodels=30,
+	maxmodels=25,
 	type=\infantry{},
 	unitsize=5,
 	basesize=20x20,
@@ -372,7 +408,7 @@
 		\maygain{} \vanguard{}=\permodel{}<2,
 		\seekersskirmishersoption{}=\permodel{}<2,
 	},
-	commandgroup={champion=10,musician=10, banner=10, bannerallowance=25},
+	commandgroup={champion=10,musician=10},
 }
 
 \showunit{
@@ -389,25 +425,42 @@
 		\begin{center}\copterchoice{}\end{center}
 		\setlength{\columnseprule}{1pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}	
-		\begin{multicols}{2}
+		\begin{multicols}{3}
 		\raggedcolumns
-		\begin{center}\largerfontsize\antiquefont\attackcopters{} (\pts{70})\end{center}
-		\mincostfor{} \textbf{1} \labels@model{}. \maxunitsize{}\spacebeforecolon{}: \textbf{3} \labels@models{}.\newline \additionalfigscost{} {\pts{\textbf{65}}\permodel}
+		\begin{center}{\largerfontsize\antiquefont\attackcopter{} (\pts{75})}
+		
+		\vspace{5pt}\zerototwochoice{}\end{center}
+		\textbf{1} \labels@model{}.\newline \mayaddonemodelfor{} \pts{\textbf{65}}.
 		
 		\vspace{0.15cm}
-		\def\tempweapons{\forgerepeater}
+		\def\tempweapons{\forgerepeater{},\shrapnelgrenades{}}
 		\weapons{\tempweapons}
 		
 		\def\tempoptions{%
-			\copterskirmishoption{}=\permodel{}<5,
-			\maygain{} \bombingrun{}=30,
+			\copterskirmishoption{}=10,
 		}
 		\vspace*{0.1cm}\options{\tempoptions}
 		
-		\def\tempunitrules{\unitrule{\bombingrun}{\bombingrunrule}}
-		\unitrules{\tempunitrules}
+		\def\tempunitequipment{\equipmentdef{\shrapnelgrenades}{\shrapnelgrenadesrule}}
+		\unitequipment{\tempunitequipment}
+
+		\columnbreak
+		\begin{center}{\largerfontsize\antiquefont\steambomber{} (\pts{105})}
 		
-		\begin{center}\largerfontsize\antiquefont\reconcopter{} (\pts{85})\end{center}
+		\vspace{5pt}\zerototwochoice{}\end{center}
+		\labels@Singlemodel{}.
+		
+		\vspace{0.15cm}
+		\def\tempweapons{\forgerepeater{},\shrapnelbombs{}}
+		\weapons{\tempweapons}
+		
+		\def\tempunitequipment{\equipmentdef{\shrapnelbombs}{\shrapnelbombsrule}}
+		\unitequipment{\tempunitequipment}
+		
+		\vspace*{\fill}\columnbreak	
+		\begin{center}{\largerfontsize\antiquefont\flamecopter{} (\pts{85})}
+		
+		\vspace{5pt}\zerototwochoice{}\end{center}
 		\labels@Singlemodel{}.
 		
 		\vspace{0.15cm}
@@ -417,6 +470,7 @@
 		\def\tempunitequipment{\equipmentdef{\flameculverin}{\flameculverinrule}}
 		\unitequipment{\tempunitequipment}	
 		
+		\vspace*{\fill}
 		\end{multicols}
 		\setlength{\columnseprule}{0pt}
 	},
@@ -424,7 +478,7 @@
 
 \showunit{
 	name={\miners{}},
-	cost={100},
+	cost={90},
 	profile={ < 3 4 3 4 4 1 2 1 9},
 	costpermodel=10,
 	maxmodels=20,
@@ -436,10 +490,12 @@
 	specialrules={\ambush{}},
 	armour={\ha{}},
 	options={
-		\maytakeashield{}=\permodel{}<1,
-		\maytakethrowingweapons{}=\permodel{}<2,
-		\maytakeapistol{}=\permodel{}<2,	
-		\maytakeagw{}=\permodel{}<2,
+		\musttakeoneormoreofthefollowing{
+			\shield{}=\permodel{}<1,
+			\throwingweapons{}=\permodel{}<2,
+			\pistol{}=\permodel{}<2,	
+			\gw{}=\permodel{}<2
+		},
 	},
 	commandgroup={champion=10, musician=10, banner=10},
 }
@@ -470,7 +526,9 @@
 		\begin{multicols}{3}
 		\raggedcolumns		
 
-		\begin{center}\largerfontsize\antiquefont\catapult{} (\pts{90}) 0-2\refsymbol{}\end{center}
+		\begin{center}{\largerfontsize\antiquefont\catapult{} (\pts{90})}
+		
+		\vspace{5pt}\zerototwochoice{}\end{center}
 
 		\noindent\catapultrule{}
 		
@@ -479,7 +537,9 @@
 		\vspace*{0.1cm}\unitrules{\tempunitrules}
 
 		\vspace*{\fill}\columnbreak
-		\begin{center}\largerfontsize\antiquefont\cannon{} (\pts{100}) 0-2\refsymbol{}\end{center}
+		\begin{center}{\largerfontsize\antiquefont\cannon{} (\pts{100})}
+		
+		\vspace{5pt}\zerototwochoice{}\end{center}
 		
 		\noindent\cannonrule{}
 		
@@ -488,7 +548,9 @@
 		\vspace*{0.1cm}\unitrules{\tempunitrules}
 		
 		\columnbreak
-		\begin{center}\largerfontsize\antiquefont\organgun{} (\pts{125}) 0-2\refsymbol{}\end{center}
+		\begin{center}{\largerfontsize\antiquefont\organgun{} (\pts{125})}
+		
+		\vspace{5pt}\zerototwochoice{}\end{center}
 		
 		\noindent\organgunrule{}
 		
@@ -499,7 +561,6 @@
 		\vspace*{\fill}
 		\end{multicols}
 		\setlength{\columnseprule}{0pt}
-		\vspace*{0.2cm}\noindent\refsymbol{} \fieldartillerynote{}
 	},
 }
 
@@ -591,7 +652,8 @@
 }		
 
 \showunit{
-	name={\grudgemachines},
+	name={\grudgemachine{} (\oneofakind{})\refsymbol{}},
+	QRSname={\grudgemachine},
 	profile={
 		\machine{}< - - - - 7 3 - - -,
 		\crew{} (3)< 3 4 3 3 4 - 2 1 9,
@@ -614,7 +676,7 @@
 		\begin{multicols}{2}
 		\raggedcolumns		
 
-		\begin{center}\largerfontsize\antiquefont\flamecannon{} (\pts{110})\end{center}
+		\begin{center}\largerfontsize\antiquefont\flamecannon{} (\pts{105})\end{center}
 
 		\noindent\flamecannonrule{}
 		
@@ -639,15 +701,18 @@
 		\vspace*{\fill}
 		\end{multicols}
 		\setlength{\columnseprule}{0pt}
+		
+		\vspace*{0.15cm}\noindent\refsymbol{} \grudgemachinenote{}
 	},		
 }	
 
 \showunit{
-	name={\anvilofpower},
+	name={\anvilofpower{} (\oneofakind{})},
+	QRSname={\anvilofpower{}},
 	cost={150},
 	profile={
 		\anvil{}< - - - - 7 3 - - -,
-		\anvilcrew{} (4)< 3 5 3 4 4 - 2 1 9,
+		\anvilcrew{} (3)< 3 5 3 4 4 - 2 1 9,
 	},
 	type=\warmachine{},
 	unitsize=1,
@@ -663,35 +728,4 @@
 }	
 
 
-
-
-
-
-\mountstitle
-
-\mountssectionannouncement
-
-\showunit{
-	name={\shieldbearers},
-	profile={ < 3 5 3 4 4 4 2 2 10},
-	type=\infantry{},
-	basesize=40x20,
-	commontype=\dwarvencommonrules{},
-	commonspecialrules={\relentless{},\sturdy{}},
-	armour={\mountsprotection{5}},
-}
-
-\showunit{
-	name={\warthrone},
-	profile={ < 3 5 3 4 4 6 2 4 10},	
-	type=\infantry{},
-	basesize=40x60,
-	commontype=\dwarvencommonrules{},
-	commonspecialrules={\relentless{},\sturdy{}},
-	specialrules={\hatred{},\majestyofhighkings{}}, 
-	armour={\mountsprotection{5}},
-	unitrules={
-		\unitrule{\majestyofhighkings{}}{\majestyofhighkingsrule{}}
-	},
-}	
 

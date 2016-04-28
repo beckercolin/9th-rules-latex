@@ -1,9 +1,9 @@
 \input{../Layout/AB_layout.tex}
 
 \newcommand{\booktitle}{Forteresses Naines}
-\newcommand{\version}{0.99.2}
+\newcommand{\version}{0.99.5}
 \newcommand{\frenchversion}{2.0}
-\newcommand{\translationteam}{\item \og AEnoriel \fg \item \og Anglachel \fg \item \og Astadriel \fg \item \og Batcat \fg \item \og Eru \fg  \item \og Gandarin \fg \item \og Groumbahk \fg \item \og Iluvatar \fg \item \og Lamronchak \fg \item \og Mammstein \fg}
+\newcommand{\booklogo}{pics/logo_big_DH.png}
 
 % Army wide rules
 
@@ -31,6 +31,7 @@
 \newcommand{\wyrmslayerrocket}{Roquettes Tueuses de Wyrm}
 \newcommand{\forgerepeater}{Sulfateuse}
 
+
 % Characters rules
 
 \newcommand{\monsterseeker}{Tueur de Monstres}
@@ -44,9 +45,11 @@
 
 \newcommand{\seenitall}{Radoteurs}
 \newcommand{\shieldskill}{Mur Impénétrable}
+\newcommand{\guildcraftedhandgun}{Arquebuse Manufacturée}
 \newcommand{\forgegun}{Fusil de la Forge}
+\newcommand{\shrapnelgrenades}{Grenades au Shrapnel}
+\newcommand{\shrapnelbombs}{Bombes au Shrapnel}
 \newcommand{\flameculverin}{Chalumeau}
-\newcommand{\bombingrun}{Bombardement}
 \newcommand{\whirlingchainsofdoom}{Chaînes du Jugement}
 \newcommand{\swiwelgun}{Mitraillette}
 \newcommand{\majestyofhighkings}{Majesté des Hauts Rois}
@@ -102,7 +105,7 @@
 \newcommand{\grudgebuster}{Brise-Rancunes}
 \newcommand{\anvilofpower}{Enclume Ancestrale}
 \newcommand{\anvilsofpower}{Enclumes Ancestrales}
-\newcommand{\grudgemachines}{Artillerie Venge-Rancune}
+\newcommand{\grudgemachine}{Artillerie Venge-Rancune}
 
 % Mounts
 
@@ -113,8 +116,9 @@
 
 \newcommand{\pilot}{Pilote}
 \newcommand{\copter}{Autogyre}
-\newcommand{\attackcopters}{Assaut}
-\newcommand{\reconcopter}{Reconnaissance}
+\newcommand{\attackcopter}{Autogyre d'Assaut}
+\newcommand{\steambomber}{Autogyre Bombardier}
+\newcommand{\flamecopter}{Autogyre à Flammes}
 \newcommand{\machine}{Machine}
 \newcommand{\crew}{Servant}
 \newcommand{\grudgebustercrew}{Équipage}
@@ -132,13 +136,15 @@
 
 % Others
 
-\newcommand{\daemonlegion}{Légions Démoniaques}
+\newcommand{\otherworldlymodels}{Figurines \otherworldly{}}
 \newcommand{\maytakeaholdstone}{Peut porter une \holdstone}
 \newcommand{\onlyonemaytakevanguard}{Une seule unité de \clanwarriors{} ou de \greybeards{} peut gagner la règle \vanguard{}}
-\newcommand{\mayswapcrossbowforhandgun}{Peut échanger son \crossbow{} contre une \handgun{}}
+\newcommand{\mayswapcrossbowfor}{\optionschoice{Peut échanger son \crossbow{} contre :}}
 \newcommand{\seekersskirmishersoption}{\skirmishers{} (\oneofakind{}, 15 fig. max.)}
-\newcommand{\copterchoice}{Doit choisir l'une des deux formations :}
-\newcommand{\copterskirmishoption}{\skirmishers{} (si \textbf{au moins} 2 fig.)}
+\newcommand{\copterchoice}{Doit choisir l'une des trois unités :}
+\newcommand{\zerototwochoice}{Jusqu'à 2 choix}
+\newcommand{\mayaddonemodelfor}{Peut ajouter une figurine pour}
+\newcommand{\copterskirmishoption}{\skirmishers{} (si 2 fig.)}
 
 % Profile Rules
 
@@ -168,7 +174,7 @@ Au lieu d'utiliser la règle \engineer{}, un \masterengineer{} peut, au début d
 \item La portée des Armes de Tir de l'unité augmente de \distance{1D6+1}.
 \end{customsubitemize}
 
-Le même bonus ne peut pas se cumuler deux fois sur une même unité.
+Le même bonus ne peut pas se cumuler sur une même unité.
 }
 
 \newcommand{\clanleaderrule}{%
@@ -259,10 +265,6 @@ Toutes les touches du \cannon{} ont +1 en Force et \magicalattacks{}.
 Toutes les touches du \organgun{} ont un bonus de +1 sur les jets pour blesser et \magicalattacks{}.
 }
 
-\newcommand{\fieldartillerynote}{%
-Une armée ne peut pas contenir plus de deux \catapults{}, deux \cannons{} ou encore plus de deux \organguns{}. Ces chiffres sont changés en un et quatre respectivement pour les Patrouilles et les Grandes Armées.
-}
-
 \newcommand{\flamecannonrule}{%
 \textbf{\artilleryweapon} de type \textbf{\flamethrower}.\newline \range{12}, \Strength{} 5, \flamingattacks{}, \multiplewounds{1D3}{}.
 }
@@ -283,6 +285,10 @@ Le \flamecannon{} gagne \distance{+3} en portée et des \magicalattacks{}.
 Toutes les touches de la \dwarfballista{} ont un bonus de +1 pour toucher contre les unités volantes et des \magicalattacks{}.
 }
 
+\newcommand{\grudgemachinenote}{%
+L'\grudgemachine{} est \oneofakind{} si l'armée contient au moins 3 figurines d'\fieldartillery{}. Ce chiffre est réduit à 2 pour les Patrouilles et augmenté à 6 pour les Grandes Armées. Ignorez cette restriction si toutes les figurines d'\grudgemachine{} prennent l'amélioration \dwarfballista{}.
+}
+
 % Other units
 
 \newcommand{\seenitallrule}{%
@@ -293,10 +299,6 @@ Toute unité alliée à moins de \distance{6} peut relancer ses tests de Panique
 La \wardsave{} accordée par la règle \shieldwall{} est toujours de (5+).
 }
 
-\newcommand{\bombingrunrule}{%
-\sweepingattack{}, l'unité ennemie subit 2D6 touches de Force 3 avec \armourpiercing{1}. Le nombre de touches n'augmente pas proportionnellement avec le nombre de figurines de l'unité.
-}
-
 \newcommand{\majestyofhighkingsrule}{%
 Si un Général est monté sur le \warthrone{}, la portée de sa \inspiringpresence{} passe à \distance{18}. Toutes les unités amies à moins de \distance{6} gagnent la règle \swiftstride{}. Si le Personnage sur le \warthrone{} a rejoint une unité et est tué, l'unité gagne la règle \frenzy{}.
 
@@ -305,8 +307,20 @@ L'\fieldartillery{} passe des unités spéciales aux unités rares.
 
 % Weapons
 
+\newcommand{\guildcraftedhandgunrule}{%
+Arme de Tir. Type : Arquebuse. Accorde un bonus de +1 pour toucher au tir. Une unité équipée de cette arme ne peut pas porter d'\gw{} ni être Porte-étendard Vétéran.
+}
+
 \newcommand{\forgegunrule}{%
 Arme de Tir. \range{18}, Force 5, \flamingattacks{}, \quicktofire{}.
+}
+
+\newcommand{\shrapnelgrenadesrule}{%
+\sweepingattack{} qui peut être utilisée une fois par partie. L'unité ennemie subit 1D3 touches de Force 3 pour chaque \copter{} dans l'unité.
+}
+
+\newcommand{\shrapnelbombsrule}{%
+\sweepingattack{}. L'unité ennemie subit 1D6*2 touches de Force 3 avec \armourpiercing{1}. Si un \result{6} naturel est obtenu sur le dé du nombre de touches, les \shrapnelbombs{} ne pourront plus être utilisées de la partie après cette attaque.
 }
 
 \newcommand{\flameculverinrule}{%
@@ -346,9 +360,9 @@ Une armée des Forteresses Naines a un nombre de \ancientgrudges{} défini comme
 \item Une \ancientgrudge{} additionnelle si l'armée combat des figurines issues des livres d'armées Peaux Vertes ou Marée de Vermine.
 \end{itemize}
 
-Après les déploiements des deux joueurs, vous pouvez désigner une figurine ou une unité ennemie pour chaque \ancientgrudge{}. Aucune figurine ou unité ne peut être ciblée plus d'une fois. Toutes les unités de votre armée gagnent la règle \hatred{} contre ces figurines ou unités. Si une de vos unités disposait déjà de la \hatred{} contre cet ennemi, elle peut aussi relancer les jets pour blesser ratés au cours de chaque première Manche de Corps à Corps contre lui.
+Après les déploiements des deux joueurs, vous pouvez désigner une figurine ou une unité ennemie pour chaque \ancientgrudge{}. Aucune figurine ou unité ne peut être ciblée plus d'une fois. Toutes les unités de votre armée gagnent la règle \hatred{} contre ces figurines ou unités.
 
-Si c'est une unité qui est choisie, toute figurine qui la rejoint subit aussi les effets de la \ancientgrudge{} tant qu'il reste dans l'unité. Un Personnage qui quitte une unité contre laquelle il y a une \ancientgrudge{} n'en subit donc plus les effets. Si une figurine individuelle est désignée et qu'elle rejoint une unité, les effets de la \ancientgrudge{} ne s'étendent pas à l'unité entière. 
+Si c'est une unité qui est choisie, toute figurine qui la rejoint subit aussi les effets de la \ancientgrudge{} tant qu'elle reste dans l'unité. Un Personnage qui quitte une unité contre laquelle il existe une \ancientgrudge{} n'en subit donc plus les effets. Si une figurine individuelle est désignée et qu'elle rejoint une unité, les effets de la \ancientgrudge{} ne s'étendent pas à l'unité entière. 
 
 \closearmywiderules
 
@@ -377,17 +391,17 @@ Une fois le déploiement terminé mais avant de placer les Éclaireurs, la figur
 
 Au début de n'importe quelle Manche de Corps à Corps, une figurine dotée d'une \holdstone{} peut déclarer qu'elle l'utilise. A partir de ce moment, l'unité du porteur considère ses flancs et son arrière comme étant de front en ce qui concerne les Attaques de Soutien, les règles \parry{} et \shieldwall{}. Elle peut néanmoins toujours être Désorganisée. Tant que la \holdstone{} est active, le porteur doit toujours lancer et relever des défis, à moins qu'une autre figurine amie ne le fasse avant. L'unité ne peut pas poursuivre directement après le combat où la \holdstone{} a été utilisée.
 
-Les effets de la \holdstone{} disparaissent immédiatement une fois le combat terminé ou à la fin de la phase où son porteur est tué.
+Les effets de la \holdstone{} disparaissent immédiatement une fois le combat terminé ou à la fin de la phase durant laquelle son porteur est tué.
 
 Tant que le porteur est en vie, la Pierre peut être activée à nouveau lors des combats suivants.
 
 \armyspecialruleentry{\thebiggertheyare}
 
-Les attaques de Corps à Corps de la figurine blessent toujours sur 4+ ou mieux. Elle gagne également la règle \swiftstride{} lorsqu'elle charge une unité contenant au moins une figurine d'un des types suivant : Bête Monstrueuse, Cavalerie Monstrueuse, Infanterie Monstrueuse, Monstre ou Monstre Monté.
+Les attaques de Corps à Corps de la figurine blessent toujours sur 4+ ou mieux. Elle gagne également la règle \swiftstride{} lorsqu'elle fait le jet de charge vers une unité contenant au moins une figurine d'un des types suivant : Bête Monstrueuse, Cavalerie Monstrueuse, Infanterie Monstrueuse, Monstre ou Monstre Monté.
 
 \armyspecialruleentry{\comewithme}
 
-Juste avant qu'elle soit retirée comme perte suite à une attaque de Corps à Corps durant la Phase de Corps à Corps, la figurine peut porter immédiatement une ultime attaque de Corps à Corps avec l'arme utilisée pendant cette manche. L'attaque doit être portée au choix sur la figurine adverse l'ayant achevé ou bien son unité, auquel cas cette attaque est distribuée comme un tir. Les bonus et règles spéciales sont appliquées normalement, mais la figurine ne peut porter qu'une seule attaque au plus dont la Force ne peut pas dépasser 5. Cette règle ne peut pas être utilisée suite à des pertes dues à des \impacthits{}. Une unité ne peut utiliser cette règle que si elle possédait au moins un rang de 5 figurines au début de la phase, à moins qu'elle soit un Personnage isolé ou un \vengeanceseeker{}.
+Juste avant qu'elle soit retirée comme perte suite à une attaque de Corps à Corps durant la Phase de Corps à Corps, la figurine peut porter immédiatement une ultime attaque de Corps à Corps avec l'arme utilisée pendant cette manche. L'attaque doit être portée au choix sur la figurine adverse l'ayant achevé ou bien son unité, auquel cas cette attaque est distribuée comme un tir. Les bonus et règles spéciales sont appliquées normalement, mais la figurine ne peut porter qu'une seule attaque au plus dont la Force ne peut pas dépasser 5. Cette règle ne peut pas être utilisée suite à des pertes dues à des \impacthits{}. Une unité ne peut utiliser cette règle que si elle a au moins autant de rangs que de colonnes au début de la Manche de Corps à Corps.
 
 \closearmyspecialrules
 
@@ -403,7 +417,7 @@ Juste avant qu'elle soit retirée comme perte suite à une attaque de Corps à C
 
 \listitemonecol{\wyrmslayerrocket} Arme de Tir. \range{24}, Force 6, \flamingattacks{}, \multiplewounds{1D3}{}, \reload{}.
 
-\listitemonecol{\forgerepeater} Arme de Tir. \range{18}, Force 5, \flamingattacks{}, \multipleshots{2D3}, \quicktofire{}.
+\listitemonecol{\forgerepeater} Arme de Tir. \range{18}, Force 5, \flamingattacks{}, \multipleshots{4}, \quicktofire{}.
 
 \enditemlistonecol
 
@@ -533,11 +547,11 @@ Un maximum de 3 Runes de cet ensemble peuvent être sélectionnées et comptent 
 
 \startpricelist
 
-\pricelistitem{Rune de Vengeance}{35}Une par Armée.\newline Usage Unique. Peut être activé au début de n'importe quelle Phase de Mouvement. Les unités amies à moins de \distance{6} du porteur gagnent la \devastatingcharge{} jusqu'à la fin du Tour de Joueur.
+\pricelistitem{Rune de Vengeance}{35}Une par Armée.\newline Usage Unique. Peut être activée au début de n'importe quelle Phase de Mouvement. Les unités amies à moins de \distance{6} du porteur gagnent la \devastatingcharge{} jusqu'à la fin du Tour de Joueur.
 
 \pricelistitem{Rune du Dragon}{35}Le porteur gagne une \breathweapon{} avec Force 4, \flamingattacks{} et \magicalattacks{}.
 
-\pricelistitem{Rune de Courage}{30}Usage Unique. Peut être activé au début de n'importe quelle Manche de Corps à Corps. Le porteur gagne la règle \stubborn{} pour la durée de la Phase.
+\pricelistitem{Rune de Courage}{30}Usage Unique. Peut être activée au début de n'importe quelle Manche de Corps à Corps. Le porteur gagne la règle \stubborn{} pour la durée de la Phase.
 
 \pricelistitem{Rune d'Infamie}{20}Le porteur provoque la \fear{}.
 
@@ -612,7 +626,7 @@ Les armées des Forteresses Naines peuvent aussi bien utiliser les Bannières Ma
 \noindent\begin{tabular}{lcccccc}
 \textbf{Nom} & \textbf{Artillerie} & \textbf{Portée} & \textbf{\labels@S{}} & \textbf{\multipleshots{}} & \textbf{\multiplewounds{}} & \textbf{\armourpiercing{}} \tabularnewline
 \forgegun{} (\forgewardens{}) & - & \distance{18} & 5 & - & - & - \tabularnewline
-\forgerepeater{} & - & \distance{18} & 5 & 2D3 & - & - \tabularnewline
+\forgerepeater{} & - & \distance{18} & 5 & 4 & - & - \tabularnewline
 \wyrmslayerrocket{} & - & \distance{24} & 6 & - & 1D3 & - \tabularnewline
 \swiwelgun{} (\grudgebuster{}) & - & \distance{24} & 4 & 4 & - & 1 \tabularnewline
 \flameculverin{} (\copter{}) & \flamethrower{} & \distance{3} & 3 & - & - & -\tabularnewline
@@ -620,41 +634,12 @@ Les armées des Forteresses Naines peuvent aussi bien utiliser les Bannières Ma
 \fieldartillery{} - \cannon{} (2) & \volleygun{} & \distance{12} & 4 & 2D6 & - & 3 \tabularnewline
 \fieldartillery{} - \organgun{} & \volleygun{} & \distance{30} & 5 & 2D6*2 & - & 1 \tabularnewline
 \fieldartillery{} - \catapult{} & \catapult{} (\distance{3}) & \distance{60} & 3 [9] & - & [\ordnance{}] & - \tabularnewline
-\grudgemachines{} - \dwarfballista{} & \boltthrower{} & \distance{48} & 6 & - & 1D3 & 6 \tabularnewline
-\grudgemachines{} - \flamecannon{} & \flamethrower{} & \distance{12} & 5 & - & 1D3 & - \tabularnewline
+\grudgemachine{} - \dwarfballista{} & \boltthrower{} & \distance{48} & 6 & - & 1D3 & 6 \tabularnewline
+\grudgemachine{} - \flamecannon{} & \flamethrower{} & \distance{12} & 5 & - & 1D3 & - \tabularnewline
 \end{tabular}
 
 \end{center}
 
 \restoregeometry
-
-\changelogtitle
-
-\startchangelog
-
-\newlog{0.99.2}{%
-Grudge Buster{,} clarified which part has what weapon,
-Entrench{,} clarification,
-Yer comin’ with me!{,} clarification,
-Rune of Oaths{,} clarification,
-Rune of Gleaming{,} clarification,
-Rune of Resilience{,} clarification,
-Weapon runes{,} clarification,
-Rune of Resistance{,} clarification,
-Rune of Retribution{,} clarification,
-Rune of Retribution{,} clarification,
-Rune of Grounding{,} clarification,
-Rune Craft Mastery{,} clarification,
-Rune Craft{,} clarification,
-Grim Resolve{,} clarification,
-Rune of Storms{,} clarification,
-Rune of Shattering{,} clarification,
-Rune of Cleansing{,} clarification,
-Majesty of High Kings{,} clarification,
-Ancient Grudge{,} clarification,
-Flame Culverin{,} clarification,
-}
-
-\endchangelog
 
 \end{document}
