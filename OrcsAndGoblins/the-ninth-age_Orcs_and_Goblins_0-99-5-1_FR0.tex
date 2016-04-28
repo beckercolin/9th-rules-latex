@@ -3,7 +3,7 @@
 
 \newcommand{\booktitle}{Orques et Gobelins}
 \newcommand{\booklogo}{pics/logo_big_OnG.png}
-\newcommand{\version}{0.99.5}
+\newcommand{\version}{0.99.5.1}
 \newcommand{\frenchversion}{2.0}
 
 \newcommand{\frontpageaddstuff}{Les Gobelins \sout{n'}ont \sout{pas} été maltraités lors de la création de cet ouvrage.}
@@ -320,10 +320,6 @@ La \warmachine{} peut choisir de perdre 1 PV pour relancer un jet sur la Table d
 Après avoir fait dévier le gabarit, vous pouvez le déplacer dans la direction de votre choix sur une distance de \distance{1D6}. Vous ne pouvez cependant pas le déplacer délibérément sur des unités au Corps à Corps ou des unités amies, si cela peut être évité. Une fois la position finale obtenue, au lieu de suivre les règles habituelles des gabarits, toute unité sous le gabarit subit 1D3+1 touches.
 }
 
-\newcommand{\greenhidecatapultsnote}{%
-Une armée ne peut pas contenir plus de deux \splatterers{}, ni plus de deux \gitlaunchers{}. Ces nombres sont changés en un et quatre respectivement pour les Patrouilles et les Grandes Armées.
-}
-
 \newcommand{\pointedsticksrule}{%
 Les Touches d'Impact de la \scrapwagon{} bénéficient de \armourpiercing{2}.
 }
@@ -515,7 +511,7 @@ Certaines figurines de l'armée disposent de règles spéciales qui corresponden
 
 \armyspecialruleentry{\unruly}
 
-L'unité a un malus de -1 en Commandement pour les tests de \frenzy{} et pour se réfréner de poursuivre. Si l'unité est en formation de Horde, jetez trois dés pour les tests de Panique et ignorez le dé ayant donné le plus grand résultat.
+\newrule{Les figurines avec cette règle} ont un malus de -1 en Commandement pour les tests de \frenzy{} et pour se réfréner de poursuivre. Si elles sont en formation de Horde, jetez trois dés pour les tests de Panique et ignorez le dé ayant donné le plus grand résultat.
 
 \armyspecialruleentry{\borntofight}
 
@@ -552,19 +548,30 @@ Une unité avec \shambolic{} et \runningamok{} se déplace toujours dans une dir
 
 \armyspecialruleentry{\ricochet{X}}
 
-Les figurines avec \shambolic{} et \ricochet{} ignorent l'écart d'\distance{1} entre unités pendant leur \randommovement{}. Si une figurine avec cette règle touche une autre unité, amie ou ennemie, elle continue son mouvement dans la même direction jusqu'à respecter la règle des \distance{1} d'écart entre unités. Cela peut amener cette figurine à traverser plusieurs unités lors du même mouvement. Si elle ne peut être placée à la fin, elle est retirée comme perte.
+Les figurines avec \ricochet{} ignorent l'écart d'\distance{1} \newrule{avec les autres unités}. Si une figurine avec cette règle touche une autre unité, amie ou ennemie, \newrule{au lieu de charger}, elle continue son mouvement dans la même direction jusqu'à respecter la règle des \distance{1} d'écart entre unités \newrule{et avoir parcouru au moins sa distance de mouvement}. \newrule{Si cela devait amener la figurine au contact, ou à moins d'\distance{1} d'une autre unité, elle continue à se déplacer dans la même direction jusqu'à pouvoir se trouver à plus d'\distance{1} de toute autre unité. Si elle se retrouve alors à moins d'\distance{1} d'un Terrain Infranchissable ou en dehors du champ de bataille, retirez-la comme perte}.
 
-Toute unité traversée durant le déplacement jusqu'à la distance obtenue sur les dés pour le \randommovement{} est touchée. Les unités touchées subissent X touches, X étant la valeur entre les parenthèses. Les unités touchées engagées dans un même Corps à Corps ne comptent que comme une seule unité pour la détermination des touches. Le joueur possédant la figurine avec \ricochet{} répartit les touches infligées entre les unités aussi équitablement que possible, puis applique les règles normales de distribution des touches dans chaque unité.
+Toute unité traversée durant le déplacement jusqu'à la distance obtenue sur les dés pour le \randommovement{} est touchée \newrule{par une Attaque Spéciale à distance}. Les unités touchées subissent X touches, X étant la valeur entre les parenthèses. Les unités engagées dans un même Corps à Corps ne comptent que comme une seule unité pour la détermination des touches. Le joueur possédant la figurine avec \ricochet{} répartit les touches infligées entre les unités en combat aussi équitablement que possible, puis applique les règles normales de distribution des touches dans chaque unité.
 
 Il n'est pas possible de charger une figurine avec \ricochet{}, mais une unité peut charger, fuir, poursuivre ou se déplacer à travers elle. L'unité subit alors X+1D6 touches, puis la figurine avec \ricochet{} est retirée du champ de bataille en tant que perte.
 
 Toutes les touches sont infligées avec la Force non modifiée de la figurine et ont \armourpiercing{1}.
 
+\vspace{1cm}
+\begin{center}
+\begin{tabular}{@{}m{9.5cm}@{\hskip 20pt}m{7.5cm}@{}}
+\includegraphics[width=9.5cm]{pics/ricochet.png} &
+\newrule{\textbf{a)} La figurine avec \ricochet{} ne peut pas être placée à plus d'\distance{1} derrière l'unité rose car l'unité verte est trop proche. Elle est donc déplacée à travers les deux unités en suivant la direction initiale. Seule l'unité rose subit les touches de Ricochet car l'unité verte n'est pas à la distance de mouvement obtenue aux dés.}
+
+\vspace{10pt}\newrule{\textbf{b)} Après avoir été déplacée à travers les unités, la figurine avec \ricochet{} arrive à moins d'\distance{1} d'un Terrain Infranchissable et est donc retiré comme perte. Elle a traversé au moins une unité engagée au Corps à Corps, infligeant donc X touches en tout, qui doivent être distribuées équitablement entre toutes les unités en combat.}
+\tabularnewline
+\end{tabular}
+\end{center}
 
 \closearmyspecialrules
 
 
-\vspace{1.5cm}
+
+\newpage
 \startarmyarmoury
 
 \startitemlistonecol
@@ -634,6 +641,8 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine et
 \endpricelist
 
 \closearmymagicalitems
+
+
 
 
 
