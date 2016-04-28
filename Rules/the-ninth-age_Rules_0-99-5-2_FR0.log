@@ -1,0 +1,2206 @@
+This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9) (preloaded format=xelatex 2016.3.2)  28 APR 2016 21:39
+entering extended mode
+**the-ninth-age_Rules_0-99-5-2_FR0.tex
+(the-ninth-age_Rules_0-99-5-2_FR0.tex
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 69 languages loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+Requested font "cmr10" at 10.95pt
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)
+Requested font "ecrm1095" at 10.95pt
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2015/08/03 3.9m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-french\frenchb.ldf"
+Language: frenchb 2015/11/25 v3.1j French support from the babel system
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2015/08/03 3.9m Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\xebabel.def"))
+\l@acadian = a dialect from \language\l@french 
+\l@canadien = a dialect from \language\l@french 
+\FBcolonskip=\skip44
+\FBthinskip=\skip45
+\FB@interchartokenstateORI=\count89
+Package frenchb.ldf Info: No need for active punctuation characters
+(frenchb.ldf)             with this version of XeTeX!
+(frenchb.ldf)             reported on input line 269.
+\FB@punctthick=\XeTeXintercharclass4
+\FB@punctthin=\XeTeXintercharclass5
+\FB@punctnul=\XeTeXintercharclass6
+\FB@guilo=\XeTeXintercharclass7
+\FB@guilf=\XeTeXintercharclass8
+\FB@guilnul=\XeTeXintercharclass9
+\FBguillskip=\skip46
+\FBguill@level=\count90
+\FB@everypar=\toks16
+\FB@Mht=\dimen104
+LaTeX Info: Redefining \degres on input line 733.
+\std@mcc=\count91
+\dec@mcc=\count92
+\listindentFB=\skip47
+\labelwidthFB=\skip48
+\leftmarginFB=\skip49
+\parindentFFN=\dimen105
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\carlisle\scalefnt.sty")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: xetex.def on input line 94.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\xelatex\xetex-def\xetex.def"
+File: xetex.def 2015/09/11 v4.06 LaTeX color/graphics driver for XeTeX (TeX Liv
+e/RRM/JK)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)))
+\Gin@req@height=\dimen106
+\Gin@req@width=\dimen107
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\microtype.sty"
+Package: microtype 2013/05/23 v2.5a Micro-typographical refinements (RS)
+\MT@toks=\toks18
+\MT@count=\count93
+LaTeX Info: Redefining \textls on input line 766.
+\MT@outer@kern=\dimen108
+LaTeX Info: Redefining \textmicrotypecontext on input line 1285.
+\MT@listname@count=\count94
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\microtype-xetex.def"
+File: microtype-xetex.def 2013/05/23 v2.5a Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 254.
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\microtype.cfg"
+File: microtype.cfg 2013/05/23 v2.5a microtype main configuration file (RS)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\siunits\SIunits.sty"
+Package: SIunits 2007/12/02 v1.36 Support for the International System of units
+ (MH)
+
+
+\@qskwidth=\skip50
+\symgreek=\mathgroup4
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks19
+\ex@=\dimen109
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\siunits\SIunits.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\palatino.sty"
+Package: palatino 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\transparent.sty"
+Package: transparent 2007/01/08 v1.0 Transparency via pdfTeX's color stack (HO)
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
+)
+
+Package transparent Warning: Loading aborted, because pdfTeX is not running in 
+PDF mode.
+
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen110
+\captionmargin@=\dimen111
+\captionwidth=\dimen112
+\caption@tempdima=\dimen113
+\caption@indent=\dimen114
+\caption@parindent=\dimen115
+\caption@hangindent=\dimen116
+)
+\c@ContinuedFloat=\count95
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen117
+\extrarowheight=\dimen118
+\NC@list=\toks20
+\extratabsurround=\skip51
+\backup@length=\skip52
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+Package: multicol 2015/03/31 v1.8m multicolumn formatting (FMi)
+\c@tracingmulticols=\count96
+\mult@box=\box26
+\multicol@leftmargin=\dimen119
+\c@unbalance=\count97
+\c@collectmore=\count98
+\doublecol@number=\count99
+\multicoltolerance=\count100
+\multicolpretolerance=\count101
+\full@width=\dimen120
+\page@free=\dimen121
+\premulticols=\dimen122
+\postmulticols=\dimen123
+\multicolsep=\skip53
+\multicolbaselineskip=\skip54
+\partial@page=\box27
+\last@line=\box28
+\maxbalancingoverflow=\dimen124
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count102
+\c@finalcolumnbadness=\count103
+\last@try=\dimen125
+\multicolovershoot=\dimen126
+\multicolundershoot=\dimen127
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+\mc@col@check@num=\count104
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+\everycr=\toks21
+\minrowclearance=\skip55
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count105
+\float@exts=\toks22
+\float@box=\box52
+\@float@everytoks=\toks23
+\@floatcapt=\box53
+) (slashbox.sty
+slashbox style by K.Yasuoka, May 1993.
+\@slashboxa=\box54
+\@slashboxb=\box55
+\@slashboxc=\box56
+\@slashboxwd=\count106
+\@slashboxht=\count107
+\@slashsepl=\dimen128
+\@slashsepr=\dimen129
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+)
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box57
+\beforetitleunit=\skip56
+\aftertitleunit=\skip57
+\ttl@plus=\dimen130
+\ttl@minus=\dimen131
+\ttl@toksa=\toks24
+\titlewidth=\dimen132
+\titlewidthlast=\dimen133
+\titlewidthfirst=\dimen134
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\xspace.sty"
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip58
+\enit@outerparindent=\dimen135
+\enit@toks=\toks25
+\enit@inbox=\box58
+\enitdp@description=\count108
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen136
+\Hy@linkcounter=\count109
+\Hy@pagecounter=\count110
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count111
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count112
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen137
+Requested font "pzdr" at 0.00002pt
+\Fld@menulength=\count113
+\Field@Width=\dimen138
+\Fld@charsize=\dimen139
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring ON on input line 6313.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count114
+\c@Item=\count115
+\c@Hfootnote=\count116
+)
+
+Package hyperref Message: Driver (autodetected): hxetex.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hxetex.def"
+File: hxetex.def 2012/11/06 v6.83m Hyperref driver for XeTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\puenc.def"
+File: puenc.def 2012/11/06 v6.83m Hyperref: PDF Unicode definition (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\stringenc.sty"
+Package: stringenc 2011/12/02 v1.10 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box59
+\c@Hy@AnnotLevel=\count117
+\HyField@AnnotCount=\count118
+\Fld@listcount=\count119
+\c@bookmark@seq@number=\count120
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
+(rerunfilecheck)             (e.g. pdfTeX or LuaTeX with package `pdftexcmds').
+
+(rerunfilecheck)             Therefore file contents cannot be checked efficien
+tly
+(rerunfilecheck)             and the loading of the package is aborted.
+)
+\Hy@SectionHShift=\skip59
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\titlesec\block.tss"
+File: block.tss 2011/12/15
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tocloft\tocloft.sty"
+Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
+Package tocloft Info: The document has section divisions on input line 44.
+\cftparskip=\skip60
+\cftbeforetoctitleskip=\skip61
+\cftaftertoctitleskip=\skip62
+\cftbeforepartskip=\skip63
+\cftpartnumwidth=\skip64
+\cftpartindent=\skip65
+\cftbeforesecskip=\skip66
+\cftsecindent=\skip67
+\cftsecnumwidth=\skip68
+\cftbeforesubsecskip=\skip69
+\cftsubsecindent=\skip70
+\cftsubsecnumwidth=\skip71
+\cftbeforesubsubsecskip=\skip72
+\cftsubsubsecindent=\skip73
+\cftsubsubsecnumwidth=\skip74
+\cftbeforeparaskip=\skip75
+\cftparaindent=\skip76
+\cftparanumwidth=\skip77
+\cftbeforesubparaskip=\skip78
+\cftsubparaindent=\skip79
+\cftsubparanumwidth=\skip80
+\cftbeforeloftitleskip=\skip81
+\cftafterloftitleskip=\skip82
+\cftbeforefigskip=\skip83
+\cftfigindent=\skip84
+\cftfignumwidth=\skip85
+\c@lofdepth=\count121
+\c@lotdepth=\count122
+\cftbeforelottitleskip=\skip86
+\cftafterlottitleskip=\skip87
+\cftbeforetabskip=\skip88
+\cfttabindent=\skip89
+\cfttabnumwidth=\skip90
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ms\multitoc.sty"
+Package: multitoc 1999/06/08 v2.01 MultiToc Package (MS)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+))
+(the-ninth-age_Rules_0-99-5-2_FR0.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 76.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 76.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1ppl.fd"
+File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
+)
+Requested font "pplr8t" at 10.95pt
+LaTeX Info: Redefining \dots on input line 76.
+LaTeX Info: Redefining \up on input line 76.
+
+
+Package frenchb.ldf Warning: Add \usepackage{fontspec} to the
+(frenchb.ldf)                preamble of your document, on input line 76.
+
+LaTeX Info: Redefining \microtypecontext on input line 76.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\mt-ppl.cfg"
+File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box60
+Package hyperref Info: Link coloring ON on input line 76.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count123
+)
+LaTeX Info: Redefining \ref on input line 76.
+LaTeX Info: Redefining \pageref on input line 76.
+LaTeX Info: Redefining \nameref on input line 76.
+
+(the-ninth-age_Rules_0-99-5-2_FR0.out) (the-ninth-age_Rules_0-99-5-2_FR0.out)
+\@outlinefile=\write3
+
+(titlepage_Rules.tex
+LaTeX Font Info:    Try loading font information for T1+pzc on input line 9.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pzc.fd"
+File: t1pzc.fd 2001/06/04 font definitions for T1/pzc.
+)
+LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <50> not available
+(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 9.
+Requested font "pzcmi8t" at 50.0pt
+Package microtype Info: Loading generic settings for font family
+(microtype)             `pzc' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <32.4997> not available
+(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 9.
+Requested font "pzcmi8t" at 32.4997pt
+Requested font "pplr8t" at 20.0pt
+Requested font "pplr8t" at 14.0pt
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 13.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Requested font "pcrr8t" at 14.0pt
+Package microtype Info: Loading generic settings for font family
+(microtype)             `pcr' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+File: logo_9th.png Graphic file (type QTm)
+
+<use  "logo_9th.png" >
+Requested font "pplr8t" at 12.0pt
+Requested font "pplri8t" at 12.0pt
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\se-ascii-print.def"
+File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
+
+)
+[1
+
+]
+Requested font "pplr8t" at 17.28pt
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 32.
+Requested font "pplb8t" at 17.28pt
+Requested font "pplri8t" at 7.79993pt
+Requested font "pcrr8t" at 12.0pt
+Requested font "cmr12" at 12.0pt
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\mt-cmr.cfg"
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+Requested font "cmr8" at 8.0pt
+Requested font "cmr6" at 6.0pt
+Requested font "cmmi12" at 12.0pt
+Requested font "cmmi8" at 8.0pt
+Requested font "cmmi6" at 6.0pt
+Requested font "cmsy10" at 12.0pt
+Requested font "cmsy8" at 8.0pt
+Requested font "cmsy6" at 6.0pt
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 39.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 39.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 39.
+Requested font "eurm10" at 12.0pt
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\mt-eur.cfg"
+File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
+)
+Requested font "eurm8" at 8.0pt
+Requested font "eurm6" at 6.0pt
+
+Overfull \hbox (13.40375pt too wide) in paragraph at lines 39--40
+\T1/ppl/m/n/12 çais ([][]$\T1/pcr/m/n/12 http : / / www . the-[]ninth-[]age . c
+om / index . php ? board / 117-[]french/$[][]\T1/ppl/m/n/12 ). Vous
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 50.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1ppl.fd"
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+)
+Requested font "pplr8c" at 12.0pt
+Requested font "cmr17" at 17.28pt
+Requested font "cmmi12" at 17.28pt
+Requested font "cmsy10" at 17.28pt
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 66.
+Requested font "eurm10" at 17.28pt
+Requested font "eurm10" at 10.0pt
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 66.
+Requested font "pplb8t" at 12.0pt
+ [2])
+Requested font "pplr8t" at 14.4pt
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 84.
+Requested font "pplb8t" at 14.4pt
+
+(the-ninth-age_Rules_0-99-5-2_FR0.toc
+Requested font "pplr8t" at 9.0pt
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <9> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 2.
+Requested font "pplb8t" at 9.0pt
+Requested font "pplr8t" at 8.0pt
+Requested font "pplr8t" at 5.19995pt
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 3.
+Requested font "pplb8t" at 10.95pt
+Requested font "cmmi10" at 10.95pt
+Requested font "cmsy10" at 10.95pt
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 3.
+Requested font "eurm10" at 10.95pt
+)
+\tf@toc=\write4
+ [1] (BRB_introduction.tex
+Requested font "pplr8t" at 20.74pt
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <9.3599> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 7.
+Requested font "pplb8t" at 9.3599pt
+Requested font "pplri8t" at 10.95pt
+Requested font "pplri8t" at 7.11742pt
+Requested font "pcrr8t" at 10.95pt
+ [2]
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no – in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no œ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no – in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+) [3]
+(BRB_models_and_units.tex [4] (arcs.pdf_tex
+File: arcs.pdf Graphic file (type QTm)
+ <use  "arcs.pdf"  page1>
+Requested font "pplr8t" at 6.0pt
+Requested font "eurm5" at 5.0pt
+)
+Requested font "pplrc8t" at 10.95pt
+) [5]
+(BRB_general_principles.tex
+Requested font "pplr8c" at 10.95pt
+ [6]
+File: de_deviation.png Graphic file (type QTm)
+ <use  "de_deviation.png" > [7]
+File: gabarits_1.png Graphic file (type QTm)
+
+<use  "gabarits_1.png" >
+Overfull \hbox (47.72894pt too wide) in paragraph at lines 83--84
+[][] 
+ []
+
+[8]
+File: gabarits_2.png Graphic file (type QTm)
+ <use  "gabarits_2.png" >) [9] (BRB_battlefield_logistics.tex [10]) [11]
+(BRB_characteristics.tex
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+ [12] [13]) [14] (BRB_setting_up_a_game.tex
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+ [15]
+[16] [17]) [18] (BRB_pre_game_sequence.tex [19] [20]
+File: deploiement.png Graphic file (type QTm)
+ <use  "deploiement.png" >
+Requested font "pplri8c" at 10.95pt
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+
+[21]) [22] (BRB_deployment.tex
+Missing character: There is no œ in font pplb8t!
+ [23]) [24] (BRB_movement_phase.tex [25] [26]
+[27] (charge.pdf_tex
+File: charge.pdf Graphic file (type QTm)
+ <use  "charge.pdf"  page1>
+Requested font "pplr8t" at 10.0pt
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 56.
+Requested font "eurm7" at 7.0pt
+) (charge_alignement.pdf_tex
+File: charge_alignement.pdf Graphic file (type QTm)
+
+<use  "charge_alignement.pdf"  page1>
+File: charge_alignement.pdf Graphic file (type QTm)
+ <use  "charge_alignement.pdf"  page2>
+File: charge_alignement.pdf Graphic file (type QTm)
+
+<use  "charge_alignement.pdf"  page3>
+File: charge_alignement.pdf Graphic file (type QTm)
+ <use  "charge_alignement.pdf"  page4>
+File: charge_alignement.pdf Graphic file (type QTm)
+
+<use  "charge_alignement.pdf"  page5>
+File: charge_alignement.pdf Graphic file (type QTm)
+ <use  "charge_alignement.pdf"  page6>
+File: charge_alignement.pdf Graphic file (type QTm)
+
+<use  "charge_alignement.pdf"  page7>
+File: charge_alignement.pdf Graphic file (type QTm)
+ <use  "charge_alignement.pdf"  page8>)
+File: charges_multiples.png Graphic file (type QTm)
+
+<use  "charges_multiples.png" >
+Underfull \hbox (badness 10000) in paragraph at lines 139--139
+
+ []
+
+[28] [29] [30] [31] [32]
+File: roue.png Graphic file (type QTm)
+ <use  "roue.png" >) [33] (BRB_magic_phase.tex [34]
+[35] [36] [37] [38] [39] [40] [41]) [42] (BRB_shooting_phase.tex [43] [44]
+(couvert_leger.pdf_tex
+File: couvert_leger.pdf Graphic file (type QTm)
+ <use  "couvert_leger.pdf"  page1>
+File: couvert_leger.pdf Graphic file (type QTm)
+
+<use  "couvert_leger.pdf"  page2>
+File: couvert_leger.pdf Graphic file (type QTm)
+ <use  "couvert_leger.pdf"  page3>
+File: couvert_leger.pdf Graphic file (type QTm)
+
+<use  "couvert_leger.pdf"  page4>
+File: couvert_leger.pdf Graphic file (type QTm)
+ <use  "couvert_leger.pdf"  page5>)
+File: couvert_lourd.png Graphic file (type QTm)
+
+<use  "couvert_lourd.png" > [45] [46]
+File: couvert_leger_et_lourd.png Graphic file (type QTm)
+ <use  "couvert_leger_et_lourd.png" >
+File: Lignes_de_vue.png Graphic file (type QTm)
+
+<use  "Lignes_de_vue.png" >) [47] [48] (BRB_combat_phase.tex [49] [50]
+(combat_vides.pdf_tex
+File: combat_vides.pdf Graphic file (type QTm)
+ <use  "combat_vides.pdf"  page1>) [51]
+Missing character: There is no ’ in font pplr8t!
+
+(attribution.pdf_tex
+File: attribution.pdf Graphic file (type QTm)
+ <use  "attribution.pdf"  page1>
+File: attribution.pdf Graphic file (type QTm)
+
+<use  "attribution.pdf"  page2>
+File: attribution.pdf Graphic file (type QTm)
+ <use  "attribution.pdf"  page3>) [52] [53]
+Missing character: There is no œ in font pplr8t!
+
+[54] [55]
+Missing character: There is no œ in font pplr8t!
+ [56] [57] (poursuite.pdf_tex
+File: poursuite.pdf Graphic file (type QTm)
+ <use  "poursuite.pdf"  page1>)
+Overfull \hbox (8.31274pt too wide) in paragraph at lines 279--280
+[]\T1/ppl/m/n/10.95 Quand une unité fait une \T1/ppl/m/it/10.95 Re-for-ma-tion 
+de Com-bat\T1/ppl/m/n/10.95 , retirez-la du champ de ba-taille, puis replacez-
+ []
+
+[58] [59]) [60] (BRB_attacks_and_damage.tex [61]
+Missing character: There is no ’ in font pplr8t!
+ [62] [63] [64]) [65]
+(BRB_troop_types.tex
+Overfull \hbox (0.59277pt too wide) in paragraph at lines 21--22
+[][]\T1/ppl/b/n/10.95 Monstre Monté[] \T1/ppl/m/n/10.95 : []\T1/ppl/m/it/10.95 
+Grande Cible\T1/ppl/m/n/10.95 ,[] \T1/ppl/m/it/10.95 Pié-ti-ne-ment (1D6)\T1/pp
+l/m/n/10.95 , []\T1/ppl/m/it/10.95 Pro-fil de Monstre Monté\T1/ppl/m/n/10.95 , 
+\T1/ppl/m/it/10.95 Rangs de Monstre\T1/ppl/m/n/10.95 ,
+ []
+
+[66] [67] [68] [69]
+Overfull \hbox (13.68018pt too wide) in paragraph at lines 110--137
+ [][] 
+ []
+
+) [70] (BRB_mundane_equipment.tex
+Overfull \hbox (17.92635pt too wide) in paragraph at lines 13--27
+[][] 
+ []
+
+[71]
+Underfull \hbox (badness 3471) in paragraph at lines 44--45
+[]|\T1/ppl/m/it/10.95 Perforant (1)\T1/ppl/m/n/10.95 , \T1/ppl/m/it/10.95 Tirs 
+Mul-tiples (2)\T1/ppl/m/n/10.95 , \T1/ppl/m/it/10.95 Tir Ra-pide\T1/ppl/m/n/10.
+95 ,
+ []
+
+
+Overfull \hbox (11.50656pt too wide) in paragraph at lines 35--48
+ [][] 
+ []
+
+[72]
+Requested font "pplr8t" at 7.11742pt
+
+Overfull \hbox (3.5589pt too wide) in paragraph at lines 56--66
+\T1/ppl/m/n/10.95 rangs ou les co-lonnes, pro-vo-quant ainsi des dom-mages sup-
+plé-men-taires. []Dé-ter-mi-nez le nombre
+ []
+
+[73]
+Underfull \hbox (badness 3977) in paragraph at lines 83--84
+[]|\T1/ppl/m/n/10.95 Conditions pour
+ []
+
+[74] [75]) [76] [77] (BRB_characters.tex [78]
+Missing character: There is no œ in font pplr8t!
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 42.
+Requested font "pplbi8t" at 10.95pt
+ [79] [80]
+(au_premier_rang.pdf_tex
+File: au_premier_rang.pdf Graphic file (type QTm)
+ <use  "au_premier_rang.pdf"  page1>
+File: au_premier_rang.pdf Graphic file (type QTm)
+
+<use  "au_premier_rang.pdf"  page2>
+File: au_premier_rang.pdf Graphic file (type QTm)
+ <use  "au_premier_rang.pdf"  page3>
+File: au_premier_rang.pdf Graphic file (type QTm)
+
+<use  "au_premier_rang.pdf"  page4>
+File: au_premier_rang.pdf Graphic file (type QTm)
+ <use  "au_premier_rang.pdf"  page5>
+File: au_premier_rang.pdf Graphic file (type QTm)
+
+<use  "au_premier_rang.pdf"  page6>
+File: au_premier_rang.pdf Graphic file (type QTm)
+ <use  "au_premier_rang.pdf"  page7>)
+[81]
+Missing character: There is no ’ in font pplr8t!
+ [82]
+Missing character: There is no ’ in font pplri8t!
+ [83]) [84] (BRB_command_groups.tex [85]
+Overfull \hbox (3.83618pt too wide) in paragraph at lines 44--45
+[][]\T1/ppl/m/n/10.95 Certaines uni-tés ont la pos-si-bi-lité de sé-lec-tion-ne
+r un \T1/ppl/m/it/10.95 Porte-étendard Vé-té-ran\T1/ppl/m/n/10.95 . Un \T1/ppl/
+m/it/10.95 Porte-étendard
+ []
+
+) [86] (BRB_terrain.tex [87] [88] [89]
+Missing character: There is no ’ in font pplr8t!
+ [90]) [91]
+(BRB_scoring_and_victory_conditions.tex
+Overfull \hbox (4.65814pt too wide) in paragraph at lines 31--32
+[]\T1/ppl/m/it/10.95 5\T1/ppl/m/n/10.95 . []\T1/ppl/b/n/10.95 Cap-tu-rez les ét
+en-dards\T1/ppl/m/n/10.95 . Le joueur qui pos-sède le plus grand nombre de port
+e-étendards
+ []
+
+[92] [93]) [94] (BRB_special_rules.tex
+Missing character: There is no ’ in font pplr8t!
+ [95]
+Overfull \hbox (2.19635pt too wide) in paragraph at lines 57--58
+\T1/ppl/m/n/10.95 contre des at-taques au corps à corps pro-ve-nant d'une fi-gu
+-rine ayant cette règle spé-ciale, doivent
+ []
+
+[96]
+Overfull \hbox (3.153pt too wide) in paragraph at lines 77--78
+\T1/ppl/m/n/10.95 règle spé-ciale n'ont dans un cas or-di-naire au-cun ef-fet. 
+Tou-te-fois, elles in-ter-agissent avec d'autres
+ []
+
+[97] [98] [99] [100] [101] [102]
+Requested font "pplb8t" at 8.0pt
+Requested font "pplb8t" at 6.0pt
+ [103] [104]
+Missing character: There is no – in font pplr8t!
+ [105] [106] [107]
+File: tirailleurs.png Graphic file (type QTm)
+
+<use  "tirailleurs.png" > [108] [109] [110]
+Overfull \hbox (3.31349pt too wide) in paragraph at lines 392--394
+\T1/ppl/m/n/10.95 Les ef-fets don-nant des at-taques spé-ciales (telles que les
+ \T1/ppl/m/it/10.95 Pié-ti-ne-ments\T1/ppl/m/n/10.95 , les \T1/ppl/m/it/10.95 A
+t-taques de broyage\T1/ppl/m/n/10.95 ,
+ []
+
+[111]
+Overfull \hbox (8.76187pt too wide) in paragraph at lines 417--418
+[]\T1/ppl/m/n/10.95 Quelquefois, une fi-gu-rine pos-sède plu-sieurs ins-tances 
+de la même règle spé-ciale, par exemple
+ []
+
+) [112] (BRB_magical_items.tex [113] [114] [115] [116] [117] [118] [119]
+[120]) [121] (BRB_summaries.tex
+Requested font "cmr9" at 9.0pt
+Requested font "cmmi9" at 9.0pt
+Requested font "cmsy9" at 9.0pt
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 14.
+Requested font "eurm9" at 9.0pt
+
+Underfull \hbox (badness 4048) in paragraph at lines 28--29
+[]|\T1/ppl/m/n/9 Montrez-vous vos listes d'ar-
+ []
+
+
+Underfull \hbox (badness 2635) in paragraph at lines 31--32
+[]|\T1/ppl/m/n/9 Choisissez les ob-jec-tifs se-con-
+ []
+
+
+Underfull \hbox (badness 3514) in paragraph at lines 32--33
+[]|\T1/ppl/m/n/9 Déterminez les zones de dé-
+ []
+
+
+Underfull \hbox (badness 7238) in paragraph at lines 43--44
+[]|\T1/ppl/m/n/9 Déployez des uni-tés cha-cun
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+[]|\T1/ppl/m/n/9 Déterminez qui va es-sayer
+ []
+
+Requested font "pplri8t" at 9.0pt
+
+Underfull \hbox (badness 7944) in paragraph at lines 47--48
+[]|\T1/ppl/m/n/9 Déplacez les uni-tés d'\T1/ppl/m/it/9 Avant-
+ []
+
+
+Overfull \hbox (2.21948pt too wide) in paragraph at lines 59--78
+[] 
+ []
+
+Requested font "pplr8c" at 9.0pt
+
+Overfull \hbox (14.51768pt too wide) in paragraph at lines 81--92
+[][] 
+ []
+
+[122]
+Underfull \hbox (badness 1314) in paragraph at lines 139--140
+[]|\T1/ppl/m/n/9 Le lan-ceur et tout \T1/ppl/m/it/9 Sor-cier \T1/ppl/m/n/9 ami 
+su-bissent une
+ []
+
+
+Overfull \hbox (17.99487pt too wide) in paragraph at lines 134--143
+[][] 
+ []
+
+
+Overfull \hbox (17.13809pt too wide) in paragraph at lines 148--156
+[][] 
+ []
+
+
+Overfull \hbox (17.13809pt too wide) in paragraph at lines 159--178
+[][] 
+ []
+
+
+Overfull \hbox (2.0805pt too wide) in paragraph at lines 98--180
+[][]  [] 
+ []
+
+[123]
+Overfull \hbox (12.06528pt too wide) in paragraph at lines 189--200
+[][] 
+ []
+
+
+Overfull \hbox (4.81422pt too wide) in paragraph at lines 205--214
+[][] 
+ []
+
+
+Overfull \hbox (16.03322pt too wide) in paragraph at lines 222--237
+[][] 
+ []
+
+
+Overfull \hbox (36.87204pt too wide) in paragraph at lines 254--262
+[][] 
+ []
+
+File: Lignes_de_vue2.png Graphic file (type QTm)
+<use  "Lignes_de_vue2.png" > [124] [125]
+Overfull \hbox (20.03214pt too wide) in paragraph at lines 279--286
+[][] 
+ []
+
+
+Underfull \hbox (badness 1264) in paragraph at lines 294--295
+[]|\T1/ppl/m/n/9 +1 (+2 de-puis une col-
+ []
+
+
+Overfull \hbox (15.04735pt too wide) in paragraph at lines 290--302
+[][] 
+ []
+
+
+Overfull \hbox (13.48833pt too wide) in paragraph at lines 310--328
+[][] 
+ []
+
+
+Overfull \hbox (3.30954pt too wide) in paragraph at lines 339--340
+[]|\T1/ppl/m/n/9 10| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 341--341
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 341--341
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 341--341
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 341--341
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 341--341
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 341--341
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 341--341
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 341--341
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 341--341
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 341--342
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 342--342
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 342--342
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 342--342
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 342--342
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 342--342
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 342--342
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 342--342
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 342--342
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 342--342
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 342--343
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 343--343
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 343--343
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 343--343
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 343--343
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 343--343
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 343--343
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 343--343
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 343--343
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 343--343
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 343--344
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 344--344
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 344--344
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 344--344
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 344--344
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 344--344
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 344--344
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 344--344
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 344--344
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 344--344
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 344--345
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 345--345
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 345--345
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 345--345
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 345--345
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 345--345
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 345--345
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 345--345
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 345--345
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 345--345
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 345--346
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 346--346
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 346--346
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 346--346
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 346--346
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 346--346
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 346--346
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 346--346
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 346--346
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 346--346
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 346--347
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 347--347
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 347--347
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 347--347
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 347--347
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 347--347
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 347--347
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 347--347
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 347--347
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 347--347
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 347--348
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 348--348
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 348--348
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 348--348
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 348--348
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 348--348
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 348--348
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 348--348
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 348--348
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 348--348
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 348--349
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 349--349
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 349--349
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 349--349
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 349--349
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 349--349
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 349--349
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 349--349
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 349--349
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 349--349
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 349--350
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 350--350
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 350--350
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 350--350
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 350--350
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 350--350
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 350--350
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 350--350
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 350--350
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 350--350
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 350--351
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (3.30954pt too wide) in paragraph at lines 361--362
+[]|\T1/ppl/m/n/9 10| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 363--363
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 363--363
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 363--363
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 363--363
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 363--363
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 363--363
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 363--363
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 363--363
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 363--363
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 363--364
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 364--364
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 364--364
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 364--364
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 364--364
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 364--364
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 364--364
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 364--364
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 364--364
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 364--364
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 364--365
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 365--365
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 365--365
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 365--365
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 365--365
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 365--365
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 365--365
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 365--365
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 365--365
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 365--365
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 365--366
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 366--366
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 366--366
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 366--366
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 366--366
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 366--366
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 366--366
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 366--366
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 366--366
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 366--366
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 366--367
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 367--367
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 367--367
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 367--367
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 367--367
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 367--367
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 367--367
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 367--367
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 367--367
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 367--367
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 367--368
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 368--368
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 368--368
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 368--368
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 368--368
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 368--368
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 368--368
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 368--368
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 368--368
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 368--368
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 368--369
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 369--369
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 369--369
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 369--369
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 369--369
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 369--369
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 369--369
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 369--369
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 369--369
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 369--369
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 369--370
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 370--370
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 370--370
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 370--370
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 370--370
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 370--370
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 370--370
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 370--370
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 370--370
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 370--370
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 370--371
+[]|\T1/ppl/m/n/9 2+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 371--371
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 371--371
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 371--371
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 371--371
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 371--371
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 371--371
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 371--371
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 371--371
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 371--371
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 371--372
+[]|\T1/ppl/m/n/9 3+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 372--372
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 372--372
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 372--372
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 372--372
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 372--372
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 372--372
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 372--372
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 372--372
+[]|\T1/ppl/m/n/9 6+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 372--372
+[]|\T1/ppl/m/n/9 5+| 
+ []
+
+
+Overfull \hbox (4.26347pt too wide) in paragraph at lines 372--373
+[]|\T1/ppl/m/n/9 4+| 
+ []
+
+
+Overfull \hbox (2.0805pt too wide) in paragraph at lines 333--376
+[][]  [] 
+ []
+
+[126]
+File: gabarits_1.png Graphic file (type QTm)
+ <use  "gabarits_1.png" >
+File: gabarits_2.png Graphic file (type QTm)
+ <use  "gabarits_2.png" >)
+Overfull \hbox (41.03804pt too wide) in paragraph at lines 421--152
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 421--152
+
+ []
+
+[127] [128] (BRB_change_log.tex)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 156.
+ [129]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
+ (the-ninth-age_Rules_0-99-5-2_FR0.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 156.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 156.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 156.
+ ) 
+Here is how much of TeX's memory you used:
+ 14316 strings out of 428755
+ 209668 string characters out of 3163195
+ 356800 words of memory out of 3000000
+ 17373 multiletter control sequences out of 15000+200000
+ 43328 words of font info for 80 fonts, out of 3000000 for 9000
+ 1096 hyphenation exceptions out of 8191
+ 39i,17n,48p,1796b,611s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on the-ninth-age_Rules_0-99-5-2_FR0.pdf (131 pages).
