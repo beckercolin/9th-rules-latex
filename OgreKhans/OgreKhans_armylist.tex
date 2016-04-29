@@ -1,5 +1,5 @@
 
-%%% v0.99.2
+%%% v0.99.5
 
 \armylist
 
@@ -9,20 +9,19 @@
 	name={\greatkhan},
 	cost={180},
 	profile={ < 6 6 4 5 5 5 4 5 9},
-	type=\monstrousinfantry ,
+	type=\monstrousinfantry{},
 	basesize=40x40,
 	unitsize=1,
-	commontype=\ogrecommonrules ,
+	commontype=\ogrecommonrules{},
 	commonspecialrules={\sonsoftheavalanche},
 	specialrules={\fear},
 	armour={\ha},
 	options={
-		\bignamechoice{}=\unlimited,
+		\bignamechoice{}=\unlimited{},
 		\magicalitemsallowance{}=\upto{}<100,
 		\shootingweapononechoice{
-			\ogrepistol{}=6,
-			\braceofogrepistols{}=8,
-			\ogrecrossbow{}=8,
+			\braceofogrepistols{}=5,
+			\ogrecrossbow{}=5,
 		},
 		\combatweapononechoice{
 			\ironfist{}=15,
@@ -33,22 +32,22 @@
 
 \showunit{
 	name={\greatshaman},
-	cost={245},
+	cost={235},
 	profile={ < 6 3 3 4 5 5 3 3 8},
-	type= \monstrousinfantry ,
+	type=\monstrousinfantry{},
 	basesize=40x40,
 	unitsize=1,
-	commontype=\ogrecommonrules ,
+	commontype=\ogrecommonrules{},
 	commonspecialrules={\sonsoftheavalanche},
 	magiclevel=3,
-	magicpaths={\alchemy, \death, \heavens, \wilderness, \fire, \butchery},
+	magicpaths={\alchemy, \heavens, \fire, \death, \wilderness, \butchery},
 	options={
 		\bignamechoice{}=\unlimited,
 		\magiclevel{4}=30,
 		\magicalitemsallowance{}=\upto{}<100,
 		\combatweapononechoice{
-			\pw{}=5,
-			\gw{}=15,
+			\ironfist{}=8,
+			\gw{}=12,
 		},
 		\maytakegreaterfireblessing{}\refsymbol{}=35,
 		\refsymbol{} \onlyifpathoffireoralchemyischosen{}=,
@@ -58,54 +57,54 @@
 	},
 }
 
+
+
+
+
 \heroestitle
 
-
-\showunit {
+\showunit{
 	name={\khan},
 	cost=105,
 	profile={ < 6 5 4 5 5 4 3 4 8},
-	type=\monstrousinfantry ,
+	type=\monstrousinfantry{},
 	basesize=40x40,
 	unitsize=1,
-	commontype=\ogrecommonrules ,
+	commontype=\ogrecommonrules{},
 	commonspecialrules={\sonsoftheavalanche},
 	armour={\ha},
 	options={
 		\bsboption{}=25,
-		\hspace*{0.7cm}- \maytakescraplingloukout{}=5,
-		\bignamechoice{}=\unlimited,
+		\bignamechoice{}=\unlimited{},
 		\magicalitemsallowance{}=\upto{}<50,
 		\shootingweapononechoice{
-			\ogrepistol{}=6,
-			\braceofogrepistols{}=8,
-			\ogrecrossbow{}=8,
+			\braceofogrepistols{}=5,
+			\ogrecrossbow{}=5,
 		},
 		\combatweapononechoice{
-			\ironfist{}=15,
 			\gw{}=15,
+			\ironfist{}=15,
 		},
 	},
 }
-
 
 \showunit{
 	name={\shaman},
 	cost={105},
 	profile={ < 6 3 3 4 4 4 2 3 7},
-	type= \monstrousinfantry ,
+	type= \monstrousinfantry{},
 	basesize=40x40,
 	unitsize=1,
-	commontype=\ogrecommonrules ,
+	commontype=\ogrecommonrules{},
 	commonspecialrules={\sonsoftheavalanche},
 	magiclevel=1,
-	magicpaths={\wilderness, \fire, \butchery},
+	magicpaths={\fire, \wilderness, \butchery},
 	options={
-		\bignamechoice{}=\unlimited,
+		\bignamechoice{}=\unlimited{},
 		\magiclevel{2}=25,
 		\magicalitemsallowance{}=\upto{}<50,
 		\weapononechoice{
-			\pw{}=3,
+			\ironfist{}=4,
 			\gw{}=6,
 		},
 		\maytakefireblessing{}\refsymbol{}=25,
@@ -120,27 +119,27 @@
 	name={\mammothhunter},
 	cost=120,
 	profile={ < 7 5 5 5 5 4 4 4 9},
-	type=\monstrousinfantry ,
+	type=\monstrousinfantry{},
 	basesize=50x50,
 	unitsize=1,
-	commontype=\ogrecommonrules ,
+	commontype=\ogrecommonrules{},
 	commonspecialrules={\sonsoftheavalanche},
 	specialrules={\notaleader, \swiftstride, \loner, \leaderofthepack},
 	armour={\la},
 	weapons={\huntingspear},
 	options={
-		\bignamechoice{}=\unlimited,
+		\bignamechoice{}=\unlimited{},
 		\magicalitemsallowance{}=\upto{}<50,
 		\mayupgradeto{} \scout{} \onfootonly{}=10,
 		\mayreplacehuntingspearwithogrecrossbow{}.=\free,
 		\weapononechoice{
 			\pw{}=5,
-			\ironfist{}=15,
-			\lance{}=15,
+			\lance{}=10,
 			\gw{}=15,
+			\ironfist{}=15,
 		},
 	},
-	mounts={\tusker{}=60, \rockaurochs{} (\oneofakind{})\refsymbol{}=250},
+	mounts={\tusker{}=40,\rockaurochs{}\refsymbol{}=215},
 	unitrules={
 		\unitrule{\loner}{\lonerrule}
 		\unitrule{\leaderofthepack}{\leaderofthepackrule}
@@ -150,6 +149,28 @@
 	}
 }
 
+\mountstitle
+
+\showunit{
+	name={\tusker},
+	profile={< 8 3 - 5 5 3 2 4 5},
+	type=\monstrousbeast{},
+	basesize=50x100,
+	specialrules={\fear, \impacthits{1D3}},
+	armour={\mountsprotection{5}},
+}
+
+\showunit{
+	notinQRS=yes,
+	QRSname={\rockaurochs},
+	name={\rockaurochs{} (\oneofakind{})},
+	profile={ < 7 3 - 7 6 6 2 5 5,},
+	type=\monster{},
+	basesize=100x150,
+	armour={\innatedefence{4}},
+	specialrules={\stoneskin, \frenzy, \impacthits{3D3}, \stubborn, \swiftstride},
+	unitrules={\unitrule{\stoneskin}{\stoneskinrule}},
+}
 
 \coreunitstitle
 
@@ -157,12 +178,12 @@
 	name={\tribesmen},
 	cost=75,
 	profile={ < 6 3 3 4 4 3 2 3 7},
-	type=\monstrousinfantry ,
+	type=\monstrousinfantry{},
 	basesize=40x40,
 	unitsize=3,
 	maxmodels=14,
 	costpermodel=27,
-	commontype=\ogrecommonrules ,
+	commontype=\ogrecommonrules{},
 	commonspecialrules={\sonsoftheavalanche},
 	weapons={\pw},
 	armour={\la},
@@ -170,40 +191,40 @@
 		\maytakeha{}=\permodel{}<3,
 		\maytakeironfist{}=\permodel{}<6,
 	},
-	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir, banneroption=\maytakescraplingloukout{}<5}
+	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
 }
 
 \showunit{
 	name={\bruisers},
 	cost=100,
 	profile={ < 6 3 3 4 4 3 2 3 8},
-	type=\monstrousinfantry ,
+	type=\monstrousinfantry{},
 	basesize=40x40,
 	unitsize=3,
 	maxmodels=12,
 	costpermodel=44,
-	commontype=\ogrecommonrules ,
+	commontype=\ogrecommonrules{},
 	commonspecialrules={\sonsoftheavalanche},
 	weapons={\gw},
 	armour={\ha},
-	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir, banneroption=\maytakescraplingloukout{}<5}
+	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
 }
 
 \showunit{
 	name={\scraplings},
 	cost=40,
 	profile={< 4 2 3 3 3 1 3 1 6},
-	type= \infantry ,
+	type= \infantry{},
 	basesize=20x20,
-	unitsize=10,
-	maxmodels=60,
+	unitsize=15,
+	maxmodels=65,
 	costpermodel=3,
 	specialrules={\insignificant},
 	weapons={\throwingweapons},
 	options={
 		\maytakela{}=\permodel{}<1,
 		\mayreplacethrowingweaponswith{
-			\shortbow{}=\free,
+			\shortbow{}=\free{},
 			\shield{}=\permodel{}<1,
 			\spear{}=\permodel{}<1,
 		}
@@ -213,9 +234,8 @@
 
 \showunit{
 	name={\scraplingforeman},
-	profile={
-		< 4 3 4 3 3 2 4 3 7},
-	type=\infantry ,
+	profile={< 4 3 4 3 3 2 4 3 7},
+	type=\infantry{},
 	basesize=20x20,
 	unitsize=SPECIAL-\foremannote{},
 	specialrules={\insignificant, \backtowork},
@@ -223,8 +243,8 @@
 	armour={\la},
 	options={
 		\weapononechoice{
-			\halberd{}=3,
 			\gw{}=3,
+			\halberd{}=3,
 		}
 	},
 	unitrules={
@@ -238,68 +258,68 @@
 	name={\bombardiers},
 	cost=120,
 	profile={ < 6 3 3 4 4 3 2 3 7},
-	type=\monstrousinfantry ,
+	type=\monstrousinfantry{},
 	basesize=40x40,
 	unitsize=3,
-	maxmodels=10,
+	maxmodels=8,
 	costpermodel=40,
-	commontype=\ogrecommonrules ,
+	commontype=\ogrecommonrules{},
 	commonspecialrules={\sonsoftheavalanche},
 	armour={\la},
 	weapons={\handcannon},
 	unitequipment={
 		\equipmentdef{\handcannon}{\handcannonrule}
 	},
-	commandgroup={champion=10, musician=10, banner=10, bannerallowance=25, banneroption=\maytakescraplingloukout{}<5}
+	commandgroup={champion=10, musician=10, banner=10, bannerallowance=25}
 }
 
 \showunit{
 	name={\mercenaryveterans},
 	cost=135,
 	profile={ < 6 4 4 5 4 3 3 4 8},
-	type=\monstrousinfantry ,
+	type=\monstrousinfantry{},
 	basesize=40x40,
 	unitsize=3,
 	maxmodels=8,
 	costpermodel=55,
-	commontype=\ogrecommonrules ,
+	commontype=\ogrecommonrules{},
 	commonspecialrules={\sonsoftheavalanche},
 	specialrules={\battlescarred},
 	armour={\ha},
 	options={
-		\weaponschoice{
+		\weapononechoice{
 			\pw{}=\permodel{}<3,
-			\ogrepistol{}=\permodel{}<5,
-			\ironfist{}=\permodel{}<7,
-			\braceofogrepistols{}=\permodel{}<7,
+			\braceofogrepistols{}=\permodel{}<5,
 			\gw{}=\permodel{}<7,
+			\halberd{}=\permodel{}<7,
+			\ironfist{}=\permodel{}<10,			
 		}
 	},
 	unitrules={
 		\unitrule{\battlescarred}{\battlescarredrule}
 	},
-	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50, banneroption=\maytakescraplingloukout{}<5}
+	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50}
 }
 
 \showunit{
 	name={\tuskercavalry},
 	cost=130,
 	profile={
-		\rider < 6 3 3 4 4 3 2 3 8,
-		\tusker < 8 3 - 5 5 3 2 4 5,
+		\rider{}< 6 3 3 4 4 3 2 3 8,
+		\tusker{}< 8 3 - 5 5 3 2 4 5,
 	},
-	type=\monstrouscavalry ,
-	basesize=40x40,
+	type=\monstrouscavalry{},
+	basesize=50x100,
 	unitsize=2,
 	maxmodels=4,
 	costpermodel=65,
-	armour={\la, \mountsprotection{5}},
+	armour={\la{},\mountsprotection{5}},
 	specialrules={\fear, \impacthits{1D3}},
 	options={
-		\maytakeha{}=\permodel{}<10,
+		\maytakeha{}=\permodel{}<7,
 		\weapononechoice{
-			\gw{}=\permodel{}<10,
-			\ironfist{} \onlywithlightarmour{}=\permodel{}<15,
+			\gw{}=\permodel{}<8,
+			\ironfist{} \onlywithlightarmour{}=\permodel{}<12,
 		},
 	},
 	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50}
@@ -309,7 +329,7 @@
 	name={\sabretoothtigers},
 	cost={40},
 	profile={< 8 4 - 4 4 2 4 3 5},
-	type= \warbeast ,
+	type=\warbeast{},
 	basesize=25x50,
 	unitsize=1,
 	maxmodels=15,
@@ -321,7 +341,7 @@
 	name={\kineater},
 	cost=90,
 	profile={< 6 3 - 5 5 4 3 4 7},
-	type= \monstrousinfantry ,
+	type=\monstrousinfantry{},
 	basesize=40x40,
 	unitsize=1,
 	specialrules={\fear{},\ambush{},\hatred{},\unbreakable{},\regeneration{5}},
@@ -330,8 +350,8 @@
 \showunit{
 	name={\yetis},
 	cost=80,
-	profile={ < 7 3 - 5 4 3 3 3 8},
-	type=\monstrousinfantry ,
+	profile={< 7 3 - 5 4 3 3 3 8},
+	type=\monstrousinfantry{},
 	basesize=40x40,
 	unitsize=2,
 	maxmodels=5,
@@ -349,13 +369,13 @@
 	name={\scraplingtrappers},
 	cost=40,
 	profile={ < 4 2 4 3 3 1 3 1 6},
-	type=\infantry ,
+	type=\infantry{},
 	basesize=20x20,
 	unitsize=5,
 	maxmodels=10,
 	costpermodel=6,
 	weapons={\throwingweapons},
-	specialrules={\skirmishers, \scouts, \insignificant, \itsatrap},
+	specialrules={\vanguard, \skirmishers, \scouts, \insignificant, \itsatrap},
 	commandgroup={champion=10},
 	unitrules={
 		\unitrule{\itsatrap}{\itsatraprule}
@@ -369,47 +389,47 @@
 	name={\thundercannon},
 	cost=150,
 	profile={
-		\chariot < -  - - 5 5 5 - - -,
-       		\bombardiercrew{} (1) < -  3 3 4 - - 2 3 7,
-		\scraplingcrew{} (1) < -  2 3 3 - - 3 1 6,
-		\woollyrhino{} (1) < 6 3 - 5 - - 2 3 5
+		\chariot{}< -  - - 5 5 5 - - -,
+       		\bombardiercrew{} (1)< -  3 3 4 - - 2 3 7,
+		\scraplingcrew{} (1)< -  2 3 3 - - 3 1 6,
+		\woollyrhino{} (1)< 6 3 - 5 - - 2 3 5
 	},
-	type=\chariot ,
+	type=\chariot{},
 	basesize=50x100,
 	unitsize=1,
-	armour={\innatedefence{5}, \mountsprotection{6}},
-	unitequipment={
-		\equipmentdef{\thundercannon}{\thundercannonrule}
-	}
+	armour={\innatedefence{5},\mountsprotection{6}},
+	commontype=\ogrecommonrules{},
+	commonspecialrules={\sonsoftheavalanche},
+	weapons={\thundercannon{} \only{\bombardiercrew}},	
+	unitequipment={\equipmentdef{\thundercannon{}}{\thundercannonrule{}}},
 }
 
 \showunit{
 	name={\scratapult},
 	cost=130,
 	profile={
-		\chariot < -  - - 5 4 5 - - -,
-		\scraplingcrew{} (7) < -  2 3 3 - - 3 1 6,
-		\woollyrhino{} (1) < 6 3 - 5 - - 2 3 5
+		\chariot{}< -  - - 5 4 5 - - -,
+		\scraplingcrew{} (7)< -  2 3 3 - - 3 1 6,
+		\woollyrhino{} (1)< 6 3 - 5 - - 2 3 5
 	},
-	type=\chariot ,
+	type=\chariot{},
 	basesize=50x100,
 	unitsize=1,
-	armour={\innatedefence{5}, \mountsprotection{6}},
+	armour={\innatedefence{5},\mountsprotection{6}},
+	weapons={\scratapult{} \only{\chariot}},
 	specialrules={\insignificant},
-	unitequipment={
-		\equipmentdef{\scratapult}{\scratapultrule}
-	},
+	unitequipment={\equipmentdef{\scratapult}{\scratapultrule}},
 }
 
 \showunit{
 	name={\rockaurochs},
 	QRSname={\rockaurochs{}$^{1}$},
-	cost=250,
+	cost=240,
 	profile={
-        \aurochs < 7 3 - 7 6 6 2 5 5,
-        \rider{} (1) < - 3 4 4 - - 3 3 8,
+        		\aurochs{}< 7 3 - 7 6 6 2 5 5,
+        		\rider{} (1)< - 3 4 4 - - 3 3 8,
 	},
-	type=\riddenmonster ,
+	type=\riddenmonster{},
 	basesize=100x150,
 	unitsize=1,
 	weapons={\ogrecrossbow},
@@ -417,7 +437,7 @@
 	specialrules={\impacthits{3D3},\frenzy{} \only{\rockaurochs{}},\stubborn{},\swiftstride{},\stoneskin{}},
 	options={
 		\riderchoice{
-			\huntingspear{}=\free,
+			\huntingspear{}=\free{},
 			\lance{}=5,
 		},
 	},
@@ -426,21 +446,20 @@
 
 \showunit{
 	name={\frostmammoth},
-	cost=200,
+	cost=190,
 	profile={
-        \mammoth < 6 3 - 6 6 6 2 4 5,
-        \rider{} (2) < - 3 4 4 - - 3 3 8,
+        		\mammoth{}< 6 3 - 6 6 6 2 4 5,
+        		\rider{} (2)< - 3 4 4 - - 3 3 8,
 	},
-	type=\riddenmonster ,
+	type=\riddenmonster{},
 	basesize=100x150,
 	unitsize=1,
-	weapons={\ogrecrossbow{} (\rider{} 1), \huntingspear{} (\rider{} 2)},
+	weapons={\ogrecrossbow{}},
 	armour={\innatedefence{4}},
 	specialrules={\impacthits{1D3}, \freezingaura},
 	options={
 		\anyriderchoice{
-			\huntingspear{}=\free,
-			\lance{}=\free,
+			\huntingspear{}=\free{},
 		}
 	},
 	unitrules={\unitrule{\freezingaura}{\freezingaurarule}},
@@ -450,7 +469,7 @@
 	name={\slavegiant},
 	cost=150,
 	profile={< 6 3 - 6 5 6 3 \starsymbol{} 8,},
-	type=\monster,
+	type=\monster{},
 	basesize=50x75,
 	unitsize=1,
 	armour={\ha},
@@ -471,29 +490,3 @@
 	},
 }
 
-
-\mountstitle
-
-\mountssectionannouncement
-
-\showunit{
-	name={\tusker},
-	profile={
-        		 < 8 3 - 5 5 3 2 4 5,
-	},
-	type=\monstrousbeast ,
-	basesize=50x100,
-	specialrules={\fear, \impacthits{1D3}},
-	armour={\mountsprotection{5}},
-}
-
-\showunit{
-	notinQRS=yes,
-	name={\rockaurochs},
-	profile={ < 7 3 - 7 6 6 2 5 5,},
-	type=\monster ,
-	basesize=100x150,
-	armour={\innatedefence{4}},
-	specialrules={\stoneskin, \frenzy, \impacthits{3D3}, \stubborn, \swiftstride},
-	unitrules={\unitrule{\stoneskin}{\stoneskinrule}},
-}

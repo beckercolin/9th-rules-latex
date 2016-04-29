@@ -29,6 +29,36 @@
 	mounts={\shieldbearers{}=50,\warthrone{}=150},
 }
 
+\mountstitle
+
+\showunit{
+	name={\shieldbearers},
+	profile={ < 3 5 3 4 4 4 2 2 10},
+	type=\infantry{},
+	basesize=40x20,
+	commontype=\dwarvencommonrules{},
+	commonspecialrules={\relentless{},\sturdy{}},
+	armour={\mountsprotection{5}},
+}
+
+\showunit{
+	name={\warthrone},
+	profile={ < 3 5 3 4 4 6 2 4 10},	
+	type=\infantry{},
+	basesize=40x60,
+	commontype=\dwarvencommonrules{},
+	commonspecialrules={\relentless{},\sturdy{}},
+	specialrules={\hatred{},\majestyofhighkings{}}, 
+	armour={\mountsprotection{5}},
+	unitrules={
+		\unitrule{\majestyofhighkings{}}{\majestyofhighkingsrule{}}
+	},
+}	
+
+
+\clearpage\lordstitle
+
+
 \showunit{
 	name={\daemonseeker{}},
 	cost={130},
@@ -112,31 +142,6 @@
 
 
 
-\mountstitle
-
-\showunit{
-	name={\shieldbearers},
-	profile={ < 3 5 3 4 4 4 2 2 10},
-	type=\infantry{},
-	basesize=40x20,
-	commontype=\dwarvencommonrules{},
-	commonspecialrules={\relentless{},\sturdy{}},
-	armour={\mountsprotection{5}},
-}
-
-\showunit{
-	name={\warthrone},
-	profile={ < 3 5 3 4 4 6 2 4 10},	
-	type=\infantry{},
-	basesize=40x60,
-	commontype=\dwarvencommonrules{},
-	commonspecialrules={\relentless{},\sturdy{}},
-	specialrules={\hatred{},\majestyofhighkings{}}, 
-	armour={\mountsprotection{5}},
-	unitrules={
-		\unitrule{\majestyofhighkings{}}{\majestyofhighkingsrule{}}
-	},
-}	
 
 
 
@@ -423,7 +428,7 @@
 	armour={\ha{},\mountsprotection{6}},
 	additional={
 		\begin{center}\copterchoice{}\end{center}
-		\setlength{\columnseprule}{1pt}
+		\setlength{\columnseprule}{0.5pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}	
 		\begin{multicols}{3}
 		\raggedcolumns
@@ -521,7 +526,7 @@
 	},
 	additional={
 		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
-		\setlength{\columnseprule}{1pt}
+		\setlength{\columnseprule}{0.5pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}	
 		\begin{multicols}{3}
 		\raggedcolumns		
@@ -671,7 +676,7 @@
 	},
 	additional={
 		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
-		\setlength{\columnseprule}{1pt}
+		\setlength{\columnseprule}{0.5pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}	
 		\begin{multicols}{2}
 		\raggedcolumns		

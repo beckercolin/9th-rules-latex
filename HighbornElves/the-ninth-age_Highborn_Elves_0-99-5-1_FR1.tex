@@ -2,7 +2,7 @@
 
 \newcommand{\booktitle}{Hautes Lignées Elfes}
 \newcommand{\version}{0.99.5.1}
-\newcommand{\frenchversion}{2.0}
+\newcommand{\frenchversion}{2.1}
 \newcommand{\booklogo}{pics/logo_big_HBE.png}
 
 % Army special rules
@@ -63,16 +63,16 @@
 
 % Core
 
-\newcommand{\citizenspears}{Lanciers Elfes} %M% Citizen à traduire ?
-\newcommand{\citizenspear}{Lancier Elfe}
-\newcommand{\citizenarchers}{Archers Elfes} %M% Citizen à traduire ?
-\newcommand{\citizenarcher}{Archer Elfe}
+\newcommand{\citizenspears}{Lanciers Plébéiens}
+\newcommand{\citizenspear}{Lancier Plébéien}
+\newcommand{\citizenarchers}{Archers Plébéiens}
+\newcommand{\citizenarcher}{Archer Plébéien}
 \newcommand{\seaguards}{Gardes-Mer}
 \newcommand{\seaguard}{Garde-Mer}
-\newcommand{\highbornlancers}{Lances d'Argent} %M% Voir avec fluff
-\newcommand{\highbornlancer}{Lance d'Argent}
-\newcommand{\eleinreavers}{Patrouilleurs d'Elein} %M% 
-\newcommand{\eleinreaver}{Messagers d'Elein}
+\newcommand{\highbornlancers}{Lance Patricienne}
+\newcommand{\highbornlancer}{Lance Patricienne}
+\newcommand{\eleinreavers}{Patrouilleurs d'Elein} 
+\newcommand{\eleinreaver}{Patrouilleur d'Elein}
 
 % Special
 
@@ -85,15 +85,15 @@
 \newcommand{\greywatchers}{Veilleurs de l'Ombre}
 \newcommand{\greywatcher}{Veilleur de l'Ombre}
 \newcommand{\knightsofryma}{Chevaliers de Ryma}
-\newcommand{\knightofryma}{Chevalier de Ryma} %M% A verifier Chevalier-Dragon de Ryma
-\newcommand{\reaverchariot}{Char Patrouilleur} %M% A verifier
+\newcommand{\knightofryma}{Chevalier de Ryma}
+\newcommand{\reaverchariot}{Char Patrouilleur}
 \newcommand{\lionchariot}{Char à Lions}
 \newcommand{\seaguardreaper}{Faucheuse Garde-Mer}
 
 % Rare
 
 \newcommand{\queensguard}{Gardes de la Reine}
-\newcommand{\skysloop}{Char Rapace} %M% Verifier que le manque de mention a sloop est OK. Sloop Aérien, ou Sloop des Airs - Corvette, Sloop Volant
+\newcommand{\skysloop}{Char Rapace}
 \newcommand{\gianteagles}{Aigles Géants}
 \newcommand{\firephoenix}{Phénix de Feu}
 \newcommand{\firephoenixes}{Phénix de Feu}
@@ -175,15 +175,18 @@ Le porteur gagne une \innatedefence{6} qui passe à (5+) contre les Attaques de 
 }
 
 \newcommand{\elvenboltthrowerrule}{%
-\textbf{\artilleryweapon} de type \textbf{\boltthrower}.\newline \range{48}, \Strength{} 6, \multiplewounds{1D3}{}, \armourpiercing{6}.
+\textbf{\artilleryweapon} de type \textbf{\boltthrower}.\newline
+\range{48}, \Strength{} 6, \multiplewounds{1D3}{}, \armourpiercing{6}.
 }
 
 \newcommand{\repeatingshotsrule}{%
-La \elvenboltthrower{} peut aussi être utilisée comme une \textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline \range{48}, \Strength{} 4, \armourpiercing{1}, \multipleshots{6}.
+La \elvenboltthrower{} peut aussi être utilisée comme une \textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline
+\range{48}, \Strength{} 4, \armourpiercing{1}, \multipleshots{6}.
 }
 
 \newcommand{\skyreaperrule}{%
-\textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline \range{24}, \Strength{} 5, \armourpiercing{1}, \multipleshots{4}, \quicktofire{}.
+\textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline
+\range{24}, \Strength{} 5, \armourpiercing{1}, \multipleshots{4}, \quicktofire{}.
 }
 
 \newcommand{\aldanwarhornrule}{%
@@ -264,7 +267,9 @@ Votre armée ne peut pas inclure plus de deux figurines parmi cette liste : \you
 
 \honoursidepic{logo_tower.png}
 \hfill
-\honourstartsidetext{Maître de la Tour de Canreig}{150/75}\oneofakind{}.\vspace{5pt}\newline La figurine gagne les règles \swordsworn{} (voir l'unité spéciale \swordmasters{}) et \masterofbalance{}. Elle devient un \textbf{\magiclevel{1}}. Les \commanders{} choisissent \textbf{deux} sorts de la Discipline des Huit Vents, qui réunit les sorts primaires des huit Disciplines Communes. Les sorts choisis doivent être inscrits sur la feuille d'armée. Les \highprinces{} connaissent tous les sorts de la Discipline des Huit Vents.\newline
+\honourstartsidetext{Maître de la Tour de Canreig}{150/75}\oneofakind{}.\vspace{5pt}
+
+La figurine gagne les règles \swordsworn{} (voir l'unité spéciale \swordmasters{}) et \masterofbalance{}. Elle devient un \textbf{\magiclevel{1}}. Les \commanders{} choisissent \textbf{deux} sorts de la Discipline des Huit Vents, qui réunit les sorts primaires des huit Disciplines Communes. Les sorts choisis doivent être inscrits sur la feuille d'armée. Les \highprinces{} connaissent tous les sorts de la Discipline des Huit Vents.\newline
 Le nombre de sorts connus ne peut alors jamais être augmenté.
 \honourmulticols{}
 \def\tempmounts{À pied uniquement=,}
@@ -273,7 +278,9 @@ Le nombre de sorts connus ne peut alors jamais être augmenté.
 
 \spacebetweenhonours{}
 
-\honourstartsidetext{Prince de Ryma}{30}\oneofakind{}. \highprince{} uniquement.\vspace{5pt}\newline La figurine gagne la règle \devastatingcharge{} et sa monture n'est pas comptée pour la règle \lastoftheirkind{}. Elle \textbf{doit} sélectionner une des trois montures suivantes :
+\honourstartsidetext{Prince de Ryma}{30}\oneofakind{}. \highprince{} uniquement.\vspace{5pt}
+
+La figurine gagne la règle \devastatingcharge{} et sa monture n'est pas comptée pour la règle \lastoftheirkind{}. Elle \textbf{doit} sélectionner une des trois montures suivantes :
 \honourmulticols{}
 \def\tempmounts{\elvenhorse{}=\free{},\youngdragon{}=230,\dragon{}=295,}
 \vspace*{-0.3cm}\mounts{\tempmounts}\columnbreak\phantom{debug}
@@ -368,7 +375,9 @@ La figurine a accès à ses montures habituelles.
 \pricelistitem{Grand Arc d'Azur}{35}Type : \longbow{}. \range{30}, Force de l'utilisateur +1, \armourpiercing{1}, \multipleshots{3}.
 
 
-\pricelistitem{Lance de l'Aube Éclatante}{30/20}Personnages uniquement.\newline Type : \spear{}. La Force des attaques effectuées avec cette arme est supérieure d'un point à l'Endurance de la cible. Si la Force était déjà supérieure, ignorez la règle.
+\pricelistitem{Lance de l'Aube Éclatante}{30/20}Personnages uniquement.
+
+Type : \spear{}. La Force des attaques effectuées avec cette arme est supérieure d'un point à l'Endurance de la cible. Si la Force était déjà supérieure, ignorez la règle.
 
 \endpricelist
 
@@ -376,7 +385,9 @@ La figurine a accès à ses montures habituelles.
 
 \startpricelist
 
-\pricelistitem{Heaume du Chasseur de Démon}{35/25}Ne peut pas être pris par une \largetarget{}.\newline Type : Aucun (Sauvegarde d'Armure de 6+). Le porteur gagne une \wardsave{3} contre les \magicalattacks{}.
+\pricelistitem{Heaume du Chasseur de Démon}{35/25}Ne peut pas être pris par une \largetarget{}.
+
+Type : Aucun (Sauvegarde d'Armure de 6+). Le porteur gagne une \wardsave{3} contre les \magicalattacks{}.
 
 \endpricelist
 
@@ -384,7 +395,9 @@ La figurine a accès à ses montures habituelles.
 
 \startpricelist
 
-\pricelistitem{Robes Étincelantes}{45}\archmage{} ou \mage{} à pied uniquement.\newline Le porteur gagne la règle \ethereal{}. Il ne peut pas porter d'attaques, y compris spéciales.
+\pricelistitem{Robes Étincelantes}{45}\archmage{} ou \mage{} à pied uniquement.
+
+Le porteur gagne la règle \ethereal{}. Il ne peut pas porter d'attaques, y compris spéciales.
 
 \endpricelist
 
@@ -414,7 +427,7 @@ La figurine a accès à ses montures habituelles.
 
 \pricelistitem{Bannière d'Apaisement}{35}Le porteur gagne la règle \channel{}. Au début de chaque Phase de Magie adverse, choisissez un Sorcier allié à moins de \distance{12} du porteur. Ce Sorcier gagne un bonus de +1 pour dissiper lors de cette phase.
 
-\pricelistitem{Bannière-Dragon de Ryma}{30}L'unité du porteur gagne la règle \thunderouscharge{}. Les montures ne sont pas affectées.
+\pricelistitem{Bannière de Bataille de Ryma}{30}L'unité du porteur gagne la règle \thunderouscharge{}. Les montures ne sont pas affectées.
 
 \endpricelist
 

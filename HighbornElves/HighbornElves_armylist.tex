@@ -134,35 +134,6 @@
 \mountstitle
 
 \showunit{
-	notinQRS=yes,
-	name={\gianteagle},
-	profile={< 2 5 - 4 4 3 4 2 8},
-	type=\monstrousbeast{},
-	basesize=50x50,
-	specialrules={\fly{9}},
-	armour={\mountsprotection{6}},
-	options={
-		\maygain{} \armourpiercing{1}=5,
-		\maygain{} \lightningreflexes{}=5,
-	},
-}
-
-\showunit{
-	name={\griffon},
-	profile={< 6 5 - 5 5 4 5 4 5},
-	type=\monstrousbeast{},
-	basesize=50x50,
-	specialrules={\fly{8},\largetarget{},\fear{}},
-	options={
-		\anyofthefollowing{
-			\armourpiercing{1}=5,
-			\lightningreflexes{}=10,
-			\devastatingcharge{} \wordand{} \thunderouscharge{}=15,
-		},
-	},
-}
-
-\showunit{
 	name={\elvenhorse},
 	profile={< 9 3 - 3 3 1 4 1 3},
 	type=\warbeast{},
@@ -193,8 +164,6 @@
 	},
 }
 
-
-
 \showunit{
 	notinQRS=yes,
 	name={\lionchariot},
@@ -211,7 +180,6 @@
 	weapons={\gw{} \only{\crew{}}},
 	armour={\ha{},\mountsprotection{5}},
 	}
-
 
 \showunit{
 	notinQRS=yes,
@@ -245,30 +213,30 @@
 
 \showunit{
 	notinQRS=yes,
-	name={\firephoenix},
-	profile={< 2 5 - 5 5 5 4 3 8},
-	type=\monster{},
-	basesize=50x100,
-	additional={
-		\def\tempspecialrules{\fly{9},\magicalattacks{},\wardsave{4},\fireborn{},\flamingattacks{},\flameswoop{},\rebirth{},\lastoftheirkind{}}
-		\vspace{-0.2cm}\specialrules{\tempspecialrules}
-		
-		\vspace{0.2cm}\noindent\firephoenixmountmention{}
+	name={\gianteagle},
+	profile={< 2 5 - 4 4 3 4 2 8},
+	type=\monstrousbeast{},
+	basesize=50x50,
+	specialrules={\fly{9}},
+	armour={\mountsprotection{6}},
+	options={
+		\maygain{} \armourpiercing{1}=5,
+		\maygain{} \lightningreflexes{}=5,
 	},
 }
 
 \showunit{
-	notinQRS=yes,
-	name={\frostphoenix},
-	profile={< 2 5 - 5 5 5 3 5 8},
-	type=\monster{},
-	basesize=50x100,
-	armour={\innatedefence{5}},
-	additional={
-		\def\tempspecialrules{\fly{8},\magicalattacks{},\wardsave{4},\chillaura{},\lastoftheirkind{}}
-		\vspace{0.4cm}\specialrules{\tempspecialrules}
-		
-		\vspace{0.2cm}\noindent\frostphoenixmountmention{}
+	name={\griffon},
+	profile={< 6 5 - 5 5 4 5 4 5},
+	type=\monstrousbeast{},
+	basesize=50x50,
+	specialrules={\fly{8},\largetarget{},\fear{}},
+	options={
+		\anyofthefollowing{
+			\armourpiercing{1}=5,
+			\lightningreflexes{}=10,
+			\devastatingcharge{} \wordand{} \thunderouscharge{}=15,
+		},
 	},
 }
 
@@ -303,27 +271,36 @@
 	},
 }
 
-\coreunitstitle
+\showunit{
+	notinQRS=yes,
+	name={\firephoenix},
+	profile={< 2 5 - 5 5 5 4 3 8},
+	type=\monster{},
+	basesize=50x100,
+	additional={
+		\def\tempspecialrules{\fly{9},\magicalattacks{},\wardsave{4},\fireborn{},\flamingattacks{},\flameswoop{},\rebirth{},\lastoftheirkind{}}
+		\vspace{-0.2cm}\specialrules{\tempspecialrules}
+		
+		\vspace{0.2cm}\noindent\firephoenixmountmention{}
+	},
+}
 
 \showunit{
-	name={\citizenspears},
-	cost=105,
-	profile={< 5 4 4 3 3 1 5 1 8},
-	type=\infantry{},
-	basesize=20x20,
-	unitsize=15,
-	maxmodels=50,
-	costpermodel=9,
-	commontype=\elvencommonrules{},
-	commonspecialrules={\martialdiscipline{},\lightningreflexes{}},
-	specialrules={\fightinextrarank{}},
-	weapons={\spear},
-	armour={\la{},\shield{}},
-	options={
-		\maytakeha{}=\permodel{}<2,
+	notinQRS=yes,
+	name={\frostphoenix},
+	profile={< 2 5 - 5 5 5 3 5 8},
+	type=\monster{},
+	basesize=50x100,
+	armour={\innatedefence{5}},
+	additional={
+		\def\tempspecialrules{\fly{8},\magicalattacks{},\wardsave{4},\chillaura{},\lastoftheirkind{}}
+		\vspace{0.4cm}\specialrules{\tempspecialrules}
+		
+		\vspace{0.2cm}\noindent\frostphoenixmountmention{}
 	},
-	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
 }
+
+\coreunitstitle
 
 \showunit{
 	name={\citizenarchers},
@@ -342,23 +319,21 @@
 }
 
 \showunit{
-	name={\highbornlancers},
-	cost=95,
-	profile={ 
-		\rider{}< 5 4 4 3 3 1 5 1 8,
-		\elvenhorse{}< 9 3 - 3 3 1 4 1 3,
-	},
-	type=\cavalry{},
-	basesize=25x50,
-	unitsize=5,
-	maxmodels=15,
-	costpermodel=18,
+	name={\citizenspears},
+	cost=105,
+	profile={< 5 4 4 3 3 1 5 1 8},
+	type=\infantry{},
+	basesize=20x20,
+	unitsize=15,
+	maxmodels=50,
+	costpermodel=9,
 	commontype=\elvencommonrules{},
-	commonspecialrules={\martialdiscipline{},\lightningreflexes{} \only{\rider{}}},
-	weapons={\lance},
-	armour={\ha{},\shield{},\mountsprotection{6}},
+	commonspecialrules={\martialdiscipline{},\lightningreflexes{}},
+	specialrules={\fightinextrarank{}},
+	weapons={\spear},
+	armour={\la{},\shield{}},
 	options={
-		\maytakemountsprotectionX{5}=\permodel{}<4,
+		\maytakeha{}=\permodel{}<2,
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
 }
@@ -386,8 +361,6 @@
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
 }
 
-
-
 \showunit{
 	name={\eleinreavers},
 	cost=85,
@@ -410,6 +383,28 @@
 		\maytakeabow{}=\permodel{}<1,
 	},
 	commandgroup={champion=10, musician=10, banner=10}
+}
+
+\showunit{
+	name={\highbornlancers},
+	cost=95,
+	profile={ 
+		\rider{}< 5 4 4 3 3 1 5 1 8,
+		\elvenhorse{}< 9 3 - 3 3 1 4 1 3,
+	},
+	type=\cavalry{},
+	basesize=25x50,
+	unitsize=5,
+	maxmodels=15,
+	costpermodel=18,
+	commontype=\elvencommonrules{},
+	commonspecialrules={\martialdiscipline{},\lightningreflexes{} \only{\rider{}}},
+	weapons={\lance},
+	armour={\ha{},\shield{},\mountsprotection{6}},
+	options={
+		\maytakemountsprotectionX{5}=\permodel{}<4,
+	},
+	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
 }
 
 \specialunitstitle
@@ -496,10 +491,6 @@
 	commandgroup={champion=10, championallowance=25, musician=10, banner=10, bannerallowance=50}
 }
 
-
-
-
-
 \showunit{
 	name={\reaverchariot},
 	cost=65,
@@ -543,6 +534,8 @@
 
 
 
+
+
 \rareunitstitle
 
 \showunit{
@@ -568,6 +561,26 @@
 }
 
 \showunit{
+	name={\queensguard},
+	cost=65,
+	profile={< 5 5 5 3 3 1 5 1 8},
+	type=\infantry{},
+	basesize=20x20,
+	unitsize=5,
+	maxmodels=15,
+	costpermodel=13,
+	commontype=\elvencommonrules{},
+	commonspecialrules={\martialdiscipline{},\lightningreflexes{}},
+	weapons={\bow{},\moonlightarrows{}},
+	armour={\la},
+	options={
+		\maytakealongbow{}=\permodel{}<2,
+		\maytakeaspear{}=\permodel{}<1,
+	},
+	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
+}
+
+\showunit{
 	name={\greywatchers},
 	cost=80,
 	profile={< 5 5 5 3 3 1 5 1 8},
@@ -587,26 +600,6 @@
 		\maytakepw{}=\permodel{}<1,
 	},
 	commandgroup={champion=10}
-}
-
-\showunit{
-	name={\queensguard},
-	cost=65,
-	profile={< 5 5 5 3 3 1 5 1 8},
-	type=\infantry{},
-	basesize=20x20,
-	unitsize=5,
-	maxmodels=15,
-	costpermodel=13,
-	commontype=\elvencommonrules{},
-	commonspecialrules={\martialdiscipline{},\lightningreflexes{}},
-	weapons={\bow{},\moonlightarrows{}},
-	armour={\la},
-	options={
-		\maytakealongbow{}=\permodel{}<2,
-		\maytakeaspear{}=\permodel{}<1,
-	},
-	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
 }
 
 \showunit{

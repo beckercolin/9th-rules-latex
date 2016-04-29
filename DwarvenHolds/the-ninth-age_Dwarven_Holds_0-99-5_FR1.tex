@@ -2,7 +2,7 @@
 
 \newcommand{\booktitle}{Forteresses Naines}
 \newcommand{\version}{0.99.5}
-\newcommand{\frenchversion}{2.0}
+\newcommand{\frenchversion}{2.1}
 \newcommand{\booklogo}{pics/logo_big_DH.png}
 
 % Army wide rules
@@ -111,6 +111,12 @@
 
 \newcommand{\shieldbearers}{Porteurs de Bouclier}
 \newcommand{\warthrone}{Trône de Guerre}
+\renewcommand{\labels@charactermounts}{Montures du Roi Nain}
+\renewcommand{\mountstitle}{%
+\def\logolocalpath{../Layout/pics/logo_mount.png}%
+\vspace*{1.5cm}\bigtitle{\labels@charactermounts}%
+\renewcommand{\profilecategory}{\labels@mounts}%
+}
 
 % Short names and multiprofiles names
 
@@ -196,8 +202,6 @@ L'\anvilofpower{} peut dissiper comme un Sorcier Apprenti. Elle peut choisir jus
 
 \newcommand{\anvilrunes}{%
 \renewcommand{\arraystretch}{3.2}
-\arrayrulecolor{black!30}
-\setlength{\arrayrulewidth}{2pt}
 \begin{tabular}{@{}>{\raggedright}m{3cm}M{2.2cm}M{2.2cm}m{7.8cm}@{}}
 \textbf{Nom} &
 \textbf{Type} &
@@ -431,8 +435,6 @@ Juste avant qu'elle soit retirée comme perte suite à une attaque de Corps à C
 Les \runicmasters{}, les \runicsmiths{} et les \anvilsofpower{} peuvent disposer de ces Runes, en suivant les règles détaillées dans leur profil, et les lancer comme des Objets de Sort. Aucune Rune de Bataille ne peut être choisie plus de deux fois dans une même armée. Ce chiffre est réduit à un pour les Patrouilles et augmenté à quatre pour les Grandes Armées.
 
 \renewcommand{\arraystretch}{3.2}
-\arrayrulecolor{black!30}
-\setlength{\arrayrulewidth}{2pt}
 \begin{tabular}{@{}>{\raggedright}m{3.7cm}M{2.2cm}M{2.2cm}m{7.8cm}@{}}
 \textbf{Nom} &
 \textbf{Type} &
