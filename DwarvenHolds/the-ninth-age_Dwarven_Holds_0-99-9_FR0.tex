@@ -83,24 +83,34 @@
 
 % Core
 
+\newcommand{\clanwarrior}{Guerrier des Clans}
 \newcommand{\clanwarriors}{Guerriers des Clans}
+\newcommand{\greybeard}{Barbe-Grise}
 \newcommand{\greybeards}{Barbes-Grises}
+\newcommand{\clanmarksman}{Sentinelle des Clans}
 \newcommand{\clanmarksmen}{Sentinelles des Clans}
 
 % Special
 
+\newcommand{\deepwatchSINGULAR}{Garde Souterrain}
 \newcommand{\deepwatch}{Gardes Souterrains}
 \newcommand{\kingsguard}{Phalange Royale}
+\newcommand{\forgewarden}{Veilleur des Forges}
 \newcommand{\forgewardens}{Veilleurs des Forges}
+\newcommand{\seeker}{Chasseur Funeste}
 \newcommand{\seekers}{Chasseurs Funestes}
+\newcommand{\steamcopter}{Autogyre à Vapeur}
 \newcommand{\steamcopters}{Autogyres à Vapeur}
+\newcommand{\miner}{Mineur Nain}
 \newcommand{\miners}{Mineurs Nains}
 \newcommand{\fieldartillery}{Artillerie de Campagne}
 
 % Rare
 
 \newcommand{\vengeanceseeker}{Chasseur Solde-Rancune}
+\newcommand{\ranger}{Garde Forestier}
 \newcommand{\rangers}{Gardes Forestiers}
+\newcommand{\holdguardian}{Gardien des Forts}
 \newcommand{\holdguardians}{Gardiens des Forts}
 \newcommand{\grudgebuster}{Brise-Rancunes}
 \newcommand{\anvilofpower}{Enclume Ancestrale}
@@ -135,17 +145,16 @@
 
 % Runes
 
-\newcommand{\maytakearunicweapon}{Peut prendre une Arme Runique}
-\newcommand{\maytakerunicitems}{Peut prendre des Objets Runiques}
+\newcommand{\maytakearunicweapon}{Arme Runique}
+\newcommand{\maytakerunicitems}{Objets Runiques}
 \newcommand{\battleruneschoice}[1]{Jusqu'à #1 Runes de Batailles différentes}
 \renewcommand{\perrune}{/rune}
 
 % Others
 
 \newcommand{\otherworldlymodels}{Figurines \otherworldly{}}
-\newcommand{\maytakeaholdstone}{Peut porter une \holdstone}
 \newcommand{\onlyonemaytakevanguard}{Une seule unité de \clanwarriors{} ou de \greybeards{} peut gagner la règle \vanguard{}}
-\newcommand{\mayswapcrossbowfor}{\optionschoice{Peut échanger son \crossbow{} contre :}}
+\newcommand{\mayswapcrossbowfor}{\optionschoice{Échanger l'\crossbow{} contre :}}
 \newcommand{\seekersskirmishersoption}{\skirmishers{} (\oneofakind{}, 15 fig. max.)}
 \newcommand{\copterchoice}{Doit choisir l'une des trois unités :}
 \newcommand{\mayaddonemodelfor}{Peut ajouter une figurine pour}
@@ -179,7 +188,7 @@ Au lieu d'utiliser la règle \engineer{}, un \masterengineer{} peut, au début d
 \item La portée des Armes de Tir de l'unité augmente de \distance{1D6+1}.
 \end{customsubitemize}
 
-Le même bonus ne peut pas se cumuler sur une même unité.
+Un bonus donné ne peut pas se cumuler sur une même unité.
 }
 
 \newcommand{\clanleaderrule}{%
@@ -197,7 +206,7 @@ Le \runicsmith{} et son unité disposent de la règle \armourpiercing{1}. Il peu
 % Anvil
 
 \newcommand{\runicanvilrule}{%
-L'\anvilofpower{} peut dissiper comme un Sorcier Apprenti. Elle peut choisir jusqu'à trois Runes, gratuitement parmi les Runes de Bataille, et à leur prix parmi les Runes de l'Enclume ci-dessous. Toutes les Runes sont des Objets de Sort d'une portée de \distance{36}. L'Enclume peut lancer les Runes de Bataille avec un Niveau de Puissance de 4 et les Runes de l'Enclume avec un Niveau de Puissance de 5.
+L'\anvilofpower{} peut dissiper comme un Sorcier Apprenti. Elle peut choisir jusqu'à trois Runes, gratuitement parmi les Runes de Bataille, et à leur prix parmi les Runes de l'Enclume ci-dessous. Toutes les Runes sont des Objets de Sort avec une portée de \distance{36}. L'Enclume peut lancer les Runes de Bataille avec un Niveau de Puissance de 4 et les Runes de l'Enclume avec un Niveau de Puissance de 5.
 }
 
 \newcommand{\anvilrunes}{%
@@ -209,19 +218,19 @@ L'\anvilofpower{} peut dissiper comme un Sorcier Apprenti. Elle peut choisir jus
 \centering\textbf{Effet}
 \tabularnewline\hline
 
-Rune des Tempêtes\newline \pts{5} &
+Rune des Tempêtes\newline (\pts{5}) &
 Dégâts\newline Malédiction &
 Immédiat\newline Dure un Tour &
 La cible subit immédiatement 1D6 touches de Force 6 avec la règle \lightningattacks{}. La cible ne peut plus utiliser la règle \fly{} pendant la durée du sort.
 \tabularnewline\hline
 
-Rune Fracassante\newline \pts{5} &
+Rune Fracassante\newline (\pts{5}) &
 Dégâts\newline Malédiction &
 Immédiat\newline Dure un Tour &
 La cible subit immédiatement 2D6 touches de Force 4. Toute unité subissant au moins une blessure de ces touches subit un malus de -1 sur ses jets pour toucher au Corps à Corps, et traite tous les décors, y compris les Terrains Dégagés, comme des Terrains Dangereux (1).
 \tabularnewline\hline
 
-Rune d'Apaisement\newline \free{} &
+Rune d'Apaisement\newline (\free{}) &
 Universelle &
 Immédiat &
 Choisissez un sort de type Dure un tour ou Reste en jeu affectant la cible. Ce sort prend immédiatement fin. 
@@ -241,51 +250,57 @@ Ajoutez +4 aux jets de dés sur la table des Incidents de Tir.
 }
 
 \newcommand{\catapultrule}{%
-\textbf{\artilleryweapon} de type \textbf{\catapult{} (\distance{3})}.\newline \range{12-60}, \Strength{} 3 [9], [\multiplewounds{\ordnance}{}].
+\textbf{\artilleryweapon} de type \textbf{\catapult{} (\distance{3})}.\newline
+\range{12-60}, \Strength{} 3 [9], [\multiplewounds{\ordnance}{}].
 }
 
 \newcommand{\catapultrunecraftedrule}{%
-Toutes les touches de la \catapult{} ont +1 en Force, \magicalattacks{} et \armourpiercing{1}.
+Toutes\newline les touches de la \catapult{} gagnent +1 en Force et les règles \magicalattacks{} et \armourpiercing{1}.
 }
 
 \newcommand{\cannonrule}{%
 Peut tirer de deux manières :
 \begin{customsubitemize}
-\item Comme une \textbf{\artilleryweapon} de type \textbf{\cannon{} (\distance{1D6})}.\newline \range{60}, \Strength{} 10, \multiplewounds{\ordnance}{}.
-\item Comme une \textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline \range{12}, \Strength{} 4, \armourpiercing{3}, \multipleshots{2D6}.
+\item Comme une \textbf{\artilleryweapon} de type \textbf{\cannon{} (\distance{1D6})}.\newline
+\range{60}, \Strength{} 10, \multiplewounds{\ordnance}{}.
+\item Comme une \textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline
+\range{12}, \Strength{} 4, \armourpiercing{3}, \multipleshots{2D6}.
 \end{customsubitemize}
 }
 
 \newcommand{\cannonrunecraftedrule}{%
-Toutes les touches du \cannon{} ont +1 en Force et \magicalattacks{}.
+Toutes\newline les touches du \cannon{} gagnent +1 en Force et la règle \magicalattacks{}.
 }
 
 \newcommand{\organgunrule}{%
-\textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline \range{30}, \Strength{} 5, \armourpiercing{1}, \multipleshots{2D6*2}.
+\textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline
+\range{30}, \Strength{} 5, \armourpiercing{1}, \multipleshots{2D6*2}.
 }
 
 \newcommand{\organgunrunecraftedrule}{%
-Toutes les touches du \organgun{} ont un bonus de +1 sur les jets pour blesser et \magicalattacks{}.
+Toutes\newline les touches du \organgun{} gagnent un bonus de +1 sur les jets pour blesser et la règle \magicalattacks{}.
 }
 
 \newcommand{\flamecannonrule}{%
-\textbf{\artilleryweapon} de type \textbf{\flamethrower}.\newline \range{12}, \Strength{} 5, \flamingattacks{}, \multiplewounds{1D3}{}.
+\textbf{\artilleryweapon} de type \textbf{\flamethrower}.\newline
+\range{12}, \Strength{} 5, \flamingattacks{}, \multiplewounds{1D3}{}.
 }
 
 \newcommand{\flamecannonrunecraftedrule}{%
-Toutes les touches du \flamecannon{} ont \magicalattacks{}.
+Toutes les touches du \flamecannon{} gagnent la règle \magicalattacks{}.
 }
 
 \newcommand{\runestruckrule}{%
-Le \flamecannon{} gagne \distance{+3} en portée et des \magicalattacks{}.
+Le \flamecannon{} gagne \distance{+3} en portée et la règle \magicalattacks{}.
 }
 
 \newcommand{\dwarfballistarule}{%
-\textbf{\artilleryweapon} de type \textbf{\boltthrower}.\newline \range{48}, \Strength{} 6, \multiplewounds{1D3}{}, \armourpiercing{6}.
+\textbf{\artilleryweapon} de type \textbf{\boltthrower}.\newline
+\range{48}, \Strength{} 6, \multiplewounds{1D3}{}, \armourpiercing{6}.
 }
 
 \newcommand{\dwarfballistarunecraftedrule}{%
-Toutes les touches de la \dwarfballista{} ont un bonus de +1 pour toucher contre les unités volantes et des \magicalattacks{}.
+Toutes les touches de la \dwarfballista{} gagnent un bonus de +1 pour toucher contre les unités volantes et la règle \magicalattacks{}.
 }
 
 \newcommand{\grudgemachinenote}{%
@@ -299,19 +314,19 @@ Toute unité alliée à moins de \distance{6} peut relancer ses tests de Panique
 }
 
 \newcommand{\shieldskillrule}{%
-La \wardsave{} accordée par la règle \shieldwall{} est toujours de (5+).
+La \wardsave{} accordée par la règle \shieldwall{} est toujours de 5+.
 }
 
 \newcommand{\majestyofhighkingsrule}{%
-Si un Général est monté sur le \warthrone{}, la portée de sa \inspiringpresence{} passe à \distance{18}. Toutes les unités amies à moins de \distance{6} gagnent la règle \swiftstride{}. Si le Personnage sur le \warthrone{} a rejoint une unité et est tué, l'unité gagne la règle \frenzy{}.
+Si un Général est monté sur le \warthrone{}, la portée de sa règle \inspiringpresence{} passe à \distance{18}. Toutes les unités amies à moins de \distance{6} gagnent la règle \swiftstride{}. Si le Personnage sur le \warthrone{} était dans une unité lorsqu'il est tué, l'unité gagne la règle \frenzy{}.
 
-L'\fieldartillery{} passe des unités spéciales aux unités rares.
+L'\fieldartillery{} passe des Unités Spéciales aux Unités Rares.
 }
 
 % Weapons
 
 \newcommand{\guildcraftedhandgunrule}{%
-Arme de Tir. Type : Arquebuse. Accorde un bonus de +1 pour toucher au tir. Une unité équipée de cette arme ne peut pas porter d'\gw{} ni être Porte-étendard Vétéran.
+Arme de Tir. Type : Arquebuse. Accorde un bonus de +1 pour toucher au tir. Une unité équipée de cette arme ne peut pas porter d'\gw{} ni avoir de Porte-étendard Vétéran.
 }
 
 \newcommand{\forgegunrule}{%
@@ -323,15 +338,16 @@ Arme de Tir. \range{18}, Force 5, \flamingattacks{}, \quicktofire{}.
 }
 
 \newcommand{\shrapnelbombsrule}{%
-\sweepingattack{}. L'unité ennemie subit 1D6*2 touches de Force 3 avec \armourpiercing{1}. Si un \result{6} naturel est obtenu sur le dé du nombre de touches, les \shrapnelbombs{} ne pourront plus être utilisées de la partie après cette attaque.
+\sweepingattack{}. L'unité ennemie subit 1D6*2 touches de Force 3 avec la règle \armourpiercing{1}. Si un \result{6} naturel est obtenu sur le dé du nombre de touches, les \shrapnelbombs{} ne pourront plus être utilisées de la partie après cette attaque.
 }
 
 \newcommand{\flameculverinrule}{%
-\textbf{\artilleryweapon} de type \textbf{\flamethrower}.\newline \range{3}, Force 3, \flamingattacks{}. Ne peut pas tirer si la figurine a effectué une Marche Forcée à ce Tour de Joueur. Ignorez le malus de -1 sur la table d'Incident de Tir.%
+\textbf{\artilleryweapon} de type \textbf{\flamethrower}.\newline
+\range{3}, Force 3, \flamingattacks{}. Ne peut pas tirer si la figurine a effectué une Marche Forcée à ce Tour de Joueur. Ignorez le malus de -1 sur la table d'Incident de Tir.
 }
 
 \newcommand{\whirlingchainsofdoomrule}{%
-Arme de Corps à Corps. Le porteur gagne +1 en Force, \randomattacks{3D3} et attaque à Initiative 10. Il ne peut pas être rejoint par un Personnage.
+Arme de Corps à Corps. Le porteur gagne +1 en Force, la règle \randomattacks{3D3} et attaque à Initiative 10. Il ne peut pas être rejoint par un Personnage.
 }
 
 \newcommand{\swiwelgunrule}{%
@@ -352,7 +368,7 @@ Arme de Tir. \range{24}, Force 4, \armourpiercing{1}, \multipleshots{4}, \quickt
 
 \armywideruleentry{\hewnoutofmountains}
 
-Tant qu'il reste sur la table au moins une unité amie d'une armée des Forteresses Naines, tous les sorts lancés par les figurines ennemies voient leur valeur de lancement, ou leur niveau de puissance pour les Objets de Sorts, augmentée de +1. La valeur de lancement des sorts restant en jeu ne change pas pour ce qui est de leur dissipation.
+Tant qu'il reste sur la table au moins une unité alliée d'une armée des Forteresses Naines, tous les sorts lancés par les figurines ennemies voient leur valeur de lancement, ou leur niveau de puissance pour les Objets de Sorts, augmentée de +1. La valeur de lancement des sorts restant en jeu ne change pas pour ce qui est de leur dissipation.
 
 \armywideruleentry{\ancientgrudge}
 
@@ -392,7 +408,7 @@ Une fois le déploiement terminé mais avant de placer les Éclaireurs, la figur
 
 \armyspecialruleentry{\holdstone}
 
-Au début de n'importe quelle Manche de Corps à Corps, une figurine dotée d'une \holdstone{} peut déclarer qu'elle l'utilise. A partir de ce moment, l'unité du porteur considère ses flancs et son arrière comme étant de front en ce qui concerne les Attaques de Soutien, les règles \parry{} et \shieldwall{}. Elle peut néanmoins toujours être Désorganisée. Tant que la \holdstone{} est active, le porteur doit toujours lancer et relever des défis, à moins qu'une autre figurine amie ne le fasse avant. L'unité ne peut pas poursuivre directement après le combat où la \holdstone{} a été utilisée.
+Au début de n'importe quelle Manche de Corps à Corps, la figurine peut déclarer qu'elle l'utilise sa \holdstone{}. A partir de ce moment, l'unité du porteur considère ses flancs et son arrière comme étant de front en ce qui concerne les Attaques de Soutien et les règles \parry{} et \shieldwall{}. Elle peut néanmoins toujours être Désorganisée. Tant que la \holdstone{} est active, le porteur doit toujours lancer et relever des défis, à moins qu'une autre figurine amie ne le fasse avant. L'unité ne peut pas poursuivre directement après le combat où la \holdstone{} a été utilisée.
 
 Les effets de la \holdstone{} disparaissent immédiatement une fois le combat terminé ou à la fin de la phase durant laquelle son porteur est tué.
 
@@ -400,11 +416,11 @@ Tant que le porteur est en vie, la Pierre peut être activée à nouveau lors de
 
 \armyspecialruleentry{\thebiggertheyare}
 
-Les attaques de Corps à Corps de la figurine blessent toujours sur 4+ ou mieux. Elle gagne également la règle \swiftstride{} lorsqu'elle fait le jet de charge vers une unité contenant au moins une figurine d'un des types suivant : Bête Monstrueuse, Cavalerie Monstrueuse, Infanterie Monstrueuse, Monstre ou Monstre Monté.
+Les Attaques de Corps à Corps de la figurine blessent toujours sur 4+ ou mieux. Elle gagne également la règle \swiftstride{} lorsqu'elle fait le jet d'une charge vers une unité contenant au moins une figurine d'un des types suivant : Bête Monstrueuse, Cavalerie Monstrueuse, Infanterie Monstrueuse, Monstre ou Monstre Monté.
 
 \armyspecialruleentry{\comewithme}
 
-Juste avant qu'elle soit retirée comme perte suite à une attaque de Corps à Corps durant la Phase de Corps à Corps, la figurine peut porter immédiatement une ultime attaque de Corps à Corps avec l'arme utilisée pendant cette manche. L'attaque doit être portée au choix sur la figurine adverse l'ayant achevé ou bien son unité, auquel cas cette attaque est distribuée comme un tir. Les bonus et règles spéciales sont appliquées normalement, mais la figurine ne peut porter qu'une seule attaque au plus dont la Force ne peut pas dépasser 5. Cette règle ne peut pas être utilisée suite à des pertes dues à des \impacthits{}. Une unité ne peut utiliser cette règle que si elle a au moins autant de rangs que de colonnes au début de la Manche de Corps à Corps.
+Juste avant qu'elle soit retirée comme perte suite à une attaque de Corps à Corps durant la Phase de Corps à Corps, la figurine peut porter immédiatement une ultime attaque de Corps à Corps avec l'arme utilisée pendant cette manche. L'attaque doit être portée au choix sur la figurine adverse l'ayant achevé ou bien son unité, auquel cas cette attaque est distribuée comme un tir. Les bonus et règles spéciales sont appliquées normalement, mais la figurine ne peut porter qu'une seule attaque au plus dont la Force ne peut pas dépasser 5. Cette règle ne peut pas être utilisée suite à des pertes infligées par des \impacthits{}. Une unité ne peut utiliser cette règle que si elle a au moins autant de rangs que de colonnes au début de la Manche de Corps à Corps.
 
 \closearmyspecialrules
 
@@ -451,13 +467,13 @@ La cible peut relancer ses jets de Sauvegarde d'Armure ratés.
 Rune de Résolution &
 Amélioration &
 Immédiat &
-L'unité amie ciblée peut effectuer un Mouvement Magique de \distance{6}. 
+L'unité alliée ciblée peut effectuer un Mouvement Magique de \distance{6}. 
 \tabularnewline\hline
 
 Rune de Jugement &
 Amélioration &
 Dure un Tour &
-L'unité amie ciblée peut relancer ses jets pour toucher ratés au Corps à Corps.
+L'unité alliée ciblée peut relancer ses jets pour toucher ratés au Corps à Corps.
 \tabularnewline\hline
 
 Rune du Serment &
@@ -498,11 +514,17 @@ Toute \hw{} ou \pw{} peut être enchâssée d'un maximum de trois Runes parmi ce
 
 \startpricelist
 
-\pricelistitem{Rune de Pénétration}{40/30}\oneofakind{}.\newline Les attaques portées avec l'arme gagnent \armourpiercing{6}.
+\pricelistitem{Rune de Pénétration}{40/30}\oneofakind{}.
 
-\pricelistitem{Rune de Destruction}{40/20}\oneofakind{}.\newline Les attaques portées avec l'arme gagnent \multiplewounds{1D3}{}.
+Les attaques portées avec l'arme gagnent la règle\armourpiercing{6}.
 
-\pricelistitem{Rune Brisante}{35/25}\oneofakind{}.\newline Les attaques portées avec l'arme ont Force 10 quand la cible possède une Endurance de 5 ou plus.
+\pricelistitem{Rune de Destruction}{40/20}\oneofakind{}.
+
+Les attaques portées avec l'arme gagnent la règle \multiplewounds{1D3}{}.
+
+\pricelistitem{Rune Brisante}{35/25}\oneofakind{}.
+
+Les attaques portées avec l'arme ont Force 10 quand la cible possède une Endurance de 5 ou plus.
 
 \pricelistitem{Rune de Puissance}{20}Les attaques portées avec l'arme ont un bonus de +1 en Force pour chaque Rune de Puissance enchâssée.
 
@@ -510,7 +532,9 @@ Toute \hw{} ou \pw{} peut être enchâssée d'un maximum de trois Runes parmi ce
 
 \pricelistitem{Rune d'Accélération}{20}Le porteur attaque avec un bonus de +2 en Initiative pour chaque Rune d'Accélération enchâssée.
 
-\pricelistitem{Rune de l'Art de la Forge}{20/15}\oneofakind{}.\newline L'arme devient une \gw{}.
+\pricelistitem{Rune de l'Art de la Forge}{20/15}\oneofakind{}.
+
+L'arme devient une \gw{}.
 
 \pricelistitem{Rune de Fureur}{15}Le porteur gagne +1 Attaque par Rune de Fureur enchâssée.
 
@@ -525,7 +549,9 @@ Tout ensemble d'armure peut être enchâssé d'un maximum de trois Runes parmi c
 
 \startpricelist
 
-\pricelistitem{Rune d'Endurance}{45}\oneofakind{}.\newline Les jets pour blesser réussis contre le porteur doivent être relancés.
+\pricelistitem{Rune d'Endurance}{45}\oneofakind{}.
+
+Les jets pour blesser réussis contre le porteur doivent être relancés.
 
 \pricelistitem{Rune de Bronze}{30}Le porteur gagne +1 Point de Vie.
 
@@ -533,11 +559,11 @@ Tout ensemble d'armure peut être enchâssé d'un maximum de trois Runes parmi c
 
 \pricelistitem{Rune des Montagnes}{30}Le porteur gagne +1 en Endurance jusqu'à un maximum de 6.
 
-\pricelistitem{Rune d'Aegis}{15}Le porteur gagne \magicresistance{1} ou augmente cet effet de +1 par Rune, jusqu'à \magicresistance{4} au mieux. Cela n'augmente pas la \magicresistance{} qui serait obtenue par le biais d'une autre figurine de l'unité du porteur.
+\pricelistitem{Rune d'Aegis}{15}Le porteur gagne la règle \magicresistance{1} ou augmente cet effet de +1 par Rune, jusqu'à \magicresistance{4} au mieux. Cela n'augmente pas la \magicresistance{} qui serait obtenue par le biais d'une autre figurine de l'unité du porteur.
 
 \pricelistitem{Rune de Fer}{10} Le porteur gagne une \innatedefence{6}. Une autre Rune peut être ajoutée pour passer cet effet à (5+).
 
-\pricelistitem{Rune d'Écrasement}{10} Le porteur gagne \impacthits{+1}.
+\pricelistitem{Rune d'Écrasement}{10} Le porteur gagne la règle \impacthits{+1}.
 
 \endpricelist
 
@@ -548,9 +574,11 @@ Un maximum de 3 Runes de cet ensemble peuvent être sélectionnées et comptent 
 
 \startpricelist
 
-\pricelistitem{Rune de Vengeance}{35}Une par Armée.\newline Usage Unique. Peut être activée au début de n'importe quelle Phase de Mouvement. Les unités amies à moins de \distance{6} du porteur gagnent la \devastatingcharge{} jusqu'à la fin du Tour de Joueur.
+\pricelistitem{Rune de Vengeance}{35}\oneperarmy{}.
 
-\pricelistitem{Rune du Dragon}{35}Le porteur gagne une \breathweapon{} avec Force 4, \flamingattacks{} et \magicalattacks{}.
+Usage Unique. Peut être activée au début de n'importe quelle Phase de Mouvement. Les unités amies à moins de \distance{6} du porteur gagnent la règle \devastatingcharge{} jusqu'à la fin du Tour de Joueur.
+
+\pricelistitem{Rune du Dragon}{35}Le porteur gagne la règle \breathweapon{Force 4, \flamingattacks{} et \magicalattacks{}}.
 
 \pricelistitem{Rune de Courage}{30}Usage Unique. Peut être activée au début de n'importe quelle Manche de Corps à Corps. Le porteur gagne la règle \stubborn{} pour la durée de la Phase.
 
@@ -568,15 +596,21 @@ Un maximum de 3 Runes de cet ensemble peuvent être sélectionnées et comptent 
 
 Les figurines avec la règle \runecraft{} ou \runecraftmastery{} peuvent prendre un maximum de 3 Runes de cet ensemble qui comptent alors comme un unique Objet Cabalistique.
 
-\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm] % to remove smaepage
+\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm] % to remove samepage
 
-\pricelistitem{Rune de Connaissance}{50}\oneofakind{}.\newline À la fin de votre Phase de Magie, le porteur peut mettre de côté un Dé de Magie et l'ajouter à votre réserve à la Phase de Magie suivante, immédiatement après avoir jeté les dés pour les Flux de Magie.
+\pricelistitem{Rune de Connaissance}{50}\oneofakind{}.
+
+À la fin de votre Phase de Magie, vous pouvez mettre de côté un Dé de Magie et l'ajouter à votre réserve à la Phase de Magie suivante, immédiatement après avoir jeté les dés pour les Flux de Magie.
 
 \pricelistitem{Rune de Maîtrise}{40}Une fois par Phase de Magie, le porteur peut relancer un Dé de Pouvoir utilisé pour un Objet de Sort.
 
-\pricelistitem{Rune Dévoreuse de Sort}{35}Une par Armée.\newline Usage Unique. Le joueur peut décider d'utiliser cette Rune plutôt que de tenter une dissipation. Le sort est lancé normalement, mais il est ensuite perdu et ne peut plus être relancé de la partie. Cette Rune ne peut pas être combinée avec une Rune de Déni sur un même objet.
+\pricelistitem{Rune Dévoreuse de Sort}{35}\oneperarmy{}.
 
-\pricelistitem{Rune de Déni}{35}Une par Armée.\newline Usage Unique. Le joueur peut décider d'utiliser cette Rune plutôt que de tenter une dissipation. Le sort est automatiquement dissipé.
+Usage Unique. Le joueur peut décider d'utiliser cette Rune plutôt que de tenter une dissipation. Le sort est lancé normalement, mais il est ensuite perdu et ne peut plus être relancé de la partie. Cette Rune ne peut pas être combinée avec une Rune de Déni sur un même objet.
+
+\pricelistitem{Rune de Déni}{35}\oneperarmy{}.
+
+Usage Unique. Le joueur peut décider d'utiliser cette Rune plutôt que de tenter une dissipation. Le sort est automatiquement dissipé.
 
 \pricelistitem{Rune Brillante}{35} Le porteur ajoute un bonus de +1 à tous ses jets de dissipation ainsi qu'aux jets de lancement de sorts liés à des Objets de Sort. Cela passe outre les restrictions habituelles empêchant les modificateurs de lancement pour les Objets de Sort.
 

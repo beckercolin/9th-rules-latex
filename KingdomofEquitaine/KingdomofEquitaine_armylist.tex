@@ -1,0 +1,535 @@
+\armylist
+
+\lordstitle
+
+\showunit{
+	name={\duke{}},
+	cost={85},
+	profile={< 4 6 3 4 4 3 6 4 9},
+	type=\infantry{},
+	unitsize={1},
+	basesize=20x20,
+	commontype=\equitainecommonrules{},
+	commonspecialrules={\lanceformation{},\theblessing{},\oathoffealty{},\jousting{}},
+	armour={\ha{}},
+	options={
+		\magicalitemsallowance{}=\upto<100,
+		\maytakeasinglevirtue{}=\unlimited,
+		\maytakeoneofthefollowing
+			{
+			\questingoath{}=25,
+			\grailoath{}=25,
+			},
+		\maytakeashield{}=5,
+		\weaponschoice
+			{
+			\morningstar{}=6,
+			\gw{}=10,
+			\halberd{}=10,
+			\flail{}=10,
+			\lance{}=15,
+			},
+		},
+	mounts={\bardedwarhorse{}=35,\pegasus{}=55,\hippogriff{}=100},
+	}
+
+
+	
+\showunit{
+	name={\graildamsel{}},
+	cost={160},
+	profile={< 4 3 3 3 3 3 3 1 8},
+	type=\infantry{},
+	unitsize={1},
+	basesize=20x20,
+	commontype=\equitainecommonrules{},
+	commonspecialrules={\beloved{},\lanceformation{},\theblessing{}},
+	specialrules={\insignificant{}},
+	magiclevel=3,
+	magicpaths={\wilderness, \nature, \heavens, \whitemagic},
+	options={
+		\magicalitemsallowance{}=\upto<100,
+		\magiclevel{4}=30,
+		\maytakeoneofthefollowing
+			{
+			\magicresistance{1}=15,
+			\magicresistance{2}=35,
+			},
+		},
+	mounts={\bardedwarhorse{}=25,\pegasus{}=40,\unicorn{}=60},
+	}	
+
+\heroestitle	
+
+\showunit{
+	name={\paladin{}},
+	cost={50},
+	profile={< 4 5 3 4 4 2 5 3 8},
+	type=\infantry{},
+	unitsize={1},
+	basesize=20x20,
+	commontype=\equitainecommonrules{},
+	commonspecialrules={\lanceformation{},\theblessing{},\oathoffealty{},\jousting{}},
+	armour={\ha{}},
+	options={
+		\bsboption{}=25,
+		\magicalitemsallowance{}=\upto<50,
+		\maytakeasinglevirtue{}=\unlimited,
+		\maytakeoneofthefollowing
+			{
+			\questingoath{}=10,
+			\grailoath{}=15,
+			},
+		\maytakeashield{}=2,
+		\weaponschoice
+			{
+			\morningstar{}=3,
+			\gw{}=4,
+			\halberd{}=4,
+			\flail{}=4,
+			\lance{}=6,
+			},
+		},
+	mounts={\bardedwarhorse{}=25,\pegasus{}=55},
+	}
+	
+\showunit{
+	name={\damsel{}},
+	cost={60},
+	profile={< 4 3 3 3 3 2 3 1 7},
+	type=\infantry{},
+	unitsize={1},
+	basesize=20x20,
+	commontype=\equitainecommonrules{},
+	commonspecialrules={\beloved{},\lanceformation{},\theblessing{}},
+	specialrules={\insignificant{}},
+	magiclevel=1,
+	magicpaths={\wilderness, \nature, \heavens, \whitemagic},
+	options={
+		\magicalitemsallowance{}=\upto<50,
+		\magiclevel{2}=25,
+		\maytakemagicresistance{}=15,
+		},
+	mounts={\bardedwarhorse{}=15},
+	}		
+	
+\showunit{
+	name={\castellan{}},
+	cost={40},
+	profile={< 4 4 4 4 4 2 3 2 7},
+	type=\infantry{},
+	unitsize={1},
+	basesize=20x20,
+	commontype=\equitainecommonrules{},
+	commonspecialrules={\serfs{}},
+	specialrules={\lowborn{},\masteratarms{},\insignificant{}},
+	armour={\la{}},
+	options={
+		\magicalitemsallowance{}=\upto<25,
+		\maybecomeoneofthefollowing
+			{
+			\rabblerouser=10,
+			\rousingorator=10,
+			},
+		\maytakeashield{}=2,
+		\shootingweapononechoice
+			{
+			\longbow=2,
+			\crossbow=5,
+			},
+		\combatweapononechoice
+			{
+			\halberd{}=2,
+			\spear{}=2,
+			\lightlance{}=2,
+			},
+		},
+	unitrules={
+		\unitrule{\lowborn{}}{\lowbornrule{}}	
+		\unitrule{\masteratarms{}}{\masteratarmsrule{}}
+		\unitrule{\rabblerouser{}}{\rabblerouserrule{}}
+		\unitrule{\rousingorator{}}{\rousingoratorrule{}}
+		},
+	mounts={\bardedwarhorse{}=15},
+	}	
+
+\coreunitstitle		
+	
+\showunit{
+	name={\knightsaspirants{}},
+	cost={95},
+	profile={
+	\aspirant < 4 3 3 3 3 1 3 1 7,
+	\bardedwarhorse < 9 3 - 3 3 1 3 1 5,
+	},
+	costpermodel=17 ,
+	maxmodels=15,
+	type=\cavalry{},
+	unitsize={5},
+	basesize=25x50,
+	commontype=\equitainecommonrules{},
+	commonspecialrules={\lanceformation{},\theblessing{}},
+	specialrules={\thunderouscharge{}    \only{\bardedwarhorse},\impetuous{}},
+	weapons={\lance{}},
+	armour={\la{},\shield{},\barding{},\mountsprotection{6}},
+	options={
+		\maytakeha{}=\permodel<4,
+		\maybecome{} \crusaders{}=\permodel<2,
+		},
+		unitrules={
+		\unitrule{\crusaders{}}{\crusadersrule{}}
+		\unitrule{\impetuous{}}{\impetuousrule{}}
+		},		
+	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
+	}
+
+\showunit{
+	name={\knightsoftherealm{}},
+	cost={110},
+	profile={
+	\knightoftherealm < 4 4 3 4 3 1 3 1 8,
+	\bardedwarhorse < 9 3 - 3 3 1 3 1 5,
+	},
+	costpermodel=26 ,
+	maxmodels=15,
+	type=\cavalry{},
+	unitsize={5},
+	basesize=25x50,
+	commontype=\equitainecommonrules{},
+	commonspecialrules={\lanceformation{},\theblessing{},\oathoffealty{},\jousting{}},
+	specialrules={\thunderouscharge{}  \only{\bardedwarhorse}},
+	weapons={\lance{}},
+	armour={\ha{},\shield{},\barding{},\mountsprotection{6}},
+	options={
+			\mayremplaceshield
+			{
+			\morningstar{}=\permodel<3,
+			\flail{}=\permodel<5,
+			},
+		},
+	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
+	}
+	
+\showunit{
+	name={\peasantlevy{}},
+	cost={60},
+	profile={< 4 2 2 3 3 1 3 1 5},
+	type=\infantry{},
+	costpermodel=4 ,
+	maxmodels=60,
+	type=\infantry{},
+	unitsize={20},
+	basesize=20x20,
+	commontype=\equitainecommonrules{},
+	commonspecialrules={\serfs{}},
+	specialrules={\insignificant{}},
+	armour={\la{},\shield{}},
+	options={
+		\combatweapononechoice
+			{
+			\spear{}=\free,
+			\halberd{}=\permodel<1,
+			},
+		},
+	commandgroup={champion=10, musician=10, banner=10},
+	}
+	
+\showunit{
+	name={\peasantbowmen{}},
+	cost={60},
+	profile={< 4 2 3 3 3 1 3 1 5},
+	type=\infantry{},
+	costpermodel=5 ,
+	maxmodels=30,
+	type=\infantry{},
+	unitsize={10},
+	basesize=20x20,
+	commontype=\equitainecommonrules{},
+	commonspecialrules={\bowmenstakes{},\serfs{}},
+	specialrules={\insignificant{}},
+	weapons={\longbow{}},
+	options={
+		\anyofthefollowing	
+			{
+			\braziers{}=10,
+			\la{}=\permodel<1
+			},
+		\specialcrossbow{}=\permodel<2,	
+		\mayremplacebowmenstakes{} \Xmodelsorless{20}=\permodel<1,
+		\brigandsoption{} \Xmodelsorless{10}=\permodel<4,
+			},
+	unitrules={
+		\unitrule{\braziers{}}{\braziersrule{}}
+		\unitrule{\brigands{}}{\brigandsrule{}}
+		\unitrule{\bowmenstakes{}}{\bowmenstakesrule{}}
+		},
+	commandgroup={champion=10, musician=10, banner=10},
+	}		
+
+\specialunitstitle
+
+	
+\showunit{
+	name={\knightsofthequest{}},
+	cost={110},
+	profile={
+	\knightofthequest < 4 5 3 4 3 1 4 1 8,
+	\bardedwarhorse < 9 3 - 3 3 1 3 1 5,
+	},
+	costpermodel=26 ,
+	maxmodels=15,
+	type=\cavalry{},
+	unitsize={5},
+	basesize=25x50,
+	commontype=\equitainecommonrules{},
+	commonspecialrules={\lanceformation{},\theblessing{},\questingoath{}},
+	specialrules={\thunderouscharge{}  \only{\bardedwarhorse}},
+	weapons={\gw{}},
+	armour={\ha{},\shield{},\barding{},\mountsprotection{6}},
+	options={
+			\maybecome{} \hedgeknights{} \Xmodelsorless{9}=\permodel<5, 
+		},
+	unitrules={
+		\unitrule{\hedgeknights{}}{\hedgeknightsrule{}}
+		},
+	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
+	}
+
+
+\showunit{
+	name={\pegasusknights{}},
+	cost={145},
+	profile={
+	\pegasusknight < 4 4 3 4 3 1 3 1 8,
+	\youngpegasus < 8 3 - 4 4 2 4 2 7,
+	},
+	costpermodel=42,
+	maxmodels=6,
+	type=\cavalry{},
+	unitsize={3},
+	basesize=40x40,
+	commontype=\equitainecommonrules{},
+	commonspecialrules={\theblessing{},\oathoffealty{}},
+	specialrules={\fly{9}},
+	weapons={\lance},
+	armour={\ha{},\shield{},\mountsprotection{6}},
+	options={
+		\anyofthefollowing
+			{
+			\devastatingcharge{} \only{\pegasusknight}=\permodel<2,
+			\skirmishers{} \Xmodelsorless{4}=\permodel<5,
+			\vanguard{}=\permodel<6,
+			},
+		\maytake{} un \barding{}=\permodel<10,
+		},
+	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
+	}		
+	
+
+\showunit{
+	name={\yeomanoutriders{}},
+	cost={55},
+	profile={
+	\yeomanoutrider < 4 3 3 3 3 1 3 1 6,
+	\horse < 8 3 - 3 3 1 3 1 5,
+	},
+	costpermodel=8 ,
+	maxmodels=15,
+	type=\cavalry{},
+	unitsize={5},
+	basesize=25x50,
+	commontype=\equitainecommonrules{},
+	commonspecialrules={\serfs{}},
+	specialrules={\fastcavalry{},\insignificant{}},
+	weapons={\bow{},\lightlance{}},
+	armour={\mountsprotection{6}},
+	options={
+			\anyofthefollowing
+				{
+				\shield{}=\permodel<1,
+				\la{}=\permodel<2,
+				},
+			\mayremplacebowbythrowingweapons=\free,
+		},
+	commandgroup={champion=10, musician=10, banner=10},
+	}	
+	
+\showunit{
+	name={\knightsforlorn{}},
+	cost={85},
+	profile={< 4 4 3 4 3 1 4 1 8},
+	costpermodel=12 ,
+	maxmodels=40,
+	type=\infantry{},
+	unitsize={10},
+	basesize=20x20,
+	commontype=\equitainecommonrules{},
+	commonspecialrules={\theblessing{},\questingoath{}},
+	weapons={\gw{}},
+	armour={\ha{},\shield{}},
+	options={
+			\maybecome{} \skirmishers{} \Xmodelsorless{15}=\free, 
+			\maybecome{} \hedgeknights{} \Xmodelsorless{20}=\permodel<2, 
+		},
+unitrules={
+		\unitrule{\hedgeknights{}}{\hedgeknightsrule{}}
+		},		
+	commandgroup={champion=10, musician=10, banner=10,bannerallowance=50},
+	}
+	
+\showunit{
+	name={\peasantcrusaders{}},
+	cost={60},
+	profile={< 4 3 2 3 3 1 3 1 7},
+	costpermodel=6 ,
+	maxmodels=40,
+	type=\infantry{},
+	unitsize={10},
+	basesize=20x20,
+	commontype=\equitainecommonrules{},
+	commonspecialrules={\serfs{}},
+	specialrules={\frenzy{},\hatred{},\insignificant{},\stubborn{}},
+	armour={\la{},\shield{}},
+	options={
+			\mayremplaceshieldbypw{}=\free,
+		},		
+	commandgroup={champion=10, musician=10, banner=10},
+	}			
+
+\rareunitstitle
+
+\showunit{
+	name={\knightsofthegrail{}},
+	cost={90},
+	profile={
+	\knightofthegrail < 4 5 3 4 4 1 5 2 8,
+	\bardedwarhorse < 9 3 - 3 3 1 3 1 5,
+	},
+	costpermodel=38 ,
+	maxmodels=8,
+	type=\cavalry{},
+	unitsize={3},
+	basesize=25x50,
+	commontype=\equitainecommonrules{},
+	commonspecialrules={\lanceformation{},\grailoath{}  \only{\knightofthegrail},\pureofheart{},\oathoffealty{},\jousting{}},
+	specialrules={\thunderouscharge{}  \only{\bardedwarhorse},\monstroussupport{}},
+	weapons={\lance{}},
+	armour={\ha{},\shield{},\barding{},\mountsprotection{6}},
+	options={
+			\maytake{} \holyattacks{}=\permodel<3,
+		},
+	unitrules={
+		\unitrule{\pureofheart{}}{\pureofheartrule{}}
+		},			
+	commandgroup={champion=10,\magicalweaponallowance{}=25, musician=10, banner=10,bannerallowance=50},
+	}
+
+\showunit{
+	name={\thegreenknight{}},
+	cost={210},
+	profile={
+	\thegreenknight < 4 6 3 4 4 3 6 4 9,
+	\bardedwarhorse < 9 4 - 4 3 1 4 1 5,
+	},
+	type=\cavalry{},
+	basesize=25x50,
+	unitsize={1},
+	specialrules={\otherworldly{},\ambush{},\ethereal{},\unstable{},\weaponmaster{},\terror{}, \oneofakind{}},
+	weapons={\gw{},\pw{}},
+	armour={\ha{},\shield{},\barding{},\mountsprotection{6}},
+	}
+	
+\showunit{
+	name={\siegewarmachine},
+	cost={-},
+	profile={
+		\siegewarmachine < - - - - 7 4 - - -,
+		\apprentice (4) < - 2 3 3 3 - 3 1 5,},
+	type=\warmachine,
+	unitsize={1},
+	basesize=75,
+	commontype=\equitainecommonrules{},
+	commonspecialrules={\serfs{}},
+	specialrules={\insignificant{}},
+	options={
+		\siegewarmachineoptions
+			{
+		\textbf \newline \textbf{\scorpion}=65,
+		Baliste{,} \range{48}{,} Force 6{,} \multiplewounds{\ordnance}{}{,} \armourpiercing{6}.,
+		\textbf \newline \textbf{\trebuchet}=130,
+		Catapulte. \range{12-60}{,} Force 4 (10){,}   (\multiplewounds{\ordnance}{}){,} \armourpiercing{1}.,
+			}
+		}
+	}
+ 	
+\showunit{
+	name={\sacredreliquary{}},
+	cost={130},
+	profile={ < 4 3 2 3 5 6 3 4 8},
+	type=\infantry{},
+	basesize=40x60,
+	unitsize={1},
+	commontype=\equitainecommonrules{},
+	commonspecialrules={\holyfervor{}},
+	specialrules={\insignificant{},\warplatform{},\stubborn{},\impacthits{1D3}},
+	armour={\la{},\innatedefence{5}},
+	unitrules={
+		\unitrule{\holyfervor{}}{\holyfervorrule{}}
+		},	
+	}		 	
+
+\mountstitle
+
+\mountssectionannouncement
+
+\showunit{
+	name={\hippogriff{}},
+	cost={-},
+	profile={< 7 4 - 5 5 4 4 4 6},
+	type=\monstrousbeast{},
+	basesize=50x50,
+	specialrules={\largetarget{},\fear{},\fly{8}},
+	armour={\mountsprotection{6}},
+	options={
+			\maytake{} \devastatingcharge{}=5,
+			\maytake{} \armourpiercing{1}=5,
+		}, 		
+	}
+	
+\showunit{
+	name={\pegasus{}},
+	cost={-},
+	profile={< 7 4 - 4 4 3 4 2 6},
+	type=\monstrousbeast{},
+	basesize=40x40,
+	specialrules={\fly{8}},
+	armour={\mountsprotection{6}},
+	options={
+			\maybecome{} \royalpegasus{}=10,
+			\maytake{} un \barding{}=15,
+		}, 	
+	unitrules={
+		\unitrule{\royalpegasus{}}{\royalpegasusrule{}}		
+		},
+	}
+	
+\showunit{
+	name={\unicorn{}},
+	cost={-},
+	profile={< 10 5 - 4 4 3 5 2 8},
+	type=\warbeast{},
+	basesize=25x50,
+	specialrules={\magicalattacks{},\thunderouscharge{},\strider{Forêt}, \magicresistance{2}},
+	armour={\mountsprotection{6}},
+	}
+	
+\showunit{
+	name={\bardedwarhorse{}},
+	cost={-},
+	profile={< 9 3 - 3 3 1 3 1 5},
+	type=\warbeast{},
+	basesize=25x50,
+	specialrules={\thunderouscharge{}  \only{\bardedwarhorse}},
+	armour={\barding{},\mountsprotection{6}},
+	}
+	

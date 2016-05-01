@@ -1,0 +1,410 @@
+
+\input{../Layout/AB_layout.tex}
+
+\newcommand{\booktitle}{Royaume d'Equitaine}
+\newcommand{\version}{0.99.5}
+\newcommand{\frenchversion}{1.0}
+\newcommand{\translationteam}{\item \og AEnoriel \fg \item \og Anglachel \fg \item \og Astadriel \fg \item \og Batcat \fg \item \og Eru \fg  \item \og Gandarin \fg \item \og Groumbahk \fg \item \og Iluvatar \fg \item \og Kingcheese \fg \item \og Lamronchak \fg \item \og Mammstein \fg}
+
+% Army special rules
+
+\newcommand{\theblessing}{La Bénédiction}
+\newcommand{\tokenoftheking}{L'Emblême du Roi}
+\newcommand{\tokenofthegrail}{Symbole du Graal}
+\newcommand{\lanceformation}{Formation en Lance}
+\newcommand{\jousting}{Talent de Jouteur}
+\newcommand{\beloved}{Bien-Aimée}
+\newcommand{\serfs}{Serfs}
+
+
+% Serments
+
+\newcommand{\oathoffealty}{Serment de Fidélité}
+\newcommand{\questingoath}{Voeux de la Quête}
+\newcommand{\grailoath}{Onction du Graal}
+
+% Vertus
+
+\newcommand{\piety}{Vertu de Piété}
+\newcommand{\renown}{Vertu de Renom}
+\newcommand{\might}{Vertu de Puissance}
+\newcommand{\valour}{Vertu de Valeur}
+\newcommand{\audacity}{Vertu d'Audace}
+\newcommand{\daring}{Vertu de Hardiesse}
+\newcommand{\humility}{Vertu d'Humilité}
+
+% Armoury
+
+
+% Army common type special rules
+
+\newcommand{\equitainecommonrules}{Règles spéciales du Royaume d'Equitaine}
+
+% Other Rules
+
+% castellan
+
+\newcommand{\lowborn}{Basse Naissance}
+\newcommand{\masteratarms}{Entraîneur Militaire}
+\newcommand{\rousingorator}{Tribun}
+\newcommand{\rabblerouser}{Roi des Gueux}
+
+% Aspirants Paladins
+
+\newcommand{\impetuous}{Impétueux}
+\newcommand{\crusaders}{Croisés}
+
+% Archers Paysans
+
+\newcommand{\bowmenstakes}{Défenses d'Archers}
+\newcommand{\braziers}{Braséros}
+\newcommand{\brigands}{Brigands}
+
+% Paladins de la Quête
+% Paladins Sans Terre
+
+\newcommand{\hedgeknights}{Paladins Errants}
+
+%Paldins du Graal
+
+\newcommand{\pureofheart}{Pur de Coeur}
+\newcommand{\monstroussupport}{Soutien Monstrueux}
+
+% Reliquaire Sacré
+
+\newcommand{\holyfervor}{Ferveur Sacrée}
+
+% Spells
+
+
+
+% Characters
+
+\newcommand{\duke}{Duc}
+\newcommand{\graildamsel}{Enchanteresse du Graal}
+\newcommand{\paladin}{Parangon}
+\newcommand{\damsel}{Jouvencelle du Graal}
+\newcommand{\castellan}{Castellan}
+
+% Core
+
+\newcommand{\knightsaspirants}{Aspirants Paladins}
+\newcommand{\knightsoftherealm}{Paladins du Royaume}
+\newcommand{\peasantlevy}{Levée Paysanne}
+\newcommand{\peasantbowmen}{Archers Paysans}
+
+% Special
+
+\newcommand{\knightsofthequest}{Paladins de la Quête}
+\newcommand{\pegasusknights}{Paladins Pégases}
+\newcommand{\yeomanoutriders}{Roturiers Montés}
+\newcommand{\knightsforlorn}{Paladins Sans-Terre}
+\newcommand{\peasantcrusaders}{Pénitents du Graal}
+
+
+% Rare
+
+\newcommand{\knightsofthegrail}{Paladins du Graal}
+\newcommand{\thegreenknight}{Le Chevalier d'Emeraude}
+\newcommand{\siegewarmachine}{Machine de Siège}
+\newcommand{\scorpion}{Scorpion}
+\newcommand{\trebuchet}{Trébuchet}
+\newcommand{\sacredreliquary}{Reliquaire Sacré}
+
+
+% Mounts
+
+\newcommand{\bardedwarhorse}{Cheval de Guerre}
+\newcommand{\youngpegasus}{Jeune Pégase}
+\newcommand{\pegasus}{Pégase}
+\newcommand{\hippogriff}{Hippogryphe}
+\newcommand{\unicorn}{Licorne}
+\newcommand{\horse}{Cheval}
+\newcommand{\spectralstalion}{Etalon Spectral}
+\newcommand{\royalpegasus}{Pégase Royal}
+
+% Profile names
+
+\newcommand{\aspirant}{Aspirant}
+\newcommand{\knightoftherealm}{Paladin du Royaume}
+\newcommand{\knightofthequest}{Paladin de la Quête}
+\newcommand{\pegasusknight}{Paladin Pégase}
+\newcommand{\yeomanoutrider}{Roturier}
+\newcommand{\knightofthegrail}{Paladin du Graal}
+\newcommand{\apprentice}{Apprenti}
+
+% Profile wording
+
+\newcommand{\siegewarmachineoptions}{\optionschoice{\textbf{Doit choisir entre deux configurations :}}}
+\newcommand{\mayremplaceshieldbypw}{Peut remplacer son \shield{} par une \pw{}}
+\newcommand{\mayremplacebowmenstakes}{Peut remplacer ses \bowmenstakes{} par la règle \skirmishers{}}
+\newcommand{\brigandsoption}{Si l'armée comprend un \castellan{}, une unité peut être améliorée en \brigands{}}
+\newcommand{\mayremplacebowbythrowingweapons}{Peut remplacer son Arc par des Armes de jet}
+\newcommand{\bastardsword}{Epée Bâtarde (compte comme une \halberd)}
+\newcommand{\maytakeasinglevirtue}{Peut prendre une seule Vertu}
+\newcommand{\morningstar}{Etoile du Matin (compte comme une \pw{})}
+\newcommand{\maytakemagicresistance}{Peut prendre une \magicresistance{1}}
+\newcommand{\mayremplaceshield}{\optionschoice{Peut remplacer son Bouclier :}}
+\newcommand{\flamingshoots}{\flamingattacks{}(tir uniquement)}
+\newcommand{\specialcrossbow}{\crossbow{} (uniquement si des \crusaders{} sont présents dans l'armée, ne peuvent pas prendre de \braziers{}}
+
+% Profile rules
+
+% Castellan
+
+\newcommand{\lowbornrule}{%
+Ne peut rejoindre que des unités dont toutes les figurines suivent la règle \insignificant{} et gagne les règles suivantes en fonction des unités qu'il rejoint:
+\begin{customsubitemize}
+\item S'il rejoint une unité de \yeomanoutriders{}, il gagne la règle \fastcavalry{}. 
+\item S'il rejoint une unité de \peasantcrusaders{}, il gagne les règles \frenzy{} et \hatred{}.
+\item S'il rejoint une unité de \brigands{}, il gagne les règles \scout{} et \quicktofire{}.
+\end{customsubitemize}
+}
+
+\newcommand{\masteratarmsrule}{%
+Le Castellan dispose de la règle \weaponmaster{} et la confère à toute unité qu'il rejoint. Si un \castellan{} est inclus dans l'armée, une unité d'\peasantbowmen{} peut devenir \brigands{}. 
+}
+
+\newcommand{\rousingoratorrule}{%
+Le Castellan gagne la règle \devastatingcharge{} et la confère à toute unité qu'il rejoint.
+}
+
+\newcommand{\rabblerouserrule}{%
+Si toutes les figurines de l'armée suivent la règle \insignificant{}, le Castellan gagne +2 en Commandement et peut devenir le Porteur de la Grande Bannière pour 25 points.
+}
+
+% Aspirants Paladins
+
+\newcommand{\impetuousrule}{%
+Les figurines suivant cette règle gagnent la règle \frenzy{} \only{\aspirant} jusqu'à la fin du tour lorsqu'elles déclarent une charge. Une unité entièrement composée de figurines disposant de cette règle peut relancer ses jets de distance de charge ratés.
+}
+
+\newcommand{\crusadersrule}{%
+Les figurines suivant cette règle gagnent la règle \thunderouscharge{}.
+}
+
+% Archers paysans
+
+\newcommand{\bowmenstakesrule}{%
+Lorsque vous déployez l'unité de \peasantbowmen{}, vous pouvez placer un mur en contact socle à socle avec le front de l'unité. Ce mur est large de \distance{12} et profond de 20 mm maximum. Ce mur suit les règles normales des murs mis à part qu'il procure un couvert léger.
+}
+
+\newcommand{\braziersrule}{%
+Avant de tirer avec une unité comportant des \braziers{}, le joueur peut décider de donner à leurs tirs la règle \flamingattacks{} pour la durée de cette phase. 
+}
+
+\newcommand{\brigandsrule}{%
+La figurine gagne +1 en Capacité de Tir et les règles \scout{}, \skirmishers{} et \quicktofire{}. Les \brigands{} ne peuvent pas porter d'\crossbow{} ni utiliser des \braziers. ils perdent également leurs \bowmenstakes{}.
+}
+
+% Paladins de la Quête
+
+\newcommand{\hedgeknightsrule}{%
+La figurine gagne les règles \vanguard{}, \scout{} et \strider{Forêts}.
+}
+
+% Paladins du Graal
+
+\newcommand{\pureofheartrule}{%
+Seuls les personnages suivant les règles \beloved{} ou \grailoath{}  peuvent rejoindre une unité avec la règle \pureofheart{}.
+}
+
+% Reliquaire Sacré
+
+\newcommand{\holyfervorrule}{%
+Toutes les figurines amies suivant la règle \insignificant{} dans un rayon de \distance{6} du Reliquaire gagnent la règle \theblessing{}. Toutes les figurines amies (Infanterie et Cavalerie uniquement) suivant la règle \insignificant{} dans un rayon de \distance{6} du Reliquaire gagnent la règle \fightinextrarank{} et peuvent relancer les \result{1} naturels pour blesser au corps à corps.
+}
+
+% Montures
+
+\newcommand{\royalpegasusrule}{%
+La figurine gagne +1 Attaque et son socle passe à 50x50 mm. 
+}
+
+\begin{document}
+
+\input{../Layout/AB_titlepage.tex}
+
+\startarmyspecialrules
+
+\armyspecialruleentry{\beloved}
+
+Une figurine avec cette règle spéciale perd la règle \firstinrank{} si elle se trouve dans une unité dont au moins un Rang complet est composé de figurines avec la règle \lanceformation{}. Elle ignore également toutes les pénalités lorsqu'elle refuse un défi.
+
+\armyspecialruleentry{\lanceformation}
+
+La figurine gagne les règles \monstrousrank{} et \fightinextrarank{}. Lorsqu'une unité disposant de rangs de 3 figurines de large charge, les figurines gagnent un \fightinextrarank{} en plus. 
+
+\armyspecialruleentry{\theblessing}
+
+Les figurines avec cette règle spéciale ont une \wardsave{6}. L'armée peut également choisir une des options suivantes, qui affectera toutes les sunités suivant la règle \theblessing{} pour la durée de la partie (à inscrire sur la liste d'armée):
+\begin{customsubitemize}
+\item \textbf{Emblème du Roi}: La \wardsave{} accordée par \theblessing{} passe à 5+ contre les attaques de Force 5 ou plus. 
+\item \textbf{Symbole du Graal}: La \wardsave{} accordée par \theblessing{} passe à 5+ contre les attaques suivant la règle \armourpiercing{}.
+\end{customsubitemize}\newline
+ Si une des deux options est choisie, l'armée ne peut gagner aucun bonus lors du jet de dé décidant quel joueur aura le premier tour. 
+
+\armyspecialruleentry{\grailoath}
+
+Les figurines avec cette règle spéciale gagnent les règles \magicalattacks{}, \immunetopsychology{} et \wardsave{5}. Les personnages avec cette règle gagnent +1 en Capacité de Combat. Cette règle est \oneofakind{} pour les personnages.
+
+\armyspecialruleentry{\serfs}
+
+Si la moitié ou plus des figurines d'une unité suivent cette règle, et si cette unité est sous les effets de la \inspiringpresence{} de figurines suivant la règle \oathoffealty{}, cette unité gagne +1 en Mouvement lorsqu'elle effectue une Marche forcée.
+
+\armyspecialruleentry{\oathoffealty}
+
+Les figurines avec cette règle spéciale ont la règle \inspiringpresence{}, même si elles ne sont pas Général, mais avec une \range{6}. Seules les figurines avec la règle \serfs{} peuvent bénéficier de cette \inspiringpresence{}.
+
+\armyspecialruleentry{\jousting}
+
+Une figurine avec cette règle spéciale peut toujours utiliser une \lance{} en charge, même si elle porte une arme magique. Si elle utilise une \lance{} lorsque charge, elle peut ensuite changer d'arme lors du tour de combat suivant.
+
+\armyspecialruleentry{\questingoath}
+
+Les parties de la figurine suivant cette règle ignorent les effets de la \fear{} et peuvent utiliser un \shield{} et une \gw{} en même temps. Les personnages avec cette règle gagnent en plus \multiplewounds{2,\largetarget{}{}} et doivent acheter et utiliser une \gw{}.
+
+
+\closearmyspecialrules
+
+
+
+\startarmynewsection{Vertus}
+
+\begin{multicols}{2}\raggedcolumns
+
+\startpricelist
+
+\pricelistitem{\renown{}}{55/45} Le porteur gagne la règle \lethalstrike{}. Les jets naturels pour blesser au corps à corps donnant \result{6} causent des \multiplewounds{\ordnance}{}.
+
+\pricelistitem{\might{}}{50/35} Quand le porteur charge en utilisant une \lance{}, chaque blessure non sauvegardée causée au corps à corps par une attaque normale génère une autre attaque à la même Initiative, effectuée immédiatement. Cet effet s'applique avant la détermination des éventuelles \multiplewounds{}{}. Ces nouvelles attaques n'en génèrent pas d'autres. Résolvez ces attaques avant d'enlever les éventuelles pertes. De plus, le porteur gagne \devastatingcharge{} et \thunderouscharge{} lorsqu'il utilise une \lance{} au corps à corps.
+
+\pricelistitem{\piety{}}{40} Le porteur et les figurines de base de l'unité qu'il rejoint ajoutent +1 à leur \wardsave{} jusqu'à un maximum de 5+. Le porteur ne peut rejoindre que des unités de \cavalry{} ou d'\infantry{}.
+
+\pricelistitem{\audacity{}}{40/30} Si le porteur est en contact avec un ennemi ayant une Force ou une Endurance de 5 ou plus, il devient \stubborn{} et peut relancer tous ses jets pour toucher et pour blesser ratés.
+
+\pricelistitem{\valour{}}{40/30} Le porteur doit toujours lancer un défi, si possible, et aucune autre figurine ne peut lancer de défi avant lui. Ce défi doit être accepté, si possible. De plus, le porteur relance tous les jets pour toucher et pour blesser ratés en défi.
+
+\pricelistitem{\daring{}}{25} L'unité du porteur ajoute 1D3 à ses jets pour déterminer sa distance de charge.
+
+\pricelistitem{\humility{}}{20} La figurine avec cette règle obtient \insignificant{}, voit sa \inspiringpresence{} augmenter jusqu'à \distance{12} et gagne la règle \holdyourground{}, même si elle n'est pas Porteur de la Grande Bannière. Seules les figurines avec la règle \insignificant{} peuvent recevoir la règle \holdyourground{} de cette façon. Cette Vertu peut être dupliquée dans une armée.
+
+\endpricelist
+
+\end{multicols}
+
+\closearmynewsection
+
+\startarmymagicalitems
+
+\armymagicalweapons
+
+\startpricelist
+
+\pricelistitem{Masse de Tristan}{50/40} Type: Arme de base. Les attaques portées avec cette arme comptent comme ayant une Force supérieure d'un point à l'Endurance de la figurine qu'il attaque, sauf si celle-ci est déjà plus grande. Si un ennemi subit au moins une touche provoquée par cette arme, lancez un dé à la fin du palier d'Initiative actuel pour chaque touche réussie. Si au moins un \result{4} est obtenu, toutes les armes magiques portées par la figurine ennemie sont détruites.
+
+\pricelistitem{Lance-Dragon}{45/35} Type: \lance{}. Le porteur gagne une \breathweapon{Force 3, \flamingattacks{}}. Les attaques effectuées avec cette arme ont la règle \multiplewounds{1D3}{} jusqu'à la fin du tour durant lequel le porteur a chargé. Ce bonus ne peut être utilisé que pour attaquer directement les figurines faisant partie de l'unité chargée.
+
+\endpricelist
+
+\armymagicalarmour
+
+\startpricelist
+
+\pricelistitem{Heaume du Croisé}{45} Type: Aucun (6+). Le porteur peut relancer toutes ses Sauvegardes d'Armure ratées. De plus, les attaques visant le porteur ayant la règle \lethalstrike{} perdent cette règle.
+
+\pricelistitem{Armure de Perceval}{30} Type: \ha{}. Cette armure confère +1 à toute \wardsave{} que possède le porteur, jusqu'à un maximum de 4+. Les attaques visant le porteur ayant la règle \holyattacks{} perdent cette règle.
+
+\endpricelist
+
+\armytalismans
+
+\startpricelist
+
+\pricelistitem{Ecritures Bénies}{25/15} Les \multiplewounds{}{} subies par le porteur sont divisées par deux, arrondies au supérieur.
+
+\pricelistitem{Talisman de Roland}{20} Lorsque le porteur de cet objet ou son unité charge, la cible de cette charge ne peut pas Tenir la position et tirer. De plus, le porteur et l'unité dans laquelle il est intégré gagnent +1 à leur \wardsave{} contre les attaques à distance non magiques, jusqu'à un maximum de 4+.
+
+\endpricelist
+
+\armyenchanteditems
+
+\startpricelist
+
+\pricelistitem{Corne-Tempête}{40} Une seule utilisation. Activez cet objet au début du tour de n'importe quel joueur. Les unités ennemies ne peuvent pas faire de Mouvement de \fly{} durant ce tour de joueur.
+
+\endpricelist
+
+\armyarcaneitems
+
+\startpricelist
+
+\pricelistitem{Hosties de Pénitence}{15} Générez 1D3+1 Hosties à la fin du déploiement. Lorsqu'il tente une dissipation, avant son jet de dé, le porteur peut décider d'utiliser une seule Hostie de Pénitence et ajouter +1 au résultat du jet de dissipation. Ceci est une exception à la règle de limitation des modificateurs magiques. Les Hosties de Pénitence usées ne peuvent pas être réutilisées.
+
+\endpricelist
+
+\armymagicalbanners
+
+\startpricelist
+
+\pricelistitem{Orifamme}{45} Les unités ennemies en contact socle à socle avec le porteur de cette bannière ne peuvent pas bénéficier de la règle spéciale \holdyourground{}. Le porteur gagne la règle spéciale \fear{}.
+
+\pricelistitem{Étendard de la Dernière Charge}{20}Les montures des figurines de l'unité du porteur ont \impacthits{1}.
+
+\endpricelist
+
+\closearmymagicalitems
+
+
+
+%%% START OF THE ARMYLIST - Translators shouldn't have to edit it %%%
+
+\input{KingdomofEquitaine_armylist.tex}
+
+
+%%% Quick Reference Sheet - AB_qrs.tex is automatic and shouldn't be edited %%%
+
+\quickrefsheettitle
+
+\input{../Layout/AB_qrs.tex}
+\bigskip
+
+
+\restoregeometry
+
+\changelogtitle
+
+\startchangelog
+
+\newlog{0.99.4}{%
+Quick reference sheet
+Questing Oath adjusted{,} Multiple Wounds(2{,} Large Target){,} no longer loses The Blessing,
+Grail Oath adjusted{,} restricted to One of a Kind,
+Piety{,} cost adjusted,
+Might{,} cost adjusted,
+Valour{,} cost adjusted,
+Audacity{,} cost adjusted,
+Mace of Tristan{,} cost adjusted,
+Lord Hippogriff mount{,} cost adjusted,
+Castellan {,} options expanded,
+Impetuous{,} clarified (Frenzy only for Knights),
+Knights of the Realm{,} cost adjusted,
+Peasant Bowmen{,} options adjusted and expanded (Brigands),
+Peasant crusaders{,} reduced initiative to 3,
+Knight of the Grail{,} champion magic weapon option{,} divine attacks{,} adjusted{,} pure of heart adjusted,
+Scorpion{,} cost adjusted,
+Sacred Reliquary{,} equipment adjusted,
+Knights of the Quest,
+Forlorn knights,
+Bastard sword removed from the army,
+Questing oath,
+Grail oath,
+Grail Damsel{,} cost{,} mount costs,
+Damsel{,} mount cost,
+unicorn basesize,
+}
+
+\endchangelog
+
+\end{document}
+

@@ -1,5 +1,5 @@
 
-%%% v0.99.5
+%%% v0.99.9
 
 \armylist
 
@@ -17,14 +17,14 @@
 	armour={\platearmour{}},
 	options={
 		\maytakerunicitems{}=\upto{}<125,
-		\maytakeaholdstone{}=30,
-		\maytakeashield{}=10,
+		\holdstone{}=30,
+		\shield{}=10,
 		\shootingweapononechoice{
 			\pistol{}=4,
 			\crossbow{}=8,
 			\handgun{}=8,
 		},
-		\maytakeagw{}=10,
+		\gw{}=10,
 	},
 	mounts={\shieldbearers{}=50,\warthrone{}=150},
 }
@@ -56,8 +56,9 @@
 }	
 
 
-\clearpage\lordstitle
 
+
+\clearpage\lordstitle
 
 \showunit{
 	name={\daemonseeker{}},
@@ -74,7 +75,7 @@
 	weapons={\pw{},\gw{}},
 	options={
 		\maytakearunicweapon{}=\upto{}<125,
-		\maytakeuptotwoofthefollowing{
+		\uptotwoofthefollowing{
 			\magicresistance{1}=15,
 			\fear{}=20,
 			\monsterseeker{}=30,
@@ -100,8 +101,8 @@
 	armour={\platearmour{}},
 	options={
 		\maytakerunicitems{}=\upto{}<125,			
-		\maytakeashield{}=3,
-		\maytakeagw{}=8,
+		\shield{}=3,
+		\gw{}=8,
 		\battleruneschoice{4}=\perrune{}<5,
 	},
 	unitrules={
@@ -122,7 +123,7 @@
 	armour={\platearmour{}},
 	options={
 		\maytakerunicitems{}=\upto{}<100,
-		\maytakeashield{}=3,
+		\shield{}=3,
 		\shootingweapononechoice{
 			\pistol{}=4,
 			\braceofpistols{}=5, 
@@ -130,8 +131,8 @@
 			\handgun{}=8,
 			\forgerepeater{}=10,
 			\wyrmslayerrocket{}=20,
-			},
-		\maytakeagw{}=8,
+		},
+		\gw{}=8,
 	},
 	additional={
 		\def\tempunitrules{\unitrule{\mastermarksman{}}{\mastermarksmanrule{}}}
@@ -161,18 +162,18 @@
 	armour={\platearmour{}},
 	options={
 		\maytakerunicitems{}=\upto{}<75,
-		\maytakeaholdstone{}=25,
-		\maybecomeoneofthefollowing{
+		\holdstone{}=25,
+		\onechoiceonly{
 			\bsb{}=25,
 			\clanleader{}=30,
 		},
-		\maytakeashield{}=8,
+		\shield{}=8,
 		\shootingweapononechoice{
 			\pistol{}=4,
 			\crossbow{}=8,
 			\handgun{}=8,
 		},
-		\maytakeagw{}=10,
+		\gw{}=10,
 	},
 	unitrules={
 		\unitrule{\clanleader{}}{\clanleaderrule{}}
@@ -192,7 +193,7 @@
 	armour={\platearmour{}},
 	options={
 		\maytakerunicitems{}=\upto{}<50,
-		\maytakeashield{}=2,
+		\shield{}=2,
 		\shootingweapononechoice{
 			\pistol{}=4,
 			\braceofpistols{}=5, 
@@ -201,7 +202,7 @@
 			\forgerepeater{}=10,
 			\wyrmslayerrocket{}=20,
 		},
-		\maytakeagw{}=6,
+		\gw{}=6,
 	},
 }
 
@@ -218,8 +219,8 @@
 	armour={\platearmour{}},
 	options={
 		\maytakerunicitems{}=\upto{}<75,			
-		\maytakeashield{}=2,
-		\maytakeagw{}=6,
+		\shield{}=2,
+		\gw{}=6,
 		\battleruneschoice{2}=\perrune{}<5,
 	},
 	unitrules={
@@ -242,7 +243,7 @@
 	weapons={\gw{},\pw{}},
 	options={
 		\maytakearunicweapon{}=\upto{}<75,
-		\maytakeuptotwoofthefollowing{
+		\uptotwoofthefollowing{
 			\magicresistance{1}=15,
 			\fear{}=20,
 			\monsterseeker{}=20,
@@ -255,10 +256,16 @@
 	},
 }
 
+
+
+
+
+
 \coreunitstitle
 
 \showunit{
 	name={\clanwarriors{}},
+	QRSname={\clanwarrior{}},
 	cost={60},
 	profile={< 3 4 3 3 4 1 2 1 9},
 	costpermodel=7,
@@ -271,8 +278,8 @@
 	armour={\ha{}},
 	options={
 		\onlyonemaytakevanguard{} \Xmodelsorless{30}=\permodel{}<1,
-		\maytakeashield{}=\permodel{}<1,
-		\maytakethrowingweapons{}=\permodel{}<1,
+		\shield{}=\permodel{}<1,
+		\throwingweapons{}=\permodel{}<1,
 		\weapononechoice{
 			\pw{}=\permodel{}<1,
 			\spear{}=\permodel{}<1,
@@ -284,6 +291,7 @@
 
 \showunit{
 	name={\greybeards{}},
+	QRSname={\greybeard{}},
 	cost={90},
 	profile={< 3 5 3 4 4 1 2 1 9},
 	costpermodel=11,
@@ -297,9 +305,9 @@
 	armour={\ha{}},
 	options={
 		\onlyonemaytakevanguard{} \Xmodelsorless{20}=\permodel{}<1,
-		\maytakeashield{}=\permodel{}<1,
-		\maytakethrowingweapons{}=\permodel{}<2,
-		\maytakeagw{}=\permodel{}<3,
+		\shield{}=\permodel{}<1,
+		\throwingweapons{}=\permodel{}<2,
+		\gw{}=\permodel{}<3,
 	},
 	unitrules={
 		\unitrule{\seenitall{}}{\seenitallrule{}}
@@ -309,6 +317,7 @@
 
 \showunit{
 	name={\clanmarksmen{}},
+	QRSname={\clanmarksman{}},
 	cost={110},
 	profile={ < 3 4 3 3 4 1 2 1 9},
 	costpermodel=11,
@@ -325,8 +334,8 @@
 			\handgun{}=\free,
 			\guildcraftedhandgun{} (\oneofakind{})=\permodel{}<2,
 		},
-		\maytakeashield{}=\permodel{}<1,
-		\maytakeagw{}=\permodel{}<3,
+		\shield{}=\permodel{}<1,
+		\gw{}=\permodel{}<3,
 	},
 	unitequipment={
 		\equipmentdef{\guildcraftedhandgun{}}{\guildcraftedhandgunrule{}}
@@ -338,6 +347,7 @@
 
 \showunit{
 	name={\deepwatch{}},
+	QRSname={\deepwatchSINGULAR{}},
 	cost={110},
 	profile={ < 3 5 3 4 4 1 2 1 9},
 	costpermodel=15,
@@ -370,13 +380,14 @@
 	armour={\platearmour{}},
 	weapons={\gw{}},
 	options={
-		\maytakeashield{}=\permodel{}<1,
+		\shield{}=\permodel{}<1,
 	},
 	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
 }
 
 \showunit{
 	name={\forgewardens{}},
+	QRSname={\forgewarden{}},
 	cost={140},
 	profile={ < 3 5 3 4 4 1 2 1 9},
 	costpermodel=14,
@@ -397,6 +408,7 @@
 
 \showunit{
 	name={\seekers{}},
+	QRSname={\seeker{}},
 	cost={55},
 	profile={ < 3 4 3 4 4 1 2 1 10},
 	costpermodel=11,
@@ -410,7 +422,7 @@
 	commonspecialrulesB={\unbreakable{},\weaponmaster{},\wardsave{6},\thebiggertheyare{},\comewithme{}},
 	weapons={\gw{},\pw{}},
 	options={
-		\maygain{} \vanguard{}=\permodel{}<2,
+		\vanguard{}=\permodel{}<2,
 		\seekersskirmishersoption{}=\permodel{}<2,
 	},
 	commandgroup={champion=10,musician=10},
@@ -418,6 +430,7 @@
 
 \showunit{
 	name={\steamcopters{}},
+	QRSname={\steamcopter{}},
 	profile={
 		\copter{} < 1 - - - 5 3 - - -,
 		\pilot{} < - 4 3 4 4 - 2 2 9,
@@ -445,9 +458,6 @@
 			\copterskirmishoption{}=10,
 		}
 		\vspace*{0.1cm}\options{\tempoptions}
-		
-		\def\tempunitequipment{\equipmentdef{\shrapnelgrenades}{\shrapnelgrenadesrule}}
-		\unitequipment{\tempunitequipment}
 
 		\columnbreak
 		\begin{center}{\largerfontsize\antiquefont\steambomber{} (\pts{105})}
@@ -459,9 +469,6 @@
 		\def\tempweapons{\forgerepeater{},\shrapnelbombs{}}
 		\weapons{\tempweapons}
 		
-		\def\tempunitequipment{\equipmentdef{\shrapnelbombs}{\shrapnelbombsrule}}
-		\unitequipment{\tempunitequipment}
-		
 		\vspace*{\fill}\columnbreak	
 		\begin{center}{\largerfontsize\antiquefont\flamecopter{} (\pts{85})}
 		
@@ -470,19 +477,24 @@
 		
 		\vspace{0.15cm}
 		\def\tempweapons{\flameculverin}
-		\weapons{\tempweapons}
-		
-		\def\tempunitequipment{\equipmentdef{\flameculverin}{\flameculverinrule}}
-		\unitequipment{\tempunitequipment}	
+		\weapons{\tempweapons}	
 		
 		\vspace*{\fill}
 		\end{multicols}
 		\setlength{\columnseprule}{0pt}
+		
+		\def\tempunitequipment{%
+			\equipmentdef{\shrapnelgrenades}{\shrapnelgrenadesrule}
+			\equipmentdef{\shrapnelbombs}{\shrapnelbombsrule}
+			\equipmentdef{\flameculverin}{\flameculverinrule}
+		}
+		\vspace*{0.1cm}\unitequipment{\tempunitequipment}
 	},
 }
 
 \showunit{
 	name={\miners{}},
+	QRSname={\miner{}},
 	cost={90},
 	profile={ < 3 4 3 4 4 1 2 1 9},
 	costpermodel=10,
@@ -517,8 +529,8 @@
 	specialrules={\stubborn{}},
 	armour={\ha{}},
 	options={
-		\maygain{} \flamingshot{}=5,
-		\maygain{} \engineeringrune{}=15,
+		\flamingshot{}=5,
+		\engineeringrune{}=15,
 	},
 	unitrules={
 		\unitrule{\flamingshot}{\flamingshotrule}
@@ -597,6 +609,7 @@
 	
 \showunit{
 	name={\rangers},
+	QRSname={\ranger},
 	cost={65},
 	profile={ < 3 4 4 3 4 1 2 1 9},
 	costpermodel=10,
@@ -610,9 +623,9 @@
 	armour={\ha},
 	options={
 		\skirmishers{} \Xmodelsorless{10}=\permodel{}<2,
-		\maytakeashield{}=\permodel{}<1,
-		\maytakethrowingweapons{}=\permodel{}<1,
-		\maytakeacrossbow{}=\permodel{}<2,
+		\shield{}=\permodel{}<1,
+		\throwingweapons{}=\permodel{}<1,
+		\crossbow{}=\permodel{}<2,
 		\combatweapononechoice{
 			\pw{}=\permodel{}<1,
 			\gw{}=\permodel{}<2,
@@ -623,11 +636,12 @@
 
 \showunit{
 	name={\holdguardians},
+	QRSname={\holdguardian},
 	cost={155},
-	profile={ < 5 4 3 6 5 3 2 2 10},
+	profile={< 5 4 3 6 5 3 2 2 10},
 	costpermodel=60 ,
 	maxmodels=8,
-	type=\monstrousinfantry,
+	type=\monstrousinfantry{},
 	unitsize=3,
 	basesize=40x40,
 	specialrules={\magicalattacks{},\multiplewounds{1D3}{},\immunetopsychology{}},
@@ -669,7 +683,7 @@
 	specialrules={\stubborn{}},
 	armour={\ha{}},
 	options={
-		\maygain{} \engineeringrune{}=15,
+		\engineeringrune{}=15,
 	},
 	unitrules={
 		\unitrule{\engineeringrune}{\engineeringrunerule}

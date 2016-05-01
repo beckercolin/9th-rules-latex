@@ -15,8 +15,8 @@
 	commonspecialrules={\killerinstinct{},\lightningreflexes{}},
 	armour={\la},
 	options={
-		\magicalitemsallowance =\upto{}<100,
-		\maytakeonechoiceonlyTWOCOL{
+		\magicalitemsallowance{}=\upto{}<100,
+		\onechoiceonly{
 			\cultofnabh{}=20,
 			\cultofyema{}=20,
 			\beastmaster{}=40,
@@ -28,7 +28,7 @@
 			\repeaterhandbow{}=2,		
 			\repeatercrossbow{}=4,
 		},
-		\combatweapononechoiceTWOCOL{
+		\combatweapononechoice{
 			\pw{}=5,
 			\halberd{}=8,
 			\gw{}=10,
@@ -59,7 +59,7 @@
 	magicpaths={\blackmagic{}, \anyofthebattlemagic{}\refsymbol{}},
 	options={
 		\magiclevel{4}=30,
-		\mayjointhecultofyema{}=30,
+		\cultofyema{}=30,
 		\magicalitemsallowance{}=\upto{}<100,
 	},
 	mounts={
@@ -86,9 +86,9 @@
 	commonspecialrules={\killerinstinct{},\lightningreflexes{}},
 	armour={\la},
 	options={
-		\bsboption{}=25,	
-		\magicalitemsallowance =\upto{}<50,
-		\maytakeonechoiceonlyTWOCOL{
+		\bsb{}=25,	
+		\magicalitemsallowance{}=\upto{}<50,
+		\onechoiceonly{
 			\cultofnabh{}=10,
 			\cultofyema{}=10,
 			\beastmaster{}=40,
@@ -100,7 +100,7 @@
 			\repeaterhandbow{}=2,		
 			\repeatercrossbow{}=4,
 		},
-		\combatweapononechoiceTWOCOL{
+		\combatweapononechoice{
 			\pw{}=5,
 			\gw{}=8,
 			\halberd{}=8,
@@ -128,7 +128,7 @@
 	weapons={\pw},
 	additional={%
 		\begin{center}\acultpriestmustjoinoneofthefollowingcults{}\spacebeforecolon{}:\end{center}
-		\setlength{\columnseprule}{1pt}
+		\setlength{\columnseprule}{0.5pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
 		\begin{multicols}{2}\raggedcolumns
 		\nahbcultlogotitle{\cultofnabh{}}%
@@ -137,13 +137,11 @@
 		\specialrules{\tempspecialrules}
 
 		\def\tempoptions{%
-			\bsboption{}=25,			
+			\bsb{}=25,			
 			\magicalweaponallowance{}=\upto{}<50,
-			\anyofthefollowing{
-				\la{}=4,
-				\executionersblade{}=15,
-				\hspace*{0.3cm}\seeexecutionerspecialunit{}=,
-			},		
+			\la{}=4,
+			\executionersblade{}=15,
+			\hspace*{0.3cm}\seeexecutionerspecialunit{}=,		
 		}%
 
 		\def\tempmounts{\manticore{}=110,\divinealtarofnabh{}=200}%
@@ -158,14 +156,12 @@
 		\specialrules{\tempspecialrules}
 
 		\def\tempoptions{%
-			\bsboption{}=25,			
+			\bsb{}=25,			
 			\magicalweaponallowance{}=\upto{}<50,
-			\anyofthefollowing{
-				\shield{}=3,
-				\la{}=4,
-				\gladiatorweapons{}=15,
-				\hspace*{0.3cm}\seedancersofyemaspecialunit{}=,
-			},		
+			\shield{}=3,
+			\la{}=4,
+			\gladiatorweapons{}=15,
+			\hspace*{0.3cm}\seedancersofyemaspecialunit{}=,	
 		}%
 
 		\def\tempmounts{\elvenhorse{}=15,\raptor{}=20,\pegasus{}=55,\divinealtarofyema{}=215}%
@@ -192,7 +188,7 @@
 	magicpaths={\blackmagic{}, \anyofthebattlemagic{}\refsymbol{}},
 	options={
 		\magiclevel{2}=25,
-		\mayjointhecultofyema{}=20,
+		\cultofyema{}=20,
 		\magicalitemsallowance{}=\upto{}<50,
 	},
 	mounts={
@@ -214,7 +210,7 @@
 	commonspecialrules={\killerinstinct{},\lightningreflexes{}},
 	unitrules={\unitrule{\professionalcourtesy}{\professionalcourtesyrule}},	
 	options={
-		\mayjointhecultofnabh{}=15,
+		\cultofnabh{}=15,
 		\magicalitemsallowance{} \notmagicalarmour{}=\upto{}<50,
 		\pw{}=6,
 	},
@@ -222,15 +218,15 @@
 		\def\tempspecialrules{\scout{},\armourpiercing{1},\poisonedattacks{},\notaleader{},\hidden{},\masterpoisoner{},\professionalcourtesy{}}
 		\specialrules{\tempspecialrules}
 		
-		\setlength{\columnseprule}{1pt}
+		\setlength{\columnseprule}{0.5pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
 		\begin{center}\assassinforkpaths{}\end{center}
 		\begin{multicols}{2}\raggedcolumns
 		\begin{center}\Largefontsize{\antiquefont\pathofbloodymurder{} (\free{})}\end{center}%
 
 		\def\tempoptions{%
-			\maygain{} \distracting{}=25,			
-			\maygain{} \wardsave{4}\refsymbol{}=25,
+			\distracting{}=25,			
+			\wardsave{4}\refsymbol{}=25,
 		}%
 		
 		\options{\tempoptions}
@@ -269,7 +265,7 @@
 	armour={\mountsprotection{6}},
 	options={%
 		\mountsprotection{5}=10,
-		\maygain{} \lighttroops{}\refsymbol{}=25,
+		\lighttroops{}\refsymbol{}=25,
 	},
 	additional={\refsymbol{} \elvenhorsenote{}},
 }
@@ -290,7 +286,7 @@
 	basesize=40x40,
 	armour={\mountsprotection{6}},
 	options={%
-		\maygain{} \thunderouscharge{}=10,
+		\thunderouscharge{}=10,
 		\barding{}=20,
 	},
 	specialrules={\fly{8}},
@@ -303,7 +299,7 @@
 	basesize=50x100,
 	additional={%
 		\def\tempspecialrules{\fly{8},\largetarget{},\fear{},\lethalstrike{},\frenzy{},\multiplewounds{1D3}{}}
-		\def\tempoptions{\maybecome{} \alphapredator{} \beastmastersmountonly{}=10,}
+		\def\tempoptions{\alphapredator{} \beastmastersmountonly{}=10,}
 		\vspace*{-0.2cm}\specialrules{\tempspecialrules}
 		\vspace*{0.1cm}\options{\tempoptions}
 	},
@@ -344,7 +340,7 @@
 		\def\tempspecialrules{\largetarget{},\fear{},\impacthits{+1},\wardsave{4},\divineblessings{} \seedivinealtarspecialunit{}}
 		\vspace*{0.22cm}\specialrules{\tempspecialrules}
 		
-		\setlength{\columnseprule}{1pt}
+		\setlength{\columnseprule}{0.5pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
 		\begin{center}\divinealtaralignment{}\end{center}
 		\begin{multicols}{2}\raggedcolumns
@@ -386,7 +382,7 @@
 	basesize=50x100,
 	armour={\innatedefence{3}},
 	options={%
-		\maybecome{} \alphapredator{} \beastmastersmountonly{}=25,
+		\alphapredator{} \beastmastersmountonly{}=25,
 	},
 	specialrules={\fly{7},\breathweapon{\Strength{} 4, \flamingattacks{}}},
 }
@@ -451,7 +447,7 @@
 	options={
 		\pw{}=\permodel{}<1,
 		\repeaterhandbow{}=\permodel{}<1,
-		\maygain{} \vanguard{}\refsymbol{}=\permodel{}<1,
+		\vanguard{}\refsymbol{}=\permodel{}<1,
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
 	additional={%
@@ -507,48 +503,6 @@
 \specialunitstitle
 
 \showunit{
-	name={\dancersofyema},
-	QRSname={\dancerofyema},
-	cost={90},
-	profile={< 5 5 4 3 3 1 5 1 8},
-	type=\infantry{},
-	basesize=20x20,
-	unitsize=10,
-	maxmodels=30,
-	costpermodel=14,
-	alignment=\cultofyema{},
-	commontype=\elvencommonrules{},
-	commonspecialrules={\lightningreflexes{}},
-	specialrules={\wardsave{4} (\canonlybeusedagainstclosecombatattacks)},
-	weapons={\gladiatorweapons},
-	armour={\la{}, \shield{}},
-	options={%
-		\maygain{} \skirmishers{} \maxmodelsoneofakind{}=\permodel{}<2,
-	},
-	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
-	unitequipment={\equipmentdef{\gladiatorweapons}{\gladiatorweaponsrule}},
-}
-
-\showunit{
-	name={\executioners},
-	QRSname={\executioner},
-	cost={120},
-	profile={< 5 5 4 4 3 1 5 1 8},
-	type=\infantry{},
-	basesize=20x20,
-	unitsize=10,
-	maxmodels=30,
-	costpermodel=15,
-	alignment=\cultofnabh{},
-	commontype=\elvencommonrules{},
-	commonspecialrules={\lightningreflexes{}},
-	weapons={\executionersblade},
-	armour={\ha},
-	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
-	unitequipment={\equipmentdef{\executionersblade}{\executionersbladerule}},
-}
-
-\showunit{
 	name={\towerguard},
 	cost={110},
 	profile={< 5 5 4 3 3 1 6 2 9},
@@ -562,7 +516,7 @@
 	specialrules={\immunetopsychology{},\bodyguard{},\armourpiercing{1}},
 	weapons={\halberd},
 	armour={\ha},
-	options={\mayupgradeto{} \dreadguardians{}=\permodel{}<3},
+	options={\dreadguardians{}=\permodel{}<3},
 	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50, championallowance=25},
 	unitrules={\unitrule{\dreadguardians}{\dreadguardiansrule}},
 }
@@ -589,21 +543,63 @@
 }
 
 \showunit{
-	name={\raptorchariot},
-	cost={100},
-	profile={%
-		\chariot{}<- - - 5 5 4 - - -,
-		\crew{} (2)< - 5 4 4 - - 6 1 9,
-		\raptor{} (2)<7 3 - 4 - - 2 2 5,
-	},
-	type=\chariot{},
-	basesize=50x100,
+	name={\medusa},
+	cost={70},
+	profile={< 6 5 4 4 4 3 5 5 8},
+	type=\monstrousinfantry{},
+	basesize=40x40,
 	unitsize=1,
+	alignment=\cultofyema{},
+	specialrules={\distracting{},\swiftstride{},\petrifyingstare{},\fear{}},
+	options={%
+		\combatweapononechoice{
+			\spear{}=5,			
+			\pw{}=5,
+			\halberd{}=7,
+		},
+	},	
+}
+
+\showunit{
+	name={\dancersofyema},
+	QRSname={\dancerofyema},
+	cost={90},
+	profile={< 5 5 4 3 3 1 5 1 8},
+	type=\infantry{},
+	basesize=20x20,
+	unitsize=10,
+	maxmodels=30,
+	costpermodel=14,
+	alignment=\cultofyema{},
 	commontype=\elvencommonrules{},
-	commonspecialrules={\killerinstinct{} \only{\crew},\lightningreflexes{} \only{\crew}},
-	specialrules={\stupidity{},\impacthits{+1}},
-	weapons={\lance{},\repeatercrossbow{} \only{\crew}},
-	armour={\ha{}, \mountsprotection{5}},
+	commonspecialrules={\lightningreflexes{}},
+	specialrules={\wardsave{4} (\canonlybeusedagainstclosecombatattacks)},
+	weapons={\gladiatorweapons},
+	armour={\la{}, \shield{}},
+	options={%
+		\skirmishers{} \maxmodelsoneofakind{}=\permodel{}<2,
+	},
+	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
+	unitequipment={\equipmentdef{\gladiatorweapons}{\gladiatorweaponsrule}},
+}
+
+\showunit{
+	name={\executioners},
+	QRSname={\executioner},
+	cost={120},
+	profile={< 5 5 4 4 3 1 5 1 8},
+	type=\infantry{},
+	basesize=20x20,
+	unitsize=10,
+	maxmodels=30,
+	costpermodel=15,
+	alignment=\cultofnabh{},
+	commontype=\elvencommonrules{},
+	commonspecialrules={\lightningreflexes{}},
+	weapons={\executionersblade},
+	armour={\ha},
+	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
+	unitequipment={\equipmentdef{\executionersblade}{\executionersbladerule}},
 }
 
 \showunit{
@@ -620,21 +616,21 @@
 }
 
 \showunit{
-	name={\medusa},
-	cost={70},
-	profile={< 6 5 4 4 4 3 5 5 8},
-	type=\monstrousinfantry{},
-	basesize=40x40,
+	name={\raptorchariot},
+	cost={100},
+	profile={%
+		\chariot{}<- - - 5 5 4 - - -,
+		\crew{} (2)< - 5 4 4 - - 6 1 9,
+		\raptor{} (2)<7 3 - 4 - - 2 2 5,
+	},
+	type=\chariot{},
+	basesize=50x100,
 	unitsize=1,
-	alignment=\cultofyema{},
-	specialrules={\distracting{},\swiftstride{},\petrifyingstare{},\fear{}},
-	options={%
-		\combatweapononechoice{
-			\spear{}=5,			
-			\pw{}=5,
-			\halberd{}=7,
-		},
-	},	
+	commontype=\elvencommonrules{},
+	commonspecialrules={\killerinstinct{} \only{\crew},\lightningreflexes{} \only{\crew}},
+	specialrules={\stupidity{},\impacthits{+1}},
+	weapons={\lance{},\repeatercrossbow{} \only{\crew}},
+	armour={\ha{}, \mountsprotection{5}},
 }
 
 \showunit{
@@ -660,7 +656,7 @@
 		\def\tempunitrules{\unitrule{\divineblessings}{\divineblessingsrule}}
 		\vspace*{0.1cm}\unitrules{\tempunitrules}
 		
-		\setlength{\columnseprule}{1pt}
+		\setlength{\columnseprule}{0.5pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
 		\begin{center}\divinealtaralignment{}\end{center}
 		\begin{multicols}{2}\raggedcolumns
@@ -696,6 +692,7 @@
 
 
 
+
 \rareunitstitle
 
 \showunit{
@@ -714,48 +711,13 @@
 	weapons={\repeatercrossbow},
 	options={%
 		\la{}=\permodel{}<1,
-		\maytakeoneofthefollowing{
+		\weapononechoice{
 			\pw{}=\permodel{}<1,
 			\gw{}=\permodel{}<2,
 		},
-		\maygain{} \poisonedattacks{} (\closecombatonly{})=\permodel{}<1,
+		\poisonedattacks{} (\closecombatonly{})=\permodel{}<1,
 	},
 	commandgroup={champion=10},
-}
-
-\showunit{
-	name={\huntingchariot},
-	cost={90},
-	profile={%
-		\chariot{}<- - - 5 4 4 - - -,
-		\crew{} (2)< - 4 4 3 - - 5 1 8,
-		\elvenhorse{} (2)<9 3 - 3 - - 4 1 3,
-	},
-	type=\chariot{},
-	basesize=50x100,
-	unitsize=1,
-	commontype=\elvencommonrules{},
-	commonspecialrules={\killerinstinct{} \only{\crew},\lightningreflexes{} \only{\crew}},
-	specialrules={\impacthits{+1}},
-	weapons={\lightlance{},\repeatercrossbow{} \only{\crew}},
-	armour={\la{}, \mountsprotection{5}},
-	additional={%
-		\setlength{\columnseprule}{1pt}
-		\renewcommand{\columnseprulecolor}{\color{black!30}}
-		\begin{center}\huntingchariotforkchoice{}\end{center}
-		\begin{multicols}{2}\raggedcolumns
-		\begin{center}\Largefontsize{\antiquefont\giantbow{} (\free{})}\end{center}%
-
-		\noindent\giantbowrule{}
-			
-		\columnbreak
-		\begin{center}\Largefontsize{\antiquefont\harpoonlauncher{} (\pts{35})}\end{center}
-
-		\noindent\harpoonlauncherrule{}
-		
-		\end{multicols}
-		\setlength{\columnseprule}{0pt}		
-	},
 }
 
 \showunit{
@@ -776,12 +738,80 @@
 	specialrules={\lighttroops{},\wardsave{4},\poisonedattacks{} \only{\rider}},
 	armour={\mountsprotection{6}},
 	options={
-		\mayjointhecultofyema{}=\permodel{}<3,
+		\cultofyema{}=\permodel{}<3,
 	},
 	commandgroup={champion=60},
 	wizardconclave={\deathspellone{} (\Pathof{} \death{}), \blackmagicspellfive{} (\Pathof{} \blackmagic{})\refsymbol{}},
 	additional={%
 		\noindent\refsymbol{} \darkacolytesnote{}
+	},
+}
+
+\showunit{
+	name={\kraken},
+	cost={165},
+	profile={< 6 4 1 7 5 5 3 4 6},
+	type=\monster{},
+	basesize=50x100,
+	unitsize=1,
+	armour={\innatedefence{4}},
+	options={%
+		\alphapredator{}=45,
+	},
+	additional={%
+		\def\tempspecialrules{\distracting{},\poisonedattacks{},\multiplewounds{1D3}{},\strider{\water},\hardtarget{}}
+		\specialrules{\tempspecialrules}
+	},
+}
+
+\showunit{
+	name={\hydra},
+	cost={180},
+	profile={< 6 4 1 5 5 5 2 7 6},
+	type=\monster{},
+	basesize=50x100,
+	unitsize=1,
+	specialrules={\regeneration{4}},
+	armour={\innatedefence{4}},
+	options={%
+		\breathweapon{\Strength{} 4, \flamingattacks{}}=30,
+		\alphapredator{}=45,		
+	},
+}
+
+\showunit{
+	name={\huntingchariot},
+	cost={90},
+	profile={%
+		\chariot{}<- - - 5 4 4 - - -,
+		\crew{} (2)< - 4 4 3 - - 5 1 8,
+		\elvenhorse{} (2)<9 3 - 3 - - 4 1 3,
+	},
+	type=\chariot{},
+	basesize=50x100,
+	unitsize=1,
+	commontype=\elvencommonrules{},
+	commonspecialrules={\killerinstinct{} \only{\crew},\lightningreflexes{} \only{\crew}},
+	specialrules={\impacthits{+1}},
+	weapons={\lightlance{},\repeatercrossbow{} \only{\crew}},
+	armour={\la{}, \mountsprotection{5}},
+	additional={%
+		\setlength{\columnseprule}{0.5pt}
+		\renewcommand{\columnseprulecolor}{\color{black!30}}
+		\begin{center}\huntingchariotforkchoice{}\end{center}
+		\begin{multicols}{2}\raggedcolumns
+		\begin{center}\Largefontsize{\antiquefont\giantbow{} (\free{})}\end{center}%
+
+		\noindent\giantbowrule{}
+
+		\columnbreak
+		\begin{center}\Largefontsize{\antiquefont\harpoonlauncher{} (\pts{35})}\end{center}
+
+		\noindent\harpoonlauncherrule{}
+		
+		\vspace*{\fill}
+		\end{multicols}
+		\setlength{\columnseprule}{0pt}		
 	},
 }
 
@@ -799,38 +829,7 @@
 	commonspecialrules={\killerinstinct{} \only{\crew},\lightningreflexes{} \only{\crew}},
 	weapons={\elvenboltthrower},
 	armour={\la},
-	options={\maygain{} \repeatingshots{}=20,},
+	options={\repeatingshots{}=20,},
 	unitequipment={\equipmentdef{\elvenboltthrower}{\elvenboltthrowerrule}},
 	unitrules={\unitrule{\repeatingshots}{\repeatingshotsrule}},
 }
-
-\showunit{
-	name={\kraken},
-	cost={165},
-	profile={< 6 4 1 7 5 5 3 4 6},
-	type=\monster{},
-	basesize=50x100,
-	unitsize=1,
-	specialrules={\distracting{},\poisonedattacks{},\multiplewounds{1D3}{},\strider{\water},\hardtarget{}},
-	armour={\innatedefence{4}},
-	options={%
-		\maybecome{} \alphapredator{}=45,
-	},
-}
-
-\showunit{
-	name={\hydra},
-	cost={180},
-	profile={< 6 4 1 5 5 5 2 7 6},
-	type=\monster{},
-	basesize=50x100,
-	unitsize=1,
-	specialrules={\regeneration{4}},
-	armour={\innatedefence{4}},
-	options={%
-		\maygain{} \newline\breathweapon{\Strength{} 4, \flamingattacks{}}=30,
-		\maybecome{} \alphapredator{}=45,		
-	},
-}
-
-
