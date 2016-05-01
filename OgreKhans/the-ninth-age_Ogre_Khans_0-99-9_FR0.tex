@@ -1,8 +1,8 @@
 \input{../Layout/AB_layout.tex}
 
 \newcommand{\booktitle}{Khans Ogres}
-\newcommand{\version}{0.99.5}
-\newcommand{\frenchversion}{2.1}
+\newcommand{\version}{0.99.9}
+\newcommand{\frenchversion}{2.0}
 \newcommand{\booklogo}{pics/logo_big_OK.png}
 
 % Army wide rules
@@ -72,10 +72,12 @@
 
 % Core
 
+\newcommand{\tribesman}{Guerrier Tribal}
 \newcommand{\tribesmen}{Guerriers Tribaux}
 \newcommand{\bruisers}{Brise-Crânes}
 \newcommand{\bruiser}{Brise-Crâne}
 \newcommand{\scraplings}{Scraplins}
+\newcommand{\scrapling}{Scraplin}
 \newcommand{\scraplingforeman}{Chef Scraplin}
 \newcommand{\scraplingforemen}{Chefs Scraplins}
 
@@ -87,9 +89,12 @@
 \newcommand{\mercenaryveteran}{Balafré}
 \newcommand{\tuskercavalry}{Cavalerie Razor-Buffle}
 \newcommand{\sabretoothtigers}{Tigres à Dents de Sabre}
+\newcommand{\sabretoothtiger}{Tigre à Dents de Sabre}
 \newcommand{\kineater}{Dévoreur de Chair}
 \newcommand{\yetis}{Yétis}
+\newcommand{\yeti}{Yéti}
 \newcommand{\scraplingtrappers}{Braconniers Scraplins}
+\newcommand{\scraplingtrapper}{Braconnier Scraplin}
 
 % Rare
 
@@ -331,7 +336,7 @@ La figurine est immunisée aux effets de la Peur. Si elle est à pied, elle gagn
 
 \startitemlistonecol
 
-\listitemonecol{\ironfist} Type : \pw{}. Le porteur gagne +1 à sa Sauvegarde d'Armure et la règle \parry{}, même si c'est une figurine montée et même si l'\ironfist{} est magique.
+\listitemonecol{\ironfist} Type : \pw{}. Le porteur gagne +1 à sa Sauvegarde d'Armure et la règle \parry{}, même si c'est une figurine montée et même si le \ironfist{} est magique.
 
 \listitemonecol{\braceofogrepistols} Arme de Tir. \range{24}, Force 4, \armourpiercing{1}, \multipleshots{2}, \quicktofire{}, compte comme une \pw{} au Corps à Corps.
 
@@ -348,7 +353,7 @@ La figurine est immunisée aux effets de la Peur. Si elle est à pied, elle gagn
 
 \spaceaftersection{}
 
-Chaque Personnage Ogre peut prendre un unique Grand Nom. Un Grand Nom a la règle \oneperarmy{}.
+Chaque Personnage Ogre peut prendre un unique Grand Nom. Les Grands Noms suivent la règle \oneperarmy{}.
 
 \begin{multicols}{2}
 \startpricelistNSP
@@ -375,12 +380,12 @@ Toute figurine peut aussi choisir la Marque du Chaos Intégral pour 3 pts par fi
 
 Les \shamans{} et les \greatshamans{} avec une Marque différente du Chaos Intégral peuvent choisir une Discipline accessible normalement à cette Marque, en plus des Disciplines qui leur sont habituellement proposées. Les \shamans{} et les \greatshamans{} ne peuvent pas prendre la Marque du Courroux.
 
-L'armée ne peut pas inclure de \mammothhunters{}, de \scraplings{}, de \scraplingtrappers{}, de \yetis{}, de \sabretoothtigers{} ou de \scratapults{}.
+L'armée ne peut pas inclure de \mammothhunter{}, de \scrapling{}, de \scraplingtrapper{}, de \yeti{}, de \sabretoothtiger{} ou de \scratapult{}.
 
 \vspace*{\fill}\columnbreak
 \pricelistitem{Cœur Sauvage}{25}\mammothhunter{} uniquement.
 
-Le \mammothhunter{} perd la règle \notaleader{} et peut être promu Général de l'armée. Un autre \mammothhunter{} dans l'armée peut être promu Porteur de la Grande Bannière pour 25 pts. Une unité de \yetis{} et une unité de \sabretoothtigers{} peuvent être prises comme unités de base. Votre armée ne doit pas inclure de \greatkhans{}, de \khans{}, de \bruisers{}, de \mercenaryveterans{}, de \bombardiers{} ou de \thundercannons{}.
+Le \mammothhunter{} perd la règle \notaleader{} et peut être promu Général de l'armée. Un autre \mammothhunter{} dans l'armée peut être promu Porteur de la Grande Bannière pour 25 pts. Une unité de \yetis{} et une unité de \sabretoothtigers{} peuvent être prises comme unités de base. Votre armée ne doit pas inclure de \greatkhan{}, de \khan{}, de \bruiser{}, de \mercenaryveteran{}, de \bombardier{} ou de \thundercannon{}.
 
 \pricelistitem{Chasseur de Têtes}{25}À la fin de toute Phase de Corps à Corps durant laquelle le porteur a tué une ou plusieurs figurines, et dans la mesure où il n'est pas en fuite, lancez 1D6. Sur un résultat de 3+, il Récupère un Point de Vie.
 

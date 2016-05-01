@@ -1,4 +1,4 @@
-%%% v0.99.6
+%%% v0.99.9
 
 \armylist
 
@@ -16,19 +16,19 @@
 	armour={\la},
 	options={
 		\magicalitemsallowance =\upto{}<100,
-		\maytakeonechoiceonly{
+		\maytakeonechoiceonlyTWOCOL{
 			\cultofnabh{}=20,
 			\cultofyema{}=20,
 			\beastmaster{}=40,
 			\fleetcommander{}=50,
 		},
-		\maytakeashield{}=5,
-		\maytakeha{}=8,
+		\shield{}=5,
+		\ha{}=8,
 		\shootingweapononechoice{
 			\repeaterhandbow{}=2,		
 			\repeatercrossbow{}=4,
 		},
-		\combatweapononechoice{
+		\combatweapononechoiceTWOCOL{
 			\pw{}=5,
 			\halberd{}=8,
 			\gw{}=10,
@@ -88,19 +88,19 @@
 	options={
 		\bsboption{}=25,	
 		\magicalitemsallowance =\upto{}<50,
-		\maytakeonechoiceonly{
+		\maytakeonechoiceonlyTWOCOL{
 			\cultofnabh{}=10,
 			\cultofyema{}=10,
 			\beastmaster{}=40,
 			\fleetcommander{}=40,
 		},
-		\maytakeashield{}=3,
-		\maytakeha{}=5,
+		\shield{}=3,
+		\ha{}=5,
 		\shootingweapononechoice{
 			\repeaterhandbow{}=2,		
 			\repeatercrossbow{}=4,
 		},
-		\combatweapononechoice{
+		\combatweapononechoiceTWOCOL{
 			\pw{}=5,
 			\gw{}=8,
 			\halberd{}=8,
@@ -119,7 +119,7 @@
 \showunit{
 	name={\cultpriest},
 	cost=80,
-	profile={\cultpriest < 5 6 6 4 3 2 7 3 8},
+	profile={< 5 6 6 4 3 2 7 3 8},
 	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
@@ -212,15 +212,16 @@
 	unitsize=1,
 	commontype=\elvencommonrules{},
 	commonspecialrules={\killerinstinct{},\lightningreflexes{}},
-	specialrules={\scout{},\armourpiercing{1},\poisonedattacks{},\notaleader{},\hidden{},\masterpoisoner{},\professionalcourtesy{}},
 	unitrules={\unitrule{\professionalcourtesy}{\professionalcourtesyrule}},	
 	options={
 		\mayjointhecultofnabh{}=15,
 		\magicalitemsallowance{} \notmagicalarmour{}=\upto{}<50,
-		\maytakepw{}=6,
-		\maypurchaseanynumberofpoisonsseebelow{}=,
+		\pw{}=6,
 	},
 	additional={
+		\def\tempspecialrules{\scout{},\armourpiercing{1},\poisonedattacks{},\notaleader{},\hidden{},\masterpoisoner{},\professionalcourtesy{}}
+		\specialrules{\tempspecialrules}
+		
 		\setlength{\columnseprule}{1pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
 		\begin{center}\assassinforkpaths{}\end{center}
@@ -267,7 +268,7 @@
 	basesize=25x50,
 	armour={\mountsprotection{6}},
 	options={%
-		\maytakemountsprotectionX{5}=10,
+		\mountsprotection{5}=10,
 		\maygain{} \lighttroops{}\refsymbol{}=25,
 	},
 	additional={\refsymbol{} \elvenhorsenote{}},
@@ -290,7 +291,7 @@
 	armour={\mountsprotection{6}},
 	options={%
 		\maygain{} \thunderouscharge{}=10,
-		\maytakebarding{}=20,
+		\barding{}=20,
 	},
 	specialrules={\fly{8}},
 }
@@ -300,10 +301,12 @@
 	profile={< 6 5 - 5 5 4 5 3 5},
 	type=\monstrousbeast{},
 	basesize=50x100,
-	options={%
-		\maybecome{} \alphapredator{} \beastmastersmountonly{}=10,
+	additional={%
+		\def\tempspecialrules{\fly{8},\largetarget{},\fear{},\lethalstrike{},\frenzy{},\multiplewounds{1D3}{}}
+		\def\tempoptions{\maybecome{} \alphapredator{} \beastmastersmountonly{}=10,}
+		\vspace*{-0.2cm}\specialrules{\tempspecialrules}
+		\vspace*{0.1cm}\options{\tempoptions}
 	},
-	specialrules={\fly{8},\largetarget{},\fear{},\lethalstrike{},\frenzy{},\multiplewounds{1D3}{}},
 }
 
 \showunit{
@@ -337,16 +340,18 @@
 	armour={\la{},\mountsprotection{6}},
 	commontype=\elvencommonrules{},
 	commonspecialrules={\lightningreflexes{} \only{\disciples}},	
-	specialrules={\largetarget{},\fear{},\impacthits{+1},\wardsave{4},\divineblessings{} \seedivinealtarspecialunit{}},
 	additional={%
+		\def\tempspecialrules{\largetarget{},\fear{},\impacthits{+1},\wardsave{4},\divineblessings{} \seedivinealtarspecialunit{}}
+		\vspace*{0.22cm}\specialrules{\tempspecialrules}
+		
 		\setlength{\columnseprule}{1pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
 		\begin{center}\divinealtaralignment{}\end{center}
 		\begin{multicols}{2}\raggedcolumns
 		\nahbcultlogotitle{\altarofnabh{}}
 
-		\def\tempweapons{\pw{} (\discipleofnabh{})}
-		\def\tempspecialrules{\magicresistance{1},\devastatingcharge{} \only{\discipleofnabh},\poisonedattacks{} \only{\discipleofnabh}}
+		\def\tempweapons{\pw{} (\disciples{})}
+		\def\tempspecialrules{\magicresistance{1},\devastatingcharge{} \only{\disciples},\poisonedattacks{} \only{\disciples}}
 		\def\tempalignment{\cultofnabh}
 		{\setlength{\parskip}{0.3cm}
 			\alignment{\tempalignment}
@@ -358,7 +363,7 @@
 
 		\yemacultlogotitle{\altarofyema{}}
 		
-		\def\tempweapons{\lance{} \only{\discipleofyema{}}, \halberd{} \only{\medusa}}
+		\def\tempweapons{\lance{} \only{\disciples}, \halberd{} \only{\medusa}}
 		\def\tempspecialrules{\petrifyingstare{} \only{\medusa}}
 		\def\tempalignment{\cultofyema}
 		{\setlength{\parskip}{0.3cm}
@@ -392,6 +397,7 @@
 
 \showunit{
 	name={\dreadlegionnaires},
+	QRSname={\dreadlegionnaire},
 	cost={90},
 	profile={< 5 4 4 3 3 1 5 1 8},
 	type=\infantry{},
@@ -403,14 +409,15 @@
 	commonspecialrules={\killerinstinct{},\lightningreflexes{}},
 	armour={\la{}, \shield{}},
 	options={
-		\maytakeaspear{}=\permodel{}<1,
-		\maytakeha{}=\permodel{}<2,
+		\spear{}=\permodel{}<1,
+		\ha{}=\permodel{}<2,
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
 }
 
 \showunit{
 	name={\repeaterauxiliaries},
+	QRSname={\repeaterauxiliary},
 	cost={110},
 	profile={< 5 4 4 3 3 1 5 1 8},
 	type=\infantry{},
@@ -423,13 +430,14 @@
 	weapons={\repeatercrossbow},
 	armour={\la},
 	options={
-		\maytakeashield{}=\permodel{}<1,
+		\shield{}=\permodel{}<1,
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
 }
 
 \showunit{
 	name={\corsairs},
+	QRSname={\corsair},
 	cost={80},
 	profile={< 5 4 4 3 3 1 5 1 8},
 	type=\infantry{},
@@ -441,8 +449,8 @@
 	commonspecialrules={\killerinstinct{},\lightningreflexes{}},
 	armour={\la{}, \innatedefence{5}},
 	options={
-		\maytakepw{}=\permodel{}<1,
-		\maytakearepeaterhandbow{}=\permodel{}<1,
+		\pw{}=\permodel{}<1,
+		\repeaterhandbow{}=\permodel{}<1,
 		\maygain{} \vanguard{}\refsymbol{}=\permodel{}<1,
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
@@ -453,6 +461,7 @@
 
 \showunit{
 	name={\darkraiders},
+	QRSname={\darkraider},
 	cost={85},
 	profile={%
 		\rider{}< 5 4 4 3 3 1 5 1 8,
@@ -469,14 +478,15 @@
 	weapons={\lightlance},
 	armour={\la{}, \mountsprotection{6}},
 	options={
-		\maytakeashield{}=\permodel{}<3,
-		\maytakearepeatercrossbow{}=\permodel{}<3,
+		\shield{}=\permodel{}<3,
+		\repeatercrossbow{}=\permodel{}<3,
 	},
 	commandgroup={champion=10, musician=10, banner=10},
 }
 
 \showunit{
 	name={\bladesofnabh},
+	QRSname={\bladeofnabh},
 	cost={130},
 	profile={< 5 4 4 3 3 1 5 1 8},
 	type=\infantry{},
@@ -498,6 +508,7 @@
 
 \showunit{
 	name={\dancersofyema},
+	QRSname={\dancerofyema},
 	cost={90},
 	profile={< 5 5 4 3 3 1 5 1 8},
 	type=\infantry{},
@@ -520,6 +531,7 @@
 
 \showunit{
 	name={\executioners},
+	QRSname={\executioner},
 	cost={120},
 	profile={< 5 5 4 4 3 1 5 1 8},
 	type=\infantry{},
@@ -557,6 +569,7 @@
 
 \showunit{
 	name={\dreadknights},
+	QRSname={\dreadknight},
 	cost={130},
 	profile={%
 		\rider{}< 5 5 4 4 3 1 6 1 9,
@@ -595,6 +608,7 @@
 
 \showunit{
 	name={\harpies},
+	QRSname={\harpie},
 	cost={65},
 	profile={< 5 3 - 3 3 1 5 2 6},
 	type=\infantry{},
@@ -639,8 +653,10 @@
 	armour={\la{},\mountsprotection{6}},
 	commontype=\elvencommonrules{},
 	commonspecialrules={\lightningreflexes{} \only{\disciples}},	
-	specialrules={\largetarget{},\fear{},\impacthits{+1},\wardsave{4},\divineblessings{}},
 	additional={%
+		\def\tempspecialrules{\largetarget{},\fear{},\impacthits{+1},\wardsave{4},\divineblessings{}}
+		\vspace*{0.22cm}\specialrules{\tempspecialrules}
+	
 		\def\tempunitrules{\unitrule{\divineblessings}{\divineblessingsrule}}
 		\vspace*{0.1cm}\unitrules{\tempunitrules}
 		
@@ -650,8 +666,8 @@
 		\begin{multicols}{2}\raggedcolumns
 		\nahbcultlogotitle{\altarofnabh{} (\free{})}%
 
-		\def\tempweapons{\pw{} (\discipleofnabh{})}
-		\def\tempspecialrules{\magicresistance{1},\devastatingcharge{} \only{\discipleofnabh},\poisonedattacks{} \only{\discipleofnabh}}
+		\def\tempweapons{\pw{} (\disciples{})}
+		\def\tempspecialrules{\magicresistance{1},\devastatingcharge{} \only{\disciples},\poisonedattacks{} \only{\disciples}}
 		\def\tempalignment{\cultofnabh}
 		{\setlength{\parskip}{0.3cm}
 			\alignment{\tempalignment}
@@ -663,7 +679,7 @@
 
 		\yemacultlogotitle{\altarofyema{} (\pts{15})}
 		
-		\def\tempweapons{\lance{} \only{\discipleofyema{}}, \halberd{} \only{\medusa}}
+		\def\tempweapons{\lance{} \only{\disciples}, \halberd{} \only{\medusa}}
 		\def\tempspecialrules{\petrifyingstare{} \only{\medusa}}
 		\def\tempalignment{\cultofyema}
 		{\setlength{\parskip}{0.3cm}
@@ -684,6 +700,7 @@
 
 \showunit{
 	name={\ravencloaks},
+	QRSname={\ravencloak},
 	cost={80},
 	profile={< 5 5 5 3 3 1 5 1 8},
 	type=\infantry{},
@@ -696,7 +713,7 @@
 	specialrules={\scout{},\skirmishers{}},
 	weapons={\repeatercrossbow},
 	options={%
-		\maytakela{}=\permodel{}<1,
+		\la{}=\permodel{}<1,
 		\maytakeoneofthefollowing{
 			\pw{}=\permodel{}<1,
 			\gw{}=\permodel{}<2,
@@ -743,6 +760,7 @@
 
 \showunit{
 	name={\darkacolytes},
+	QRSname={\darkacolyte},
 	cost={120},
 	profile={%
 		\rider{}< 5 4 4 4 3 1 5 2 8,

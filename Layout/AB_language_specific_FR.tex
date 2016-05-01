@@ -150,8 +150,7 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 	\end{multicols}
 }{}
 }
-\newcommand{\labels@rulechanges}{%
-Les changements de règles entre versions sont colorés comme ce paragraphe.
+\newcommand{\labels@rulechanges}{% blank ATM
 }
 \newcommand{\labels@latexcredit}{Document réalisé à l'aide de \LaTeX .}
 
@@ -379,6 +378,7 @@ Les changements de règles entre versions sont colorés comme ce paragraphe.
 
 \newcommand{\water}{Eaux peu profondes}
 \newcommand{\forest}{Forêt}
+\newcommand{\impassableterrain}{Terrain Infranchissable}
 
 
 %%% Profile wording
@@ -390,26 +390,30 @@ Les changements de règles entre versions sont colorés comme ce paragraphe.
 \newcommand{\onfootonly}{(à pied seulement)}
 \newcommand{\closecombatonly}{seulement au Corps à Corps}
 \newcommand{\Xmodelsorless}[1]{(#1 figurines ou moins)}
-\newcommand{\magicalitemsallowance}{Peut prendre des Objets Magiques}
-\newcommand{\magicalweaponallowance}{Peut prendre une Arme Magique}
+\newcommand{\magicalitemsallowance}{Objets Magiques}
+\newcommand{\magicalweaponallowance}{Arme Magique}
 \newcommand{\notmagicalarmour}{(mais pas d'Armure Magique)}
 \newcommand{\anyofthefollowing}{\optionschoice{Peut prendre :}}
-\newcommand{\weapononechoice}{\optionschoice{Peut prendre une arme \onechoiceonly{} :}}
-\newcommand{\weaponschoice}{\optionschoice{Peut prendre des armes :}}
-\newcommand{\shootingweapononechoice}{\optionschoice{Peut prendre une Arme de Tir \onechoiceonly{} :}}
-\newcommand{\combatweapononechoice}{\optionschoice{Peut prendre une Arme de Corps à Corps \onechoiceonly{} :}}
-\newcommand{\armouronechoice}{\optionschoice{Peut prendre une armure \onechoiceonly{} :}}
+\newcommand{\weapononechoice}{\optionschoice{Arme \onechoiceonly{} :}}
+\newcommand{\weaponschoice}{\optionschoice{Armes :}}
+\newcommand{\shootingweapononechoice}{\optionschoice{Arme de Tir \onechoiceonly{} :}}
+\newcommand{\combatweapononechoice}{\optionschoice{Arme de Corps à Corps \onechoiceonly{} :}}
+\newcommand{\combatweapononechoiceTWOCOL}{\optionschoiceTWOCOL{Arme de Corps à Corps \onechoiceonly{} :}}
+\newcommand{\armouronechoice}{\optionschoice{Armure \onechoiceonly{} :}}
 \newcommand{\magiclevelchoice}{\optionschoice{Peut devenir au choix :}}
 \newcommand{\bsboption}{Peut devenir \bsb{}}
 \newcommand{\mayupgradeto}{Peut être amélioré en}
 \newcommand{\mustbecomeoneofthefollowing}{\optionschoice{Doit devenir au choix :}}
+\newcommand{\mustbecomeoneofthefollowingNOC}{Doit devenir au choix :}
 \newcommand{\maybecomeoneofthefollowing}{\optionschoice{Peut devenir au choix :}}
 \newcommand{\maytakeoneofthefollowing}{\optionschoice{Peut prendre au choix :}}
 \newcommand{\musttakeoneormoreofthefollowing}{\optionschoice{\textbf{Doit} prendre au moins un choix :}}
 \newcommand{\musttakeoneofthefollowingNOC}{Doit choisir entre :}
 \newcommand{\maytakeuptotwoofthefollowing}{\optionschoice{Peut prendre jusqu'à deux choix :}}
+\newcommand{\maytakeuptotwoofthefollowingTWOCOL}{\optionschoiceTWOCOL{Peut prendre jusqu'à deux choix :}}
 \newcommand{\maygain}{Peut gagner la règle}
 \newcommand{\maytake}{Peut prendre}
+\newcommand{\maytakewardsave}[1]{Peut prendre une \wardsave{#1}}
 \newcommand{\maytakeashield}{Peut prendre un Bouclier}
 \newcommand{\maytakela}{Peut prendre une Armure Légère}
 \newcommand{\maytakeha}{Peut prendre une Armure Lourde}
@@ -428,10 +432,10 @@ Les changements de règles entre versions sont colorés comme ce paragraphe.
 \newcommand{\maytakeacrossbow}{Peut prendre une Arbalète}
 \newcommand{\maytakeahandgun}{Peut prendre une Arquebuse}
 \newcommand{\maytakebarding}{Peut prendre un Caparaçon}
-\newcommand{\replaceshieldwithhalberd}{Remplacer le Bouclier par une Hallebarde}
 \newcommand{\maybecome}{Peut devenir}
 
 \newcommand{\maytakeonechoiceonly}{\optionschoice{\maytake{} \onechoiceonly{}\spacebeforecolon{}:}}
+\newcommand{\maytakeonechoiceonlyTWOCOL}{\optionschoiceTWOCOL{\maytake{} \onechoiceonly{}\spacebeforecolon{}:}}
 
 \newcommand{\mountssectionannouncement}{%
 La section Montures concerne les montures de Personnages. Les montures pour non-Personnages suivent les règles données dans leur description d'unité.

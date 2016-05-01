@@ -3,7 +3,7 @@
 
 \newcommand{\booktitle}{Orques et Gobelins}
 \newcommand{\booklogo}{pics/logo_big_OnG.png}
-\newcommand{\version}{0.99.5.1}
+\newcommand{\version}{0.99.9}
 \newcommand{\frenchversion}{2.0}
 
 \newcommand{\frontpageaddstuff}{Les Gobelins \sout{n'}ont \sout{pas} été maltraités lors de la création de cet ouvrage.}
@@ -155,14 +155,14 @@
 
 \newcommand{\startraceforking}[1]{%
 \begin{center}Doit appartenir à l'une des Races de Peaux Vertes suivantes :\end{center}
-\setlength{\columnseprule}{1pt}
+\setlength{\columnseprule}{0.5pt}
 \renewcommand{\columnseprulecolor}{\color{black!30}}
 \begin{multicols}{#1}\raggedcolumns
 }
 
 \newcommand{\startraceforkingrider}[1]{%
 \begin{center}Doit appartenir à l'une des Races de Peaux Vertes suivantes (seul le \rider{} gagne les règles de Race) :\end{center}
-\setlength{\columnseprule}{1pt}
+\setlength{\columnseprule}{0.5pt}
 \renewcommand{\columnseprulecolor}{\color{black!30}}
 \begin{multicols}{#1}\raggedcolumns
 }
@@ -290,6 +290,7 @@ Ils peuvent être relâchés de deux façons :
 \item N'importe quel nombre de \madgits{} peut être relâché quand leur unité déclare comme réaction à une charge Tenir la Position ou Tenir la Position et Tirer.
 \item Tous les \madgits{} doivent être relâchés si l'unité les cachant n'est ni en fuite ni engagée au Corps à Corps au début de la Phase de Tir du propriétaire et qu'elle est à moins de \distance{8} d'une unité ennemie.
 \end{customsubitemize}
+
 Occupez-vous des \madgits{} l'un après l'autre. Placez le \madgit{} en contact socle à socle avec son unité (il ne lui inflige aucune touche pour ce contact), et choisissez une direction. Déplacez-le de \distance{2D6} dans cette direction. Le \madgit{} suit ensuite ses propres règles pour son déplacement lors des tours suivants.
 }
 
@@ -298,7 +299,9 @@ Aucun Personnage ne peut rejoindre cette unité.
 }
 
 \newcommand{\rowsofteethrule}{%
-Les \gnashers{} peuvent faire les Attaques de Soutien à la place de leurs Cavaliers.\newline \newrule{Les \gnasherdashers{} infligent des Touches d'Impact lorsqu'ils chargent. Au lieu d'infliger une touche par \gnasherdasher{} en charge au contact d'un ennemi, le nombre de Touches d'Impact dépend du nombre de figurines dans l'unité. L'unité inflige 1D3 Touches d'Impact par tranche de 5 \gnasherdashers{}, en arrondissant au supérieur, à une unique unité ennemie en contact.}
+Les \gnashers{} peuvent faire les Attaques de Soutien à la place de leurs Cavaliers.
+
+Les \gnasherdashers{} infligent des Touches d'Impact lorsqu'ils chargent. Au lieu d'infliger une touche par \gnasherdasher{} en charge au contact d'un ennemi, le nombre de Touches d'Impact dépend du nombre de figurines dans l'unité. L'unité inflige 1D3 Touches d'Impact par tranche de 5 \gnasherdashers{}, en arrondissant au supérieur, à une unique unité ennemie en contact.
 }
 
 \newcommand{\theyreeverywhererule}{%
@@ -312,12 +315,15 @@ La \warmachine{} peut choisir de perdre 1 PV pour relancer un jet sur la Table d
 }
 
 \newcommand{\splattererrule}{%
-\textbf{\artilleryweapon} de type \textbf{\catapult{} (\distance{3})}. \newline\range{12-60}, Force 3 [9], [\multiplewounds{\ordnance}{}].
+\textbf{\artilleryweapon} de type \textbf{\catapult{} (\distance{3})}.\newline
+\range{12-60}, Force 3 [9], [\multiplewounds{\ordnance}{}].
 }
 
 \newcommand{\gitlauncherrule}{%
-\textbf{\artilleryweapon} de type \textbf{\catapult{} (\distance{1})}. \newline\range{12-60}, Force 5, \armourpiercing{2}.\newline
-Après avoir fait dévier le gabarit, vous pouvez le déplacer dans la direction de votre choix sur une distance de \distance{1D6}. Vous ne pouvez cependant pas le déplacer délibérément sur des unités au Corps à Corps ou des unités amies, si cela peut être évité. Une fois la position finale obtenue, au lieu de suivre les règles habituelles des gabarits, toute unité sous le gabarit subit 1D3+1 touches.
+\textbf{\artilleryweapon} de type \textbf{\catapult{} (\distance{1})}.\newline
+\range{12-60}, Force 5, \armourpiercing{2}.
+
+\vspace{5pt}\noindent Après avoir fait dévier le gabarit, vous pouvez le déplacer dans la direction de votre choix sur une distance de \distance{1D6}. Vous ne pouvez cependant pas le déplacer délibérément sur des unités au Corps à Corps ou des unités amies, si cela peut être évité. Une fois la position finale obtenue, au lieu de suivre les règles habituelles des gabarits, toute unité sous le gabarit subit 1D3+1 touches.
 }
 
 \newcommand{\pointedsticksrule}{%
@@ -346,7 +352,8 @@ Quand un Géant attaque au Corps à Corps, au lieu d'attaquer normalement, chois
 }
 
 \newcommand{\giantattackstable}{%
-\setlength{\columnseprule}{1pt}
+\setlength{\columnseprule}{0.5pt}
+\renewcommand{\columnseprulecolor}{\color{black!30}}
 \vspace*{-0.2cm}\begin{multicols}{2}
 	\noindent Si l'unité est de type \infantry{}, \warbeast{}, \cavalry{}, \swarm{} ou \warmachine{}  :	
 	\renewcommand{\arraystretch}{1.5}	
@@ -398,7 +405,9 @@ Choisissez une figurine en contact socle à socle avec le Géant dans l'unité s
 }
 
 \newcommand{\ballistarule}{%
-\textbf{\artilleryweapon} de type \textbf{\boltthrower}. \range{48}, Force 6, \multiplewounds{1D3}{}, \armourpiercing{6}.
+\textbf{\artilleryweapon} de type \textbf{\boltthrower}.
+
+\range{48}, Force 6, \multiplewounds{1D3}{}, \armourpiercing{6}.
 }
 
 \newcommand{\lookatemgorule}{%
@@ -406,15 +415,19 @@ Le \gnasherwreckingteam{} gagne la règle \runningamok{} quand il touche une uni
 }
 
 \newcommand{\weblauncherrule}{%
-\textbf{\artilleryweapon} de type \textbf{\catapult{} (\distance{3})}. \range{6-36}, Force 3.\newline Les unités touchées souffrent d'un malus de -1D3 à l'Initiative. Les Terrains Dangereux (1) comptent pour eux comme des Terrains Dangereux (2), et tous les autres éléments de décor, Terrain Découvert compris, comptent pour eux comme des Terrains Dangereux (1). Ces effets durent jusqu'à la fin du prochain Tour de Joueur. Les effets de différents \weblaunchers{} ne s'additionnent pas.
+\textbf{\artilleryweapon} de type \textbf{\catapult{} (\distance{3})}.
+
+\range{6-36}, Force 3.
+
+Les unités touchées souffrent d'un malus de -1D3 à l'Initiative. Les Terrains Dangereux (1) comptent pour eux comme des Terrains Dangereux (2), et tous les autres éléments de décor, Terrain Découvert compris, comptent pour eux comme des Terrains Dangereux (1). Ces effets durent jusqu'à la fin du prochain Tour de Joueur. Les effets de différents \weblaunchers{} ne s'additionnent pas.
 }
 
 \newcommand{\smashemflatrule}{%
-Si l'\greatgreenidol{} est engagée au Corps à Corps, toutes les unités amies à moins de \distance{8} \newrule{peuvent gagner la règle \devastatingcharge{} ou un bonus de +1 pour blesser. Chaque unité choisit quel bonus utiliser au début de chaque Round de Corps à Corps.}
+Si l'\greatgreenidol{} est engagée au Corps à Corps, toutes les unités amies à moins de \distance{8} peuvent gagner la règle \devastatingcharge{} ou un bonus de +1 pour blesser. Chaque unité choisit quel bonus utiliser au début de chaque Round de Corps à Corps.
 }
 
 \newcommand{\iconofthewaaarghrule}{%
-\newrule{Une \greatgreenidol{} bénéficie des avantages de la \waaargh{} comme si elle appartenait à une \greenhiderace.}
+Une \greatgreenidol{} bénéficie des avantages de la \waaargh{} comme si elle appartenait à une \greenhiderace.
 }
 
 \newcommand{\bouncersrule}{%
@@ -511,7 +524,7 @@ Certaines figurines de l'armée disposent de règles spéciales qui corresponden
 
 \armyspecialruleentry{\unruly}
 
-\newrule{Les figurines avec cette règle} ont un malus de -1 en Commandement pour les tests de \frenzy{} et pour se réfréner de poursuivre. Si elles sont en formation de Horde, jetez trois dés pour les tests de Panique et ignorez le dé ayant donné le plus grand résultat.
+Les figurines avec cette règle ont un malus de -1 en Commandement pour les tests de \frenzy{} et pour se réfréner de poursuivre. Si elles sont en formation de Horde, jetez trois dés pour les tests de Panique et ignorez le dé ayant donné le plus grand résultat.
 
 \armyspecialruleentry{\borntofight}
 
@@ -548,9 +561,9 @@ Une unité avec \shambolic{} et \runningamok{} se déplace toujours dans une dir
 
 \armyspecialruleentry{\ricochet{X}}
 
-Les figurines avec \ricochet{} ignorent l'écart d'\distance{1} \newrule{avec les autres unités}. Si une figurine avec cette règle touche une autre unité, amie ou ennemie, \newrule{au lieu de charger}, elle continue son mouvement dans la même direction jusqu'à respecter la règle des \distance{1} d'écart entre unités \newrule{et avoir parcouru au moins sa distance de mouvement}. \newrule{Si cela devait amener la figurine au contact, ou à moins d'\distance{1} d'une autre unité, elle continue à se déplacer dans la même direction jusqu'à pouvoir se trouver à plus d'\distance{1} de toute autre unité. Si elle se retrouve alors à moins d'\distance{1} d'un Terrain Infranchissable ou en dehors du champ de bataille, retirez-la comme perte}.
+Les figurines avec \ricochet{} ignorent l'écart d'\distance{1} avec les autres unités. Si une figurine avec cette règle touche une autre unité, amie ou ennemie, au lieu de charger, elle continue son mouvement dans la même direction jusqu'à respecter la règle des \distance{1} d'écart entre unités et avoir parcouru au moins sa distance de mouvement. Si cela devait amener la figurine au contact, ou à moins d'\distance{1} d'une autre unité, elle continue à se déplacer dans la même direction jusqu'à pouvoir se trouver à plus d'\distance{1} de toute autre unité. Si elle se retrouve alors à moins d'\distance{1} d'un Terrain Infranchissable ou en dehors du champ de bataille, retirez-la comme perte.
 
-Toute unité traversée durant le déplacement jusqu'à la distance obtenue sur les dés pour le \randommovement{} est touchée \newrule{par une Attaque Spéciale à distance}. Les unités touchées subissent X touches, X étant la valeur entre les parenthèses. Les unités engagées dans un même Corps à Corps ne comptent que comme une seule unité pour la détermination des touches. Le joueur possédant la figurine avec \ricochet{} répartit les touches infligées entre les unités en combat aussi équitablement que possible, puis applique les règles normales de distribution des touches dans chaque unité.
+Toute unité traversée durant le déplacement jusqu'à la distance obtenue sur les dés pour le \randommovement{} est touchée par une Attaque Spéciale à distance. Les unités touchées subissent X touches, X étant la valeur entre les parenthèses. Les unités engagées dans un même Corps à Corps ne comptent que comme une seule unité pour la détermination des touches. Le joueur possédant la figurine avec \ricochet{} répartit les touches infligées entre les unités en combat aussi équitablement que possible, puis applique les règles normales de distribution des touches dans chaque unité.
 
 Il n'est pas possible de charger une figurine avec \ricochet{}, mais une unité peut charger, fuir, poursuivre ou se déplacer à travers elle. L'unité subit alors X+1D6 touches, puis la figurine avec \ricochet{} est retirée du champ de bataille en tant que perte.
 
@@ -559,10 +572,12 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine et
 \vspace{1cm}
 \begin{center}
 \begin{tabular}{@{}m{9.5cm}@{\hskip 20pt}m{7.5cm}@{}}
-\includegraphics[width=9.5cm]{pics/ricochet.png} &
-\newrule{\textbf{a)} La figurine avec \ricochet{} ne peut pas être placée à plus d'\distance{1} derrière l'unité rose car l'unité verte est trop proche. Elle est donc déplacée à travers les deux unités en suivant la direction initiale. Seule l'unité rose subit les touches de Ricochet car l'unité verte n'est pas à la distance de mouvement obtenue aux dés.}
+\def\svgwidth{9.5cm}
+\input{pics/ricochet.pdf_tex}
+&
+\textbf{a)} La figurine avec \ricochet{} ne peut pas être placée à plus d'\distance{1} derrière l'unité rose car l'unité verte est trop proche. Elle est donc déplacée à travers les deux unités en suivant la direction initiale. Seule l'unité rose subit les touches de Ricochet car l'unité verte se situe au delà de la distance de mouvement obtenue aux dés.
 
-\vspace{10pt}\newrule{\textbf{b)} Après avoir été déplacée à travers les unités, la figurine avec \ricochet{} arrive à moins d'\distance{1} d'un Terrain Infranchissable et est donc retiré comme perte. Elle a traversé au moins une unité engagée au Corps à Corps, infligeant donc X touches en tout, qui doivent être distribuées équitablement entre toutes les unités en combat.}
+\vspace{10pt}\textbf{b)} Après avoir été déplacée à travers les unités, la figurine avec \ricochet{} arrive à moins d'\distance{1} d'un Terrain Infranchissable et est donc retiré comme perte. Elle a traversé au moins une unité engagée au Corps à Corps, infligeant donc X touches en tout, qui doivent être distribuées équitablement entre toutes les unités en combat.
 \tabularnewline
 \end{tabular}
 \end{center}
@@ -576,7 +591,7 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine et
 
 \startitemlistonecol
 
-\listitemonecol{\powershroom} \newrule{Une seule utilisation. Avant de jeter les dés pour lancer un sort qui ne vient pas d'un Objet de Sort, le porteur peut décider d'utiliser un \powershroom{}. Toute tentative de dissipation de ce sort voit sa valeur réduite de 1D3. Si un \result{1} naturel est obtenu, le Sorcier utilisant le \powershroom{} subit une touche avec la règle Attaques Toxiques.}
+\listitemonecol{\powershroom} Une seule utilisation. Avant de jeter les dés pour lancer un sort qui ne vient pas d'un Objet de Sort, le porteur peut décider d'utiliser un \powershroom{}. Toute tentative de dissipation de ce sort voit sa valeur réduite de 1D3. Si un \result{1} naturel est obtenu, le Sorcier utilisant le \powershroom{} subit une touche avec la règle Attaques Toxiques.
 
 \listitemonecol{\mammothstabber} Si l'unité possède au moins un Rang Complet, elle gagne 1D3 \impacthits{} de Force 5 avec \multiplewounds{\ordnance}{\largetarget}.
 
@@ -585,7 +600,7 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine et
 \closearmyarmoury
 
 
-
+\renewcommand{\startarmymagicalitems}{\vspace{1cm}\largefontsize\bigtitle{\labels@magicalitems}\begin{multicols}{2}\raggedcolumns}
 
 \startarmymagicalitems
 
@@ -593,10 +608,11 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine et
 
 \startpricelist
 
-\pricelistitem{Hache de l'Aporcalypse}{65/\newrule{45}}Type : \hw{}. Le porteur gagne +1D3 en Force et +1D3 Attaques. Ces bonus sont déterminés et prennent effet au palier d'Initiative auquel le porteur attaque avec cette arme.
+\pricelistitem{Hache de l'Aporcalypse}{65/45}Type : \hw{}. Le porteur gagne +1D3 en Force et +1D3 Attaques. Ces bonus sont déterminés et prennent effet au palier d'Initiative auquel le porteur attaque avec cette arme.
 
-\pricelistitem{Arc Zap de Maza}{30} \newrule{\goblin{} uniquement}.
-\newline Type : Arc. \range{24}, Force 3, \lightningattacks{}, \multipleshots{3}. L'unité du porteur gagne la règle spéciale \quicktofire{}.
+\pricelistitem{Arc Zap de Maza}{30} \goblin{} uniquement.
+
+Type : Arc. \range{24}, Force 3, \lightningattacks{}, \multipleshots{3}. L'unité du porteur gagne la règle spéciale \quicktofire{}.
 
 \pricelistitem{Dague de Sournois}{15}Type : \hw{}. Les attaques portées avec cette arme ont \armourpiercing{1}. Si le porteur attaque une unité ennemie de flanc ou de dos, ses attaques avec cette arme gagnent +2 en Force.
 
@@ -606,7 +622,9 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine et
 
 \startpricelist
 
-\pricelistitem{Couronne du Roi des Cavernes}{40}\goblin{} uniquement. Ne peut pas être pris par une \largetarget{}.\newline Type : Aucun. Sauvegarde d'Armure de 6+. Le porteur ne peut rejoindre ou être rejoint que par une unité dont toutes les figurines ont au moins un élément qui partage la même \greenhiderace{} que lui. L'unité du porteur gagne alors la règle \vanguard{} et peut se déplacer après un ralliement, mais elle ne peut alors ni tirer, ni faire de Marche Forcée. De plus, la portée de la \inspiringpresence{} ou de \holdyourground{} du porteur est augmentée de \distance{6}.
+\pricelistitem{Couronne du Roi des Cavernes}{40}\goblin{} uniquement. Ne peut pas être pris par une \largetarget{}.
+
+Type : Aucun. Sauvegarde d'Armure de 6+. Le porteur ne peut rejoindre ou être rejoint que par une unité dont toutes les figurines ont au moins un élément qui partage la même \greenhiderace{} que lui. L'unité du porteur gagne alors la règle \vanguard{} et peut se déplacer après un ralliement, mais elle ne peut alors ni tirer, ni faire de Marche Forcée. De plus, la portée de la \inspiringpresence{} ou de \holdyourground{} du porteur est augmentée de \distance{6}.
 
 \pricelistitem{Plaques de Tuktek}{35}Type : \ha{}. Le porteur gagne +1 en Endurance et la figurine du porteur gagne 1D3 \impacthits{}.
 
@@ -616,7 +634,9 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine et
 
 \startpricelist
 
-\pricelistitem{Chapardeur de Défense}{\newrule{15}}\goblin{} uniquement.\newline Si le porteur subit une blessure, il peut utiliser la Sauvegarde d'Armure, la \wardsave{}, la \regeneration{} et la \magicresistance{} de la figurine lui ayant infligé cette blessure.
+\pricelistitem{Chapardeur de Défense}{15}\goblin{} uniquement.
+
+Si le porteur subit une blessure, il peut utiliser la Sauvegarde d'Armure, la \wardsave{}, la \regeneration{} et la \magicresistance{} de la figurine lui ayant infligé cette blessure.
 
 \endpricelist
 
@@ -624,9 +644,13 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine et
 
 \startpricelist
 
-\pricelistitem{Patte de Sanglier}{20}Figurine montée uniquement.\newline Toutes les figurines alliées de type Cavalerie à moins de \distance{18} du porteur peuvent relancer leurs tests de Terrain Dangereux.
+\pricelistitem{Patte de Sanglier}{20}Figurine montée uniquement.
 
-\pricelistitem{Peintures Waaargh!}{\newrule{15}}\feralorc{} uniquement.\newline Le porteur gagne la \frenzy{} et ne peut jamais la perdre. De plus, tous les \feralorcs{} de l'unité du porteur gagnent la \frenzy{} tant que ce dernier est dans l'unité. Enfin, l'unité gagne la règle \swiftstride{} pour les mouvements de Poursuite et de Charge Irrésistible.
+Toutes les figurines alliées de type Cavalerie à moins de \distance{18} du porteur peuvent relancer leurs tests de Terrain Dangereux.
+
+\pricelistitem{Peintures Waaargh!}{15}\feralorc{} uniquement.
+
+Le porteur gagne la \frenzy{} et ne peut jamais la perdre. De plus, tous les \feralorcs{} de l'unité du porteur gagnent la \frenzy{} tant que ce dernier est dans l'unité. Enfin, l'unité gagne la règle \swiftstride{} pour les mouvements de Poursuite et de Charge Irrésistible.
 
 \endpricelist
 
@@ -665,7 +689,7 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine et
 \noindent\begin{tabular}{lcccccc}
 \textbf{Nom} & \textbf{Artillerie} & \textbf{Portée} & \textbf{\labels@S{}} & \textbf{\multipleshots{}} & \textbf{\multiplewounds{}} & \textbf{\armourpiercing{}} \tabularnewline
 \skewerer{} & \boltthrower{} & \distance{48} & 6 & - & 1D3 & 6 \tabularnewline
-\splatterer{} & \catapult{} (\distance{3}) & \distance{12-60} & 3[9] & - & [\ordnance{}] & - \tabularnewline
+\splatterer{} & \catapult{} (\distance{3}) & \distance{12-60} & 3 [9] & - & [\ordnance{}] & - \tabularnewline
 \gitlauncher{} & \catapult{} (\distance{1}) & \distance{12-60} & 5 & 1D3+1 touches & - & 2 \tabularnewline
 \weblauncher{} & \catapult{} (\distance{3}) & \distance{6-36} & 3 & - & - & - \tabularnewline
 \end{tabular}

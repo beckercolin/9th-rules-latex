@@ -511,11 +511,24 @@
 	\ifstrequal{#1}{\permadgit}{\nobreak\permadgit}{}% For Orcs N Goblins
 	\ifstrequal{#1}{\perrune}{\nobreak\perrune}{}% For Dwarven Holds
 }
+
 \newcommand\optionschoice[2]{%
 	\parselist[,]{#2}{\locallists@optionschoice}%
 	#1%
 	\begin{itemize}[label={}, parsep=0cm, labelindent=0cm, labelwidth=0cm, noitemsep, topsep=0em, leftmargin=0.3cm]%
 	\forlistloop{\item\setoption}{\locallists@optionschoice}%
+	\end{itemize}%
+}
+
+\newcommand\optionschoiceTWOCOL[2]{%
+	\parselist[,]{#2}{\locallists@optionschoice}%
+	#1%
+	\begin{itemize}[label={}, parsep=0cm, labelindent=0cm, labelwidth=0cm, noitemsep, topsep=0em, leftmargin=0.3cm]%
+	\setlength{\columnseprule}{0.5pt}
+	\renewcommand{\columnseprulecolor}{\color{black!30}}
+	\vspace*{-5pt}\begin{multicols}{2}\raggedcolumns
+	\forlistloop{\item\setoption}{\locallists@optionschoice}%
+	\end{multicols}\setlength{\columnseprule}{0pt}
 	\end{itemize}%
 }
 
@@ -604,6 +617,13 @@
 					\par\option{\hspace*{0.3cm}- \local@option}{\local@cost}}%
 			} %End of the prerestriction of not condition
 			}% End of champion handling
+			\ifdefempty{\commandgroup@musician}{}{% We have a musician!
+				\item \hspace*{-0.04cm}\option{\labels@musician%
+					% Possible restrictions to taking a musician
+				    \expandafter\ifblank\expandafter{\commandgroup@musicianrestriction}{}{ \only{\commandgroup@musicianrestriction}}%
+				    % Cost of a musician
+				    }{\commandgroup@musician}%
+			}%
 			\ifdefempty{\commandgroup@banner}{}{% We have a banner!
 				\item \hspace*{-0.04cm}\option{\labels@standardbearer%
 					% Possible restrictions to taking a banner
@@ -627,13 +647,6 @@
 						\splitatinf{\commandgroup@banneroption}{\local@option}{\local@cost}%
 						\par\option{\hspace*{0.3cm}- \local@option}{\local@cost}%
 					}%
-			}%
-			\ifdefempty{\commandgroup@musician}{}{% We have a musician!
-				\item \hspace*{-0.04cm}\option{\labels@musician%
-					% Possible restrictions to taking a musician
-				    \expandafter\ifblank\expandafter{\commandgroup@musicianrestriction}{}{ \only{\commandgroup@musicianrestriction}}%
-				    % Cost of a musician
-				    }{\commandgroup@musician}%
 			}%
 		\end{description}%
 	\commandgroupframeend%

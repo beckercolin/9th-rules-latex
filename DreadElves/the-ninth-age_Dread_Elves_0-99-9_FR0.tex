@@ -1,7 +1,7 @@
 \input{../Layout/AB_layout.tex}
 
 \newcommand{\booktitle}{Elfes des Ténèbres}
-\newcommand{\version}{0.99.6}
+\newcommand{\version}{0.99.9}
 \newcommand{\frenchversion}{2.0}
 \newcommand{\booklogo}{pics/logo_big_DE.png}
 
@@ -72,18 +72,27 @@
 
 % Core
 
+\newcommand{\dreadlegionnaire}{Légionnaire Sadique}
 \newcommand{\dreadlegionnaires}{Légionnaires Sadiques}
+\newcommand{\repeaterauxiliary}{Perce-Cœur}
 \newcommand{\repeaterauxiliaries}{Perce-Cœurs}
+\newcommand{\corsair}{Corsaire}
 \newcommand{\corsairs}{Corsaires}
+\newcommand{\darkraider}{Pillard des Ténèbres}
 \newcommand{\darkraiders}{Pillards des Ténèbres}
+\newcommand{\bladeofnabh}{Lame de Nabh}
 \newcommand{\bladesofnabh}{Lames de Nabh}
 
 % Special
 
+\newcommand{\dancerofyema}{Danseuse de Yema}
 \newcommand{\dancersofyema}{Danseuses de Yema}
+\newcommand{\executioner}{Bourreau}
 \newcommand{\executioners}{Bourreaux}
-\newcommand{\towerguard}{Gardes des Tours Noires}
+\newcommand{\towerguard}{Garde des Tours Noires}
+\newcommand{\harpie}{Harpie}
 \newcommand{\harpies}{Harpies}
+\newcommand{\dreadknight}{Chevalier Prédateur}
 \newcommand{\dreadknights}{Chevaliers Prédateurs}
 \newcommand{\raptorchariot}{Char Prédateur}
 \newcommand{\medusa}{Méduse}
@@ -93,10 +102,12 @@
 % Rare
 
 \newcommand{\darkacolytes}{Disciples des Arts Interdits}
+\newcommand{\darkacolyte}{Disciple des Arts Interdits}
 \newcommand{\kraken}{Kraken}
 \newcommand{\hydra}{Hydre}
 \newcommand{\huntingchariot}{Char Veneur}
 \newcommand{\dreadreaper}{Baliste Écorcheuse}
+\newcommand{\ravencloak}{Rôdeur de l'Ombre}
 \newcommand{\ravencloaks}{Rôdeurs de l'Ombre}
 
 % Mounts
@@ -130,7 +141,6 @@
 \newcommand{\acultpriestmustjoinoneofthefollowingcults}{Une \cultpriest{} doit rejoindre l'un des Cultes suivants}
 \newcommand{\seeexecutionerspecialunit}{(voir l'unité spéciale \executioners{})}
 \newcommand{\seedancersofyemaspecialunit}{(voir l'unité spéciale \dancersofyema{})}
-\newcommand{\maypurchaseanynumberofpoisonsseebelow}{Peut utiliser n'importe quel nombre de \poisons{} (voir ci-dessous)}
 \newcommand{\assassinforkpaths}{Peut devenir au choix :}
 \newcommand{\canonlybeusedagainstclosecombatattacks}{Ne peut être utilisé que contre des Attaques de Corps a Corps}
 \newcommand{\corsairsvanguardnote}{Une unité de \corsairs{} peut prendre cette option pour chaque Personnage amélioré en \textbf{\fleetcommander}. Tout \fleetcommander{} qui rejoint une telle unité gagne la règle \vanguard{}}
@@ -157,7 +167,7 @@ Seulement si le Général a rejoint le \cultofyema{} et si le \elvenhorse{} est 
 }
 
 \newcommand{\masterpoisonerrule}{%
-Un \assassin{} peut être équipé d'un ou plusieurs \poisons{}. Au début de chaque Tour de Joueur, si l'\assassin{} dispose de plusieurs \poisons{}, déclarez celui qu'il va utiliser. Les \poisons{} ne peuvent être appliqués que sur des armes standard et font effet au Tir comme au Corps à Corps.
+Un \assassin{} peut être équipé d'un ou plusieurs \poisons{}, en échange de leur coût (voir ci-dessous). Au début de chaque Tour de Joueur, si l'\assassin{} dispose de plusieurs \poisons{}, déclarez celui qu'il va utiliser. Les \poisons{} ne peuvent être appliqués que sur des armes standard et font effet au Tir comme au Corps à Corps.
 }
 
 \newcommand{\professionalcourtesyrule}{%
@@ -207,13 +217,15 @@ La \dreadreaper{} peut aussi tirer comme une \textbf{\artilleryweapon} de type \
 }
 
 \newcommand{\divineblessingsrule}{%
-Au début de chaque Tour de Jeu allié et avant le début de la partie, juste après avoir déplacé les unités avec \vanguard{}, choisissez l'une des faveurs ci-dessous. Elle s'applique jusqu'au début du prochain Tour de Jeu allié. 
-Une seule unité alliée (sauf une \largetarget) à \distance{12} ou moins de l'Autel gagne cette faveur. Une unité ne peut recevoir qu'une seule faveur à la fois. De plus, seules les figurines n'appartenant à aucun Culte ou appartenant au même Culte que l'Autel peuvent être ciblées.\newline
-\begin{customsubitemize}
+Au début de chaque Tour de Jeu allié et avant le début de la partie, juste après avoir déplacé les unités avec \vanguard{}, choisissez l'une des faveurs ci-dessous. Elle s'applique jusqu'au début du prochain Tour de Jeu allié.
+
+\vspace{5pt}Une seule unité alliée (sauf une \largetarget{}) à \distance{12} ou moins de l'Autel gagne cette faveur. Une unité ne peut recevoir qu'une seule faveur à la fois. De plus, seules les figurines n'appartenant à aucun Culte ou appartenant au même Culte que l'Autel peuvent être ciblées.
+
+\begin{itemize}[label={-}]
 	\item L'unité gagne une \wardsave{5} contre les attaques de Corps à Corps et de Tir. Seul cet effet peut être choisi avant la partie.
 	\item L'unité gagne +1 Attaque. Les Montures ne sont pas affectées.
 	\item L'unité gagne +1 en Commandement.
-\end{customsubitemize}
+\end{itemize}
 }
 
 % Cult logos
