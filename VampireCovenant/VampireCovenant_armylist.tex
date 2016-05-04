@@ -24,15 +24,13 @@
 		},
 		\magicalitemsallowance =\upto{}<100,
 		\bloodlinechoice{}\refsymbol{}=\unlimited{},
-		\maytakeonechoiceonly{
+		\onechoiceonly{
 			\asinglebloodpower{}=\unlimited{},
 			\asingleancientbloodpower{}\refsymbol{}=\unlimited{},
 		},
-		\anyofthefollowing{
-			\shield{}=5,
-			\la{}=5,
-			\ha{}=10,
-		},
+		\shield{}=5,
+		\la{}=5,
+		\ha{}=10,
 		\weapononechoice{
 			\pw{}=10,
 			\halberd{}=15,
@@ -82,7 +80,7 @@
 
 \showunit{
 	name={\vampirehero},
-	cost=80,
+	cost=75,
 	profile={ < 6 6 4 5 4 2 6 4 8},
 	type=\infantry{},
 	basesize=20x20,
@@ -92,19 +90,17 @@
 	specialrules={\awaken{\zombies}},
 	magicpaths={\necromancy{}, \shadows{}, \death{}},
 	options={
-		\bsboption{}=25,
+		\bsb{}=25,
 		\magiclevelchoice{
 			\magiclevel{1}=30,
 			\magiclevel{2}=55,
 		},
 		\magicalitemsallowance{}=\upto{}<50,
 		\bloodlinechoice{}\refsymbol{}=\unlimited{},
-		\bloodpowerchoice{}=\unlimited{},
-		\anyofthefollowing{
-			\shield{}=5,
-			\la{}=5,
-			\ha{}=10,
-		},
+		\asinglebloodpower{}=\unlimited{},
+		\shield{}=5,
+		\la{}=5,
+		\ha{}=10,
 		\weapononechoice{
 			\pw{}=5,
 			\halberd{}=10,
@@ -152,10 +148,9 @@
 	unitsize=1,
 	commontype=\undeadcommonrules{},
 	commonspecialrules={\undead{},\ashestoashes{}},
-	specialrules={\multiplewounds{2}{\infantry{}, \cavalry{}, \warbeast{}}, \lethalstrike{}, \notaleader{}, \magicalattacks{}},
 	armour={\ha{}, \shield{}},
 	options={
-		\bsboption{}=25,
+		\bsb{}=25,
 		\magicalitemsallowance{}=\upto{}<50,
 		\weapononechoice{
 			\pw{}=3,
@@ -163,11 +158,15 @@
 			\gw{}=6,
 			\lance{}=6,
 		},
-		\maygain{} \unlivingshield{}=20,
+		\unlivingshield{}=20,
 	},
 	mounts={\skeletalsteed{}=15},
-	unitrules={
-		\unitrule{\unlivingshield}{\unlivingshieldrule}
+	additional={
+		\def\tempspecialrules{\multiplewounds{2}{\infantry{}, \cavalry{}, \warbeast{}}, \lethalstrike{}, \notaleader{}, \magicalattacks{}}
+		\def\tempunitrules{\unitrule{\unlivingshield}{\unlivingshieldrule}}
+		
+		\vspace*{-0.2cm}\specialrules{\tempspecialrules}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
 	},
 }
 
@@ -195,7 +194,7 @@
 
 		\def\tempoptions{%
 			\magicalweaponallowance{}=\upto{}<50,
-			\maytakeagw{}=10,		
+			\gw{}=10,		
 		}%
 
 		\def\tempmounts{\skeletalsteed{} \wordwith{} \lighttroops{}=20}%	
@@ -227,7 +226,7 @@
 	specialrules={\ethereal{}},
 	armour={\mountsprotection{6}},
 	options={
-		\maytake{} \mountsprotection{5}=15,
+		\mountsprotection{5}=15,
 	}
 }
 
@@ -240,82 +239,6 @@
 	commonspecialrules={\undead},
 	specialrules={\ethereal{}, \fly{8}},
 	armour={\mountsprotection{6}},
-}
-
-\showunit{
-	notinQRS=yes,
-	name={\cadaverwagon},
-	profile={
-		\cart{}< - - - 4 4 4 - - -,
-		\shamblinghorde{}< 4 1 - 3 3 -  1 \starsymbol{} 2	
-	},
-	type=\chariot{},
-	basesize=50x100,
-	commontype=\undeadcommonrules{},
-	commonspecialrules={\undead},
-	specialrules={\randomattacks{2D6} \only{\shamblinghorde}, \wakethedead{}, \cart{}, \regeneration{4}},
-	armour={\mountsprotection{5}},
-	options={
-		\maytake{} \endlesshorde{}=10,
-		\maytakeoneofthefollowing{
-			\bonepyre{}=15,
-			\bringoutyourdead{}=20,
-			\necromanticaura{}=20,
-		},
-	},
-	additional={
-		\vspace*{0.22cm}\seecadaverwagoninspecialsectionforupgdraderules{}
-	},
-}
-
-\showunit{
-	notinQRS=yes,
-	name={\courtofthedamned},
-	profile={
-		\floatingcourt{}	< - - - 5 5 5 - - -,
-       		\paramour{} (2) 	< - 5 5 5 - - 6 2 7,
-		\ghoststeeds{}	< 8 2 - 3 - - 2 \starsymbol{} 3,
-	},
-	type=\chariot{},
-	basesize=50x100,
-	commontype=\vampiriccommonrules{},
-	commonspecialrules={\undead{}, \vampiric{6}, \fear{}},
-	armour={\innatedefence{5}},
-	options={
-		\maytakeunholydominion{}=40,
-		\textbf{\bloodtie{\lamia}}\spacebeforecolon{}:\newline\maytakewardsave{4}=55,
-	},
-	additional={%
-		\def\tempspecialrules{\randomattacks{2D6} \only{\steeds}, \ethereal{} \only{\steeds}, \largetarget}
-		\def\tempunitrules{\unitrule{\unholydominion}{\unholydominionrule}}
-		
-		\vspace*{0.15cm}\specialrules{\tempspecialrules}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
-	},
-}
-
-\showunit{
-	name={\monstrousrevenant},
-	profile={< 6  4 - 5 5 4 2 4 4,},
-	type=\monstrousbeast{},
-	basesize=50x50,
-	commontype=\undeadcommonrules{},
-	commonspecialrules={\undead},
-	specialrules={\largetarget{},\fear{}},
-	unitrules={\unitrule{\greatmonstrousrevenant}{\greatmonstrousrevenantrule}},
-	additional={%
-		\def\tempoptions{%
-			\maytakeuptotwoofthefollowingTWOCOL{
-				\poisonedattacks{}=5,
-				\greatmonstrousrevenant{}=10,
-				\lethalstrike{}=10,
-				\wailofwoe{}=30,
-				\randomattacks{1D6+2}=30,
-				\fly{8}=40,
-			},		
-		}
-		\vspace*{0.1cm}\options{\tempoptions}
-	}
 }
 
 \showunit{
@@ -341,14 +264,88 @@
 	specialrules={\breathweapon{\Strength{} 2, \armourpiercing{6}}, \distracting{}, \regeneration{6}, \fly{7}},
 	armour={\innatedefence{4}},
 	options={
-		\mayupgradeto{} \colossalzombiedragon{}=20,
+		\colossalzombiedragon{}=20,
 	},
 	unitrules={
 		\unitrule{\colossalzombiedragon}{\colossalzombiedragonrule}
 	}
 }
 
+\showunit{
+	name={\monstrousrevenant},
+	profile={< 6  4 - 5 5 4 2 4 4,},
+	type=\monstrousbeast{},
+	basesize=50x50,
+	commontype=\undeadcommonrules{},
+	commonspecialrules={\undead},
+	specialrules={\largetarget{},\fear{}},
+	unitrules={\unitrule{\greatmonstrousrevenant}{\greatmonstrousrevenantrule}},
+	additional={%
+		\def\tempoptions{%
+			\uptotwoofthefollowingTWOCOL{
+				\poisonedattacks{}=5,
+				\greatmonstrousrevenant{}=10,
+				\lethalstrike{}=10,
+				\wailofwoe{}=30,
+				\randomattacks{1D6+2}=30,
+				\fly{8}=40,
+			},		
+		}
+		\vspace*{0.1cm}\options{\tempoptions}
+	}
+}
 
+\showunit{
+	notinQRS=yes,
+	name={\cadaverwagon},
+	profile={
+		\cart{}< - - - 4 4 4 - - -,
+		\shamblinghorde{}< 4 1 - 3 - -  1 \starsymbol{} 2	
+	},
+	type=\chariot{},
+	basesize=50x100,
+	commontype=\undeadcommonrules{},
+	commonspecialrules={\undead},
+	specialrules={\randomattacks{2D6} \only{\shamblinghorde}, \wakethedead{}, \cart{}, \regeneration{4}},
+	armour={\mountsprotection{5}},
+	options={
+		\endlesshorde{}=10,
+		\onechoiceonly{
+			\bonepyre{}=15,
+			\bringoutyourdead{}=20,
+			\necromanticaura{}=20,
+		},
+	},
+	additional={
+		\vspace*{0.22cm}\seecadaverwagoninspecialsectionforupgdraderules{}
+	},
+}
+
+\showunit{
+	notinQRS=yes,
+	name={\courtofthedamned},
+	profile={
+		\floatingcourt{}	< - - - 5 5 5 - - -,
+       		\paramour{} (2) 	< - 5 5 5 - - 6 2 7,
+		\ghoststeeds{}	< 8 2 - 3 - - 2 \starsymbol{} 3,
+	},
+	type=\chariot{},
+	basesize=50x100,
+	commontype=\vampiriccommonrules{},
+	commonspecialrules={\undead{}, \vampiric{6}, \fear{}},
+	armour={\innatedefence{5}},
+	options={
+		\unholydominion{}=40,
+		\textbf{\bloodtie{\lamia}}\spacebeforecolon{}:\newline\wardsave{4}=55,
+	},
+	additional={%
+		\def\tempspecialrules{\randomattacks{2D6} \only{\steeds}, \ethereal{} \only{\steeds}, \largetarget}
+		\def\tempunitrules{\unitrule{\unholydominion}{\unholydominionrule}}
+		
+		\vspace*{0.15cm}\specialrules{\tempspecialrules}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
+	},
+}
 
 
 
@@ -387,8 +384,8 @@
 	commonspecialrules={\undead{}, \ashestoashes},
 	armour={\la{}, \shield},
 	options={
-		\maytakeonechoiceonly{
-			\spear{}=\free,
+		\onechoiceonly{
+			\spear{}=\free{},
 			\halberd{}=\permodel{}<1,
 		},
 	},
@@ -410,8 +407,9 @@
 	commonspecialrules={\undead{}, \ashestoashes},
 	specialrules={\poisonedattacks},
 	options={
-		\maygain{} \skirmishers{} \ifNmodelsorless{15}=25,
-		\textbf{\bloodtie{\strigoi}}\spacebeforecolon{}:\newline\maygain{} \vanguard{}\refsymbol{}=\permodel{}<2,
+		\skirmishers{} \ifNmodelsorless{15}=25,
+		\textbf{\bloodtie{\strigoi}}\spacebeforecolon{}:\newline
+		\vanguard{}\refsymbol{}=\permodel{}<2,
 	},
 	commandgroup={champion=10, musician=10, banner=10},
 	additional={%
@@ -479,7 +477,7 @@
 	specialrules={\magicalattacks{}, \multiplewounds{2}{\infantry{}, \cavalry{}, \warbeast}, \lethalstrike{}, \bodyguard{\general, \barrowking}},
 	armour={\ha},
 	options={
-		\maytakeonechoiceonly{
+		\onechoiceonly{
 			\shield{}=\permodel{}<1,
 			\halberd{}=\permodel{}<2,
 			\gw{}=\permodel{}<3,
@@ -543,7 +541,7 @@
 	specialrules={\frenzy{}, \fly{9}},
 	commandgroup={champion=10},
 	options={
-		\maygain{} \skirmishers{} \ifNmodelsorless{4}=\permodel{}<3,
+		\skirmishers{} \ifNmodelsorless{4}=\permodel{}<3,
 	}
 }
 
@@ -590,7 +588,7 @@
 	commonspecialrules={\undead{}, \vampiric{5}, \fear},
 	specialrules={\hatred{}, \regeneration{4}},
 	options={
-		\maytakeoneofthefollowing{
+		\onechoiceonly{
 			\vampiric{3}=5,
 			\stomp{1D3+1}=10,
 			\vanguard{}=20,
@@ -606,7 +604,7 @@
 	profile={
 		\cart{}< - - - 4 4 4 - - -,
    		\cadavermaster{}< - 3 - 3 - -  3 1 5,
-		\shamblinghorde{}< 4 1 - 3 3 -  1 \starsymbol{} 2	
+		\shamblinghorde{}< 4 1 - 3 - -  1 \starsymbol{} 2	
 	},
 	invocation=1,
 	type=\chariot{},
@@ -617,8 +615,8 @@
 	specialrules={\randomattacks{2D6} \only{\shamblinghorde}, \wakethedead{}, \cart{}, \regeneration{4}},
 	armour={\mountsprotection{5}},
 	options={
-		\maytake{} \endlesshorde{}=10,
-		\maytakeoneofthefollowing{
+		\endlesshorde{}=10,
+		\onechoiceonly{
 			\bonepyre{}=15,
 			\bringoutyourdead{}=20,
 			\necromanticaura{}=20,
@@ -653,8 +651,9 @@
 	commonspecialrules={\undead{}, \vampiric{6}, \fear{}},
 	armour={\innatedefence{5}},
 	options={
-		\maytakeunholydominion{}=40,
-		\textbf{\bloodtie{\lamia}}\spacebeforecolon{}:\newline\maytakewardsave{4}=55,
+		\unholydominion{}=40,
+		\textbf{\bloodtie{\lamia}}\spacebeforecolon{}:\newline
+		\wardsave{4}=55,
 	},
 	additional={%
 		\def\tempspecialrules{\randomattacks{2D6} \only{\steeds}, \ethereal{} \only{\steeds}, \largetarget}
@@ -670,6 +669,33 @@
 
 
 \rareunitstitle
+
+\showunit{
+	name={\wraiths},
+	QRSname={\wraith},
+	cost=75,
+	profile={
+		\wraithprofile{}< 6 3 - 3 3 1 2 2 5,
+		[\ghoststeed{}]< 8 2 - 3 3 1 2 1 3
+	},
+	invocation=1,
+	type=\infantry{},
+	basesize=20x20,
+	unitsize=5,
+	maxmodels=10,
+	costpermodel=20,
+	commontype=\undeadcommonrules{},
+	commonspecialrules={\undead{}, \ashestoashes},
+	specialrules={\ethereal{}, \lighttroops{}, \reaper{} \only{\wraithprofile}, \armourpiercing{6} \only{\wraithprofile}, \terror{}, \skirmishers},
+	weapons={\gw},
+	wizardconclave={\deathsignaturespell{} (\Pathof{} \death), \shadowssignaturespell{} (\Pathof{} \shadows)},
+	options={
+		\flamingattacks{} \only{\wraithprofile}=\permodel{}<2,
+		\ghoststeeds{}=\permodel{}<15,
+	},
+	commandgroup={champion=60, championprerestriction=\textbf{\bloodtie{\nosferatu}}\spacebeforecolon{}:},
+	unitrules={\unitrule{\ghoststeeds}{\ghoststeedsrule}},
+}
 
 \showunit{
 	name={\vampireknights},
@@ -700,33 +726,6 @@
 }
 
 \showunit{
-	name={\wraiths},
-	QRSname={\wraith},
-	cost=75,
-	profile={
-		\wraithprofile{}< 6 3 - 3 3 1 2 2 5,
-		[\ghoststeed{}]< 8 2 - 3 3 1 2 1 3
-	},
-	invocation=1,
-	type=\infantry{},
-	basesize=20x20,
-	unitsize=5,
-	maxmodels=10,
-	costpermodel=20,
-	commontype=\undeadcommonrules{},
-	commonspecialrules={\undead{}, \ashestoashes},
-	specialrules={\ethereal{}, \lighttroops{}, \reaper{} \only{\wraithprofile}, \armourpiercing{6} \only{\wraithprofile}, \terror{}, \skirmishers},
-	weapons={\gw},
-	wizardconclave={\deathsignaturespell{} (\Pathof{} \death), \shadowssignaturespell{} (\Pathof{} \shadows)},
-	options={
-		\maygain{}\newline \flamingattacks{} \only{\wraithprofile}=\permodel{}<2,
-		\maygain{} \ghoststeeds{}=\permodel{}<15,
-	},
-	commandgroup={champion=60, championprerestriction=\textbf{\bloodtie{\nosferatu}}\spacebeforecolon{}:},
-	unitrules={\unitrule{\ghoststeeds}{\ghoststeedsrule}},
-}
-
-\showunit{
 	name={\wingedreapers},
 	QRSname={\wingedreaper},
 	cost=155,
@@ -742,70 +741,22 @@
 	specialrules={\undeadconstruct{}, \lethalstrike{}, \fear{}, \fly{6}},
 	armour={\innatedefence{5}},
 	options={
-		\maytakela{}=\permodel{}<10,
+		\la{}=\permodel{}<10,
 		\weapononechoice{
 			\pw{}=\permodel{}<5,
 			\halberd{}=\permodel{}<12,
 		},
-		\maytakeonechoiceonly{
+		\onechoiceonly{
 			\autonomous{}=\permodel{}<10,
 			\necromanticaura{}=20,
 		},
 	},
-	unitrules={
+	additional={%
+		\def\tempunitrule{
 		\unitrule{\undeadconstruct}{\undeadconstructrule}
 		\unitrule{\autonomous}{\autonomousrule}
-	},
-}
-
-\showunit{
-	name={\shriekinghorror},
-	cost=245,
-	profile={< 6 4 - 5 6 6 2 4 4},
-	invocation=1,
-	type=\monster{},
-	basesize=100x150,
-	unitsize=1,
-	commontype=\undeadcommonrules{},
-	commonspecialrules={\undead{}, \ashestoashes},
-	specialrules={\chillingshriek{}, \regeneration{6}, \fly{8}},
-	additional={%
-		\def\tempunitrule{\unitrule{\chillingshriek}{\chillingshriekrule}}
+		}
 		\vspace*{0.1cm}\unitrules{\tempunitrule}
-	},
-}
-
-\showunit{
-	name={\altarofundeath},
-	cost=200,
-	profile={
-		\altar{}< -  - - 5 5 5 - - -,
-       		\master{}< -  3 1 3 - - 3 1 5,
-		[\deathlychoir{}]< -  3 - 3 - - 3 3 5,
-		\ghoststeeds{}< 8 2 - 3 - - 2 \starsymbol{} 3,
-	},
-	invocation=1,
-	type=\chariot{},
-	basesize=50x100,
-	unitsize=1,
-	commontype=\undeadcommonrules{},
-	commonspecialrules={\undead{}, \ashestoashes},
-	armour={\innatedefence{5}},
-	options={
-		\maytakeoneofthefollowing{
-			\deathlychoir{}=20,
-			\darktome{}=30,
-		},
-	},
-	additional={%
-		\def\tempspecialrules{\randomattacks{2D6} \only{\steeds}, \auraofundeath{}, \ethereal{} \only{\steeds}, \largetarget{}, \terror{}, \regeneration{4}}%
-		\def\tempunitrule{%
-			\unitrule{\deathlychoir}{\deathlychoirrule}
-			\unitrule{\darktome}{\darktomerule}
-			\unitrule{\auraofundeath}{\auraofundeathrule}		
-		}%
-		\vspace*{0.1cm}\specialrules{\tempspecialrules}\newline%
-		\unitrules{\tempunitrule}
 	},
 }
 
@@ -827,8 +778,9 @@
 	armour={\innatedefence{4}},
 	weapons={\gw{} \only{\coachman}},
 	options={%
-		\maygain{} \extendedchassis{}=10,
-		\textbf{\bloodtie{\vonkarnstein}}\spacebeforecolon{}:\newline\maygain{} \stubborn{}=30,
+		\extendedchassis{}=10,
+		\textbf{\bloodtie{\vonkarnstein}}\spacebeforecolon{}:\newline
+		\stubborn{}=30,
 	},
 	additional={%
 		\def\tempspecialrules{\soulsyphon{}, \impacthits{+1}, \wardsave{4}, \terror{}, \armourpiercing{6} \only{\coachman}}
@@ -840,6 +792,57 @@
 		\vspace*{-0.1cm}\specialrules{\tempspecialrules}
 		\vspace*{0.1cm}\unitrules{\tempunitrule}
 		\soulsyphonchart
+	},
+}
+
+\showunit{
+	name={\altarofundeath},
+	cost=200,
+	profile={
+		\altar{}< -  - - 5 5 5 - - -,
+       		\master{}< -  3 1 3 - - 3 1 5,
+		[\deathlychoir{}]< -  3 - 3 - - 3 3 5,
+		\ghoststeeds{}< 8 2 - 3 - - 2 \starsymbol{} 3,
+	},
+	invocation=1,
+	type=\chariot{},
+	basesize=50x100,
+	unitsize=1,
+	commontype=\undeadcommonrules{},
+	commonspecialrules={\undead{}, \ashestoashes},
+	armour={\innatedefence{5}},
+	options={
+		\onechoiceonly{
+			\deathlychoir{}=20,
+			\darktome{}=30,
+		},
+	},
+	additional={%
+		\def\tempspecialrules{\randomattacks{2D6} \only{\steeds}, \auraofundeath{}, \ethereal{} \only{\steeds}, \largetarget{}, \terror{}, \regeneration{4}}%
+		\def\tempunitrule{%
+			\unitrule{\deathlychoir}{\deathlychoirrule}
+			\unitrule{\darktome}{\darktomerule}
+			\unitrule{\auraofundeath}{\auraofundeathrule}		
+		}%
+		\vspace*{0.1cm}\specialrules{\tempspecialrules}\newline%
+		\unitrules{\tempunitrule}
+	},
+}
+
+\showunit{
+	name={\shriekinghorror},
+	cost=245,
+	profile={< 6 4 - 5 6 6 2 4 4},
+	invocation=1,
+	type=\monster{},
+	basesize=100x150,
+	unitsize=1,
+	commontype=\undeadcommonrules{},
+	commonspecialrules={\undead{}, \ashestoashes},
+	specialrules={\chillingshriek{}, \regeneration{6}, \fly{8}},
+	additional={%
+		\def\tempunitrule{\unitrule{\chillingshriek}{\chillingshriekrule}}
+		\vspace*{0.1cm}\unitrules{\tempunitrule}
 	},
 }
 

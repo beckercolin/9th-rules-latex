@@ -8,7 +8,7 @@
 \showunit{
 	name={\greatkhan},
 	cost={180},
-	profile={ < 6 6 4 5 5 5 4 5 9},
+	profile={< 6 6 4 5 5 5 4 5 9},
 	type=\monstrousinfantry{},
 	basesize=40x40,
 	unitsize=1,
@@ -42,14 +42,14 @@
 	magiclevel=3,
 	magicpaths={\alchemy, \heavens, \fire, \death, \wilderness, \butchery},
 	options={
-		\bignamechoice{}=\unlimited,
+		\bignamechoice{}=\unlimited{},
 		\magiclevel{4}=30,
 		\magicalitemsallowance{}=\upto{}<100,
 		\combatweapononechoice{
 			\ironfist{}=8,
 			\gw{}=12,
 		},
-		\maytakegreaterfireblessing{}\refsymbol{}=35,
+		\greaterfireblessing{}\refsymbol{}=35,
 		\refsymbol{} \onlyifpathoffireoralchemyischosen{}=,
 	},
 	unitrules={
@@ -74,7 +74,7 @@
 	commonspecialrules={\sonsoftheavalanche},
 	armour={\ha},
 	options={
-		\bsboption{}=25,
+		\bsb{}=25,
 		\bignamechoice{}=\unlimited{},
 		\magicalitemsallowance{}=\upto{}<50,
 		\shootingweapononechoice{
@@ -107,7 +107,7 @@
 			\ironfist{}=4,
 			\gw{}=6,
 		},
-		\maytakefireblessing{}\refsymbol{}=25,
+		\fireblessing{}\refsymbol{}=25,
 		\refsymbol{} \onlyifpathoffireischosen{}=,
 	},
 	unitrules={
@@ -130,8 +130,8 @@
 	options={
 		\bignamechoice{}=\unlimited{},
 		\magicalitemsallowance{}=\upto{}<50,
-		\mayupgradeto{} \scout{} \onfootonly{}=10,
-		\mayreplacehuntingspearwithogrecrossbow{}.=\free,
+		\scout{} \onfootonly{}=10,
+		\mayreplacehuntingspearwithogrecrossbow{}=\free{},
 		\weapononechoice{
 			\pw{}=5,
 			\lance{}=10,
@@ -140,11 +140,10 @@
 		},
 	},
 	mounts={\tusker{}=40,\rockaurochs{}\refsymbol{}=215},
-	unitrules={
-		\unitrule{\loner}{\lonerrule}
-		\unitrule{\leaderofthepack}{\leaderofthepackrule}
-	},
 	additional={
+		\def\tempunitrules{\unitrule{\loner}{\lonerrule}
+		\unitrule{\leaderofthepack}{\leaderofthepackrule}}
+		\unitrules{\tempunitrules}
 		\refsymbol{} \mammothhunternote{}
 	}
 }
@@ -172,13 +171,18 @@
 	unitrules={\unitrule{\stoneskin}{\stoneskinrule}},
 }
 
+
+
+
+
+
 \coreunitstitle
 
 \showunit{
 	name={\tribesmen},
 	QRSname={\tribesman},
 	cost=75,
-	profile={ < 6 3 3 4 4 3 2 3 7},
+	profile={< 6 3 3 4 4 3 2 3 7},
 	type=\monstrousinfantry{},
 	basesize=40x40,
 	unitsize=3,
@@ -189,8 +193,8 @@
 	weapons={\pw},
 	armour={\la},
 	options={
-		\maytakeha{}=\permodel{}<3,
-		\maytakeironfist{}=\permodel{}<6,
+		\ha{}=\permodel{}<3,
+		\ironfist{}=\permodel{}<6,
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
 }
@@ -212,6 +216,7 @@
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
 }
 
+\newpage
 \showunit{
 	name={\scraplings},
 	QRSname={\scrapling},
@@ -225,7 +230,7 @@
 	specialrules={\insignificant},
 	weapons={\throwingweapons},
 	options={
-		\maytakela{}=\permodel{}<1,
+		\la{}=\permodel{}<1,
 		\mayreplacethrowingweaponswith{
 			\shortbow{}=\free{},
 			\shield{}=\permodel{}<1,
@@ -250,9 +255,10 @@
 			\halberd{}=3,
 		}
 	},
-	unitrules={
-		\unitrule{\backtowork}{\backtoworkrule}
-	}
+	additional={%
+		\def\tempunitrules{\unitrule{\backtowork}{\backtoworkrule}}
+		\unitrules{\tempunitrules}
+	},
 }
 
 \specialunitstitle
@@ -271,10 +277,11 @@
 	commonspecialrules={\sonsoftheavalanche},
 	armour={\la},
 	weapons={\handcannon},
-	unitequipment={
-		\equipmentdef{\handcannon}{\handcannonrule}
-	},
-	commandgroup={champion=10, musician=10, banner=10, bannerallowance=25}
+	commandgroup={champion=10, musician=10, banner=10, bannerallowance=25},
+	additional={%
+		\def\tempunitequipment{\equipmentdef{\handcannon}{\handcannonrule}}
+		\vspace*{0.2cm}\unitequipment{\tempunitequipment}
+	}
 }
 
 \showunit{
@@ -321,35 +328,13 @@
 	armour={\la{},\mountsprotection{5}},
 	specialrules={\fear, \impacthits{1D3}},
 	options={
-		\maytakeha{}=\permodel{}<7,
+		\ha{}=\permodel{}<7,
 		\weapononechoice{
 			\gw{}=\permodel{}<8,
 			\ironfist{} \onlywithlightarmour{}=\permodel{}<12,
 		},
 	},
 	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50}
-}
-
-\showunit{
-	name={\sabretoothtiger},
-	cost={40},
-	profile={< 8 4 - 4 4 2 4 3 5},
-	type=\warbeast{},
-	basesize=25x50,
-	unitsize=1,
-	maxmodels=15,
-	costpermodel=20,
-	specialrules={\insignificant},
-}
-
-\showunit{
-	name={\kineater},
-	cost=90,
-	profile={< 6 3 - 5 5 4 3 4 7},
-	type=\monstrousinfantry{},
-	basesize=40x40,
-	unitsize=1,
-	specialrules={\fear{},\ambush{},\hatred{},\unbreakable{},\regeneration{5}},
 }
 
 \showunit{
@@ -384,48 +369,83 @@
 	weapons={\throwingweapons},
 	specialrules={\vanguard, \skirmishers, \scouts, \insignificant, \itsatrap},
 	commandgroup={champion=10},
-	unitrules={
-		\unitrule{\itsatrap}{\itsatraprule}
+	additional={%
+		\def\tempunitrules{\unitrule{\itsatrap}{\itsatraprule}}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 	},
 }
+
+\showunit{
+	name={\sabretoothtiger},
+	cost={40},
+	profile={< 8 4 - 4 4 2 4 3 5},
+	type=\warbeast{},
+	basesize=25x50,
+	unitsize=1,
+	maxmodels=15,
+	costpermodel=20,
+	specialrules={\insignificant},
+}
+
+\showunit{
+	name={\kineater},
+	cost=90,
+	profile={< 6 3 - 5 5 4 3 4 7},
+	type=\monstrousinfantry{},
+	basesize=40x40,
+	unitsize=1,
+	specialrules={\fear{},\ambush{},\hatred{},\unbreakable{},\regeneration{5}},
+}
+
+
+
 
 \rareunitstitle
 
-
 \showunit{
-	name={\thundercannon},
+	name={\slavegiant},
 	cost=150,
-	profile={
-		\chariot{}< -  - - 5 5 5 - - -,
-       		\bombardiercrew{} (1)< -  3 3 4 - - 2 3 7,
-		\scraplingcrew{} (1)< -  2 3 3 - - 3 1 6,
-		\woollyrhino{} (1)< 6 3 - 5 - - 2 3 5
-	},
-	type=\chariot{},
-	basesize=50x100,
+	profile={< 6 3 - 6 5 6 3 \starsymbol{} 8,},
+	type=\monster{},
+	basesize=50x75,
 	unitsize=1,
-	armour={\innatedefence{5},\mountsprotection{6}},
-	commontype=\ogrecommonrules{},
-	commonspecialrules={\sonsoftheavalanche},
-	weapons={\thundercannon{} \only{\bombardiercrew}},	
-	unitequipment={\equipmentdef{\thundercannon{}}{\thundercannonrule{}}},
+	armour={\ha},
+	specialrules={\immunetopsychology{},\stubborn{},\insignificant{},\dowhatyouretold{},\giantattacks{}},
+	additional={%
+		\def\tempunitrules{%
+			\unitrule{\dowhatyouretold}{\dowhatyouretoldrule}
+			\unitrule{\giantattacks}{\giantattacksrule}
+			\unitrule{\bellow}{\bellowrule}
+			\unitrule{\jump}{\jumprule}
+			\unitrule{\grab}{\grabrule}
+			\unitrule{\swing}{\swingrule}
+			\unitrule{\thump}{\thumprule}
+			\unitrule{\smashname}{\smashrule}
+		}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{0.2cm}\giantattackstable
+	},
 }
 
 \showunit{
-	name={\scratapult},
-	cost=130,
+	name={\frostmammoth},
+	cost=190,
 	profile={
-		\chariot{}< -  - - 5 4 5 - - -,
-		\scraplingcrew{} (7)< -  2 3 3 - - 3 1 6,
-		\woollyrhino{} (1)< 6 3 - 5 - - 2 3 5
+        		\mammoth{}< 6 3 - 6 6 6 2 4 5,
+        		\rider{} (2)< - 3 4 4 - - 3 3 8,
 	},
-	type=\chariot{},
-	basesize=50x100,
+	type=\riddenmonster{},
+	basesize=100x150,
 	unitsize=1,
-	armour={\innatedefence{5},\mountsprotection{6}},
-	weapons={\scratapult{} \only{\chariot}},
-	specialrules={\insignificant},
-	unitequipment={\equipmentdef{\scratapult}{\scratapultrule}},
+	weapons={\ogrecrossbow{}},
+	armour={\innatedefence{4}},
+	specialrules={\impacthits{1D3}, \freezingaura},
+	options={
+		\anyriderchoice{
+			\huntingspear{}=\free{},
+		}
+	},
+	unitrules={\unitrule{\freezingaura}{\freezingaurarule}},
 }
 
 \showunit{
@@ -452,48 +472,41 @@
 }
 
 \showunit{
-	name={\frostmammoth},
-	cost=190,
+	name={\scratapult},
+	cost=130,
 	profile={
-        		\mammoth{}< 6 3 - 6 6 6 2 4 5,
-        		\rider{} (2)< - 3 4 4 - - 3 3 8,
+		\chariot{}< -  - - 5 4 5 - - -,
+		\scraplingcrew{} (7)< -  2 3 3 - - 3 1 6,
+		\woollyrhino{} (1)< 6 3 - 5 - - 2 3 5
 	},
-	type=\riddenmonster{},
-	basesize=100x150,
+	type=\chariot{},
+	basesize=50x100,
 	unitsize=1,
-	weapons={\ogrecrossbow{}},
-	armour={\innatedefence{4}},
-	specialrules={\impacthits{1D3}, \freezingaura},
-	options={
-		\anyriderchoice{
-			\huntingspear{}=\free{},
-		}
-	},
-	unitrules={\unitrule{\freezingaura}{\freezingaurarule}},
+	armour={\innatedefence{5},\mountsprotection{6}},
+	weapons={\scratapult{} \only{\chariot}},
+	specialrules={\insignificant},
+	unitequipment={\equipmentdef{\scratapult}{\scratapultrule}},
 }
 
 \showunit{
-	name={\slavegiant},
+	name={\thundercannon},
 	cost=150,
-	profile={< 6 3 - 6 5 6 3 \starsymbol{} 8,},
-	type=\monster{},
-	basesize=50x75,
+	profile={
+		\chariot{}< -  - - 5 5 5 - - -,
+       		\bombardiercrew{} (1)< -  3 3 4 - - 2 3 7,
+		\scraplingcrew{} (1)< -  2 3 3 - - 3 1 6,
+		\woollyrhino{} (1)< 6 3 - 5 - - 2 3 5
+	},
+	type=\chariot{},
+	basesize=50x100,
 	unitsize=1,
-	armour={\ha},
-	specialrules={\immunetopsychology{},\stubborn{},\insignificant{},\dowhatyouretold{},\giantattacks{}},
+	armour={\innatedefence{5},\mountsprotection{6}},
+	commontype=\ogrecommonrules{},
+	commonspecialrules={\sonsoftheavalanche},
+	weapons={\thundercannon{} \only{\bombardiercrew}},	
 	additional={%
-		\def\tempunitrules{%
-			\unitrule{\dowhatyouretold}{\dowhatyouretoldrule}
-			\unitrule{\giantattacks}{\giantattacksrule}
-			\unitrule{\bellow}{\bellowrule}
-			\unitrule{\jump}{\jumprule}
-			\unitrule{\grab}{\grabrule}
-			\unitrule{\swing}{\swingrule}
-			\unitrule{\thump}{\thumprule}
-			\unitrule{\smashname}{\smashrule}
-		}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
-		\vspace*{0.2cm}\giantattackstable
+		\def\tempequipment{\equipmentdef{\thundercannon{}}{\thundercannonrule{}}}
+		\unitequipment{\tempequipment}
 	},
 }
 

@@ -74,8 +74,8 @@
 
 \newcommand{\tribesman}{Guerrier Tribal}
 \newcommand{\tribesmen}{Guerriers Tribaux}
-\newcommand{\bruisers}{Brise-Crânes}
-\newcommand{\bruiser}{Brise-Crâne}
+\newcommand{\bruisers}{Brutes}
+\newcommand{\bruiser}{Brute}
 \newcommand{\scraplings}{Scraplins}
 \newcommand{\scrapling}{Scraplin}
 \newcommand{\scraplingforeman}{Chef Scraplin}
@@ -110,7 +110,7 @@
 % Mounts
 
 \newcommand{\tusker}{Razor-Buffle}
-\renewcommand{\labels@charactermounts}{Montures de Chasseurs}
+\renewcommand{\labels@charactermounts}{Montures de Chasseur}
 \renewcommand{\mountstitle}{%
 \def\logolocalpath{../Layout/pics/logo_mount.png}%
 \vspace*{1.5cm}\bigtitle{\labels@charactermounts}%
@@ -130,15 +130,11 @@
 
 % Profile wording
 
-\newcommand{\bignamechoice}{Peut choisir un seul \bigname}
-\newcommand{\maytakegreaterfireblessing}{Peut prendre une \greaterfireblessing}
+\newcommand{\bignamechoice}{Un seul \bigname}
 \newcommand{\onlyifpathoffireoralchemyischosen}{seulement si la Discipline \fire{} ou \alchemy{} est choisie}
-\newcommand{\maytakescraplingloukout}{Peut prendre un \scraplinglookout}
-\newcommand{\maytakefireblessing}{Peut prendre une \fireblessing}
 \newcommand{\onlyifpathoffireischosen}{seulement si la Discipline \fire{} est choisie}
-\newcommand{\mayreplacehuntingspearwithogrecrossbow}{Peut remplacer sa \huntingspear{} par une \ogrecrossbow{}}
-\newcommand{\maytakeironfist}{Peut prendre un \ironfist{}}
-\newcommand{\mayreplacethrowingweaponswith}{\optionschoice{Peut remplacer ses \throwingweapons{} par :}}
+\newcommand{\mayreplacehuntingspearwithogrecrossbow}{Remplacer la \huntingspear{} par une \ogrecrossbow{}}
+\newcommand{\mayreplacethrowingweaponswith}{\optionschoice{Remplacer les \throwingweapons{} par :}}
 \newcommand{\oneunitmayupgradetoforeman}{Une unité peut l'améliorer en \scraplingforeman{}}
 \newcommand{\foremannote}{\textbf{Option} pour les unités de \scraplings{}}
 \newcommand{\onlywithlightarmour}{(seulement avec Armure Légère)}
@@ -148,11 +144,11 @@
 % Profile rules
 
 \newcommand{\greaterfireblessingrule}{%
-Le \greatshaman{} gagne \breathweapon{Force 4, \flamingattacks{}}, \flamingattacks{} et \fireborn{}.
+Le \greatshaman{} gagne les règles \breathweapon{Force 4, \flamingattacks{}}, \flamingattacks{} et \fireborn{}.
 }
 
 \newcommand{\fireblessingrule}{%
-Le \shaman{} gagne \breathweapon{Force 3, \flamingattacks{}}, \flamingattacks{} et \fireborn{}.
+Le \shaman{} gagne les règles \breathweapon{Force 3, \flamingattacks{}}, \flamingattacks{} et \fireborn{}.
 }
 
 \newcommand{\lonerrule}{%
@@ -160,7 +156,7 @@ Les \mammothhunters{} à pied ne peuvent rejoindre que des unités de \yetis{} e
 }
 
 \newcommand{\leaderofthepackrule}{%
-Si un \mammothhunter{} rejoint une unité de \sabretoothtigers{}, et seulement tant qu'il reste avec elle, cette unité perd \insignificant{} et gagne \vanguard{}. De plus, le \mammothhunter{}  compte comme étant de Type de Troupe \warbeast{} pour les allocations de touches classiques et de gabarit à l'unité combinée.
+Si un \mammothhunter{} rejoint une unité de \sabretoothtigers{}, et seulement tant qu'il reste avec elle, cette unité perd la règle \insignificant{} et gagne la règle \vanguard{}. De plus, le \mammothhunter{}  compte comme étant de Type de Troupe \warbeast{} pour les allocations de touches classiques et de gabarit à l'unité combinée.
 }
 
 \newcommand{\mammothhunternote}{%
@@ -168,15 +164,17 @@ Un \mammothhunter{} monté sur un \rockaurochs{} ne peut choisir que le \bigname
 }
 
 \newcommand{\backtoworkrule}{%
-Les \scraplingforemen{} ont la règle \holdyourground{} bien qu'ils ne soient pas Porteur de la Grande Bannière. Toutefois, seuls les \scraplings{}, les \scratapults{} et les \scraplingtrappers{} peuvent bénéficier du \holdyourground{} prodigué par un \scraplingforeman{}.
+Les \scraplingforemen{} ont la règle \holdyourground{} bien qu'ils ne soient pas Porteur de la Grande Bannière. Toutefois, seuls les \scraplings{}, les \scratapults{} et les \scraplingtrappers{} peuvent bénéficier de la règle \holdyourground{} prodigué par un \scraplingforeman{}.
 }
 
 \newcommand{\handcannonrule}{%
-\range{24}, Force 4, \armourpiercing{1}, \multipleshots{1D6}. Le \handcannon{} ne subit pas de pénalité pour toucher suite à un Mouvement ou aux \multipleshots{}.
+\range{24}, Force 4, \armourpiercing{1}, \multipleshots{1D6}.
+
+Le \handcannon{} ne subit pas de pénalité pour toucher suite à un Mouvement ou à des \multipleshots{}.
 }
 
 \newcommand{\battlescarredrule}{%
-Chaque unité de \mercenaryveterans{} doit choisir deux règles spéciales parmi les suivantes :
+Chaque unité de \mercenaryveterans{} doit choisir deux règles parmi les suivantes :
 
 \setlength{\columnseprule}{0.5pt}
 \renewcommand{\columnseprulecolor}{\color{black!30}}
@@ -202,9 +200,9 @@ Chaque unité de \mercenaryveterans{} doit choisir deux règles spéciales parmi
 \swiftstride{}
 \end{multicols}\setlength{\columnseprule}{0pt}\vspace*{5pt}
 
-Chaque règle spéciale ne peut être prise que par une seule unité de \mercenaryveterans{}.
+Chaque règle ne peut être prise que par une seule unité de \mercenaryveterans{}.
 
-\vspace*{5pt}\refsymbol{} Si une unité de \mercenaryveterans{} choisit la règle spéciale \weaponmaster{}, elle peut choisir une seule arme gratuitement (à l'exception du \ironfist{}), et peut payer pour acquérir autant d'armes additionnelles qu'elle le souhaite (y compris le \ironfist{}).
+\vspace*{5pt}\refsymbol{} Si une unité de \mercenaryveterans{} choisit la règle \weaponmaster{}, elle peut choisir une seule arme gratuitement (à l'exception du \ironfist{}), et peut acquérir autant d'armes additionnelles qu'elle le souhaite, y compris le \ironfist{}, pour leur coût.
 }
 
 \newcommand{\touchoffrostrule}{%
@@ -212,19 +210,19 @@ Les unités ennemies subissent un malus de -1 en Initiative, jusqu'à un minimum
 }
 
 \newcommand{\itsatraprule}{%
-Tout Champ, Forêt ou Ruine devient un Terrain Dangereux (1) pour le reste de la partie si, au moment du déploiement ou à la fin d'une Phase de Mouvement, une unité non en fuite de \scraplingtrappers{} est en contact avec l'élément de décor concerné. Les figurines qui traitent normalement ces éléments de décor comme des Terrains Dangereux (1) les traitent comme des Terrains Dangereux (2) à la place. Les \scraplingtrappers{}  n'ont pas à faire de test de Terrain Dangereux lorsqu'ils entrent ou sortent d'un élément de décor qu'ils ont piégé.
+Tout Champ, Forêt ou Ruine devient un Terrain Dangereux (1) pour le reste de la partie si, au moment du déploiement ou à la fin d'une Phase de Mouvement, une unité non en fuite de \scraplingtrappers{} est en contact avec l'élément de décor concerné. Les figurines qui traitent normalement ces éléments de décor comme des Terrains Dangereux (1) les traitent comme des Terrains Dangereux (2) à la place. Les \scraplingtrappers{} n'ont pas à faire de test de Terrain Dangereux lorsqu'ils entrent ou sortent d'un élément de décor qu'ils ont piégé.
 }
 
 \newcommand{\thundercannonrule}{%
 Cette arme peut être employée de deux manières :
-\begin{customsubitemize}
+\begin{itemize}[label={-}]
 	\item Comme une \textbf{\artilleryweapon} de type \textbf{\cannon} (\distance{2D6}).\newline
 		\range{48}, Force 10, \multiplewounds{\ordnance}{}, \armourpiercing{2}.
 	\item Comme une \textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline
 		\range{12}, Force 5, \armourpiercing{2}, \multipleshots{2D6}.
-\end{customsubitemize}
+\end{itemize}
 
-\vspace*{5pt}Si le \thundercannon{} ne fait que des Pivots et n'effectue aucun mouvement supplémentaire, il ne souffre pas de la pénalité pour bouger et tirer.
+Si le \thundercannon{} ne fait que des Pivots et n'effectue aucun mouvement supplémentaire, il ne souffre pas de la pénalité pour bouger et tirer.
 }
 
 \newcommand{\scratapultrule}{%
@@ -233,7 +231,7 @@ Cette arme peut être employée de deux manières :
 }
 
 \newcommand{\stoneskinrule}{%
-Si la figurine subit une blessure assujettie à la règle spéciale \multiplewounds{}{}, le nombre de Points de Vie enlevés à la figurine est divisé par deux et arrondi au supérieur.
+Si la figurine subit une blessure assujettie à la règle \multiplewounds{}{}, le nombre de Points de Vie enlevés à la figurine est divisé par deux et arrondi au supérieur.
 }
 
 \newcommand{\freezingaurarule}{%
@@ -241,11 +239,11 @@ Toutes les unités ennemies dans un rayon de \distance{6} de la figurine subisse
 }
 
 \newcommand{\dowhatyouretoldrule}{%
-Tous les \slavegiants{} peuvent relancer leur premier jet d'Attaques de Géant, mais doivent accepter le second résultat.
+Tous les \slavegiants{} peuvent relancer leur jet d'Attaques de Géant, mais doivent accepter le second résultat.
 }
 
 \newcommand{\giantattacksrule}{%
-Quand un Géant attaque au Corps à Corps, au lieu d'attaquer normalement, choisissez une unité en contact socle à socle à attaquer et lancez 1D6. Déterminez ci-dessous la table à utiliser selon le Type de Troupe de l'unité visée, et trouvez l'attaque correspondant au résultat du dé. Il est important de noter que les Attaques de Géant comptent comme des attaques de Corps à Corps et suivent ainsi normalement les règles affectant ces attaques. Le Géant peut également faire son \stomp{}.
+Quand un Géant attaque au Corps à Corps, au lieu d'attaquer normalement, choisissez une unité en contact socle à socle à attaquer et lancez 1D6. Déterminez ci-dessous la table à utiliser selon le Type de Troupe de l'unité visée, et trouvez l'attaque correspondant au résultat du dé. Il est important de noter que les Attaques de Géant comptent comme des Attaques de Corps à Corps et suivent ainsi normalement les règles affectant ces attaques. Le Géant peut également faire son \stomp{}.
 }
 
 \newcommand{\giantattackstable}{%
@@ -277,7 +275,7 @@ Quand un Géant attaque au Corps à Corps, au lieu d'attaquer normalement, chois
 }
 
 \newcommand{\bellowrule}{%
-Ni le Géant, ni l'unité sélectionnée ne peuvent faire d'attaques de Corps à Corps pendant cette phase. Les attaques déjà réalisées, incluant celles réalisées simultanément avec cette attaque, ne sont pas concernées. Le camp du Géant gagne automatiquement le combat de 2. Si deux Géants opposés, ou plus, \og{} Hurlent \fg{}, le combat est un match nul.
+Ni le Géant, ni l'unité sélectionnée ne peuvent faire d'Attaques de Corps à Corps pendant cette phase. Les attaques déjà réalisées, incluant celles réalisées simultanément avec cette attaque, ne sont pas concernées. Le camp du Géant gagne automatiquement le combat avec un résultat de 2. Si deux Géants opposés, ou plus, utilisent l'attaque \bellow{}, le combat est un match nul.
 }
 
 \newcommand{\jumprule}{%
@@ -289,7 +287,7 @@ Choisissez une figurine dans l'unité sélectionnée et en contact socle à socl
 }
 
 \newcommand{\swingrule}{%
-Le Géant fait 2D6 attaques sur l'unité choisie.
+Le Géant fait 2D6 attaques contre l'unité choisie.
 }
 
 \newcommand{\thumprule}{%
@@ -297,7 +295,7 @@ Choisissez une figurine en contact socle à socle avec le Géant dans l'unité s
 }
 
 \newcommand{\smashrule}{%
-Choisissez une figurine en contact socle à socle avec le Géant dans l'unité sélectionnée. Cette figurine subit une blessure avec \armourpiercing{6}. Si la figurine n'a pas encore attaqué, elle ne peut pas le faire au cours de cette manche. Si la figurine a déjà réalisé ses attaques, elle ne pourra pas attaquer au cours du tour de  joueur à venir.
+Choisissez une figurine en contact socle à socle avec le Géant dans l'unité sélectionnée. Cette figurine subit une blessure avec \armourpiercing{6}. Si la figurine n'a pas encore attaqué, elle ne peut pas le faire au cours de cette manche. Si la figurine a déjà réalisé ses attaques, elle ne pourra pas attaquer au cours du Tour de Joueur à venir.
 }
 
 % QRS
@@ -327,7 +325,7 @@ Toutes les unités dans l'armée dotées d'un Porte-étendard bénéficient de c
 
 \armyspecialruleentry{\sonsoftheavalanche}
 
-La figurine est immunisée aux effets de la Peur. Si elle est à pied, elle gagne la règle \impacthits{1} si c'est une figurine ordinaire et \impacthits{1D3} si c'est un Personnage.
+La figurine est immunisée aux effets de la règle Peur. Si elle est à pied, elle gagne la règle \impacthits{1} si c'est une figurine ordinaire et \impacthits{1D3} si c'est un Personnage.
 
 \closearmyspecialrules
 
@@ -385,21 +383,21 @@ L'armée ne peut pas inclure de \mammothhunter{}, de \scrapling{}, de \scrapling
 \vspace*{\fill}\columnbreak
 \pricelistitem{Cœur Sauvage}{25}\mammothhunter{} uniquement.
 
-Le \mammothhunter{} perd la règle \notaleader{} et peut être promu Général de l'armée. Un autre \mammothhunter{} dans l'armée peut être promu Porteur de la Grande Bannière pour 25 pts. Une unité de \yetis{} et une unité de \sabretoothtigers{} peuvent être prises comme unités de base. Votre armée ne doit pas inclure de \greatkhan{}, de \khan{}, de \bruiser{}, de \mercenaryveteran{}, de \bombardier{} ou de \thundercannon{}.
+Le \mammothhunter{} perd la règle \notaleader{} et peut être promu Général de l'armée. Un autre \mammothhunter{} dans l'armée peut être promu Porteur de la Grande Bannière pour 25 pts. Une unité de \yetis{} et une unité de \sabretoothtigers{} peuvent être prises comme Unités de Base. Votre armée ne peut pas inclure de \greatkhan{}, de \khan{}, de \bruiser{}, de \mercenaryveteran{}, de \bombardier{} ou de \thundercannon{}.
 
 \pricelistitem{Chasseur de Têtes}{25}À la fin de toute Phase de Corps à Corps durant laquelle le porteur a tué une ou plusieurs figurines, et dans la mesure où il n'est pas en fuite, lancez 1D6. Sur un résultat de 3+, il Récupère un Point de Vie.
 
-\pricelistitem{Mangeur de Troll}{25}Le Personnage gagne \regeneration{5} et \stupidity{}. De plus, il obtient \multiplewounds{2}{\monstrousinfantry}.
+\pricelistitem{Mangeur de Troll}{25}Le Personnage gagne les règles \regeneration{5}, \stupidity{} et \multiplewounds{2}{\monstrousinfantry}.
 
-\pricelistitem{Mâchoire Pourrie}{20}Le Personnage gagne \poisonedattacks{}. Pour la durée d'une seule Phase de Corps à Corps, toutes les figurines de son unité peuvent aussi gagner \poisonedattacks{}. Le joueur doit déclarer au début de la Manche de Corps à Corps s'il utilise cette capacité.
+\pricelistitem{Mâchoire Pourrie}{20}Le Personnage gagne la règle \poisonedattacks{}. Pour la durée d'une seule Phase de Corps à Corps, toutes les figurines de son unité peuvent aussi gagner cette règle. Le joueur doit déclarer au début de la Manche de Corps à Corps s'il utilise cette capacité.
 
 \pricelistitem{Maître des Trésors de Guerre}{20}Ne peut pas être pris par un \wizard{} ou un \mammothhunter{}.
 
-Le Personnage gagne la règle spéciale \weaponmaster{} et une \platearmour{}, et peut acquérir autant d'armes standard de corps à corps et de tir auxquelles il peut accéder plutôt qu'une seule de chaque catégorie.
+Le Personnage gagne la règle \weaponmaster{} et une \platearmour{}, et peut acquérir autant d'armes standard de corps à corps et de tir auxquelles il peut accéder plutôt qu'une seule de chaque catégorie.
 
 \pricelistitem{Pourfendeur de Moelle Épinière}{20}Figurines à pied uniquement.
 
-Le Personnage bénéficie des règles \devastatingcharge{} et \thunderouscharge{}. Le bonus de Force de \thunderouscharge{} affecte aussi les \impacthits{} et le \stomp{}.
+Le Personnage gagne les règles \devastatingcharge{} et \thunderouscharge{}. Le bonus de Force de \thunderouscharge{} affecte aussi les \impacthits{} et le \stomp{}.
 
 \endpricelistNSP
 \end{multicols}
@@ -412,9 +410,9 @@ Le Personnage bénéficie des règles \devastatingcharge{} et \thunderouscharge{
 
 \startpricelist
 
-\pricelistitem{Masse de Khagadai}{50}Type : \gw{}. Les attaques portées avec cette arme ont \multiplewounds{1D3}{}.
+\pricelistitem{Masse de Khagadai}{50}Type : \gw{}. Les attaques portées avec cette arme ont la règle \multiplewounds{1D3}{}.
 
-\pricelistitem{Transperce-Cœur}{30}Type : \ironfist{}. Les attaques réalisées avec cette arme toucheront toujours sur 3+ ou mieux au Corps à Corps, quels que soient les malus pour toucher, et malgré la règle \parry{}. De plus, ces attaques bénéficient de \lethalstrike{} et \armourpiercing{1}.
+\pricelistitem{Transperce-Cœur}{30}Type : \ironfist{}. Les attaques réalisées avec cette arme toucheront toujours sur 3+ ou mieux au Corps à Corps, quels que soient les malus pour toucher, et malgré la règle \parry{}. De plus, ces attaques bénéficient des règles \lethalstrike{} et \armourpiercing{1}.
 
 \pricelistitem{Gantelet Brise-Hache}{20}Type : \ironfist{}. Si le porteur réussit au moins une touche avec cette arme contre une figurine ennemie possédant une Arme Magique lors d'une Manche de Corps à Corps, jetez 1D6 avant les jets pour blesser. Sur un résultat de 4+, toutes les Armes Magiques de la figurine ennemie sont détruites.
 
@@ -426,7 +424,8 @@ Le Personnage bénéficie des règles \devastatingcharge{} et \thunderouscharge{
 
 \pricelistitem{Cape en Cuir de Mammouth}{30}Figurine à pied uniquement.
 
-Type : Aucun (Sauvegarde d'Armure 6+). Ne peut être prise que par des figurines à pied.\newline Si le porteur est touché par une attaque dont la Force est de 6 ou plus, la Force de cette attaque est réduite à 5.
+Type : Aucun (Sauvegarde d'Armure 6+). Ne peut être prise que par des figurines à pied.\newline
+Si le porteur est touché par une attaque dont la Force est de 6 ou plus, la Force de cette attaque est réduite à 5.
 
 \pricelistitem{Fourrure de Yéti}{10}Type : Aucun (Sauvegarde d'Armure 6+). Les unités ennemies en contact socle à socle avec le porteur subissent un malus de -1 en Initiative, jusqu'à un minimum de 1.
 

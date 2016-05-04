@@ -1,4 +1,4 @@
-%%% v0.99.5.1
+%%% v0.99.9
 
 \armylist
 
@@ -14,13 +14,11 @@
 	unitsize=1,
 	options={
 		\magicalitemsallowance{}=\upto{}<100,
-		\maygain{} \waaargh{} \only{\general}=20,
-		\anyofthefollowing{
-			\shield{}=5,
-			\pw{}=5,
-			\gw{}=15,
-			\lance{}=15,
-		},
+		\waaargh{} \only{\general}=20,
+		\shield{}=5,
+		\pw{}=5,
+		\gw{}=15,
+		\lance{}=15,
 	},
 	additional={%
 		\startraceforking{3}%
@@ -105,13 +103,11 @@
 	armour={\la},
 	options={
 		\magicalitemsallowance{}=\upto{}<100,
-		\maygain{} \greentide{} \only{\general}=\free,
-		\anyofthefollowing{
-			\shield{}=5,
-			\ha{}=8,
-		},
-		\maytakeashortbow{}=2,
-		\weapononechoice{
+		\greentide{} \only{\general}=\free,
+		\shield{}=5,
+		\ha{}=8,
+		\shortbow{}=2,
+		\combatweapononechoice{
 			\pw{}=5,
 			\gw{}=15,
 			\lance{}=15,
@@ -190,26 +186,30 @@
 	},
 }
 
+
+
+
+
+
+
 \heroestitle
 
 \showunit{
 	name={\orcchief},
 	QRSname={\orcchief{}$^{1}$},
-	cost={50},
+	cost=50,
 	profile={ < 4 5 3 4 5 2 3 3 8},
 	type=\infantry{},
 	basesize=25x25,
 	unitsize=1,
 	options={
-		\bsboption{}=25,
+		\bsb{}=25,
 		\magicalitemsallowance{}=\upto{}<50,
-		\maygain{} \waaargh{} \only{\general}=10,
-		\anyofthefollowing{
-			\shield{}=5,
-			\pw{}=5,
-			\gw{}=10,
-			\lance{}=10,
-		},
+		\waaargh{} \only{\general}=10,
+		\shield{}=5,
+		\pw{}=5,
+		\gw{}=10,
+		\lance{}=10,
 	},
 	additional={%
 		\startraceforking{3}%
@@ -292,14 +292,13 @@
 	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
-	armour={\la},
+	armour={\la{},\shield},
 	options={
-		\bsboption{}=25,
+		\bsb{}=25,
 		\magicalitemsallowance{}=\upto{}<50,
-		\maygain{} \greentide{} \only{\general}=\free,
-		\maytakeashield{}=\free{},
-		\maytakeashortbow{}=2,
-		\weapononechoice{
+		\greentide{} \only{\general}=\free{},
+		\shortbow{}=2,
+		\combatweapononechoice{
 			\pw{}=3,
 			\lightlance{}=3,
 			\gw{}=6,
@@ -381,6 +380,11 @@
 		\closeraceforking{}%
 	},
 }
+
+
+
+
+
 
 \mountstitle
 
@@ -470,7 +474,10 @@
 	profile={< 4 5 - 6 5 4 3 3 6},
 	type=\monstrousbeast{},
 	basesize=50x50,
-	specialrules={\fear{},\fly{8},\largetarget{},\poisonedattacks{},\venomousfangs{}},
+	additional={%
+		\def\tempspecialrules{\fear{},\fly{8},\largetarget{},\poisonedattacks{},\venomousfangs{}}
+		\vspace*{-0.2cm}\specialrules{\tempspecialrules}
+	},
 }
 
 \showunit{
@@ -485,18 +492,27 @@
 	greenhiderace={\forestgoblin{} \textnormal{\only{\goblins}}},
 	weapons={\shortbow{},\lightlance{} \only{\goblins}},
 	armour={\innatedefence{4}},
-	specialrules={\venomousfangs{},\immunetopsychology{},\poisonedattacks{} \only{\spider},\strider{},\stubborn{},\swiftstride{}},
 	options={\spidermothershrineoption{}=40},
-	unitrules={%
-		\unitrule{\spidermothershrine}{\spidermothershrinerule}
+	additional={%
+		\def\tempspecialrules{\venomousfangs{},\immunetopsychology{},\poisonedattacks{} \only{\spider},\strider{},\stubborn{},\swiftstride{}}
+		\def\tempunitrules{\unitrule{\spidermothershrine}{\spidermothershrinerule}}
+		
+		\specialrules{\tempspecialrules}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
 	},
 }
+
+
+
+
+
 
 \coreunitstitle
 
 \showunit{
 	name={\orcs},
-	cost={90},
+	QRSname={\orc},
+	cost=90,
 	profile={< 4 3 3 3 4 1 2 1 7},
 	type=\infantry{},
 	basesize=25x25,
@@ -504,12 +520,10 @@
 	maxmodels=50,
 	costpermodel=6,
 	options={
-		\anyofthefollowing{
-			\shield{}=\permodel{}<1,
-			\bow{}=\permodel{}<1,
-			\pw{}=\permodel{}<1,
-			\spear{}=\permodel{}<1,
-		},
+		\shield{}=\permodel{}<1,
+		\bow{}=\permodel{}<1,
+		\spear{}=\permodel{}<1,
+		\pw{}=\permodel{}<1,
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
 	additional={%
@@ -526,7 +540,7 @@
 		\columnbreak
 			\forkraceFeralOrc{\pts{1}\permodel}%
 
-			\def\tempoptions{\maytakeamammothstabber{}=15,}%
+			\def\tempoptions{\mammothstabber{}=15,}%
 			\options{\tempoptions}%
 
 		\vspace*{\fill}
@@ -536,7 +550,8 @@
 
 \showunit{
 	name={\orceadbashers{} (\oneofakind)},
-	cost={70},
+	QRSname={\orceadbasher{}},
+	cost=70,
 	profile={< 4 4 3 4 4 1 2 1 7},
 	type=\infantry{},
 	basesize=25x25,
@@ -545,11 +560,9 @@
 	costpermodel=9,
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
 	options={%
-		\anyofthefollowing{
-			\shield{}=\permodel{}<1,
-			\pw{}=\permodel{}<1,
-			\spear{}=\permodel{}<1,
-		},
+		\shield{}=\permodel{}<1,
+		\spear{}=\permodel{}<1,
+		\pw{}=\permodel{}<1,
 	},
 	additional={%
 		\startraceforking{2}%
@@ -563,7 +576,7 @@
 			\forkraceFeralOrc{\pts{1}\permodel}%
 
 			\def\tempoptions{%
-				\maytakeamammothstabber{}=15,
+				\mammothstabber{}=15,
 			}%
 			\options{\tempoptions}%
 
@@ -574,8 +587,8 @@
 
 \showunit{
 	name={\goblins},
-	QRSname={\goblins{}$^{3}$},
-	cost={60},
+	QRSname={\goblin{}$^{3}$},
+	cost=60,
 	profile={ < 4 2 3 3 3 1 2 1 6},
 	type=\infantry{},
 	basesize=20x20,
@@ -583,7 +596,7 @@
 	maxmodels=60,
 	costpermodel=3,
 	options={
-		\maytakeoneofthefollowing{
+		\onechoiceonly{
 			\shortbow{}=\free{},
 			\shield{}=\permodel{}<0.5,
 			\spear{} \&{} \shield{}=\permodel{}<0.5,
@@ -599,8 +612,8 @@
 			
 			\def\tempoptions{%
 				\exchangeallweaponsforshieldandshortbow{}=\permodel{}<0.5,
-				\takeshadygits{}\dotfill{}=\pershadygit{}<10,
-				\shadygitlimitation{}
+				\shadygits{}\dotfill{}=\pershadygit{}<10,
+				\vspace{5pt}\shadygitlimitation{}
 			}%
 			\vspace*{0.1cm}\options{\tempoptions}
 
@@ -611,9 +624,9 @@
 			\profilemodification{+1 \labelforinit{} \wordand{} -1 \labels@Ld{}}
 
 			\def\tempoptions{%
-				\takenets{}=\permodel{}<1,
-				\takemadgits{}=\permadgit{}<20,
-				\madgitlimitation{}
+				\nets{}=\permodel{}<1,
+				\madgits{}=\permadgit{}<20,
+				\vspace{5pt}\madgitlimitation{}
 			}%
 			\options{\tempoptions}
 
@@ -624,7 +637,7 @@
 			\def\tempoptions{%
 				\throwingweapons{}=\permodel{}<0.5,
 				\motherskiss{}=\permodel{}<1.5,
-				\skirmishers{} \ifNmodelsorless{20}\dotfill{}=\permodel{}<1,
+				\skirmishers{}\newline \ifNmodelsorless{20}\dotfill{}=\permodel{}<1,
 			}
 			\options{\tempoptions}
 
@@ -641,8 +654,8 @@
 
 \showunit{
 	name={\shadygit},
-	profile={ < 4 4 3 3 3 1 3 2 6},
-	cost={10},
+	profile={< 4 4 3 3 3 1 3 2 6},
+	cost=10,
 	type=\infantry{},
 	basesize=20x20,
 	unitsize=SPECIAL-\gitnote{},
@@ -660,7 +673,7 @@
 
 \showunit{
 	name={\madgit},
-	profile={ < \starsymbol{} - - 5 3 1 3 1 5},
+	profile={< \starsymbol{} - - 5 3 1 3 1 5},
 	cost={20},
 	type=\infantry{},
 	basesize=25,
@@ -677,6 +690,7 @@
 
 \showunit{
 	name={\goblinraiders},
+	QRSname={\goblinraider},
 	cost={60},
 	profile={
 		\rider{}< 4 2 3 3 3 1 2 1 6,
@@ -730,8 +744,9 @@
 
 \showunit{
 	name={\orcboarriders},
-	cost={70},
-	profile={%
+	QRSname={\orcboarrider},
+	cost=70,
+	profile={
 		\rider{}< 4 3 3 3 4 1 2 1 7,
 		\warboar{}< 7 3 - 3 3 1 3 1 3,
 	},
@@ -743,7 +758,7 @@
 	weapons={\lightlance},
 	specialrules={\thunderouscharge{} \only{\warboar}},
 	options={
-		\maytakeashield{}=\permodel{}<3,
+		\shield{}=\permodel{}<3,
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
 	additional={%
@@ -753,7 +768,7 @@
 			\def\temparmour{\la{},\mountsprotection{5}}%
 			\armour{\temparmour}%
 			
-			\def\tempoptions{\maytakealance{}=\permodel{}<2,}%
+			\def\tempoptions{\lance{}=\permodel{}<2,}%
 			\vspace*{0.1cm}\options{\tempoptions}%
 
 		\vspace*{\fill}
@@ -763,7 +778,7 @@
 			\def\temparmour{\mountsprotection{5}}%
 			\armour{\temparmour}%
 			
-			\def\tempoptions{\maytakepw{}=\permodel{}<2,}%
+			\def\tempoptions{\pw{}=\permodel{}<2,}%
 			\vspace*{0.1cm}\options{\tempoptions}%
 			
 		\vspace*{\fill}
@@ -772,10 +787,15 @@
 }
 
 
+
+
+
+
 \specialunitstitle
 
 \showunit{
-	name={\ironorcsunit},
+	name={\ironorcs},
+	QRSname={\ironorc},
 	cost={90},
 	profile={< 4 5 3 4 4 1 2 1 8},
 	type=\infantry{},
@@ -788,15 +808,16 @@
 	armour={\ha{},\shield{}},
 	specialrules={\bodyguard{\ironorcwarlord{}, \ironorcchief{}}},
 	options={
-		\maytakeplatearmour{}=\permodel{}<2,
+		\platearmour{}=\permodel{}<2,
 	},
 	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
 }
 
 \showunit{
 	name={\mountedeadbashers},
-	cost={80},
-	profile={%
+	QRSname={\mountedeadbasher},
+	cost=80,
+	profile={
 		\rider{}< 4 4 3 4 4 1 2 1 8,
 		\warboar{}< 7 3 - 3 3 1 3 1 3,
 	},
@@ -808,7 +829,7 @@
 	weapons={\lightlance},
 	specialrules={\thunderouscharge{} \only{\warboar}},
 	options={
-		\maytakeashield{}=\permodel{}<3,
+		\shield{}=\permodel{}<3,
 	},
 	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
 	additional={%
@@ -819,8 +840,8 @@
 			\armour{\temparmour}%
 			
 			\def\tempoptions{%
-				\maytakealance{}=\permodel{}<3,
-				\maytakeha{}=\permodel{}<3,
+				\lance{}=\permodel{}<3,
+				\ha{}=\permodel{}<3,
 			}%
 			\vspace*{0.1cm}\options{\tempoptions}%
 
@@ -831,7 +852,7 @@
 			\def\temparmour{\mountsprotection{5}}%
 			\armour{\temparmour}%
 			
-			\def\tempoptions{\maytakepw{}=\permodel{}<3,}%
+			\def\tempoptions{\pw{}=\permodel{}<3,}%
 			\vspace*{0.1cm}\options{\tempoptions}%
 
 		\vspace*{\fill}
@@ -856,7 +877,7 @@
 	armour={\la{},\mountsprotection{5}},
 	specialrules={\thunderouscharge{} \only{\warboar},\impacthits{+1}},
 	options={
-		\maytakeha{}=15,
+		\ha{}=15,
 	},
 }
 
@@ -882,6 +903,7 @@
 
 \showunit{
 	name={\gnasherdashers},
+	QRSname={\gnasherdasher},
 	cost={60},
 	profile={
 		\rider{}< - 2 3 3 3 1 3 1 5,
@@ -894,32 +916,41 @@
 	costpermodel=10,
 	greenhiderace={\cavegoblin{} \textnormal{\only{\rider}}},
 	armour={\la{},\mountsprotection{6}},
-	specialrules={\impacthits{voir \rowsofteeth},\immunetopsychology{},\fly{6},\skirmishers{},\oiitbites{},\rowsofteeth{}},
-	unitrules={%
-		\unitrule{\oiitbites}{\oiitbitesrule}
-		\unitrule{\rowsofteeth}{\rowsofteethrule}
+	additional={%
+		\def\tempspecialrules{\immunetopsychology{},\fly{6},\skirmishers{},\oiitbites{},\rowsofteeth{}}
+		\def\tempunitrules{%
+			\unitrule{\oiitbites}{\oiitbitesrule}
+			\unitrule{\rowsofteeth}{\rowsofteethrule}
+		}
+		\vspace*{0.2cm}\specialrules{\tempspecialrules}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
 	},
 }
 
 \showunit{
 	name={\gnasherherd},
-	cost={80},
-	profile={ < 5 4 - 5 3 1 4 2 5},
+	QRSname={\gnasher},
+	cost=80,
+	profile={< 5 4 - 5 3 1 4 2 5},
 	type=\warbeast{},
 	basesize=20x20,
 	unitsize=10,
 	maxmodels=40,
 	costpermodel=8,
-	specialrules={\immunetopsychology{},\insignificant{},\oiitbites{},\theyreeverywhere{}},
-	unitrules={%
-		\unitrule{\oiitbites}{\oiitbitesrule}
-		\unitrule{\theyreeverywhere}{\theyreeverywhererule}
+	additional={%
+		\def\tempspecialrules{\immunetopsychology{},\insignificant{},\oiitbites{},\theyreeverywhere{}}
+		\def\tempunitrules{%
+			\unitrule{\oiitbites}{\oiitbitesrule}
+			\unitrule{\theyreeverywhere}{\theyreeverywhererule}
+		}
+		\vspace*{-0.3cm}\specialrules{\tempspecialrules}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
 	},
 }
 
 \showunit{
 	name={\greenhidecatapults},
-	QRSname={\catapults}, %Too long in french
+	QRSname={\catapult}, %Too long in french
 	cost={90},
 	profile={%
 		\machine{}< - - - - 7 3 - - -,
@@ -929,14 +960,14 @@
 	type=\warmachine{},
 	basesize=75,
 	unitsize=1,
+	options={\orcoverseer{}=10,},
 	specialrules={\insignificant},
-	options={\maytakeanorcoverseer{}=10,},
-	unitrules={%
-		\unitrule{\orcoverseer}{\orcoverseerrule}
-	},
 	additional={%
+		\def\tempunitrules{\unitrule{\orcoverseer}{\orcoverseerrule}}
+		\unitrules{\tempunitrules}
+		
 		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
-		\setlength{\columnseprule}{1pt}
+		\setlength{\columnseprule}{0.5pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
 		\begin{multicols}{2}\raggedcolumns
 		
@@ -958,6 +989,8 @@
 		\setlength{\columnseprule}{0pt}
 	},
 }
+
+\newpage
 
 \showunit{
 	name={\grotlings},
@@ -982,25 +1015,30 @@
 	type=\chariot{},
 	basesize=50x100,
 	unitsize=1,
-	specialrules={\shambolic{3D6},\impacthits{2D6},\insignificant{},\unstable{},\pursuitmode{}},
 	weapons={\throwingweapons},
 	armour={\mountsprotection{6}},
-	options={\anyofthefollowing{
-			\pointedsticks{}=10,
-			\smellslikegreenspirit{}=10,
-			\smasher{}=15,
-			},
+	options={%
+		\pointedsticks{}=10,
+		\smellslikegreenspirit{}=10,
+		\smasher{}=15,
 	},
-	unitrules={
-		\unitrule{\pointedsticks}{\pointedsticksrule}
-		\unitrule{\pursuitmode}{\pursuitmoderule}
-		\unitrule{\smellslikegreenspirit}{\smellslikegreenspiritrule}
-		\unitrule{\smasher}{\smasherrule}
+	additional={%
+		\def\tempspecialrules{\shambolic{3D6},\impacthits{2D6},\insignificant{},\unstable{},\pursuitmode{}}
+		\def\tempunitrules{%
+			\unitrule{\pursuitmode}{\pursuitmoderule}
+			\unitrule{\pointedsticks}{\pointedsticksrule}
+			\unitrule{\smellslikegreenspirit}{\smellslikegreenspiritrule}
+			\unitrule{\smasher}{\smasherrule}
+		}
+		
+		\specialrules{\tempspecialrules}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
 	},
 }
 
 \showunit{
 	name={\trolls},
+	QRSname={\troll},
 	cost={55},
 	profile={< 6 3 2 5 4 3 1 3 4},
 	type=\monstrousinfantry{},
@@ -1011,7 +1049,7 @@
 	specialrules={\fear{},\stupidity{},\regeneration{4},\trollbelch{}},
 	additional={%
 		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
-		\setlength{\columnseprule}{1pt}
+		\setlength{\columnseprule}{0.5pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
 		\begin{multicols}{3}\raggedcolumns
 		
@@ -1051,11 +1089,11 @@
 	name={\giant},
 	cost=135,
 	profile={< 6 3 - 6 5 6 3 \starsymbol{} 10,},
-	type=\monster,
+	type=\monster{},
 	basesize=50x75,
 	unitsize=1,
 	specialrules={\immunetopsychology{},\stubborn{},\giantattacks{}},
-	options={\maygain{} \wardsave{6}=20,},
+	options={\wardsave{6}=20,},
 	additional={%
 		\def\tempunitrules{%
 			\unitrule{\giantattacks}{\giantattacksrule}
@@ -1071,10 +1109,17 @@
 	},
 }
 
+
+
+
+
+
+
+
 \rareunitstitle
 
 \showunit{
-	name={\skewerer{} \zerotothreechoice},
+	name={\skewerer{} (\zerotoXchoice{3})},
 	QRSname={\skewerer{}},
 	cost={45},
 	profile={%
@@ -1093,7 +1138,8 @@
 
 \showunit{
 	name={\gnasherwreckingteam},
-	cost={65},
+	QRSname={\gnasherwreckingteamQRS},
+	cost=65,
 	profile={< \starsymbol{} - - 6 4 3 3 2 3},
 	type=\monstrousbeast{},
 	basesize=60,
@@ -1101,6 +1147,33 @@
 	specialrules={\shambolic{3D6},\ricochet{2D6},\hardtarget{},\lookatemgo{}},
 	unitrules={%
 		\unitrule{\lookatemgo}{\lookatemgorule}
+	},
+}
+
+\newpage
+
+\showunit{
+	name={\greatgreenidol{} (\oneofakind{})},
+	QRSname={\greatgreenidol{}},
+	cost={215},
+	profile={< 6 2 - 6 8 6 2 3 8},
+	type=\monster{},
+	basesize=100x100,
+	unitsize=1,
+	armour={\innatedefence{5}},
+	options={%
+		\bsb{}=50,
+		\innatedefence{4}=25,
+	},
+	additional={%
+		\def\tempspecialrules{\immunetopsychology{},\crushattack{},\impacthits{1D3},\smashemflat{},\iconofthewaaargh{}, \magicalattacks{}}
+		\def\tempunitrules{%
+			\unitrule{\iconofthewaaargh}{\iconofthewaaarghrule}
+			\unitrule{\smashemflat}{\smashemflatrule}
+		}
+		
+		\specialrules{\tempspecialrules}
+		\vspace*{-0.1cm}\unitrules{\tempunitrules}
 	},
 }
 
@@ -1117,29 +1190,12 @@
 	greenhiderace={\forestgoblin{} \textnormal{\only{\goblins}}},
 	weapons={\shortbow{},\lightlance{} \only{\goblins}},
 	armour={\innatedefence{4}},
-	specialrules={\venomousfangs{},\immunetopsychology{},\poisonedattacks{} \only{\spider},\strider{},\stubborn{},\swiftstride{}},
-	options={\maytakeweblauncher{}=30},
-	unitequipment={%
-		\equipmentdef{\weblauncher{} \textnormal{\only{\spider}}}{\weblauncherrule}
+	options={\weblauncher{}=30},
+	additional={%
+		\def\tempspecialrules{\venomousfangs{},\immunetopsychology{},\poisonedattacks{} \only{\spider},\strider{},\stubborn{},\swiftstride{}}
+		\def\tempunitequipment{\equipmentdef{\weblauncher{} \textnormal{\only{\spider}}}{\weblauncherrule}}
+		
+		\specialrules{\tempspecialrules}
+		\unitequipment{\tempunitequipment}
 	},
 }
-
-\showunit{
-	name={\greatgreenidol{} (\oneofakind{})},
-	QRSname={\greatgreenidol{}},
-	cost={215},
-	profile={< 6 2 - 6 8 6 2 3 8},
-	type=\monster{},
-	basesize=100x100,
-	unitsize=1,
-	armour={\innatedefence{5}},
-	specialrules={\immunetopsychology{},\crushattack{},\impacthits{1D3},\smashemflat{},\iconofthewaaargh{}, \magicalattacks{}},
-	options={\bsboption{}=50,
-			\innatedefence{4}=25},
-	unitrules={%
-		\unitrule{\iconofthewaaargh}{\iconofthewaaarghrule}
-		\unitrule{\smashemflat}{\smashemflatrule}
-	},
-}
-
-
