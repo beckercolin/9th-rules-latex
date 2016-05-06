@@ -24,6 +24,7 @@
 \usepackage{array}				% Additionnal options for arrays.
 \usepackage{colortbl}			% Additionnal options for coloring arrays.
 \usepackage[table]{xcolor}		% Auto alternate grey-white rows.
+\usepackage[export]{adjustbox}		% Centered pics in tables
 
 %% List utilities
 \usepackage[inline]{enumitem}   % Display inline lists.
@@ -236,6 +237,7 @@
 \newcommand{\armymagicalbanners}{\subtitle{\labels@magicalbanners}}
 
 \newcommand{\startarmynewsection}[1]{\newpage\bigtitle{#1}\largefontsize}
+\newcommand{\startarmynewsectionSP}[1]{\vspace{1.5cm}\bigtitle{#1}\largefontsize}
 \newcommand{\closearmynewsection}{\normalfontsize}
 
 \newcommand{\armynewsubsection}[1]{\subtitle{#1}\vspace{5pt}}

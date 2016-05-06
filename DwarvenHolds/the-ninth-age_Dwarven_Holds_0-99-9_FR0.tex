@@ -450,44 +450,54 @@ Juste avant qu'elle soit retirée comme perte suite à une attaque de Corps à C
 
 Les \runicmasters{}, les \runicsmiths{} et les \anvilsofpower{} peuvent disposer de ces Runes, en suivant les règles détaillées dans leur profil, et les lancer comme des Objets de Sort. Aucune Rune de Bataille ne peut être choisie plus de deux fois dans une même armée. Ce chiffre est réduit à un pour les Patrouilles et augmenté à quatre pour les Grandes Armées.
 
-\renewcommand{\arraystretch}{3.2}
-\begin{tabular}{@{}>{\raggedright}m{3.7cm}M{2.2cm}M{2.2cm}m{7.8cm}@{}}
+\vspace*{1.5cm}
+\def\Z{\vphantom{\parbox[c]{2.5cm}{\fontsize{25}{30}\selectfont Some\newline Very\newline Long}}}
+
+\newcommand{\runewidth}{0.8cm}
+\begin{tabular}{@{}c@{}c@{\hskip 8pt}>{\raggedright}m{3.3cm}M{2.1cm}M{2.1cm}m{7.4cm}@{}}
+&&
 \textbf{Nom} &
 \textbf{Type} &
 \textbf{Durée} &
 \centering\textbf{Effet}
 \tabularnewline\hline
 
+\Z{} & \includegraphics[valign=m, width=\runewidth]{pics/battlerune_metal.png} &
 Rune du Métal &
 Amélioration &
 Dure un Tour &
 La cible peut relancer ses jets de Sauvegarde d'Armure ratés.
 \tabularnewline\hline
 
+\Z{} & \includegraphics[valign=m, width=\runewidth]{pics/battlerune_resolve.png} &
 Rune de Résolution &
 Amélioration &
 Immédiat &
 L'unité alliée ciblée peut effectuer un Mouvement Magique de \distance{6}. 
 \tabularnewline\hline
 
+\Z{} & \includegraphics[valign=m, width=\runewidth]{pics/battlerune_reckoning.png} &
 Rune de Jugement &
 Amélioration &
 Dure un Tour &
 L'unité alliée ciblée peut relancer ses jets pour toucher ratés au Corps à Corps.
 \tabularnewline\hline
 
+\Z{} & \includegraphics[valign=m, width=\runewidth]{pics/battlerune_oaths.png} &
 Rune du Serment &
 Amélioration &
 Dure un Tour &
 La cible gagne les règles \stubborn{} et \immunetopsychology{}.
 \tabularnewline\hline
 
+\Z{} & \includegraphics[valign=m, width=\runewidth]{pics/battlerune_gleaming.png} &
 Rune Luisante &
 Amélioration &
 Dure un Tour &
 La cible gagne les règles \hardtarget{} et \distracting{}.
 \tabularnewline\hline
 
+\Z{} & \includegraphics[valign=m, width=\runewidth]{pics/battlerune_resilience.png} &
 Rune de Résistance &
 Amélioration &
 Dure un Tour &
@@ -495,7 +505,6 @@ Les jets pour blesser contre la cible subissent un malus de -1. Plusieurs instan
 \tabularnewline
 
 \end{tabular}
-\renewcommand{\arraystretch}{1.2} % Return to default
 
 \closearmynewsection
 
