@@ -1,7 +1,7 @@
 
 \input{../Layout/AB_layout.tex}
 
-\newcommand{\booktitle}{Royaume d'Equitaine} %M% Equitaine ou Équitaine
+\newcommand{\booktitle}{Royaume d'Équitaine}
 \newcommand{\version}{0.99.9}
 \newcommand{\frenchversion}{2.0}
 \newcommand{\booklogo}{pics/logo_big_KoE.png}
@@ -11,7 +11,7 @@
 \newcommand{\theblessing}{La Bénédiction}
 \newcommand{\tokenoftheking}{L'Emblème du Roi}
 \newcommand{\tokenofthegrail}{Symbole du Graal}
-\newcommand{\lanceformation}{Formation en Lance} %M% Formation de lance ?
+\newcommand{\lanceformation}{Formation en Lance}
 \newcommand{\jousting}{Talent de Jouteur}
 \newcommand{\beloved}{Bien-Aimée}
 \newcommand{\serfs}{Serfs}
@@ -19,9 +19,9 @@
 
 % Serments
 
-\newcommand{\oathoffealty}{Serment de Fidélité} %M% Allégeance plutôt !
+\newcommand{\oathoffealty}{Serment d'Allégeance}
 \newcommand{\questingoath}{V\oe{}ux de la Quête}
-\newcommand{\grailoath}{Onction du Graal} %M% On n'enduit pas de Graal ! Beurk !
+\newcommand{\grailoath}{Onction du Graal} %M% Vérifier avec VO
 
 % Vertus
 
@@ -38,7 +38,8 @@
 
 % Army common type special rules
 
-\newcommand{\equitainecommonrules}{Règles spéciales d'Equitaine}
+\newcommand{\knightscommonrules}{Règles spéciales des Paladins}
+\newcommand{\peasantcommonrules}{Règles spéciales des Paysans}
 
 % Other Rules
 
@@ -47,7 +48,7 @@
 \newcommand{\lowborn}{Basse Naissance}
 \newcommand{\masteratarms}{Entraîneur Militaire}
 \newcommand{\rousingorator}{Tribun}
-\newcommand{\rabblerouser}{Roi des Gueux} %M% plutôt Agitateur
+\newcommand{\rabblerouser}{Roi des Gueux} %M% plutôt Trublion ?
 
 % Aspirants Paladins
 
@@ -56,7 +57,7 @@
 
 % Archers Paysans
 
-\newcommand{\bowmenstakes}{Défenses d'Archers} %M% Pieux de Défense ?
+\newcommand{\bowmenstakes}{Défenses d'Archers}
 \newcommand{\braziers}{Braséros}
 \newcommand{\brigands}{Brigands}
 
@@ -81,16 +82,18 @@
 
 \newcommand{\duke}{Duc}
 \newcommand{\graildamsel}{Enchanteresse du Graal}
-\newcommand{\paladin}{Parangon} %M% Gardien, Protecteur ? Parangon c'est pas mal.
+\newcommand{\paladin}{Parangon}
 \newcommand{\damsel}{Jouvencelle du Graal}
-\newcommand{\castellan}{Castellan} %M% Châtelain
+\newcommand{\castellan}{Châtelain}
 
 % Core
 
-\newcommand{\knightsaspirants}{Aspirants Paladins}
+\newcommand{\knightaspirant}{Aspirant Paladin}
+\newcommand{\knightsaspirant}{Aspirants Paladins}
 \newcommand{\knightoftherealm}{Paladin du Royaume}
 \newcommand{\knightsoftherealm}{Paladins du Royaume}
 \newcommand{\peasantlevy}{Levée Paysanne}
+\newcommand{\peasantbowman}{Archer Paysan}
 \newcommand{\peasantbowmen}{Archers Paysans}
 
 % Special
@@ -99,9 +102,11 @@
 \newcommand{\knightsofthequest}{Paladins de la Quête}
 \newcommand{\pegasusknights}{Paladins Pégases}
 \newcommand{\pegasusknight}{Paladin Pégase}
-\newcommand{\yeomanoutrider}{Roturier}
-\newcommand{\yeomanoutriders}{Roturiers Montés} %M% on a perdu la notion d'éclaireur
-\newcommand{\knightsforlorn}{Paladins Sans-Terre}
+\newcommand{\yeomanoutrider}{Roturier Monté}
+\newcommand{\yeomanoutriders}{Roturiers Montés}
+\newcommand{\knightforlorn}{Paladin Sans Terres}
+\newcommand{\knightsforlorn}{Paladins Sans Terres}
+\newcommand{\peasantcrusader}{Pénitent du Graal}
 \newcommand{\peasantcrusaders}{Pénitents du Graal} %M% Sens éloigné, à confirmer
 
 
@@ -118,106 +123,124 @@
 
 % Mounts
 
-\newcommand{\bardedwarhorse}{Cheval de Guerre} %M% barded ? Paleferoi Caparaçonné ?
+\newcommand{\bardedwarhorse}{Cheval de Guerre}
 \newcommand{\youngpegasus}{Jeune Pégase}
 \newcommand{\pegasus}{Pégase}
 \newcommand{\hippogriff}{Hippogriffe}
 \newcommand{\unicorn}{Licorne}
 \newcommand{\horse}{Cheval}
-\newcommand{\spectralstalion}{Étalon Spectral}
 \newcommand{\royalpegasus}{Pégase Royal}
 
 % Profile names
 
-\newcommand{\aspirant}{Aspirant}
+\newcommand{\outrider}{Roturier}
+\newcommand{\knight}{Paladin}
+\newcommand{\warhorse}{Cheval}
+\newcommand{\theknight}{Le Chevalier}
+\newcommand{\spectralstallion}{Étalon Spectral}
 \newcommand{\apprentice}{Apprenti}
+\newcommand{\machine}{Machine}
 
 % Profile wording
 
-\newcommand{\siegewarmachineoptions}{\optionschoice{\textbf{Doit choisir entre deux configurations :}}}
-\newcommand{\mayremplaceshieldbypw}{Peut remplacer son \shield{} par une \pw{}}
-\newcommand{\mayremplacebowmenstakes}{Peut remplacer ses \bowmenstakes{} par la règle \skirmishers{}}
-\newcommand{\brigandsoption}{Si l'armée comprend un \castellan{}, une unité peut être améliorée en \brigands{}}
-\newcommand{\mayremplacebowbythrowingweapons}{Peut remplacer son Arc par des Armes de jet}
-\newcommand{\bastardsword}{Epée Bâtarde (compte comme une \halberd)}
-\newcommand{\maytakeasinglevirtue}{Peut prendre une seule Vertu}
-\newcommand{\morningstar}{Etoile du Matin (compte comme une \pw{})}
-\newcommand{\maytakemagicresistance}{Peut prendre une \magicresistance{1}}
-\newcommand{\mayremplaceshield}{\optionschoice{Peut remplacer son Bouclier :}}
-\newcommand{\flamingshoots}{\flamingattacks{}(tir uniquement)}
-\newcommand{\specialcrossbow}{\crossbow{} (uniquement si des \crusaders{} sont présents dans l'armée, ne peuvent pas prendre de \braziers{}}
+\newcommand{\mayreplaceshieldforpw}{Remplacer le \shield{} par une \pw{}}
+\newcommand{\mayreplacebowmenstakeswith}{Remplacer les \bowmenstakes{} par \newline
+\skirmishers{}}
+\newcommand{\brigandsoption}{Si l'armée comprend un \castellan{},\newline
+une unité peut être améliorée en\newline
+\brigands{}}
+\newcommand{\mayreplacebowwiththrowingweapons}{Remplacer l'\bow{} par des \throwingweapons{}}
+\newcommand{\asinglevirtue}{Une seule Vertu}
+\newcommand{\morningstar}{Morgenstern}
+\newcommand{\countsaspw}{Compte comme une \pw{}.}
+\newcommand{\mayreplaceshieldwith}{\optionschoice{Remplacer le Bouclier par :}}
+\newcommand{\specialcrossbowoption}{Si l'armée comprend des \crusaders{},\newline
+Remplacer l'\longbow{} par une \crossbow{}}
+\newcommand{\specialcrossbownote}{L'option \braziers{} n'est alors pas disponible.}
 
 % Profile rules
 
 % Castellan
 
 \newcommand{\lowbornrule}{%
-Ne peut rejoindre que des unités dont toutes les figurines suivent la règle \insignificant{} et gagne les règles suivantes en fonction des unités qu'il rejoint:
+La figurine ne peut rejoindre que des unités dont toutes les figurines suivent la règle \insignificant{}. Elle gagne les règles suivantes en fonction de l'unité qu'elle rejoint :
 \begin{customsubitemize}
-\item S'il rejoint une unité de \yeomanoutriders{}, il gagne la règle \fastcavalry{}. 
-\item S'il rejoint une unité de \peasantcrusaders{}, il gagne les règles \frenzy{} et \hatred{}.
-\item S'il rejoint une unité de \brigands{}, il gagne les règles \scout{} et \quicktofire{}.
+\item \brigands{} - \scout{} et \quicktofire{}.
+\item \peasantcrusaders{} - \frenzy{} et \hatred{}.
+\item \yeomanoutriders{} - \fastcavalry{}. 
 \end{customsubitemize}
 }
 
 \newcommand{\masteratarmsrule}{%
-Le Castellan dispose de la règle \weaponmaster{} et la confère à toute unité qu'il rejoint. Si un \castellan{} est inclus dans l'armée, une unité d'\peasantbowmen{} peut devenir \brigands{}. 
+La figurine et son unité gagnent de la règle \weaponmaster{}. Une unité d'\peasantbowmen{} peut être améliorée en \brigands{}. 
 }
 
 \newcommand{\rousingoratorrule}{%
-Le Castellan gagne la règle \devastatingcharge{} et la confère à toute unité qu'il rejoint.
+Le \castellan{} et son unité gagnent la règle \devastatingcharge{}.
 }
 
 \newcommand{\rabblerouserrule}{%
-Si toutes les figurines de l'armée suivent la règle \insignificant{}, le Castellan gagne +2 en Commandement et peut devenir le Porteur de la Grande Bannière pour 25 points.
+Cette amélioration ne peut être prise que si toutes les figurines de l'armée suivent la règle \insignificant{}. Le \castellan{} gagne +2 en Commandement et peut devenir le Porteur de la Grande Bannière pour 25 points.
 }
 
 % Aspirants Paladins
 
 \newcommand{\impetuousrule}{%
-Les figurines suivant cette règle gagnent la règle \frenzy{} \only{\aspirant} jusqu'à la fin du tour lorsqu'elles déclarent une charge. Une unité entièrement composée de figurines disposant de cette règle peut relancer ses jets de distance de charge ratés.
+Lorsqu'elle déclare une charge, la figurine gagne la règle \frenzy{} \only{\knight} jusqu'à la fin du tour. Une unité entièrement composée de figurines avec la règle \impetuous{} peut relancer ses jets de distance de charge ratés.
 }
 
 \newcommand{\crusadersrule}{%
-Les figurines suivant cette règle gagnent la règle \thunderouscharge{}.
+La figurine gagne la règle \thunderouscharge{}.
 }
 
 % Archers paysans
 
 \newcommand{\bowmenstakesrule}{%
-Lorsque vous déployez l'unité de \peasantbowmen{}, vous pouvez placer un mur en contact socle à socle avec le front de l'unité. Ce mur est large de \distance{12} et profond de 20 mm maximum. Ce mur suit les règles normales des murs mis à part qu'il procure un couvert léger.
+Lorsque vous déployez l'unité, vous pouvez placer un Mur en contact socle à socle avec le front de l'unité. Ce Mur est aussi long que l'unité est large, jusqu'à \distance{12}, et épais de \unit{20}{\milli\meter} au plus. Il suit les règles normales des Murs mis à part qu'il procure un Couvert Léger plutôt qu'un Couvert Lourd.
 }
 
 \newcommand{\braziersrule}{%
-Avant de tirer avec une unité comportant des \braziers{}, le joueur peut décider de donner à leurs tirs la règle \flamingattacks{} pour la durée de cette phase. 
+Avant de tirer avec l'unité, vous pouvez décider de donner à leurs tirs la règle \flamingattacks{} pour la durée de cette phase. 
 }
 
 \newcommand{\brigandsrule}{%
-La figurine gagne +1 en Capacité de Tir et les règles \scout{}, \skirmishers{} et \quicktofire{}. Les \brigands{} ne peuvent pas porter d'\crossbow{} ni utiliser des \braziers. ils perdent également leurs \bowmenstakes{}.
+La figurine gagne +1 en Capacité de Tir et les règles \scout{}, \skirmishers{} et \quicktofire{}. Les \brigands{} ne peuvent pas porter d'\crossbow{} ni utiliser des \braziers{}. Ils perdent également les \bowmenstakes{}.
 }
 
 % Paladins de la Quête
 
 \newcommand{\hedgeknightsrule}{%
-La figurine gagne les règles \vanguard{}, \scout{} et \strider{Forêts}.
+La figurine gagne les règles \vanguard{}, \scout{} et \strider{\forest}.
 }
 
 % Paladins du Graal
 
 \newcommand{\pureofheartrule}{%
-Seuls les personnages suivant les règles \beloved{} ou \grailoath{}  peuvent rejoindre une unité avec la règle \pureofheart{}.
+L'unité ne peut être rejointe que par des Personnages avec la règle \beloved{} ou \grailoath{}.
+}
+
+% Siege War Machine
+
+\newcommand{\scorpionrule}{%
+\textbf{\artilleryweapon} de type \textbf{\boltthrower}.\newline
+\range{48}, \Strength{} 6, \multiplewounds{\ordnance}{}, \armourpiercing{6}.
+}
+
+\newcommand{\trebuchetrule}{%
+\textbf{\artilleryweapon} de type \textbf{\catapult{} (\distance{3})}.\newline
+\range{12-60}, \Strength{} 4 [10], [\multiplewounds{\ordnance}{}], \armourpiercing{1}.
 }
 
 % Reliquaire Sacré
 
 \newcommand{\holyfervorrule}{%
-Toutes les figurines amies suivant la règle \insignificant{} dans un rayon de \distance{6} du Reliquaire gagnent la règle \theblessing{}. Toutes les figurines amies (Infanterie et Cavalerie uniquement) suivant la règle \insignificant{} dans un rayon de \distance{6} du Reliquaire gagnent la règle \fightinextrarank{} et peuvent relancer les \result{1} naturels pour blesser au corps à corps.
+Toutes les figurines alliées avec la règle \insignificant{} à moins de \distance{6} gagnent la règle \theblessing{}. Toutes les figurines alliées d'\infantry{} et de \cavalry{} avec la règle \insignificant{} à moins de \distance{6} gagnent la règle \fightinextrarank{} et peuvent relancer les jets pour blesser de ayant donné un résultat naturel de \result{1}.
 }
 
 % Montures
 
 \newcommand{\royalpegasusrule}{%
-La figurine gagne +1 Attaque et sa taille de socle passe à 50x50 mm. 
+La figurine gagne +1 Attaque et sa taille de socle passe à \unit{50x50}{\milli\meter}. 
 }
 
 
@@ -411,7 +434,7 @@ Cette règle est \oneofakind{} pour les Personnages.
 
 %%% START OF THE ARMYLIST - Translators shouldn't have to edit it %%%
 
-%\input{KingdomofEquitaine_armylist.tex}
+\input{KingdomofEquitaine_armylist.tex}
 
 
 %%% Quick Reference Sheet - AB_qrs.tex is automatic and shouldn't be edited %%%
@@ -422,7 +445,7 @@ Cette règle est \oneofakind{} pour les Personnages.
 \bigskip
 
 \begin{center}
-\noindent{\antiquefont\Largefontsize\textbf{Armes de Tir du Royaume d'Equitaine}}
+\noindent{\antiquefont\Largefontsize\textbf{Armes de Tir du Royaume d'Équitaine}}
 \medskip
 
 \rowcolors{1}{white}{black!10}

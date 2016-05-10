@@ -1,0 +1,457 @@
+\input{../Layout/AB_layout.tex}
+
+\newcommand{\booktitle}{Nains Infernaux}
+\newcommand{\version}{0.99.4}
+\newcommand{\frenchversion}{2.0}
+\newcommand{\translationteam}{\item \og AEnoriel \fg \item \og Anglachel \fg \item \og Astadriel \fg \item \og Batcat \fg \item \og Eru \fg  \item \og Gandarin \fg \item \og Groumbahk \fg \item \og Iluvatar \fg \item \og Kingcheese \fg \item \og Lamronchak \fg \item \og Mammstein \fg}
+
+
+% Army special rules
+
+\newcommand{\shacklesoffire}{Chaînes de Feu}
+\newcommand{\chosenofashuruk}{Elus d'Ashuruk}
+\newcommand{\volcanicembrace}{Etreinte Volcanique}
+\newcommand{\relentless}{Implacable}
+\newcommand{\unruly}{Indiscipliné}
+\newcommand{\daemonicinfusion}{Infusion Démoniaque}
+\newcommand{\opportunist}{Opportuniste}
+\newcommand{\daemonicpossession}{Possession Démoniaque}
+\newcommand{\sturdy}{Robuste}
+
+% Army common type special rules
+
+\newcommand{\infernaldwarvescommonrules}{Règles spéciales des Nains Infernaux}
+\newcommand{\hobgoblinscommonrules}{Règles spéciales des Hobgobelins}
+\newcommand{\orcslavescommonrules}{Règles spéciales des \orcslaves{}}
+\newcommand{\kadimcommonrules}{Règles spéciales de Kadim}
+\newcommand{\lamassucommonrules}{Règles spéciales de Kadim}
+
+% Armoury
+
+\newcommand{\infernalarmour}{Armure Volcanique}
+\newcommand{\infernalweapon}{Glaive Infernal}
+\newcommand{\flintlockaxe}{Hallebarde Ardente}
+\newcommand{\blunderbuss}{Tromblon}
+\newcommand{\walloflead}{Mur de Plomb}
+
+
+% Characters rules
+
+\newcommand{\fantheflames}{Attiser les Flammes}
+\newcommand{\chosenoflugar}{Favori de Lugar}
+\newcommand{\masterbackstabber}{Maître-Poignardeur}
+
+% core units rules
+
+\newcommand{\backstabber}{Poignardeur}
+\newcommand{\backstabbers}{Poignardeurs}
+\newcommand{\slaves}{Esclaves}
+\newcommand{\borntofight}{Né pour la Baston}
+
+% special units rules
+
+
+\newcommand{\halfbull}{Bucentaure}
+\newcommand{\ogreslave}{Esclave Ogre}
+\newcommand{\earthquakeshells}{Munitions Trembleterre}
+\newcommand{\daemonicfury}{Furie Démoniaque}
+\newcommand{\daemonicinstability}{Instabilité Démoniaque}
+
+% rare units rules
+
+\newcommand{\fullsteamahead}{A Toute Vapeur}
+\newcommand{\ponderous}{Trop Lourd}
+\newcommand{\searingrage}{Rage Dessicante}
+\newcommand{\lordofflame}{Seigneur de la Flamme}
+\newcommand{\giantattacks}{Attaques de Géant}
+\newcommand{\bellow}{Hurle}
+\newcommand{\jump}{Saute}
+\newcommand{\grab}{Ramasse}
+\newcommand{\swing}{Frappe}
+\newcommand{\thump}{Tape comme un Sourd}
+\newcommand{\smashname}{Fracasse}
+
+
+
+% mounts units rules
+
+\newcommand{\auraofunbinding}{Aura d'Annulation}
+\newcommand{\macetail}{Masse Caudale}
+
+%%% Names
+
+% Characters
+
+\newcommand{\prophet}{Haut-Prophète}
+\newcommand{\overlord}{Haut-Seigneur Infernal}
+\newcommand{\magus}{Magus}
+\newcommand{\vizier}{Vizir}
+\newcommand{\taurukhsubjugator}{Dompteur Taurukh}
+\newcommand{\hobgoblinchieftain}{Kapo Hobgobelin}
+
+% Core
+
+\newcommand{\infernalwarriors}{Janissaires Infernaux}
+\newcommand{\citadelguard}{Geôliers de la Citadelle}
+\newcommand{\hobgoblins}{Hobgobelins}
+\newcommand{\orcslaves}{Esclaves Orques}
+
+% Special
+
+\newcommand{\immortals}{Immortels}
+\newcommand{\disciplesoflugar}{Disciples de Lugar}
+\newcommand{\kadimincarnates}{Incarnins de Kadim}
+\newcommand{\taurukh}{Taurukhs}
+\newcommand{\taurukhanointed}{Taurukhs Damnés}
+\newcommand{\infernalartillery}{Artillerie Pandémoniaque}
+\newcommand{\rocketbattery}{Roquettes Infernales}
+\newcommand{\volcanocannon}{Canon Magma}
+\newcommand{\titanmortar}{Mortier Titan}
+\newcommand{\bounddaemon}{Démon Enchaîné}
+
+% Rare
+
+\newcommand{\hobgoblinwolfriders}{Chasseurs Hobgobelins}
+\newcommand{\lightartillery}{Artillerie Légère}
+\newcommand{\hobgobelinboltthrower}{Baliste Hobgobeline}
+\newcommand{\gunneryteam}{Gatling Infernale}
+\newcommand{\infernalengine}{Automate Infernal}
+\newcommand{\kadimtitan}{Titan Incarnin}
+\newcommand{\armouredgiant}{Golem d'Acier}
+
+
+% Mounts
+
+\newcommand{\templelamassu}{Shêdu}
+\newcommand{\bullofshamut}{Taureau de Shamut}
+\newcommand{\greatbullofshamut}{Taureau Goliath de Shamut}
+\newcommand{\wolf}{Loup}
+
+% Short names and multiprofiles names
+
+\newcommand{\dwarfcrew}{Servants Nains}
+\newcommand{\hobgoblincrew}{Servants Hobgobelins}
+\newcommand{\hobgoblinwolfrider}{Chasseur Hobgobelin}
+
+% Profile wording
+
+\newcommand{\backstabberoption}{Si non monté, peut devenir \masterbackstabber{}}
+\newcommand{\infernalweaponoption}{Echanger son \gw{} contre un \infernalweapon{}}
+\newcommand{\bowoption}{Echanger son \shield{} contre un \bow{}}
+\newcommand{\gwoption}{Echanger sa \pw{} contre une \gw{}}
+\newcommand{\mayonechoice}{\optionschoice{Peut \onechoiceonly{} :}}
+\newcommand{\maytakeonechoice}{\optionschoice{Peut prendre \onechoiceonly{} :}}
+\newcommand{\takeabow}{Prende un \bow{}}
+\newcommand{\takeaspear}{Prende une \spear{}}
+
+% Profile Rules
+
+% Characters
+
+\newcommand{\fantheflamesrule}{%
+Le \overlord{} et toutes les figurines de l'unité qu'il rejoint gagnent la règle \hatred{}. Ne s'applique pas aux montures.
+}
+
+\newcommand{\masterbackstabberrule}{%
+Le personnage gagne la règle \backstabber{} (voir les \hobgoblins{}). Avant la bataille, une unité de \backstabbers{} de 25 figurines maximum peut être placée en \ambush{} avec le \hobgoblinchieftain{}, qui doit obligatoirement accompagner l'unité.
+}
+
+\newcommand{\chosenoflugarrule}{%
+Le \overlord{} gagne les règles \volcanicembrace{}, \otherworldly{}, \unbreakable{},\fireborn{} et \daemonicpossession{}. Il perd son armure et ne peut qu'utiliser des armures magique de type: aucun.
+}
+
+% Core units
+
+% Weapons
+
+\newcommand{\blunderbussrule}{%
+Arme de Tir.\portee{12},  Force 4, \walloflead{}, \quicktofire{}.\newline \textbf{\walloflead{}}:Lors de la phase de Tir, une unité armée de Tromblons peut choisir de déclencher un \walloflead{} au lieu de tirer normalement. L'unité crée alors une zone de feu de la même largeur que son premier rang et d'une profondeur de \distance{8} à partir du front de son premier rang. Toute figurine ennemie située dans cette zone de feu est touchée sur 6+. Pour chaque rang complet après le premier dans l'unité qui fait feu, les tirs bénéficient d'un +1 pour toucher. Les touches sont résolues avec une Force de 4 et la règle \reload{}. Il est possible d'effectuer un \walloflead{} après une marche forcée. Il est impossible d'effectuer un \walloflead{} si une unité amie ou une unité engagé au corps à corps se trouve dans la zone de feu. 
+}
+
+\newcommand{\backstabberrule}{%
+La figurine perd son armure et ses armes, gagne une \pw{} et la règle \poisonedattacks{}.
+}
+
+\newcommand{\slavesrule}{%
+A la fin de n'importe quelle phase, si aucune figurine suivant les règles \chosenofashuruk{} ou \opportunist{} n'est présente sur le champ de bataille, retirez immédiatement les unités \orcslaves{} comme perte. De plus, si aucune unité suivant les règles \chosenofashuruk{} ou \opportunist{} ne se trouve dans un rayon de \distance{6} des \orcslaves{} au début d'un tour amie et que ceux-ci ne sont pas engagés au corps à corps ou en fuite, lancez 1D6:
+\begin{customsubitemize}
+\item Sur un \result{1-2}, les \orcslaves{} fuient vers le bord de table le plus proche 
+\item Sur un \result{3-4}, \orcslaves{} ne peuvent pas bouger durant la phase de mouvement de ce tour
+\item Sur un \result{5-6}, les \orcslaves{} peuvent agir normalement.
+\end{customsubitemize}
+}
+
+\newcommand{\borntofightrule}{%
+La partie de la figurine avec cette règle a +1 en Force lors de la première manche de corps à corps.
+}
+
+% special units
+
+\newcommand{\halfbullrule}{%
+Les figurines suivant cette règle ne peuvent pas subir de \stomp{}.
+}
+
+\newcommand{\ogreslaverule}{%
+Le \titanmortar{} gagne un \ogreslave{} en tant que servant additionnel, ce qui ajoute +1 Point de Vie au \titanmortar{}. De plus, les résultats de \result{3-4} sur le tableau d'incidents de tir comptent comme \result{5+}.
+}
+
+\newcommand{\earthquakeshellsrule}{%
+Toute unité subissant au moins une blessure non sauvegardée due à ces munitions devra relancer tous ses jets pour toucher réussis ayant donné un résultat naturel de \result{6} et traitera tous les terrains, y compris les Terrains Dégagés, comme étant des Terrains Dangereux. Toute \warmachine{} se trouvant dans un rayon de \distance{8} de la position finale du gabarit doit jeter un dé pour pouvoir tirer et ne pourra le faire que si le résultat est inférieur à 4+. Ces effets durent jusqu'à la fin du tour du joueur suivant. Un seul \titanmortar{} par armée peut être équipé de ces munitions.
+}
+
+\newcommand{\daemonicfuryrule}{%
+Au début du tour du joueur contrôlant le \bounddaemon{}, celui-ci doit faire un test de Commandement. En cas d'échec, la figurine gagne un \randommovement{3D6} jusqu'à la fin du tour en cours, et doit avancer vers l'unité ennemie la plus proche au cours de la phase de mouvement.
+}
+
+% rare units
+
+\newcommand{\fullsteamaheadrule}{%
+Au cours de la sous-phase des mouvements obligatoires, l'unité peut choisir d'engager sa chaudière. Pour la durée du tour, l'\infernalengine{} ne peut alors pas tirer et gagne un \randommovement{3D6}, mais il ne peut pivoter que de 45 degrés avant de bouger.
+}
+
+\newcommand{\ponderousrule}{%
+l'\infernalengine{} ne peut pas déclarer de Charge, de Charge Irrésistible ni Poursuivre.
+}
+
+\newcommand{\searingragerule}{%
+A chaque fois que la figurine rate un test de \frenzy{}, elle ajoute +1 Attaque à son Attaque Additionelle de \frenzy{}. Ces Attaques Additionnelles sont perdues si la \frenzy{} est perdue.
+}
+
+\newcommand{\lordofflamerule}{%
+La figurine gagne des \divineattacks{} contre les figurines ayant la règle \fireborn{}.
+}
+
+\newcommand{\giantattacksrule}{%
+Quand un Géant attaque au Corps à Corps, au lieu d'attaquer normalement, choisissez une unité en contact socle à socle à attaquer et lancez 1D6. Déterminez ci-dessous la table à utiliser selon le Type de Troupe de l'unité visée, et trouvez l'attaque correspondant au résultat du dé. Il est important de noter que les Attaques de Géant comptent comme des attaques de Corps à Corps et suivent ainsi normalement les règles affectant ces attaques. Le Géant peut également faire son \stomp{}.
+}
+
+\newcommand{\giantattackstable}{%
+\vspace*{-0.2cm}\begin{multicols}{2}
+	\noindent Si l'unité est de type \infantry{}, \warbeast{}, \cavalry{}, \swarm{} ou \warmachine{}  :	
+	\renewcommand{\arraystretch}{1.5}	
+	\begin{center}\begin{tabular}{cl}
+   		\hline
+		1 & \bellow{} \tabularnewline
+		2 & \jump{} \tabularnewline
+		3 & \grab{} \tabularnewline
+		4-6 & \swing{} \tabularnewline
+		\hline
+	\end{tabular}\end{center}
+	\vspace*{\fill}
+	\columnbreak
+	Si l'unité est de type \monstrousinfantry{}, \monstrouscavalry{}, \monstrousbeast{}, \chariot{}, \monster{} ou \riddenmonster{} :
+	\begin{center}\begin{tabular}{cl}
+		\hline	
+		1 & \bellow{} \tabularnewline
+		2-3 & \thump{} \tabularnewline
+		4-6 & \smashname{} \tabularnewline
+		\hline
+	\end{tabular}\end{center}
+	\vspace*{\fill}
+	\renewcommand{\arraystretch}{1.2} % return to default
+\end{multicols}
+}
+
+\newcommand{\bellowrule}{%
+Ni le Géant, ni l'unité sélectionnée ne peuvent faire d'attaques de Corps à Corps pendant cette phase. Les attaques déjà réalisées, incluant celles réalisées simultanément avec cette attaque, ne sont pas concernées. Le camp du Géant gagne automatiquement le combat de 2. Si deux Géants opposés, ou plus, \og{} Hurlent \fg{}, le combat est un match nul.
+}
+
+\newcommand{\jumprule}{%
+L'unité sélectionnée subit 1D6 touches de la Force du Géant. Le Géant doit faire un test de Terrain Dangereux.
+}
+
+\newcommand{\grabrule}{%
+Choisissez une figurine dans l'unité sélectionnée et en contact socle à socle avec le Géant. Cette figurine doit faire un test de Force et un test de Capacité de Combat. Pour chaque test raté, la figurine subit une touche de la Force du Géant et suivant la règle spéciale \multiplewounds{1D3}{}.
+}
+
+\newcommand{\swingrule}{%
+Le Géant fait 2D6 attaques sur l'unité choisie.
+}
+
+\newcommand{\thumprule}{%
+Choisissez une figurine en contact socle à socle avec le Géant dans l'unité sélectionnée. Cette figurine doit faire un test d'Initiative. Si elle échoue, la figurine subit 2D6 blessures avec \armourpiercing{6}.
+}
+
+\newcommand{\smashrule}{%
+Choisissez une figurine en contact socle à socle avec le Géant dans l'unité sélectionnée. Cette figurine subit une blessure avec \armourpiercing{6}. Si la figurine n'a pas encore attaqué, elle ne peut plus le faire au cours de cette manche. Si la figurine a déjà réalisé ses attaques, elle ne pourra pas attaquer au cours du tour de  joueur à venir.
+}
+
+% Warmachines
+
+\newcommand{\rocketbatteryrule}{%
+Peut tirer de deux manières :
+\begin{customsubitemize}
+\item Comme une \textbf{\artilleryweapon{}} de type \textbf{\catapult{}}.\newline \range{48}, \Strength{} 8, \multiplewounds{\ordnance}{}.
+\item Comme une \textbf{\artilleryweapon{}} de type \textbf{\catapult{}}, \distance{5}.\newline \range{48}, \Strength{} 2, \armourpiercing{1}, \multiplewounds{\ordnance}{}. Toute unité subissant une ou plusieurs pertes du fait de cette arme doit immédiatement effectuer un test de Panique, exactement comme si elle avait subi 25 pour cent de perte.
+\end{customsubitemize}
+}
+
+\newcommand{\volcanocannonrule}{%
+Peut tirer de deux manières :
+\begin{customsubitemize}
+\item Comme une \textbf{\artilleryweapon} de type \textbf{\flamethrower{}}.\newline \range{15}, \Strength{} 5, \flamingattacks{}, \multiplewounds{1D3}{}.
+\item Comme une \textbf{\artilleryweapon} de type \textbf{\flamethrower{}}.\newline \range{24}, \Strength{} 1. Les unités touchées deviennent \flammable{} et traitent outes les \flamingattacks{} les ciblant comme des \divineattacks{}  
+\end{customsubitemize}
+}
+
+\newcommand{\titanmortarrule}{%
+\textbf{\artilleryweapon} de type \textbf{\catapult{}}.\newline \range{48}, \Strength{} 4 [9], [\multiplewounds{\ordnance}{}]. 
+}
+
+\newcommand{\infernalartillerynote}{%
+Une armée ne peut pas contenir plus de deux \volcanocannon{} et pas plus de deux \titanmortar{}. Ces chiffres sont changés en un et quatre respectivement pour les Patrouilles et les Grandes Armées.
+}
+
+\newcommand{\infernalartillerysecondnote}{%
+Chaque \bounddaemon{} compte comme une unité d'\infernalartillery{} additionnelle.
+}
+
+\newcommand{\hobgoblinboltthrowerrule}{%
+\textbf{\artilleryweapon} de type \textbf{\boltthrower{}}.\newline \range{48}, \Strength{} 6, \multiplewounds{1D3}{}, \?armourpiercing{6}. 
+}
+
+\newcommand{\gunneryteamrule}{%
+\textbf{\artilleryweapon} de type \textbf{\volleygun{}}.\newline \range{24}, \Strength{} 4, \multipleshots{1D6, 2D6 ou 3D6}{}. 
+}
+
+
+%mounts
+
+\newcommand{\auraofunbindingrule}{%
+Toute arme magique dans les mains d'une figurine amie ou ennemie en contact socle à socle avec un \templelamassu{} perd ses propriétés magiques. Un personnage chevauchant le \templelamassu{} n'est pas affecté.  Cet effet dure tant que la figurine ennemie reste en contact.
+}
+
+\newcommand{\macetailrule}{%
+Le \templelamassu{} gagne +1 Attaque et lorsqu'il combat un ennemi sur son arrière, il gagne +1 pour toucher.
+}
+
+\begin{document}
+
+\input{../Layout/AB_titlepage.tex}
+
+\vspace*{1.5cm}
+\startarmyspecialrules
+
+\armyspecialruleentry{\shacklesoffire{}}
+
+Tous les jets pour blesser contre une figurine suivant cette règle ayant donné un jet naturel de \result{6} doivent être relancés. Les \magicalattacks{} ne sont pas affectées par cette règle.
+Au début de son second tour de jeu ami et au cours des tours amis suivants, une unité composée d'une ou plusieurs figurines suivant cette règle doit réussir un test de commandement ou subir une blessure sans aucune sauvegarde d'aucune sorte possible. Si aucun sorcier ami n'est présent sur le champ de bataille, la blessure subie suit la règle \multiplewounds{1D3}{}.
+
+\armyspecialruleentry{\chosenofashuruk{}}
+
+Les unités dotées de cette règle réussissent automatiquement leurs tests de \fear{} mais souffrent tout de même du malus de -1 en Commandement. De plus, elles considèrent toutes les figurines n'étant pas \chosenofashuruk{} comme \insignificant{}. Enfin, elles ne peuvent pas utiliser leur règle \engineer{} sur des figurines ne possédant pas la règle \chosenofashuruk{}.
+
+\armyspecialruleentry{\volcanicembrace{}}
+
+Toutes les attaques de la figurine suivent la règle \flamingattacks. Tout ennemi en contact socle à socle avec une ou plusieurs figurines dotées de cette règle subit une touche de Force 4 au début de chaque phase de combat à Initiative 10.
+
+\armyspecialruleentry{\relentless{}}
+
+Les unités d'infanterie contenant uniquement des figurines dotées de cette règle peuvent tripler leur mouvement lors d'une Marche Forcée au lieu de le doubler. Cette disposition est étendue aux situations où le mouvement est limité d'ordinaire au double de la valeur de mouvement de la figurine, telles que les roues, les reformations, les mouvements d'un personnage à travers une unité, etc... Le mouvement est alors également triplé.
+
+\armyspecialruleentry{\unruly{}}
+
+Les unités suivant cette règle ont un malus de -1 en Commandement pour les tests suivants : réfréner la \frenzy{}, réfréner la Poursuite. Si l'unité est en Horde et doit effectuer un test de panique, jetez trois dés pour les tests de Panique et enlevez celui ayant le résultat le plus haut.
+
+\armyspecialruleentry{\opportunist{}}
+
+Les figurines à pied dotées de cette règle ont un bonus de +1 pour toucher lorsqu'elles combattent sur le flanc ou à l'arrière d'une unité ennemie tant qu'elles ne sont pas elles-mêmes engagées sur le flanc ou l'arrière.
+
+\armyspecialruleentry{\daemonicinfusion{}}
+
+La machine de guerre gagne la règle \magicalattacks{} (mais pas les servants) et tous les tests de Panique causés à l'adversaire par cette machine pour avoir causé au moins 25 pour cent de perte sont effectués avec un malus de -1 au Commandement.
+
+\armyspecialruleentry{\daemonicpossession}
+
+La figurine a la \frenzy{} et ne peut jamais la perdre.
+
+\armyspecialruleentry{\sturdy{}}
+
+Les figurines suivant la règle \sturdy{} gagnent la règle \thunderouscharge{} et ignorent le malus de -1 pour toucher lorsqu'elles Tiennent leur Position et Tirent.
+
+\closearmyspecialrules
+
+
+
+\vspace*{1.5cm}
+\startarmyarmoury
+
+\startitemlistonecol
+
+\listitemonecol{\infernalweapon{}} Arme de base. Les attaques portées avec cette arme ont +1 en Force et la règle \magicalattacks{}.
+
+\listitemonecol{\infernalarmour{}}  Armure de plates. Le porteur a une \wardsave{5} contre les \flamingattacks{}.
+
+\listitemonecol{\flintlockaxe{}}  Arme de tir. \range{18}, Force 4, \armourpiercing{1}. Compte comme une \halberd{} au corps à corps.
+
+
+\enditemlistonecol
+
+\closearmyarmoury
+
+\startarmymagicalitems
+
+\armymagicalweapons
+
+\startpricelist
+
+\pricelistitem{Marteau d'Onyx}{55/50}Type: Arme de base. +2 en Force. Les attaques portées avec cette arme provoquent des \multiplewounds{1D3}{} contre les figurines bénéficiant de la règle \flammable{}.
+
+\pricelistitem{Lame en Fusion}{25}Type: Arme de base. \armourpiercing{1}. Une seule utilisation. Peut être déclenchée au début de n'importe quelle manche de corps à corps. Les attaques portées avec cette arme suivent la règle \metalshifting{} jusqu'à la fin de la manche de corps à corps.
+
+\endpricelist
+
+\armymagicalarmour
+
+\startpricelist
+
+\pricelistitem{Masque du Fourneau}{30}Aucun type. Accorde une \armoursave{} (6+). Le porteur gagne les règles \breathweapon{Force 3, \flamingattacks{}} et \fireborn{}.
+
+\endpricelist
+
+\armytalismans
+
+\startpricelist
+
+\pricelistitem{Anneau de Dessiccation}{45}Toutes les unités ennemies en contact socle à socle avec le porteur gagnent la règle \flammable{}. Si l'armée n'inclut aucun Sorcier, le porteur compte comme un Sorcier uniquement concernant la règle \shacklesoffire{}.
+
+\pricelistitem{Peau d'Acier}{15}Les attaques contre le porteur perdent les règles \poisonedattacks{} et \lethalstrike{}.
+
+\endpricelist
+
+\armyenchanteditems
+
+\startpricelist
+
+\pricelistitem{Fiole de Mercure}{45}Une seule utilisation. La figurine peut boire la Fiole au début de n'importe quel round de corps à corps. L'unité du porteur gagne la règle \lightningreflexes{} et +2 en Initiative jusqu'à la fin du tour. Lorsque les effets de la Fiole disparaissent, la figurine du porteur subit une blessure sans aucune sauvegarde d'aucune sorte possible.
+
+
+
+\pricelistitem{Gantelets de Madzhab}{10}Le porteur a +1 en Force. Chacun de ses jets pour toucher ayant donné \result{1} est résolu contre l'unité du porteur. Cela ne peut jamais affecter la figurine du porteur, sauf si celui-ci est monté et ne fait pas partie d'une figurine combinée.
+
+\endpricelist
+
+\armyarcaneitems
+
+\startpricelist
+
+\pricelistitem{Mécanisme de Besheluk}{25}Lorsque le porteur réussit à lancer un sort de type Amélioration (mais pas un Attribut de Discipline) sur une unité composée exclusivement de figurines suivant la règle \shacklesoffire{}, l'unité ciblée récupère un point de vie précédemment perdu. Aucune unité ne peut regagner plus d'un point de vie par phase de magie grâce à cet objet.
+
+\endpricelist
+
+\armymagicalbanners
+
+\startpricelist
+
+\pricelistitem{Bannière du Taureau Rougeoyant}{40}\infantry{} uniquement. L'unité du porteur gagne la règle \vanguard{}. Les unités suivant la règle \unruly{} situées dans un rayon de \distance{12} autour du porteur peuvent relancer leurs tests de panique ratés.
+
+\pricelistitem{Bannière de Nezibkesh}{25}Toutes les attaques spéciales de corps à corps dirigées contre le porteur ou l'unité du porteur le sont avec une Force divisée par deux, arrondie au supérieur.
+
+\endpricelist
+
+\closearmymagicalitems
+
+\input{InfernalDwarves_armylist.tex}
+
+
+\end{document}
