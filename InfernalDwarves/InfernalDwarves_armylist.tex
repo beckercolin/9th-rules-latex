@@ -1,5 +1,5 @@
 
-%%% v0.99.2
+%%% v0.99.9
 
 \armylist
 
@@ -7,7 +7,7 @@
 
 \showunit{
 	name={\prophet{}},
-	cost={200},
+	cost=200,
 	profile={< 3 4 4 4 5 3 2 2 9},
 	type= \infantry{} ,
 	basesize=20x20,
@@ -19,517 +19,529 @@
 	armour={\infernalarmour{}},
 	options={	
 		\magicalitemsallowance{}=\upto{}<100,
-		\maybecomeoneofthefollowing{
+		\onechoiceonly{
+			\engineer{}=25,
 			\magiclevel{4}=30,
-			\engineer{}=25	
-				},
+		},
 		\weapononechoice{
 			\flintlockaxe{}=8,
 			\infernalweapon{}=10
-				},
-			},
+		},
+	},
 	mounts={
 		\bullofshamut{}=140,
 		\templelamassu{}=145,
-			},
+	},
 }
 
 \showunit{
 	name={\overlord{}},
-	cost={125},
+	cost=125,
 	profile={< 3 7 4 4 5 3 4 4 10},
-	type= \infantry{} ,
+	type= \infantry{},
 	basesize=20x20,
 	unitsize=1,
 	commontype=\infernaldwarvescommonrules{},
-	commonspecialrules={\fantheflames{},\chosenofashuruk{},\relentless{},\sturdy{}},
+	commonspecialrules={\chosenofashuruk{},\relentless{},\sturdy{}},
+	specialrules={\fantheflames{}},
 	armour={\infernalarmour{}},
 	options={	
 		\magicalitemsallowance{}=\upto{}<125,
-		\maytakeashield{}=3,
-		\maytakeapistol{}=5,
+		\shield{}=3,
+		\pistol{}=5,
 		\weapononechoice{
 			\flintlockaxe{}=10,
 			\gw{}=15,
-			\infernalweapon{}=20
-				},
-			},
+			\infernalweapon{}=20,
+		},
+	},
 	unitrules={\unitrule{\fantheflames{}}{\fantheflamesrule}},	
 	mounts={
 		\bullofshamut{}=140,
 		\greatbullofshamut{}=270,
-			},
+	},
 }
+
+
+
+
+
 
 \heroestitle
 
 \showunit{
 	name={\magus{}},
-	cost={60},
+	cost=60,
 	profile={< 3 4 4 4 4 2 2 2 9},
-	type= \infantry{} ,
+	type= \infantry{},
 	basesize=20x20,
 	unitsize=1,
 	commontype=\infernaldwarvescommonrules{},
 	commonspecialrules={\chosenofashuruk{},\relentless{},\sturdy{}},
-	magiclevel=0,
 	magicpaths={\alchemy{}, \forge{}, \fire{}, \death{}, \shadows{}},
 	armour={\infernalarmour{}},
 	options={	
 		\magicalitemsallowance{}=\upto{}<50,
-		\maybecomeoneofthefollowing{
+		\musttakeoneofthefollowing{
 			\magiclevel{1}=15,
-			\magiclevel{2}=50,
+			\magiclevel{2}=40,
 			\engineer{}=\free{},
-			\engineer{} et \magiclevel{1}=40, 	
-				},
+			\engineer{} \wordand{} \magiclevel{1}=40, 	
+		},
 		\weapononechoice{
 			\flintlockaxe{}=8,
 			\infernalweapon{}=10
-				},
-			},
+		},
+	},
 	mounts={
 		\templelamassu{}=145,
-			},
+	},
 }
 
 \showunit{
 	name={\vizier{}},
-	cost={70},
+	cost=70,
 	profile={< 3 6 4 4 5 2 3 3 9},
-	type= \infantry{} ,
+	type= \infantry{},
 	basesize=20x20,
 	unitsize=1,
 	commontype=\infernaldwarvescommonrules{},
 	commonspecialrules={\chosenofashuruk{},\relentless{},\sturdy{}},
 	armour={\infernalarmour{}},
 	options={
-		\maybecomeoneofthefollowing{
-		\chosenoflugar{} (\oneofakind{})=30,	
-		\bsboption{}=25,
-				},
+		\onechoiceonly{
+			\chosenoflugar{} (\oneofakind{})=30,	
+			\bsb{}=25,
+		},
 		\magicalitemsallowance{}=\upto{}<75,
-		\maytakeashield{}=2,
-		\maytakeapistol{}=5,
+		\shield{}=2,
+		\pistol{}=5,
 		\weapononechoice{
-			\flintlockaxe{}=10,
 			\gw{}=10,
-			\infernalweapon{}=15
-				},
-			},
-	unitrules={\unitrule{\chosenoflugar{}}{\chosenoflugarrule}},			
+			\flintlockaxe{}=10,
+			\infernalweapon{}=15,
+		},
+	},		
 	mounts={
 		\bullofshamut{}=155,
-	    	},
+	},
+	additional={%
+		\def\tempunitrules{\unitrule{\chosenoflugar{}}{\chosenoflugarrule}}
+		\unitrules{\tempunitrules}
+	},
 }
 
 \showunit{
 	name={\taurukhsubjugator{}},
-	cost={150},
+	cost=150,
 	profile={< 7 5 4 5 5 4 4 4 9},
-	type= \monstrousbeast{} ,
+	type= \monstrousbeast{},
 	basesize=50x75,
 	unitsize=1,
-	commontype=\infernaldwarvescommonrules{},
-	commonspecialrules={\chosenofashuruk{}},
-	specialrules={\thunderouscharge{}},
+	commontype=\taurukhcommonrules{},
+	commonspecialrules={\chosenofashuruk{},\thunderouscharge{}},
 	armour={\ha{}, \innatedefence{6}},
 	options={
-		\bsboption{}=25,	
+		\bsb{}=25,	
 		\magicalitemsallowance{}=\upto{}<50,
-		\anyofthefollowing{
-			\shield{}=10,
-			\infernalarmour{}=20
-				},
+		\shield{}=10,
+		\infernalarmour{}=20,
 		\weapononechoice{
-			\pw{}=10,
 			\lightlance{}=10,
+			\pw{}=10,
 			\gw{}=20
-				},
-			},
+		},
+	},
 }
 
 \showunit{
 	name={\hobgoblinchieftain{}},
-	cost={35},
+	cost=35,
 	profile={< 4 4 4 4 4 2 4 3 7},
-	type= \infantry{} ,
+	type= \infantry{},
 	basesize=20x20,
 	unitsize=1,
 	commontype=\hobgoblinscommonrules{},
 	commonspecialrules={\unruly{},\opportunist{}},
 	specialrules={\notaleader{}},
-	armour={\infernalarmour{}},
 	options={	
 		\magicalitemsallowance{}=\upto{}<25,
-		\backstabberoption{}=50,
-		\anyofthefollowing{
-			\shield{}=2,
-			\la{}=2
-				},
+		\backstabber{} \onfootonly{}=50,
+		\shield{}=2,
+		\la{}=2,
 		\shootingweapononechoice{
 			\throwingweapons{}=2,
-			\bow{}=4
-				},
-		\weapononechoice{
-			\pw{}=3,
+			\bow{}=4,
+		},
+		\combatweapononechoice{
 			\lightlance{}=3,
-			\gw{}=6
-				},
-			},
-	unitrules={\unitrule{\masterbackstabber{}}{\masterbackstabberrule}},	
+			\pw{}=3,
+			\gw{}=6,
+		},
+	},
 	mounts={
 		\wolf{}=20,
-			},
-}
-
-\coreunitstitle
-
-\showunit{
-	name={\infernalwarriors{}},
-	cost={65},
-	profile={< 3 4 3 3 4 1 2 1 9},
-	type= \infantry{} ,
-	basesize=20x20,
-	unitsize=10,
-	maxmodels=40,
-	costpermodel=7,
-	commontype=\infernaldwarvescommonrules{},
-	commonspecialrules={\chosenofashuruk{},\relentless{},\sturdy{}},
-	armour={\ha{}},
-	options={
-		\maytakeashield{}=\permodel{}<1,
-		\weapononechoice{
-			\blunderbuss{}=\permodel{}<2,
-			\gw{}=\permodel{}<3
-				},
-			},
-	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
-}
-
-\showunit{
-	name={\citadelguard{}},
-	cost={95},
-	profile={< 3 4 4 4 4 1 2 1 9},
-	type= \infantry{} ,
-	basesize=20x20,
-	unitsize=10,
-	maxmodels=30,
-	costpermodel=12,
-	commontype=\infernaldwarvescommonrules{},
-	commonspecialrules={\chosenofashuruk{},\relentless{},\sturdy{}},
-	armour={\infernalarmour{}, \shield{}},
-	options={
-		\maytake{} \flintlockaxe{}=\permodel{}<5,
-			},
-	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
-}
-
-\showunit{
-	name={\hobgoblins{}},
-	cost={75},
-	profile={< 4 3 3 3 3 1 3 1 6},
-	type= \infantry{} ,
-	basesize=20x20,
-	unitsize=20,
-	maxmodels=50,
-	costpermodel=5,
-	commontype=\hobgoblinscommonrules{},
-	commonspecialrules={\unruly{},\opportunist{}},
-	armour={\la{}, \shield{}},
-	options={
-		\maybecome{} \backstabber{}=\permodel{}<2,
-		\mayonechoice{ 
-			\bowoption{}=\free,
-			\takeaspear=\permodel{}<0,5,
-			\takeabow=\permodel{}<1,
-				},
-			},
-	unitrules={\unitrule{\backstabber{}}{\backstabberrule}},		commandgroup={champion=10, musician=10, banner=10},
-}
-
-\showunit{
-	name={\orcslaves{}},
-	cost={60},
-	profile={< 4 3 3 3 4 1 2 1 5},
-	type= \infantry{} ,
-	basesize=25x25,
-	unitsize=20,
-	maxmodels=50,
-	costpermodel=6,
-	commontype=\orcslavescommonrules{},
-	commonspecialrules={\slaves{}, \borntofight{}},
-	specialrules={\unruly{},\insignificant{}},
-	armour={\la{}},
-	options={
-		\maytakeonechoice{
-			\shield{}=\permodel{}<1,
-			\pw{}=\permodel{}<1,
-				},
-			},
-	unitrules={
-	\unitrule{\slaves{}}{\slavesrule}
-	\unitrule{\borntofight{}}{\borntofightrule}},
-	commandgroup={musician=10},
-}
-
-\specialunitstitle
-
-\showunit{
-	name={\immortals{}},
-	cost={100},
-	profile={< 3 5 3 4 4 1 2 1 9},
-	type= \infantry{} ,
-	basesize=20x20,
-	unitsize=10,
-	maxmodels=30,
-	costpermodel=14,
-	commontype=\infernaldwarvescommonrules{},
-	commonspecialrules={\chosenofashuruk{},\relentless{},\sturdy{}},
-	specialrules={\bodyguard{}},
-	armour={\infernalarmour{}},
-	weapons={\gw{}},
-	options={
-		\maytakeashield{}=\permodel{}<1,
-		\infernalweaponoption{}=\free,
-			},
-	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
-}
-
-\showunit{
-	name={\disciplesoflugar{}},
-	cost={65},
-	profile={< 3 4 3 4 4 1 2 1 9},
-	type= \infantry{} ,
-	basesize=20x20,
-	unitsize=5,
-	maxmodels=25,
-	costpermodel=13,
-	commontype=\infernaldwarvescommonrules{},
-	commonspecialrules={\chosenofashuruk{}, \volcanicembrace{},\relentless{},\daemonicpossession{},\sturdy{}},
-	specialrules={\otherworldly{},\unbreakable{},\fireborn{}},
-	weapons={\pw{}},
-	options={
-		\gwoption{}=\permodel{}<2,
-			},
-	commandgroup={champion=10, musician=10},
-}
-
-\showunit{
-	name={\kadimincarnates{}},
-	cost={165},
-	profile={< 6 4 3 5 4 3 4 3 7},
-	type= \monstrousinfantry{},
-	basesize=40x40,
-	unitsize=3,
-	maxmodels=8,
-	costpermodel=60,
-	commontype=\kadimcommonrules{},
-	commonspecialrules={\shacklesoffire{},\volcanicembrace{}},
-	specialrules={\otherworldly{},\daemonicinstability{},\fireborn{},\fear{}},
-	armour={\innatedefence{5}},
-	weapons={\pw{}},
-	options={
-		\maytake{}\fly{6}=\free{},
-			},
-	commandgroup={champion=10},
-}
-
-\showunit{
-	name={\taurukh{}},
-	cost={90},
-	profile={< 7 4 3 4 4 1 2 2 9},
-	type= \warbeast{},
-	basesize=25x50,
-	unitsize=5,
-	maxmodels=15,
-	costpermodel=14,
-	commontype=\infernaldwarvescommonrules{},
-	commonspecialrules={\chosenofashuruk{}, \halfbull{}},
-	specialrules={\thunderouscharge{}},
-	armour={\la{},\innatedefence{6}},
-	options={
-		\anyofthefollowing{
-			\shield{}=\permodel{}<1,
-			\ha{}=\permodel{}<2
-				},
-		\weapononechoice{
-			\lightlance{}=\permodel{}<1,
-			\pw{}=\permodel{}<1,
-			\gw{}=\permodel{}<3
-				},
-			},
-	unitrules={\unitrule{\halfbull{}}{\halfbullrule}},		
-	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
-}
-
-\showunit{
-	name={\taurukhanointed{}},
-	cost={180},
-	profile={< 7 4 3 5 5 3 3 3 9},
-	type= \monstrousbeast{},
-	basesize=50x75,
-	unitsize=3,
-	maxmodels=7,
-	costpermodel=60,
-	commontype=\infernaldwarvescommonrules{},
-	commonspecialrules={\chosenofashuruk{}},
-	specialrules={\thunderouscharge{}},
-	armour={\ha{},\innatedefence{6}},
-	options={
-		\maytakeashield{}=\permodel{}<6,
-		\weapononechoice{
-			\lightlance{}=\permodel{}<3,
-			\pw{}=\permodel{}<3,
-			\gw{}=\permodel{}<10
-				},
-			},
-	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
-}
-
-
-\showunit{
-	name={\bounddaemon{}},
-	cost={-},
-	profile={< 4 4 3 5 6 5 2 5 9},
-	type= \monster{},
-	basesize=100x150,
-	unitsize={1},
-	commontype=\infernaldwarvescommonrules{},
-	commonspecialrules={\daemonicfury{},\daemonicinfusion{}},
-	specialrules={\otherworldly{},\unbreakable{},\moveorfire{}},
-	armour={\innatedefence{4}},
-	unitrules={\unitrule{\daemonicfury{}}{\daemonicfuryrule}},
-}
-
-\rareunitstitle
-
-\showunit{
-	name={\hobgoblinwolfriders{}},
-	cost={55},
-	profile={
-	\hobgoblinwolfrider < 4 3 3 3 3 1 3 1 6,
-	\wolf < 9 3 - 3 3 1 3 1 3,
 	},
-	type= \cavalry{} ,
-	basesize=25x50,
-	unitsize=5,
-	maxmodels=15,
-	costpermodel=10,
-	commontype=\hobgoblinscommonrules{},
-	commonspecialrules={\unruly{}},
-	specialrules={\fastcavalry{}},
-	armour={\la{},\mountsprotection{6}},
-	options={
-		\maytakeashield=\permodel{}<1,
-		\anyofthefollowing{
-			\lightlance{}=\permodel{}<1,
-			\bow{}=\permodel{}<1,
-				},
-			},
-	commandgroup={champion=10, musician=10, banner=10},
-}
-
-\showunit{
-	name={\kadimtitan{}},
-	cost={325},
-	profile={< 8 5 3 7 6 6 5 6 8},
-	type= \monster{},
-	basesize=100x150,
-	unitsize={1},
-	commontype=\kadimcommonrules{},
-	commonspecialrules={\shacklesoffire{},\volcanicembrace{}},
-	specialrules={\otherworldly{},\frenzy{},\daemonicinstability{},\fireborn{}, \wardsave{4}},
-	armour={\innatedefence{5}{}},
-	unitrules={
-	\unitrule{\searingrage{}}{\searingragerule}
-	\unitrule{\lordofflame{}}{\lordofflamerule}
-	},
-}
-
-\showunit{
-	name={\armouredgiant{}},
-	cost=145,
-	profile={< 6 3 - 6 5 6 3 \starsymbol{} 10,},
-	type=\monster,
-	basesize=50x75,
-	unitsize=1,
-	specialrules={\immunetopsychology{},\stubborn{},\giantattacks{}},
-	armour={\ha{}},
-	options={\maytake{} \infernalarmour{}=30,},
 	additional={%
-		\def\tempunitrules{%
-			\unitrule{\giantattacks}{\giantattacksrule}
-			\unitrule{\bellow}{\bellowrule}
-			\unitrule{\jump}{\jumprule}
-			\unitrule{\grab}{\grabrule}
-			\unitrule{\swing}{\swingrule}
-			\unitrule{\thump}{\thumprule}
-			\unitrule{\smashname}{\smashrule}
-		}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
-		\giantattackstable
+		\def\tempunitrules{\unitrule{\backstabber{}}{\backstabberrule}}
+		\unitrules{\tempunitrules}
 	},
 }
+
+
+
+
+
 
 \mountstitle
 
-\mountssectionannouncement
-
 \showunit{
-	name={\greatbullofshamut{}},
-	cost={-},
-	profile={< 6 5 - 6 6 6 3 4 6},
-	type= \monster{},
-	basesize=60x100,
-	unitsize={1},
-	commontype=\infernaldwarvescommonrules{},
-	commonspecialrules={\volcanicembrace{}},
-	specialrules={\breathweapon{Force 4, \flamingattacks{}},\magicalattacks{},\fireborn{},\wardsave{5},\impacthits{1},\fly{7}},
-	armour={\innatedefence{5}{}},
-}
+	name={\wolf},
+	profile={< 9 3 - 3 3 1 3 1 3},
+	type=\warbeast{},
+	basesize=25x50,
+	specialrules={\fastcavalry{}},
+	armour={\mountsprotection{6}},
+}	
 
 \showunit{
 	name={\bullofshamut{}},
-	cost={-},
 	profile={< 6 5 - 5 5 4 3 4 6},
 	type= \monstrousbeast{},
 	basesize=50x50,
-	unitsize={1},
-	commontype=\infernaldwarvescommonrules{},
-	commonspecialrules={\volcanicembrace{}},
-	specialrules={\magicalattacks{},\largetarget{},\fireborn{},\fear{},\impacthits{1},\fly{8}},
+	additional={%
+		\def\tempspecialrules{\volcanicembrace{},\magicalattacks{},\largetarget{},\fireborn{},\fear{},\impacthits{1},\fly{8}}
+		\vspace*{-0.2cm}\specialrules{\tempspecialrules}
+	},
 }
 
 \showunit{
-	name={\templelamassu{}},
-	cost={-},
+	name={\greatbullofshamut{} (\oneofakind{})},
+	QRSname={\greatbullofshamut{}},
+	profile={< 6 5 - 6 6 6 3 4 6},
+	type= \monster{},
+	basesize=60x100,
+	armour={\innatedefence{5}},
+	additional={%
+		\def\tempspecialrules{\volcanicembrace{},\breathweapon{\Strength{} 4, \flamingattacks{}},\magicalattacks{},\fireborn{},\wardsave{5},\impacthits{1},\fly{7}}
+		\vspace*{0.2cm}\specialrules{\tempspecialrules}
+	},
+}
+
+\showunit{
+	name={\templelamassu{} (\oneofakind{})},
+	QRSname={\templelamassu{}},
 	profile={< 6 3 - 5 5 4 2 2 8},
 	type= \monstrousbeast{},
 	basesize=50x50,
-	unitsize={1},
-	commontype=\lamassucommonrules{},
-	commonspecialrules={\auraofunbinding{}},
-	specialrules={\magicalattacks{},\largetarget{},\fear{},\magicresistance{2},\wardsave{5},\fly{8}},
 	magiclevel=1,
 	magicpaths={\fire{},\death{},\shadows{}},
 	options={
 		\magiclevel{2}=25,
-		\maytake{} \breathweapon{Force 4, 			 \magicalattacks{}}=30,
-		\maytake{} \macetail{}=20
-			},
-	unitrules={\unitrule{\auraofunbinding{}}{\auraofunbindingrule}
-		\unitrule{\macetail{}}{\macetailrule}}
-	}
+		\macetail{}=20,
+		\breathweapon{\Strength{} 4, \magicalattacks{}}=30,
+	},
+	additional={%
+		\def\tempspecialrules{\auraofunbinding{},\magicalattacks{},\largetarget{},\fear{},\magicresistance{2},\wardsave{5},\fly{8}}
+		\def\tempunitrules{%
+			\unitrule{\auraofunbinding{}}{\auraofunbindingrule}
+			\unitrule{\macetail{}}{\macetailrule}
+		}
+		\vspace*{-0.1cm}\specialrules{\tempspecialrules}
+		\vspace*{0.15cm}\unitrules{\tempunitrules}
+	},
+}
 
-\showunit{
-	name={\wolf},
-	cost={-},
-	profile={< 9 3 - 3 3 1 3 1 3},
-	cost={-},	
-	type=\cavalry,
-	basesize=25x50,
-	unitsize={1},
-	specialrules={\fastcavalry{}},
-	armour={\mountsprotection{6}}
-		}		
+
+
+
+
+%
+%\coreunitstitle
+%
+%\showunit{
+%	name={\infernalwarriors{}},
+%	cost={65},
+%	profile={< 3 4 3 3 4 1 2 1 9},
+%	type= \infantry{} ,
+%	basesize=20x20,
+%	unitsize=10,
+%	maxmodels=40,
+%	costpermodel=7,
+%	commontype=\infernaldwarvescommonrules{},
+%	commonspecialrules={\chosenofashuruk{},\relentless{},\sturdy{}},
+%	armour={\ha{}},
+%	options={
+%		\maytakeashield{}=\permodel{}<1,
+%		\weapononechoice{
+%			\blunderbuss{}=\permodel{}<2,
+%			\gw{}=\permodel{}<3
+%				},
+%			},
+%	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
+%}
+%
+%\showunit{
+%	name={\citadelguard{}},
+%	cost={95},
+%	profile={< 3 4 4 4 4 1 2 1 9},
+%	type= \infantry{} ,
+%	basesize=20x20,
+%	unitsize=10,
+%	maxmodels=30,
+%	costpermodel=12,
+%	commontype=\infernaldwarvescommonrules{},
+%	commonspecialrules={\chosenofashuruk{},\relentless{},\sturdy{}},
+%	armour={\infernalarmour{}, \shield{}},
+%	options={
+%		\maytake{} \flintlockaxe{}=\permodel{}<5,
+%			},
+%	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
+%}
+%
+%\showunit{
+%	name={\hobgoblins{}},
+%	cost={75},
+%	profile={< 4 3 3 3 3 1 3 1 6},
+%	type= \infantry{} ,
+%	basesize=20x20,
+%	unitsize=20,
+%	maxmodels=50,
+%	costpermodel=5,
+%	commontype=\hobgoblinscommonrules{},
+%	commonspecialrules={\unruly{},\opportunist{}},
+%	armour={\la{}, \shield{}},
+%	options={
+%		\maybecome{} \backstabber{}=\permodel{}<2,
+%		\mayonechoice{ 
+%			\bowoption{}=\free,
+%			\takeaspear=\permodel{}<0,5,
+%			\takeabow=\permodel{}<1,
+%				},
+%			},
+%	unitrules={\unitrule{\backstabber{}}{\backstabberrule}},		commandgroup={champion=10, musician=10, banner=10},
+%}
+%
+%\showunit{
+%	name={\orcslaves{}},
+%	cost={60},
+%	profile={< 4 3 3 3 4 1 2 1 5},
+%	type= \infantry{} ,
+%	basesize=25x25,
+%	unitsize=20,
+%	maxmodels=50,
+%	costpermodel=6,
+%	commontype=\orcslavescommonrules{},
+%	commonspecialrules={\slaves{}, \borntofight{}},
+%	specialrules={\unruly{},\insignificant{}},
+%	armour={\la{}},
+%	options={
+%		\maytakeonechoice{
+%			\shield{}=\permodel{}<1,
+%			\pw{}=\permodel{}<1,
+%				},
+%			},
+%	unitrules={
+%	\unitrule{\slaves{}}{\slavesrule}
+%	\unitrule{\borntofight{}}{\borntofightrule}},
+%	commandgroup={musician=10},
+%}
+%
+%\specialunitstitle
+%
+%\showunit{
+%	name={\immortals{}},
+%	cost={100},
+%	profile={< 3 5 3 4 4 1 2 1 9},
+%	type= \infantry{} ,
+%	basesize=20x20,
+%	unitsize=10,
+%	maxmodels=30,
+%	costpermodel=14,
+%	commontype=\infernaldwarvescommonrules{},
+%	commonspecialrules={\chosenofashuruk{},\relentless{},\sturdy{}},
+%	specialrules={\bodyguard{}},
+%	armour={\infernalarmour{}},
+%	weapons={\gw{}},
+%	options={
+%		\maytakeashield{}=\permodel{}<1,
+%		\infernalweaponoption{}=\free,
+%			},
+%	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
+%}
+%
+%\showunit{
+%	name={\disciplesoflugar{}},
+%	cost={65},
+%	profile={< 3 4 3 4 4 1 2 1 9},
+%	type= \infantry{} ,
+%	basesize=20x20,
+%	unitsize=5,
+%	maxmodels=25,
+%	costpermodel=13,
+%	commontype=\infernaldwarvescommonrules{},
+%	commonspecialrules={\chosenofashuruk{}, \volcanicembrace{},\relentless{},\daemonicpossession{},\sturdy{}},
+%	specialrules={\otherworldly{},\unbreakable{},\fireborn{}},
+%	weapons={\pw{}},
+%	options={
+%		\gwoption{}=\permodel{}<2,
+%			},
+%	commandgroup={champion=10, musician=10},
+%}
+%
+%\showunit{
+%	name={\kadimincarnates{}},
+%	cost={165},
+%	profile={< 6 4 3 5 4 3 4 3 7},
+%	type= \monstrousinfantry{},
+%	basesize=40x40,
+%	unitsize=3,
+%	maxmodels=8,
+%	costpermodel=60,
+%	commontype=\kadimcommonrules{},
+%	commonspecialrules={\shacklesoffire{},\volcanicembrace{}},
+%	specialrules={\otherworldly{},\daemonicinstability{},\fireborn{},\fear{}},
+%	armour={\innatedefence{5}},
+%	weapons={\pw{}},
+%	options={
+%		\maytake{}\fly{6}=\free{},
+%			},
+%	commandgroup={champion=10},
+%}
+%
+%\showunit{
+%	name={\taurukh{}},
+%	cost={90},
+%	profile={< 7 4 3 4 4 1 2 2 9},
+%	type= \warbeast{},
+%	basesize=25x50,
+%	unitsize=5,
+%	maxmodels=15,
+%	costpermodel=14,
+%	commontype=\infernaldwarvescommonrules{},
+%	commonspecialrules={\chosenofashuruk{}, \halfbull{}},
+%	specialrules={\thunderouscharge{}},
+%	armour={\la{},\innatedefence{6}},
+%	options={
+%		\anyofthefollowing{
+%			\shield{}=\permodel{}<1,
+%			\ha{}=\permodel{}<2
+%				},
+%		\weapononechoice{
+%			\lightlance{}=\permodel{}<1,
+%			\pw{}=\permodel{}<1,
+%			\gw{}=\permodel{}<3
+%				},
+%			},
+%	unitrules={\unitrule{\halfbull{}}{\halfbullrule}},		
+%	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
+%}
+%
+%\showunit{
+%	name={\taurukhanointed{}},
+%	cost={180},
+%	profile={< 7 4 3 5 5 3 3 3 9},
+%	type= \monstrousbeast{},
+%	basesize=50x75,
+%	unitsize=3,
+%	maxmodels=7,
+%	costpermodel=60,
+%	commontype=\infernaldwarvescommonrules{},
+%	commonspecialrules={\chosenofashuruk{}},
+%	specialrules={\thunderouscharge{}},
+%	armour={\ha{},\innatedefence{6}},
+%	options={
+%		\maytakeashield{}=\permodel{}<6,
+%		\weapononechoice{
+%			\lightlance{}=\permodel{}<3,
+%			\pw{}=\permodel{}<3,
+%			\gw{}=\permodel{}<10
+%				},
+%			},
+%	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
+%}
+%
+%
+%\showunit{
+%	name={\bounddaemon{}},
+%	cost={-},
+%	profile={< 4 4 3 5 6 5 2 5 9},
+%	type= \monster{},
+%	basesize=100x150,
+%	unitsize={1},
+%	commontype=\infernaldwarvescommonrules{},
+%	commonspecialrules={\daemonicfury{},\daemonicinfusion{}},
+%	specialrules={\otherworldly{},\unbreakable{},\moveorfire{}},
+%	armour={\innatedefence{4}},
+%	unitrules={\unitrule{\daemonicfury{}}{\daemonicfuryrule}},
+%}
+%
+%\rareunitstitle
+%
+%\showunit{
+%	name={\hobgoblinwolfriders{}},
+%	cost={55},
+%	profile={
+%	\hobgoblinwolfrider < 4 3 3 3 3 1 3 1 6,
+%	\wolf < 9 3 - 3 3 1 3 1 3,
+%	},
+%	type= \cavalry{} ,
+%	basesize=25x50,
+%	unitsize=5,
+%	maxmodels=15,
+%	costpermodel=10,
+%	commontype=\hobgoblinscommonrules{},
+%	commonspecialrules={\unruly{}},
+%	specialrules={\fastcavalry{}},
+%	armour={\la{},\mountsprotection{6}},
+%	options={
+%		\maytakeashield=\permodel{}<1,
+%		\anyofthefollowing{
+%			\lightlance{}=\permodel{}<1,
+%			\bow{}=\permodel{}<1,
+%				},
+%			},
+%	commandgroup={champion=10, musician=10, banner=10},
+%}
+%
+%\showunit{
+%	name={\kadimtitan{}},
+%	cost={325},
+%	profile={< 8 5 3 7 6 6 5 6 8},
+%	type= \monster{},
+%	basesize=100x150,
+%	unitsize={1},
+%	commontype=\kadimcommonrules{},
+%	commonspecialrules={\shacklesoffire{},\volcanicembrace{}},
+%	specialrules={\otherworldly{},\frenzy{},\daemonicinstability{},\fireborn{}, \wardsave{4}},
+%	armour={\innatedefence{5}{}},
+%	unitrules={
+%	\unitrule{\searingrage{}}{\searingragerule}
+%	\unitrule{\lordofflame{}}{\lordofflamerule}
+%	},
+%}
+%
+%\showunit{
+%	name={\armouredgiant{}},
+%	cost=145,
+%	profile={< 6 3 - 6 5 6 3 \starsymbol{} 10,},
+%	type=\monster,
+%	basesize=50x75,
+%	unitsize=1,
+%	specialrules={\immunetopsychology{},\stubborn{},\giantattacks{}},
+%	armour={\ha{}},
+%	options={\maytake{} \infernalarmour{}=30,},
+%	additional={%
+%		\def\tempunitrules{%
+%			\unitrule{\giantattacks}{\giantattacksrule}
+%			\unitrule{\bellow}{\bellowrule}
+%			\unitrule{\jump}{\jumprule}
+%			\unitrule{\grab}{\grabrule}
+%			\unitrule{\swing}{\swingrule}
+%			\unitrule{\thump}{\thumprule}
+%			\unitrule{\smashname}{\smashrule}
+%		}
+%		\vspace*{0.1cm}\unitrules{\tempunitrules}
+%		\giantattackstable
+%	},
+%}

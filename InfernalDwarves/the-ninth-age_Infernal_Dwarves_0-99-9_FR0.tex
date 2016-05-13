@@ -1,36 +1,34 @@
 \input{../Layout/AB_layout.tex}
 
 \newcommand{\booktitle}{Nains Infernaux}
-\newcommand{\version}{0.99.4}
+\newcommand{\version}{0.99.9}
 \newcommand{\frenchversion}{2.0}
-\newcommand{\translationteam}{\item \og AEnoriel \fg \item \og Anglachel \fg \item \og Astadriel \fg \item \og Batcat \fg \item \og Eru \fg  \item \og Gandarin \fg \item \og Groumbahk \fg \item \og Iluvatar \fg \item \og Kingcheese \fg \item \og Lamronchak \fg \item \og Mammstein \fg}
+\newcommand{\booklogo}{pics/logo_big_ID.png}
 
 
 % Army special rules
 
-\newcommand{\shacklesoffire}{Chaînes de Feu}
-\newcommand{\chosenofashuruk}{Elus d'Ashuruk}
-\newcommand{\volcanicembrace}{Etreinte Volcanique}
 \newcommand{\relentless}{Implacable}
-\newcommand{\unruly}{Indiscipliné}
-\newcommand{\daemonicinfusion}{Infusion Démoniaque}
-\newcommand{\opportunist}{Opportuniste}
-\newcommand{\daemonicpossession}{Possession Démoniaque}
 \newcommand{\sturdy}{Robuste}
+\newcommand{\chosenofashuruk}{Élu d'Ashuruk}
+\newcommand{\daemonicinfusion}{Infusion Démoniaque} %M% sonne bizarre ?
+\newcommand{\volcanicembrace}{Étreinte Volcanique}
+\newcommand{\shacklesoffire}{Chaînes de Feu}
+\newcommand{\unruly}{Indiscipliné}
+\newcommand{\opportunist}{Opportuniste}
 
 % Army common type special rules
 
 \newcommand{\infernaldwarvescommonrules}{Règles spéciales des Nains Infernaux}
+\newcommand{\taurukhcommonrules}{Règles spéciales des Taurukhs}
 \newcommand{\hobgoblinscommonrules}{Règles spéciales des Hobgobelins}
-\newcommand{\orcslavescommonrules}{Règles spéciales des \orcslaves{}}
-\newcommand{\kadimcommonrules}{Règles spéciales de Kadim}
-\newcommand{\lamassucommonrules}{Règles spéciales de Kadim}
+\newcommand{\kadimcommonrules}{Règles spéciales des Kadims}
 
 % Armoury
 
-\newcommand{\infernalarmour}{Armure Volcanique}
 \newcommand{\infernalweapon}{Glaive Infernal}
-\newcommand{\flintlockaxe}{Hallebarde Ardente}
+\newcommand{\infernalarmour}{Armure Volcanique} %M% A vérifier
+\newcommand{\flintlockaxe}{Hallebarde Ardente} %M% Bof on peut faire mieux. axe c'est hache, et flintlock c'est une platine à silex, pour la mise à feu d'une arme. Hache-Fusil à Silex ?
 \newcommand{\blunderbuss}{Tromblon}
 \newcommand{\walloflead}{Mur de Plomb}
 
@@ -39,7 +37,11 @@
 
 \newcommand{\fantheflames}{Attiser les Flammes}
 \newcommand{\chosenoflugar}{Favori de Lugar}
-\newcommand{\masterbackstabber}{Maître-Poignardeur}
+
+% mounts units rules
+
+\newcommand{\auraofunbinding}{Aura d'Annulation}
+\newcommand{\macetail}{Masse Caudale} %M% Massue ?
 
 % core units rules
 
@@ -50,7 +52,7 @@
 
 % special units rules
 
-
+\newcommand{\daemonicpossession}{Possession Démoniaque}
 \newcommand{\halfbull}{Bucentaure}
 \newcommand{\ogreslave}{Esclave Ogre}
 \newcommand{\earthquakeshells}{Munitions Trembleterre}
@@ -72,27 +74,28 @@
 \newcommand{\smashname}{Fracasse}
 
 
-
-% mounts units rules
-
-\newcommand{\auraofunbinding}{Aura d'Annulation}
-\newcommand{\macetail}{Masse Caudale}
-
 %%% Names
 
 % Characters
 
-\newcommand{\prophet}{Haut-Prophète}
-\newcommand{\overlord}{Haut-Seigneur Infernal}
-\newcommand{\magus}{Magus}
+\newcommand{\prophet}{Haut-Prophète} %M% Prophète
+\newcommand{\overlord}{Haut-Seigneur Infernal} %M% Chef Suprême. Suzerain
+\newcommand{\magus}{Magus} %M% Mage
 \newcommand{\vizier}{Vizir}
-\newcommand{\taurukhsubjugator}{Dompteur Taurukh}
-\newcommand{\hobgoblinchieftain}{Kapo Hobgobelin}
+\newcommand{\taurukhsubjugator}{Dompteur Taurukh} %M% Dompteur me parait trop léger. Dominateur (de) ...
+\newcommand{\hobgoblinchieftain}{Kapo Hobgobelin} %M% Qu'est-ce qu'un nazi vient faire dans T9A ? Meneur
+
+% Mounts
+
+\newcommand{\wolf}{Loup}
+\newcommand{\bullofshamut}{Taureau de Shamut}
+\newcommand{\greatbullofshamut}{Taureau-Goliath de Shamut}
+\newcommand{\templelamassu}{Shêdu} %M% Pourquoi ne pas garder Lamassu ? du Temple ? Sacré ?
 
 % Core
 
-\newcommand{\infernalwarriors}{Janissaires Infernaux}
-\newcommand{\citadelguard}{Geôliers de la Citadelle}
+\newcommand{\infernalwarriors}{Janissaires Infernaux} %M% A checker, mais ça me parait être une bonne idée
+\newcommand{\citadelguard}{Geôliers de la Citadelle} %M% Pourquoi geoliers, c'est une prison ?
 \newcommand{\hobgoblins}{Hobgobelins}
 \newcommand{\orcslaves}{Esclaves Orques}
 
@@ -100,32 +103,25 @@
 
 \newcommand{\immortals}{Immortels}
 \newcommand{\disciplesoflugar}{Disciples de Lugar}
-\newcommand{\kadimincarnates}{Incarnins de Kadim}
-\newcommand{\taurukh}{Taurukhs}
-\newcommand{\taurukhanointed}{Taurukhs Damnés}
+\newcommand{\kadimincarnates}{Incarnins de Kadim} %M% Kadim, adjectif ou nom ? A priori nom puisque incarnate est un adjectif ? Je suis perdu !
+\newcommand{\taurukh}{Taurukhs} %M% fluff team : why no S
+\newcommand{\taurukhanointed}{Taurukhs Damnés} %M% oint ^^ sanctifié ?
 \newcommand{\infernalartillery}{Artillerie Pandémoniaque}
-\newcommand{\rocketbattery}{Roquettes Infernales}
+\newcommand{\rocketbattery}{Roquettes Infernales} %M% Batterie de Roquettes, tout simplement
 \newcommand{\volcanocannon}{Canon Magma}
 \newcommand{\titanmortar}{Mortier Titan}
-\newcommand{\bounddaemon}{Démon Enchaîné}
+\newcommand{\bounddaemon}{Démon Enchaîné} %M% bound for the will or real chains ?
 
 % Rare
 
-\newcommand{\hobgoblinwolfriders}{Chasseurs Hobgobelins}
+\newcommand{\hobgoblinwolfriders}{Chasseurs Hobgobelins} %M% wolfrider too long, is hunter ok ?
 \newcommand{\lightartillery}{Artillerie Légère}
 \newcommand{\hobgobelinboltthrower}{Baliste Hobgobeline}
-\newcommand{\gunneryteam}{Gatling Infernale}
-\newcommand{\infernalengine}{Automate Infernal}
-\newcommand{\kadimtitan}{Titan Incarnin}
-\newcommand{\armouredgiant}{Golem d'Acier}
+\newcommand{\gunneryteam}{Gatling Infernale} %M% gatling peut-être trop précis.
+\newcommand{\infernalengine}{Automate Infernal} %M% c'pas un automate, il y a des pilotes.  Machine, Blindé, Motrice.
+\newcommand{\kadimtitan}{Titan Incarnin} %M% voir ce que c'est que Kadim.
+\newcommand{\armouredgiant}{Golem d'Acier} %M% IMO faut que ça reste un Géant, il en a les règles. Géant en Armure.
 
-
-% Mounts
-
-\newcommand{\templelamassu}{Shêdu}
-\newcommand{\bullofshamut}{Taureau de Shamut}
-\newcommand{\greatbullofshamut}{Taureau Goliath de Shamut}
-\newcommand{\wolf}{Loup}
 
 % Short names and multiprofiles names
 
@@ -135,29 +131,37 @@
 
 % Profile wording
 
-\newcommand{\backstabberoption}{Si non monté, peut devenir \masterbackstabber{}}
-\newcommand{\infernalweaponoption}{Echanger son \gw{} contre un \infernalweapon{}}
-\newcommand{\bowoption}{Echanger son \shield{} contre un \bow{}}
-\newcommand{\gwoption}{Echanger sa \pw{} contre une \gw{}}
-\newcommand{\mayonechoice}{\optionschoice{Peut \onechoiceonly{} :}}
-\newcommand{\maytakeonechoice}{\optionschoice{Peut prendre \onechoiceonly{} :}}
-\newcommand{\takeabow}{Prende un \bow{}}
-\newcommand{\takeaspear}{Prende une \spear{}}
+\newcommand{\infernalweaponoption}{Échanger son \gw{} contre un \infernalweapon{}}
+\newcommand{\bowoption}{Échanger son \shield{} contre un \bow{}}
+\newcommand{\gwoption}{Échanger sa \pw{} contre une \gw{}}
+
 
 % Profile Rules
 
 % Characters
 
 \newcommand{\fantheflamesrule}{%
-Le \overlord{} et toutes les figurines de l'unité qu'il rejoint gagnent la règle \hatred{}. Ne s'applique pas aux montures.
-}
-
-\newcommand{\masterbackstabberrule}{%
-Le personnage gagne la règle \backstabber{} (voir les \hobgoblins{}). Avant la bataille, une unité de \backstabbers{} de 25 figurines maximum peut être placée en \ambush{} avec le \hobgoblinchieftain{}, qui doit obligatoirement accompagner l'unité.
+Le \overlord{} et toutes les figurines de son unité gagnent la règle \hatred{}. Ne s'applique pas aux montures.
 }
 
 \newcommand{\chosenoflugarrule}{%
-Le \overlord{} gagne les règles \volcanicembrace{}, \otherworldly{}, \unbreakable{},\fireborn{} et \daemonicpossession{}. Il perd son armure et ne peut qu'utiliser des armures magique de type: aucun.
+Figurine à pied uniquement.
+
+Le Personnage gagne les règles \volcanicembrace{}, \otherworldly{}, \unbreakable{}, \fireborn{} et \daemonicpossession{} (voir l'unité spéciale \disciplesoflugar{}). Il perd son armure et ne peut utiliser que des Armures Magiques de type : Aucun.
+}
+
+\newcommand{\backstabberrule}{%
+Le Personnage gagne la règle \backstabbers{} (voir l'unité de base \hobgoblins{}). Avant la bataille, une unité de \hobgoblins{} avec la règle \backstabbers{} de 25 figurines maximum peut être placée en \ambush{} avec le Personnage, qui doit obligatoirement accompagner l'unité.
+}
+
+% Mounts
+
+\newcommand{\auraofunbindingrule}{%
+Toute Arme Magique portée par une figurine alliée ou ennemie en contact socle à socle avec le \templelamassu{} perd ses propriétés magiques et devient son équivalent standard. Le Personnage le chevauchant n'est pas affecté.  Cet effet dure tant qu'il y a contact socle à socle.
+}
+
+\newcommand{\macetailrule}{%
+La figurine gagne +1 Attaque. Elle gagne aussi +1 pour toucher lorsqu'elle attaque l'arrière d'une unité ennemie.
 }
 
 % Core units
@@ -168,7 +172,7 @@ Le \overlord{} gagne les règles \volcanicembrace{}, \otherworldly{}, \unbreakab
 Arme de Tir.\portee{12},  Force 4, \walloflead{}, \quicktofire{}.\newline \textbf{\walloflead{}}:Lors de la phase de Tir, une unité armée de Tromblons peut choisir de déclencher un \walloflead{} au lieu de tirer normalement. L'unité crée alors une zone de feu de la même largeur que son premier rang et d'une profondeur de \distance{8} à partir du front de son premier rang. Toute figurine ennemie située dans cette zone de feu est touchée sur 6+. Pour chaque rang complet après le premier dans l'unité qui fait feu, les tirs bénéficient d'un +1 pour toucher. Les touches sont résolues avec une Force de 4 et la règle \reload{}. Il est possible d'effectuer un \walloflead{} après une marche forcée. Il est impossible d'effectuer un \walloflead{} si une unité amie ou une unité engagé au corps à corps se trouve dans la zone de feu. 
 }
 
-\newcommand{\backstabberrule}{%
+\newcommand{\backstabbersrule}{%
 La figurine perd son armure et ses armes, gagne une \pw{} et la règle \poisonedattacks{}.
 }
 
@@ -315,15 +319,9 @@ Chaque \bounddaemon{} compte comme une unité d'\infernalartillery{} additionnel
 }
 
 
-%mounts
 
-\newcommand{\auraofunbindingrule}{%
-Toute arme magique dans les mains d'une figurine amie ou ennemie en contact socle à socle avec un \templelamassu{} perd ses propriétés magiques. Un personnage chevauchant le \templelamassu{} n'est pas affecté.  Cet effet dure tant que la figurine ennemie reste en contact.
-}
 
-\newcommand{\macetailrule}{%
-Le \templelamassu{} gagne +1 Attaque et lorsqu'il combat un ennemi sur son arrière, il gagne +1 pour toucher.
-}
+
 
 \begin{document}
 
@@ -332,60 +330,71 @@ Le \templelamassu{} gagne +1 Attaque et lorsqu'il combat un ennemi sur son arri�
 \vspace*{1.5cm}
 \startarmyspecialrules
 
-\armyspecialruleentry{\shacklesoffire{}}
-
-Tous les jets pour blesser contre une figurine suivant cette règle ayant donné un jet naturel de \result{6} doivent être relancés. Les \magicalattacks{} ne sont pas affectées par cette règle.
-Au début de son second tour de jeu ami et au cours des tours amis suivants, une unité composée d'une ou plusieurs figurines suivant cette règle doit réussir un test de commandement ou subir une blessure sans aucune sauvegarde d'aucune sorte possible. Si aucun sorcier ami n'est présent sur le champ de bataille, la blessure subie suit la règle \multiplewounds{1D3}{}.
-
-\armyspecialruleentry{\chosenofashuruk{}}
-
-Les unités dotées de cette règle réussissent automatiquement leurs tests de \fear{} mais souffrent tout de même du malus de -1 en Commandement. De plus, elles considèrent toutes les figurines n'étant pas \chosenofashuruk{} comme \insignificant{}. Enfin, elles ne peuvent pas utiliser leur règle \engineer{} sur des figurines ne possédant pas la règle \chosenofashuruk{}.
-
-\armyspecialruleentry{\volcanicembrace{}}
-
-Toutes les attaques de la figurine suivent la règle \flamingattacks. Tout ennemi en contact socle à socle avec une ou plusieurs figurines dotées de cette règle subit une touche de Force 4 au début de chaque phase de combat à Initiative 10.
-
 \armyspecialruleentry{\relentless{}}
 
-Les unités d'infanterie contenant uniquement des figurines dotées de cette règle peuvent tripler leur mouvement lors d'une Marche Forcée au lieu de le doubler. Cette disposition est étendue aux situations où le mouvement est limité d'ordinaire au double de la valeur de mouvement de la figurine, telles que les roues, les reformations, les mouvements d'un personnage à travers une unité, etc... Le mouvement est alors également triplé.
-
-\armyspecialruleentry{\unruly{}}
-
-Les unités suivant cette règle ont un malus de -1 en Commandement pour les tests suivants : réfréner la \frenzy{}, réfréner la Poursuite. Si l'unité est en Horde et doit effectuer un test de panique, jetez trois dés pour les tests de Panique et enlevez celui ayant le résultat le plus haut.
-
-\armyspecialruleentry{\opportunist{}}
-
-Les figurines à pied dotées de cette règle ont un bonus de +1 pour toucher lorsqu'elles combattent sur le flanc ou à l'arrière d'une unité ennemie tant qu'elles ne sont pas elles-mêmes engagées sur le flanc ou l'arrière.
-
-\armyspecialruleentry{\daemonicinfusion{}}
-
-La machine de guerre gagne la règle \magicalattacks{} (mais pas les servants) et tous les tests de Panique causés à l'adversaire par cette machine pour avoir causé au moins 25 pour cent de perte sont effectués avec un malus de -1 au Commandement.
-
-\armyspecialruleentry{\daemonicpossession}
-
-La figurine a la \frenzy{} et ne peut jamais la perdre.
+Les unités d'infanterie contenant uniquement des figurines dotées de cette règle peuvent tripler leur mouvement lors d'une Marche Forcée au lieu de le doubler. Ceci est étendu aux situations où le mouvement est d'ordinaire limité au double de la valeur de mouvement de la figurine, telles que les Roues, les Reformations, les mouvements d'un Personnage au sein une unité, etc. La valeur de mouvement est alors également triplée.
 
 \armyspecialruleentry{\sturdy{}}
 
-Les figurines suivant la règle \sturdy{} gagnent la règle \thunderouscharge{} et ignorent le malus de -1 pour toucher lorsqu'elles Tiennent leur Position et Tirent.
+La figurine gagne la règle \thunderouscharge{}. De plus, elle ne souffre pas de la pénalité de -1 pour toucher pour Tenir sa Position et Tirer en réaction à une charge.
+
+\armyspecialruleentry{\chosenofashuruk{}}
+
+La figurine passe automatiquement ses tests de \fear{} mais souffre tout de même du malus de -1 en Commandement. De plus, elles considère toutes les unités sans cette règle comme ayant la règle \insignificant{}. Elle ne peut pas utiliser son éventuelle règle \engineer{} sur des figurines sans la règle \chosenofashuruk{}.
+
+\armyspecialruleentry{\daemonicinfusion{}}
+
+La figurine gagne la règle \magicalattacks{} (ne s'applique pas aux servants de Machine de Guerre) et tous les tests de Panique causés à des unités ennemies en ayant infligé au moins 25 \% de pertes sont effectués avec un malus de -1 au Commandement.
+
+\armyspecialruleentry{\volcanicembrace{}}
+
+Toutes les attaques de la figurine, y-compris les Attaques Spéciales, suivent la règle \flamingattacks{}. De plus, toute figurine ennemie en contact socle à socle avec au moins une figurine dotée de cette règle subit une touche de Force 4 à Initiative 10. Cela compte comme une Attaque Spéciale de Corps à Corps.
+
+\armyspecialruleentry{\shacklesoffire{}}
+
+Tous les jets pour blesser ayant donné un résultat naturel de \result{6} contre la figurine doivent être relancés. Les \magicalattacks{} ne sont pas concernées.
+
+Au début du second Tour de Jeu allié, et au cours de chacun des Tours de Jeu alliés suivants, une unité composée d'au moins une figurine suivant cette règle doit réussir un test de Commandement ou subir une blessure sans aucune sauvegarde possible. Si aucun Sorcier allié n'est présent sur le champ de bataille, l'unité subit 1D3 blessures à la place.
+
+\armyspecialruleentry{\unruly{}}
+
+L'unité subit un malus de -1 en Commandement pour réfréner la \frenzy{} et la Poursuite. Si l'unité est en formation de Horde et doit effectuer un test de Panique, jetez un dé additionnel et ignorez celui ayant donné le plus grand résultat.
+
+\armyspecialruleentry{\opportunist{}}
+
+L'élément de figurine, si elle est à pied, gagne un bonus de +1 pour toucher lorsqu'elle combat sur le flanc ou l'arrière d'une unité ennemie, tant que son unité n'est pas elle-même engagée sur le flanc ou l'arrière.
 
 \closearmyspecialrules
 
 
 
-\vspace*{1.5cm}
+
+
+\vspace{1.5cm}
 \startarmyarmoury
 
 \startitemlistonecol
 
-\listitemonecol{\infernalweapon{}} Arme de base. Les attaques portées avec cette arme ont +1 en Force et la règle \magicalattacks{}.
+\listitemonecol{\infernalweapon{}} \hw{}. Les attaques portées avec cette arme ont +1 en Force et la règle \magicalattacks{}.
 
-\listitemonecol{\infernalarmour{}}  Armure de plates. Le porteur a une \wardsave{5} contre les \flamingattacks{}.
+\listitemonecol{\infernalarmour{}} \platearmour{}. Le porteur gagne une \wardsave{5} contre les \flamingattacks{}.
 
-\listitemonecol{\flintlockaxe{}}  Arme de tir. \range{18}, Force 4, \armourpiercing{1}. Compte comme une \halberd{} au corps à corps.
+\listitemonecol{\flintlockaxe{}} Arme de Tir. \range{18}, Force 4, \armourpiercing{1}. Compte comme une \halberd{} au Corps à Corps.
 
+\listitemonecol{\blunderbuss{}} Arme de Tir. \range{12}, Force 4, \walloflead{}, \quicktofire{}.
 
 \enditemlistonecol
+
+\noindent\textbf{\walloflead}
+
+\vspace{5pt}
+Vous pouvez choisir de tirer de la façon suivante durant la Phase de Tir plutôt que de tirer normalement. Le profil de l'arme devient \range{8}, Force 4, \reload{}. Ne calculez pas le nombre de tirs et ne faites pas de jets pour toucher. À la place, toute figurine qui est \textbf{droit} devant une ou plusieurs figurines avec cette arme, à portée et dans la ligne de vue de l'unité est une cible potentielle (voir le schéma ci-dessous). Lancez un dé pour chacune de ces cibles possibles : elle est touchée sur un résultat de 6+. Ajoutez +1 pour toucher pour chaque Rang Complet après le premier dans l'unité qui tire. Cette capacité ne peut pas être utilisée si une unité alliée ou une unité engagée dans un corps à corps est une cible potentielle. Elle peut être utilisée après une Marche Forcée.
+
+\newcommand{\blunderbussfire}{\Largerfontsize\textit{Feu !}}
+\def\svgwidth{10cm}
+\vspace{0.5cm}\begin{center}
+\input{pics/blunderbuss.pdf_tex}
+\end{center}
 
 \closearmyarmoury
 
@@ -395,9 +404,11 @@ Les figurines suivant la règle \sturdy{} gagnent la règle \thunderouscharge{} 
 
 \startpricelist
 
-\pricelistitem{Marteau d'Onyx}{55/50}Type: Arme de base. +2 en Force. Les attaques portées avec cette arme provoquent des \multiplewounds{1D3}{} contre les figurines bénéficiant de la règle \flammable{}.
+\pricelistitem{Marteau d'Onyx}{55/50}Type : \hw{}. Les attaques portées avec cette arme ont +2 en Force et la règle \multiplewounds{1D3}{} contre les figurines avec la règle \flammable{}.
 
-\pricelistitem{Lame en Fusion}{25}Type: Arme de base. \armourpiercing{1}. Une seule utilisation. Peut être déclenchée au début de n'importe quelle manche de corps à corps. Les attaques portées avec cette arme suivent la règle \metalshifting{} jusqu'à la fin de la manche de corps à corps.
+\pricelistitem{Lame en Fusion}{25}Type : \hw{}. Les attaques portées avec cette arme ont la règle \armourpiercing{1}.
+
+Une seule utilisation : Peut être déclenchée au début de n'importe quelle Manche de Corps à Corps. Les attaques portées avec cette arme suivent la règle \metalshifting{} jusqu'à la fin de la phase.
 
 \endpricelist
 
@@ -405,7 +416,7 @@ Les figurines suivant la règle \sturdy{} gagnent la règle \thunderouscharge{} 
 
 \startpricelist
 
-\pricelistitem{Masque du Fourneau}{30}Aucun type. Accorde une \armoursave{} (6+). Le porteur gagne les règles \breathweapon{Force 3, \flamingattacks{}} et \fireborn{}.
+\pricelistitem{Masque du Fourneau}{30}Type : Aucun (\armoursave{} 6+). Le porteur gagne les règles \breathweapon{Force 3, \flamingattacks{}} et \fireborn{}.
 
 \endpricelist
 
@@ -413,9 +424,9 @@ Les figurines suivant la règle \sturdy{} gagnent la règle \thunderouscharge{} 
 
 \startpricelist
 
-\pricelistitem{Anneau de Dessiccation}{45}Toutes les unités ennemies en contact socle à socle avec le porteur gagnent la règle \flammable{}. Si l'armée n'inclut aucun Sorcier, le porteur compte comme un Sorcier uniquement concernant la règle \shacklesoffire{}.
+\pricelistitem{Anneau de Dessiccation}{45}Toutes les unités ennemies en contact socle à socle avec la figurine du porteur gagnent la règle \flammable{}. Si l'armée n'inclut aucun Sorcier dans sa liste, le porteur compte comme un Sorcier en ce qui concerne la règle \shacklesoffire{}.
 
-\pricelistitem{Peau d'Acier}{15}Les attaques contre le porteur perdent les règles \poisonedattacks{} et \lethalstrike{}.
+\pricelistitem{Peau d'Acier}{15}Les attaques dirigées contre le porteur perdent les règles \poisonedattacks{} et \lethalstrike{}.
 
 \endpricelist
 
@@ -423,11 +434,9 @@ Les figurines suivant la règle \sturdy{} gagnent la règle \thunderouscharge{} 
 
 \startpricelist
 
-\pricelistitem{Fiole de Mercure}{45}Une seule utilisation. La figurine peut boire la Fiole au début de n'importe quel round de corps à corps. L'unité du porteur gagne la règle \lightningreflexes{} et +2 en Initiative jusqu'à la fin du tour. Lorsque les effets de la Fiole disparaissent, la figurine du porteur subit une blessure sans aucune sauvegarde d'aucune sorte possible.
+\pricelistitem{Fiole de Mercure}{45}Une seule utilisation. Peut être bue au début de n'importe quel Manche de Corps à Corps. L'unité du porteur gagne la règle \lightningreflexes{} et +2 en Initiative jusqu'à la fin de la phase. Lorsque les effets de la Fiole disparaissent, la figurine du porteur subit une blessure sans aucune sauvegarde possible.
 
-
-
-\pricelistitem{Gantelets de Madzhab}{10}Le porteur a +1 en Force. Chacun de ses jets pour toucher ayant donné \result{1} est résolu contre l'unité du porteur. Cela ne peut jamais affecter la figurine du porteur, sauf si celui-ci est monté et ne fait pas partie d'une figurine combinée.
+\pricelistitem{Gantelets de Madzhab}{10}Le porteur gagne +1 en Force. Chacun de ses jets pour toucher ayant donné \result{1} est résolu contre l'unité du porteur. Cela ne peut jamais affecter le porteur lui-même, sauf s'il est monté et ne fait pas partie d'une unité.
 
 \endpricelist
 
@@ -435,7 +444,7 @@ Les figurines suivant la règle \sturdy{} gagnent la règle \thunderouscharge{} 
 
 \startpricelist
 
-\pricelistitem{Mécanisme de Besheluk}{25}Lorsque le porteur réussit à lancer un sort de type Amélioration (mais pas un Attribut de Discipline) sur une unité composée exclusivement de figurines suivant la règle \shacklesoffire{}, l'unité ciblée récupère un point de vie précédemment perdu. Aucune unité ne peut regagner plus d'un point de vie par phase de magie grâce à cet objet.
+\pricelistitem{Mécanisme de Besheluk}{25}Lorsque le porteur réussit à lancer un sort de type Amélioration qui ne soit pas un Attribut de Discipline sur une unité composée exclusivement de figurines suivant la règle \shacklesoffire{}, elle Récupère un PV précédemment perdu. Aucune unité ne peut Récupérer plus d'un PV par Phase de Magie grâce à cet objet.
 
 \endpricelist
 
@@ -443,9 +452,11 @@ Les figurines suivant la règle \sturdy{} gagnent la règle \thunderouscharge{} 
 
 \startpricelist
 
-\pricelistitem{Bannière du Taureau Rougeoyant}{40}\infantry{} uniquement. L'unité du porteur gagne la règle \vanguard{}. Les unités suivant la règle \unruly{} situées dans un rayon de \distance{12} autour du porteur peuvent relancer leurs tests de panique ratés.
+\pricelistitem{Bannière du Taureau d'Airain}{40}\infantry{} uniquement.
 
-\pricelistitem{Bannière de Nezibkesh}{25}Toutes les attaques spéciales de corps à corps dirigées contre le porteur ou l'unité du porteur le sont avec une Force divisée par deux, arrondie au supérieur.
+L'unité du porteur gagne la règle \vanguard{}. Les unités suivant la règle \unruly{} à moins de \distance{12} du porteur peuvent relancer leurs tests de Panique ratés. %M% brazen c'est d'airan, j'ai corrigé
+
+\pricelistitem{Bannière de Nezibkesh}{25}Toutes les Attaques Spéciales de Corps à Corps dirigées contre l'unité du porteur ou l'unité voient leur Force divisée par deux, en arrondissant au supérieur.
 
 \endpricelist
 
