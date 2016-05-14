@@ -47,13 +47,13 @@
 
 \newcommand{\backstabber}{Poignardeur}
 \newcommand{\backstabbers}{Poignardeurs}
-\newcommand{\slaves}{Esclaves}
 \newcommand{\borntofight}{Né pour la Baston}
+\newcommand{\slaves}{Esclaves}
 
 % special units rules
 
 \newcommand{\daemonicpossession}{Possession Démoniaque}
-\newcommand{\halfbull}{Bucentaure}
+\newcommand{\halfbull}{Bucentaure} %M% parfait mais à confirmer
 \newcommand{\ogreslave}{Esclave Ogre}
 \newcommand{\earthquakeshells}{Munitions Trembleterre}
 \newcommand{\daemonicfury}{Furie Démoniaque}
@@ -125,14 +125,16 @@
 
 % Short names and multiprofiles names
 
-\newcommand{\dwarfcrew}{Servants Nains}
-\newcommand{\hobgoblincrew}{Servants Hobgobelins}
-\newcommand{\hobgoblinwolfrider}{Chasseur Hobgobelin}
+\newcommand{\machine}{Machine}
+\newcommand{\crew}{Servant}
+\newcommand{\rider}{Hobgobelin}
+\newcommand{\dwarfcrew}{Servant Nain}
+\newcommand{\hobgoblincrew}{Servant Hobgobelin}
 
 % Profile wording
 
-\newcommand{\infernalweaponoption}{Échanger son \gw{} contre un \infernalweapon{}}
 \newcommand{\bowoption}{Échanger son \shield{} contre un \bow{}}
+\newcommand{\infernalweaponoption}{Échanger son \gw{} contre un \infernalweapon{}}
 \newcommand{\gwoption}{Échanger sa \pw{} contre une \gw{}}
 
 
@@ -166,45 +168,55 @@ La figurine gagne +1 Attaque. Elle gagne aussi +1 pour toucher lorsqu'elle attaq
 
 % Core units
 
-% Weapons
-
-\newcommand{\blunderbussrule}{%
-Arme de Tir.\portee{12},  Force 4, \walloflead{}, \quicktofire{}.\newline \textbf{\walloflead{}}:Lors de la phase de Tir, une unité armée de Tromblons peut choisir de déclencher un \walloflead{} au lieu de tirer normalement. L'unité crée alors une zone de feu de la même largeur que son premier rang et d'une profondeur de \distance{8} à partir du front de son premier rang. Toute figurine ennemie située dans cette zone de feu est touchée sur 6+. Pour chaque rang complet après le premier dans l'unité qui fait feu, les tirs bénéficient d'un +1 pour toucher. Les touches sont résolues avec une Force de 4 et la règle \reload{}. Il est possible d'effectuer un \walloflead{} après une marche forcée. Il est impossible d'effectuer un \walloflead{} si une unité amie ou une unité engagé au corps à corps se trouve dans la zone de feu. 
-}
-
 \newcommand{\backstabbersrule}{%
-La figurine perd son armure et ses armes, gagne une \pw{} et la règle \poisonedattacks{}.
-}
-
-\newcommand{\slavesrule}{%
-A la fin de n'importe quelle phase, si aucune figurine suivant les règles \chosenofashuruk{} ou \opportunist{} n'est présente sur le champ de bataille, retirez immédiatement les unités \orcslaves{} comme perte. De plus, si aucune unité suivant les règles \chosenofashuruk{} ou \opportunist{} ne se trouve dans un rayon de \distance{6} des \orcslaves{} au début d'un tour amie et que ceux-ci ne sont pas engagés au corps à corps ou en fuite, lancez 1D6:
-\begin{customsubitemize}
-\item Sur un \result{1-2}, les \orcslaves{} fuient vers le bord de table le plus proche 
-\item Sur un \result{3-4}, \orcslaves{} ne peuvent pas bouger durant la phase de mouvement de ce tour
-\item Sur un \result{5-6}, les \orcslaves{} peuvent agir normalement.
-\end{customsubitemize}
+La figurine échange son armure et ses armes contre une \pw{} et la règle \poisonedattacks{}.
 }
 
 \newcommand{\borntofightrule}{%
-La partie de la figurine avec cette règle a +1 en Force lors de la première manche de corps à corps.
+L'élément de figurine gagne +1 en Force lors de la première Manche de chaque Corps à Corps.
+}
+
+\newcommand{\slavesrule}{%
+À la fin de n'importe quelle phase, si aucune figurine suivant les règles \chosenofashuruk{} ou \opportunist{} n'est présente sur le champ de bataille, retirez immédiatement les unités d'\orcslaves{} comme perte.
+
+S'il n'y a aucune unité suivant les règles \chosenofashuruk{} ou \opportunist{} à moins de \distance{6} d'une unité d'\orcslaves{} au début d'un Tour de Joueur allié, et que ceux-ci ne sont pas engagés au corps à corps ou en fuite, lancez un dé :
+\begin{itemize}[label={-}]
+\item \textbf{1-2} : L'unité d'\orcslaves{} fuit immédiatement vers le bord de table le plus proche.
+\item \textbf{3-4} : L'unité d'\orcslaves{} ne peut pas se déplacer durant la Phase de Mouvement de ce Tour de Joueur.
+\item \textbf{5-6} : Rien ne se passe.
+\end{itemize}
 }
 
 % special units
 
+\newcommand{\daemonicpossessionrule}{%
+La figurine gagne la règle \frenzy{} et ne peut jamais la perdre.
+}
+
 \newcommand{\halfbullrule}{%
-Les figurines suivant cette règle ne peuvent pas subir de \stomp{}.
+La figurine ne peut pas se voir distribuée des touches de \stomp{}.
 }
 
 \newcommand{\ogreslaverule}{%
-Le \titanmortar{} gagne un \ogreslave{} en tant que servant additionnel, ce qui ajoute +1 Point de Vie au \titanmortar{}. De plus, les résultats de \result{3-4} sur le tableau d'incidents de tir comptent comme \result{5+}.
+Un \ogreslave{} rejoint l'équipage de la Machine de Guerre, lui ajoutant +1 PV. Les résultats de (3-4) sur la table d'Incident de Tir comptent comme un (5-6).
 }
 
 \newcommand{\earthquakeshellsrule}{%
-Toute unité subissant au moins une blessure non sauvegardée due à ces munitions devra relancer tous ses jets pour toucher réussis ayant donné un résultat naturel de \result{6} et traitera tous les terrains, y compris les Terrains Dégagés, comme étant des Terrains Dangereux. Toute \warmachine{} se trouvant dans un rayon de \distance{8} de la position finale du gabarit doit jeter un dé pour pouvoir tirer et ne pourra le faire que si le résultat est inférieur à 4+. Ces effets durent jusqu'à la fin du tour du joueur suivant. Un seul \titanmortar{} par armée peut être équipé de ces munitions.
+\oneofakind{}.
+
+Toute unité subissant au moins une blessure non sauvegardée due à ces munitions doit relancer tous ses jets pour toucher réussis ayant donné \result{6} et traite tous les terrains, y compris les Terrains Dégagés, comme étant des Terrains Dangereux. Toute \warmachine{} se trouvant à moins de \distance{8} de la position finale du centre du gabarit doit obtenir un 4+ sur un jet de dé pour pouvoir faire feu. Ces effets durent jusqu'à la fin du Tour de Joueur suivant. 
+}
+
+\newcommand{\bounddaemonrule}{%
+La figurine perd son équipage, ses caractéristiques, son type de troupe, sa taille de socle, son armure et ses règles spéciales en échange de ceux de l'unité décrite ci-dessous. Chaque \infernalartillery{} améliorée en \bounddaemon{} compte toujours comme une \infernalartillery{} pour la limite de duplication d'une même unité spéciale.
+}
+
+\newcommand{\bounddaemonnote}{%
+Amélioration pour \infernalartillery{}.
 }
 
 \newcommand{\daemonicfuryrule}{%
-Au début du tour du joueur contrôlant le \bounddaemon{}, celui-ci doit faire un test de Commandement. En cas d'échec, la figurine gagne un \randommovement{3D6} jusqu'à la fin du tour en cours, et doit avancer vers l'unité ennemie la plus proche au cours de la phase de mouvement.
+Au début de chaque Tour de Joueur allié, la figurine doit passer un test de Commandement. En cas d'échec, elle gagne la règle \randommovement{3D6} jusqu'à la fin du Tour de Joueur, et doit avancer vers l'unité ennemie la plus proche au cours de la Phase de Mouvement.
 }
 
 % rare units
@@ -284,30 +296,29 @@ Choisissez une figurine en contact socle à socle avec le Géant dans l'unité s
 
 \newcommand{\rocketbatteryrule}{%
 Peut tirer de deux manières :
-\begin{customsubitemize}
-\item Comme une \textbf{\artilleryweapon{}} de type \textbf{\catapult{}}.\newline \range{48}, \Strength{} 8, \multiplewounds{\ordnance}{}.
-\item Comme une \textbf{\artilleryweapon{}} de type \textbf{\catapult{}}, \distance{5}.\newline \range{48}, \Strength{} 2, \armourpiercing{1}, \multiplewounds{\ordnance}{}. Toute unité subissant une ou plusieurs pertes du fait de cette arme doit immédiatement effectuer un test de Panique, exactement comme si elle avait subi 25 pour cent de perte.
-\end{customsubitemize}
+\begin{itemize}[label={-}]
+\item \textbf{\artilleryweapon{}} de type \textbf{\catapult{} (Ponctuel)}.\newline
+\range{6-48}, \Strength{} 8, \multiplewounds{\ordnance}{}.
+\item \textbf{\artilleryweapon{}} de type \textbf{\catapult{} (\distance{5})}.\newline
+\range{6-48}, \Strength{} 2, \armourpiercing{1}.\newline
+Toute unité subissant au moins une perte du fait de cette arme doit immédiatement effectuer un test de Panique, exactement comme si elle avait subi au moins 25 \% de pertes.
+\end{itemize}
 }
 
 \newcommand{\volcanocannonrule}{%
 Peut tirer de deux manières :
-\begin{customsubitemize}
-\item Comme une \textbf{\artilleryweapon} de type \textbf{\flamethrower{}}.\newline \range{15}, \Strength{} 5, \flamingattacks{}, \multiplewounds{1D3}{}.
-\item Comme une \textbf{\artilleryweapon} de type \textbf{\flamethrower{}}.\newline \range{24}, \Strength{} 1. Les unités touchées deviennent \flammable{} et traitent outes les \flamingattacks{} les ciblant comme des \divineattacks{}  
-\end{customsubitemize}
+\begin{itemize}[label={-}]
+\item \textbf{\artilleryweapon} de type \textbf{\flamethrower{}}.\newline
+\range{15}, \Strength{} 5, \flamingattacks{}, \multiplewounds{1D3}{}.
+\item \textbf{\artilleryweapon} de type \textbf{\flamethrower{}}.\newline
+\range{24}, \Strength{} 1.\newline
+Les unités touchées gagnent la règle \flammable{} et les \flamingattacks{} dirigées contre elles gagnent la règle \divineattacks{}. Ces effets durent jusqu'à la fin du Tour de Joueur suivant.
+\end{itemize}
 }
 
 \newcommand{\titanmortarrule}{%
-\textbf{\artilleryweapon} de type \textbf{\catapult{}}.\newline \range{48}, \Strength{} 4 [9], [\multiplewounds{\ordnance}{}]. 
-}
-
-\newcommand{\infernalartillerynote}{%
-Une armée ne peut pas contenir plus de deux \volcanocannon{} et pas plus de deux \titanmortar{}. Ces chiffres sont changés en un et quatre respectivement pour les Patrouilles et les Grandes Armées.
-}
-
-\newcommand{\infernalartillerysecondnote}{%
-Chaque \bounddaemon{} compte comme une unité d'\infernalartillery{} additionnelle.
+\textbf{\artilleryweapon} de type \textbf{\catapult{}}.\newline
+\range{6-48}, \Strength{} 4 [9], [\multiplewounds{\ordnance}{}]. 
 }
 
 \newcommand{\hobgoblinboltthrowerrule}{%
