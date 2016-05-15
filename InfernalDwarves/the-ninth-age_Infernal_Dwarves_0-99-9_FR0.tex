@@ -61,7 +61,7 @@
 
 % rare units rules
 
-\newcommand{\fullsteamahead}{A Toute Vapeur}
+\newcommand{\fullsteamahead}{À Toute Vapeur}
 \newcommand{\ponderous}{Trop Lourd}
 \newcommand{\searingrage}{Rage Dessicante}
 \newcommand{\lordofflame}{Seigneur de la Flamme}
@@ -116,7 +116,7 @@
 
 \newcommand{\hobgoblinwolfriders}{Chasseurs Hobgobelins} %M% wolfrider too long, is hunter ok ?
 \newcommand{\lightartillery}{Artillerie Légère}
-\newcommand{\hobgobelinboltthrower}{Baliste Hobgobeline}
+\newcommand{\hobgoblinboltthrower}{Baliste Hobgobeline}
 \newcommand{\gunneryteam}{Gatling Infernale} %M% gatling peut-être trop précis.
 \newcommand{\infernalengine}{Automate Infernal} %M% c'pas un automate, il y a des pilotes.  Machine, Blindé, Motrice.
 \newcommand{\kadimtitan}{Titan Incarnin} %M% voir ce que c'est que Kadim.
@@ -130,6 +130,8 @@
 \newcommand{\rider}{Hobgobelin}
 \newcommand{\dwarfcrew}{Servant Nain}
 \newcommand{\hobgoblincrew}{Servant Hobgobelin}
+\newcommand{\engine}{Automate} %M% check
+\newcommand{\enginecrew}{Équipage}
 
 % Profile wording
 
@@ -221,6 +223,15 @@ Au début de chaque Tour de Joueur allié, la figurine doit passer un test de Co
 
 % rare units
 
+\newcommand{\lightartillerynote}{%
+\labels@Singlemodel{}.\newline
+\vspace{5pt}Les unités de \hobgoblinboltthrower{} et de \gunneryteam{} comptent comme une seule unité rare appelée \lightartillery{} et sont donc soumises à une même limite de duplication.
+}
+
+\newcommand{\gunneryteamoption}{%
+\optionschoice{\textbf{Doit} choisir pour l'\artilleryweapon{} \onechoiceonlyNOC{} :}
+}
+
 \newcommand{\fullsteamaheadrule}{%
 Au cours de la sous-phase des mouvements obligatoires, l'unité peut choisir d'engager sa chaudière. Pour la durée du tour, l'\infernalengine{} ne peut alors pas tirer et gagne un \randommovement{3D6}, mais il ne peut pivoter que de 45 degrés avant de bouger.
 }
@@ -230,7 +241,7 @@ l'\infernalengine{} ne peut pas déclarer de Charge, de Charge Irrésistible ni 
 }
 
 \newcommand{\searingragerule}{%
-A chaque fois que la figurine rate un test de \frenzy{}, elle ajoute +1 Attaque à son Attaque Additionelle de \frenzy{}. Ces Attaques Additionnelles sont perdues si la \frenzy{} est perdue.
+À chaque fois que la figurine rate un test de \frenzy{}, elle ajoute +1 Attaque à son Attaque Additionelle de \frenzy{}. Ces Attaques Additionnelles sont perdues si la \frenzy{} est perdue.
 }
 
 \newcommand{\lordofflamerule}{%
@@ -322,11 +333,13 @@ Les unités touchées gagnent la règle \flammable{} et les \flamingattacks{} di
 }
 
 \newcommand{\hobgoblinboltthrowerrule}{%
-\textbf{\artilleryweapon} de type \textbf{\boltthrower{}}.\newline \range{48}, \Strength{} 6, \multiplewounds{1D3}{}, \?armourpiercing{6}. 
+\textbf{\artilleryweapon} de type \textbf{\boltthrower{}}.\newline
+\range{48}, \Strength{} 6, \multiplewounds{1D3}{}, \armourpiercing{6}. 
 }
 
 \newcommand{\gunneryteamrule}{%
-\textbf{\artilleryweapon} de type \textbf{\volleygun{}}.\newline \range{24}, \Strength{} 4, \multipleshots{1D6, 2D6 ou 3D6}{}. 
+\textbf{\artilleryweapon} de type \textbf{\volleygun{}}.\newline
+\range{24}, \Strength{} 4, \multipleshots{1D6, 2D6 ou 3D6}{}. 
 }
 
 

@@ -590,6 +590,92 @@
 	commandgroup={champion=10, musician=10, banner=10},
 }
 
+\showunit{
+	name={\hobgoblinboltthrower{}},
+	profile={
+		\machine{}<- - - - 7 2 - - -,
+		\hobgoblincrew{} (2)<4 3 3 3 3 - 3 1 6,
+	},
+	type=\warmachine{},
+	basesize=60,
+	unitsize=SPECIAL-\lightartillerynote{},
+	weapons={\boltthrower},
+	unitequipment={\equipmentdef{\boltthrower}{\hobgoblinboltthrowerrule}},
+}
+
+\showunit{
+	name={\gunneryteam{}},
+	profile={
+		\machine{}<- - - - 5 2 - - -,
+		\dwarfcrew{} (2)<3 4 3 3 4 - 2 1 9,
+	},	
+	type=\warmachine{},
+	basesize=40,
+	unitsize=SPECIAL-\lightartillerynote{},
+	weapons={\volleygun},
+	armour={\infernalarmour},
+	commontype=\infernaldwarvescommonrules{},
+	commonspecialrules={\chosenofashuruk{}},
+	specialrules={\hardtarget{}},
+	options={\gunneryteamoption{
+		\flamingattacks{}=\free{},
+		\armourpiercing{1}=\free{},
+		\volleyfire{}=\free{},
+		},
+	},
+	unitequipment={\equipmentdef{\volleygun}{\gunneryteamrule}},
+}
+
+\showunit{
+	name={\infernalengine{} (\oneofakind{})},
+	QRSname={\infernalengine{}},
+	profile={
+		\engine{}<6 - - 6 7 7 2 - -,
+		\enginecrew{} (3)<- 4 3 3 - - 2 1 9,
+	},
+	type=\chariot{},
+	basesize=60x100,
+	unitsize=1,
+	armour=\innatedefence{3},
+	additional={%
+		\def\tempspecialrules{\unbreakable{},\largetarget{},\impacthits{+1},\grindingattacks{1D3} \only{\engine},\fullsteamahead{},\ponderous{}}
+		\vspace*{0.2cm}\specialrules{\tempspecialrules}
+		
+		\def\tempunitrules{%
+			\unitrule{\fullsteamahead}{\fullsteamaheadrule}
+			\unitrule{\ponderous}{\ponderousrule}
+		}
+		\unitrules{\tempunitrules}
+		
+		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
+		\setlength{\columnseprule}{0.5pt}
+		\renewcommand{\columnseprulecolor}{\color{black!30}}
+		\vspace*{-0.2cm}\begin{multicols}{3}
+		\raggedcolumns
+
+		\begin{center}{\largerfontsize\antiquefont\shrapnelguns{} (\free{})}\end{center}
+		
+		\def\tempweapons{\shrapnelguns{} \only{\engine}}
+		\weapons{\tempweapons}
+		\def\tempunitequipment{\equipmentdef{\shrapnelguns}{\shrapnelgunsrule}}
+		\unitequipment{\tempunitequipment}
+		\def\tempoptions{\daemonicinfusion{}=15,}
+		\options{\tempoptions}
+		
+		\vspace*{\fill}\columnbreak
+		
+		\begin{center}{\largerfontsize\antiquefont\steamhammers{} (\free{})}\end{center}
+		
+		\def\tempspecialrules{\grindingattacks{3D3} \only{\engine}}
+		\specialrules{\tempspecialrules}
+		\def\tempoptions{\daemonicinfusion{}=15,}
+		\options{\tempoptions}
+		
+		\vspace*{\fill}		
+		\end{multicols}		
+	},
+}
+	
 %\showunit{
 %	name={\kadimtitan{}},
 %	cost={325},
