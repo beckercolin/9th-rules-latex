@@ -480,6 +480,7 @@
 
 \showunit{
 	name={\infernalartillery},
+	QRSname={\infernalartilleryshort}, % too long in french for QRS
 	profile={\machine{}<- - - - 7 3 - - -,
 					\crew{} (3)<3 4 3 3 4 - 2 1 9,
 					[\ogreslave{} (1)]<- 3 - 4 - \plusone{} 2 3 -,
@@ -592,6 +593,7 @@
 
 \showunit{
 	name={\hobgoblinboltthrower{}},
+	cost=40,
 	profile={
 		\machine{}<- - - - 7 2 - - -,
 		\hobgoblincrew{} (2)<4 3 3 3 3 - 3 1 6,
@@ -605,6 +607,7 @@
 
 \showunit{
 	name={\gunneryteam{}},
+	cost=50,
 	profile={
 		\machine{}<- - - - 5 2 - - -,
 		\dwarfcrew{} (2)<3 4 3 3 4 - 2 1 9,
@@ -628,6 +631,7 @@
 
 \showunit{
 	name={\infernalengine{} (\oneofakind{})},
+	cost=225,
 	QRSname={\infernalengine{}},
 	profile={
 		\engine{}<6 - - 6 7 7 2 - -,
@@ -645,12 +649,12 @@
 			\unitrule{\fullsteamahead}{\fullsteamaheadrule}
 			\unitrule{\ponderous}{\ponderousrule}
 		}
-		\unitrules{\tempunitrules}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
 		
 		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
 		\setlength{\columnseprule}{0.5pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
-		\vspace*{-0.2cm}\begin{multicols}{3}
+		\vspace*{-0.2cm}\begin{multicols}{2}
 		\raggedcolumns
 
 		\begin{center}{\largerfontsize\antiquefont\shrapnelguns{} (\free{})}\end{center}
@@ -658,7 +662,7 @@
 		\def\tempweapons{\shrapnelguns{} \only{\engine}}
 		\weapons{\tempweapons}
 		\def\tempunitequipment{\equipmentdef{\shrapnelguns}{\shrapnelgunsrule}}
-		\unitequipment{\tempunitequipment}
+		\vspace*{0.2cm}\unitequipment{\tempunitequipment}
 		\def\tempoptions{\daemonicinfusion{}=15,}
 		\options{\tempoptions}
 		
@@ -668,52 +672,58 @@
 		
 		\def\tempspecialrules{\grindingattacks{3D3} \only{\engine}}
 		\specialrules{\tempspecialrules}
-		\def\tempoptions{\daemonicinfusion{}=15,}
-		\options{\tempoptions}
+		\def\tempoptions{\daemonicinfusion{}=5,}
+		\vspace*{0.1cm}\options{\tempoptions}
 		
 		\vspace*{\fill}		
 		\end{multicols}		
 	},
 }
-	
-%\showunit{
-%	name={\kadimtitan{}},
-%	cost={325},
-%	profile={< 8 5 3 7 6 6 5 6 8},
-%	type= \monster{},
-%	basesize=100x150,
-%	unitsize={1},
-%	commontype=\kadimcommonrules{},
-%	commonspecialrules={\shacklesoffire{},\volcanicembrace{}},
-%	specialrules={\otherworldly{},\frenzy{},\daemonicinstability{},\fireborn{}, \wardsave{4}},
-%	armour={\innatedefence{5}{}},
-%	unitrules={
-%	\unitrule{\searingrage{}}{\searingragerule}
-%	\unitrule{\lordofflame{}}{\lordofflamerule}
-%	},
-%}
-%
-%\showunit{
-%	name={\armouredgiant{}},
-%	cost=145,
-%	profile={< 6 3 - 6 5 6 3 \starsymbol{} 10,},
-%	type=\monster,
-%	basesize=50x75,
-%	unitsize=1,
-%	specialrules={\immunetopsychology{},\stubborn{},\giantattacks{}},
-%	armour={\ha{}},
-%	options={\maytake{} \infernalarmour{}=30,},
-%	additional={%
-%		\def\tempunitrules{%
-%			\unitrule{\giantattacks}{\giantattacksrule}
-%			\unitrule{\bellow}{\bellowrule}
-%			\unitrule{\jump}{\jumprule}
-%			\unitrule{\grab}{\grabrule}
-%			\unitrule{\swing}{\swingrule}
-%			\unitrule{\thump}{\thumprule}
-%			\unitrule{\smashname}{\smashrule}
-%		}
-%		\vspace*{0.1cm}\unitrules{\tempunitrules}
-%		\giantattackstable
-%	},
-%}
+
+\showunit{
+	name={\kadimtitan{}},
+	cost=325,
+	profile={< 8 5 3 7 6 6 5 6 8},
+	type= \monster{},
+	basesize=100x150,
+	unitsize=1,
+	armour={\innatedefence{5}},
+	additional={%
+		\def\tempspecialrules{\shacklesoffire{},\volcanicembrace{},\fireborn{},\otherworldly{},\daemonicinstability{}}
+		\vspace*{0.2cm}\commonspecialrules{\kadimcommonrules{}}{\tempspecialrules}
+
+		\def\tempspecialrules{\frenzy{},\wardsave{4},\searingrage{},\lordofflame{}}
+		\vspace{0.2cm}\specialrules{\tempspecialrules}
+		
+		\def\tempunitrules{
+			\unitrule{\searingrage}{\searingragerule}
+			\unitrule{\lordofflame}{\lordofflamerule}
+		}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
+	},
+}
+
+\showunit{
+	name={\armouredgiant},
+	cost=145,
+	profile={< 6 3 - 6 5 6 3 \starsymbol{} 10},
+	type=\monster{},
+	basesize=50x75,
+	unitsize=1,
+	armour=\ha{},
+	specialrules={\immunetopsychology{},\stubborn{},\giantattacks{}},
+	options={\infernalarmour{}=30,},
+	additional={%
+		\def\tempunitrules{%
+			\unitrule{\giantattacks}{\giantattacksrule}
+			\unitrule{\bellow}{\bellowrule}
+			\unitrule{\jump}{\jumprule}
+			\unitrule{\grab}{\grabrule}
+			\unitrule{\swing}{\swingrule}
+			\unitrule{\thump}{\thumprule}
+			\unitrule{\smashname}{\smashrule}
+		}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\giantattackstable
+	},
+}

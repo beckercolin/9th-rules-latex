@@ -13,7 +13,7 @@
 \newcommand{\chosenofashuruk}{Élu d'Ashuruk}
 \newcommand{\daemonicinfusion}{Infusion Démoniaque} %M% sonne bizarre ?
 \newcommand{\volcanicembrace}{Étreinte Volcanique}
-\newcommand{\shacklesoffire}{Chaînes de Feu}
+\newcommand{\shacklesoffire}{Chaînes de Feu} %M% shackles c'est plutôt menottes mais c'est moche. Fers, Entrave de Feu ? bof
 \newcommand{\unruly}{Indiscipliné}
 \newcommand{\opportunist}{Opportuniste}
 
@@ -30,7 +30,7 @@
 \newcommand{\infernalarmour}{Armure Volcanique} %M% A vérifier
 \newcommand{\flintlockaxe}{Hallebarde Ardente} %M% Bof on peut faire mieux. axe c'est hache, et flintlock c'est une platine à silex, pour la mise à feu d'une arme. Hache-Fusil à Silex ?
 \newcommand{\blunderbuss}{Tromblon}
-\newcommand{\walloflead}{Mur de Plomb}
+\newcommand{\walloflead}{Mur de Plomb} %M% Barrage de Plomb plutôt
 
 
 % Characters rules
@@ -63,8 +63,10 @@
 
 \newcommand{\fullsteamahead}{À Toute Vapeur}
 \newcommand{\ponderous}{Trop Lourd}
-\newcommand{\searingrage}{Rage Dessicante}
-\newcommand{\lordofflame}{Seigneur de la Flamme}
+\newcommand{\shrapnelguns}{Fusils à Shrapnel} %M%
+\newcommand{\steamhammers}{Marteaux à Vapeur} %M%
+\newcommand{\searingrage}{Rage Dessicante} %M% Cuisante, ou Ardente
+\newcommand{\lordofflame}{Seigneur de la Flamme} %M% Seigneur des Flammes
 \newcommand{\giantattacks}{Attaques de Géant}
 \newcommand{\bellow}{Hurle}
 \newcommand{\jump}{Saute}
@@ -89,7 +91,7 @@
 
 \newcommand{\wolf}{Loup}
 \newcommand{\bullofshamut}{Taureau de Shamut}
-\newcommand{\greatbullofshamut}{Taureau-Goliath de Shamut}
+\newcommand{\greatbullofshamut}{Taureau-Goliath de Shamut} %M% Trop long
 \newcommand{\templelamassu}{Shêdu} %M% Pourquoi ne pas garder Lamassu ? du Temple ? Sacré ?
 
 % Core
@@ -107,6 +109,7 @@
 \newcommand{\taurukh}{Taurukhs} %M% fluff team : why no S
 \newcommand{\taurukhanointed}{Taurukhs Damnés} %M% oint ^^ sanctifié ?
 \newcommand{\infernalartillery}{Artillerie Pandémoniaque}
+\newcommand{\infernalartilleryshort}{Artillerie Pandém.}
 \newcommand{\rocketbattery}{Roquettes Infernales} %M% Batterie de Roquettes, tout simplement
 \newcommand{\volcanocannon}{Canon Magma}
 \newcommand{\titanmortar}{Mortier Titan}
@@ -224,8 +227,8 @@ Au début de chaque Tour de Joueur allié, la figurine doit passer un test de Co
 % rare units
 
 \newcommand{\lightartillerynote}{%
-\labels@Singlemodel{}.\newline
-\vspace{5pt}Les unités de \hobgoblinboltthrower{} et de \gunneryteam{} comptent comme une seule unité rare appelée \lightartillery{} et sont donc soumises à une même limite de duplication.
+\labels@Singlemodel{}.\vspace{5pt}\newline
+Les unités de \hobgoblinboltthrower{} et de \gunneryteam{} comptent comme une seule unité rare appelée \lightartillery{} et sont donc soumises à une même limite de duplication.
 }
 
 \newcommand{\gunneryteamoption}{%
@@ -233,19 +236,24 @@ Au début de chaque Tour de Joueur allié, la figurine doit passer un test de Co
 }
 
 \newcommand{\fullsteamaheadrule}{%
-Au cours de la sous-phase des mouvements obligatoires, l'unité peut choisir d'engager sa chaudière. Pour la durée du tour, l'\infernalengine{} ne peut alors pas tirer et gagne un \randommovement{3D6}, mais il ne peut pivoter que de 45 degrés avant de bouger.
+Au cours de l'Étape des Mouvements Obligatoires, l'\infernalengine{} peut choisir de charger sa chaudière. Dans ce cas, pour la durée du Tour de Joueur, l'\infernalengine{} ne peut pas tirer et gagne la règle \randommovement{3D6}, avec l'exception qu'il ne peut pas entrer en contact socle à socle avec une unité qui n'était pas dans son arc frontal avant le pivot initial. %M% check article
 }
 
 \newcommand{\ponderousrule}{%
-l'\infernalengine{} ne peut pas déclarer de Charge, de Charge Irrésistible ni Poursuivre.
+L'\infernalengine{} ne peut pas déclarer de Charge ni de Charge Irrésistible et ne peut pas Poursuivre.
+} %M% check article
+
+\newcommand{\shrapnelgunsrule}{%
+\textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline
+\range{18}, \Strength{} 6, \multiplewounds{1D3}{}, \multipleshots{1D6+2}, \quicktofire{}.
 }
 
 \newcommand{\searingragerule}{%
-À chaque fois que la figurine rate un test de \frenzy{}, elle ajoute +1 Attaque à son Attaque Additionelle de \frenzy{}. Ces Attaques Additionnelles sont perdues si la \frenzy{} est perdue.
+À chaque fois que la figurine rate un test de \frenzy{}, elle gagne une Attaque de plus grâce à la \frenzy{}. Ces Attaques additionnelles sont perdues si la \frenzy{} est perdue.
 }
 
 \newcommand{\lordofflamerule}{%
-La figurine gagne des \divineattacks{} contre les figurines ayant la règle \fireborn{}.
+La figurine gagne la règle \divineattacks{} contre les figurines ayant la règle \fireborn{}.
 }
 
 \newcommand{\giantattacksrule}{%
@@ -253,6 +261,8 @@ Quand un Géant attaque au Corps à Corps, au lieu d'attaquer normalement, chois
 }
 
 \newcommand{\giantattackstable}{%
+\setlength{\columnseprule}{0.5pt}
+\renewcommand{\columnseprulecolor}{\color{black!30}}
 \vspace*{-0.2cm}\begin{multicols}{2}
 	\noindent Si l'unité est de type \infantry{}, \warbeast{}, \cavalry{}, \swarm{} ou \warmachine{}  :	
 	\renewcommand{\arraystretch}{1.5}	
@@ -280,15 +290,15 @@ Quand un Géant attaque au Corps à Corps, au lieu d'attaquer normalement, chois
 }
 
 \newcommand{\bellowrule}{%
-Ni le Géant, ni l'unité sélectionnée ne peuvent faire d'attaques de Corps à Corps pendant cette phase. Les attaques déjà réalisées, incluant celles réalisées simultanément avec cette attaque, ne sont pas concernées. Le camp du Géant gagne automatiquement le combat de 2. Si deux Géants opposés, ou plus, \og{} Hurlent \fg{}, le combat est un match nul.
+Ni le Géant, ni l'unité sélectionnée ne peuvent faire d'attaques de Corps à Corps pendant cette phase. Les attaques déjà réalisées, incluant celles réalisées simultanément avec cette attaque, ne sont pas concernées. Le camp du Géant gagne automatiquement le combat de 2. Si deux Géants opposés, ou plus, utilisent l'attaque \bellow{}, le combat est un match nul.
 }
 
 \newcommand{\jumprule}{%
-L'unité sélectionnée subit 1D6 touches de la Force du Géant. Le Géant doit faire un test de Terrain Dangereux.
+L'unité sélectionnée subit 1D6 touches de la Force du Géant. Le Géant doit faire un test de Terrain Dangereux (1).
 }
 
 \newcommand{\grabrule}{%
-Choisissez une figurine dans l'unité sélectionnée et en contact socle à socle avec le Géant. Cette figurine doit faire un test de Force et un test de Capacité de Combat. Pour chaque test raté, la figurine subit une touche de la Force du Géant et suivant la règle spéciale \multiplewounds{1D3}{}.
+Choisissez une figurine dans l'unité sélectionnée et en contact socle à socle avec le Géant. Cette figurine doit faire un test de Force et un test de Capacité de Combat. Pour chaque test raté, la figurine subit une touche de la Force du Géant avec la règle \multiplewounds{1D3}{}.
 }
 
 \newcommand{\swingrule}{%
@@ -296,11 +306,11 @@ Le Géant fait 2D6 attaques sur l'unité choisie.
 }
 
 \newcommand{\thumprule}{%
-Choisissez une figurine en contact socle à socle avec le Géant dans l'unité sélectionnée. Cette figurine doit faire un test d'Initiative. Si elle échoue, la figurine subit 2D6 blessures avec \armourpiercing{6}.
+Choisissez une figurine en contact socle à socle avec le Géant dans l'unité sélectionnée. Cette figurine doit faire un test d'Initiative. Si elle échoue, la figurine subit 2D6 blessures avec la règle \armourpiercing{6}.
 }
 
 \newcommand{\smashrule}{%
-Choisissez une figurine en contact socle à socle avec le Géant dans l'unité sélectionnée. Cette figurine subit une blessure avec \armourpiercing{6}. Si la figurine n'a pas encore attaqué, elle ne peut plus le faire au cours de cette manche. Si la figurine a déjà réalisé ses attaques, elle ne pourra pas attaquer au cours du tour de  joueur à venir.
+Choisissez une figurine en contact socle à socle avec le Géant dans l'unité sélectionnée. Cette figurine subit une blessure avec la règle \armourpiercing{6}. Si la figurine n'a pas encore attaqué, elle ne peut plus le faire au cours de cette manche. Si la figurine a déjà réalisé ses attaques, elle ne pourra pas attaquer au cours du tour de  joueur à venir.
 }
 
 % Warmachines
@@ -488,5 +498,32 @@ L'unité du porteur gagne la règle \vanguard{}. Les unités suivant la règle \
 
 \input{InfernalDwarves_armylist.tex}
 
+%%% Quick Reference Sheet - AB_qrs.tex is automatic and shouldn't be edited %%%
+
+\quickrefsheettitle
+
+\input{../Layout/AB_qrs.tex}
+\bigskip
+\begin{center}
+\noindent{\antiquefont\Largefontsize\textbf{Armes de Tir des Nains Infernaux}}
+\medskip
+
+\rowcolors{1}{white}{black!10}
+\noindent\begin{tabular}{lcccccc}
+\textbf{Nom} & \textbf{Artillerie} & \textbf{Portée} & \textbf{\labels@S{}} & \textbf{\multipleshots{}} & \textbf{\multiplewounds{}} & \textbf{\armourpiercing{}} \tabularnewline
+\flintlockaxe{} & - & \distance{18} & 4 & - & - & 1 \tabularnewline
+\blunderbuss{} & - & \distance{12} (\distance{8}) & 4 & - & - & - \tabularnewline
+\rocketbattery{} (1) & \catapult{} (\distance{0}) & \distance{6-48} & 8 & - & \ordnance{} & - \tabularnewline
+\rocketbattery{} (2) & \catapult{} (\distance{5}) & \distance{6-48} & 2 & - & - & 1 \tabularnewline
+\volcanocannon{} (1) & \flamethrower{} & \distance{15} & 5 & - & 1D3 & - \tabularnewline
+\volcanocannon{} (2) & \flamethrower{} & \distance{24} & 1 & - & - & - \tabularnewline
+\titanmortar{} & \catapult{} (\distance{3}) & \distance{6-48} & 4 [9] & - & [\ordnance{}] & - \tabularnewline
+\gunneryteam{} & \volleygun{} & \distance{24} & 4 & 1D6, 2D6 ou 3D6 & - & - \tabularnewline
+\hobgoblinboltthrower{} & \boltthrower{} & \distance{48} & 6 & - & 1D3 & 6 \tabularnewline
+\shrapnelguns{} & \volleygun{} & \distance{18} & 6 & 1D6+2 & 1D3 & - \tabularnewline
+\end{tabular}
+\end{center}
+
+\restoregeometry
 
 \end{document}
