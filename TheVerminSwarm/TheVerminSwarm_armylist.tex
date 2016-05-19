@@ -8,7 +8,7 @@
 \showunit{
 	name={\vermindaemon},
 	cost={400},
-	profile={ < 8 8 4 6 5 5 9 5 8},
+	profile={ < 8 8 4 6 5 6 9 5 8},
 	type=\monster ,
 	basesize=75x50,
 	unitsize=\oneofakind,
@@ -52,6 +52,7 @@
 	armour={\la},
 	options={
 		\magicalitemsallowance{}=\upto{}<100,
+		\takeadarkshardbrew{}=30,
 		\maytakeanyofthefollowing{
 			\shield{}=5,
 			\ha{}=8
@@ -66,7 +67,7 @@
 	mounts={
 		\verminguardlitter{}=40,
 		\verminhulkbodyguard{}=55,
-		\monstrousrat{}=120,
+		\monstrousrat{}=100,
 	},
 }
 
@@ -81,13 +82,15 @@
 	commonspecialrules={\safetyinnumbers, \honourless},
 	magiclevel=3,
 	magicpaths={\ruin, \shadows},
+	unitrules={\unitrule{\plaguepatriarch}{\plaguepatriarchrule}},
 	options={
-		\magiclevel{4}=30,
 		\magicalitemsallowance{}=\upto{}<100,
-		\maypurchaseuptofourdarkshards{}=5,%créer une commande pour faire "X pts chacun"
-	},
-	mounts={
-		\doombell{}=200,
+		\magiclevel{4}=30,
+		\maypurchasetwodarkshards{}=20,
+		\maytakeoneofthefollowing{\onechoiceonly
+			\becomeplaguepatriarch{}=20,
+			\rideadoombell{}=200,
+			},
 	},
 }
 
@@ -107,7 +110,7 @@
 	options={
 		\optionschoice{\maybecome \onechoiceonly}{
 			\bsboption{}=25,
-			\takeadarkshardbrew{}=30,
+			\takeadarkshardbrew{}=25,
 		},
 		\maybeupgradedtofetthisbroodmaster{}=5,
 		\magicalitemsallowance{}=\upto{}<50,
@@ -119,7 +122,7 @@
 			\pairedweaponandtailweapon{}=4,
 			\gw{}=4,
 			\halberd{}=4,
-			\ratlockpistol{}=4,
+			\ratlockpistol{}=6,
 			},
 		},
 	mounts={
@@ -147,7 +150,7 @@
 	options={
 		\magiclevel{2}=25,
 		\magicalitemsallowance{}=\upto{}<50,
-		\maypurchaseuptofourdarkshards{}=5,%créer une commande pour faire "X pts chacun"
+		\maypurchasetwodarkshards{}=20,
 	},
 }
 
@@ -168,7 +171,7 @@
 		\weapononechoice{
 			\halberd{}=4,
 			\gasglobe{}=5,
-			\ratlockpistol{}=10,
+			\ratlockpistol{}=6,
 			\jezail{}=20,
 			},
 		},
@@ -186,7 +189,7 @@
 	unitsize=1,
 	commontype=\vermincommonrules ,
 	commonspecialrules={\safetyinnumbers, \honourless, \callous},
-	specialrules={\lightningreflexes, \wardsave{4}, \poisonedattacks, \hidden, \notaleader, \masterofassassins},
+	specialrules={\lightningreflexes, \wardsave{4}, \poisonedattacks, \hidden, \notaleader, \masterofassassins, \professionalcourtesy},
 	weapons={\pw, \throwingweapons},
 	options={
 		\magicalitemsallowance{}=\upto{}<50,
@@ -200,6 +203,7 @@
 		},
 	unitrules{
 		\unitrule{\masterofassassins}{\masterofassassinsrule}
+		\unitrule{\professionalcourtesy}{\profesionalcourtesyrule}
 	},
 	additional={\refsymbol{} \siccaraassassinnote}
 }
@@ -220,7 +224,7 @@
 			\magiclevelapprentice{1}=40,
 			\magiclevelapprentice{2}=65,
 			},
-		\ifwizardmaypurchaseuptotwodarkshards{}=5 %créer une commande pour faire "X pts chacun"
+		\ifwizardmaypurchasetwodarkshards{}=20,
 		\weapononechoice{
 			\pw{}=3,
 			\flail{}=4,
@@ -383,14 +387,14 @@
 }
 
 \showunit{
-	name={\jezails},
+	name={\jezails}, %rajouter (0-2 choix)
 	cost=60,
 	profile={ < 5 3 3 3 3 2 4 2 5},
 	type=\infantry ,
 	basesize=25x50,
 	unitsize=3,
 	maxmodels=6,
-	costpermodel=18,
+	costpermodel=20,
 	commontype=\vermincommonrules ,
 	commonspecialrules={\safetyinnumbers, \callous},
 	specialrules={\pavise},
@@ -423,7 +427,7 @@
 	basesize=20x20,
 	unitsize=5,
 	maxmodels=10,
-	costpermodel=9,
+	costpermodel=10,
 	commontype=\vermincommonrules ,
 	commonspecialrules={\safetyinnumbers, \callous},
 	specialrules={\skirmishers, \vanguard},
@@ -447,7 +451,7 @@
 	basesize=20x20,
 	unitsize=5,
 	maxmodels=15,
-	costpermodel=9,
+	costpermodel=10,
 	commontype=\vermincommonrules ,
 	commonspecialrules={\safetyinnumbers, \resistant, \broodscourage{\plaguebrotherhood}},
 	specialrules={\hatred, \frenzy, \skirmishers, \monstroussupport},
@@ -493,17 +497,17 @@
 
 \showunit{
 	name={\dreadmill},
-	cost=150,
+	cost=140,
 	profile={
 		\chariot < -  - - 6 6 5 4 - -,
-		\rakachittechnician{} (1) < -  3 5 3 - - 4 1 7,
+		\rakachittechnician{} (1) < -  3 3 3 - - 4 1 7,
 		\millrats{} < * 3 - 3 - - 4 * -
 	},
 	type=\chariot ,
 	basesize=50x100,
 	unitsize=1,
 	commontype=\vermincommonrules ,
-	commonspecialrules={\safetyinnumbers, \volatile, \callous},
+	commonspecialrules={\safetyinnumbers, \volatile},
 	specialrules={\largetarget, \immunetopsychology, \grindingattacks{1D3}, \randommovemet{3D6}, \randomattacks{2D6} \only{\millrats{}}, \impacthits{+1}},
 	armour={\innatedefence{4}},
 	unitequipment={
@@ -522,7 +526,7 @@
 	commonspecialrules={\safetyinnumbers},
 	specialrules={\stubborn, \immunetopsychology, \randommovemet{3D6}, \randomattacks{3D6}, \regeneration{4}},
 	options={
-		\maytaketoxicretaliation{}=30
+		\maytaketoxicretaliation{}=25
 	},
 	unitrules={\unitrule{\toxicretaliation}{\toxicretaliationrule}}
 }
@@ -548,15 +552,19 @@
 \showunit{
 	name={\doombell},
 	profile={ \chariot{} < 5 - - 5 5 5 - - -,
-			  \verminhulks{} (1) < - 3 3 5 - - 4 3 6
+			  \verminhulks{} (1) < - 4 1 5 - - 4 4 6
 			 },
 	type=\chariot ,
+	unitsize=\oneofakind,
 	basesize=60x100,
 	commontype=\vermincommonrules ,
 	commonspecialrules={\stateoftrance{\ratsatarms, \verminguard}},
-	specialrules={\largetarget, \magicresistance{2}, \stubborn, \terror, \wardsave{4}, \warplatform, \soundingthebell},
+	specialrules={\largetarget, \magicresistance{2}, \stubborn, \terror, \wardsave{4}, \warplatform, \soundingthebell, \abovethemasses},
 	armour={\innatedefence{5}},
-	unitrules={\unitrule{\soundingthebell}{\soundingthebellrule}}
+	unitrules={
+		\unitrule{\soundingthebell}{\soundingthebellrule}
+		\unitrule{\abovethemasses}{\abovethemassesrule}
+	}
 }
 
 \showunit{
@@ -585,6 +593,7 @@
 			  \plaguebrothers{} (4) < - 3 3 3 - - 3 1 5
 			 },
 	type=\chariot ,
+	unitsize=\oneofakind,
 	basesize=60x100,
 	commontype=\vermincommonrules ,
 	commonspecialrules={\stateoftrance{\plaguebrotherhood}, \resistant},
@@ -592,7 +601,7 @@
 	weapons={\pw \only{\plaguebrothers}},
 	armour={\innatedefence{5}},
 	options={
-		\maytakecauldronofblight{}=20
+		\maytakecauldronofblight{}=35
 	},
 	unitrules={\unitrule{\cauldronofblight}{\cauldronofblightrule}}
 }

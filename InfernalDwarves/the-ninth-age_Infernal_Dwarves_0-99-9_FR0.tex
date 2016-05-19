@@ -27,7 +27,7 @@
 % Armoury
 
 \newcommand{\infernalweapon}{Glaive Infernal}
-\newcommand{\infernalarmour}{Armure Volcanique} %M% A vérifier
+\newcommand{\infernalarmour}{Armure Volcanique}
 \newcommand{\flintlockaxe}{Hallebarde Ardente} %M% Bof on peut faire mieux. axe c'est hache, et flintlock c'est une platine à silex, pour la mise à feu d'une arme. Hache-Fusil à Silex ?
 \newcommand{\blunderbuss}{Tromblon}
 \newcommand{\walloflead}{Mur de Plomb} %M% Barrage de Plomb plutôt
@@ -53,7 +53,7 @@
 % special units rules
 
 \newcommand{\daemonicpossession}{Possession Démoniaque}
-\newcommand{\halfbull}{Bucentaure} %M% parfait mais à confirmer
+\newcommand{\halfbull}{Bucentaure}
 \newcommand{\ogreslave}{Esclave Ogre}
 \newcommand{\earthquakeshells}{Munitions Trembleterre}
 \newcommand{\daemonicfury}{Furie Démoniaque}
@@ -63,8 +63,8 @@
 
 \newcommand{\fullsteamahead}{À Toute Vapeur}
 \newcommand{\ponderous}{Trop Lourd}
-\newcommand{\shrapnelguns}{Fusils à Shrapnel} %M%
-\newcommand{\steamhammers}{Marteaux à Vapeur} %M%
+\newcommand{\shrapnelguns}{Fusils à Shrapnel}
+\newcommand{\steamhammers}{Marteaux à Vapeur}
 \newcommand{\searingrage}{Rage Dessicante} %M% Cuisante, ou Ardente
 \newcommand{\lordofflame}{Seigneur de la Flamme} %M% Seigneur des Flammes
 \newcommand{\giantattacks}{Attaques de Géant}
@@ -106,7 +106,7 @@
 \newcommand{\immortals}{Immortels}
 \newcommand{\disciplesoflugar}{Disciples de Lugar}
 \newcommand{\kadimincarnates}{Incarnins de Kadim} %M% Kadim, adjectif ou nom ? A priori nom puisque incarnate est un adjectif ? Je suis perdu !
-\newcommand{\taurukh}{Taurukhs} %M% fluff team : why no S
+\newcommand{\taurukh}{Taurukhs}
 \newcommand{\taurukhanointed}{Taurukhs Damnés} %M% oint ^^ sanctifié ?
 \newcommand{\infernalartillery}{Artillerie Pandémoniaque}
 \newcommand{\infernalartilleryshort}{Artillerie Pandém.}
@@ -117,7 +117,7 @@
 
 % Rare
 
-\newcommand{\hobgoblinwolfriders}{Chasseurs Hobgobelins} %M% wolfrider too long, is hunter ok ?
+\newcommand{\hobgoblinwolfriders}{Chasseurs Hobgobelins}
 \newcommand{\lightartillery}{Artillerie Légère}
 \newcommand{\hobgoblinboltthrower}{Baliste Hobgobeline}
 \newcommand{\gunneryteam}{Gatling Infernale} %M% gatling peut-être trop précis.
@@ -209,11 +209,11 @@ Un \ogreslave{} rejoint l'équipage de la Machine de Guerre, lui ajoutant +1 PV.
 \newcommand{\earthquakeshellsrule}{%
 \oneofakind{}.
 
-Toute unité subissant au moins une blessure non sauvegardée due à ces munitions doit relancer tous ses jets pour toucher réussis ayant donné \result{6} et traite tous les terrains, y compris les Terrains Dégagés, comme étant des Terrains Dangereux. Toute \warmachine{} se trouvant à moins de \distance{8} de la position finale du centre du gabarit doit obtenir un 4+ sur un jet de dé pour pouvoir faire feu. Ces effets durent jusqu'à la fin du Tour de Joueur suivant. 
+Toute unité subissant au moins une blessure non sauvegardée due à ces munitions doit relancer tous ses jets pour toucher réussis ayant donné \result{6} et traite tous les terrains, y compris les Terrains Dégagés, comme étant des Terrains Dangereux (1). Toute \warmachine{} se trouvant à moins de \distance{8} de la position finale du centre du gabarit doit obtenir un 4+ sur un jet de dé pour pouvoir faire feu. Ces effets durent jusqu'à la fin du Tour de Joueur suivant. 
 }
 
 \newcommand{\bounddaemonrule}{%
-La figurine perd son équipage, ses caractéristiques, son type de troupe, sa taille de socle, son armure et ses règles spéciales en échange de ceux de l'unité décrite ci-dessous. Chaque \infernalartillery{} améliorée en \bounddaemon{} compte toujours comme une \infernalartillery{} pour la limite de duplication d'une même unité spéciale.
+La figurine perd son équipage, ses caractéristiques, son type de troupe, sa taille de socle, son armure et ses règles spéciales en échange de ceux de l'unité décrite ci-dessous. Chaque \infernalartillery{} améliorée en \bounddaemon{} compte toujours comme une \infernalartillery{} supplémentaire pour la limite de duplication d'une même unité spéciale.
 }
 
 \newcommand{\bounddaemonnote}{%
@@ -392,7 +392,7 @@ Au début du second Tour de Jeu allié, et au cours de chacun des Tours de Jeu a
 
 \armyspecialruleentry{\unruly{}}
 
-L'unité subit un malus de -1 en Commandement pour réfréner la \frenzy{} et la Poursuite. Si l'unité est en formation de Horde et doit effectuer un test de Panique, jetez un dé additionnel et ignorez celui ayant donné le plus grand résultat.
+L'unité subit un malus de -1 en Commandement pour réfréner la \frenzy{} et la Poursuite. Si l'unité est en formation de Horde et doit effectuer un test de Panique, jetez un dé supplémentaire et ignorez celui ayant donné le plus grand résultat.
 
 \armyspecialruleentry{\opportunist{}}
 
@@ -468,9 +468,9 @@ Une seule utilisation : Peut être déclenchée au début de n'importe quelle Ma
 
 \startpricelist
 
-\pricelistitem{Fiole de Mercure}{45}Une seule utilisation. Peut être bue au début de n'importe quel Manche de Corps à Corps. L'unité du porteur gagne la règle \lightningreflexes{} et +2 en Initiative jusqu'à la fin de la phase. Lorsque les effets de la Fiole disparaissent, la figurine du porteur subit une blessure sans aucune sauvegarde possible.
+\pricelistitem{Fiole de Mercure}{45}Une seule utilisation. Peut être bue au début de n'importe quel Manche de Corps à Corps. L'unité du porteur gagne la règle \lightningreflexes{} et +2 en Initiative jusqu'à la fin de la phase. Lorsque les effets de la Fiole disparaissent, la figurine du porteur subit une blessure sans sauvegarde d'aucune sorte.
 
-\pricelistitem{Gantelets de Madzhab}{10}Le porteur gagne +1 en Force. Chacun de ses jets pour toucher ayant donné \result{1} est résolu contre l'unité du porteur. Cela ne peut jamais affecter le porteur lui-même, sauf s'il est monté et ne fait pas partie d'une unité.
+\pricelistitem{Gantelets de Madzhab}{10}Le porteur gagne +1 en Force. Chacun de ses jets pour toucher ayant donné \result{1} est résolu contre l'unité du porteur. Cela ne peut jamais affecter le porteur lui-même, sauf s'il est monté et ne fait pas partie d'une unité combinée.
 
 \endpricelist
 
@@ -478,7 +478,7 @@ Une seule utilisation : Peut être déclenchée au début de n'importe quelle Ma
 
 \startpricelist
 
-\pricelistitem{Mécanisme de Besheluk}{25}Lorsque le porteur réussit à lancer un sort de type Amélioration qui ne soit pas un Attribut de Discipline sur une unité composée exclusivement de figurines suivant la règle \shacklesoffire{}, elle Récupère un PV précédemment perdu. Aucune unité ne peut Récupérer plus d'un PV par Phase de Magie grâce à cet objet.
+\pricelistitem{Mécanisme de Besheluk}{25}Lorsque le porteur réussit à lancer un sort de type Amélioration qui ne soit pas un Attribut de Discipline sur une unité composée exclusivement de figurines suivant la règle \shacklesoffire{}, celle-ci Récupère un PV précédemment perdu. Aucune unité ne peut Récupérer plus d'un PV par Phase de Magie grâce à cet objet.
 
 \endpricelist
 
@@ -488,9 +488,9 @@ Une seule utilisation : Peut être déclenchée au début de n'importe quelle Ma
 
 \pricelistitem{Bannière du Taureau d'Airain}{40}\infantry{} uniquement.
 
-L'unité du porteur gagne la règle \vanguard{}. Les unités suivant la règle \unruly{} à moins de \distance{12} du porteur peuvent relancer leurs tests de Panique ratés. %M% brazen c'est d'airan, j'ai corrigé
+L'unité du porteur gagne la règle \vanguard{}. Les unités suivant la règle \unruly{} à moins de \distance{12} du porteur peuvent relancer leurs tests de Panique ratés.
 
-\pricelistitem{Bannière de Nezibkesh}{25}Toutes les Attaques Spéciales de Corps à Corps dirigées contre l'unité du porteur ou l'unité voient leur Force divisée par deux, en arrondissant au supérieur.
+\pricelistitem{Bannière de Nezibkesh}{25}Toutes les Attaques Spéciales de Corps à Corps dirigées contre l'unité du porteur voient leur Force divisée par deux, en arrondissant au supérieur.
 
 \endpricelist
 

@@ -64,7 +64,7 @@
 % Paladins de la Quête
 % Paladins Sans Terre
 
-\newcommand{\hedgeknights}{Paladins Errants}
+\newcommand{\hedgeknights}{Paladin Errant}
 
 %Paldins du Graal
 
@@ -144,6 +144,7 @@
 % Profile wording
 
 \newcommand{\mayreplaceshieldforpw}{Remplacer le \shield{} par une \pw{}}
+\newcommand{\ifnoknightsoftherealm}{Si l'armée ne comprend pas de \knightsoftherealm{},}
 \newcommand{\mayreplacebowmenstakeswith}{Remplacer les \bowmenstakes{} par \newline
 \skirmishers{}}
 \newcommand{\brigandsoption}{Si l'armée comprend un \castellan{},\newline
@@ -172,7 +173,7 @@ La figurine ne peut rejoindre que des unités dont toutes les figurines suivent 
 }
 
 \newcommand{\masteratarmsrule}{%
-La figurine et son unité gagnent de la règle \weaponmaster{}. Une unité d'\peasantbowmen{} peut être améliorée en \brigands{}. 
+La figurine et son unité gagnent la règle \weaponmaster{}. Une unité d'\peasantbowmen{} peut être améliorée en \brigands{}. 
 }
 
 \newcommand{\rousingoratorrule}{%
@@ -186,7 +187,7 @@ Cette amélioration ne peut être prise que si toutes les figurines de l'armée 
 % Aspirants Paladins
 
 \newcommand{\impetuousrule}{%
-Lorsqu'elle déclare une charge, la figurine gagne la règle \frenzy{} \only{\knight} jusqu'à la fin du tour. Une unité entièrement composée de figurines avec la règle \impetuous{} peut relancer ses jets de distance de charge ratés.
+Lorsqu'elle déclare une charge, la figurine gagne la règle \frenzy{} \only{\knight} jusqu'à la fin du Tour de Joueur. Une unité entièrement composée de figurines avec la règle \impetuous{} peut relancer ses jets de distance de charge ratés.
 }
 
 \newcommand{\crusadersrule}{%
@@ -200,7 +201,7 @@ Lorsque vous déployez l'unité, vous pouvez placer un Mur en contact socle à s
 }
 
 \newcommand{\braziersrule}{%
-Avant de tirer avec l'unité, vous pouvez décider de donner à leurs tirs la règle \flamingattacks{} pour la durée de cette phase. 
+Avant de tirer avec l'unité, vous pouvez décider de donner à ses tirs la règle \flamingattacks{} pour la durée de cette phase. 
 }
 
 \newcommand{\brigandsrule}{%
@@ -234,7 +235,7 @@ L'unité ne peut être rejointe que par des Personnages avec la règle \beloved{
 % Reliquaire Sacré
 
 \newcommand{\holyfervorrule}{%
-Toutes les figurines alliées avec la règle \insignificant{} à moins de \distance{6} gagnent la règle \theblessing{}. Toutes les figurines alliées d'\infantry{} et de \cavalry{} avec la règle \insignificant{} à moins de \distance{6} gagnent la règle \fightinextrarank{} et peuvent relancer les jets pour blesser de ayant donné un résultat naturel de \result{1}.
+Toutes les figurines alliées avec la règle \insignificant{} à moins de \distance{6} gagnent la règle \theblessing{}. Toutes les figurines alliées d'\infantry{} et de \cavalry{} avec la règle \insignificant{} à moins de \distance{6} gagnent la règle \fightinextrarank{} et peuvent relancer les jets pour blesser ayant donné un résultat naturel de \result{1}.
 }
 
 % Montures
@@ -287,11 +288,11 @@ La \wardsave{} accordée par \theblessing{} passe à 5+ contre les attaques suiv
 \end{center}
 \end{multicols}
 
-Si une de ces options est choisie, l'armée ne peut gagner aucun bonus sur le jet de dé déterminant quel joueur aura le premier tour. 
+Si l'une de ces options est choisie, l'armée ne peut gagner aucun bonus sur le jet de dé déterminant quel joueur aura le premier tour. 
  
 \armyspecialruleentry{\lanceformation}
 
-La figurine gagne les règles \monstrousranks{} et \fightinextrarank{}. Lorsqu'une unité formée de rangs de 3 figurines charge, les figurines avec cette règle gagnent une instance supplémentaire de la règle \fightinextrarank{}. 
+La figurine gagne les règles \monstrousranks{} et \fightinextrarank{}. Lorsqu'une unité formée de rangs de 3 figurines charge, les figurines avec cette règle gagnent un rang supplémentaire de la règle \fightinextrarank{}. 
 
 \armyspecialruleentry{\jousting}
 
@@ -303,7 +304,7 @@ La figurine perd la règle \firstinrank{} si elle rejoint une unité dont au moi
 
 \armyspecialruleentry{\serfs}
 
-Si au moins la moitié des figurines d'une unité possèdent cette règle, et si cette unité est sous les effets de la règle \inspiringpresence{} provenant d'au moins une figurine avec la règle \oathoffealty{}, cette unité gagne +1 en Mouvement lorsqu'elle effectue une Marche forcée.
+Si au moins la moitié des figurines d'une unité possède cette règle, et si cette unité est sous les effets de la règle \inspiringpresence{} provenant d'au moins une figurine avec la règle \oathoffealty{}, cette unité gagne +1 en Mouvement lorsqu'elle effectue une Marche forcée.
 
 \armyspecialruleentry{\oathoffealty}
 
@@ -322,7 +323,7 @@ Les Personnages avec cette règle doivent être équipés d'une \gw{} et ne peuv
 \columnbreak
 \armyspecialruleentry{\grailoath}
 
-La figurine gagne les règles \magicalattacks{}, \immunetopsychology{} et \wardsave{5}. Si c'est un Personnage, il gagne +1 en Capacité de Combat.
+La figurine gagne les règles \magicalattacks{}, \immunetopsychology{} et \wardsave{5}. Si c'est un Personnage, il gagne aussi +1 en Capacité de Combat.
 
 \vspace*{5pt}
 Cette règle est \oneofakind{} pour les Personnages.
@@ -350,14 +351,14 @@ Cette règle est \oneofakind{} pour les Personnages.
 
 \pricelistitem{\piety}{40} Le porteur et les figurines de base de l'unité qu'il rejoint améliorent leur \wardsave{} d'un point, jusqu'à obtenir 5+ au mieux. Le porteur ne peut rejoindre que des unités de \cavalry{} ou d'\infantry{}.
 
-\pricelistitem{\audacity}{40/30} Si le porteur est en contact avec un ennemi ayant une Force ou une Endurance de 5 ou plus, il gagne la règle \stubborn{} et peut relancer tous ses jets pour toucher et pour blesser ratés.
+\pricelistitem{\audacity}{40/30} Si le porteur est en contact avec un ennemi ayant une Force ou une Endurance de 5 ou plus, sans compter les bonus d'arme, il gagne la règle \stubborn{} et peut relancer tous ses jets pour toucher et pour blesser ratés.
 
 \columnbreak
-\pricelistitem{\valour}{40/30} Le porteur doit toujours lancer un défi, si possible, et cela ne peut pas être prévenu par une autre figurine alliée lançant un défi avant lui. Ce défi doit être accepté, si possible. De plus, le porteur peut relancer ses jets pour toucher et pour blesser ratés en défi.
+\pricelistitem{\valour}{40/30} Le porteur doit toujours lancer un défi, si possible, et une autre figurine alliée ne peut pas lancer de défi avant lui. Ce défi doit être accepté, si possible. De plus, le porteur peut relancer ses jets pour toucher et pour blesser ratés en défi.
 
 \pricelistitem{\daring}{25} L'unité du porteur ajoute 1D3 à ses jets de distance de charge.
 
-\pricelistitem{\humility}{20} La figurine gagne la règle \insignificant{}, la portée de sa règle \inspiringpresence{} augmente jusqu'à \distance{12} et elle gagne la règle \holdyourground{}, même si elle n'est pas Porteur de la Grande Bannière. Seules les figurines avec la règle \insignificant{} peuvent profiter de la règle \holdyourground{} de cette façon. Cette Vertu peut être exceptionnellement dupliquée.
+\pricelistitem{\humility}{20} La figurine gagne la règle \insignificant{}, la portée de sa règle \inspiringpresence{} augmente jusqu'à \distance{12} et elle gagne la règle \holdyourground{}, même si elle n'est pas Porteur de la Grande Bannière. Seules les figurines avec la règle \insignificant{} peuvent profiter de cette règle \holdyourground{}. Cette Vertu peut être dupliquée.
 
 \endpricelistNSP
 \end{multicols}
