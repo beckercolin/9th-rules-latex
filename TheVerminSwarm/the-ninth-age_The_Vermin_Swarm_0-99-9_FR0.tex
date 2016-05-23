@@ -22,7 +22,7 @@
 % Armoury
 
 \newcommand{\sling}{Fronde}
-\newcommand{\gasglobe}{Grenade-Moutarde} %M% globe ? Globe-Moutarde
+\newcommand{\gasglobes}{Grenades-Moutarde} %M% globe ? Globe-Moutarde
 \newcommand{\ratlockpistol}{Pistolet Rat} %M% ratlock ?
 \newcommand{\jezail}{Jezaïl}
 \newcommand{\rotarygun}{Gatling}
@@ -50,12 +50,20 @@
 \newcommand{\deceiver}{Marcheur de l'Ombre} %M% Imposteur, (Escroc, Arnaqueur)
 \newcommand{\thunderer}{Chef de Guerre} %M% rapport à l'éclair
 \newcommand{\shaper}{Trompe-la-Mort} %M% à revoir
-\newcommand{\fetthisbroodmaster}{Maître des Mutations} %M% à revoir
+\newcommand{\fetthisbroodmaster}{Maître des Mutations} %M% à revoir, Fetthis
 \newcommand{\darkshardbrew}{Breuvage d'Éclat Noir} %M%
 \newcommand{\plaguepatriarch}{Patriarche de la Peste}
+
 \newcommand{\aetherturbine}{Turbine d'Éther} %M% à revoir
 \newcommand{\masterofassassins}{Maître Assassin}
-\newcommand{\profesionalcourtesy}{Courtoisie Professionnelle}
+\newcommand{\professionalcourtesy}{Courtoisie Professionnelle}
+
+\newcommand{\herdingtheswarm}{Élevage de Masse} %M% Contresens
+\newcommand{\augmentations}{Augmentations} %M% à revoir
+\newcommand{\cauldronofblight}{Chaudron Infectieux}
+\newcommand{\abovethemasses}{Au Dessus de la Foule} %M% Position Dominante sinon
+\newcommand{\soundingthebell}{Sonner la Cloche}
+
 \newcommand{\disposable}{Chair à Canon} %M% à vérifier
 \newcommand{\plagueridden}{Infestés de Cloques} %M% pluriel ?
 \newcommand{\handlers}{Dressés} %M% à revoir
@@ -63,14 +71,13 @@
 \newcommand{\tagalong}{Solitaire} %M% Colle-aux-Basques
 \newcommand{\pavise}{Pavois}
 \newcommand{\calculating}{Calcul de Trajectoire} %M% à revoir
-\newcommand{\augmentations}{Augmentations} %M% à revoir
-\newcommand{\thunderhulks}{Bête Sur-Équipée} %M% à revoir
+\newcommand{\thunderhulksRULE}{Bête Sur-Équipée} %M% à revoir
 \newcommand{\electricdischarge}{Décharge Électrique}
 \newcommand{\toxicretaliation}{Sang Toxique} %M% Représailles Toxiques à revoir/vérifier
 \newcommand{\blackdeath}{Peste Noire} %M% à revoir
-\newcommand{\soundingthebell}{Sonner la Cloche}
-\newcommand{\herdingtheswarm}{Élevage de Masse}
-\newcommand{\cauldronofblight}{Chaudron Infectieux}
+
+
+
 
 %%% Names
 
@@ -78,12 +85,20 @@
 
 \newcommand{\vermindaemon}{Rat-Démon}
 \newcommand{\tyrant}{Dictateur} %M% à vérifier
-\newcommand{\magister}{Visionnaire} %M% mot latin ?
+\newcommand{\magister}{Visionnaire} %M% mot latin, Personnage, enseignant ou non, pédant et dogmatique
 \newcommand{\chief}{Chef}
-\newcommand{\magisterapprentice}{Apprenti Visionnaire} %M% mot latin ?
-\newcommand{\rakachitmachinist}{Bricolo Rakachit} %M% pourrait passer, à vérifier, demander ce qu'est rakachit
+\newcommand{\apprenticemagister}{Apprenti Visionnaire} %M% voir ci dessus
+\newcommand{\rakachitmachinist}{Bricolo Rakachit} %M% pourrait passer, à vérifier, demander ce qu'est rakachit. Bricolo fait un peu gentil. Machiniste c'est pas mal quand même ...
 \newcommand{\sicarraassassin}{Assassin Sicarra} %M% demander ce qu'est sicarra
 \newcommand{\plagueprophet}{Prêtre Bubonique} %M% de la peste ? pas mal, sinon, à voir
+
+% Mounts
+
+\newcommand{\monstrousrat}{Rat Bubonique Géant} %M% Rat Monstrueux
+\newcommand{\doombell}{Cloche d'Apocalypse}
+\newcommand{\verminguardlitter}{Trône-Vermine} %M% revoir selon choix
+\newcommand{\verminhulkbodyguard}{Garde du Corps Mutant} %M% revoir selon choix
+\newcommand{\plaguependulum}{Propagateur de Gale} %M% plague, à voir
 
 % Core
 
@@ -102,171 +117,187 @@
 \newcommand{\grenadiers}{Grenadiers}
 \newcommand{\gutterblades}{Coureur du Crépuscule} %M%  gutter = gouttière
 \newcommand{\plaguedisciples}{Disciples Cloqueteux} %M% plague, à voir
-\newcommand{\verminhulks}{Rat-Mutant} %M% ça manque du côté costaud du hulk
+\newcommand{\verminhulk}{Rat-Mutant} %M% ça manque du côté costaud du hulk
+\newcommand{\verminhulks}{Rats-Mutants} %M%
 
 % Rare
-%\newcommand{\thunderhulks}{Rat-Mutant Sur-Équipé} %M% déjà défini
+\newcommand{\thunderhulks}{Rat-Mutant Sur-Équipé} %M% revoir
 \newcommand{\dreadmill}{Roue Broyeuse} %M% à vérifier semble OK
 \newcommand{\abomination}{Amalgame de Vermine} %M% Abomination
 \newcommand{\verminousartillery}{Artillerie Vermineuse} %M% vermineuse bof
-\newcommand{\plaguecatapult}{Aurochs de Pierre} %M% quel était le bon nom ?
+\newcommand{\plaguecatapult}{Catapulte de la Peste} %M% quel était le bon nom ?
 \newcommand{\lightningcannon}{Canon Foudroyant}
-
-% Mounts
-
-\newcommand{\monstrousrat}{Rat Bubonique Géant} %M% Rat Monstrueux
-\newcommand{\doombell}{Cloche d'Apocalypse}
-\newcommand{\verminguardlitter}{Trône-Vermine} %M% revoir selon choix
-\newcommand{\verminhulkbodyguard}{Garde du Corps Mutant} %M% revoir selon choix
-\newcommand{\plaguependulum}{Propagateur de Gale} %M% plague, à voir
 
 % Short names and multiprofiles names
 
 \newcommand{\rakachittechnician}{Technicien Rakachit}
-\newcommand{\millrats}{Bête de trait} %M% jeu de mot sur les rats de labo ? roues de jeu
+\newcommand{\millrats}{Bête de trait} %M% jeu de mot sur les rats de labo ? roues de jeu. Au pluriel.
 \newcommand{\machine}{Machine}
-\newcommand{\catapultcrew}{Équipage de la Catapulte} %M% voir si nécessaire
-\newcommand{\cannoncrew}{Équipage du Canon} %M% voir si nécessaire
-\newcommand{\plaguebrothers}{Cholé-Rats} %M% pas mal, à vérifier
+\newcommand{\crew}{Servant}
+\newcommand{\catapultcrew}{Servant (Catapulte)}
+\newcommand{\cannoncrew}{Servant (Canon)}
+\newcommand{\plaguebrother}{Cholé-Rat} %M% pas mal, à vérifier
 
 
 
 % Profile wording
 
-\newcommand{\maypurchasetwodarkshards}{Peut avoir deux \darkshards}
-\newcommand{\mayexchangethrowingweaponsforasling}{Échanger ses \throwingweapons{} contre une \sling}
+\newcommand{\cannotbetakenwithadoombell}{Ne peut pas être pris avec une \doombell{}}
+\newcommand{\mayexchangethrowingweaponsforasling}{Échanger ses \throwingweapons{} contre une \sling{}}
 \newcommand{\siccaraassassinnote}{N'affecte que les Armes de Corps à Corps et de Tir standard.}
-\newcommand{\ifwizardmaypurchaseuptotwodarkshards}{Si Sorcier{,} peut avoir deux \darkshards}
+\newcommand{\ifwizard}{Si Sorcier}
+\newcommand{\verminguardveteranstandardbearer}{Le \veteranstandardbearer{} d'une unité de \verminguard{} peut disposer d'une Bannière Magique d'une valeur maximale de \pts{50}.}
 \newcommand{\footpadsnote}{Une unité de \footpads{} avec la règle \skirmisher{} ne peut pas prendre de Musicien ni de Porte-Étendard.}
-\newcommand{\magicplagueprophet}{Magie : Un \plagueprophet{} Sorcier a accès à la Discipline \disease.}
-\newcommand{\verminguardveteranstandardbearer}{Un \veteranstandardbearer{} \verminguard{} peut disposer d'une Bannière Magique d'une valeur maximale de 50 pts.}
-\newcommand{\meatgrinderweaponteamnote}{Une \weaponteam{} portant une \meatgrinder{} gagne les règles \innatedefence{4}, \warplatform{} et sa taille de socle passe à \unit{40x40}{\milli\meter}. Elle ne peut rejoindre que les unités de \ratsatarms{}, et perd la règle \insignificant{} lorsqu'elle le fait.}
-\newcommand{\musttakeoneartilleryweapon}{\optionschoice{\textbf{Doit} choisir une \artilleryweapon :}}
+\newcommand{\musttakeasingleweapon}{\optionschoice{\textbf{Doit} prendre une et une seule arme :}}
+\newcommand{\musttakeoneartilleryweapon}{\textbf{Doit} choisir une \artilleryweapon{} :}
 
 % Profile rules
 
 
-\newcommand{\schemerrule}{%
-\pathmaster{}, 3 \darkshards{}, +1 en Commandement. Utilise la Discipline \ruin{}.
-}
-
-\newcommand{\plaguebringerrule}{%
-\plagueridden{} (voir \plaguebrotherhood), +1 en Endurance. Utilise la Disciple \disease{}.
-}
-
-\newcommand{\deceiverrule}{%
-\lightningreflexes{}, +1 Attaque. Utilise la Discipline \shadows{}.
-}
-
-\newcommand{\thundererrule}{%
-\ha{}. +1 en Force. Utilise la Discipline \ruin{}.
-}
-
-\newcommand{\shaperrule}{%
-\regeneration{4}, +1 en Mouvement. Utilise la Discipline \disease{}.
+\newcommand{\vermindaemontable}{%
+\renewcommand{\arraystretch}{2}
+\begin{center}\begin{tabular}{rp{6cm}l}
+\hline
+ & \textbf{Bonus} & \textbf{Discipline de Magie} \tabularnewline
+\textbf{ \schemer} & \pathmaster{}, 3 \darkshards{}, +1 en Commandement & Discipline \ruin{} \tabularnewline
+\textbf{\plaguebringer} & \plagueridden{} (voir l'unité de base \plaguebrotherhood{}), +1 en Endurance & Discipline \disease{} \tabularnewline
+\textbf{\deceiver} & \lightningreflexes{}, +1 Attaque & Discipline \shadows{} \tabularnewline
+\textbf{\thunderer} & \ha{}, +1 en Force & Discipline \ruin{} \tabularnewline
+\textbf{\shaper} & \regeneration{4}, +1 en Mouvement & Discipline \disease{} \tabularnewline
+\hline
+\end{tabular}\end{center}
+\renewcommand{\arraystretch}{1.2}
 }
 
 \newcommand{\plaguepatriarchrule}{%
-Le \magister{} gagne +1 Endurance, \frenzy{}, \hatred{}, \resistant{} et doit générer ses sorts dans la Discipline \disease{}.
+Le \magister{} gagne +1 en Endurance et les règles \frenzy{}, \hatred{} et \resistant{}. Il doit générer ses sorts dans la Discipline \disease{}.
 }
 
 \newcommand{\fetthisbroodmasterrule}{%
-Le \chief{} gagne +1 en Mouvement et la règle spéciale \swiftstride{}.
+La figurine gagne +1 en Mouvement et la règle \swiftstride{}.
 }
 
 \newcommand{\aetherturbinerule}{%
-Le porteur peut lancer les trois sorts suivants en tant qu'\emph{Objet de sort} (Niveau de pouvoir 4):\\\\
-\ruinsignature{} de la Discipline \ruin{}. \\\\
-\alchemyone{} de la Discipline \alchemy{}. Ce sort ne peut viser que l'unité du lanceur.\\\\
-\changetwo{} de la Discipline \change{}.
+Le porteur dispose de trois sorts :
+\begin{itemize}[label={-}]
+\item \boundspell{4} : \ruinsignature{} (Discipline \ruin{}). 
+\item \boundspell{4} : \alchemyone{} (Discipline \alchemy{}). Ce sort ne peut viser que l'unité du lanceur.
+\item \boundspell{4} : \changetwo{} (Discipline \change{}).
+\end{itemize}
 }
 
 \newcommand{\masterofassassinsrule}{%
-Le personnage ne peut donner son Commandement qu'aux \footpads{} et \gutterblades{}.
+Seules les unités de \footpads{} et \gutterblades{} peuvent utiliser le Commandement de l'Assassin pour leurs tests.
 }
 
-\newcommand{\profesionalcourtesyrule}{%
-Un \sicarraassassin{} ne peut rejoindre (ni être déployé) dans une unité contenant déjà un autre \siccarraassassin{} (pas même en utilisant la règle \hidden{}).
-}
-
-\newcommand{\disposablerule}{%
-Quand une unité avec cette règle doit fuir suite à un test de moral, elle ne fuit pas mais est détruite sur place.
-}
-
-\newcommand{\plagueriddenrule}{%
-Une unité ennemie en contact d'au moins une unité avec cette unité reçoit un malus de -1 en Capacité de Combat, jusqu'à un minimum de 1.
-}
-
-\newcommand{\handlersrule}{%
-L'unité peut toujours faire une \specialrule{Reformation Rapide} (sans test de Commandement, voir le paragraphe Musicien du Livre de Règle).
-}
-
-\newcommand{\tinyrule}{%
-Cette unité est capable de bouger et de charger à travers les unités amies, mais ne peut jamais finir son mouvement à l'intérieur de l'une d'elles.
-}
-
-\newcommand{\tagalongrule}{%
-Une figurine avec cette règle spéciale et située à \distance{3} ou moins d'une unité de \ratsatarms{} ou de \verminguards{} qui n'est pas en fuite gagne la règle \wardsave{4} contre les attaques à distance.
-}
-
-\newcommand{\paviserule}{%
-La figurine gagne une Sauvegarde d'Armure de 4+ contre les attaques à distance.
-}
-
-\newcommand{\calculatingrule}{%
-Une figurine avec cette règle peut relancer son dé lors de la répartition des touches lorsqu'elle utilise la règle \callous{}.
-}
-
-\newcommand{\augmentationsrule}{%
-Chaque unité avec cette règle doit choisir deux règles parmi (vous devez les noter sur votre fiche d'armée):\\
-\thunderouscharge{}, \frenzy{} et \hatred{}, \stomp{2}, \innatedefence{5}, \swiftstride{}.
-}
-
-\newcommand{\thunderhulksrule}{%
-Lors de chaque tour, une figurine de l'unité peut décider d'utiliser l'une de ses armes, {les autres figurines doivent utiliser une Arme de base}. Si l'arme est utilisée lors de la phase de tir et obtient un incident de tir, au lieu d'utiliser la règle \volatile{}, aucun tir n'est effectué et l'unité perd 1D3 PV sans sauvegarde d'aucune sorte autorisée.
-}
-
-\newcommand{\electricdischargerule}{%
-Arme de tir avec le profil suivant : \range{18}, Force (1D6*2), \lightningattacks{}, \magicalattacks{}, \multiplewounds{1D3}{}, \reload{}, \multipleshots{3}.\\
-À chaque phase de tir alliée, la \dreadmill{} doit utiliser sa \electricdischarge{}. Le \rakachittechnician{} peut éviter de tirer en réussissant un test de commandement. La \dreadmill{} peut tirer même si elle est engagée au corps à corps, fuit ou s'est ralliée durant ce tour de joueur. Elle doit toujours choisir pour cible l'unité la plus proche d'elle (alliée ou ennemie, si plusieurs unités sont à égale distance, vous choisissez laquelle est touchée) même si cette unité se situe hors de son arc frontal et/ou hors de ligne de vue, et même si elle se trouve engagée au corps à corps. Chacun des 3 tirs sont résolus un à la fois (mesurez quelle unité est la plus proche, donc la cible du tir, avant de résoudre chaque tir).\\
-Les tirs \electricdischarge{} touchent automatiquement. Lancez le dé pour déterminer la Force de tous les tirs de la même phase une fois avant de déterminer les cibles. Si un \result{6} naturel est obtenue, la \dreadmill{} subit un incident de tir sur le tableau des \volatile{}. Toutefois, si l'incident survient lorsque la \dreadmill{} est engagée au corps à corps, appliquez le résultat \result{2-3} au lieu de tirer au hasard.
-}
-
-\newcommand{\toxicretaliationrule}{%
-Pour chaque blessure non sauvegardée que l'\abomination subit au corps à corps, il inflige 1D3 touches avec la règle \toxicattacks{} à l'unité qui lui a causé cette blessure.
-}
-
-\newcommand{\abovethemassesrule}{%
-Lorsque le \magister{} monté sur la \doombell{} choisi ses cibles pour les sorts du type Direct, il ignore la restriction de désigner ses cibles dans son arc de vue.\\
-Lorsque le \magister{} monté sur la \doombell{} choisi ses cibles pour les sorts du type Projectile, il peut avoir une ligne de vue à 360 degrés (à partir de n'importe quel point du socle de la \doombell{}) et peut lancer ces sorts même s'il est engagé au corps à corps.
-}
-\newcommand{\soundingthebellrule}{%
-Au début de chacune des tours de joueur alliés, vous pouvez choisir de lancer 1D6 ou 2D6. Appliquez l'effet du résultat sur le tableau suivant. Toutes les unités à portée (au moment de lancer les dés sur le tableau) gagnent les bonus décris jusqu'à la fin du tour de joueur suivant. Si un double survient lors de la détermination de l'effet, toutes les unités en contact de la \doombell{} subissent 1D6 touches Force 4 avec \armourpiercing{6}.
-\begin{tabular}{|l|l|}
-    \hline
-    1    & Aucun effet.\\
-    \hline
-    2-4  & Toutes les unités alliés à \distance{12} de la \doombell{} gagnent \lightningreflexes{}. Les figurines disposant déjà de cette règle gagnent +1 Attaque à la place.\\
-    \hline
-    5-6 & Toutes les unités alliés à \distance{12} de la \doombell{} peuvent relancer leurs distance de charge, de poursuite, de charge irrésistible et de \randommovement{}.\\
-    \hline
-    7-8 & Toutes les unités alliés à \distance{12} de la \doombell{} gagnent \frenzy. Les figurines disposant déjà de cette règle peuvent relancer leur jet pour toucher lorsqu'ils sont engagés au corps à corps.\\
-    \hline
-    9-10 & Toutes les unités alliés à \distance{12} de la \doombell{} gagnent \distracting et \hardtarget.\\
-    \hline
-    11-12 & Lorsque les flux de magie de la prochaine phase de magie allié seront générés, lancez 1D6 supplémentaire et enlevé le dé ayant donné le plus petit résultat.
-    \hline
-\end{tabular}
+\newcommand{\professionalcourtesyrule}{%
+Un Assassin ne peut pas rejoindre ou être déployé dans une unité qui contient déjà un Assassin, même \hidden{}.
 }
 
 \newcommand{\herdingtheswarmrule}{%
-La \inspiringpresence{} du personnage est augmentée de \distance{6}.
+La portée de la règle \inspiringpresence{} du Personnage est augmentée de \distance{6}.
+}
+
+\newcommand{\augmentationsrule}{%
+Vous devez choisir deux améliorations pour la figurine, qui doivent être inscrites sur la liste d'armée, parmi : \thunderouscharge{}, \frenzy{} et \hatred{}, \stomp{2} ou \swiftstride{}.
 }
 
 \newcommand{\cauldronofblightrule}{%
-Si le \plaguepriest est un Sorcier, il ne choisit pas ses sorts aléatoirement mais connaît toujours les trois sorts suivants: \diseasetwo{} (Discipline \disease{}), \diseasethree{} (Discipline \disease{}) et \ruintwo{} (Discipline \ruin{}). Ces sorts doivent rester uniques dans l'armée.
+Le Sorcier ne génère pas ses sorts aléatoirement mais connaît toujours les trois sorts suivants : \diseasetwo{} (Discipline \disease{}), \diseasethree{} (Discipline \disease{}) et \ruintwo{} (Discipline \ruin{}).
+
+Ces sorts ne peuvent pas être dupliqués dans l'armée.
 }
 
+\newcommand{\abovethemassesrule}{%
+Lorsque le \magister{} monté sur la \doombell{} choisit ses cibles pour les sorts de type Direct, il ignore la restriction qui l'oblige à désigner des cibles dans son arc frontal.
+
+Lorsqu'il choisit ses cibles pour les sorts de type Projectile, il peut tracer des lignes de vue à 360 degrés et à partir de n'importe quel point du socle de la \doombell{}. Il peut lancer ces sorts même s'il est engagé au corps à corps.
+}
+\newcommand{\soundingthebellrule}{%
+Au début de chaque Tour de Joueur allié, vous pouvez choisir de lancer 1D6 ou 2D6. Appliquez l'effet du résultat décrit dans le tableau suivant. Toutes les unités à portée au moment de lancer les dés gagnent ces bonus jusqu'à la fin du Tour de Joueur suivant. Si un double est obtenu, toutes les unités en contact socle à socle avec la \doombell{} subissent 1D6 touches Force 4 avec la règle \armourpiercing{6}.
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+\begin{tabular}{rp{12cm}}
+    \hline
+    \textbf{1} & Aucun effet.\tabularnewline
+    \textbf{2-4} & Toutes les unités alliés à moins de \distance{12} de la \doombell{} gagnent la règle \lightningreflexes{}. Les figurines disposant déjà de cette règle gagnent +1 Attaque à la place.\tabularnewline
+    \textbf{5-6} & Toutes les unités alliés à moins de \distance{12} de la \doombell{} peuvent relancer leurs jets de distance de charge, de Poursuite, de Charge Irrésistible et de \randommovement{}.\tabularnewline
+    \textbf{7-8} & Toutes les unités alliés à moins de \distance{12} de la \doombell{} gagnent la règle \frenzy{}. Les figurines disposant déjà de cette règle peuvent relancer leur jet pour toucher au corps à corps à la place.\tabularnewline
+    \textbf{9-10} & Toutes les unités alliés à moins de \distance{12} de la \doombell{} gagnent les règles \distracting{} et \hardtarget{}.\tabularnewline
+    \textbf{11-12} & Lorsque vous lancez les dés pour déterminer les Flux de Magie lors de votre prochaine Phase de Magie, lancez un dé supplémentaire et ignorez le dé ayant donné le plus petit résultat.\tabularnewline
+    \hline
+\end{tabular}\end{center}
+\renewcommand{\arraystretch}{1.2}
+}
+
+\newcommand{\disposablerule}{%
+Quand une unité avec cette règle doit fuir suite à l'échec d'un test de moral, elle est immédiatement détruite à la place.
+}
+
+\newcommand{\plagueriddenrule}{%
+Les unités ennemie en contact avec au moins une unité qui dispose de cette règle subissent un malus de -1 en Capacité de Combat, jusqu'à un minimum de 1.
+}
+
+\newcommand{\handlersrule}{%
+L'unité peut toujours faire une Reformation Rapide comme si elle avait un Musicien et passait automatiquement le test de Commandement.
+}
+
+\newcommand{\tinyrule}{%
+Les figurines avec cette règle peuvent ignorer les unités alliées quand elles se déplacent pendant la Phase de Mouvement, mais doivent respecter la Règle du Pouce d'Écart (à moins de charger, la règle étant modifiée comme d'habitude en ce cas).
+}
+
+\newcommand{\tagalongrule}{%
+Si la figurine est située à moins de \distance{3} d'une unité de \ratsatarms{} ou de \verminguard{} qui n'est pas en fuite, elle gagne la règle \wardsave{4} contre les Attaques à Distance.
+}
+
+\newcommand{\meatgrinderweaponteamnote}{Une \weaponteam{} équipé d'un \meatgrinder{} gagne les règles \innatedefence{4}, \warplatform{} et sa taille de socle passe à \unit{40x40}{\milli\meter}. Elle ne peut rejoindre que les unités de \ratsatarms{}, et perd la règle \insignificant{} lorsqu'elle le fait.}
+
+\newcommand{\paviserule}{%
+La figurine gagne une Sauvegarde d'Armure de 4+ contre les Attaques à Distance.
+}
+
+\newcommand{\calculatingrule}{%
+Les \grenadiers{} peuvent relancer les jets liés à la règle \callous{} pour déterminer quelles unités d'un combat ont été touchées quand le résultat du jet désigne une unité allié.
+}
+
+\newcommand{\augmentationsverminhulksrule}{%
+Vous devez choisir deux améliorations pour l'unité, qui doivent être inscrites sur la liste d'armée, parmi : \thunderouscharge{}, \frenzy{} et \hatred{}, \stomp{2}, \innatedefence{5} ou \swiftstride{}.
+}
+
+\newcommand{\thunderhulksRULErule}{%
+À chaque Tour de Joueur, une figurine de l'unité peut utiliser l'une de ses armes. Les autres figurines doivent utiliser leurs Armes de Base. Si un Incident de Tir survient, au lieu d'utiliser la règle \volatile{}, aucun tir n'est effectué et l'unité perd 1D3 PVs sans sauvegarde d'aucune sorte.
+}
+
+\newcommand{\electricdischargerule}{%
+Arme de Tir. \range{18}, Force 1D6*2, \lightningattacks{}, \magicalattacks{}, \multiplewounds{1D3}{}, \reload{}, \multipleshots{3}.
+
+À chaque Phase de Tir alliée, la \dreadmill{} doit tirer sa \electricdischarge{}. Le \rakachittechnician{} peut essayer d'éviter le tir en passant un test de Commandement. La \dreadmill{} peut tirer même si elle est engagée au corps à corps, en fuite ou si elle s'est ralliée durant ce Tour de Joueur. Elle doit toujours choisir pour cible l'unité la plus proche d'elle, alliée ou ennemie. Si plusieurs unités sont à égale distance, vous choisissez laquelle est touchée. L'unité ciblée peut se situer en dehors de l'arc frontal et de la ligne de vue de la \dreadmill{}, et même être engagée au corps à corps. Les trois tirs sont réalisés l'un après l'autre. Déterminer quelle unité est ciblée avant chaque tir.
+
+Les tirs de \electricdischarge{} touchent automatiquement. Un seul dé doit être lancé pour déterminer la Force des trois tirs. Si un \result{6} naturel est obtenu sur ce dé, la \dreadmill{} subit un Incident de Tir, sur la table de la règle \volatile{}. Toutefois, si l'incident survient alors que la \dreadmill{} est engagée au corps à corps, appliquez le résultat \textbf{Défaillance} au lieu de tirer au hasard.
+}
+
+\newcommand{\toxicretaliationrule}{%
+À chaque fois que des blessures non sauvegardées sont infligées à l'\abomination{} au Corps à Corps lors de la Phase de Corps à Corps, l'unité ayant causé les blessures subit 1D3 touches avec la règle \toxicattacks{} pour chaque blessure infligée.
+}
+
+\newcommand{\plaguecatapultrule}{%
+\textbf{\artilleryweapon} de type\newline
+\textbf{\catapult{} (\distance{3})}.
+
+\range{12-48}, \magicalattacks{}, \toxicattacks{}.
+}
+
+\newcommand{\lightningcannonrule}{%
+\textbf{\artilleryweapon} de type \textbf{\cannon{} (\distance{1D6})}.
+
+\range{60}, Force 1D6+4, \lightningattacks{}, \magicalattacks{}, \multiplewounds{\ordnance}{}, \armourpiercing{6}.
+ La force de l'éclair correspondant au boulet de canon n'est pas divisée par deux après l'impact initial.
+}
+
+\newcommand{\blackdeathrule}{%
+La \catapult{} gagne\newline
+[\multiplewounds{\ordnance}{}] et [+1 pour blesser].
+}
 
 
 
@@ -333,6 +364,7 @@ Quand la figurine subit un Incident de Tir, utilisez la table suivante plutôt q
     \hline
 \end{tabular}
 \end{center}
+\renewcommand{\arraystretch}{1.2}
 
 \closearmyspecialrules
 
@@ -353,7 +385,7 @@ Quand la figurine subit un Incident de Tir, utilisez la table suivante plutôt q
 
 \nopricelistitem{\sling} \range{18}, Force 3, \quicktofire{}.
 
-\nopricelistitem{\gasglobe} \range{12}, \magicalattacks{}, \armourpiercing{6}, \volleyfire{}, \quicktofire{}.\vspace{2pt}\newline
+\nopricelistitem{\gasglobes} \range{12}, \magicalattacks{}, \armourpiercing{6}, \volleyfire{}, \quicktofire{}.\vspace{2pt}\newline
 Les touches faites avec cette arme blessent toujours sur 4+. Si un \result{1} naturel est obtenu sur le jet pour toucher, le porteur subit une touche avec la règle \toxicattacks{}.
 
 \nopricelistitem{\ratlockpistol} \range{12}, Force 5, \magicalattacks{}, \armourpiercing{1}, \quicktofire{}. \vspace{2pt}\newline
@@ -477,7 +509,7 @@ Une seule utilisation. Peut être activé au début de n'importe laquelle de vos
 
 %%% START OF THE ARMYLIST - Translators shouldn't have to edit it %%%
 
-%\input{TheVerminSwarm_armylist.tex}
+\input{TheVerminSwarm_armylist.tex}
 
 
 %%% Quick Reference Sheet - AB_qrs.tex is automatic and shouldn't be edited %%%
@@ -499,10 +531,10 @@ Une seule utilisation. Peut être activé au début de n'importe laquelle de vos
 \sling{} & - & \distance{18} & 3 & - & - & - \tabularnewline
 \ratlockpistol{} & - & \distance{12} & 5 & - & - & 1 \tabularnewline
 \jezail{} & - & \distance{36} & 6 & - & - & 1 \tabularnewline
-\gasglobe{} & - & \distance{12} & - & - & - & 6 \tabularnewline
-\dreadmill{} - \electricdischarge{} & - & \distance{18} & 1D6*2 & 3 & 1D3 & - \tabularnewline
-\verminousartillery{} (\cannon{}) & \cannon{} (\distance{1D6}) & \distance{60} & 1D6+4 & - & \ordnance{} & 6 \tabularnewline
-\verminousartillery{} (\catapult{}) & \catapult{} (\distance{3}) & \distance{12-48} & Toxique & - & - & - \tabularnewline
+\gasglobes{} & - & \distance{12} & - & - & - & 6 \tabularnewline
+\electricdischarge{} (\dreadmill{}) & - & \distance{18} & 1D6*2 & 3 & 1D3 & - \tabularnewline
+\lightningcannon{} & \cannon{} (\distance{1D6}) & \distance{60} & 1D6+4 & - & \ordnance{} & 6 \tabularnewline
+\plaguecatapult{} & \catapult{} (\distance{3}) & \distance{12-48} & Toxique & - & - & - \tabularnewline
 \end{tabular}
 \end{center}
 

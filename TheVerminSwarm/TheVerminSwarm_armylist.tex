@@ -1,69 +1,57 @@
 
-%%% v0.99.1
+%%% v0.99.9
 
 \armylist
 
 \lordstitle
 
 \showunit{
-	name={\vermindaemon},
-	cost={400},
-	profile={ < 8 8 4 6 5 6 9 5 8},
-	type=\monster ,
+	name={\vermindaemon{} (\oneofakind{})},
+	QRSname={\vermindaemon{}},
+	cost=400,
+	profile={< 8 8 4 6 5 6 9 5 8},
+	type=\monster{},
 	basesize=75x50,
-	unitsize=\oneofakind,
-	specialrules={\otherworldly,  \daemonicinstability, \armourpiercing{6}, \swiftstride}, 
-	magiclevelapprentice={1},
-	magicpaths={qui dépendent de son option},
-	unitrules={
-		\unitrule{\schemer}{\schemerrule}
-		\unitrule{\plaguebringer}{\plaguebringerrule}
-		\unitrule{\deceiver}{\deceiverrule}
-		\unitrule{\thunderer}{\thundererrule}
-		\unitrule{\shaper}{\shaperrule}
-	},
+	unitsize=1,
+	specialrules={\otherworldly{},\daemonicinstability{},\armourpiercing{6},\swiftstride{}}, 
+	magiclevel=1,
 	armour={\innatedefence{5}},
 	options={
-		\mayhavethenotaleaderspecialrule{}= \free ,
-		\optionschoice{\maybecome}{
-			\magiclevelapprentice{2}=25,
-			\magiclevelmaster{3}=90,
-			\magiclevelmaster{4}=120,
+		\notaleader{}=\free{},
+		\magiclevelchoice{
+			\magiclevel{2}=25,
+			\magiclevel{3}=90,
+			\magiclevel{4}=120,
 		},
-		\mustbecomeoneofthefollowing{			
-			\schemer{}=\free,
-			\plaguebringer{}=\free,		
-			\deceiver{}=\free,		
-			\thunderer{}=\free,
-			\shaper{}=\free,
-		},
+	},
+	additional={%
+		\begin{center}\mustbecomeoneofthefollowingNOC{}\end{center}
+		\vermindaemontable{}
 	}
 }
 
-\showunit {
+\showunit{
 	name={\tyrant},
 	cost=80,
-	profile={ < 5 6 4 4 4 3 7 4 7},
-	type=\infantry ,
+	profile={< 5 6 4 4 4 3 7 4 7},
+	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\safetyinnumbers, \honourless, \callous},
+	commontype=\vermincommonrules{},
+	commonspecialrules={\safetyinnumbers{},\honourless{},\callous{}},
 	armour={\la},
 	options={
+		\darkshardbrew{}=30,
 		\magicalitemsallowance{}=\upto{}<100,
-		\takeadarkshardbrew{}=30,
-		\maytakeanyofthefollowing{
-			\shield{}=5,
-			\ha{}=8
-			},
+		\shield{}=5,
+		\ha{}=8,
 		\weapononechoice{
-			\pairedweaponandtailweapon{}=10,
 			\gw{}=10,
 			\halberd{}=10,
+			\pw{} \wordand{} \tailweapon{}=10,
 			\ratlockpistol{}=10,
-			},
 		},
+	},
 	mounts={
 		\verminguardlitter{}=40,
 		\verminhulkbodyguard{}=55,
@@ -74,186 +62,284 @@
 \showunit{
 	name={\magister},
 	cost=170,
-	profile={ < 5 3 3 3 4 3 5 1 6},
-	type=\infantry ,
+	profile={< 5 3 3 3 4 3 5 1 6},
+	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\safetyinnumbers, \honourless},
+	commontype=\vermincommonrules{},
+	commonspecialrules={\safetyinnumbers{},\honourless{}},
 	magiclevel=3,
-	magicpaths={\ruin, \shadows},
+	magicpaths={\ruin{},\shadows{}},
 	unitrules={\unitrule{\plaguepatriarch}{\plaguepatriarchrule}},
 	options={
-		\magicalitemsallowance{}=\upto{}<100,
 		\magiclevel{4}=30,
-		\maypurchasetwodarkshards{}=20,
-		\maytakeoneofthefollowing{\onechoiceonly
-			\becomeplaguepatriarch{}=20,
-			\rideadoombell{}=200,
-			},
+		2 \darkshards{}=20,
+		\magicalitemsallowance{}=\upto{}<100,
+		\plaguepatriarch{}\refsymbol{}=20,
+		\refsymbol{} \cannotbetakenwithadoombell{}=,
 	},
+	mounts={\doombell{}=200,},
 }
+
+
+
+
+
+
 
 \heroestitle
 
-
-\showunit {
+\showunit{
 	name={\chief},
 	cost=40,
-	profile={ < 5 5 4 4 4 2 6 3 6},
-	type=\infantry ,
+	profile={< 5 5 4 4 4 2 6 3 6},
+	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\safetyinnumbers, \honourless, \callous},
+	commontype=\vermincommonrules{},
+	commonspecialrules={\safetyinnumbers{},\honourless{},\callous{}},
 	armour={\la},
 	options={
-		\optionschoice{\maybecome \onechoiceonly}{
-			\bsboption{}=25,
-			\takeadarkshardbrew{}=25,
+		\onechoiceonly{
+			\bsb{}=25,
+			\darkshardbrew{}=25,
 		},
-		\maybeupgradedtofetthisbroodmaster{}=5,
+		\fetthisbroodmaster{}=5,
 		\magicalitemsallowance{}=\upto{}<50,
-		\maytakeanyofthefollowing{
-			\shield{}=2,
-			\ha{}=5,
-			},
+		\shield{}=2,
+		\ha{}=5,
 		\weapononechoice{
-			\pairedweaponandtailweapon{}=4,
 			\gw{}=4,
 			\halberd{}=4,
+			\pw{} \wordand{} \tailweapon{}=4,
 			\ratlockpistol{}=6,
-			},
 		},
+	},
 	mounts={
 		\verminhulkbodyguard{}=60,
 		\monstrousrat{}=135,
 	},
-	unitrules{
+	unitrules={
 		\unitrule{\fetthisbroodmaster}{\fetthisbroodmasterrule}
-		\unitrule{\darkshardbrew}{\darkshardbrewrule}
-	},
-}
-
-
-\showunit{
-	name={\apprenticemagister},
-	cost=65,
-	profile={ < 5 3 3 3 3 2 4 1 5},
-	type=\infantry ,
-	basesize=20x20,
-	unitsize=1,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\safetyinnumbers, \honourless},
-	magiclevel=1,
-	magicpaths={\ruin, \shadows},
-	options={
-		\magiclevel{2}=25,
-		\magicalitemsallowance{}=\upto{}<50,
-		\maypurchasetwodarkshards{}=20,
-	},
-}
-
-\showunit {
-	name={\rakachitmachinist},
-	cost=65,
-	profile={ < 5 4 4 4 4 2 5 3 6},
-	type=\infantry ,
-	basesize=20x20,
-	unitsize=1,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\safetyinnumbers, \honourless, \callous},
-	specialrules={\channel, \magicalattacks, \aetherturbine},
-	armour={\la},
-	options={
-		\magicalitemsallowance{}=\upto{}<50,
-		\maytakeha{}=5,
-		\weapononechoice{
-			\halberd{}=4,
-			\gasglobe{}=5,
-			\ratlockpistol{}=6,
-			\jezail{}=20,
-			},
-		},
-	unitrules{
-		\unitrule{\aetherturbine}{\aetherturbinerule}
 	},
 }
 
 \showunit {
 	name={\sicarraassassin},
 	cost=100,
-	profile={ < 6 6 5 4 4 2 8 3 7},
-	type=\infantry ,
+	profile={< 6 6 5 4 4 2 8 3 7},
+	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\safetyinnumbers, \honourless, \callous},
-	specialrules={\lightningreflexes, \wardsave{4}, \poisonedattacks, \hidden, \notaleader, \masterofassassins, \professionalcourtesy},
-	weapons={\pw, \throwingweapons},
+	commontype=\vermincommonrules{},
+	commonspecialrules={\safetyinnumbers{},\honourless{},\callous{}},
+	specialrules={\lightningreflexes{},\wardsave{4},\poisonedattacks{},\hidden{},\notaleader{},\masterofassassins{},\professionalcourtesy{}},
+	weapons={\pw{},\throwingweapons{}},
 	options={
 		\magicalitemsallowance{}=\upto{}<50,
-		\mayexchangethrowingweaponsforasling{}=\free,
-		\maytakeatailweapon{}=10,
-		\anyofthefollowing{
-			\lethalstrike{}=10,
-			\scoutandambush{}=15,
-			\multiplewounds{1D3}{}\refsymbol{}=25,
-			},
+		\mayexchangethrowingweaponsforasling{}=\free{},
+		\tailweapon{}=10,
+		\lethalstrike{}=10,
+		\scout{} \wordand{} \ambush{}=15,
+		\multiplewounds{1D3}{}\refsymbol{}=25,
+		\refsymbol{} \siccaraassassinnote{}=,
 		},
-	unitrules{
-		\unitrule{\masterofassassins}{\masterofassassinsrule}
-		\unitrule{\professionalcourtesy}{\profesionalcourtesyrule}
+	additional={%
+		\def\tempunitrules{
+			\unitrule{\professionalcourtesy}{\professionalcourtesyrule}
+			\unitrule{\masterofassassins}{\masterofassassinsrule}
+		}
+		\unitrules{\tempunitrules}
 	},
-	additional={\refsymbol{} \siccaraassassinnote}
 }
 
-\showunit {
-	name={\plagueprophet},
-	cost=60,
-	profile={ < 5 5 4 4 5 2 5 3 6},
-	type=\infantry ,
+\showunit{
+	name={\apprenticemagister},
+	cost=65,
+	profile={< 5 3 3 3 3 2 4 1 5},
+	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\safetyinnumbers, \honourless, \resistant},
-	specialrules={\hatred, \frenzy},
+	commontype=\vermincommonrules{},
+	commonspecialrules={\safetyinnumbers{},\honourless{}},
+	magiclevel=1,
+	magicpaths={\ruin{},\shadows{}},
+	options={
+		\magiclevel{2}=25,
+		\magicalitemsallowance{}=\upto{}<50,
+		2 \darkshards{}=20,
+	},
+}
+
+\showunit{
+	name={\rakachitmachinist},
+	cost=65,
+	profile={< 5 4 4 4 4 2 5 3 6},
+	type=\infantry{},
+	basesize=20x20,
+	unitsize=1,
+	commontype=\vermincommonrules{},
+	commonspecialrules={\safetyinnumbers{},\honourless{},\callous{}},
+	specialrules={\channel{},\magicalattacks{},\aetherturbine{}},
+	armour={\la},
 	options={
 		\magicalitemsallowance{}=\upto{}<50,
-		\optionschoice{\maybecome}{
-			\magiclevelapprentice{1}=40,
-			\magiclevelapprentice{2}=65,
-			},
-		\ifwizardmaypurchasetwodarkshards{}=20,
+		\ha{}=5,
+		\weapononechoice{
+			\halberd{}=4,
+			\gasglobes{}=5,
+			\ratlockpistol{}=6,
+			\jezail{}=20,
+		},
+	},
+	additional={%
+		\def\tempunitrules{\unitrule{\aetherturbine}{\aetherturbinerule}}
+		\vspace*{-0.2cm}\unitrules{\tempunitrules}
+	},
+}
+
+\showunit{
+	name={\plagueprophet},
+	cost=60,
+	profile={< 5 5 4 4 5 2 5 3 6},
+	type=\infantry{},
+	basesize=20x20,
+	unitsize=1,
+	commontype=\vermincommonrules{},
+	commonspecialrules={\safetyinnumbers{},\honourless{},\resistant{}},
+	specialrules={\hatred{},\frenzy{}},
+	magicpaths={\disease{}},
+	options={
+		\magicalitemsallowance{}=\upto{}<50,
+		\magiclevelchoice{
+			\magiclevel{1}=40,
+			\magiclevel{2}=65,
+		},
+		\ifwizard{}{,} 2 \darkshards{}=20,
 		\weapononechoice{
 			\pw{}=3,
 			\flail{}=4,
 			\halberd{}=4,
 			\plagueflail{}=10,
-			},
 		},
+	},
 	mounts={
 		\plaguependulum{}=150,
 	},
-	additional={\magicplagueprophet},
 }
+
+
+
+
+
+
+
+\mountstitle
+
+\showunit{
+	name={\verminguardlitter},
+	profile={< 5 4 - 4 4 2 5 4 5},
+	type=\infantry{},
+	basesize=40x40,
+	specialrules={\herdingtheswarm},
+	armour={\mountsprotection{5}},
+	additional={%
+		\def\tempunitrules{\unitrule{\herdingtheswarm}{\herdingtheswarmrule}}
+		\unitrules{\tempunitrules}
+	},
+}
+
+\showunit{
+	name={\monstrousrat},
+	profile={< 7 4 - 5 5 4 4 5 5},
+	type=\monstrousbeast{},
+	basesize=50x100,
+	commontype=\vermincommonrules{},
+	commonspecialrules={\callous{}},
+	additional={%
+		\def\tempspecialrules{\fear{}, \largetarget{}, \immunetopsychology{}, \breathweapon{\toxicattacks}, \regeneration{4}}
+		\vspace*{0.3cm}\specialrules{\tempspecialrules}
+	},
+}
+
+\showunit{
+	name={\verminhulkbodyguard},
+	profile={< 6 4 3 5 4 4 4 4 6},
+	type=\monstrousinfantry{},
+	basesize=40x40,
+	specialrules={\augmentations},
+	armour={\mountsprotection{6}},
+	unitrules={\unitrule{\augmentations}{\augmentationsrule}}
+}
+
+\showunit{
+	name={\plaguependulum{} (\oneofakind{})},
+	QRSname={\plaguependulum{}},
+	profile={ \chariot{}< 5 - - 6 5 5 3 - -,
+			  		\plaguebrother{} (4)< - 3 3 3 - - 3 1 5,
+	},
+	type=\chariot{},
+	basesize=60x100,
+	commontype=\vermincommonrules ,
+	commonspecialrules={\stateoftrance{\plaguebrotherhood}, \resistant{}},
+	weapons={\pw{} \only{\plaguebrother}},
+	armour={\innatedefence{5}},
+	options={
+		\cauldronofblight{}=35,
+	},
+	additional={%
+		\def\tempspecialrules{\hatred{}, \frenzy{} \only{\plaguebrother}, \largetarget{}, \stubborn{}, \fear{}, \wardsave{4}, \grindingattacks{1D6+2}, \impacthits{+2}, \warplatform{}}
+		\specialrules{\tempspecialrules}
+		
+		\def\tempunitrules{\unitrule{\cauldronofblight}{\cauldronofblightrule}}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
+	},
+}
+
+\showunit{
+	name={\doombell{} (\oneofakind{})},
+	QRSname={\doombell{}},
+	profile={\chariot{}< 5 - - 5 5 5 - - -,
+			  		\verminhulk{} (1)< - 4 1 5 - - 4 4 6,
+	},
+	type=\chariot{},
+	basesize=60x100,
+	commontype=\vermincommonrules{},
+	commonspecialrules={\stateoftrance{\ratsatarms{}, \verminguard{}}},
+	armour={\innatedefence{5}},
+	additional={%
+		\def\tempspecialrules{\largetarget{}, \magicresistance{2}, \stubborn{}, \terror{}, \wardsave{4}, \warplatform{}, \soundingthebell{}, \abovethemasses{}}
+		\vspace*{0.3cm}\specialrules{\tempspecialrules}
+		
+		\def\tempunitrules{
+			\unitrule{\abovethemasses}{\abovethemassesrule}
+			\unitrule{\soundingthebell}{\soundingthebellrule}
+		}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
+	},
+}
+
+
+
+
+
 
 \coreunitstitle
 
 \showunit{
 	name={\ratsatarms},
 	cost=80,
-	profile={ < 5 3 3 3 3 1 4 1 5},
-	type=\infantry ,
+	profile={< 5 3 3 3 3 1 4 1 5},
+	type=\infantry{},
 	basesize=20x20,
 	unitsize=20,
 	maxmodels=60,
 	costpermodel=5,
-	commontype=\vermincommonrules ,
+	commontype=\vermincommonrules{},
 	commonspecialrules={\safetyinnumbers},
-	armour={\la, \shield},
+	armour={\la{}, \shield},
 	options={
-		\maytakeaspear{}=\permodel{}<1, %créer une commande pour faire "1 pt / 2 figurines"
+		\spear{}=\permodel{}<0.5,
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
 }
@@ -261,32 +347,32 @@
 \showunit{
 	name={\verminguard},
 	cost=85,
-	profile={ < 5 4 3 3 3 1 5 1 5},
-	type=\infantry ,
+	profile={< 5 4 3 3 3 1 5 1 5},
+	type=\infantry{},
 	basesize=20x20,
 	unitsize=15,
 	maxmodels=50,
 	costpermodel=8,
-	commontype=\vermincommonrules ,
+	commontype=\vermincommonrules{},
 	commonspecialrules={\safetyinnumbers},
 	weapons={\halberd},
-	armour={\ha, \shield},
+	armour={\ha{}, \shield},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
-	additional={\verminguardveteranstandardbearer}
+	additional={\vspace*{0.3cm}\noindent\verminguardveteranstandardbearer}
 }
 
 \showunit{
 	name={\slaves},
 	cost=50,
 	profile={ < 5 2 2 3 3 1 4 1 2},
-	type=\infantry ,
+	type=\infantry{},
 	basesize=20x20,
 	unitsize=25,
 	maxmodels=60,
 	costpermodel=2,
-	commontype=\vermincommonrules ,
+	commontype=\vermincommonrules{},
 	commonspecialrules={\safetyinnumbers},
-	specialrules={\insignificant, \disposable},
+	specialrules={\insignificant{}, \disposable},
 	unitrules={\unitrule{\disposable}{\disposablerule}},
 	commandgroup={musician=10}
 }
@@ -294,38 +380,38 @@
 \showunit{
 	name={\footpads},
 	cost=60,
-	profile={ < 6 3 4 3 3 1 4 1 6},
-	type=\infantry ,
+	profile={< 6 3 4 3 3 1 4 1 6},
+	type=\infantry{},
 	basesize=20x20,
 	unitsize=10,
 	maxmodels=40,
 	costpermodel=6,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\safetyinnumbers, \callous},
+	commontype=\vermincommonrules{},
+	commonspecialrules={\safetyinnumbers{}, \callous},
 	weapons={\sling},
 	options={
-		\mayskirmishandvanguardfootpads{}=20,
-		\maytakepw{}=\permodel{}<1,
+		\skirmisher{} \wordand{} \vanguard{} \Xmodelsorless{15}\refsymbol{}=20,
+		\pw{}=\permodel{}<1,
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
-	additional={\footpadsnote}
+	additional={\vspace*{0.3cm}\noindent\refsymbol{} \footpadsnote{}},
 }
 
 \showunit{
 	name={\plaguebrotherhood},
 	cost=80,
-	profile={ < 5 3 3 3 4 1 3 1 5},
-	type=\infantry ,
+	profile={< 5 3 3 3 4 1 3 1 5},
+	type=\infantry{},
 	basesize=20x20,
 	unitsize=15,
 	maxmodels=50,
 	costpermodel=6,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\safetyinnumbers, \resistant},
-	specialrules={\hatred, \frenzy},
+	commontype=\vermincommonrules{},
+	commonspecialrules={\safetyinnumbers{}, \resistant},
+	specialrules={\hatred{}, \frenzy},
 	weapons={\pw},
 	options={
-		\maybeplagueridden{}=\permodel{}<1,
+		\plagueridden{}=\permodel{}<1,
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
 	unitrules={\unitrule{\plagueridden}{\plagueriddenrule}}
@@ -334,87 +420,107 @@
 \showunit{
 	name={\giantrats},
 	cost=40,
-	profile={ < 6 3 - 3 3 1 4 1 5},
-	type=\infantry ,
+	profile={< 6 3 - 3 3 1 4 1 5},
+	type=\infantry{},
 	basesize=20x20,
 	unitsize=10,
 	maxmodels=60,
 	costpermodel=3,
-	commontype=\vermincommonrules ,
+	commontype=\vermincommonrules{},
 	commonspecialrules={\safetyinnumbers},
-	specialrules={\fightinextrarank, \swiftstride, \handlers},
-	unitrules={\unitrule{\handlers}{\handlersrule}}
+	specialrules={\fightinextrarank{}, \swiftstride{}, \handlers{}},
+	additional={\def\tempunitrules{\unitrule{\handlers}{\handlersrule}}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
+	},
 }
+
+
+
+
+
+
+
+
+
 
 \specialunitstitle
 
 \showunit{
 	name={\ratswarm},
 	cost=40,
-	profile={ < 6 3 - 2 2 5 4 5 10},
-	type=\swarm ,
+	profile={< 6 3 - 2 2 5 4 5 10},
+	type=\swarm{},
 	basesize=40x40,
 	unitsize=2,
 	maxmodels=10,
 	costpermodel=15,
-	commontype=\vermincommonrules ,
+	commontype=\vermincommonrules{},
 	commonspecialrules={\safetyinnumbers},
-	specialrules={\insignificant, \swiftstride, \tiny},
-	unitrules={\unitrule{\tiny}{\tinyrule}}
+	specialrules={\insignificant{}, \swiftstride{}, \TINY{}},
+	additional={\def\tempunitrules{\unitrule{\TINY}{\tinyrule}}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
+	},
 }
 
 \showunit{
 	name={\weaponteam},
 	cost=65,
-	profile={ < 5 3 3 3 3 2 4 2 5},
-	type=\infantry ,
+	profile={< 5 3 3 3 3 2 4 2 5},
+	type=\infantry{},
 	basesize=25x50,
 	unitsize=1,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\safetyinnumbers, \callous, \broodscourage{\ratsatarms, \verminguard}},
-	specialrules={\insignificant, \tagalong},
+	commontype=\vermincommonrules{},
+	commonspecialrules={\safetyinnumbers{}, \callous},
 	armour={\ha},
 	options={
 		\musttakeasingleweapon{
-			\rotarygun{}=\free,
-			\naphthathrower{}=\free,
-			\globelauncher{}=\free,
-			\meatgrinder{}\refsymbol{}=\free.
-		}
+			\rotarygun{}=\free{},
+			\naphthathrower{}=\free{},
+			\globelauncher{}=\free{},
+			\meatgrinder{}\refsymbol{}=\free{},
+		},
 	},
-	unitrules={\unitrule{\tagalong}{\tagalongrule}},
-	additional={\refsymbol{} \meatgrinderweaponteamnote{}},
+	additional={%
+		\def\tempspecialrules{\insignificant{}, \tagalong{}, \broodscourage{\ratsatarms{}, \verminguard}}
+		\vspace*{-0.2cm}\specialrules{\tempspecialrules}
+	
+		\def\tempunitrules{\unitrule{\tagalong}{\tagalongrule}}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
+	
+		\noindent\refsymbol{} \meatgrinderweaponteamnote{}
+	},
 }
 
 \showunit{
-	name={\jezails}, %rajouter (0-2 choix)
+	name={\jezails{} (\zerotoXchoice{2})},
+	QRSname={\jezails{}},
 	cost=60,
-	profile={ < 5 3 3 3 3 2 4 2 5},
-	type=\infantry ,
+	profile={< 5 3 3 3 3 2 4 2 5},
+	type=\infantry{},
 	basesize=25x50,
 	unitsize=3,
 	maxmodels=6,
 	costpermodel=20,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\safetyinnumbers, \callous},
-	specialrules={\pavise},
+	commontype=\vermincommonrules{},
+	commonspecialrules={\safetyinnumbers{}, \callous},
+	armour={\pavise},
 	weapons={\jezail},
-	unitrules={\unitrule{\pavise}{\paviserule}}
+	unitequipment={\equipmentdef{\pavise}{\paviserule}},
 }
 
 \showunit{
 	name={\grenadiers},
 	cost=75,
-	profile={ < 5 3 4 3 3 1 4 1 5},
-	type=\infantry ,
+	profile={< 5 3 4 3 3 1 4 1 5},
+	type=\infantry{},
 	basesize=20x20,
 	unitsize=8,
 	maxmodels=15,
 	costpermodel=9,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\safetyinnumbers, \callous, \resistant},
-	specialrules={\skirmishers, \calculating},
-	weapons={\gasglobe},
+	commontype=\vermincommonrules{},
+	commonspecialrules={\safetyinnumbers{}, \callous{}, \resistant{}},
+	specialrules={\skirmisher{}, \calculating{}},
+	weapons={\gasglobes},
 	armour={\ha},
 	unitrules={\unitrule{\calculating}{\calculatingrule}}
 }
@@ -422,23 +528,21 @@
 \showunit{
 	name={\gutterblades},
 	cost=55,
-	profile={ < 6 4 4 3 3 1 5 1 7},
-	type=\infantry ,
+	profile={< 6 4 4 3 3 1 5 1 7},
+	type=\infantry{},
 	basesize=20x20,
 	unitsize=5,
 	maxmodels=10,
 	costpermodel=10,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\safetyinnumbers, \callous},
-	specialrules={\skirmishers, \vanguard},
-	weapons={\pw, \throwingweapons},
+	commontype=\vermincommonrules{},
+	commonspecialrules={\safetyinnumbers{}, \callous},
+	specialrules={\skirmisher{}, \vanguard},
+	weapons={\pw{}, \throwingweapons},
 	options={
-		\anyofthefollowing{
-			\scoutandambush{}=\permodel{}<2,
-			\poisonedattacks{}=\permodel{}<4,
-			},
-		\mayexchangethrowingweaponforasling{}=\free,
-		\maytaketailweapon{}=\permodel{}<1,
+		\scout{} \wordand{} \ambush{}=\permodel{}<2,
+		\poisonedattacks{}=\permodel{}<4,
+		\mayexchangethrowingweaponsforasling{}=\free,
+		\tailweapon{}=\permodel{}<1,
 	},
 	commandgroup={champion=10},
 }
@@ -446,162 +550,166 @@
 \showunit{
 	name={\plaguedisciples},
 	cost=65,
-	profile={ < 5 3 3 3 4 1 4 1 5},
-	type=\infantry ,
+	profile={< 5 3 3 3 4 1 4 1 5},
+	type=\infantry{},
 	basesize=20x20,
 	unitsize=5,
 	maxmodels=15,
 	costpermodel=10,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\safetyinnumbers, \resistant, \broodscourage{\plaguebrotherhood}},
-	specialrules={\hatred, \frenzy, \skirmishers, \monstroussupport},
+	commontype=\vermincommonrules{},
+	commonspecialrules={\safetyinnumbers},
 	weapons={\plagueflail},
 	commandgroup={champion=10},
+	additional={\def\tempspecialrules{\hatred{}, \frenzy{}, \skirmisher{}, \monstroussupport{}, \resistant{}, \broodscourage{\plaguebrotherhood}}
+		\vspace*{0.3cm}\specialrules{\tempspecialrules}
+	},
 }
 
 \showunit{
 	name={\verminhulks},
 	cost=100,
-	profile={ < 6 3 1 5 4 3 4 3 6},
-	type=\monstrousinfantry ,
+	profile={< 6 3 1 5 4 3 4 3 6},
+	type=\monstrousinfantry{},
 	basesize=40x40,
 	unitsize=3,
 	maxmodels=12,
 	costpermodel=37,
-	commontype=\vermincommonrules ,
+	commontype=\vermincommonrules{},
 	commonspecialrules={\safetyinnumbers},
-	specialrules={\immunetopsychology, \augmentations},
+	specialrules={\immunetopsychology{}, \augmentations},
 	commandgroup={champion=10},
-	unitrules={\unitrule{\augmentations}{\augmentationsrule}}
+	unitrules={\unitrule{\augmentations}{\augmentationsverminhulksrule}}
 }
 
-\rareunitstitle
 
+
+
+
+
+
+
+
+
+\rareunitstitle
 
 \showunit{
 	name={\thunderhulks},
 	cost=150,
-	profile={ < 6 3 3 5 4 4 4 3 6},
-	type=\monstrousinfantry ,
+	profile={< 6 3 3 5 4 4 4 3 6},
+	type=\monstrousinfantry{},
 	basesize=50x50,
 	unitsize=2,
 	maxmodels=4,
 	costpermodel=50,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\safetyinnumbers, \callous},
-	specialrules={\immunetopsychology, \thunderhulks{}},
-	weapons={\rotarygun, \naphthathrower, \globelauncher, \meatgrinder},
-	armour={\pa},
-	unitrules={\unitrule{\thunderhulks}{\thunderhulksrule}}
+	commontype=\vermincommonrules{},
+	commonspecialrules={\safetyinnumbers{}, \callous},
+	specialrules={\immunetopsychology{}, \thunderhulksRULE{}},
+	weapons={\rotarygun{}, \naphthathrower{}, \globelauncher{}, \meatgrinder},
+	armour={\platearmour},
+	additional={%
+		\def\tempunitrules{\unitrule{\thunderhulksRULE}{\thunderhulksRULErule}}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
+	},
 }
 
 \showunit{
 	name={\dreadmill},
 	cost=140,
 	profile={
-		\chariot < -  - - 6 6 5 4 - -,
-		\rakachittechnician{} (1) < -  3 3 3 - - 4 1 7,
-		\millrats{} < * 3 - 3 - - 4 * -
+		\chariot{}< -  - - 6 6 5 4 - -,
+		\rakachittechnician{} (1)< -  3 3 3 - - 4 1 7,
+		\millrats{}< \starsymbol{} 3 - 3 - - 4 \starsymbol{} -,
 	},
-	type=\chariot ,
+	type=\chariot{},
 	basesize=50x100,
 	unitsize=1,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\safetyinnumbers, \volatile},
-	specialrules={\largetarget, \immunetopsychology, \grindingattacks{1D3}, \randommovemet{3D6}, \randomattacks{2D6} \only{\millrats{}}, \impacthits{+1}},
 	armour={\innatedefence{4}},
-	unitequipment={
-		\equipmentdef{\electricdischarge}{\electricdischargerule}
+	weapons={\electricdischarge},
+	additional={%
+		\def\tempcommonspecialrules{\safetyinnumbers{}, \volatile}
+		\vspace*{0.3cm}\commonspecialrules{\vermincommonrules}{\tempcommonspecialrules}
+	
+		\def\tempspecialrules{\largetarget{}, \immunetopsychology{}, \grindingattacks{1D3}, \randommovement{3D6}, \randomattacks{2D6} \only{\millrats{}}, \impacthits{+1}}
+		\vspace*{0.3cm}\specialrules{\tempspecialrules}
+		
+		\def\tempunitequipment{\equipmentdef{\electricdischarge}{\electricdischargerule}}
+		\vspace*{0.1cm}\unitequipment{\tempunitequipment}
 	},
 }
 
 \showunit{
 	name={\abomination},
 	cost=210,
-	profile={ < * 3 1 6 5 6 4 * 8},
-	type=\monster ,
+	profile={< \starsymbol{} 3 1 6 5 6 4 \starsymbol{} 8},
+	type=\monster{},
 	basesize=50x100,
 	unitsize=1,
-	commontype=\vermincommonrules ,
+	commontype=\vermincommonrules{},
 	commonspecialrules={\safetyinnumbers},
-	specialrules={\stubborn, \immunetopsychology, \randommovemet{3D6}, \randomattacks{3D6}, \regeneration{4}},
+	specialrules={\stubborn{}, \immunetopsychology{}, \randommovement{3D6}, \randomattacks{3D6}, \regeneration{4}},
 	options={
-		\maytaketoxicretaliation{}=25
+		\toxicretaliation{}=25,
 	},
 	unitrules={\unitrule{\toxicretaliation}{\toxicretaliationrule}}
 }
 
-
-
-
-\mountstitle
-
-\mountssectionannouncement
-
 \showunit{
-	name={\monstrousrat},
-	profile={ < 7 4 0 5 5 4 4 5 5},
-	type=\monstrousbeast ,
-	basesize=50x100,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\callous},
-	specialrules={\fear, \largetarget, \immunetopsychology, \breathweapon{\toxicattacks}, \regeneration{4}},
-}
-
-
-\showunit{
-	name={\doombell},
-	profile={ \chariot{} < 5 - - 5 5 5 - - -,
-			  \verminhulks{} (1) < - 4 1 5 - - 4 4 6
-			 },
-	type=\chariot ,
-	unitsize=\oneofakind,
-	basesize=60x100,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\stateoftrance{\ratsatarms, \verminguard}},
-	specialrules={\largetarget, \magicresistance{2}, \stubborn, \terror, \wardsave{4}, \warplatform, \soundingthebell, \abovethemasses},
-	armour={\innatedefence{5}},
-	unitrules={
-		\unitrule{\soundingthebell}{\soundingthebellrule}
-		\unitrule{\abovethemasses}{\abovethemassesrule}
-	}
-}
-
-\showunit{
-	name={\verminguardlitter},
-	profile={ < 5 4 - 4 4 2 5 4 5},
-	type=\infantry ,
-	basesize=40x40,
-	specialrules={\herdingtheswarm},
-	armour={\mountsprotection{5}},
-	unitrules={\unitrule{\herdingtheswarm}{\herdingtheswarm}}
-}
-
-\showunit{
-	name={\verminhulkbodyguard},
-	profile={ < 6 4 1 5 4 4 4 4 6},
-	type=\monstrousinfantry ,
-	basesize=40x40,
-	specialrules={\augmentations},
-	armour={\mountsprotection{6}},
-	unitrules={\unitrule{\augmentations}{\augmentationsrule}}
-}
-
-\showunit{
-	name={\plaguependulum},
-	profile={ \chariot{} < 5 - - 6 5 5 - - -,
-			  \plaguebrothers{} (4) < - 3 3 3 - - 3 1 5
-			 },
-	type=\chariot ,
-	unitsize=\oneofakind,
-	basesize=60x100,
-	commontype=\vermincommonrules ,
-	commonspecialrules={\stateoftrance{\plaguebrotherhood}, \resistant},
-	specialrules={\hatred, \frenzy \only{\plaguebrothers}, \largetarget, \stubborn, \fear, \wardsave{4}, \grindingattacks{1D6+2}, \impacthits{+2}, \warplatform},
-	weapons={\pw \only{\plaguebrothers}},
-	armour={\innatedefence{5}},
-	options={
-		\maytakecauldronofblight{}=35
+	name={\verminousartillery},
+	cost=85,
+	profile={\machine{}< - - - - 7 3 - - -,
+		[\catapultcrew{} (3)]< 5 3 3 3 4 - 3 1 5,
+		[\cannoncrew{} (3)]< 5 3 3 3 3 - 4 1 5,
 	},
-	unitrules={\unitrule{\cauldronofblight}{\cauldronofblightrule}}
+	type=\warmachine{},
+	basesize=75,
+	unitsize=1,
+	additional={%
+		\begin{center}\musttakeoneartilleryweapon{}\end{center}
+		\setlength{\columnseprule}{0.5pt}
+		\renewcommand{\columnseprulecolor}{\color{black!30}}
+		\vspace*{-0.2cm}\begin{multicols}{2}
+		\raggedcolumns
+
+		\begin{center}{\largerfontsize\antiquefont\plaguecatapult}\end{center}
+		
+		\def\tempweapons{\plaguecatapult}
+		\def\tempcommonspecialrules{\safetyinnumbers}
+		\def\tempspecialrules{\resistant{}, \frenzy{}, \hatred{} \only{\crew}}
+		
+		{\setlength{\parskip}{0.3cm}
+			\weapons{\tempweapons}
+		
+			\commonspecialrules{\vermincommonrules}{\tempcommonspecialrules}
+		
+			\specialrules{\tempspecialrules}
+		}
+		
+		\def\tempunitequipment{\equipmentdef{\plaguecatapult}{\plaguecatapultrule}}
+		\vspace*{0.2cm}\unitequipment{\tempunitequipment}
+		
+		\def\tempoptions{\blackdeath{}=20,}
+		\options{\tempoptions}
+		
+		\def\tempunitrules{\unitrule{\blackdeath}{\blackdeathrule}}
+		\unitrules{\tempunitrules}
+		
+		\vspace*{\fill}\columnbreak
+		
+		\begin{center}{\largerfontsize\antiquefont\lightningcannon}\end{center}
+		
+		\def\tempweapons{\lightningcannon}
+		\def\tempcommonspecialrules{\safetyinnumbers{}, \volatile}
+		
+		{\setlength{\parskip}{0.3cm}
+			\weapons{\tempweapons}
+		
+			\commonspecialrules{\vermincommonrules}{\tempcommonspecialrules}
+		}
+		
+		\def\tempunitequipment{\equipmentdef{\lightningcannon}{\lightningcannonrule}}
+		\vspace*{0.2cm}\unitequipment{\tempunitequipment}
+		
+		\vspace*{\fill}		
+		\end{multicols}		
+	},
 }
