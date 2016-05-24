@@ -1,0 +1,374 @@
+\input{../Layout/AB_layout.tex}
+
+\newcommand{\booktitle}{Elfes Sylvestres}
+\newcommand{\version}{0.99.9}
+\newcommand{\frenchversion}{2.0}
+\newcommand{\booklogo}{pics/logo_big_SE.png}
+
+% Army wide rules
+
+\newcommand{\theforestfollows}{Les Forêts Suivent}
+\newcommand{\therarestofspirits}{Les Esprits les Plus Rares} %M% peut-être un poil long, je ne sais pas si on peut faire mieux.
+
+% Army special rules
+
+\newcommand{\forestwalker}{Arpenteur Sylvestre}
+\newcommand{\masterarcher}{Maître-Archer}
+\newcommand{\treesinging}{Chant Sylvestre} %M% je ne sais pas si on retranscrit bien, là. tree c'est plus précis que ça, c'est peut-être chant des arbres, ou chant "dans la langue des arbres". Je crois que l'idée c'est de "parler" aux arbres à travers un champ. Je me demande juste si on peut pas trouver mieux.
+\newcommand{\emboldeningboughs}{Buissons Ardents} %M% Bough pas bush. Du coup c'est des branches, rameaux. Regarder le fluff. Emboldening c'est enhardissant pas ardent :D
+
+
+% Army common type special rules
+
+\newcommand{\elvescommonrules}{Règles spéciales des Elfes}
+\newcommand{\sylvancommonrules}{Règles spéciales des Sylves}
+
+
+% Armoury
+
+\newcommand{\feyarrows}{Flèches Condamnatrices} %M% Condamnatoires ? ou autre chose mais ça ça n'existe pas :p Fey c'est féérique ! Regarder le fluff.
+\newcommand{\blackarrows}{Flèches Sombres}
+\newcommand{\hawthornpoint}{Dard d'Aubépine}
+\newcommand{\truemarkarrow}{Flèches Suiveuses}
+\newcommand{\starlightshaft}{Traits Stellaires}
+\newcommand{\perforatingtip}{Matras Perforants} %M% Matra, kesako ? tip c'est pointe ?
+\newcommand{\jewelweedshot}{Tir de Balsamine}
+\newcommand{\impalingroots}{Barrière de Racines} %M% impaling est pas vraiment retranscrit
+\newcommand{\sylvanlance}{Lance Sylvestre}
+\newcommand{\sylvanblades}{Lames Sylvestres}
+\newcommand{\elvencloak}{Cape Elfique}
+
+% Big Names
+
+\newcommand{\kindred}{Clan} %M% J'ai l'impression que le sens de kindred est un peu différent, regarder le fluff. parenté, famille, lien de sang ?
+\newcommand{\kindreds}{Clans}
+\newcommand{\aspectofnature}{Aspect de la Nature}
+\newcommand{\aspectsofnature}{Aspect de la Nature}
+
+% Spells
+
+\newcommand{\whitemagiczero}{Traits de Lumière}
+\newcommand{\wildernessfour}{Calamité des Bois Sauvages}
+% Other rules
+
+\newcommand{\dancesofcenyrn}{Danses de Cenyrn}
+\newcommand{\danceofwhirlingblades}{Danse de Tempête de Lames}
+\newcommand{\danceofthepartingmists}{Danse du Brouillard Enveloppant}
+\newcommand{\danceofbedevilments}{Danse de Confusion}
+\newcommand{\danceofdisarmingdelusions}{Danse des Désillusions}
+\newcommand{\poisonedthorn}{Épine Empoisonnée}
+
+%%% Names
+
+% Characters
+
+\newcommand{\forestprince}{Seigneur Sylvestre}
+\newcommand{\forestprinces}{Seigneurs Sylvestres}
+\newcommand{\highdruid}{Haut Druide}
+\newcommand{\highdruids}{Hauts Druides}
+\newcommand{\treefatherancient}{Tréant Vénérable}
+\newcommand{\treefatherancients}{Tréants Vénérables}
+\newcommand{\avatarofnature}{Avatar de la Nature}
+\newcommand{\avatarsofnature}{Avatars de la Nature}
+\newcommand{\chieftain}{Chef Sylvestre}
+\newcommand{\chieftains}{Chefs Sylvestres}
+\newcommand{\druid}{Druide}
+\newcommand{\druids}{Druides}
+\newcommand{\dryadmatriarch}{Reine Méliade}
+\newcommand{\dryadmatriarches}{Reines Méliades}
+\newcommand{\thicketshepherd}{Dendrâme Ancien}
+\newcommand{\thicketshepherds}{Dendrâmes Anciens}
+
+% Core
+
+\newcommand{\forestguard}{Protecteur de la Forêt}
+\newcommand{\forestguards}{Protecteurs de la Forêt}
+\newcommand{\sylvanarcher}{Archer Sylvestre}
+\newcommand{\sylvanarchers}{Archers Sylvestres}
+\newcommand{\heathrider}{Cavalier des Bruyères}
+\newcommand{\heathriders}{Cavaliers des Bruyères}
+\newcommand{\dryad}{Méliade}
+\newcommand{\dryads}{Méliades}
+
+% Special
+
+\newcommand{\bladedancer}{Danselame}
+\newcommand{\bladedancers}{Danselames}
+\newcommand{\forestranger}{Ranger des Forêts}
+\newcommand{\forestrangers}{Rangers des Forêts}
+\newcommand{\wildhuntsman}{Chasseur Sauvage}
+\newcommand{\wildhuntsmen}{Chasseurs Sauvages}
+\newcommand{\kestrelknight}{Fauconnier}
+\newcommand{\kestrelknights}{Fauconniers}
+\newcommand{\thicketbeast}{Dendrâme}
+\newcommand{\thicketbeasts}{Dendrâmes}
+
+% Rare
+
+\newcommand{\sylvansentinel}{Sentinelle Sylvestre}
+\newcommand{\sylvansentinels}{Sentinelles Sylvestres}
+\newcommand{\pathfinder}{Pisteur de la Canopée}
+\newcommand{\pathfinders}{Pisteurs de la Canopée}
+\newcommand{\foresteagle}{Aigle Sylvestre}
+\newcommand{\foresteagles}{Aigles Sylvestres}
+\newcommand{\briarmaiden}{Sabbat de la Ronce}
+\newcommand{\briarmaidens}{Sabbats de la Ronce}
+\newcommand{\treefather}{Tréant Protecteur}
+\newcommand{\treefathers}{Tréants Protecteurs}
+
+% Mounts
+
+\newcommand{\elvenhorse}{Cheval elfique}
+\newcommand{\greatelk}{Grand élan}
+\newcommand{\unicorn}{Licorne}
+\newcommand{\dragon}{Dragon}
+}
+
+% Short names and multiprofiles names
+
+\newcommand{\rider}{Cavalier}
+\newcommand{\kestrel}{Faucon}
+\newcommand{\elvendeer}{Cerf elfique}
+
+
+
+% Profile wording
+
+\newcommand{\joinakindred}{Rejoindre un \kindred{}}
+\newcommand{\mustbecomeoneofthefollowing}{Doit devenir au choix :}
+\newcommand{\takeasingleaspectofnature}{Prendre un seul \aspectofnature{}}
+\newcommand{\ifwizardmaytakeanarcaneitem}{Si Sorcier{,} peut prendre un Objet Arcanique}
+\newcommand{\unlessmountedbywildhuntermaytakemountsprotection}{Sauf si monté par un \wildhunter{}{,} peut prendre \mountsprotection{5}}
+\newcommand{\breathweapondragon}{\breathweapon{Force 4, \flamingattacks{}}}
+\newcommand{\exchangespearwithsylvanblades}{Échanger la \spear{} contre des \sylvanblades{}}
+\newcommand{\maytakeblackarrowsXchoice}{\blackarrows{} (0-50 choix possible)}
+\newcommand{\mayexchangelongbowforshield}{Échanger l'\longbow{} contre un \shield{}}
+\newcommand{\exchangefastcavalryforelvencloak}{Échanger \fastcavalry{} contre une \elvencloak{}}
+\newcommand{\skirmishmaxXmodelsdryads}{\skirmisher{} (15 figurines max)}
+\newcommand{\exchangesylvanlanceforsylvanblades}{Échanger la \sylvanlance{} contre des \sylvanblades{}}
+\newcommand{\skirmishmaxXmodelskestrels}{\skirmisher{} (3 figurines max)}
+\newcommand{\singleunitmaytakescout}{Une seule unité peut avoir \scout{}}
+\newcommand{\briarmaidensmagic}{Magie}
+
+% Profile rules
+
+\newcommand{\blackarrowsrule}{%
+\feyarrows{} : Force 4 à courte portée. \armourpiercing{1} à longue portée.
+}
+
+\newcommand{\fireblessingrule}{%
+Au début de chaque phase de corps à corps, les unités entièrement constituées de figurines suivant cette règle peuvent choisir une des danses ci-dessous. Aucune figurine ne peut utiliser la même danse deux tours de joueurs consécutifs. Toutes les figurines d'une même unité doivent choisir la même danse. Les effets d'une danse durent jusqu'à la fin de la manche de Combat.
+\begin{customdescription}
+\item[\danceofwhirlingblades{} :] +1 Attaque.
+\item[\danceofpartingmists :]\wardsave{3} mais souffre d'un malus de -1 en Force et perd le\armourpiercing{1} conféré par leurs \sylvanblades{}.
+\item[\danceofbedevilments :] L'unité gagne la règle \fear{}. Les unités ennemies en contact socle à socle ne recevront aucun bonus de rang lors du calcul du résultat de combat.
+\item[\danceofdisarmingdelusions :] Les unités ennemies en contact ne bénéficient pas de la règle \parry{}.
+\end{customdescription}
+}
+
+\newcommand{\hawthornpointsrule}{%
+\feyarrows avec la règle \poisonedattacks{}.
+}
+
+\newcommand{\briarmaidensmagicrule}{%
+\wizardconclave{} avec \whitemagiczero{} (Discipline \whitemagic{}), \wildernessfour{} (Discipline \wilderness{}).
+}
+
+\newcommand{\poisonedthornrule}{%
+Arme de Tir avec le profil suivant : \range{12}, Force 3, \quicktofire{}, \armourpiercing{1}, \poisonnedattacks{}.
+}
+
+\begin{document}
+
+\input{../Layout/AB_titlepage.tex}
+
+\startarmywiderules
+
+\armyspecialruleentry{\theforestfollows}
+
+Après avoir choisi les zones de déploiement, mais avant qu'aucune figurine ne soit déployée, vous pouvez placer un élément de décor Forêt (taille maximale de \unit{19x27}{\centi\metre}) entièrement dans votre moitié de table, ne touchant aucun autre décor, et à plus de \distance{6} d'un objectif. Toutes les Forêts sur la table sont considérées comme des \dangerousterrain{1} pour toutes les unités, excepté pour celles qui ont les règles \strider{} ou \strider{\forest}. 
+
+\armyspecialruleentry{\theforestfollows}
+
+Votre armée ne peut contenir qu'une combinaison de maximum 3 figurines de \treefathers{} et/ou \treefatherancients{}. Cette limite passe à 6 pour une Grande Armée et à 2 pour une Patrouille.
+
+\closearmywiderules
+
+\vspace*{1.5cm}
+\startarmyspecialrules
+
+\armyspecialruleentry{\forestwalker}
+
+Toutes les figurines avec cette règle ont la règle spéciale \strider{\forest}. Si une unité est composée entièrement de figurines avec cette règle et qu'elle commence une phase de combat avec la majorité de son empreinte dans une Forêt, alors tous les éléments de figurine possédant cette règle relancent les \result{1} pour blesser au corps à corps pour la durée de cette phase. De plus, rajoutez +1 à vos tentatives de canalisation si votre armée possède au moins une figurine avec cette règle et canalisant depuis une Forêt. 
+
+\armyspecialruleentry{\masterarchers}
+
+Les figurines avec cette règle comptent comme étant équipées des \feyarrows{} suivantes : \truemarkarrows{}, \starlightshaft{}, \perforatingtip et \jewelweedshot. (voir l'Armurerie).
+
+\armyspecialruleentry{\treesinging}
+
+Objet de sort. Niveau de Puissance 3, \range{24}, Spécial, Immédiat. Le sort cible un élément de décor Forêt, toutes les unités alliées situées complètement dans cette Forêt et toutes les unités ennemies étant au moins en contact avec cette Forêt. Chaque unité ennemie ciblée subit 1D6 touches de Force 5. La Forêt et toutes les unités amies situées complètement à l'intérieur de celle-ci (pas les unités ennemies) sont déplacées de \distance{1D3+3} dans une direction choisie par le lanceur du sort avant de lancer le dé de distance, comme si elles avaient effectué un mouvement magique. La Forêt arrête son mouvement juste avant qu'elle n'entre en contact avec une unité ennemie ou un autre élément de décor.
+
+\armyspecialruleentry{\emboldeningboughs}
+
+Les unités composées en majorité de figurines possédant cette règle gagnent la règle \stubborn{} lorsque la majorité de l'empreinte de l'unité est dans une Forêt.
+
+\closearmyspecialrules
+
+\vspace*{1.5cm}
+\startarmyarmoury
+
+\startitemlistonecol
+
+\listitemonecol{\feyarrows} Il y a 6 types de \feyarrows{}, avec chacune un effet différent quand vous tirez avec un \longbow{}. Toutes les figurines ordinaires d'une unité avec des \feyarrows{}, doivent choisir le même effet durant la phase de tir. À chaque fois qu'une figurine équipée de \feyarrows{} effectue un tir avec son \longbow{}, elle peut choisir un des effets suivants :\\
+1) Utilisez les règles normales de l'\longbow{}.\\
+ou\\
+2) Ignorez les pénalités de mouvement et tir, perdez la règle \volleyfire{}, et appliquez les effets des \feyarrows{} équipées par votre unité.\\
+
+	\begin{customsubitemize}
+	\item[-] \textbf{\blackarrow{}} : Vos tirs à courte portée ont Force 4 et vos tirs à longue portée gagnent la règle spéciale \armourpiercing{1}.
+	\item[-] \textbf{\hawthornpoint{}} : \poisonedattacks.
+	\item[-] \textbf{\truemarkarrow{}} : Ignorez les éventuels modificateurs pour toucher provenant des couverts, des \skirmishers{} et de la longue portée.
+	\item[-] \textbf{\starlightshaft{}} : \divineattacks{}, \flamingattacks{} et \magicalattacks{}.
+	\item[-] \textbf{\perforatingtip{}} : \armourpiercing{3}.
+	\item[-] \textbf{\jewelweedshot{}} : \multipleshots{2}.
+	\end{customsubitemize}
+
+\listitemonecol{\impalingroots} Attaque de tir possédant le profil suivant : \range{12}, Force 4 (les touches passent à Force 5 si la cible est au moins en contact avec une Forêt), \multipleshots{1D6+1}, \quicktofire{}. La figurine ignore les éventuels modificateurs pour toucher provenant des couverts. Il est possible de tirer après une marche forcée.
+
+\listitemonecol{\sylvanlance} Type : \lightlance. Les Attaques effectuées avec cette arme gagnent \armourpiercing{1}.
+
+\listitemonecol{\sylvanblades} Type : \pw. Les Attaques effectuées avec cette arme gagnent \armourpiercing{1}.
+
+\listitemonecol{\elvencloak} Si elle est combinée à une \la{}, donne au porteur \innatedefence{6}.
+
+\enditemlistonecol
+
+\closearmyarmoury
+
+\begin{multicols}{2}
+\startarmynewsection{\kindreds}
+
+\spaceaftersection{}
+
+Les \kindreds{} peuvent être pris en autant d'exemplaires que vous le souhaitez
+
+\startpricelistNSP
+
+\pricelistitem{Clan des Métamorphes}{55/40}Figurine à pied uniquement. La figurine gagne +4 en Mouvement, +2 en Initiative, +1 Attaque et la règle \wardsave{4}. La figurine ne peut jamais rejoindre une unité, ni être rejointe par un autre Personnage, et a la règle \notaleader{}.
+
+\pricelistitem{Clan des Gardiens de la Forêt}{40/30}Figurine à pied uniquement. La figurine gagne +1 Attaque et la règle spéciale \innatedefence{5}. Les seules armes de corps à corps dont elle peut être équipée sont des armes magiques ou ordinaires du type : \spear{}, \greatweapon{}, \sylvanblades{}. Ou d'une \hw{} ordinaire.
+
+\pricelistitem{Clan des Pisteurs}{35/25}Figurine à pied uniquement. La figurine gagne +1 en Capacité de Tir et les règles spéciales \scout{}, \masterarchers{}, \multipleshots{Attaques sur le profil}.
+
+\pricelistitem{Clan des Chasseurs}{35/25}Figurine montée sur \elvenhorse{} ou \greatelk{} uniquement. La figurine du porteur gagne la règle \frenzy{}. Le porteur gagne les règles \devastatingcharge{} et \lighttroops{}. De plus, la figurine provoque la \fear{} jusqu'à la fin de la phase de combat après qu'elle a réussit une charge.
+
+\pricelistitem{Clan des Danselames}{25}Figurine à pied uniquement. La figurine ne peut rejoindre que des unités de \bladedancers{} et/ou des Personnages avec ce \kindreds{}. La figurine gagne les règles spéciales \dancesofcenyrn{}, \immunetopsychology{}, \wardsave{6}. La figurine et son unité gagnent la règle \swiftstride{}. De plus, elle ne peut pas s'équiper d'Arme de tir, ni d'Armure (magique ou ordinaire).
+
+\endpricelistNSP
+
+\startarmynewsection{\kindreds}
+
+\spaceaftersection{}
+
+Les \aspectsofnature{} sont tous \oneperarmy{}.
+
+\startpricelistNSP
+
+\pricelistitem{Sarment de la Vigne}{50/25} Lors d'un défi, toutes les touches réussies par votre adversaire doivent être relancées.
+
+\pricelistitem{Hurlement Effrayant}{40} Les \dryads{} de l'unité du porteur gagnent la règle \hatred{}.
+
+\pricelistitem{Spores Toxiques}{30}Chaque figurine de l'unité du porteur gagne une attaque de tir avec le profil suivant : \range{12}, Force 3, \lethalstrike{}.
+
+\pricelistitem{Couronne de Chêne}{5}\only{Général}. Toutes les unités de \dryads et de \thicketbeasts{} de l'armée peuvent prendre un Porte-étendard et/ou un Musicien pour 10 pts/figurine. Un unique \thicketshepherd{} peut devenir \bsb{} pour 25 pts. Il peut alors prendre une Bannière Magique, mais s'il prend un \aspectofnature{}, alors le total des deux ne peut excéder 50 pts. S'il ne prend pas d'\aspectofnature{}, alors le coût de la Bannière Magique n'a pas de limite.
+
+\pricelistitem{Racines Entrelacées}{5}Pendant la création de votre armée, améliorez une unité de \thicketbeasts{} pour 10 pts/fig. Les figurines de l'unité ainsi améliorée gagnent un bonus de +1 en Force  tant que le porteur est en vie. Le coût additionnel est ajouté à celui de l'unité.
+
+\endpricelistNSP
+\end{multicols}
+
+\closearmynewsection
+
+\startarmymagicalitems
+
+\armymagicalweapons
+
+\startpricelist
+
+\pricelistitem{Épée Cyclone}{60/40}Type : \gw{}. Figurine à pied uniquement. +1 en Capacité de Combat, +1 à la Sauvegarde d'Armure au corps à corps jusqu'à un maximum de 2+. Les Attaques effectuées avec cette arme ont \multiplewounds{2}{}.
+
+\pricelistitem{Lance Sacrée de Cadaron}{40/30}Type : \spear{}. Les Attaques faites avec cette arme ont +1 en Force. Si le porteur cause au moins une blessure non sauvegardée avec cette arme, celui-ci et toutes les figurines ordinaires de l'unité du porteur gagnent la règle spéciale \distracting{} jusqu'à la fin de la phase de corps à corps.
+
+\pricelistitem{Arc de Wyscan}{35}Type : Arc long. Le porteur peut choisir de remplacer son attaque de tir normale par \multipleshots{2D6}, Force 1 et \poisonedattacks{}. Cette attaque de tir spéciale ne peut pas être combinée avec des \feyarrows{}.
+
+\endpricelist
+
+\armymagicalarmour
+
+\startpricelist
+
+\pricelistitem{Heaume de la Chasse Sauvage}{20}Type : Aucun (Sauvegarde d'Armure 6+). Lors de chaque phase de combat suivant une charge réussit, le porteur gagne +1 en Capacité de Combat et +1 Attaque jusqu'à la fin de la phase de corps à corps.
+
+\endpricelist
+
+\armytalismans
+
+\startpricelist
+
+\pricelistitem{Pendentif Flamboyant}{25}Au corps à corps, ni le porteur et ni les figurines attaquant le porteur ne reçoivent aucun bonus de Force de la part de leur Arme (magique ou ordinaire).
+
+\endpricelist
+
+\armyenchanteditems
+
+\startpricelist
+
+\pricelistitem{Graines Sacrées}{35}Figurine à pied uniquement. Une seule utilisation. À la fin de n'importe quelle phase de Mouvement de joueur ami, l'objet peut être activé. Placez entièrement un élément de décor Forêt (\distance{6} de diamètre maximum) touchant le porteur. La Forêt doit être placée à plus de \distance{1} de n'importe quelle unité ennemie et d'autres éléments de décors.
+
+\pricelistitem{Miroir de l'Arpenteur de Brouillard}{35}Figurine à pied uniquement. Une seule utilisation. Si l'unité du porteur est constituée en totalité de figurine de type Infanterie, qu'elle n'est pas engagée au corps à corps, que son empreinte est complètement à l'intérieur d'un élément de décor Forêt et que celle-ci ne contient aucune figurine ennemie, le porteur et son unité peuvent se téléporter dans une autre Forêt sur la table à la fin de votre phase de Mouvement. Retirez l'unité et placez-la avec son empreinte complètement à l'intérieur d'une autre Forêt, dans n'importe quelle formation autorisée mais en respectant la règle du \distance{1} d'écart. L'unité compte comme ayant fait une marche forcée.
+
+\pricelistitem{Pluie de Flèches}{30}Une seule utilisation. Cet objet est utilisé comme une arme de tir avec le profil suivant : \range{30}, Force 4, \multipleshots{3D6}. Si le porteur tire à courte portée, l'arme gagne aussi \armourpiercing{1}. Lors du tour durant lequel vous tirez avec la Pluie de Flèches, le porteur ne peut pas utiliser de \feyarrows{} s'il en est équipé.
+
+\pricelistitem{Tambours de guerre de Cenyrn}{25}Clan des Danselames uniquement. Une seule utilisation. Vous pouvez activer cet objet lorsque le porteur déclare une charge. L'unité ennemie ne peut déclarer que Tenir la position lorsqu'elle est chargée par l'unité du porteur, sauf si elle est déjà en fuite. Cette unité ennemie peuvent toujours avoir des réactions normales à des charges provenant d'autres unités.
+
+\endpricelist
+
+\armymagicalbanners
+
+\startpricelist
+
+\pricelistitem{Bannière d'Amryl}{25}L'unité du porteur gagne la règle \fightinextrarank{}.
+
+\endpricelist
+
+\closearmymagicalitems
+
+
+
+%%% START OF THE ARMYLIST - Translators shouldn't have to edit it %%%
+
+\input{Sylvanelves_armylist.tex}
+
+
+%%% Quick Reference Sheet - AB_qrs.tex is automatic and shouldn't be edited %%%
+
+\quickrefsheettitle
+
+\input{../Layout/AB_qrs.tex}
+\bigskip
+\begin{center}
+\noindent{\antiquefont\Largefontsize\textbf{Armes de Tir Ogres}}
+\medskip
+
+\rowcolors{1}{white}{black!10}
+\noindent\begin{tabular}{lcccccc}
+\textbf{Nom} & \textbf{Artillerie} & \textbf{Portée} & \textbf{\labels@S{}} & \textbf{\multipleshots{}} & \textbf{\multiplewounds{}} & \textbf{\armourpiercing{}} \tabularnewline
+\impalingroots{} & - & \distance{12} & 4 (5 \forest) & 1D6+1 & - & - \tabularnewline
+\poisonedthorn{} & - & \distance{12} & 3 & - & - & 1 \tabularnewline
+\end{tabular}
+\end{center}
+
+\restoregeometry
+
+\end{document}
