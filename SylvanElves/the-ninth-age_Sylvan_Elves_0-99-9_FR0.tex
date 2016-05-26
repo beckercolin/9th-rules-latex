@@ -134,21 +134,16 @@
 
 % Profile wording
 
-\newcommand{\joinakindred}{Rejoindre un \kindred{}}
 \newcommand{\mustbecomeoneofthefollowing}{Doit devenir au choix :}
-\newcommand{\takeasingleaspectofnature}{Prendre un seul \aspectofnature{}}
-\newcommand{\ifwizardmaytakeanarcaneitem}{Si Sorcier{,} peut prendre un Objet Arcanique}
-\newcommand{\unlessmountedbywildhuntermaytakemountsprotection}{Sauf si monté par un \wildhunter{}{,} peut prendre \mountsprotection{5}}
-\newcommand{\breathweapondragon}{\breathweapon{Force 4, \flamingattacks{}}}
+\newcommand{\takeasingleaspectofnature}{Un seul \aspectofnature{}}
+\newcommand{\ifwizard}{Si Sorcier}
+\newcommand{\arcaneitem}{Objet Cabalistique}
+\newcommand{\unlessmountedbywildhuntermaytakemountsprotection}{Sauf si monté par un \wildhunter{}, \mountsprotection{5}}
 \newcommand{\exchangespearwithsylvanblades}{Échanger la \spear{} contre des \sylvanblades{}}
-\newcommand{\maytakeblackarrowsXchoice}{\blackarrows{} (0-50 choix possible)}
 \newcommand{\mayexchangelongbowforshield}{Échanger l'\longbow{} contre un \shield{}}
 \newcommand{\exchangefastcavalryforelvencloak}{Échanger \fastcavalry{} contre une \elvencloak{}}
-\newcommand{\skirmishmaxXmodelsdryads}{\skirmisher{} (15 figurines max)}
 \newcommand{\exchangesylvanlanceforsylvanblades}{Échanger la \sylvanlance{} contre des \sylvanblades{}}
-\newcommand{\skirmishmaxXmodelskestrels}{\skirmisher{} (3 figurines max)}
 \newcommand{\singleunitmaytakescout}{Une seule unité peut avoir \scout{}}
-\newcommand{\briarmaidensmagic}{Magie}
 
 % Profile rules
 
@@ -196,11 +191,13 @@ Arme de Tir avec le profil suivant : \range{12}, Force 3, \quicktofire{}, \armou
 
 \armyspecialruleentry{\theforestfollows}
 
-Après avoir choisi les zones de déploiement, mais avant qu'aucune figurine ne soit déployée, vous pouvez placer un élément de décor Forêt (taille maximale de \unit{19x27}{\centi\metre}) entièrement dans votre moitié de table, ne touchant aucun autre décor, et à plus de \distance{6} d'un objectif. Toutes les Forêts sur la table sont considérées comme des \dangerousterrain{1} pour toutes les unités, excepté pour celles qui ont les règles \strider{} ou \strider{\forest}. 
+Après avoir choisi les zones de déploiement, mais avant de procéder au déploiement, vous pouvez placer une Forêt intégralement dans votre moitié du champ de bataille. Elle ne doit toucher aucun autre Décor et se trouver à plus de \distance{6} de tout objectif. Elle ne doit pas être plus longue que \unit{27}{\centi\meter} et plus large que \unit{19}{\centi\meter}.
 
-\armyspecialruleentry{\theforestfollows}
+Toutes les Forêts sur la table sont considérées comme des Terrains Dangereux (1) pour toutes les unités à l'exception de celles qui ont les règles \strider{} ou \strider{\forest}. 
 
-Votre armée ne peut contenir qu'une combinaison de maximum 3 figurines de \treefathers{} et/ou \treefatherancients{}. Cette limite passe à 6 pour une Grande Armée et à 2 pour une Patrouille.
+\armyspecialruleentry{\therarestofspirits}
+
+Votre armée ne peut contenir au plus que 3 \treefathers{} et \treefatherancients{} en tout. Cette limite passe à 6 pour une Grande Armée et à 2 pour une Patrouille.
 
 \closearmywiderules
 
@@ -209,7 +206,9 @@ Votre armée ne peut contenir qu'une combinaison de maximum 3 figurines de \tree
 
 \armyspecialruleentry{\forestwalker}
 
-Toutes les figurines avec cette règle ont la règle spéciale \strider{\forest}. Si une unité est composée entièrement de figurines avec cette règle et qu'elle commence une phase de combat avec la majorité de son empreinte dans une Forêt, alors tous les éléments de figurine possédant cette règle relancent les \result{1} pour blesser au corps à corps pour la durée de cette phase. De plus, rajoutez +1 à vos tentatives de canalisation si votre armée possède au moins une figurine avec cette règle et canalisant depuis une Forêt. 
+La figurine gagne la règle \strider{\forest}. Si une unité composée entièrement de figurines avec la règle \forestwalker{} commence une Phase de Corps à Corps avec la majorité de son empreinte au sol dans une Forêt, alors tous les éléments de figurine possédant cette règle peuvent relancer les jets pour blesser ayant donné \result{1} au Corps à Corps pour la durée de cette phase.
+
+De plus, ajoutez un +1 additionnel à vos tentatives de Canalisation si votre armée possède au moins une figurine avec les règles \channel{} et \forestwalker{} qui se trouve dans une Forêt. 
 
 \armyspecialruleentry{\masterarchers}
 
