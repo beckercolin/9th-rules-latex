@@ -1,0 +1,671 @@
+
+%%% v0.99.9
+
+\armylist
+
+\lordstitle
+
+\showunit{
+	name={\saurianwarlord},
+	QRSname={\saurianwarlordQRS},
+	cost=140,
+	profile={< 4 6 - 5 5 3 4 5 9},
+	type=\infantry{},
+	basesize=25x25,
+	unitsize=1,
+	commontype=\predatorcommonrules{},
+	commonspecialrules={\coldblooded{},\bornpredator},
+	armour={\innatedefence{5}},
+	options={
+		\magicalitemsallowance{}=\upto{}<100,
+		\shield{}=5,
+		\la{}=20,
+		\ha{} \onfootonly{}=25,
+		\combatweapononechoice{
+			\pw{}=10,
+			\halberd{}=15,
+			\spear{}=15,
+			\lance{}=20,
+			\gw{}=25,
+		},
+	},
+	mounts={
+		\raptor{}=40,
+		\carnosaur{}=120,
+		\alphacarnosaur{}=250,
+	},
+}
+
+\showunit{
+	name={\skinkhighpriest},
+	cost=170,
+	profile={< 6 2 3 3 3 3 4 1 7},
+	type=\infantry{},
+	basesize=20x20,
+	unitsize=1,
+	commontype=\skinkcommonrules{},
+	commonspecialrules={\coldblooded{},\strider{\water}},
+	specialrules={\telepathiclink},
+	magiclevel=3,
+	magicpaths={\heavens{},\light{},\nature{},\wilderness},
+	armour={\innatedefence{6}},
+	options={
+		\magicalitemsallowance{}=\upto{}<100,
+	},
+	mounts={
+		\skinkpalanquin{}=35,
+		\taurosaur{}=200,
+	},
+}
+
+\showunit{
+	name={\cuatllord},
+	cost=270,
+	profile={< 4 2 3 3 4 4 2 1 9},
+	type=\infantry{},
+	basesize=50x50,
+	unitsize=1,
+	commontype=\reptiliancommonrules{},
+	commonspecialrules={\coldblooded},
+	specialrules={\wardsave{4},\palanquin},
+	magiclevel=4,
+	magicpaths={\whitemagic{},\anyofthebattlemagic},
+	unitrules={\unitrule{\palanquin}{\palanquinrule}},
+	options={
+		\bsb{}=50,
+		\cuatllorddisciplines{}=\upto{}<100,
+		\magicalitemsallowance{}=\upto{}<100,
+	},
+}
+
+\cuatllorddisciplinesrule{}
+
+
+
+
+
+
+\heroestitle
+
+\showunit{
+	name={\saurianveteran},
+	cost=85,
+	profile={< 4 5 - 5 5 2 3 4 8},
+	type=\infantry{},
+	basesize=25x25,
+	unitsize=1,
+	commontype=\predatorcommonrules{},
+	commonspecialrules={\coldblooded{},\bornpredator},
+	armour={\innatedefence{5}},
+	options={
+		\bsb{}=25,
+		\magicalitemsallowance{}=\upto{}<50,
+		\shield{}=5,
+		\la{}=15,
+		\ha{} \onfootonly{}=20,
+		\combatweapononechoice{
+			\pw{}=5,
+			\halberd{}=10,
+			\spear{}=10,
+			\lance{}=15,
+			\gw{}=20,
+		},
+	},
+	mounts={
+		\raptor{}=35,
+		\carnosaur{}=130,
+	},
+}
+
+\showunit{
+	name={\skinkcaptain},
+	cost=40,
+	profile={< 6 4 4 4 3 2 6 3 6},
+	type=\infantry{},
+	basesize=20x20,
+	unitsize=1,
+	commontype=\skinkcommonrules{},
+	commonspecialrules={\coldblooded{},\strider{\water}},
+	weapons={\blowpipe},
+	armour={\innatedefence{6},\la},
+	options={
+		\bsb{}=25,
+		\magicalitemsallowance{}=\upto{}<50,
+		\shield{}=2,
+		\replaceblowpipewithpoisonedjavelin{}=\free{},
+		\combatweapononechoice{
+			\lightlance{}=3,
+			\pw{}=3,
+		},
+	},
+	mounts={
+		\alphapteradon{}=50,
+		\alpharhamphodon{}=50,
+		\taurosaur{}=200,
+	},
+}
+
+\showunit{
+	name={\skinkpriest},
+	cost=65,
+	profile={< 6 2 3 3 2 2 4 1 6},
+	type=\infantry{},
+	basesize=20x20,
+	unitsize=1,
+	commontype=\skinkcommonrules{},
+	commonspecialrules={\coldblooded{},\strider{\water}},
+	specialrules={\telepathiclink},
+	magiclevel=1,
+	magicpaths={\heavens{},\wilderness},
+	armour={\innatedefence{6}},
+	options={
+		\magiclevel{2}=25,
+		\magicalitemsallowance{}=\upto{}<50,
+	},
+	mounts={
+		\taurosaur{}=200,
+	},
+}
+
+\showunit{
+	name={\caimanancient},
+	cost=125,
+	profile={< 6 4 - 5 5 4 3 3 8},
+	type=\monstrousinfantry{},
+	basesize=40x40,
+	unitsize=1,
+	commontype=\caimancommonrules{},
+	commonspecialrules={\bornpredator{},\coldblooded{},\strider{\water}},
+	specialrules={\fear{},\packleader},
+	unitrules={\unitrule{\packleader}{\packleaderrule}},
+	armour={\innatedefence{4}},
+	weapons={\halberd},
+	options={
+		\magicalitemsallowance{}=\upto{}<50,
+		\replacehalberdwithgw{}=5,
+	},
+}
+
+
+
+
+
+
+\mountstitle
+
+\showunit{
+	name={\raptor},
+	profile={< 7 3 - 4 4 1 2 2 2},
+	type=\warbeast{},
+	basesize=25x50,
+	specialrules={\stupidity},
+	armour={\mountsprotection{5}},
+}
+
+\showunit{
+	name={\carnosaur},
+	profile={ < 7 3 - 6 5 4 2 4 5},
+	type=\monstrousbeast{},
+	basesize=50x100,
+	commontype=\predatorcommonrules{},
+	commonspecialrules={\bornpredator},
+	specialrules={\frenzy{},\largetarget{},\fear},
+}
+
+\showunit{
+	name={\alphapteradon},
+	profile={< 2 3 - 4 3 3 2 1 3},
+	type=\monstrousbeast{},
+	basesize=40x40,
+	armour={\mountsprotection{6}},
+	additional={%
+		\def\tempspecialrules{\fly{9},\fastcavalry{},\strider{\forest},\releaserocks{} (\seeskyriders{})}
+		\vspace*{0.3cm}\specialrules{\tempspecialrules}
+	},
+}
+
+\showunit{
+	name={\alpharhamphodon},
+	profile={< 2 3 - 4 3 3 4 2 3},
+	type=\monstrousbeast{},
+	basesize=40x40,
+	armour={\mountsprotection{6}},
+	options={\mountsprotection{5}=20,},
+	additional={%
+		\def\tempspecialrules{\fly{8},\fastcavalry{},\strider{\forest},\armourpiercing{1},\frenzy{},\lethalstrike{},\preyscent{} (\seeskyriders{})}
+		\specialrules{\tempspecialrules}
+	},
+}
+
+\showunit{
+	name={\alphacarnosaur},
+	profile={< 7 4 - 7 6 6 3 5 5},
+	type=\monster{},
+	basesize=50x100,
+	commontype=\predatorcommonrules{},
+	commonspecialrules={\bornpredator},
+	specialrules={\apexpredator{},\multiplewounds{1D3}{},\swiftstride},
+	unitrules={\unitrule{\apexpredator}{\apexpredatorrule}},
+}
+
+\showunit{
+	name={\skinkpalanquin},
+	profile={< 6 - - 3 3 3 2 - 2},
+	type=\infantry{},
+	basesize=50x50,
+	specialrules={\skinkpalanquin},
+	unitrules={
+		\unitrule{\skinkpalanquin}{\skinkpalanquinrule}
+		\unitrule{\plaqueofthesnakegod}{\plaqueofthesnakegodrule}
+	},
+	armour={\mountsprotection{6}},
+	options={
+		\mayswitchbasesize{}=\free{},
+		\plaqueofthesnakegod{}=30,
+	},
+}
+
+\showunit{
+	notinQRS=yes,
+	name={\taurosaur{} (\oneofakind{})},
+	profile={ \taurosaur{}< 6 3 - 5 6 5 2 4 -,
+			  \skinkcrew{} (4)< - 2 3 3 - - 4 1 6,},
+	type=\riddenmonster{},
+	basesize=50x100,
+	specialrules={\immunetopsychology{},\stubborn{},\impacthits{1D6+1}},
+	weapons={\poisonedjavelin{} \only{\crew{}},\greatbow{} \only{\taurosaur{}}},
+	armour={\innatedefence{3}},
+	options={
+		\sharphorns{}=15,
+		\ancienttaurosaur{}=40,
+		\mayreplacegreatbowwith{
+			2 \giantblowpipes{}=10,
+			\engineoftheancients{}\refsymbol{}=40,
+			\hspace*{0.3cm}\refsymbol{} \only{\ancienttaurosaur{}}=,
+		},
+	},
+	additional={%
+		\def\tempunitrules{
+			\unitrule{\sharphorns}{\sharphornsrule}
+			\unitrule{\ancienttaurosaur}{\ancienttaurosaurrule}
+		}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
+	},
+}
+
+
+
+
+
+
+\coreunitstitle
+
+\showunit{
+	name={\saurianwarriors},
+	QRSname={\saurianwarrior},
+	cost=85,
+	profile={< 4 3 - 4 4 1 2 2 8},
+	type=\infantry{},
+	basesize=25x25,
+	unitsize=10,
+	maxmodels=35,
+	costpermodel=11,
+	commontype=\predatorcommonrules{},
+	commonspecialrules={\coldblooded{},\bornpredator},
+	armour={\innatedefence{5},\shield},
+	options={
+		\totemanimal{}=\permodel{}<1,
+		\spear{}=\permodel{}<2,
+	},
+	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
+	additional={%
+		\vspace*{0.2cm}\totemanimalsrule{}
+	},
+}
+
+\showunit{
+	name={\snakeswarms},
+	QRSname={\snakeswarm},
+	cost=55,
+	profile={< 5 3 - 2 2 5 1 5 10},
+	type=\swarm{},
+	basesize=40x40,
+	unitsize=2,
+	maxmodels=4,
+	costpermodel=20,
+	commontype=\reptiliancommonrules{},
+	commonspecialrules={\coldblooded},
+	specialrules={\venomoustide},
+	unitrules={\unitrule{\venomoustide}{\venomoustiderule}},
+	options={\scout{}=\permodel{}<5,},
+}
+
+\showunit{
+	name={\skinkbraves},
+	QRSname={\skinkbrave},
+	cost=60,
+	profile={< 6 2 3 3 2 1 4 1 5},
+	type= \infantry{},
+	basesize=20x20,
+	unitsize=10,
+	maxmodels=40,
+	costpermodel=5,
+	commontype=\skinkcommonrules{},
+	commonspecialrules={\coldblooded{},\strider{\water}},
+	weapons={\javelin},
+	armour={\shield{},\innatedefence{6}},
+	options={
+		\caimansoption{}=\permodel{}<50,
+		\onechoiceonly{
+			\skirmisheroption{}=\permodel{}<2,
+			\replacejavelinforpoisonedjavelin{}=\permodel{}<2,
+		},
+		\replacejavelinandshieldforshortbow{}=\free{},
+		\poisonedattacks{} \closecombatonly{}=\permodel{}<2,
+	},
+	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
+}
+
+\showunit{
+	name={\caiman},
+	profile={< 6 3 - 5 4 3 2 3 7},
+	type=\monstrousinfantry{},
+	basesize=40x40,
+	unitsize=SPECIAL-\caimannote{},
+	commontype=\caimancommonrules{},
+	commonspecialrules={\bornpredator{},\coldblooded{},\strider{\water}},
+	specialrules={\combinedstrength},
+	weapons={\halberd},
+	armour={\innatedefence{4}},
+	additional={%
+		\def\tempunitrules{\unitrule{\combinedstrength}{\combinedstrengthrule}}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
+	},
+}
+
+
+
+
+
+
+
+
+\specialunitstitle
+
+%\showunit{
+%	name={\skinkhunters},
+%	QRSname={\skinkhunter},
+%	cost=55,
+%	profile={< 6 2 4 3 2 1 4 1 6},
+%	type= \infantry{},
+%	basesize=20x20,
+%	unitsize=5,
+%	maxmodels=16,
+%	costpermodel=7,
+%	commontype=\skinkcommonrules{},
+%	commonspecialrules={\coldblooded, \strider{\forest}},
+%	specialrules={\skirmisher},
+%	unitrules={\unitrule{\chameleon}{\chameleonrule}},
+%	weapons={\poisonedjavelin},
+%	armour={\shield, \innatedefence{6}},
+%	options={
+%		\replacepoisonedjavelinandshieldforblowpipe{}=\free,
+%		\onechoiceonly{
+%			\chameleon{}=\permodel{}<2,
+%			\vanguard{}=10,
+%		},
+%	},
+%	commandgroup={champion=10},
+%}
+%
+%\showunit{
+%	name={\templeguards},
+%	QRSname={\templeguard},
+%	cost=130,
+%	profile={< 4 4 - 4 4 1 2 2 8},
+%	type=\infantry{},
+%	basesize=25x25,
+%	unitsize=10,
+%	maxmodels=30,
+%	costpermodel=15,
+%	commontype=\predatorcommonrules{},
+%	commonspecialrules={\coldblooded, \bornpredator},
+%	specialrules={\bodyguard{\general}, \immunetopsychology},
+%	weapons={\halberd},
+%	armour={\innatedefence{5}, \shield, \la},
+%	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50}
+%}
+%
+%\showunit{
+%	name={\raptorriders},
+%	QRSname={\raptorrider},
+%	cost=140,
+%	profile={
+%		\rider{}  < 4 4 - 4 4 1 2 2 8,
+%		\raptor{} < 7 3 - 4 4 1 2 2 2,
+%	},
+%	type=\cavalry{},
+%	basesize=25x50,
+%	unitsize=5,
+%	maxmodels=12,
+%	costpermodel=35,
+%	commontype=\predatorcommonrules{},
+%	commonspecialrules={\coldblooded, \bornpredator \only{\rider}},
+%	specialrules={\stupidity},
+%	weapons={\lance},
+%	armour={\innatedefence{5}, \shield, \mountsprotection{5}},
+%	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50}
+%}
+%
+%\showunit{
+%	name={\caimans},
+%	QRSname={\caiman},
+%	profile={< 6 3 - 5 4 3 2 3 7},
+%	type=\monstrousinfantry{},
+%	basesize=40x40,
+%	unitsize=3,
+%	maxmodels=10,
+%	costpermodel=45,
+%	commontype=\caimancommonrules{},
+%	commonspecialrules={\bornpredator, \coldblooded, \strider{\forest}},
+%	weapons={\halberd},
+%	armour={\innatedefence{4}},
+%	options={
+%		\replacehalberdwithgreatweapon{}=\permodel{}<4,
+%		\la{}=\permodel{}<7,
+%	},
+%	commandgroup={champion=10, musician=10, banner=10}
+%}
+%
+%\showunit{
+%	name={\skinkskyriders},
+%	QRSname={\skinkskyrider},
+%	cost=100,
+%	profile={
+%		\rider{}        < 6 2 3 3 2 1 4 1 5,
+%		[\pteradon{}]   < 2 3 - 4 3 2 2 1 3,
+%		[\rhamphodon{}] < 2 3 - 4 3 2 4 2 3,
+%	},
+%	type= \monstrouscavalry{},
+%	basesize=40x40,
+%	unitsize=3,
+%	maxmodels=5,
+%	costpermodel=35,
+%	commontype=\reptiliancommonrules{},
+%	commonspecialrules={\coldblooded},
+%	specialrules={\fastcavalry, \skirmisher, \strider{\forest}},
+%	unitequipments={\unitequipment{\firebola}{\firebolarule}},
+%	weapons={\poisonedjavelin, \lightlance},
+%	options={
+%		\replacepoisonedjavelinwithfirebola{}=\permodel{}<1,
+%		\shield{}=\permodel{}<5,
+%	},
+%	commandgroup={champion=10},
+%	additional={
+%		\begin{center}\mustchooseasinglemount{}\end{center}
+%		\setlength{\columnseprule}{0.5pt}
+%		\renewcommand{\columnseprulecolor}{\color{black!30}}	
+%		\begin{multicols}{2}
+%		\raggedcolumns
+%		\begin{center}{\largerfontsize\antiquefont\pteradon{} (\free)}
+%		
+%		\vspace{0.15cm}
+%		\def\temparmour{\mountsprotection{6}, \innatedefence{6}}
+%		\armour{\temparmour}
+%		
+%		\def\tempspecialrules{\fly{9}, \releaserocks{}}
+%		\vspace*{0.1cm}\specialrules{\tempspecialrules}
+%
+%		\def\tempunitrules{\unitrule{\releaserocks}{\releaserocksrule}}
+%		\vspace*{0.1cm}\unitrules{\tempunitrules}
+%
+%		\columnbreak
+%		\begin{center}{\largerfontsize\antiquefont\rhamphodon{} (\permodel{}<10)}
+%		
+%		\vspace{0.15cm}
+%		\def\temparmour{\mountsprotection{6}, \innatedefence{6}, \la}
+%		\armour{\temparmour}
+%		
+%		\def\tempspecialrules{\fly{8}, \frenzy{} \only{\rhamphodon{}}, \armourpiercing{1} \only{\rhamphodon{}}, \lethalstrike{} \only{\rhamphodon{}}, \preyscent{}}
+%		\vspace*{0.1cm}\specialrules{\tempspecialrules}
+%
+%		\def\tempunitrules{\unitrule{\preyscent}{\preyscentrule}}
+%		\vspace*{0.1cm}\unitrules{\tempunitrules}
+%
+%		\end{multicols}
+%		\setlength{\columnseprule}{0pt}
+%	},
+%}
+%
+%\showunit{
+%	name={\thyroscutus},
+%	cost=130,
+%	profile={
+%		\thyroscutus{}   < 6 2 3 3 2 1 4 1 5,
+%		\skinkcrew{} (4) < 2 3 - 4 3 2 2 1 3,
+%	},
+%	type= \riddenmonster{},
+%	basesize=50x100,
+%	unitsize=1,
+%	commontype=\reptiliancommonrules{},
+%	commonspecialrules={\coldblooded},
+%	specialrules={\crushattack{} \only{\thyroscutus}},
+%	weapons={\poisonedjavelin{} \only{\crew}},
+%	armour={\innatedefence{2}},
+%	additional={
+%		\begin{center}\musttakeoneofthefollowing{}\end{center}
+%		\setlength{\columnseprule}{0.5pt}
+%		\renewcommand{\columnseprulecolor}{\color{black!30}}	
+%		\begin{multicols}{2}
+%		\raggedcolumns
+%		\begin{center}{\largerfontsize\antiquefont\altarofthesnakegod{} (\pts{15})}
+%		
+%		\def\tempunitrules{\unitrule{\altarofthesnakegod}{\altarofthesnakegodrule}}
+%		\vspace*{0.1cm}\unitrules{\tempunitrules}
+%
+%		\columnbreak
+%		\begin{center}{\largerfontsize\antiquefont\sunengine{} (\free}
+%		
+%		\def\tempunitrules{\unitrule{\sunengine}{\sunenginerule}}
+%		\vspace*{0.1cm}\unitrules{\tempunitrules}
+%
+%		\end{multicols}
+%		\setlength{\columnseprule}{0pt}
+%	},
+%}
+
+
+
+
+
+
+
+\rareunitstitle
+
+%\showunit{
+%	name={\weaponbeasts},
+%	cost=60,
+%	profile={< 6 3 4 4 4 3 4 3 6},
+%	type= \monstrousbeast{},
+%	basesize=40x40,
+%	unitsize=1,
+%	commontype=\reptiliancommonrules{},
+%	commonspecialrules={\coldblooded},
+%	specialrules={\skirmisher, \strider{\water}},
+%	armour={\innatedefence{4}},
+%	additional={
+%		\begin{center}\mustbecomeoneofthefollowing{}\end{center}
+%		\setlength{\columnseprule}{0.5pt}
+%		\renewcommand{\columnseprulecolor}{\color{black!30}}	
+%		\begin{multicols}{2}
+%		\raggedcolumns
+%		\begin{center}{\largerfontsize\antiquefont\spearback{} (\free)}
+%		
+%		\def\tempweapons{\shootspikes{}}
+%		\vspace*{0.1cm}\weapons{\tempweapons}
+%
+%		\columnbreak
+%		\begin{center}{\largerfontsize\antiquefont\salamander{} (\permodel{}<15}
+%		
+%		\def\tempweapons{\spoutflames{}}
+%		\vspace*{0.1cm}\weapons{\tempweapons}
+%
+%		\end{multicols}
+%		\setlength{\columnseprule}{0pt}
+%				
+%		\def\tempunitequipment{%
+%			\equipmentdef{\shootspikes}{\shootspikesrule}
+%			\equipmentdef{\salamander}{\salamanderrule}
+%		}
+%		\vspace*{0.1cm}\unitequipment{\tempunitequipment}
+%
+%	},
+%}
+%
+%\showunit{
+%	name={\taurosaur},
+%	profile={ \taurosaur{} < 6 3 - 5 6 5 2 4 -,
+%			  \skinkcrew{} (5) < - 2 3 3 - - 4 1 6,},
+%	type=\riddenmonster{},
+%	basesize=50x100,
+%	commontype=\reptiliancommonrules{},
+%	commonspecialrules={\coldblooded},
+%	specialrules={\immunetopsychology, \stubborn, \impacthits{1D6+1}},
+%	unitrules={
+%		\unitrule{\sharphorns}{\sharphornsrule}
+%		\unitrule{\ancienttaurosaur}{\ancienttaurosaurrule}
+%	},
+%	weapons={\poisonedjavelin{} \only{\skinkcrew{}}, \greatbow{} \only{\taurosaur{}}},
+%	armour={\innatedefence{3}},
+%	options={
+%		\sharphorns{}=15,
+%		\ancienttaurosaur{}=40,
+%		\mayreplacegreatbowwith{
+%			\twogiantblowpipes{}=10,
+%			\engineoftheancients{} \only{\ancienttaurosaur{}}=40,
+%		},
+%	},
+%}
+%
+%\showunit{
+%	name={\stygiosaur},
+%	profile={ \skinkrider{}< 6 4 3 3 2 1 4 1 6,
+%			  \stygiosaur{}< 7 4 4 5 5 5 2 4 5,},
+%	type=\monstrouscavalry{},
+%	basesize=50x100,
+%	commontype=\predatorcommonrules{},
+%	commonspecialrules={\coldblooded. \bornpredator \only{\stygiosaur}},
+%	specialrules={\telepathiclink, \poisonedattacks \only{\stygiosaur}, \stomp{1D3}, \terror, \largetarget},
+%	unitequipment={\equipmentdef{\spitpoison}{\spitpoisonrule}},
+%	unitrules={
+%		\unitrule{\predatoryroar}{\predatoryroarrule}
+%	},
+%	weapons={\poisonedjavelin{} \only{\skinkrider{}}, \spitpoison{} \only{\stygiosaur}},
+%	armour={\innatedefence{4}, \mountsprotection{6}},
+%	options={
+%		\predatoryroar{}=25,
+%		\mayexchangespitpoisonwithbreathweapon{}=25,
+%		\skinkridermaybecomeachampion{}=60,
+%	},
+%	additional={\stygiosaurmagic{}},
+%}

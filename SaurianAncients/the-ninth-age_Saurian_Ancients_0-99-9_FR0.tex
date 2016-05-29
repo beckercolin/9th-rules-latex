@@ -1,0 +1,495 @@
+\input{../Layout/AB_layout.tex}
+
+\newcommand{\booktitle}{Reptiliens Anciens} %M% Saurien c'est une sous famille des reptiles, je pense que Sauriens Anciens serait une meilleure traduction. En plus ils font la distinction reptilian/saurian dans les règles spés.
+\newcommand{\version}{0.99.9}
+\newcommand{\frenchversion}{2.0}
+\newcommand{\booklogo}{pics/logo_big_SA.png}
+
+
+% Army special rules
+
+\newcommand{\coldblooded}{Sang Froid}
+\newcommand{\bornpredator}{Prédateur Né}
+\newcommand{\telepathiclink}{Lien Télépathique}
+
+% Army common type special rules
+
+\newcommand{\predatorcommonrules}{Règles spéciales des Prédateurs}
+\newcommand{\skinkcommonrules}{Règles spéciales des Kingiis} %M% revoir selon ce qui est choisi pour skink
+\newcommand{\reptiliancommonrules}{Règles spéciales des Reptiliens}
+\newcommand{\caimancommonrules}{Règles spéciales des Croc-Tueurs} %M% revoir selon caiman
+
+% Armoury
+
+\newcommand{\blowpipe}{Sarbacane}
+\newcommand{\javelin}{Javeline} %M% Javelot IMO.
+\newcommand{\poisonedjavelin}{Javeline Empoisonnée} %M%
+\newcommand{\giantblowpipe}{Sarbacane Géante}
+\newcommand{\giantblowpipes}{Sarbacanes Géantes}
+\newcommand{\greatbow}{Arc Géant}
+\newcommand{\engineoftheancients}{Machine des Anciens}
+
+% Spells
+
+\newcommand{\whitemagicone}{Vol du Phénix}
+\newcommand{\diseasetwo}{Bénédiction Infecte}
+\newcommand{\lightzero}{Regard Embrasé}
+\newcommand{\wildernesszero}{La Bête qui Sommeille}
+\newcommand{\wildernessthree}{Javelot d’Ambre}
+
+% Other rules
+
+\newcommand{\palanquin}{Palanquin}
+\newcommand{\cuatllorddisciplines}{Capacités Mentales} %M% vérifier
+\newcommand{\cuatllorddiscipline}{Capacité Mentale} %M%
+\newcommand{\masterofmagic}{Maître de la Magie} %M% Expert en Magie ? Ou Maitre en Magie ? Bof XXX de la Magie.
+\newcommand{\wanderingpath}{Chemin d'Errance} %M% Path c'est pour Discipline. c'est parce qu'il connait la discipline des huits chemins ou je ne sais plus comment on l'appelle.
+\newcommand{\wellspringofpower}{Fontaine de Pouvoir}
+\newcommand{\ancientknowledge}{Connaissance Ancestrale}
+\newcommand{\unconquerablewill}{Volonté Inébranlable}
+\newcommand{\shieldedsoul}{Âme Protégée}
+\newcommand{\higherstateofmind}{État de Conscience Supérieur} %M% Je mettrais juste Conscience Supérieure.
+\newcommand{\scrutinyoftheancients}{Sous le regard des Anciens} %M% Regard des Anciens ?
+\newcommand{\packleader}{Meneur} %M% Chef de Meute. IMO faut l'idée du "pack"
+\newcommand{\skinkpalanquin}{Palanquin de Kingii} %M% ptêtre virer le "de"
+\newcommand{\skinkpalanquins}{Palanquins de Kingii} %M%
+\newcommand{\plaqueofthesnakegod}{Plaque du Dieu Serpent}
+\newcommand{\apexpredator}{Prédateur Ultime}
+\newcommand{\sharphorns}{Cornes Aiguisées} %M% Pointues, Acérées. ça s'aiguise bof.
+\newcommand{\ancienttaurosaur}{Tricératops Ancien} %M%
+\newcommand{\totemanimal}{Totem Animiste} %M% Animiste ça vient de l'âme, c'est pas la même signification, faut voir avec la VO
+\newcommand{\totemanimals}{Totems Animiste}
+\newcommand{\piranha}{Piranha}
+\newcommand{\serpent}{Serpent}
+\newcommand{\jaguar}{Jaguar}
+\newcommand{\crocodile}{Crocodile}
+\newcommand{\venomoustide}{Essaim Venimeux} %M% Essaim ça va bof avec des serpents. Marée ou Vague c'est pas mal, un tapis de serpent se comporte un peu comme de l'eau.
+\newcommand{\combinedstrength}{Force Combinée} %M%  rah ils auraient pu parler de symbiose plutôt ici ça aurait été plus joli. Ptetre que si on leur propose ...
+\newcommand{\chameleon}{Caméléon}
+\newcommand{\chameleons}{Caméléons}
+\newcommand{\firebola}{Bolas de Feu}
+\newcommand{\releaserocks}{Largage de Rochers}
+\newcommand{\preyscent}{Odeur des Proies} %M% voir ce qu'ils répondent
+\newcommand{\altarofthesnakegod}{Autel du Dieu Serpent}
+\newcommand{\sunengine}{Machine Solaire}
+\newcommand{\shootspikes}{Tir de Piques} %M% accorder avec le nom si on met les "piques" dans le nom.
+\newcommand{\spoutflames}{Jet de Flammes} %M% c'est très bien, mais est-ce que Gerbe de Flammes serait pas mieux ?
+\newcommand{\spitpoison}{Crachat Empoisonné}
+\newcommand{\predatoryroar}{Hurlement du Prédateur} %M% Rugissement du Prédateur plutôt
+
+
+%%% Names
+
+% Characters
+
+\newcommand{\saurianwarlord}{Seigneur de Guerre Saurien}
+\newcommand{\saurianwarlordQRS}{Seigneur de G. Saurien}
+\newcommand{\saurianwarlords}{Seigneurs de Guerre Saurien}
+\newcommand{\skinkhighpriest}{Haut Prêtre Kingii} %M%
+\newcommand{\skinkhighpriests}{Hauts Prêtres Kingii}
+\newcommand{\cuatllord}{Seigneur Cuatl}
+\newcommand{\cuatllords}{Seigneurs Cuatl}
+\newcommand{\saurianveteran}{Vétéran Saurien}
+\newcommand{\saurianveterans}{Vétérans Saurien}
+\newcommand{\skinkcaptain}{Capitaine Kingii} %M%
+\newcommand{\skinkcaptains}{Capitaines Kingii}
+\newcommand{\skinkpriest}{Prêtre Kingii} %M%
+\newcommand{\skinkpriests}{Prêtres Kingii} %M% si on garde kingii voir comment on l'accorde
+\newcommand{\caimanancient}{Caïman Ancien}
+
+% Core
+
+\newcommand{\saurianwarrior}{Guerrier Saurien}
+\newcommand{\saurianwarriors}{Guerriers Sauriens}
+\newcommand{\snakeswarm}{Nuée de Serpents}
+\newcommand{\snakeswarms}{Nuées de Serpents}
+\newcommand{\skinkbrave}{Brave Kingii} %M%
+\newcommand{\skinkbraves}{Braves Kingiis}
+\newcommand{\caiman}{Caïman}
+
+% Special
+
+\newcommand{\skinkhunter}{Chasseur Kingii} %M%
+\newcommand{\skinkhunters}{Chasseurs Kingiis}
+\newcommand{\templeguard}{Gardien des Temples}
+\newcommand{\templeguards}{Gardiens des Temples}
+\newcommand{\raptorrider}{Chevaucheur de Raptor} %M% ptêtre trop long. Cavalerie Raptor ? ou Monteur de Raptor.
+\newcommand{\raptorriders}{Chevaucheurs de Raptors}
+\newcommand{\caimans}{Caïmans}
+\newcommand{\skinkskyriders}{Kingiis Chevauche-Ciel} %M%
+\newcommand{\skinkskyrider}{Kingii Chevauche-Ciel}
+\newcommand{\thyroscutus}{Ankylosaure} %M%
+
+
+
+% Rare
+
+\newcommand{\weaponbeasts}{Artillerie Vivantes}
+\newcommand{\weaponbeast}{Artillerie Vivante}
+\newcommand{\spearback}{Moloch} %M%
+\newcommand{\spearbacks}{Molochs}
+\newcommand{\salamander}{Dimétrodon} %M% Salamandre ?
+\newcommand{\salamanders}{Dimétrodons}
+\newcommand{\taurosaur}{Tricératops} %M%
+\newcommand{\taurosaurs}{Tricératops}
+\newcommand{\stygiosaur}{Spinosaure} %M%
+\newcommand{\stygiosaurs}{Spinosaures}
+
+
+% Mounts
+
+\newcommand{\raptor}{Raptor}
+\newcommand{\carnosaur}{Carnosaurien} %M%
+\newcommand{\alphacarnosaur}{Tyrannotitan} %M%
+\newcommand{\alphapteradon}{Ptéranodon Alpha} %M%
+\newcommand{\alpharhamphodon}{Ptérodactyle Alpha} %M%
+\newcommand{\alphapteradons}{Ptéranodons Alpha}
+\newcommand{\alpharhamphodons}{Ptérodactyles Alpha}
+\newcommand{\pteradon}{Ptéranodon} %M%
+\newcommand{\rhamphodon}{Ptérodactyle} %M%
+\newcommand{\pteradons}{Ptéranodons}
+\newcommand{\rhamphodons}{Ptérodactyles}
+
+
+% Short names and multiprofiles names
+
+\newcommand{\rider}{Cavalier}
+\newcommand{\crew}{Équipage}
+\newcommand{\skinkcrew}{Équipage Kingii} %M%
+\newcommand{\skinkrider}{Cavalier Kingii}
+\newcommand{\skink}{Kingii}
+\newcommand{\skinks}{Kingiis}
+
+% Profile wording
+
+\newcommand{\replaceblowpipewithpoisonedjavelin}{Remplacer la \blowpipe{} par une \poisonedjavelin{}} %M% article javelin
+\newcommand{\replacehalberdwithgw}{Remplacer la \halberd{} par une \gw{}}
+\newcommand{\seeskyriders}{voir l'unité spéciale \skinkskyriders}
+\newcommand{\mayswitchbasesize}{Socle de \unit{40x40}{\milli\meter}}
+\newcommand{\mayreplacegreatbowwith}{\optionschoice{Remplacer l'\greatbow{} par :}}
+\newcommand{\caimansoption}{\caimans{} (max. 1 pour 10 \skinks{})}
+\newcommand{\skirmisheroption}{\skirmisher{} (max. 15 \skinks{}, pas de \caiman{})}
+\newcommand{\replacejavelinforpoisonedjavelin}{Remplacer la \javelin{} par une \poisonedjavelin{}} %M% genre selon javelot
+\newcommand{\replacejavelinandshieldforshortbow}{Remplacer la \javelin{} et le \shield{} par un \shortbow{}} %M% genre selon javelot
+\newcommand{\caimannote}{\textbf{Option} pour les unités de \skinkbraves{}}
+\newcommand{\replacepoisonedjavelinandshieldforblowpipe}{Remplacer la \poisonedjavelin{} et le \shield{} par une \blowpipe{}} %M% genre selon javelot
+\newcommand{\replacepoisonedjavelinwithfirebola}{Remplacer la \poisonedjavelin{} par un \firebola{}} %M% genre selon javelot
+\newcommand{\mayexchangespitpoisonwithbreathweapon}{Remplacer le \spitpoison{} par une \breathweapon{\toxicattacks}}
+\newcommand{\skinkridermaybecomeachampion}{Le \skinkrider{} peut devenir un Champion}
+% \wildernesszero{}, \wildernessthree{} (Discipline \wilderness{})
+
+% Profile rules
+
+\newcommand{\palanquinrule}{%
+Lorsqu'un \cuatllord{} se trouve dans une unité d'au moins 5 figurines avec la règle \bodyguard{}, il perd la règle \firstinrank{}. Il peut être Général même si il est aussi \bsb{} et ne peut pas être désigné par un ennemi comme étant la figurine qui refuse un Défi.
+}
+
+\newcommand{\packleaderrule}{%
+Les \caimans{} de l'unité du \caimanancient{} obtiennent une Capacité de Combat de 4. Cet effet ne peut être combiné avec le bonus en Capacité de Combat conféré par la \sunengine{}.
+}
+
+\newcommand{\apexpredatorrule}{%
+Lorsqu'il charge une \largetarget{} ou une figurine seule avec la règle \fly{}, le \alphacarnosaur{} ajoute +2 à sa distance de charge.
+}
+
+\newcommand{\skinkpalanquinrule}{%
+La figurine perd la règle \firstinrank{} dans une unité de \saurianwarriors{} ou de \skinkbraves{} qui n'abritent pas de \caimans{}.
+}
+
+\newcommand{\plaqueofthesnakegodrule}{%
+Tous les éléments de figurine de la famille des \skinks{}\refsymbol{} dans l'unité de la figurine gagnent la règle \hatred{}.
+
+\refsymbol{} La famille des \skinks{} est composée des unités suivantes : \skinkhighpriests{}, \skinkcaptains{}, \skinkpriests{}, \skinkbraves{}, \skinkhunters{}, \chameleons{}, \skinkpalanquins{}. 
+}
+
+\newcommand{\sharphornsrule}{%
+Vous pouvez relancer le dé déterminant le nombre de \impacthits{} que la figurine inflige.
+}
+
+\newcommand{\ancienttaurosaurrule}{%
+La figurine gagne +1 en Force et +1 Point de Vie.
+}
+
+\newcommand{\totemanimalsrule}{%
+\noindent Si elle paie l'option correspondante, une unité de \saurianwarriors{} peut choisir un et un seul \totemanimal{} :
+\renewcommand{\arraystretch}{1.5}
+\begin{center}\begin{tabular}{rl}
+\hline
+\textbf{\crocodile{}} & La valeur de la règle \armourpiercing{} des attaques contre la figurine est réduite de 1.\tabularnewline
+\textbf{\jaguar{}} & +1 en Mouvement.\tabularnewline
+\textbf{\piranha{}} & \fear{}.\tabularnewline
+\textbf{\serpent{}} & \fightinextrarank{}.\tabularnewline
+\hline
+\end{tabular}\end{center}
+\renewcommand{\arraystretch}{1.2}
+}
+
+\newcommand{\venomoustiderule}{%
+Toutes les attaques portées contre une unité en contact avec la figurine gagnent la règle \poisonedattacks{}.
+}
+
+\newcommand{\combinedstrengthrule}{%
+Vous pouvez ajouter des \caimans{} aux unités de \skinkbraves{}. Ces \caimans{} sont des figurines ordinaires d'un type différent (\monstrousinfantry{}). L'\textbf{unité} est considérée comme étant du type \infantry{} tant qu'il y a plus de \skinks{} que de \caimans{}, et du type \monstrousinfantry{} sinon (voir les règles des Types de Troupe). Les \caimans{} sont considérés comme ayant des Socles Compatibles (voir la règle \firstinrank{}), sauf qu'ils peuvent être placés n'importe où dans l'unité et non pas le plus en avant possible. Les \caimans{} et les \skinkbraves{} ne partagent pas une réserve de Points de Vie commune, malgré le fait que ce ne soit que des figurines ordinaires. Ils ont chacun leur propre réserve de Points de Vie, et les blessures ne peuvent être transférées d'une réserve à l'autre. Toute blessure excédentaire est perdue.
+\begin{itemize}[label={-}]
+	 \item \textbf{Distribution des Touches}. Quand des touches sont infligées à l'unité, commencez par distribuer normalement les touches entre les Personnages et les figurines ordinaires. Lancez ensuite un dé pour chaque touche distribuée sur une figurine ordinaire. Sur \textbf{1-4} un \skinkbrave{} est touché, sur \textbf{5-6} c'est un \caiman{}.
+	 \item \textbf{\stomp}. Quand un ennemi piétine cette unité, ignorer toutes les figurines qui ne sont pas du type Infanterie. Les touches infligées aux \skinkbraves{} ne sont pas réparties sur les autres troupes.\newline
+	 \item \textbf{Allocation des Attaques}. Les Attaques de corps à corps peuvent être allouées aux \caimans{} ou aux \skinkbraves{} en contact, au choix du joueur les attaquant.\newline
+	 \item \textbf{\swirlingmelee}. Les figurines qui attaquent en suivant la règle \swirlingmelee{} (c'est-à-dire les figurines qui attaquent les figurines ordinaires d'une unité sans être à son contact) peuvent attaquer les \caimans{} ou les \skinkbraves{}. Si les \caimans{} sont attaqués de cette manière, les attaques ont un malus de -1 pour toucher.
+\end{itemize}
+}
+
+\newcommand{\chameleonrule}{%
+La figurine gagne \scout{} et \hardtarget{}. Elle doit remplacer sa \poisonedjavelin{} et \shield{} par une \blowpipe{}.
+}
+
+\newcommand{\firebolarule}{%
+Arme de tir. \range{8}, Force 4, \flamingattacks{}, \quicktofire{}.
+}
+
+\newcommand{\releaserocksrule}{%
+Une seule utilisation. \sweepingattack{}. L'unité ennemie subit 1D3 touches Force 4 pour chaque \pteranodon{} de l'unité.
+}
+
+\newcommand{\preyscentrule}{%
+Avant la partie, si vous avez au moins une unité avec un \rhamphodon{} ou un \alpharhamphodon{}, vous pouvez mettre un marqueur sur 2 unités ennemies. Lorsque vous attaquez l'une de ces unités marquées, les \rhamphodons{} et \alpharhamphodons{} (pas leur \rider{}) peuvent relancer pour toucher et gagnent chacun +1D3 Attaques (ces Attaques doivent être dirigées contre une unité marquée).
+}
+
+\newcommand{\altarofthesnakegodrule}{%
+Les unités alliées à \distance{6} ou moins d'au moins une figurine avec un \altarofthesnakegod{} gagnent \poisonedattacks{} au corps à corps. Si une unité possède déjà la règle \poisonedattacks{}, alors les Attaques blesseront automatiquement sur 5+ (au lieu de 6+).\newline
+L'\altarofthesnakegod{} possède un objet de sort puissance 3 qui contient le sort \diseasetwo{} (Discipline \disease{}).
+}
+
+\newcommand{\sunenginerule}{%
+Les unités alliées à \distance{6} ou moins d'au moins une figurine avec une \sunengine{} gagnent +1 en Capacité de Combat.\newline
+La \sunengine{} possède un objet de sort puissance 3 qui contient le sort \lightzero{} (Discipline \light{}).
+}
+
+\newcommand{\shootspikesrule}{%
+Arme de Tir. \range{18}, Force 4, \armourpiercing{1}, \multipleshots{2D6}, \quicktofire{}.\newline
+Cette arme ne peut pas être utilisée si la figurine a effectué une Marche Forcée lors de ce tour de joueur. Les \spearbacks{} doivent déclarer la réaction Maintenir sa position et Tirer si possible, mais ils ne subissent pas le malus de -1 en le faisant.
+}
+
+\newcommand{\spoutflamesrule}{%
+\artilleryweapon{} de type \flamethrower{} : \range{8}, Force 4, \flamingattacks{}.\newline
+Cette arme ne peut pas être utilisée si la figurine a effectué une Marche Forcée lors de ce tour de joueur. Si un Incident de Tir se produit, la \salamander{} compte toujours comme ayant obtenu le résultat \result{5-6}.
+}
+
+\newcommand{\spitpoisonrule}{%
+Attaque de Tir. \range{12}, Force 4, \poisonedattacks{}, \multipleshots{3}, \quicktofire{}.
+}
+
+\newcommand{\predatoryroarrule}{%
+Une seule utilisation. Activez le au début de n'importe quelle phase de combat. Désignez une unité alliée à \distance{12} ou moins de cette figurine. Tous les éléments de figurine avec la règle \bornpredator{} gagnent la \hatred{} pour la durée de cette phase.
+}
+
+
+
+
+\newcommand{\cuatllorddisciplinesrule}{%
+\startarmynewsectionSP{\cuatllorddisciplines}
+
+\spaceaftersection{}
+
+Une \cuatllorddiscipline{} ne peut pas être dupliquée. Une armée ne peut pas dépenser plus de \pts{100} en \cuatllorddisciplines{}. Cette limite passe à \pts{200} pour une Grande Armée, mais \textbf{\masterofmagic} ne peut alors pas être combiné avec \textbf{\wellspringofpower} ou \textbf{\unconquerablewill}.
+
+\begin{multicols}{2}\raggedcolumns
+\startpricelistNSP
+
+\pricelistitem{\masterofmagic}{85}Pendant les Phases de Magie de votre Tour de Joueur, lancez un dé additionnel pour la génération des Flux de Magie et ignorez le dé ayant donné le plus petit résultat.
+
+\pricelistitem{\wanderingpath}{80}Le \cuatllord{} ne génère pas ses sorts normalement, mais connait à la place tous les sorts de la Discipline \eightpaths{}. Il ne peut pas prendre l'Objet Essence de Libre Pensée ni avoir la règle \pathmaster{}.
+%M% vérifier le nom VO eightpaths.
+
+\pricelistitem{\wellspringofpower}{50}Le \cuatllord{} gagne un bonus de +1 pour lancer des sorts et ajoute un bonus de +2 additionnel au jet de Canalisation lors des Phases de Magie alliées.
+
+\pricelistitem{\ancientknowledge}{50}Le \cuatllord{} génère un sort supplémentaire et doit choisir la Discipline \whitemagic{}. Lorsqu'il lance un sort \whitemagic{} avec succès, il peut choisir d'oublier ce sort immédiatement, et génère un nouveau sort dans une Discipline à laquelle il a normalement accès, à la fin de la Phase de Magie. Le \cuatllord{} ne peut pas prendre l'Objet Essence de Libre Pensée ni avoir la règle \pathmaster{}.
+%M% demander pourquoi préciser le cas de la règle pathmaster puisqu'il est interdit
+
+\pricelistitem{\unconquerablewill}{35}Le \cuatllord{} peut relancer le jet de sa première tentative de dissipation ratée à chaque Phase de Magie.
+
+\pricelistitem{\shieldedsoul}{30}Lorsque le \cuatllord{} effectue un jet sur la Table des Fiascos, vous pouvez additionner ou soustraire 1 au résultat de ce jet.
+
+\pricelistitem{\higherstateofmind}{25}À la fin de chaque Phase de Magie de l'adversaire, vous pouvez mettre de côté un Dé de Dissipation inutilisé et l'ajouter à votre réserve de Dés de Pouvoir à votre Phase de Magie consécutive.
+
+\pricelistitem{\scrutinyoftheancients}{20}Le \cuatllord{} et son unité gagnent la règle \terror{}.
+
+\endpricelistNSP
+\end{multicols}
+
+\closearmynewsection
+}
+
+
+
+
+
+
+\begin{document}
+
+\input{../Layout/AB_titlepage.tex}
+
+\startarmyspecialrules
+
+\armyspecialruleentry{\coldblooded}
+
+Lorsqu'une unité dont la majorité des figurines possède cette règle doit passer un test de Commandement, lancez un dé supplémentaire puis ignorez le dé ayant donné le plus haut résultat.
+
+\armyspecialruleentry{\bornpredator}
+
+L'élément de figurine peut relancer tous ses jets pour toucher ayant donné un \result{1} naturel au Corps à Corps.
+
+\armyspecialruleentry{\telepathiclink}
+
+Un \cuatllord{} peut lancer ses sorts du type Dégâts par l'intermédiaire d'une figurine qui possède cette règle située à moins de \distance{24}. Lorsque vous faites ainsi, mesurez la portée du sort depuis cet intermédiaire, et utilisez son arc frontal et sa ligne de vue. La portée du sort est divisée par deux. Le \cuatllord{} peut lancer les sorts du type Projectile même s'il est engagé au Corps à corps, à condition que l'intermédiaire ne le soit pas lui-même. Si le lancer de sort se solde par un Fiasco, le \cuatllord{} lance normalement sur la Table des Fiascos et l'intermédiaire subit une touche de Force NDP+1. Si un sort est lancé via un intermédiaire alors l'attribut doit l'être aussi. Mesurez la portée depuis sa figurine et utilisez son champ de vision. On considère tout de même que le \cuatllord{} est le lanceur du sort.
+
+\closearmyspecialrules
+
+
+
+
+
+
+\vspace{1.5cm}
+\startarmyarmoury
+
+\startitemlistonecol
+
+\listitemonecol{\blowpipe} Arme de Tir. \range{12}, Force 3, \poisonedattacks{}, \multipleshots{2}, +1 pour toucher les figurines ayant la règle \largetarget{}.
+
+\listitemonecol{\javelin} Arme de Tir. \range{12}, Force de l'utilisateur, \quicktofire{}.
+
+\listitemonecol{\poisonedjavelin} Arme de Tir. \range{12}, Force de l'utilisateur, \poisonedattacks{}, \quicktofire{}.
+
+\listitemonecol{\giantblowpipe} \textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline
+\range{12}, Force 3, \poisonedattacks{}, \multipleshots{2D6}, \quicktofire{}.
+
+\listitemonecol{\greatbow} \textbf{\artilleryweapon} de type \textbf{\boltthrower}.\newline
+\range{36}, Force 6, \multiplewounds{1D3}{}, \armourpiercing{6}, \quicktofire{}.
+
+\newpage
+\listitemonecol{\engineoftheancients} \oneofakind{}.
+
+La figurine gagne la règle \telepathiclink{}. Au début de chaque Tour de Joueur allié, et avant la bataille, juste après avoir déplacé les unités ayant la règle \vanguard{}, choisissez l'un des effets suivants. Il dure jusqu'au début du prochain Tour de Joueur allié.
+\begin{itemize}[label={-}]
+	\item Choisissez une Discipline de Magie. La valeur de lancement des sorts de cette Discipline est réduite de 1 pour tous les Sorciers alliés.
+	\item Pendant votre Phase de Tir, choisissez une unité ennemie non engagée au Corps à Corps et à moins de \distance{9}. Elle subit 1D3 touches avec la règle \metalshifting{}.
+	\item Toutes les unités alliés à moins de \distance{6} gagnent une \wardsave{5} contre les Attaques à Distance. Seul cet effet peut être choisi avant la bataille.
+\end{itemize}
+
+\enditemlistonecol
+
+\closearmyarmoury
+
+
+
+
+
+
+\renewcommand{\startarmymagicalitems}{\vspace{1.5cm}\largefontsize\bigtitle{\labels@magicalitems}\begin{multicols}{2}\raggedcolumns}
+
+\startarmymagicalitems
+
+\armymagicalweapons
+
+\startpricelist
+
+\pricelistitem{Lame de l'Aube des Âges}{70/45}Type : \hw{}. Les attaques portées avec cette arme ont +1 en Force et la règle \multiplewounds{2}{}.
+%M% Je préfère de l'Aube des Temps, à s'éloigner de la traduction directe.
+
+\pricelistitem{Lance de Guerre Tricératops}{40}Type : \lance{}. La monture du porteur gagne la règle \impacthits{+1D6}.
+%M% "de guerre" en trop. revoir la traduction de stampede.
+
+\pricelistitem{Arc Serpent}{40}Type : \shortbow{}. Le porteur peut remplacer son attaque de tir normale par le tir d'une \textbf{\artilleryweapon} de type \textbf{\boltthrower} avec le profil suivant.\newline
+\range{18}, Force 6, \multiplewounds{1D3}{}, \armourpiercing{6}.
+
+\endpricelist
+
+\armymagicalarmour
+
+\startpricelist
+
+\pricelistitem{Heaume du Tricératops}{30}Figurine à pied uniquement.
+
+Type : Aucun (Sauvegarde d'Armure 6+). Le porteur gagne +1 en Endurance et la règle \impacthits{1}.
+%M% Accorder avec la traduction choisie de taurosaur
+\endpricelist
+
+\armytalismans
+
+\startpricelist
+
+\pricelistitem{Éclat de l'Étoile Tombée}{45/30}La figurine du porteur gagne les règles \hardtarget{} et \fireborn{}.
+%M% revoir il me semble que l'explication de Niedfaru différait de ça.
+
+\endpricelist
+
+\armyenchanteditems
+
+\startpricelist
+
+\pricelistitem{Œuf de Quetzal}{35}Le porteur gagne une \breathweapon{\Strength{} 1D3+2, \magicalattacks}.
+%M% of THE quetzal. DOnc Oeuf du Quetzal
+
+\pricelistitem{Baguette de Jade}{20}Le porteur gagne un \boundspell{3}. \whitemagicone{} (Discipline \whitemagic{}).
+%M% Staff c'est plutôt baton je crois, à vérifier
+
+\endpricelist
+
+\armyarcaneitems
+
+\startpricelist
+
+\pricelistitem{Plaque Ancestrale}{50/25}Une fois par Phase de Magie, le porteur peut relancer un Dé de Pouvoir utilisé pour lancer un sort. Cette capacité ne peut pas être utilisée si le porteur n'a lancé qu'un seul Dé de Pouvoir. Un Dé de Pouvoir qui a donné un \result{6} naturel ne peut pas être relancé.
+
+\pricelistitem{Cube Noir}{15}Une seule utilisation. Le porteur peut activer cet objet pendant la Phase de Magie de l'adversaire, après avoir déterminé les Flux de Magie. Retirez alors 1 Dé de Pouvoir de la réserve de votre adversaire.
+
+\endpricelist
+
+\armymagicalbanners
+
+\startpricelist
+
+\pricelistitem{Totem de Mixoatl}{50}Les éléments de figurines ordinaires de l'unité du porteur ayant la règle \bornpredator{} gagnent la règle \hatred{}.
+
+\endpricelist
+
+\closearmymagicalitems
+
+
+
+
+
+
+
+%%% START OF THE ARMYLIST - Translators shouldn't have to edit it %%%
+
+\input{SaurianAncients_armylist.tex}
+
+
+%%% Quick Reference Sheet - AB_qrs.tex is automatic and shouldn't be edited %%%
+
+\quickrefsheettitle
+
+\input{../Layout/AB_qrs.tex}
+\bigskip %M% crew number taurosaur
+\begin{center}
+\noindent{\antiquefont\Largefontsize\textbf{Armes de Tir des Sauriens Anciens}} %M% check
+\medskip
+
+\rowcolors{1}{white}{black!10}
+\noindent\begin{tabular}{lcccccc}
+\textbf{Nom} & \textbf{Artillerie} & \textbf{Portée} & \textbf{\labels@S{}} & \textbf{\multipleshots{}} & \textbf{\multiplewounds{}} & \textbf{\armourpiercing{}} \tabularnewline
+\blowpipe{} & - & \distance{12} & 3 & 2 & - & - \tabularnewline
+\javelin{} & - & \distance{12} & Utilisateur & - & - & - \tabularnewline
+\giantblowpipe{} & - & \distance{12} & 3 & 2D6 & - & - \tabularnewline
+\greatbow{} & \boltthrower{} & \distance{36} & 6 & - & 1D3 & 6 \tabularnewline
+\firebola{} (\skinkskyrider{}) & - & \distance{8} & 4 & - & - & - \tabularnewline
+\shootspikes{} (\weaponbeast{}) & - & \distance{18} & 4 & 2D6 & - & 1 \tabularnewline
+\spoutflames{} (\weaponbeast{}) & \flamethrower{} & \distance{8} & 4 & - & - & - \tabularnewline
+\spitpoison{} (\stygiosaur{}) & - & \distance{12} & 4 & 3 & - & - \tabularnewline
+\end{tabular}
+\end{center}
+
+\restoregeometry
+
+\end{document}

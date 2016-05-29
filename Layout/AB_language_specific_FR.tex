@@ -6,13 +6,13 @@
 \newcommand{\addtosortedlist}[1]{%
 	\protected@edef\textarg{#1}%
 	\protected@edef\textwithoutspaces{\expandafter\removespaces\expandafter{\textarg}}%
-	\substitute\textwithoutspaces{É}{e}% Most used special characters of the language, and equivalent for alphabetical ordering
-	\substitute\textwithoutspaces{È}{e}%
-	\substitute\textwithoutspaces{Ê}{e}%
+	\substitute\textwithoutspaces{É}{E}% Most used special characters of the language, and equivalent for alphabetical ordering
+	\substitute\textwithoutspaces{È}{E}%
+	\substitute\textwithoutspaces{Ê}{E}%
 	\substitute\textwithoutspaces{é}{e}%
 	\substitute\textwithoutspaces{è}{e}%
 	\substitute\textwithoutspaces{ê}{e}%
-	\substitute\textwithoutspaces{À}{a}%
+	\substitute\textwithoutspaces{À}{A}%
 	\substitute\textwithoutspaces{à}{a}%
 	\substitute\textwithoutspaces{ù}{u}%
 	\expandafter\sortitem\expandafter[\textwithoutspaces]{#1}%
@@ -282,6 +282,7 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 \newcommand{\forge}{de la Forge}
 \newcommand{\sands}{des Sables}
 \newcommand{\whitemagic}{de la Magie Blanche}
+\newcommand{\eightpaths}{des Huit Vents}
 
 \newcommand{\anyofthebattlemagic}{dans n'importe laquelle des Disciplines Communes}
 
@@ -314,6 +315,7 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 \newcommand{\bsb}{Porteur de la Grande Bannière}
 \newcommand{\cannotmarch}{Pas de Marche Forcée}
 \newcommand{\veteranstandardbearer}{Porte-étendard Vétéran}
+\newcommand{\swirlingmelee}{Mêlée Tourbillonnante}
 
 
 %%% Equipment %%%
@@ -379,7 +381,7 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 
 %%% Terrain %%%
 
-\newcommand{\water}{Eaux peu profondes}
+\newcommand{\water}{Eaux Peu Profondes}
 \newcommand{\forest}{Forêt}
 \newcommand{\impassableterrain}{Terrain Infranchissable}
 

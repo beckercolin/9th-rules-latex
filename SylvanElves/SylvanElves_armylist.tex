@@ -7,24 +7,24 @@
 
 \showunit{
 	name={\forestprince},
-	cost={130},
+	cost=130,
 	profile={< 5 7 7 4 3 3 8 4 10},
 	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
 	commontype=\elvescommonrules{},
-	commonspecialrules={\forestwalker, \lightningreflexes},
+	commonspecialrules={\forestwalker{},\lightningreflexes},
 	options={
+		\asinglekindred{}=\unlimited{},
 		\magicalitemsallowance{}=\upto{}<100,
-		\joinakindred{}=\unlimited{},
-		\la{}=\free,
+		\la{}=\free{},
 		\shield{}=5,
 		\elvencloak{}=8,
 		\longbow{}=3,
 		\feyarrows{} \onechoiceonlyNOC{}=3,
 		\combatweapononechoice{
-			\spear{}=5,
 			\sylvanblades{}=5,
+			\spear{}=5,
 			\gw{}=10,
 			\lance{}=15,
 			\sylvanlance{}=15,
@@ -40,19 +40,19 @@
 
 \showunit{
 	name={\highdruid},
-	cost={185},
-	profile={ < 5 4 4 3 3 3 5 1 9},
+	cost=185,
+	profile={< 5 4 4 3 3 3 5 1 9},
 	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
 	commontype=\elvescommonrules{},
-	commonspecialrules={\forestwalker, \lightningreflexes},
+	commonspecialrules={\forestwalker{},\lightningreflexes},
 	magiclevel=3,
-	magicpaths={\battle, \blackmagic, \whitemagic},
+	magicpaths={\blackmagic{},\whitemagic{},\anyofthebattlemagic{}},
 	options={
-		\magicalitemsallowance{}=\upto{}<100,
-		\treesinging{}=15,
 		\magiclevel{4}=30,
+		\treesinging{}=15,
+		\magicalitemsallowance{}=\upto{}<100,
 	},
 	mounts={
 		\elvenhorse{}=20,
@@ -63,35 +63,29 @@
 }
 
 \showunit{
-	name={\treefatherancient{} - (\therarestofspirits{})},
+	name={\treefatherancient{}},
 	profile={ 
 		\treefatherancient{}< 5 4 4 5 6 6 2 3 9,
-		\avatarofnature{}   < 5 6 5 7 6 6 3 6 9,
+		\avatarofnature{}< 5 6 5 7 6 6 3 6 9,
 	},
 	type=\monster{},
 	basesize=75x50,
 	unitsize=1,
 	commontype=\sylvancommonrules{},
-	commonspecialrules={\forestwalker, \otherwordly},
-	specialrules={\flammable, \crushattack, \stubborn},
-	magicpaths={\nature, \wilderness},
+	commonspecialrules={\forestwalker{},\otherworldly{},\therarestofspirits{}},
+	specialrules={\flammable{},\crushattack{},\stubborn},
+	magicpaths={\nature{},\wilderness},
 	armour={\innatedefence{3}},
-	options={
-		
-		\magicalitemsallowance{}=\upto{}<100,
-		\treesinging{}=15,
-		\magiclevel{4}=30,
-	},
 	additional={
-		\begin{center}\mustbecomeoneofthefollowing{}\end{center}
+		\begin{center}\mustbecomeoneofthefollowingNOC{}\end{center}
 		\setlength{\columnseprule}{0.5pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}	
 		\begin{multicols}{2}
 		\raggedcolumns
-		\begin{center}{\largerfontsize\antiquefont\treefatherancient{} (\pts{215})}
+		\begin{center}{\largerfontsize\antiquefont\treefatherancient{} (\pts{215})}\end{center}
 		
 		\def\tempoptions{%
-			\takeasingleaspectofnature{}=\unlimited,
+			\asingleaspectofnature{}=\unlimited{},
 			\treesinging{}=15,
 			\impalingroots{}=20,
 			\magiclevelchoice{
@@ -100,19 +94,19 @@
 				\magiclevel{3}=130,
 				\magiclevel{4}=160,
 			},
-			\ifwizardmaytakeanarcaneitem{}=\upto{}<50,
+			\ifwizard{}{,} \arcaneitem{}=\upto{}<50,
 		}
-		\vspace*{0.1cm}\options{\tempoptions}
+		\options{\tempoptions}
 
 		\columnbreak
-		\begin{center}{\largerfontsize\antiquefont\avatarofnature{} (\pts{340}, \oneofakind{})}
+		\begin{center}{\largerfontsize\antiquefont\avatarofnature{} (\pts{340}, \oneofakind{})}\end{center}
 		
 		\def\tempoptions{%
-			\takeasingleaspectofnature{}=\unlimited,
+			\asingleaspectofnature{}=\unlimited{},
 			\treesinging{}=15,
 			\impalingroots{}=25,
 		}
-		\vspace*{0.1cm}\options{\tempoptions}
+		\options{\tempoptions}
 		
 		\vspace*{\fill}
 		\end{multicols}
@@ -120,28 +114,35 @@
 }
 
 
+
+
+
+
+
+
 \heroestitle
 
 \showunit{
 	name={\chieftain},
-	cost={70},
+	cost=70,
 	profile={< 5 6 6 4 3 2 7 3 9},
 	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
 	commontype=\elvescommonrules{},
-	commonspecialrules={\forestwalker, \lightningreflexes},
+	commonspecialrules={\forestwalker{},\lightningreflexes},
 	options={
+		\bsb{}=25,
+		\asinglekindred{}=\unlimited{},
 		\magicalitemsallowance{}=\upto{}<50,
-		\joinakindred{}=\unlimited{},
-		\la{}=\free,
+		\la{}=\free{},
 		\shield{}=3,
 		\elvencloak{}=5,
 		\longbow{}=2,
 		\feyarrows{} \onechoiceonlyNOC{}=3,
 		\combatweapononechoice{
-			\spear{}=5,
 			\sylvanblades{}=5,
+			\spear{}=5,
 			\gw{}=8,
 			\lance{}=10,
 			\sylvanlance{}=10,
@@ -156,19 +157,19 @@
 
 \showunit{
 	name={\druid},
-	cost={70},
-	profile={ < 5 4 4 3 3 2 5 1 8},
+	cost=70,
+	profile={< 5 4 4 3 3 2 5 1 8},
 	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
 	commontype=\elvescommonrules{},
-	commonspecialrules={\forestwalker, \lightningreflexes},
+	commonspecialrules={\forestwalker{},\lightningreflexes},
 	magiclevel=1,
-	magicpaths={\battle, \blackmagic, \whitemagic},
+	magicpaths={\blackmagic{},\whitemagic{},\anyofthebattlemagic{}},
 	options={
-		\magicalitemsallowance{}=\upto{}<50,
+		\magiclevel{2}=25,
 		\treesinging{}=15,
-		\magiclevel{4}=25,
+		\magicalitemsallowance{}=\upto{}<50,
 	},
 	mounts={
 		\elvenhorse{}=15,
@@ -177,42 +178,48 @@
 	},
 }
 
+\newpage
 \showunit{
 	name={\dryadmatriarch},
-	cost={55},
-	profile={ < 5 6 6 4 4 2 7 3 9},
+	cost=55,
+	profile={< 5 6 6 4 4 2 7 3 9},
 	type=\infantry{},
 	basesize=25x25,
 	unitsize=1,
 	commontype=\sylvancommonrules{},
-	commonspecialrules={\forestwalker, \otherworldly},
+	commonspecialrules={\forestwalker{},\otherworldly},
 	specialrules={\hatred},
-	magicpaths={\nature, \wilderness},
+	magicpaths={\nature{},\wilderness},
 	options={
-		\takeasingleaspectofnature{}=\upto{}<50,
-		\treesinging{}=15,
+		\asingleaspectofnature{}=\upto{}<50,
 		\magiclevelchoice{
 			\magiclevel{1}=20,
 			\magiclevel{2}=45,
 		},
+		\treesinging{}=15,
 	},
 }
 
 \showunit{
 	name={\thicketshepherd},
-	cost={130},
-	profile={ < 5 5 4 5 5 4 4 4 9},
+	cost=130,
+	profile={< 5 5 4 5 5 4 4 4 9},
 	type=\monstrousinfantry{},
 	basesize=40x40,
 	unitsize=1,
 	commontype=\sylvancommonrules{},
-	commonspecialrules={\forestwalker, \otherworldly},
-	specialrules={\flammable, \armourpiercing{1}, \emboldeningboughs},
-	armour={\i},
+	commonspecialrules={\forestwalker{},\otherworldly},
+	specialrules={\flammable{},\armourpiercing{1},\emboldeningboughs},
+	armour={\innatedefence{4}},
 	options={
-		\takeasingleaspectofnature{}=\upto{}<50,
+		\asingleaspectofnature{}=\upto{}<50,
 	},
 }
+
+
+
+
+
 
 
 \mountstitle
@@ -225,7 +232,7 @@
 	specialrules={\strider{\forest}},
 	armour={\mountsprotection{6}},
 	options={
-		\unlessmountedbywildhuntermaytakemountsprotection{}=10
+		\unlessmountedbywildhuntermaytakemountsprotection{}=10,
 	},
 }
 
@@ -243,11 +250,15 @@
 	profile={< 10 5 - 4 4 1 5 2 8},
 	type=\warbeast{},
 	basesize=25x50,
-	specialrules={\strider{\forest}, \magicalattacks, \magicresistance{2}, \thunderouscharge},
 	armour={\mountsprotection{6}},
+	additional={%
+		\def\tempspecialrules{\strider{\forest},\magicalattacks{},\magicresistance{2},\thunderouscharge}
+		\vspace*{0.3cm}\specialrules{\tempspecialrules}
+	}
 }
 
 \showunit{
+	notinQRS=yes,
 	name={\foresteagle},
 	profile={< 2 5 - 4 4 3 4 2 8},
 	type=\monstrousbeast{},
@@ -262,15 +273,20 @@
 
 \showunit{
 	name={\dragon{} (\oneofakind{})},
+	QRSname={\dragon},
 	profile={< 6 5 1 6 6 6 3 5 9},
 	type=\monster{},
 	basesize=50x100,
-	specialrules={\fly{7}, \strider{\forest}, \breathweapondragon},
-	armour={\mountsprotection{6}},
-	options={
-		\unlessmountedbywildhuntermaytakemountsprotection{}=10
-	},
+	armour={\innatedefence{3}},
+	additional={%
+		\def\tempspecialrules{\fly{7},\strider{\forest},\breathweapon{\Strength{} 4, \flamingattacks}}
+		\vspace*{0.3cm}\specialrules{\tempspecialrules}
+	}
 }
+
+
+
+
 
 
 
@@ -286,13 +302,13 @@
 	unitsize=15,
 	maxmodels=50,
 	costpermodel=9,
-	commontype=\elvencommonrules{},
-	commonspecialrules={\forestwalker, \lightningreflexes},
+	commontype=\elvescommonrules{},
+	commonspecialrules={\forestwalker{},\lightningreflexes},
 	weapons={\spear},
-	armour={\la, \elvencloak},
+	armour={\la{},\elvencloak},
 	options={
-		\exchangespearwithsylvanblades{}=\permodel{}<1,
 		\shield{}=\permodel{}<2,
+		\exchangespearwithsylvanblades{}=\permodel{}<1,
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
 }
@@ -307,23 +323,22 @@
 	unitsize=10,
 	maxmodels=30,
 	costpermodel=8,
-	commontype=\elvencommonrules{},
-	commonspecialrules={\forestwalker, \lightningreflexes},
-	unitrules={\unitrule{\blackarrows}{\blackarrowsrule}},
+	commontype=\elvescommonrules{},
+	commonspecialrules={\forestwalker{},\lightningreflexes},
+	unitrules={\unitrule{\blackarrow}{\blackarrowrule}},
 	weapons={\longbow},
 	options={
-		\maytakeblackarrowsXchoice{}=\permodel{}<4,
+		\blackarrow{} (\zerotoXchoice{50})=\permodel{}<4,
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
 }
-
 
 \showunit{
 	name={\heathriders},
 	QRSname={\heathrider},
 	cost=90,
 	profile={
-		\rider{}     < 5 4 4 3 3 1 5 1 8,
+		\rider{}< 5 4 4 3 3 1 5 1 8,
 		\elvenhorse{}< 9 3 - 3 3 1 4 1 3,
 	},
 	type=\cavalry{},
@@ -331,22 +346,20 @@
 	unitsize=5,
 	maxmodels=15,
 	costpermodel=17,
-	commontype=\elvencommonrules{},
-	commonspecialrules={\forestwalker \only{\rider}, \lightningreflexes \only{\rider}},
+	commontype=\elvescommonrules{},
+	commonspecialrules={\forestwalker{} \only{\rider}, \lightningreflexes{} \only{\rider}},
 	specialrules={\fastcavalry},
-	weapons={\longbow, \sylvanlance},
-	armour={\la, \mountsprotection{6}},
+	weapons={\longbow{},\sylvanlance},
+	armour={\la{},\mountsprotection{6}},
 	options={
-		\mayexchangelongbowforshield{}=\free,
+		\mayexchangelongbowforshield{}=\free{},
 		\onechoiceonly{
 			\exchangefastcavalryforelvencloak{}=\permodel{}<2,
 			\ambush{}=\permodel{}<2,
 		},
 	},
-	commandgroup={champion=10, musician=10, banner=10}
+	commandgroup={champion=10, musician=10, banner=10},
 }
-
-
 
 \showunit{
 	name={\dryads},
@@ -359,12 +372,17 @@
 	maxmodels=30,
 	costpermodel=12,
 	commontype=\sylvancommonrules{},
-	commonspecialrules={\forestwalker, \otherworldly},
+	commonspecialrules={\forestwalker{},\otherworldly},
 	options={
-		\skirmishmaxXmodelsdryads{}=30,
+		\skirmisher{} \ifNmodelsorless{15}=30,
 	},
 	commandgroup={champion=10}
 }
+
+
+
+
+
 
 \specialunitstitle
 
@@ -378,14 +396,18 @@
 	unitsize=5,
 	maxmodels=15,
 	costpermodel=15,
-	commontype=\elvencommonrules{},
-	commonspecialrules={\forestwalker, \lightningreflexes},
-	specialrules={\skirmisher, \immunetopsychology, \wardsave{6}, \magicresistance{2}},
-	unitrules={\unitrule{\danceofcenyrn}{\danceofcenyrnrule}},
+	commontype=\elvescommonrules{},
+	commonspecialrules={\forestwalker{},\lightningreflexes},
 	weapons={\sylvanblades},
-	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50}
+	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
+	additional={%
+		\def\tempspecialrules{\skirmisher{},\immunetopsychology{},\wardsave{6},\magicresistance{1}}
+		\vspace*{-0.2cm}\specialrules{\tempspecialrules}
+	
+		\def\tempunitrules{\unitrule{\dancesofcenyrn}{\dancesofcenyrnrule}}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
+	},
 }
-
 
 \showunit{
 	name={\forestrangers},
@@ -397,9 +419,9 @@
 	unitsize=10,
 	maxmodels=30,
 	costpermodel=11,
-	commontype=\elvencommonrules{},
-	commonspecialrules={\forestwalker, \lightningreflexes},
-	specialrules={\armourpiercing{1}, \immunetopsychology, \bodyguard{\forestprince{}, \chieftain{}}},
+	commontype=\elvescommonrules{},
+	commonspecialrules={\forestwalker{},\lightningreflexes},
+	specialrules={\armourpiercing{1},\immunetopsychology{},\bodyguard{\forestprince{}, \chieftain{}}},
 	weapons={\gw},
 	armour={\la},
 	options={
@@ -413,7 +435,7 @@
 	QRSname={\wildhuntsman},
 	cost=145,
 	profile={
-		\rider{}    < 5 5 4 3 3 1 5 1 9,
+		\rider{}< 5 5 4 4 3 1 5 1 9,
 		\elvendeer{}< 9 3 - 4 3 1 4 1 3,
 	},
 	type=\cavalry{},
@@ -421,17 +443,17 @@
 	unitsize=5,
 	maxmodels=12,
 	costpermodel=28,
-	commontype=\elvencommonrules{},
-	commonspecialrules={\forestwalker \only{\rider}, \lightningreflexes \only{\rider}},
-	specialrules={\lighttroops, \frenzy, \wardsave{6}, \devastingcharge \only{\rider}},
+	commontype=\elvescommonrules{},
+	commonspecialrules={\forestwalker{} \only{\rider},\lightningreflexes{} \only{\rider}},
+	specialrules={\lighttroops{},\frenzy{},\wardsave{6},\devastatingcharge{} \only{\rider}},
 	weapons={\sylvanlance},
-	armour={\la, \mountsprotection{6}},
+	armour={\la{},\mountsprotection{6}},
 	options={
-		\exchangesylvanlanceforsylvanblades{}=\permodel{}<1,
 		\onechoiceonly{
-			\shield{}=\permodel{}<3,
 			\vanguard{}=\permodel{}<3,
+			\shield{}=\permodel{}<3,
 		},
+		\exchangesylvanlanceforsylvanblades{}=\permodel{}<1,
 	},
 	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50}
 }
@@ -441,7 +463,7 @@
 	QRSname={\kestrelknight},
 	cost=120,
 	profile={
-		\rider{}  < 5 5 4 4 3 1 5 1 9,
+		\rider{}< 5 5 4 4 3 1 5 1 9,
 		\kestrel{}< 2 5 - 4 4 2 4 2 5,
 	},
 	type=\monstrouscavalry{},
@@ -449,15 +471,15 @@
 	unitsize=3,
 	maxmodels=6,
 	costpermodel=40,
-	commontype=\elvencommonrules{},
-	commonspecialrules={\forestwalker \only{\rider}, \lightningreflexes \only{\rider}},
-	specialrules={\fastcavalry, \fly{9}, \devastingcharge \only{\rider}, \armourpiercing{1} \only{\kestrel}},
-	weapons={\longbow, \sylvanlance},
+	commontype=\elvescommonrules{},
+	commonspecialrules={\forestwalker{} \only{\rider},\lightningreflexes{} \only{\rider}},
+	specialrules={\fastcavalry{},\fly{9},\devastatingcharge{} \only{\rider},\armourpiercing{1} \only{\kestrel}},
+	weapons={\longbow{},\sylvanlance},
 	armour={\mountsprotection{6}},
 	options={
 		\mayexchangelongbowforshield{}=\permodel{}<2,
 		\la{}=\permodel{}<4,
-		\skirmishmaxXmodelskestrels{}=\permodel{}<5,
+		\skirmisher{} \ifNmodelsorless{3}=\permodel{}<5,
 	},
 	commandgroup={champion=10, musician=10, banner=10, bannerallowance=25}
 }
@@ -473,10 +495,17 @@
 	maxmodels=10,
 	costpermodel=50,
 	commontype=\sylvancommonrules{},
-	commonspecialrules={\forestwalker, \otherworldly},
-	specialrules={\flammable, \armourpiercing{1}, \bodyguard{\thicketshepherd}, \emboldeningboughs},
-	commandgroup={champion=10}
+	commonspecialrules={\forestwalker{},\otherworldly},
+	commandgroup={champion=10},
+	additional={%
+		\def\tempspecialrules{\flammable{},\armourpiercing{1},\bodyguard{\thicketshepherd},\emboldeningboughs}
+		\vspace*{-0.2cm}\specialrules{\tempspecialrules}
+	},
 }
+
+
+
+
 
 
 
@@ -492,19 +521,18 @@
 	unitsize=5,
 	maxmodels=10,
 	costpermodel=10,
-	commontype=\elvencommonrules{},
-	commonspecialrules={\forestwalker, \lightningreflexes},
+	commontype=\elvescommonrules{},
+	commonspecialrules={\forestwalker{},\lightningreflexes},
 	specialrules={\skirmisher},
-	unitrules={\unitrule{\hawthornpoints}{\hawthornpointsrule}},
+	unitrules={\unitrule{\hawthornpoint}{\hawthornpointrule}},
 	weapons={\longbow},
 	options={
+		\scout{} (\oneperarmy{})=\permodel{}<1,
+		\hawthornpoint{}=\permodel{}<4,
 		\pw{}=\permodel{}<1,
-		\singleunitmaytakescout{}=\permodel{}<1,
-		\hawthornpoints{}=\permodel{}<4,
 	},
 	commandgroup={champion=10}
 }
-
 
 \showunit{
 	name={\pathfinders},
@@ -516,14 +544,12 @@
 	unitsize=5,
 	maxmodels=10,
 	costpermodel=23,
-	commontype=\elvencommonrules{},
-	commonspecialrules={\forestwalker, \lightningreflexes},
-	specialrules={\skirmisher, \scout, \masterarchers},
-	unitrules={\unitrule{\hawthornpoints}{\hawthornpointsrule}},
-	weapons={\longbow, \sylvanblades},
-	commandgroup={champion=10}
+	commontype=\elvescommonrules{},
+	commonspecialrules={\forestwalker{},\lightningreflexes},
+	specialrules={\skirmisher{},\scout{},\masterarcher{}},
+	weapons={\longbow{},\sylvanblades},
+	commandgroup={champion=10},
 }
-
 
 \showunit{
 	name={\foresteagle},
@@ -534,20 +560,19 @@
 	unitsize=1,
 	maxmodels=5,
 	costpermodel=30,
-	specialrules={\strider{\forest}, \fly{9}},
+	specialrules={\strider{\forest},\fly{9}},
 	options={
 		\armourpiercing{1}=\permodel{}<5,
 		\lightningreflexes{}=\permodel{}<5,
 	},
 }
 
-
 \showunit{
 	name={\briarmaidens},
 	QRSname={\briarmaiden},
 	cost=105,
 	profile={
-		\rider{}    < 5 4 5 3 3 1 5 1 9,
+		\rider{}< 5 4 5 3 3 1 5 1 9,
 		\elvendeer{}< 9 3 - 4 3 1 4 1 3,
 	},
 	type=\cavalry{},
@@ -555,30 +580,26 @@
 	unitsize=5,
 	maxmodels=10,
 	costpermodel=21,
-	commontype=\elvencommonrules{},
-	commonspecialrules={\forestwalker \only{\rider}, \lightningreflexes \only{\rider}},
-	specialrules={\lighttroops, \wardsave{4}, \poisonedattacks \only{\rider}},
+	commontype=\elvescommonrules{},
+	commonspecialrules={\forestwalker{} \only{\rider}, \lightningreflexes{} \only{\rider}},
+	specialrules={\lighttroops{},\wardsave{4},\poisonedattacks{} \only{\rider}},
 	weapons={\poisonedthorn},
 	armour={\mountsprotection{6}},
-	unitrules={\unitrule{\briarmaidensmagic}{\briarmaidensmagicrule}},
-	additional={%
-		\def\tempequipment{\equipmentdef{\poisonedthorn{}}{\poisonedthornrule{}}}
-		\unitequipment{\tempequipment}
-	},
-
-	commandgroup={champion=60, musician=10, banner=10, bannerallowance=50}
+	unitequipment={\equipmentdef{\poisonedthorn}{\poisonedthornrule}},
+	commandgroup={champion=60, musician=10, banner=10, bannerallowance=50},
+	wizardconclave={\whitemagiczero{} (Discipline \whitemagic{}), \wildernessfour{} (Discipline \wilderness{})},
 }
 
 \showunit{
-	name={\treefather{} - (\therarestofspirits{})},
+	name={\treefather},
 	cost=215,
-	profile={< 5 5 5 6 6 5 2 5 8,},
+	profile={< 5 5 5 6 6 5 2 5 8},
 	type=\monster{},
 	basesize=75x50,
 	unitsize=1,
 	commontype=\sylvancommonrules{},
-	commonspecialrules={\forestwalker, \otherwordly},
-	specialrules={\flammable, \crushattack, \stubborn},
+	commonspecialrules={\forestwalker{},\otherworldly},
+	specialrules={\flammable{},\crushattack{},\stubborn{},\therarestofspirits{}},
 	armour={\innatedefence{3}},
 	options={
 		\treesinging{}=15,

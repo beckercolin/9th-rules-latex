@@ -1,0 +1,407 @@
+\input{../Layout/AB_layout.tex}
+
+\newcommand{\booktitle}{Hardes Bestiales}
+\newcommand{\version}{0.99.9}
+\newcommand{\frenchversion}{2.0}
+\newcommand{\booklogo}{pics/logo_big_HB.png}
+
+
+% Army special rules
+
+\newcommand{\primalinstinct}{Instinct Primaire}
+\newcommand{\drunkard}{Ivrogne}
+\newcommand{\packtactics}{Tactique de Meute}
+\newcommand{\lootedbooze}{Alcool Pur}
+\newcommand{\bloodoffering}{Offrande de Sang}
+\newcommand{\halfhorse}{Moitié Cheval}
+
+% Army common type special rules
+
+\newcommand{\beastscommonrules}{Règles spéciales Bestiales}
+\newcommand{\armycommonrules}{Règles spéciales de l'armée}
+
+% Armoury
+
+\newcommand{\soothsayerstaff}{Bâton de Devin}
+\newcommand{\beastaxe}{Hache de la Bête}
+
+% Totems
+
+\newcommand{\totem}{Totem}
+\newcommand{\totems}{Totems}
+
+% Spells
+
+\newcommand{\wildernessone}{Essaim d’Insectes}
+
+% Other rules
+
+\newcommand{\sober}{Sobre}
+\newcommand{\drunk}{Ivre}
+\newcommand{\gnarledhidetotem}{Totem de la Peau Noueuse}
+\newcommand{\bloodedhorntotem}{Totem de la Corne Sanglante}
+\newcommand{\cloudedeyetotem}{Totem de l’Œil Embué}
+\newcommand{\blackwingtotem}{Totem de l'Aile Noire}
+\newcommand{\lordofbulls}{Seigneur des Taureaux}
+\newcommand{\huntingcall}{Appel à la Chasse}
+\newcommand{\hooffather}{Maître-Brasseur}
+\newcommand{\huntinghorn}{Corne de la Chasse}
+\newcommand{\sleeper}{Endormi}
+\newcommand{\hurlattack}{Jet de Rochers}
+\newcommand{\strengthfromflesh}{Force du Carnage}
+\newcommand{\lockedhorns}{•}
+\newcommand{\auraofmadness}{Aura de Folie}
+\newcommand{\giantattacks}{Attaques de Géant}
+\newcommand{\bellow}{Hurle}
+\newcommand{\jump}{Saute}
+\newcommand{\grab}{Ramasse}
+\newcommand{\swing}{Frappe}
+\newcommand{\thump}{Tape comme un Sourd}
+\newcommand{\smashname}{Fracasse}
+
+%%% Names
+
+% Characters
+
+\newcommand{\minotaurwarlord}{Seigneur Minotaure}
+\newcommand{\minotaurwarlords}{Seigneurs Minotaure}
+\newcommand{\gnarledsoothsayer}{Devin Noueux}
+\newcommand{\gnarledsoothsayers}{Devins Noueux}
+\newcommand{\beastlord}{Seigneur Bestial}
+\newcommand{\beastlords}{Seigneurs Bestiaux}
+\newcommand{\minotaurchieftain}{Chef de clan Minotaure}
+\newcommand{\minotaurchieftains}{Chefs de clan Minotaure}
+\newcommand{\soothsayer}{Devin}
+\newcommand{\soothsayers}{Devins}
+\newcommand{\beastchieftain}{Chef de Clan Bestial}
+\newcommand{\beastchieftains}{Chefs de Clan Bestial}
+\newcommand{\centaurchieftain}{Chef de Clan Centaure}
+\newcommand{\centaurchieftains}{Chefs de Clan Centaure}
+
+% Core
+
+\newcommand{\wildhornherd}{Homme-Bouc}
+\newcommand{\wildhornherds}{Hommes-Boucs}
+\newcommand{\mongrelherd}{Satyre}
+\newcommand{\mongrelherds}{Satyres}
+\newcommand{\mongrelraider}{Pillard Satyre}
+\newcommand{\mongrelraiders}{Pillards Satyres}
+\newcommand{\feralhound}{Chien Sauvage}
+\newcommand{\feralhounds}{Chiens Sauvages}
+\newcommand{\raidingchariot}{Char Maraudeur}
+\newcommand{\raidingchariots}{Chars Maraudeurs}
+
+% Special
+
+\newcommand{\minotaur}{Minotaure}
+\newcommand{\minotaurs}{Minotaures}
+\newcommand{\longhornherd}{Longue-Corne}
+\newcommand{\longhornherds}{Longues-Cornes}
+\newcommand{\centaur}{Centaure}
+\newcommand{\centaurs}{Centaures}
+\newcommand{\gargoyle}{Gargouille}
+\newcommand{\gargoyles}{Gargouilles}
+\newcommand{\razortuskherd}{Troupeau de Verrats Sauvages}
+\newcommand{\razortuskherds}{Troupeaux de Verrats Sauvages}
+\newcommand{\razortuskchariot}{Char à Verrat}
+\newcommand{\razortuskchariots}{Chars à Verrat}
+\newcommand{\briarbeast}{Bête des Forêts}
+\newcommand{\briarbeasts}{Bêtes des Forêts}
+
+% Rare
+
+\newcommand{\cyclop}{Cyclope}
+\newcommand{\cyclops}{Cyclopes}
+\newcommand{\gortach}{Gortak}
+\newcommand{\gortachs}{Gortaks}
+\newcommand{\jabberwock}{Jabberwockie}
+\newcommand{\jabberwocks}{Jabberwockies}
+\newcommand{\beastgiant}{Géant Bestial}
+\newcommand{\beastgiants}{Géants Bestiaux}
+
+% Mounts
+
+
+% Short names and multiprofiles names
+
+\newcommand{\crew}{Équipage}
+\newcommand{\warhog}{Cochon de guerre}
+\newcommand{\razortusk}{Verrat}
+\newcommand{\wildhorncrew}{Équipage Homme-Bouc}
+\newcommand{\longhorncrew}{Équipage Longue-corne}
+
+
+% Profile wording
+
+\newcommand{\maybeupgradetototembearer}{Porteur de \totem{}}
+\newcommand{\plusonewoundgeneralonly}{+1 PV (Général uniquement)}
+\newcommand{\ambushoptionwildhornherd}{\ambush{} (25 figurines max)}
+\newcommand{\ambushoptionmongrelherd}{\ambush{} (30 figurines max)}
+\newcommand{\scoutandambush}{\scout{} et \ambush{}}
+\newcommand{\wildhornandlonghorn}{\wildhorn{} et \longhorn{}}
+\newcommand{\ambushoptionlonghornherd}{Une unité peut l'améliorer en \scraplingforeman{}}
+\newcommand{\replacehalberdwithgw}{Échanger l'\halberd{} contre une \gw{}}
+\newcommand{\ambushoptioncentaurs}{\ambush{} (8 figurines max)}
+\newcommand{\mayhavebreathweaponjabberwock}{\breathweapon{Force 3, \armourpiercing{2}}}
+
+% Profile rules
+
+\newcommand{\lordofbullsrule}{%
+Si un \minotaurwarlord{} est le Général, alors les \minotaurs{}, les \minotaurwarlords{} et les \minotaurchieftains{} ne peuvent pas perdre leur \frenzy{} tant que le Général est en vie.
+}
+
+\newcommand{\huntingcallrule}{%
+Si un \beastlord{} avec cette règle est le Général de l'armée, vous pouvez relancer les jets d'\ambush{} ratés pour les unités avec la règle \packtactics{}. Si vous jouez en deuxième, vous devez tenter de faire entrer en jeu vos unités avec \ambush{} avec la règle \packtactics{} dès le tour 1.
+}
+
+\newcommand{\hooffatherrule}{%
+Si un \centaurchieftain{} est le Général, alors les unités de \centaurs{} peuvent être prises comme des Unités de Base au lieu d'Unités Spéciales. Les Porte-étendard des unités de \centaurs{} prises comme Unités de Base ne peuvent prendre de bannière magique, à l'exception d'une seule unité qui peut prendre un Porte-étendard Vétéran.
+}
+
+\newcommand{\huntinghornrule}{%
+Chaque unité alliée à \distance{6} ou moins d'au moins un \razortuskchariot{} avec cette option gagne un bonus de \distance{+1} à son jet de charge.
+}
+
+\newcommand{\sleeperrule}{%
+Vous pouvez choisir de ne pas déployer cette unité normalement. À la place, vous pouvez choisir de réveiller l'unité avec \sleeper{} au début de n'importe laquelle de vos sous-phases des Autres Mouvements. Placez cette figurine complètement dans une \forest{} de la table.
+}
+
+\newcommand{\hurlattackrule}{%
+\textbf{\artilleryweapon} de type \textbf{\catapult} (\distance{3}) :\newline
+\range{6-36}, Force 3[9], [\multiplewounds{\ordnance}{}], \divineattacks{}, \magicalattacks{}.
+}
+
+\newcommand{\strengthfromfleshrule}{%
+Lorsque le \gortach{} effectue une blessure non sauvegardée avec la règle \lethalstrike{}, ce \lethalstrike{} gagne \multiplewounds{1D3}{}, et le \gortach{} regagne 1 Point de Vie à la fin de ce palier d'Initiative.
+}
+
+\newcommand{\lockedhornsrule}{%
+Si votre armée comprend au moins un \gortach{}, les \minotaurwarlords{} deviennent \oneofakind{}.
+}
+
+\newcommand{\auraofmadnessrule}{%
+Les unités ennemies dans un rayon de \distance{6} d'au moins une figurine avec la règle \auraofmadness{} ont -1 en Commandement.
+}
+
+\newcommand{\giantattacksrule}{%
+Quand un Géant attaque au Corps à Corps, au lieu d'attaquer normalement, choisissez une unité en contact socle à socle à attaquer et lancez 1D6. Déterminez ci-dessous la table à utiliser selon le Type de Troupe de l'unité visée, et trouvez l'attaque correspondant au résultat du dé. Il est important de noter que les Attaques de Géant comptent comme des Attaques de Corps à Corps et suivent ainsi normalement les règles affectant ces attaques. Le Géant peut également faire son \stomp{}.
+}
+
+\newcommand{\giantattackstable}{%
+\setlength{\columnseprule}{0.5pt}
+\renewcommand{\columnseprulecolor}{\color{black!30}}
+\vspace*{-0.5cm}\begin{multicols}{2}
+	\noindent Si l'unité est de type \infantry{}, \warbeast{}, \cavalry{}, \swarm{} ou \warmachine{}  :	
+	\renewcommand{\arraystretch}{1.5}	
+	\begin{center}\begin{tabular}{cl}
+   		\hline
+		1 & \bellow{} \tabularnewline
+		2 & \jump{} \tabularnewline
+		3 & \grab{} \tabularnewline
+		4-6 & \swing{} \tabularnewline
+		\hline
+	\end{tabular}\end{center}
+	Si l'unité est de type \monstrousinfantry{}, \monstrouscavalry{}, \monstrousbeast{}, \chariot{}, \monster{} ou \riddenmonster{} :
+	\begin{center}\begin{tabular}{cl}
+		\hline	
+		1 & \bellow{} \tabularnewline
+		2-3 & \thump{} \tabularnewline
+		4-6 & \smashname{} \tabularnewline
+		\hline
+	\end{tabular}\end{center}
+	\renewcommand{\arraystretch}{1.2} % return to default
+	\vspace*{\fill}
+\end{multicols}
+\setlength{\columnseprule}{0pt}
+}
+
+\newcommand{\bellowrule}{%
+Ni le Géant, ni l'unité sélectionnée ne peuvent faire d'Attaques de Corps à Corps pendant cette phase. Les attaques déjà réalisées, incluant celles réalisées simultanément avec cette attaque, ne sont pas concernées. Le camp du Géant gagne automatiquement le combat avec un résultat de 2. Si deux Géants opposés, ou plus, utilisent l'attaque \bellow{}, le combat est un match nul.
+}
+
+\newcommand{\jumprule}{%
+L'unité sélectionnée subit 1D6 touches de la Force du Géant. Le Géant doit faire un test de Terrain Dangereux.
+}
+
+\newcommand{\grabrule}{%
+Choisissez une figurine dans l'unité sélectionnée et en contact socle à socle avec le Géant. Cette figurine doit faire un test de Force et un test de Capacité de Combat. Pour chaque test raté, la figurine subit une touche de la Force du Géant et suivant la règle spéciale \multiplewounds{1D3}{}.
+}
+
+\newcommand{\swingrule}{%
+Le Géant fait 2D6 attaques contre l'unité choisie.
+}
+
+\newcommand{\thumprule}{%
+Choisissez une figurine en contact socle à socle avec le Géant dans l'unité sélectionnée. Cette figurine doit faire un test d'Initiative. Si elle échoue, la figurine subit 2D6 blessures avec \armourpiercing{6}.
+}
+
+\newcommand{\smashrule}{%
+Choisissez une figurine en contact socle à socle avec le Géant dans l'unité sélectionnée. Cette figurine subit une blessure avec \armourpiercing{6}. Si la figurine n'a pas encore attaqué, elle ne peut pas le faire au cours de cette manche. Si la figurine a déjà réalisé ses attaques, elle ne pourra pas attaquer au cours du Tour de Joueur à venir.
+}
+
+
+
+\begin{document}
+
+\input{../Layout/AB_titlepage.tex}
+
+\startarmyspecialrules
+
+\armyspecialruleentry{\primalinstinct}
+
+Au début de chaque manche de combat, chaque unité avec au moins une figurine possédant cette règle doit passer un test de Commandement. S'il est réussi, les éléments de la figurine avec cette règle doivent relancer tous les jets pour toucher ratés pendant cette manche de combat.
+
+\armyspecialruleentry{\drunkard}
+
+Avant de déployer votre armée, choisissez pour chaque unité avec cette règle si elle est \sober{} ou \drunk{}. Une unité utilisant la règle \ambush{} ne peut pas commencer \drunk{}. Les Personnages qui ont la règle \drunkard{} ne peuvent rejoindre que les unités avec cette règle et dans le même état (Sobre ou Ivre).\newline
+\begin{multicols}{2}
+	\raggedcolumns
+	\begin{center}{\largerfontsize\antiquefont\sober{}}
+	\vspace{0.15cm}
+	L'unité est sobre pour une fois et gagne les règles \vanguard{} et \lighttroops{}. Une unité qui a été \sober{} au moins une fois ne peut prendre d'objectif.
+
+	\columnbreak
+	\begin{center}{\largerfontsize\antiquefont\drunk{}}
+	\vspace{0.15cm}
+	L'unité est complètement bourrée et obtient les règles \thunderouscharge{} et \immunetopsychology{}. Une unité Ivre ne peut pas être déployée en \ambush{}.
+
+	\vspace*{\fill}
+\end{multicols}
+
+\armyspecialruleentry{\packtactics}
+
+Les figurines avec cette règle gagnent \swiftstride{} lorsqu'elles chargent un ennemi de flanc ou de dos.
+
+\armyspecialruleentry{\lootedbooze}
+
+Une seule utilisation. Une unité qui comporte au moins une figurine avec cette règle peut passer de \sober{} à \drunk{} au début du tour de n'importe quel joueur.
+
+\armyspecialruleentry{\bloodoffering}
+
+Les unités rejointes par au moins un Personnage avec cette règle peuvent relancer leurs tests de Panique ratés. Toutefois, si la relance est activée par cette règle, le Personnage qui a utilisé l'\bloodoffering{} perd un Point de Vie sans Sauvegarde d'aucune sorte possible.
+
+\armyspecialruleentry{\halfhorse}
+
+Les blessures occasionnées par la règle \stomp{} ne peuvent jamais être allouées aux figurines avec la règle \halfhorse{}.
+
+\closearmyspecialrules
+
+\vspace*{1.5cm}
+\startarmyarmoury
+
+\startitemlistonecol
+
+\listitemonecol{\soothsayerstaff} Arme de corps à corps. Arme à deux mains. Au début de chaque manche de combat, les figurines armées d'un \soothsayerstaff{} peuvent utiliser cette arme de deux manières : soit offensivement comme \gw{}, soit défensivement comme \hw{} pour gagner +2 en Sauvegarde d'Armure (pour cette manche de combat).
+
+\listitemonecol{\beastaxe} Arme de corps à corps. S'il utilise cette arme, le porteur gagne +1 en Force et frappe toujours à Initiative 0 (quel que soit l'Initiative du porteur). Le porteur gagne +1 en Sauvegarde d'Armure.
+
+\enditemlistonecol
+
+\closearmyarmoury
+
+\startarmynewsection{\totems}
+
+\spaceaftersection{}
+
+Les \totems{} sont des améliorations spéciales que peuvent prendre certains Personnages et champions. Ils deviennent alors des porteurs de \totem{}. Les \totems{} sont des objets de sort avec les propriétés suivantes : Puissance 3 ; Durée : Dure un tour. Un seul \totem{} (lancé avec succès) peut être actif sur une même unité. Les Champions et les Personnages portent des \totems{} différents qui suivent des règles distinctes.
+
+\begin{multicols}{2}
+	\raggedcolumns
+	\begin{center}{\largerfontsize\antiquefont Personnages}
+	\vspace{0.15cm}
+	Les \totems{} sont des Améliorations d'une \range{18} et peuvent lancer n'importe lequel des 4 \totems{}. Ils ne peuvent lancer chaque \totem{}  qu’une seule fois par phase de magie.
+
+	\columnbreak
+	\begin{center}{\largerfontsize\antiquefont\ Champions}
+	\vspace{0.15cm}
+	Les champions ne peuvent porter qu'un seul \totem{}. Celui-ci doit être indiqué sur la liste d'armée. Le sort lancé par cet objet de sort est une Amélioration qui a une portée du type Unité du lanceur.
+
+	\vspace*{\fill}
+\end{multicols}
+
+Liste des \totems :
+
+\begin{tabular}{ll}
+	\hline
+	\gnarledhidetotem{} & L'unité gagne \distracting{} et \innatedefence{6}.\\
+	\bloodedhorntotem{} & L'unité gagne +1 en Attaque et \armourpiercing{2}.\\
+	\cloudedeyetotem{} & L'unité gagne les règles spéciales \hardtarget{} et \magicresistance{3}.\\
+	\blackwingtotem{} & L'unité gagne +3 en Initiative et ajoute 1D3+\distance{1} à sa distance de charge.\\
+	\hline
+\end{tabular}
+
+
+\closearmynewsection
+
+\startarmymagicalitems
+
+\armymagicalweapons
+
+\startpricelist
+
+\pricelistitem{L'Empaleur}{40}Type : \hw{}. Un Personnage avec la règle \ambush{} ne peut pas prendre cette arme. Attaquer avec cette arme donne +2 en Force au cours de la phase de corps à corps qui suit la charge du porteur. Ce bonus ne peut être utilisé que pour attaquer les unités ennemies chargées. Cette arme peut aussi être utilisée en suivant les règles d'une \textbf{\boltthrower} : \range{18}, Force 6, \multiplewounds{1D3}{}, \armourpiercing{6}. Les tirs réalisés avec cette arme ne souffrent d'aucun malus pour toucher.
+
+\pricelistitem{Lame Sangsue}{15}\only{\gnarledsoothsayers et \soothsayers}. Type : \hw{}. Avant que le porteur n'effectue un test de panique (pas avant de relancer le jet), il peut décider de perdre 1 Point de Vie. Dans ce cas, le test de panique est automatiquement réussi.
+
+\endpricelist
+
+\armymagicalarmour
+
+\startpricelist
+
+\pricelistitem{Peau Écorchée d'Aaghor}{60/50}Type : Aucun. Le porteur gagne +1 en Endurance et \regeneration{4}. Le porteur ne peut porter aucune armure ordinaire.
+
+\endpricelist
+
+\armytalismans
+
+\startpricelist
+
+\pricelistitem{Icône du Pillard}{25}Les unités alliées entièrement composées de \razortusks{} ou de \chariots{} (composé d'une seule figurine, hors personnages montés) ou de à moins de \distance{12} du porteur gagnent la règle \vanguard{}.
+
+\pricelistitem{Œil de Prédominance}{15}Les montures des \chariots{}, les \warbeasts{}, les \monstrousbeasts{}, les \monsters{}, la monture des \riddenmonsters{}, la monture de \cavalry{}, les montures de \monstrouscavalry{}, les \swarms ne peuvent toucher le porteur que sur un \result{6} lorsqu'ils effectuent des attaques de corps à corps. L'équipage des Chars et les cavaliers ne sont pas affectés.
+
+
+\endpricelist
+
+\armyenchanteditems
+
+\startpricelist
+
+\pricelistitem{Graine de la Sombre Forêt}{40}Une seule utilisation. Après le déploiement de tous les joueurs, juste après avoir bougé les unités en \vanguard{}, le porteur peut placer une Sombre Forêt (la taille de la forêt doit être inférieure ou égale à \distance{10} de longueur et \distance{6} de largeur) sur le champ de bataille, à \distance{12} ou moins du porteur (utilisez le centre de la Forêt pour les mesures) et à plus de \distance{1} de toute unité ennemie. Toutes les figurines alliées situées même partiellement dans la Sombre Forêt ajoutent +1 à leurs jets de Lancement pour les sorts d'Amélioration, de Malédiction et les \totems{}. Cette règle est une exception à la restriction sur les bonus de lancement des Objets de Sort.
+
+\pricelistitem{Gourde des Scarabées}{35}Objet de Sort, Puissance 4. Contient le sort \wildernessone{} (Discipline \wilderness{}).
+
+\pricelistitem{Orbe de la Sombre Pluie}{25}Une seule utilisation. L'Orbe de la Sombre Pluie s'active automatiquement au premier tour, sauf si le porteur n'est pas sur la table à ce moment-la (dans ce cas, l'objet ne peut pas être utilisé). Lors de la Phase de tir ennemi, tous les tirs utilisant la Capacité de Tir subissent un malus de -2 pour toucher si vous n'avez pas commencé à jouer en premier. Si vous avez commencé à jouer en premier, le malus ne sera que de -1 pour toucher. Cet effet dure jusqu'au début du prochain tour de Jeu.
+
+\pricelistitem{Couronne de Cornes}{10}Le porteur, l'unité qu'il accompagne ainsi que toutes les unités qui bénéficient de sa \inspiringpresence{} (s'il est Général), réussissent automatiquement tous les tests d'\primalinstinct{}.
+
+\endpricelist
+
+\armymagicalbanners
+
+\startpricelist
+
+\pricelistitem{Bannière de la Horde Sauvage}{25}Une seule utilisation. Peut être activée au début d'une manche de combat. Pour la durée de cette manche, tous les \wildhorns{} de l'unité du porteur gagnent +1 en Force.
+
+\endpricelist
+
+\closearmymagicalitems
+
+
+
+%%% START OF THE ARMYLIST - Translators shouldn't have to edit it %%%
+
+\input{BeastHerds_armylist.tex}
+
+
+%%% Quick Reference Sheet - AB_qrs.tex is automatic and shouldn't be edited %%%
+
+\quickrefsheettitle
+
+\input{../Layout/AB_qrs.tex}
+\bigskip
+
+\restoregeometry
+
+\end{document}

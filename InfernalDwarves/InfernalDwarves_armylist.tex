@@ -15,7 +15,7 @@
 	commontype=\infernaldwarvescommonrules{},
 	commonspecialrules={\chosenofashuruk{},\relentless{},\sturdy{}},
 	magiclevel=3,
-	magicpaths={\alchemy{}, \forge{}, \fire{}, \death{}, \shadows{}},
+	magicpaths={\alchemy{}, \fire{}, \forge{}, \death{}, \shadows{}},
 	armour={\infernalarmour{}},
 	options={	
 		\magicalitemsallowance{}=\upto{}<100,
@@ -216,8 +216,9 @@
 }
 
 \showunit{
-	name={\greatbullofshamut{} (\oneofakind{})},
-	QRSname={\greatbullofshamut{}},
+	name={\greatbullofshamut{}},
+	QRSname={\greatbullofshamutQRS{}},
+	unitsize={SPECIAL-{\antiquefont\Largefontsize(\oneofakind{})}},
 	profile={< 6 5 - 6 6 6 3 4 6},
 	type= \monster{},
 	basesize=60x100,
@@ -260,7 +261,8 @@
 \coreunitstitle
 
 \showunit{
-	name={\infernalwarriors{}},
+	name={\infernalwarriors},
+	QRSname={\infernalwarrior},
 	cost=65,
 	profile={< 3 4 3 3 4 1 2 1 9},
 	type=\infantry{},
@@ -282,7 +284,8 @@
 }
 
 \showunit{
-	name={\citadelguard{}},
+	name={\citadelguard},
+	QRSname={\citadelguardQRS},
 	cost=95,
 	profile={< 3 4 4 4 4 1 2 1 9},
 	type=\infantry{},
@@ -300,7 +303,8 @@
 }
 
 \showunit{
-	name={\hobgoblins{}},
+	name={\hobgoblins},
+	QRSname={\hobgoblin},
 	cost=75,
 	profile={< 4 3 3 3 3 1 3 1 6},
 	type=\infantry{},
@@ -324,7 +328,8 @@
 }
 
 \showunit{
-	name={\orcslaves{}},
+	name={\orcslaves},
+	QRSname={\orcslave},
 	cost=60,
 	profile={< 4 3 3 3 4 1 2 1 5},
 	type=\infantry{},
@@ -359,7 +364,8 @@
 \specialunitstitle
 
 \showunit{
-	name={\immortals{}},
+	name={\immortals},
+	QRSname={\immortal},
 	cost=100,
 	profile={< 3 5 3 4 4 1 2 1 9},
 	type=\infantry{},
@@ -380,7 +386,8 @@
 }
 
 \showunit{
-	name={\disciplesoflugar{}},
+	name={\disciplesoflugar},
+	QRSname={\discipleoflugar},
 	cost=65,
 	profile={< 3 4 3 4 4 1 2 1 9},
 	type=\infantry{},
@@ -403,7 +410,8 @@
 }
 
 \showunit{
-	name={\kadimincarnates{}},
+	name={\kadimincarnates},
+	QRSname={\kadimincarnate},
 	cost=165,
 	profile={< 6 4 3 5 4 3 4 3 7},
 	type=\monstrousinfantry{},
@@ -424,7 +432,8 @@
 }
 
 \showunit{
-	name={\taurukh{}},
+	name={\taurukh},
+	QRSname={\taurukhQRS},
 	cost=90,
 	profile={< 7 4 3 4 4 1 2 2 9},
 	type=\warbeast{},
@@ -450,7 +459,8 @@
 }
 
 \showunit{
-	name={\taurukhanointed{}},
+	name={\taurukhanointed},
+	QRSname={\taurukhanointedQRS},
 	cost=180,
 	profile={< 7 4 3 5 5 3 3 3 9},
 	type=\monstrousbeast{},
@@ -480,7 +490,7 @@
 
 \showunit{
 	name={\infernalartillery},
-	QRSname={\infernalartilleryshort}, % too long in french for QRS
+	QRSname={\infernalartilleryQRS},
 	profile={\machine{}<- - - - 7 3 - - -,
 					\crew{} (3)<3 4 3 3 4 - 2 1 9,
 					[\ogreslave{} (1)]<- 3 - 4 - \plusone{} 2 3 -,
@@ -568,7 +578,8 @@
 \rareunitstitle
 
 \showunit{
-	name={\hobgoblinwolfriders{}},
+	name={\hobgoblinwolfriders},
+	QRSname={\hobgoblinwolfrider},
 	cost=55,
 	profile={
 		\rider{}< 4 3 3 3 3 1 3 1 6,
