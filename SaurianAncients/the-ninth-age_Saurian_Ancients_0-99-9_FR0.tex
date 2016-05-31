@@ -172,11 +172,12 @@
 \newcommand{\replacejavelinforpoisonedjavelin}{Remplacer la \javelin{} par une \poisonedjavelin{}} %M% genre selon javelot
 \newcommand{\replacejavelinandshieldforshortbow}{Remplacer la \javelin{} et le \shield{} par un \shortbow{}} %M% genre selon javelot
 \newcommand{\caimannote}{\textbf{Option} pour les unités de \skinkbraves{}}
-\newcommand{\replacepoisonedjavelinandshieldforblowpipe}{Remplacer la \poisonedjavelin{} et le \shield{} par une \blowpipe{}} %M% genre selon javelot
+\newcommand{\replacepoisonedjavelinandshieldforblowpipe}{Remplacer la \poisonedjavelin{} et le \shield{}\newline \hspace*{0.3cm}par une \blowpipe{}} %M% genre selon javelot
 \newcommand{\replacepoisonedjavelinwithfirebola}{Remplacer la \poisonedjavelin{} par un \firebola{}} %M% genre selon javelot
-\newcommand{\mayexchangespitpoisonwithbreathweapon}{Remplacer le \spitpoison{} par une \breathweapon{\toxicattacks}}
-\newcommand{\skinkridermaybecomeachampion}{Le \skinkrider{} peut devenir un Champion}
-% \wildernesszero{}, \wildernessthree{} (Discipline \wilderness{})
+\newcommand{\mustchooseasinglemount}{Doit choisir une seule monture :}
+\newcommand{\ramphodononlyspecialrules}{Ces règles spéciales affectent uniquement le\rhamphodon{}, pas son \rider}
+\newcommand{\mayexchangespitpoisonwithbreathweapon}{Remplacer le \spitpoison{} par\newline \hspace*{0.3cm}la règle \breathweapon{\toxicattacks}}
+\newcommand{\skinkriderchampion}{Le \skinkrider{} devient un Champion}
 
 % Profile rules
 
@@ -232,46 +233,51 @@ Toutes les attaques portées contre une unité en contact avec la figurine gagne
 Vous pouvez ajouter des \caimans{} aux unités de \skinkbraves{}. Ces \caimans{} sont des figurines ordinaires d'un type différent (\monstrousinfantry{}). L'\textbf{unité} est considérée comme étant du type \infantry{} tant qu'il y a plus de \skinks{} que de \caimans{}, et du type \monstrousinfantry{} sinon (voir les règles des Types de Troupe). Les \caimans{} sont considérés comme ayant des Socles Compatibles (voir la règle \firstinrank{}), sauf qu'ils peuvent être placés n'importe où dans l'unité et non pas le plus en avant possible. Les \caimans{} et les \skinkbraves{} ne partagent pas une réserve de Points de Vie commune, malgré le fait que ce ne soit que des figurines ordinaires. Ils ont chacun leur propre réserve de Points de Vie, et les blessures ne peuvent être transférées d'une réserve à l'autre. Toute blessure excédentaire est perdue.
 \begin{itemize}[label={-}]
 	 \item \textbf{Distribution des Touches}. Quand des touches sont infligées à l'unité, commencez par distribuer normalement les touches entre les Personnages et les figurines ordinaires. Lancez ensuite un dé pour chaque touche distribuée sur une figurine ordinaire. Sur \textbf{1-4} un \skinkbrave{} est touché, sur \textbf{5-6} c'est un \caiman{}.
-	 \item \textbf{\stomp}. Quand un ennemi piétine cette unité, ignorer toutes les figurines qui ne sont pas du type Infanterie. Les touches infligées aux \skinkbraves{} ne sont pas réparties sur les autres troupes.\newline
-	 \item \textbf{Allocation des Attaques}. Les Attaques de corps à corps peuvent être allouées aux \caimans{} ou aux \skinkbraves{} en contact, au choix du joueur les attaquant.\newline
-	 \item \textbf{\swirlingmelee}. Les figurines qui attaquent en suivant la règle \swirlingmelee{} (c'est-à-dire les figurines qui attaquent les figurines ordinaires d'une unité sans être à son contact) peuvent attaquer les \caimans{} ou les \skinkbraves{}. Si les \caimans{} sont attaqués de cette manière, les attaques ont un malus de -1 pour toucher.
+	 \item \textbf{\stomp{}}. Les touches infligées à l'unité ne peuvent pas être distribuées aux figurines n'étant pas de type \infantry{}. Ignorez simplement ces figurines quand vous distribuez les touches.
+	 \item \textbf{Allocation des Attaques}. Les Attaques de Corps à Corps peuvent être allouées à toute réserve de Points de Vie à laquelle l'attaquant a accès via son contact socle à socle, que ce soit les \skinkbraves{}, les \caimans{}, un Champion ou un Personnage.
+	 \item \textbf{\swirlingmelee}. Les figurines qui allouent leurs attaques en utilisant la règle \swirlingmelee{}, c'est-à-dire qui attaquent des figurines ordinaires qui ne sont pas en contact socle à socle, peuvent choisir les \caimans{} ou les \skinkbraves{}. Si les \caimans{} sont choisis, les attaques subissent un malus de -1 pour toucher.
 \end{itemize}
 }
 
 \newcommand{\chameleonrule}{%
-La figurine gagne \scout{} et \hardtarget{}. Elle doit remplacer sa \poisonedjavelin{} et \shield{} par une \blowpipe{}.
-}
+La figurine gagne les règles \scout{} et \hardtarget{}. Elle doit remplacer sa \poisonedjavelin{} et son \shield{} par une \blowpipe{}.
+} %M% selon genre javelin
 
 \newcommand{\firebolarule}{%
-Arme de tir. \range{8}, Force 4, \flamingattacks{}, \quicktofire{}.
+Arme de Tir. \range{8}, \Strength{} 4, \flamingattacks{}, \quicktofire{}.
 }
 
 \newcommand{\releaserocksrule}{%
-Une seule utilisation. \sweepingattack{}. L'unité ennemie subit 1D3 touches Force 4 pour chaque \pteranodon{} de l'unité.
+Une seule utilisation. \sweepingattack{}. L'unité ennemie subit 1D3 touches Force 4 pour chaque \pteradon{} dans l'unité.
 }
 
 \newcommand{\preyscentrule}{%
-Avant la partie, si vous avez au moins une unité avec un \rhamphodon{} ou un \alpharhamphodon{}, vous pouvez mettre un marqueur sur 2 unités ennemies. Lorsque vous attaquez l'une de ces unités marquées, les \rhamphodons{} et \alpharhamphodons{} (pas leur \rider{}) peuvent relancer pour toucher et gagnent chacun +1D3 Attaques (ces Attaques doivent être dirigées contre une unité marquée).
+Avant la partie, si vous avez au moins une unité avec un \rhamphodon{} ou un \alpharhamphodon{}, vous pouvez mettre des marqueurs sur 2 unités ennemies. Les \rhamphodons{} et \alpharhamphodons{}, mais pas leur \rider{}, qui attaquent une unité marquée peuvent relancer leurs jets pour toucher ratés et gagnent chacun +1D3 Attaques. Ces attaques additionnelles doivent être dirigées contre une unité marquée.
 }
 
 \newcommand{\altarofthesnakegodrule}{%
-Les unités alliées à \distance{6} ou moins d'au moins une figurine avec un \altarofthesnakegod{} gagnent \poisonedattacks{} au corps à corps. Si une unité possède déjà la règle \poisonedattacks{}, alors les Attaques blesseront automatiquement sur 5+ (au lieu de 6+).\newline
-L'\altarofthesnakegod{} possède un objet de sort puissance 3 qui contient le sort \diseasetwo{} (Discipline \disease{}).
+Les unités alliées à moins de \distance{6} d'au moins une figurine avec un \altarofthesnakegod{} gagnent la règle \poisonedattacks{} au Corps à Corps. Si une unité possède déjà la règle \poisonedattacks{}, alors les attaques blessent automatiquement sur 5+ au lieu de 6+.
+
+\boundspell{3}. \diseasetwo{} (Discipline \disease{}).
 }
 
 \newcommand{\sunenginerule}{%
-Les unités alliées à \distance{6} ou moins d'au moins une figurine avec une \sunengine{} gagnent +1 en Capacité de Combat.\newline
-La \sunengine{} possède un objet de sort puissance 3 qui contient le sort \lightzero{} (Discipline \light{}).
+Les unités alliées à moins de \distance{6} d'au moins une figurine avec une \sunengine{} gagnent +1 en Capacité de Combat.
+
+\boundspell{3}. \lightzero{} (Discipline \light{}).
 }
 
 \newcommand{\shootspikesrule}{%
-Arme de Tir. \range{18}, Force 4, \armourpiercing{1}, \multipleshots{2D6}, \quicktofire{}.\newline
-Cette arme ne peut pas être utilisée si la figurine a effectué une Marche Forcée lors de ce tour de joueur. Les \spearbacks{} doivent déclarer la réaction Maintenir sa position et Tirer si possible, mais ils ne subissent pas le malus de -1 en le faisant.
+Arme de Tir. \range{18}, \Strength{} 4, \armourpiercing{1}, \multipleshots{2D6}, \quicktofire{}.
+
+Cette arme ne peut pas être utilisée si la figurine a effectué une Marche Forcée lors de ce Tour de Joueur. La figurine doit déclarer la réaction Tenir la Position et Tirer si possible quand son unité est chargée, mais ignore la pénalité de -1 pour toucher en résultant.
 }
 
 \newcommand{\spoutflamesrule}{%
-\artilleryweapon{} de type \flamethrower{} : \range{8}, Force 4, \flamingattacks{}.\newline
-Cette arme ne peut pas être utilisée si la figurine a effectué une Marche Forcée lors de ce tour de joueur. Si un Incident de Tir se produit, la \salamander{} compte toujours comme ayant obtenu le résultat \result{5-6}.
+\artilleryweapon{} de type \flamethrower{}.\newline
+\range{8}, Force 4, \flamingattacks{}.
+
+Cette arme ne peut pas être utilisée si la figurine a effectué une Marche Forcée lors de ce Tour de Joueur. Si un Incident de Tir se produit, ne jetez pas un dé, l'Incident de Tir est toujours un Dysfonctionnement (\result{5-6}).
 }
 
 \newcommand{\spitpoisonrule}{%
@@ -279,7 +285,7 @@ Attaque de Tir. \range{12}, Force 4, \poisonedattacks{}, \multipleshots{3}, \qui
 }
 
 \newcommand{\predatoryroarrule}{%
-Une seule utilisation. Activez le au début de n'importe quelle phase de combat. Désignez une unité alliée à \distance{12} ou moins de cette figurine. Tous les éléments de figurine avec la règle \bornpredator{} gagnent la \hatred{} pour la durée de cette phase.
+Une seule utilisation. Peut être utilisé au début de n'importe quelle Phase de Corps à Corps. Désignez alors une unité alliée à moins de \distance{12}. Tous les éléments de figurine de cette unité ayant la règle \bornpredator{} gagnent la règle \hatred{} pour la durée de cette phase.
 }
 
 
@@ -318,6 +324,11 @@ Une \cuatllorddiscipline{} ne peut pas être dupliquée. Une armée ne peut pas 
 
 \closearmynewsection
 }
+
+\newcommand{\QRSnote}{%
+\noindent\refsymbol{} Un membre d'équipage de moins quand il sert de monture.
+}
+
 
 
 
