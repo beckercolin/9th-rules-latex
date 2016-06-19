@@ -1,0 +1,435 @@
+\input{../Layout/AB_layout.tex}
+
+\newcommand{\booktitle}{Empire de Sonnstahl}
+\newcommand{\version}{0.99.9}
+\newcommand{\frenchversion}{2.0}
+\newcommand{\booklogo}{pics/logo_big_EoS.png}
+
+
+% Army special rules
+
+\newcommand{\blessing}{Bénédiction}
+\newcommand{\blessings}{Bénédictions}
+\newcommand{\parentunitsandsypportunits}{Unités Mères et Unités de Soutien}
+\newcommand{\supportingaction}{Action de soutien}
+\newcommand{\supportingactions}{Actions de soutien}
+\newcommand{\order}{Ordre}
+\newcommand{\orders}{Ordres}
+
+% Armoury
+
+\newcommand{\repeatergun}{Arquebuse à répétition}
+\newcommand{\repeaterpistol}{Pistolet à répétition}
+\newcommand{\longrifle}{Long Fusil}
+
+
+% Spells
+
+\newcommand{\heavenstwo}{Choc Foudroyant}
+\newcommand{\lightone}{Bouclier Protecteur}
+\newcommand{\lightsix}{Exorcisme}
+
+
+% Other rules
+
+\newcommand{\ullorsblessing}{Bénédiction d’Ullor}
+\newcommand{\sunnasblessing}{Bénédiction de Sunna}
+\newcommand{\volundsblessing}{Bénédiction de Volund}
+\newcommand{\parentunit}{Unité Mère}
+\newcommand{\parentunits}{Unités Mères}
+\newcommand{\supportunit}{Unité de Soutien}
+\newcommand{\supportunits}{Unités de Soutiens}
+\newcommand{\onthedouble}{Foncez !}
+\newcommand{\steadymen}{Tenez Bon !}
+\newcommand{\readyaimfire}{Prêt ! En joue ! Feu !}
+\newcommand{\braceforimpact}{Premier Rang, Genou à Terre !}
+\newcommand{\seasonedgeneral}{Général de Campagne}
+\newcommand{\greattactician}{Tacticien Talentueux}
+\newcommand{\imperialprince}{Prince Impérial}
+\newcommand{\legendarywarrior}{Guerrier Légendaire}
+\newcommand{\highpontiff}{Haut Pontife}
+\newcommand{\masterartificer}{Maître Artificier}
+\newcommand{\nobodyexpects}{Personne n'attends un ...}
+\newcommand{\witchhunter}{Chasseur de Sorcière}
+\newcommand{\daemonhunter}{Chasseur de Démon}
+\newcommand{\vampirehunter}{Chasseur de Vampire}
+\newcommand{\holyrelic}{Sainte Relique}
+\newcommand{\arcaneshield}{Bouclier Arcanique}
+\newcommand{\foresight}{Prédictions}
+\newcommand{\seasonedsoldierslight}{Soldats aguerris}
+\newcommand{\seasonedsoldiersheavy}{Soldats aguerris}
+\newcommand{\imperialcavalry}{Cavalerie Impériale}
+\newcommand{\cavalryhammer}{Marteau de cavalerie}
+\newcommand{\fireonimpact}{Feu à l’Impact!}
+\newcommand{\fanatical}{Fanatiques}
+\newcommand{\zealots}{Zélateurs}
+\newcommand{\mortar}{Mortier}
+\newcommand{\volleygun}{Batterie de Tir}
+\newcommand{\cannon}{Canon}
+\newcommand{\imperialrocketeers}{Batterie de Roquettes}
+\newcommand{\steampoweredcannon}{Canon à Vapeur}
+\newcommand{\steamengine}{Engin à Vapeur}
+
+%%% Names
+
+% Characters
+
+\newcommand{\marshal}{Maréchal}
+\newcommand{\knightcommander}{Maître de chevalerie}
+\newcommand{\archwizard}{Seigneur Sorcier}
+\newcommand{\prelate}{Prélat}
+\newcommand{\captain}{Capitaine}
+\newcommand{\artificer}{Artificier}
+\newcommand{\wizard}{Sorcier}
+\newcommand{\preacher}{Clerc}
+\newcommand{\inquisitor}{Inquisiteur}
+
+% Core
+
+\newcommand{\lightinfantry}{Infanterie Légère}
+\newcommand{\heavyinfantry}{Infanterie Lourde}
+\newcommand{\statemilitia}{Corps de Milice}
+\newcommand{\electoralcavalry}{Cavalerie d'Électeurs}
+
+% Special
+
+\newcommand{\imperialguard}{Garde Impériale}
+\newcommand{\imperialrangers}{Rangers Impériaux}
+\newcommand{\knightlyorders}{Templiers}
+\newcommand{\reiters}{Cavalerie Légère Impériale}
+\newcommand{\flagellants}{Flagellants}
+\newcommand{\artillery}{Artillerie}
+
+% Rare
+
+\newcommand{\knightsofthesungriffon}{Chevaliers du Griffon-Soleil}
+\newcommand{\arcaneengine}{Autel Arcanique}
+\newcommand{\steamtank}{Tank à Vapeur}
+
+% Mounts
+
+\newcommand{\horse}{Cheval}
+\newcommand{\pegasus}{Pégase}
+\newcommand{\younggriffon}{Jeune Griffon}
+\newcommand{\greatgriffon}{Grand Griffon}
+\newcommand{\dragon}{Dragon}
+\newcommand{\altarofbattle}{Autel de Bataille}
+
+% Short names and multiprofiles names
+
+\newcommand{\commander}{Maître}
+\newcommand{\rider}{Cavalier}
+\newcommand{\riders}{Cavaliers}
+\newcommand{\crew}{Équipage}
+\newcommand{\machine}{Machine}
+
+
+% Profile wording
+
+\newcommand{\mayupgrademarshal}{Peut avoir l'une des règles suivantes (chacune est \oneofakind{}) :}
+\newcommand{\replacehorsewithyounggriffon}{Échanger le \horse{} et son \barding{} contre un \younggriffon{}}
+\newcommand{\greatgriffonwildernessonly}{\greatgriffon{} \only{Discipline \wilderness{}}}
+\newcommand{\breathweapondragon}{\breathweapon{Force 4, \flamingattacks{}}}
+\newcommand{\replacecrossbowwithhandgun}{\optionschoice{Remplacer les \throwingweapons{} par :}}
+\newcommand{\ifseasonedgeneraloptionlight}{Si l'armée contient un \seasonedgeneral{}{,} peut devenir \seasonedsoldierslight{} (\oneperarmy{})}
+\newcommand{\swapshieldforhalberd}{Échanger le \shield{} contre une \halberd{}}
+\newcommand{\ifseasonedgeneraloptionheavy}{Si l'armée contient un \seasonedgeneral{}{,} peut devenir \seasonedsoldiersheavy{} (\oneperarmy{})}
+\newcommand{\supportunitheavy}{\supportunit{} (20 figurines max)}
+\newcommand{\parentunitheavy}{\parentunit{} (21 figurines min)}
+\newcommand{\supportunitstatemilitia}{\supportunit{} (20 figurines max)}
+\newcommand{\skirmishstatemilitia}{\skirmisher{} (15 figurines max)}
+\newcommand{\replacepwstatemilitia}{\optionschoice{Échanger la \pw{} contre :}}
+\newcommand{\replacegwwithlance}{Échanger l'\gw{} contre une \lance{}}
+\newcommand{\imperialcavalryoption}{Si l'armée contient un \knightcommander{} avec \legendarywarrior{}{,} peut devenir \imperialcavalry{}}
+\newcommand{\replacegwwithcavalryhammer}{Échanger l'\gw{} contre un \cavalryhammer{} (compte comme une \halberd{})}
+\newcommand{\replaceshieldwithgw}{Échanger le \shield{} contre une \gw{}}
+\newcommand{\replacelanceandshieldwithcavalryhammer}{Échanger la \lance{} et \shield{} contre un \cavalryhammer{} (compte comme une \halberd{})}
+\newcommand{\replacepistolreiters}{\optionschoice{Échanger le \pistol{} contre :}}
+\newcommand{\lightlanceandshield}{\lightlance{} et \shield{}}
+\newcommand{\musttakeoneofthefollowing}{Doit prendre une des options suivante :}
+\newcommand{\replacehalberwithlanceandshield}{Échanger l'\halberd{} contre une \lance{} et un \shield{}}
+\newcommand{\seesteamengine}{voir \steamengine{}}
+\newcommand{\breathweapontank}{\breathweapon{Force 2, \armourpiercing{3}}}
+
+% Profile rules
+
+\newcommand{\seasonedgeneralrule}{%
+La figurine gagne +1 en Capacité de Combat. De plus, une seule unité d'\heavyinfantry{} peut être promue \seasonedsoldiersheavy{}. Une seule unité d’\lightinfantry{} peut également être promue \seasonedsoldierslight{}.
+}
+
+\newcommand{\greattacticianrule}{%
+La figurine peut donner deux \orders{} par tour plutôt qu'un seul. Ces deux \orders{} peuvent cibler des unités différentes. De plus, elle peut donner ses \orders{} à n'importe quelle \parentunit{} ou \supportunit{} se trouvant dans le rayon de sa \inspiringpresence{} si elle est le Général de l'armée.
+}
+
+\newcommand{\imperialprincerule}{%
+La figurine gagne +1 Attaque. Elle est équipée de la Lame de Sonnstahl mais ne peut avoir que 25 points d'objets magiques (elle ne peut acheter aucune autre arme magique).
+}
+
+\newcommand{\legendarywarriorrule}{%
+Le \knightcommander{} est \immunetopsychology{}, et cette règle s'étend à l'unité qu'il a rejointe. De plus, toute unité de \electoralcavalry{} peut être améliorée en \imperialcavalry{}, si l'armée a un \knightcommander{} avec cette règle.
+}
+
+\newcommand{\highpontiffrule}{%
+Un \prelat{} ajoute +1 a ses tentatives de lancement des objets de sort de type \blessings{}. Ceci surpasse la restriction normale de ne pas ajouter de modificateurs aux tentatives de lancement des objets de sort.
+}
+
+\newcommand{\masterartificerrule}{%
+Le \masterartificer{} peut donner l'ordre \readyaimfire{} comme s'il avait la règle spéciale \orders{}, à l'\parentunit{} ou l'\supportunit{} qu'il a rejointe.}
+
+\newcommand{\nobodyexpectsrule}{%
+L'\inquisitor{} peut choisir l'une des spécialités ci-dessous au début de la partie :
+
+\begin{multicols}{3}
+		\raggedcolumns
+		\begin{center}{\largerfontsize\antiquefont\witchhunter{}}
+		
+		Si une unité inclut une ou plusieurs figurines avec cette règle, les sorts ennemis n'ayant pas le type Aura subissent une pénalité de -1 pour leurs jets de lancement.
+		\columnbreak
+		\begin{center}{\largerfontsize\antiquefont\daemonhunter{}}
+
+		L'\inquisitor{} gagne la règle \divineattacks{}. De plus, il gagne la \hatred{} contre les figurines ayant la règle \otherworldly{}.
+				
+		\vspace*{\fill}\columnbreak	
+		\begin{center}{\largerfontsize\antiquefont\vampirehunter{}}
+		
+		L'\inquisitor gagne les règles \flamingattacks{} et \magicalattacks{}.
+		\vspace*{\fill}
+\end{multicols}
+}
+
+\newcommand{\holyrelicrule}{%
+Toutes les unités se trouvant dans un rayon de \distance{6} de cette figurine gagnent la règle spéciale \hatred{}. Ceci n'affecte pas les montures. Toutes les bénédictions lancées par une figurine sur \altarofbattle{} deviennent du type Aura avec \range{6} (qui remplace Unité du lanceur). Enfin la figurine a un objet de sort de puissance 4, contenant le sort \lightsix{} (Discipline \light{}).
+}
+
+\newcommand{\arcaneshieldrule}{%
+Toute unité amie dans un rayon de \distance{6} bénéficie de la règle \distracting{}. L'\arcaneengine{} a un objet de sort Puissance 3 contenant le sort \lightone{} (Discipline \light{}).
+}
+
+\newcommand{\foresightrule}{%
+Toute unité amie dans un rayon de \distance{6} bénéficie de la règle \lightningreflexes{}. L'\arcaneengine{} a un objet de sort Puissance 4 contenant le sort \heavenstwo{} (Discipline \heavens{}).
+}
+
+
+\newcommand{\seasonedsoldierslightrule}{%
+La figurine gagne +1 en Capacité de Tir et une \la{}.
+}
+
+\newcommand{\seasonedsoldiersheavyrule}{%
+La figurine gagne +1 en Capacité de Combat et en Initiative.
+}
+
+\newcommand{\imperialcavalryrule}{%
+Le \rider{} gagne +1 en Capacité de Combat et en Force.\newline
+Toutes les \riders{} de l'unité peuvent échanger leur \gw{} contre un \cavalryhammer{} (compte comme une \halberd{}) pour 1 pt/fig.
+}
+
+\newcommand{\fireonimpactrule}{%
+Lors de la première manche de corps à corps, après avoir chargé, une figurine ayant cette règle (uniquement le \rider{}) peut remplacer ses attaques normales par : 1 Attaque si elle est équipée d'un \pistol{}, 2 Attaques si elle est équipée d'une \braceofpistols{} ou d'un \repeaterpistol{}. Ces attaques sont résolues à Initiative 10 avec Force 4 et \armourpiercing{1}. Ces attaques sont effectuées à la place des attaques normales du \rider{}.
+}
+
+\newcommand{\flagellantsrule}{%
+Les figurines suivant cette règle suivent la règle \frenzy{} et ne peuvent en aucun cas la perdre. Les pertes subies au corps à corps sont retirées de l'unité au palier d'Initiative 0.
+}
+
+\newcommand{\zealotsrule}{%
+Les \prelates{} les \preachers{} peuvent rejoindre cette unité. Ces Personnages gagnent la règle \unbreakable{} tant qu'ils sont dans cette unité.
+}
+
+\newcommand{\cannonrule}{%
+Cette arme peut être employée de deux manières :
+\begin{itemize}[label={-}]
+	\item Comme une \textbf{\artilleryweapon} de type \textbf{\cannon} (\distance{1D6}).\newline
+		\range{72}, Force 10, \multiplewounds{\ordnance}{}, \armourpiercing{2}.
+	\item Comme une \textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline
+		\range{12}, Force 4, \armourpiercing{3}, \multipleshots{2D6}.
+\end{itemize}
+}
+
+\newcommand{\mortarrule}{%
+\textbf{\artilleryweapon} de type \textbf{\catapult} (\distance{5}).\newline
+\range{12-48}, Force 3[6], [\multiplewounds{1D3}{}], \armourpiercing{1}.
+}
+
+\newcommand{\volleygunrule}{%
+\textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline
+\range{24}, Force 5, \armourpiercing{1}, \multipleshots{3D6*2}.
+}
+
+\newcommand{\imperialrocketeersrule}{%
+\textbf{\artilleryweapon} de type \textbf{\catapult} (\distance{3}).\newline
+\range{12-36}. Inflige 1D3+1 touches de Force 5 pour toute unité se trouvant sous le gabarit à la place des touches normales, \flamingattacks{}, \multiplewounds{1D3}{}, \armourpiercing{1}.
+}
+\newcommand{\steampoweredcannonrule}{%
+\textbf{\artilleryweapon} de type \textbf{\cannon} (\distance{1D6}).\newline
+Portée (voir \steamengine{}), Force 7, \multiplewounds{1D3}{}, \armourpiercing{2}.
+}
+
+\newcommand{\smashrule}{%
+Les Points de Vie actuels du \steamtank{} déterminent les valeurs de ses caractéristiques de \randommovement{}, d'\grindingattacks{} ainsi que la portée maximale de son \steampoweredcanon{}, définies par le tableau ci-dessous. Un \steamtank{} peut choisir de ne pas se déplacer durant sa phase de mouvement. En outre, il ne peut jamais effectuer un mouvement de Poursuite, ni une Charge Irrésistible.
+		\begin{center}
+			\begin{tabular}{|l|l|l|l|}
+			    \hline
+				PV restants  & Mouvement            & \grindingattacks{} & Portée maximale du canon \tabularnewline
+				\hline
+				5-7         & 0, 1D6, 2D6 ou 3D6 & 2D3                & \distance{42} \tabularnewline
+				3-4          & 0, 1D6 ou 2D6      & 1D3 + 1                & \distance{30} \tabularnewline
+				1-2          & 0, 1D6 ou 2D6           & 1D3                & \distance{18} \tabularnewline
+				\hline
+			\end{tabular}		
+		\end{center}
+}
+
+
+
+\begin{document}
+
+\input{../Layout/AB_titlepage.tex}
+
+
+\startarmyspecialrules
+
+\armyspecialruleentry{\blessings}
+
+Une figurine suivant cette règle gagne la \hatred{}, qui est également conférée à toutes les figurines de unité qu'il rejoint. Les montures ne sont jamais affectées. De plus, la figurine connait trois sorts traités comme des objets de sorts qu'elle peut lancer avec un niveau de puissance 3, chacun une fois durant la phase de magie, et de type : Amélioration, Unité du lanceur et Dure un tour.
+\begin{multicols}{3}
+		\raggedcolumns
+		\begin{center}{\largerfontsize\antiquefont\ullorsblessing{}}
+La cible obtient une \wardsave{5} contre les attaques subies au corps à corps.
+		\columnbreak
+		\begin{center}{\largerfontsize\antiquefont\sunnasblessing{}}
+La cible gagne la règle \flamingattacks{}. De plus, toute unité ennemie au contact socle à socle avec la cible subit 1D6 touches de Force 4 ayant la règle \flamingattacks{} au moment où le sort est lancé.
+		\columnbreak
+		\begin{center}{\largerfontsize\antiquefont\volundsblessing{}}
+La cible peut relancer ses jets pour blesser ratés au corps à corps.
+\end{multicols}
+
+\armyspecialruleentry{\parentunitsandsupportunits}
+
+Les unités avec la règle \supportunit{} sont considérées comme ayant la règle \insignificant{} par les unités suivant la règle \parentunit{}. Une \supportunit{} peut effectuer des \supportingactions{}. 
+
+\armyspecialruleentry{\supportingactions}
+
+Une unité avec la règle \supportunit{} dans un rayon de \distance{6} d'une \parentunit{} peut utiliser l'une des actions suivantes :
+
+\begin{customsubitemize}
+	\item[-] Quand une charge est déclarée contre une \parentunit{} à \distance{6}, l'\supportunit{} peut Maintenir et tirer comme si elle était la cible de la charge (les restrictions et malus habituels de l'action Maintenir et tirer s'appliquent).
+	\item[-] Quand un ennemi (qui n'est pas en fuite) est chargé avec succès par une \parentunit{} à \distance{6} ou quand un ennemi a réussi sa charge contre une \parentunit{} à \distance{6}, l'\supportunit{} peut déclarer une charge contre cet ennemi (appliquez toutes les règles et restrictions habituelles pour une charge, sauf que l'ennemi ne peut pas choisir d'autres réaction à charge que Tenir la position). Si la charge est effectuée durant votre tour de jeu, traitez cette Charge comme une Charge multiple normale. Sinon, effectuez ce mouvement durant le tour de l'ennemi, après que toutes ses unités ont effectué leurs mouvements de charge. Au moment de calculer le résultat de combat durant le Tour de Joueur où l'\supportunit{} a utilisé cette action (et si les deux charges ont été réussies), l'\supportunit{} et l'\parentunit{} peuvent combiner leurs bonus de rang (en suivant le décompte normal) jusqu'à un maximum de +6.
+	\item[-] Si une \supportunit{} a au moins un \fullrank{}, elle compte comme ayant le même nombre de \fullrank{} qu'une \parentunit{} à \distance{6} pour déterminer si elle est Indomptable.
+\end{customsubitemize}
+
+\armyspecialruleentry{\orders}
+
+Une figurine avec cette règle peut donner un \order{} par tour au début de son tour de jeu. Un Seigneur avec cette règle peut donner un \order à une unité avec la règle \supportunit{} ou \parentunit{} se trouvant dans un rayon de \distance{6}. Un Héros ne peut cibler qu'une unité avec la règle \supportunit{} ou \parentunit{} dans laquelle il se trouve. Pour donner un \order{}, choisissez l'un des effets ci-dessous. Les effets s'appliquent immédiatement et durent jusqu'au prochain tour du joueur contrôlant la figurine. Une unité ne peut recevoir plus d'une fois le même \order{} dans le même tour de jeu. Seules les figurines d'infanterie sont affectées par un \order{}.
+\begin{description}
+	\item [\onthedouble :] L'unité a +2 en Mouvement. Cependant, si elle déclare une charge lors de ce tour, l'unité ne gagne que +1 en Mouvement. 
+	\item [\steadymen :] Lorsque l'unité ciblée effectue un test de Commandement, lancez un dé supplémentaire et ignorez le résultat le plus haut. De plus, si une unité avec cet ordre réussit un test de ralliement, elle peut agir normalement lors de ce tour, bien qu'elle ne puisse déclarer de charge ou effectuer une marche forcée. Elle compte comme ayant bougé pour tout ce qui concerne les tirs.
+	\item [\readyaimfire :] L’unité augmente la portée de ses armes de tir communes de \distance{6} durant la prochaine phase de tir. 
+	\item [\braceforimpact :] L'unité gagne la règle \fightinextrarank{}.
+\end{description}
+
+\closearmyspecialrules
+
+\vspace*{1.5cm}
+\startarmyarmoury
+
+\startitemlistonecol
+
+\listitemonecol{\repeatergun} Arme de Tir. \range{24}, Force 4, \armourpiercing{1}, \multipleshots{3}, \unwieldy{}.
+
+\listitemonecol{\repeaterpistol} Arme de Tir. \range{12}, Force 4, \armourpiercing{1}, \multipleshots{3}, \quicktofire{}. Lorsqu'il est combiné avec un \pistol{}, il gagne \multipleshots{4}.
+
+\listitemonecol{\longrifle} Arme de Tir. \range{48}, Force 5, \multiplewounds{2}{\warbeast{}, \cavalry{}, \infantry{}}, \armourpiercing{1}, \unwieldy{}, +1 pour toucher au tir.
+
+\enditemlistonecol
+
+\closearmyarmoury
+
+
+\startarmymagicalitems
+
+\armymagicalweapons
+
+\startpricelist
+
+\pricelistitem{Lame de Sonnstahl}{85}Type : \hw{}. Les touches faites avec cette arme blessent automatiquement et ont \armourpiercing{6}.
+
+\pricelistitem{Marteau à Sorcières}{35}Type : \hw{}. Les Attaques faites avec cette arme ont la règle \lightningreflexes{} et ajoutent +1 en Force.
+
+\pricelistitem{Masse des Étoiles}{30}Type : \gw{}. Le porteur gagne la règle \crushattack{}.
+
+\endpricelist
+
+\armymagicalarmour
+
+\startpricelist
+
+\pricelistitem{Armure Sacrée de Frédéric le Grand}{35}Type : \pa{}. Figurine à pied uniquement. Donne au porteur une Sauvegarde d'Armure de 1+.
+
+\pricelistitem{Armure de Volund}{25}Type : \pa{}. Les attaques dirigées contre le porteur perdent la règle \lethalstrike{}.
+
+\pricelistitem{Le Heaume Noir}{15}Type : Aucun (Sauvegarde d'Armure de 6+). Le porteur gagne la règle \fear{}.
+
+\endpricelist
+
+\armytalismans
+
+\startpricelist
+
+\pricelistitem{Cape de l'Hiver}{50}Le porteur gagne les règles \distracting{}, \fireborn{} et \wardsave{5}.
+
+\endpricelist
+
+\armyenchanteditems
+
+\startpricelist
+
+\pricelistitem{Médaillon de Sunna}{35}Lorsque le porteur combat en défi, il doit utiliser les caractéristiques suivantes (non modifiées) de son adversaire, tandis que son adversaire utilise les siennes: Force, Endurance, Initiative, Attaque. Les valeurs échangées ne sont jamais celles de la monture de la figurine ennemie.
+
+\endpricelist
+
+\armymagicalbanners
+
+\startpricelist
+
+\pricelistitem{Bannière de l'Union}{25}L'unité du porteur ne peut pas être Désorganisée par un ennemi étant sur son flanc. Par contre, elle peut être Désorganisée par un ennemi sur son arrière, suivant les règles normales.
+
+\pricelistitem{Étendard du Pur-Sang}{10}Personnage monté uniquement. L'unité du porteur et toute unité ayant la règle \swiftstride{} dans un rayon de \distance{12} peuvent relancer les dés ayant obtenu \result{1} lors des jets de charge, poursuite, fuite et charge irrésistible.
+
+\endpricelist
+
+\closearmymagicalitems
+
+
+
+%%% START OF THE ARMYLIST - Translators shouldn't have to edit it %%%
+
+\input{EmpireofSonnstahl_armylist.tex}
+
+
+%%% Quick Reference Sheet - AB_qrs.tex is automatic and shouldn't be edited %%%
+
+\quickrefsheettitle
+
+\input{../Layout/AB_qrs.tex}
+\bigskip
+\begin{center}
+\noindent{\antiquefont\Largefontsize\textbf{Armes de Tir Ogres}}
+\medskip
+
+\rowcolors{1}{white}{black!10}
+\noindent\begin{tabular}{lcccccc}
+\textbf{Nom} & \textbf{Artillerie} & \textbf{Portée} & \textbf{\labels@S{}} & \textbf{\multipleshots{}} & \textbf{\multiplewounds{}} & \textbf{\armourpiercing{}} \tabularnewline
+\repeatergun{} & - & \distance{24} & 4 & 3 & - & 1 \tabularnewline
+\repeaterpistol{} & - & \distance{12} & 4 & 3 & - & 1 \tabularnewline
+\longrifle{} & - & \distance{48} & 5 & - & {\smallfontsize 1D3, \warbeast{}, \infantry{}, \cavalry{}} & 1 \tabularnewline
+\cannon{} (1) & \cannon{} (\distance{1D6}) & \distance{72} & 10 & - & \ordnance{} & 2 \tabularnewline
+\cannon{} (2) & \volleygun{} & \distance{12} & 4 & - & - & 3 \tabularnewline
+\catapult{} & \catapult{} (\distance{5}) & \distance{12-48} & 3[6] & - & [1D3] & \tabularnewline
+\volleygun{} & \volleygun{} & \distance{24} & 5 & 3D6*2 & - & 1 \tabularnewline
+\imperialrocketeers{} & \catapult{} (\distance{3}) & \distance{12-36} & 5 & - & 1D3 & 1 \tabularnewline
+\end{tabular}
+
+
+\restoregeometry
+
+\end{document}

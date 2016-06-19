@@ -102,16 +102,16 @@
 
 % Core
 
-\newcommand{\ratsatarms}{Rats-Meute}
-\newcommand{\ratatarms}{Rat-Meute}
+\newcommand{\ratsatarms}{Rats d'Armes}
+\newcommand{\ratatarms}{Rat d'Armes}
 \newcommand{\verminguard}{Garde Vermine}
 \newcommand{\verminguardSINGULAR}{Garde Vermine}
 \newcommand{\slaves}{Esclaves}
 \newcommand{\slave}{Esclave}
 \newcommand{\footpads}{Scélé-Rats Furtifs}
 \newcommand{\footpad}{Scélé-Rat Furtif}
-\newcommand{\plaguebrotherhood}{Frères Cholé-Rats}
-\newcommand{\plaguebrotherhoodSINGULAR}{Frère Cholé-Rat}
+\newcommand{\plaguebrotherhood}{Confrérie de la Peste}
+\newcommand{\plaguebrotherhoodSINGULAR}{Frère de la Peste}
 \newcommand{\giantrat}{Rongeur Géant}
 \newcommand{\giantrats}{Rongeurs Géants}
 
@@ -123,7 +123,7 @@
 \newcommand{\grenadier}{Grenadier}
 \newcommand{\grenadiers}{Grenadiers}
 \newcommand{\gutterblade}{Coupe-Gorge}
-\newcommand{\gutterblades}{Coupes-Gorge}
+\newcommand{\gutterblades}{Coupe-Gorges}
 \newcommand{\plaguedisciple}{Disciple de la Peste}
 \newcommand{\plaguedisciples}{Disciples de la Peste}
 \newcommand{\verminhulk}{Rat-stodonte}
@@ -135,7 +135,7 @@
 \newcommand{\dreadmill}{Roue Broyeuse}
 \newcommand{\abomination}{Abomination}
 \newcommand{\verminousartillery}{Artillerie des Vermines}
-\newcommand{\plaguecatapult}{Catapulte Bubonique}
+\newcommand{\plaguecatapult}{Catapulte Cholé-Rat}
 \newcommand{\lightningcannon}{Canon Foudroyant}
 
 % Short names and multiprofiles names
@@ -146,7 +146,7 @@
 \newcommand{\crew}{Servant}
 \newcommand{\catapultcrew}{Servant (Catapulte)}
 \newcommand{\cannoncrew}{Servant (Canon)}
-\newcommand{\plaguebrother}{Frère Cholé-Rat}
+\newcommand{\plaguebrother}{Frère de la Peste}
 
 
 
@@ -190,9 +190,9 @@ La figurine gagne +1 en Mouvement et la règle \swiftstride{}.
 \newcommand{\aetherturbinerule}{%
 Le porteur dispose de trois sorts :
 \begin{itemize}[label={-}]
+\item \boundspell{4} : \changetwo{} (Discipline \change{}).
 \item \boundspell{4} : \ruinsignature{} (Discipline \ruin{}). 
 \item \boundspell{4} : \alchemyone{} (Discipline \alchemy{}). Ce sort ne peut viser que l'unité du lanceur.
-\item \boundspell{4} : \changetwo{} (Discipline \change{}).
 \end{itemize}
 }
 
@@ -245,29 +245,29 @@ Quand une unité avec cette règle doit fuir suite à l'échec d'un test de mora
 }
 
 \newcommand{\plagueriddenrule}{%
-Les unités ennemie en contact avec au moins une unité qui dispose de cette règle subissent un malus de -1 en Capacité de Combat, jusqu'à un minimum de 1.
+Les unités ennemies en contact avec au moins une unité qui dispose de cette règle subissent un malus de -1 en Capacité de Combat, jusqu'à un minimum de 1.
 }
 
 \newcommand{\handlersrule}{%
-L'unité peut toujours faire une Reformation Rapide comme si elle avait un Musicien et passait automatiquement le test de Commandement.
+L'unité peut toujours faire une Reformation Rapide comme si elle incluait un Musicien et réussissait automatiquement le test de Commandement.
 }
 
 \newcommand{\tinyrule}{%
-Les figurines avec cette règle peuvent ignorer les unités alliées quand elles se déplacent pendant la Phase de Mouvement, mais doivent respecter la Règle du Pouce d'Écart (à moins de charger, la règle étant modifiée comme d'habitude en ce cas).
+Les figurines avec cette règle peuvent ignorer les unités alliées quand elles se déplacent pendant la Phase de Mouvement, mais doivent respecter la Règle du Pouce d'Écart. La règle \TINY{} ne peut pas s'appliquer si l'unité déclare une charge.
 }
 
 \newcommand{\tagalongrule}{%
 Si la figurine est située à moins de \distance{3} d'une unité de \ratsatarms{} ou de \verminguard{} qui n'est pas en fuite, elle gagne la règle \wardsave{4} contre les Attaques à Distance.
 }
 
-\newcommand{\meatgrinderweaponteamnote}{Une \weaponteam{} équipée d'un \meatgrinder{} gagne les règles \innatedefence{4}, \warplatform{} et sa taille de socle passe à \unit{40x40}{\milli\meter}. Elle ne peut rejoindre que les unités de \ratsatarms{}, et perd la règle \insignificant{} lorsqu'elle le fait.}
+\newcommand{\meatgrinderweaponteamnote}{Une \weaponteam{} équipée d'un \meatgrinder{} gagne les règles \innatedefence{4}, \warplatform{} et sa taille de socle passe à \unit{40x40}{\milli\meter}. Elle ne peut rejoindre que les unités de \ratsatarms{}, mais perd alors la règle \insignificant{}.}
 
 \newcommand{\paviserule}{%
 La figurine gagne une Sauvegarde d'Armure de 4+ contre les Attaques à Distance.
 }
 
 \newcommand{\calculatingrule}{%
-Les \grenadiers{} peuvent relancer les jets liés à la règle \callous{} pour déterminer quelles unités d'un combat ont été touchées quand le résultat du jet désigne une unité allié.
+Les \grenadiers{} peuvent relancer les jets liés à la règle \callous{} pour déterminer quelles unités d'un combat ont été touchées quand le résultat du jet désigne une unité alliée.
 }
 
 \newcommand{\augmentationsverminhulksrule}{%
@@ -328,7 +328,7 @@ Les unités non en fuite composées uniquement de figurines avec cette règle aj
 
 \armyspecialruleentry{\callous}
 
-La figurine peut utiliser des Armes de Tir n'utilisant pas de gabarit contre une unité ennemie engagée au corps à corps avec des unités alliées, si ces dernières sont de type Infanterie ou Nuée. Ignore les unités impliquées dans le combat pour les Couverts. Effectuez les jets pour toucher normalement, puis pour chaque touche, lancez un dé. Sur un résultat de 4+, la cible est touchée. Dans le cas contraire, la touche est attribuée au hasard à une des unités alliées engagée.
+La figurine peut utiliser des Armes de Tir n'utilisant pas de gabarit contre une unité ennemie engagée au corps à corps avec des unités alliées, si ces dernières sont de type Infanterie ou Nuée. Ignorez les unités impliquées dans le combat pour les Couverts. Effectuez les jets pour toucher normalement, puis pour chaque touche, lancez un dé. Sur un résultat de 4+, la cible est touchée. Dans le cas contraire, la touche est attribuée au hasard à l'une des unités alliées engagée.
 
 
 \armyspecialruleentry{\honourless}
@@ -364,9 +364,9 @@ Quand la figurine subit un Incident de Tir, utilisez la table suivante plutôt q
     \textbf{2 à 3} & \textbf{Défaillance}\vspace{5pt}\newline
     Aucun tir n'est effectué. La figurine subit une blessure sans sauvegarde d'aucune sorte. \tabularnewline
     \textbf{4 à 5} & \textbf{Surcharge}\vspace{5pt}\newline
-    Pivotez la figurine dans une direction aléatoire, puis tirez une demi-droite depuis le centre de la figurine dans cette direction. Si l'arme de tir est :
+    Pivotez la figurine dans une direction aléatoire, puis tirez une droite depuis le centre de la figurine dans cette direction. Si l'arme de tir est :
     \begin{itemize}[label={-}]
-    \item une \weaponteam{}, le tir est résolu contre la première unité rencontrée sur la ligne, si elle est effectivement à portée et dans le champ de vision de la \weaponteam{}. Faites les jets pour toucher et résolvez l'attaque normalement.
+    \item une \weaponteam{}, le tir est résolu contre la première unité rencontrée sur la ligne, si elle est effectivement à portée et dans le champ de vision de l'\weaponteam{}. Faites les jets pour toucher et résolvez l'attaque normalement.
     \item un \lightningcannon{} ou une \dreadmill{}, le tir est remplacé par un gabarit de ligne de \distance{6D6} le long de la demi-droite. Chaque figurine touchée par le gabarit, hormis la figurine à l'origine de l'incident, subit une touche de Force 10 avec les règles \lightningattacks{} et \magicalattacks{}.
     \end{itemize} \tabularnewline
     \textbf{6} & \textbf{À plat}\vspace{5pt}\newline
@@ -405,13 +405,13 @@ Compte comme une \pw{} au corps à corps.
 Ne subit jamais de pénalité pour toucher de Longue Portée. Si un \result{1} naturel est obtenu sur le jet pour toucher, le porteur subit une touche avec la règle \toxicattacks{}.
 
 \nopricelistitem{\rotarygun} \range{24}, Force 4, \magicalattacks{}, \volatile{}, \reload{}, \multipleshots{2D6x2} ou \multipleshots{3D6x2} au choix du joueur.\vspace{2pt}\newline
-Cette arme ne subit jamais de pénalité pour toucher dû aux \multipleshots{} ou à son mouvement. Si un double est obtenu sur le jet déterminant le nombre de touches, l'arme subit un Incident de Tir.
+Cette arme ne subit jamais de pénalité pour toucher due aux \multipleshots{} ou à son mouvement. Si un double est obtenu sur le jet déterminant le nombre de touches, l'arme subit un Incident de Tir.
 
 \nopricelistitem{\globelauncher} \range{18}, \magicalattacks{}, \toxicattacks{}, \volatile{}, \reload{}, \volleyfire{}, \multipleshots{2D6x2}.\vspace{2pt}\newline
-Cette arme ne subit jamais de pénalité pour toucher dû aux \multipleshots{} ou à son mouvement. Si un double est obtenu sur le jet déterminant le nombre de touches, l'arme subit un Incident de Tir.
+Cette arme ne subit jamais de pénalité pour toucher due aux \multipleshots{} ou à son mouvement. Si un double est obtenu sur le jet déterminant le nombre de touches, l'arme subit un Incident de Tir.
 
 \nopricelistitem{\naphthathrower} \range{12}, Force 5,  \flamingattacks{}, \magicalattacks{}, \multiplewounds{1D3}{}, \volatile{}, \reload{}, \multipleshots{2D6}.\vspace{2pt}\newline
-Cette arme ne subit jamais de pénalité pour toucher dû aux \multipleshots{}, à son mouvement, à un Couvert ou encore à un tir sur des \skirmishers{}. Si un double est obtenu sur le jet déterminant le nombre de touches, l'arme subit un Incident de Tir.
+Cette arme ne subit jamais de pénalité pour toucher due aux \multipleshots{}, à son mouvement, à un Couvert ou encore à un tir sur des \skirmishers{}. Si un double est obtenu sur le jet déterminant le nombre de touches, l'arme subit un Incident de Tir.
 
 \endpricelist
 
@@ -431,9 +431,9 @@ Cette arme ne subit jamais de pénalité pour toucher dû aux \multipleshots{}, 
 
 \nopricelistitem{\tailweapon} Lorsqu'il utilise des armes standard, le porteur gagne +1 Attaque.
 
-\nopricelistitem{\darkshard} Une seule utilisation. Lorsqu'il lance un sort non lié à un Objet de Sort, le porteur peut utiliser un seul \darkshard{}, avant de lancer les Dés de Pouvoir. Toute tentative de Dissipation de ce sort subira un malus de -1D3 sur son jet. Sur un \result{1} naturel est obtenu sur ce dé, le porteur subit une touche avec la règle \toxicattacks{}.
+\nopricelistitem{\darkshard} Une seule utilisation. Lorsqu'il lance un sort non lié à un Objet de Sort, le porteur peut utiliser un seul \darkshard{}, avant de lancer les Dés de Pouvoir. Toute tentative de Dissipation de ce sort subira un malus de -1D3 sur son jet. Si un \result{1} naturel est obtenu sur ce dé, le porteur subit une touche avec la règle \toxicattacks{}.
 
-\nopricelistitem{\darkshardbrew} Avant la bataille et après le déploiement, avant de savoir qui joue en premier, lancez 1D6 pour chaque unité de \ratsatarms{} et de \verminguard{} abritant au moins un Personnage avec cette amélioration. Le porteur et les figurines de \ratsatarms{} et de \verminguard{} de l'unité gagnent les règles ci-dessous correspondant au résultat du jet pour la durée de la partie. Le porteur ne peut jamais quitter son unité.
+\nopricelistitem{\darkshardbrew} Avant la bataille et après le déploiement, avant de savoir qui joue en premier, lancez 1D6 pour chaque unité de \ratsatarms{} et de \verminguard{} abritant au moins un Personnage avec cette amélioration. Le porteur et les figurines de \ratsatarms{} et de \verminguard{} de l'unité gagnent les règles ci-dessous, correspondant au résultat du jet pour la durée de la partie. Le porteur ne peut jamais quitter son unité.
 \begin{itemize}[label={-}]
 \item \textbf{1-2} : \poisonedattacks{} et \stupidity{}.
 \item \textbf{3-4} : \thunderouscharge{}.

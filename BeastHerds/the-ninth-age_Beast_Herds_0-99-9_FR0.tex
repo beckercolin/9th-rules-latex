@@ -47,7 +47,7 @@
 \newcommand{\lordofbulls}{Seigneur des Taureaux}
 \newcommand{\huntingcall}{Appel à la Chasse}
 \newcommand{\hooffather}{Maître-Brasseur} %M% Woot ? ^^ Hoof c'est sabot. Pas sûr du sens, faut demander.
-\newcommand{\huntinghorn}{Corne de la Chasse} %M% Je virerais le "la"
+\newcommand{\huntinghorn}{Corne de Chasse}
 \newcommand{\sleeper}{Endormi}
 \newcommand{\hurlattack}{Jet de Rocher} %M% Demander si OK de préciser Rocher
 \newcommand{\strengthfromflesh}{Force du Carnage} %M% Renforcé, Raffermi, Tonifié, Fortifié, Revigoré par le Carnage
@@ -67,26 +67,28 @@
 
 \newcommand{\minotaurwarlord}{Seigneur Minotaure}
 \newcommand{\minotaurwarlords}{Seigneurs Minotaure}
-\newcommand{\gnarledsoothsayer}{Devin Noueux} %M% Demander le sens de gnarled. Ca rend pas si bien noueux, mais je ne vois pas ce qu'ils veulent dire. Ptêtre Ancien irait.
+\newcommand{\gnarledsoothsayer}{Devin Noueux}
 \newcommand{\gnarledsoothsayers}{Devins Noueux}
 \newcommand{\beastlord}{Seigneur Bestial}
 \newcommand{\beastlords}{Seigneurs Bestiaux}
-\newcommand{\minotaurchieftain}{Chef de clan Minotaure} %M% trop long. Chef ?
-\newcommand{\minotaurchieftains}{Chefs de clan Minotaure}
+\newcommand{\minotaurchieftain}{Chef de Clan Minotaure}
+\newcommand{\minotaurchieftains}{Chefs de Clan Minotaure}
 \newcommand{\soothsayer}{Devin}
 \newcommand{\soothsayers}{Devins}
-\newcommand{\beastchieftain}{Chef de Clan Bestial} %M% ptêtre trop long, vérifier
+\newcommand{\beastchieftain}{Chef de Clan Bestial}
 \newcommand{\beastchieftains}{Chefs de Clan Bestiaux}
-\newcommand{\centaurchieftain}{Chef de Clan Centaure} %M% ptêtre trop long, vérifier
+\newcommand{\centaurchieftain}{Chef de Clan Centaure}
 \newcommand{\centaurchieftains}{Chefs de Clan Centaures}
 
 % Core
 
-\newcommand{\wildhornherd}{Homme-Bouc} %M% herd. Demander pour wildhorn.
-\newcommand{\wildhornherds}{Hommes-Boucs}
+\newcommand{\wildhornherd}{Hommes-Boucs}
+\newcommand{\wildhornherdSINGULAR}{Homme-Bouc}
 \newcommand{\wildhorns}{Hommes-Boucs}
-\newcommand{\mongrelherd}{Satyre} %M% herd, et demander le sens.
-\newcommand{\mongrelherds}{Satyres}
+\def\hyp{-\penalty0\hskip0pt\relax}
+\newcommand{\wildhorn}{Homme\hyp{}Bouc}
+\newcommand{\mongrelherd}{Satyres} %M%
+\newcommand{\mongrelherdSINGULAR}{Satyre}
 \newcommand{\mongrelraider}{Pillard Satyre} %M%
 \newcommand{\mongrelraiders}{Pillards Satyres}
 \newcommand{\feralhound}{Chien Sauvage}
@@ -98,15 +100,17 @@
 
 \newcommand{\minotaur}{Minotaure}
 \newcommand{\minotaurs}{Minotaures}
-\newcommand{\longhornherd}{Longue-Corne} %M% herd, à voir
-\newcommand{\longhornherds}{Longues-Cornes}
+\newcommand{\longhornherdSINGULAR}{Longue-Corne}
+\newcommand{\longhornherd}{Longues-Cornes}
+\newcommand{\longhorn}{Longue-Corne}
 \newcommand{\centaur}{Centaure}
 \newcommand{\centaurs}{Centaures}
 \newcommand{\gargoyle}{Gargouille}
 \newcommand{\gargoyles}{Gargouilles}
-\newcommand{\razortuskherd}{Troupeau de Verrats Sauvages} %M% ouais, le problème de herd, c'est qu'après c'est trop long :/ Sangliers Bestiaux ? Sinon on fabrique un mot genre Sanglilame ?
-\newcommand{\razortuskherds}{Troupeaux de Verrats Sauvages}
+\newcommand{\razortuskherd}{Verrats Sauvages} %M% Sangliers Bestiaux ? Sinon on fabrique un mot genre Sanglilame ?
+\newcommand{\razortuskherdSINGULAR}{Verrat Sauvage}
 \newcommand{\razortusks}{Verrats Sauvages} %M%
+\newcommand{\razortusk}{Verrat} %M%
 \newcommand{\razortuskchariot}{Char à Verrat} %M%
 \newcommand{\razortuskchariots}{Chars à Verrat}
 \newcommand{\briarbeast}{Bête des Forêts} %M% des Ronces.
@@ -114,8 +118,7 @@
 
 % Rare
 
-\newcommand{\cyclop}{Cyclope}
-\newcommand{\cyclops}{Cyclopes}
+\newcommand{\cyclops}{Cyclope}
 \newcommand{\gortach}{Gortak}
 \newcommand{\gortachs}{Gortaks}
 \newcommand{\jabberwock}{Jabberwockie}
@@ -130,54 +133,52 @@
 
 \newcommand{\crew}{Équipage}
 \newcommand{\warhog}{Cochon de Guerre} %M% ou Porc de Combat !
-\newcommand{\razortusk}{Verrat} %M%
-\newcommand{\wildhorncrew}{Équipage Homme-Bouc} %M%
-\newcommand{\longhorncrew}{Équipage Longue-Corne} %M%
 
 
 % Profile wording
 
-\newcommand{\mayupgradetototembearer}{Porteur de \totem{}}
+\newcommand{\totembearer}{Porteur de \totem}
+\newcommand{\onlyifnotmounted}{seulement si non monté.}
 \newcommand{\replacehalberdwithgw}{Échanger la \halberd{} contre une \gw{}}
 
 
 % Profile rules
 
 \newcommand{\lordofbullsrule}{%
-Si un \minotaurwarlord{} est le Général, alors les \minotaurs{}, les \minotaurwarlords{} et les \minotaurchieftains{} ne peuvent pas perdre leur \frenzy{} tant que le Général est en vie.
+Si la figurine est le Général de l'armée, alors les \minotaurs{}, les \minotaurwarlords{} et les \minotaurchieftains{} ne peuvent jamais perdre leur \frenzy{} tant que le Général est en vie.
 }
 
 \newcommand{\huntingcallrule}{%
-Si un \beastlord{} avec cette règle est le Général de l'armée, vous pouvez relancer les jets d'\ambush{} ratés pour les unités avec la règle \packtactics{}. Si vous jouez en deuxième, vous devez tenter de faire entrer en jeu vos unités avec \ambush{} avec la règle \packtactics{} dès le tour 1.
+Si la figurine est le Général de l'armée, vous pouvez relancer les jets d'\ambush{} ratés pour les unités possédant la règle \packtactics{}. Si vous n'avez pas eu le premier tour, vous devez tenter de faire entrer en jeu vos unités avec les règles \packtactics{} et \ambush{} dès le premier Tour de Jeu.
 }
 
 \newcommand{\hooffatherrule}{%
-Si un \centaurchieftain{} est le Général, alors les unités de \centaurs{} peuvent être prises comme des Unités de Base au lieu d'Unités Spéciales. Les Porte-étendard des unités de \centaurs{} prises comme Unités de Base ne peuvent prendre de bannière magique, à l'exception d'une seule unité qui peut prendre un Porte-étendard Vétéran.
+Si la figurine est le Général de l'armée, alors les unités de \centaurs{} peuvent être prises comme des choix d'unités de base plutôt que d'unités spéciales. Les unités de \centaurs{} prises comme choix d'unités de base ne peuvent pas prendre de Bannière Magique, à l'exception d'une seule unité qui peut prendre un Porte-étendard Vétéran.
 }
 
 \newcommand{\huntinghornrule}{%
-Chaque unité alliée à \distance{6} ou moins d'au moins un \razortuskchariot{} avec cette option gagne un bonus de \distance{+1} à son jet de charge.
+Les unités alliées à moins de \distance{6} d'une figurine avec cette règle ajoutent \distance{1} à leurs jets de distance de Charge.
 }
 
 \newcommand{\sleeperrule}{%
-Vous pouvez choisir de ne pas déployer cette unité normalement. À la place, vous pouvez choisir de réveiller l'unité avec \sleeper{} au début de n'importe laquelle de vos sous-phases des Autres Mouvements. Placez cette figurine complètement dans une \forest{} de la table.
+Vous pouvez choisir de ne pas déployer cette unité normalement. Vous pouvez alors choisir de réveiller l'unité au début d'une de vos étapes des Autres Mouvements. Dans ce cas, placez la figurine où vous le souhaitez du moment qu'elle est complètement dans une \forest{}.
 }
 
 \newcommand{\hurlattackrule}{%
-\textbf{\artilleryweapon} de type \textbf{\catapult} (\distance{3}) :\newline
-\range{6-36}, Force 3[9], [\multiplewounds{\ordnance}{}], \divineattacks{}, \magicalattacks{}.
+\textbf{\artilleryweapon} de type \textbf{\catapult{} (\distance{3})} :\newline
+\range{6-36}, \Strength{} 3 [9], [\multiplewounds{\ordnance}{}], \divineattacks{}, \magicalattacks{}.
 }
 
 \newcommand{\strengthfromfleshrule}{%
-Lorsque le \gortach{} effectue une blessure non sauvegardée avec la règle \lethalstrike{}, ce \lethalstrike{} gagne \multiplewounds{1D3}{}, et le \gortach{} regagne 1 Point de Vie à la fin de ce palier d'Initiative.
+À chaque fois que la figurine inflige une blessure non sauvegardée après avoir obtenu un \result{6} pour blesser pour une attaque avec la règle \lethalstrike{}, cette attaque gagne \multiplewounds{1D3}{}, et la figurine Récupère 1 Point de Vie à la fin de ce palier d'Initiative.
 }
 
 \newcommand{\lockedhornsrule}{%
-Si votre armée comprend au moins un \gortach{}, les \minotaurwarlords{} deviennent \oneofakind{}.
+Si votre armée comprend au moins un \gortach{}, les \minotaurwarlords{} gagnent la règle \oneofakind{}.
 }
 
 \newcommand{\auraofmadnessrule}{%
-Les unités ennemies dans un rayon de \distance{6} d'au moins une figurine avec la règle \auraofmadness{} ont -1 en Commandement.
+Les unités ennemies à moins de \distance{6} d'au moins une figurine avec cette règle subissent un malus de -1 en Commandement.
 }
 
 \newcommand{\giantattacksrule}{%
@@ -236,6 +237,11 @@ Choisissez une figurine en contact socle à socle avec le Géant dans l'unité s
 Choisissez une figurine en contact socle à socle avec le Géant dans l'unité sélectionnée. Cette figurine subit une blessure avec \armourpiercing{6}. Si la figurine n'a pas encore attaqué, elle ne peut pas le faire au cours de cette manche. Si la figurine a déjà réalisé ses attaques, elle ne pourra pas attaquer au cours du Tour de Joueur à venir.
 }
 
+% QRS note
+
+\newcommand{\QRSnote}{%
+\noindent\refsymbol{} Perd le \longhorn{} quand utilisé en monture de Personnage.
+}
 
 
 
@@ -260,14 +266,14 @@ Avant de déployer votre armée, choisissez pour chaque unité avec cette règle
 	\raggedcolumns
 	\begin{center}{\Largerfontsize\antiquefont\sober{}}\end{center}
 	\vspace{5pt}
-	\textit{\largerfontsize{Miraculeusement sobre, pour une fois.}}\vspace{3pt}\newline
+	\textit{\largerfontsize{Miraculeusement sobres, pour une fois.}}\vspace{3pt}\newline
 	Les figurines de l'unité gagnent les règles \vanguard{} et \lighttroops{}. Une unité qui a été \sober{} au cours de la partie ne peut jamais être une \scoringunit{}.
 
 	\vspace*{\fill}
 	\columnbreak
 	\begin{center}{\Largerfontsize\antiquefont\drunk{}}\end{center}
 	\vspace{5pt}
-	\textit{\largerfontsize{Complètement bourrée.}}\vspace{3pt}\newline
+	\textit{\largerfontsize{Complètement bourrés.}}\vspace{3pt}\newline
 	Les figurine de l'unité gagnent les règles \thunderouscharge{} et \immunetopsychology{}. L'unité ne peut pas être déployée en \ambush{}.
 
 	\vspace*{\fill}
@@ -337,12 +343,12 @@ Les \totems{} sont des améliorations spéciales dont peuvent disposer certains 
 \armynewsubsection{Sorts de Totem}
 
 \renewcommand{\arraystretch}{2}
-\begin{center}\begin{tabular}{rl}
+\begin{center}\begin{tabular}{rp{10cm}}
 	\hline
 	\textbf{\gnarledhidetotem{}} & L'unité gagne les règles \distracting{} et \innatedefence{6}.\tabularnewline
 	\textbf{\bloodedhorntotem{}} & L'unité gagne +1 Attaque et la règle \armourpiercing{2}.\tabularnewline
 	\textbf{\cloudedeyetotem{}} & L'unité gagne les règles \hardtarget{} et \magicresistance{3}.\tabularnewline
-	\textbf{\blackwingtotem{}} & L'unité gagne +3 en Initiative et ajoute \distance{1D3+1} à ses distances de Charge.\tabularnewline
+	\textbf{\blackwingtotem{}} & L'unité gagne +3 en Initiative et ajoute \distance{1D3+1} à ses jets de distance de Charge.\tabularnewline
 	\hline
 \end{tabular}\end{center}
 \renewcommand{\arraystretch}{1.2}
@@ -367,7 +373,7 @@ Les \totems{} sont des améliorations spéciales dont peuvent disposer certains 
 Type : \hw{}. Les attaques portées avec cette arme ont +2 en Force lors de la Manche de Corps à Corps directement après que l'unité du porteur a chargé, et uniquement contre l'ennemi qui a été chargé. Cette arme peut aussi être utilisée comme une \textbf{\artilleryweapon} de type \textbf{\boltthrower}.\newline
 \range{18}, \Strength{} 6, \multiplewounds{1D3}{}, \armourpiercing{6}. Les tirs réalisés avec cette arme ne souffrent d'aucun malus pour toucher.
 
-\pricelistitem{Lame Sangsue}{15}\gnarledsoothsayer{} et \soothsayer{} uniquement.
+\pricelistitem{Lame Sangsue}{15}\soothsayers{} et \gnarledsoothsayers{} uniquement.
 
 Type : \hw{}. Avant que le porteur ne fasse un jet pour un test de Panique, il peut décider de perdre 1 Point de Vie. Cela doit être la première fois que le jet est effectué, il ne peut pas s'agir d'une relance. Le test de Panique est alors automatiquement réussi.
 
@@ -428,7 +434,7 @@ Type : \hw{}. Avant que le porteur ne fasse un jet pour un test de Panique, il p
 
 %%% START OF THE ARMYLIST - Translators shouldn't have to edit it %%%
 
-%\input{BeastHerds_armylist.tex}
+\input{BeastHerds_armylist.tex}
 
 
 %%% Quick Reference Sheet - AB_qrs.tex is automatic and shouldn't be edited %%%
@@ -443,7 +449,7 @@ Type : \hw{}. Avant que le porteur ne fasse un jet pour un test de Panique, il p
 
 \noindent\begin{tabular}{lcccccc}
 \textbf{Nom} & \textbf{Artillerie} & \textbf{Portée} & \textbf{\labels@S{}} & \textbf{\multipleshots{}} & \textbf{\multiplewounds{}} & \textbf{\armourpiercing{}} \tabularnewline
-\hurlattack{} (\cyclop{}) & \catapult{} (\distance{3}) & \distance{6-36} & 3 [9] & - & [\ordnance{}] & - \tabularnewline
+\hurlattack{} (\cyclops{}) & \catapult{} (\distance{3}) & \distance{6-36} & 3 [9] & - & [\ordnance{}] & - \tabularnewline
 \end{tabular}
 
 \bigskip
@@ -456,7 +462,7 @@ Type : \hw{}. Avant que le porteur ne fasse un jet pour un test de Panique, il p
 	\textbf{\gnarledhidetotem{}} & L'unité gagne les règles \distracting{} et \innatedefence{6}.\tabularnewline
 	\textbf{\bloodedhorntotem{}} & L'unité gagne +1 Attaque et la règle \armourpiercing{2}.\tabularnewline
 	\textbf{\cloudedeyetotem{}} & L'unité gagne les règles \hardtarget{} et \magicresistance{3}.\tabularnewline
-	\textbf{\blackwingtotem{}} & L'unité gagne +3 en Initiative et ajoute \distance{1D3+1} à ses distances de Charge.\tabularnewline
+	\textbf{\blackwingtotem{}} & L'unité gagne +3 en Initiative et ajoute \distance{1D3+1} à ses jets de distance de Charge.\tabularnewline
 	\hline
 \end{tabular}
 \renewcommand{\arraystretch}{1.2}
