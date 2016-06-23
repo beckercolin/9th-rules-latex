@@ -13,8 +13,9 @@
 	type=\monster{},
 	basesize=75x50,
 	unitsize=1,
-	specialrules={\otherworldly{},\daemonicinstability{},\armourpiercing{6},\swiftstride{}}, 
 	magiclevel=1,
+	specialrules={\otherworldly{},\daemonicinstability{},\armourpiercing{6},\swiftstride{}}, 
+	magicpaths={NOPATH},
 	armour={\innatedefence{5}},
 	options={
 		\notaleader{}=\free{},
@@ -201,7 +202,7 @@
 \showunit{
 	name={\plagueprophet},
 	cost=60,
-	profile={< 5 5 4 4 5 2 5 3 6},
+	profile={< 5 5 3 4 5 2 5 3 6},
 	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
@@ -283,7 +284,7 @@
 	commontype=\vermincommonrules ,
 	commonspecialrules={\stateoftrance{\plaguebrotherhood}, \resistant{}},
 	weapons={\pw{} \only{\plaguebrother}},
-	armour={\innatedefence{5}},
+	armour={\mountsprotection{5}},
 	options={
 		\cauldronofblight{}=35,
 	},
@@ -653,7 +654,7 @@
 	cost=210,
 	profile={< \starsymbol{} 3 1 6 5 6 4 \starsymbol{} 8},
 	type=\monster{},
-	basesize=50x100,
+	basesize=60x100,
 	unitsize=1,
 	commontype=\vermincommonrules{},
 	commonspecialrules={\safetyinnumbers},
