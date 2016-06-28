@@ -189,7 +189,11 @@
 
 %%% Titles %%%
 
-\newcommand{\lordstitle}{\def\logolocalpath{../Layout/pics/logo_lord.png}\bigtitle{\labels@lords}}
+\newcommand{\lordstitle}{%
+\def\logolocalpath{../Layout/pics/logo_lord.png}%
+\bigtitle{\labels@lords}%
+\renewcommand{\profilecategory}{\labels@lords}%
+}
 \newcommand{\heroestitle}{%
 \def\logolocalpath{../Layout/pics/logo_hero.png}%
 \clearpage\bigtitle{\labels@heroes}%
@@ -565,6 +569,7 @@
 \define@key{commandgroup}{champion}               {\def\commandgroup@champion{#1}}
 \define@key{commandgroup}{championallowance}      {\def\commandgroup@championallowance{#1}}
 \define@key{commandgroup}{championoption}         {\def\commandgroup@championoption{#1}}
+\define@key{commandgroup}{secondchampionoption}         {\def\commandgroup@secondchampionoption{#1}}
 \define@key{commandgroup}{championprerestriction} {\def\commandgroup@championprerestriction{#1}}
 \define@key{commandgroup}{championrestriction}    {\def\commandgroup@championrestriction{#1}}
 \define@key{commandgroup}{banner}                 {\def\commandgroup@banner{#1}}
@@ -578,7 +583,7 @@
 \define@key{commandgroup}{musicianrestriction}    {\def\commandgroup@musicianrestriction{#1}}
 \newcommand{\defcommandgroup}{%
 	\setkeys{commandgroup}{restriction=,
-	                       champion=, championallowance=, championoption=, championprerestriction=, 
+	                       champion=, championallowance=, championoption=, secondchampionoption=, championprerestriction=, 
 	                       championrestriction=, banner=, bannerallowance=, veteranstandardbearer=, 
 	                       singlebannerallowance=, condsinglebannerallowance=, banneroption=, 
 	                       bannerrestriction=, musician=, musicianrestriction=}%
@@ -610,6 +615,10 @@
 					\ifdefempty{\commandgroup@championoption}{}{%
 						\splitatinf{\commandgroup@championoption}\local@option\local@cost%
 						\par\option{\hspace*{0.3cm}- \local@option}{\local@cost}}%
+					% Any second option available to the champion, in the form option:cost
+					\ifdefempty{\commandgroup@secondchampionoption}{}{%
+						\splitatinf{\commandgroup@secondchampionoption}\local@option\local@cost%
+						\par\option{\hspace*{0.3cm}\local@option}{\local@cost}}%
 			}{% There is a pre-restriction to have a champion
 				\item \hspace*{-0.04cm}\commandgroup@championprerestriction	\newline%
 				\option{\labels@champion}{\commandgroup@champion}%
@@ -619,6 +628,10 @@
 				\ifdefempty{\commandgroup@championoption}{}{%
 					\splitatinf{\commandgroup@championoption}\local@option\local@cost%
 					\par\option{\hspace*{0.3cm}- \local@option}{\local@cost}}%
+					% Any second option available to the champion, in the form option:cost
+					\ifdefempty{\commandgroup@secondchampionoption}{}{%
+						\splitatinf{\commandgroup@secondchampionoption}\local@option\local@cost%
+						\par\option{\hspace*{0.3cm}\local@option}{\local@cost}}%
 			} %End of the prerestriction of not condition
 			}% End of champion handling
 			\ifdefempty{\commandgroup@musician}{}{% We have a musician!

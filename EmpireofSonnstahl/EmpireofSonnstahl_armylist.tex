@@ -7,13 +7,13 @@
 
 \showunit{
 	name={\marshal},
-	cost={90},
+	cost=90,
 	profile={< 4 5 5 4 4 3 5 3 9},
 	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
 	specialrules={\orders},
-	armour={\pa},
+	armour={\platearmour},
 	options={
 		\magicalitemsallowance{}=\upto{}<100,
 		\shield{}=3,
@@ -29,7 +29,7 @@
 		\horse{}=10,
 		\pegasus{}=60,
 		\greatgriffon{}=100,
-		\dragon{} \only{\imperialprince{}}=250
+		\dragon{} \only{\imperialprince{}}=250,
 	},
 	additional={
 		\begin{center}\mayupgrademarshal{}\end{center}
@@ -37,36 +37,38 @@
 		\renewcommand{\columnseprulecolor}{\color{black!30}}	
 		\begin{multicols}{3}
 		\raggedcolumns
-		\begin{center}{\largerfontsize\antiquefont\seasonedgeneral{} (\pts{10})}
+		\begin{center}{\largerfontsize\antiquefont\seasonedgeneral{} (\pts{10})}\end{center}
 		
 		\noindent\seasonedgeneralrule{}
 		
+		\vspace*{\fill}
 		\columnbreak
-		\begin{center}{\largerfontsize\antiquefont\greattactician{} (\pts{30})}
+		\begin{center}{\largerfontsize\antiquefont\greattactician{} (\pts{30})}\end{center}
 		
 		\noindent\greattacticianrule{}
 		
+		\vspace*{\fill}
 		\columnbreak	
-		\begin{center}{\largerfontsize\antiquefont\imperialprince{} (\pts{90})}
+		\begin{center}{\largerfontsize\antiquefont\imperialprince{} (\pts{90})}\end{center}
 		
 		\noindent\imperialprincerule{}
 		
+		\vspace*{\fill}
 		\end{multicols}
 	},
 }
 
 \showunit{
 	name={\knightcommander},
-	cost={120},
+	cost=120,
 	profile={
 		\commander{}< 4 6 3 4 4 3 6 4 9,
-		\horse{}    < 8 3 - 3 3 1 3 1 3,
+		\horse{}< 8 3 - 3 3 1 3 1 3,
 	},
 	type=\cavalry{},
 	basesize=25x50,
 	unitsize=1,
-	unitrules={\unitrule{\legendarywarrior}{\legendarywarriorrule}},
-	armour={\pa, \barding, \mountsprotection{6}},
+	armour={\platearmour{},\barding{},\mountsprotection{6}},
 	options={
 		\magicalitemsallowance{}=\upto{}<100,
 		\legendarywarrior{}=15,
@@ -78,54 +80,66 @@
 		},
 	},
 	mounts={
-		\replacehorsewithyounggriffon{}=15,
+		\replacehorseandbardingwithyounggriffon{}=15,
+	},
+	additional={%
+		\def\tempunitrules{\unitrule{\legendarywarrior}{\legendarywarriorrule}}
+		\unitrules{\tempunitrules}
 	},
 }
 
 \showunit{
 	name={\archwizard},
-	cost={170},
-	profile={ < 4 3 3 3 4 3 3 1 8},
+	cost=170,
+	profile={< 4 3 3 3 4 3 3 1 8},
 	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
 	magiclevel=3,
-	magicpaths={\battle},
+	magicpaths={\ONLYanyofthebattlemagic},
 	options={
 		\magiclevel{4}=30,
 		\magicalitemsallowance{}=\upto{}<100,
+	},
 	mounts={
 		\horse{}=15,
 		\pegasus{}=40,
-		\greatgriffonwildernessonly{}=100,
+		\greatgriffon{}\refsymbol{}=100,
+		\hspace*{0.3cm}\refsymbol{} \only{\Pathof{} \wilderness{}}=,
 		\arcaneengine{}=130,
 	},
 }
 
 \showunit{
 	name={\prelate},
-	cost={90},
-	profile={< 4 5 4 4 4 3 4 2 9,},
+	cost=90,
+	profile={< 4 5 4 4 4 3 4 2 9},
 	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
-	specialrules={\blessings, \channel, \divineattacks, \highpontiff},
-	unitrules={\unitrule{\highpontiff}{\highpontiffrule}},
+	specialrules={\blessings{},\channel{},\divineattacks{},\highpontiff},
 	armour={\ha},
 	options={
 		\magicalitemsallowance{}=\upto{}<100,
 		\shield{}=3,
 		\combatweapononechoice{
-			\pw{}=3,
 			\flail{}=3,
+			\pw{}=3,
 			\gw{}=6,
 		},
 	},
 	mounts={
 		\horse{}=20,
-		\altarofbattle{}=160
+		\altarofbattle{}=160,
+	},
+		additional={%
+		\def\tempunitrules{\unitrule{\highpontiff}{\highpontiffrule}}
+		\unitrules{\tempunitrules}
 	},
 }
+
+
+
 
 
 
@@ -134,7 +148,7 @@
 
 \showunit{
 	name={\captain},
-	cost={60},
+	cost=60,
 	profile={< 4 5 5 4 4 2 5 3 8},
 	type=\infantry{},
 	basesize=20x20,
@@ -145,7 +159,7 @@
 		\bsb{}=25,
 		\magicalitemsallowance{}=\upto{}<50,
 		\shield{}=2,
-		\pa{}=10,
+		\platearmour{}=10,
 		\pistol{}=6,
 		\combatweapononechoice{
 			\pw{}=3,
@@ -155,48 +169,52 @@
 		},
 	},
 	mounts={
-		\horse{}=\free,
+		\horse{}=\free{},
 		\pegasus{}=45,
 	},
 }
 
 \showunit{
 	name={\artificer},
-	cost={55},
+	cost=55,
 	profile={< 4 3 4 3 3 2 3 1 7},
 	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
 	specialrules={\engineer},
-	unitrules={\unitrule{\masterartificer}{\masterartificerrule}},
 	armour={\la},
 	options={
 		\magicalitemsallowance{}=\upto{}<25,
 		\masterartificer{}=15,
-		\combatweapononechoice{
+		\shootingweapononechoice{
 			\handgun{}=6,
-			\repeaterpistol{}=10,
 			\repeatergun{}=10,
 			\longrifle{}=10,
+			\repeaterpistol{}=10,
 		},
 	},
 	mounts={
 		\horse{}=10,
 	},
+	additional={%
+		\def\tempunitrules{\unitrule{\masterartificer}{\masterartificerrule}}
+		\unitrules{\tempunitrules}
+	},
 }
 
 \showunit{
 	name={\wizard},
-	cost={65},
-	profile={ < 4 3 3 3 3 2 3 1 7},
+	cost=65,
+	profile={< 4 3 3 3 3 2 3 1 7},
 	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
 	magiclevel=1,
-	magicpaths={\battle},
+	magicpaths={\ONLYanyofthebattlemagic},
 	options={
 		\magiclevel{2}=25,
 		\magicalitemsallowance{}=\upto{}<50,
+	},
 	mounts={
 		\horse{}=10,
 	},
@@ -204,19 +222,19 @@
 
 \showunit{
 	name={\preacher},
-	cost={65},
-	profile={< 4 4 4 4 4 2 4 2 8,},
+	cost=65,
+	profile={< 4 4 4 4 4 2 4 2 8},
 	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
-	specialrules={\blessings, \channel, \divineattacks},
+	specialrules={\blessings{},\channel{},\divineattacks},
 	armour={\ha},
 	options={
 		\magicalitemsallowance{}=\upto{}<50,
 		\shield{}=2,
 		\combatweapononechoice{
-			\pw{}=3,
 			\flail{}=3,
+			\pw{}=3,
 			\gw{}=6,
 		},
 	},
@@ -227,26 +245,37 @@
 
 \showunit{
 	name={\inquisitor},
-	cost={60},
-	profile={< 4 5 4 4 4 2 4 2 8,},
+	cost=60,
+	profile={< 4 5 4 4 4 2 4 2 8},
 	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
-	specialrules={\notaleader, \immunetopsychology, \lethalstrike, \multiplewounds{1D3}, \magicresistance{2}},
 	armour={\ha},
 	options={
 		\magicalitemsallowance{}=\upto{}<50,
 		\shield{}=2,
-		\pa{}=10,
-		\braceofpistols{}=5,
+		\platearmour{}=10,
 		\crossbow{}=5,
+		\braceofpistols{}=5,
 		\gw{}=6,
 	},
 	mounts={
-		\horse{}=10,%%%%%%%%%%%%%%%% je sais pas faire
+		\horse{}=15,
+		\hspace*{0.3cm}- \lighttroops{}=15,
 	},
-	unitrules={\unitrule{\nobodyexpects}{\nobodyexpectsrule}},
+	additional={%
+		\def\tempspecialrules{\notaleader{},\immunetopsychology{},\lethalstrike{},\multiplewounds{1D3}{},\magicresistance{2}}
+		\specialrules{\tempspecialrules}
+		
+		\def\tempunitrules{\unitrule{\nobodyexpects}{\nobodyexpectsrule}}
+		\vspace*{0.15cm}\unitrules{\tempunitrules}
+	},
 }
+
+
+
+
+
 
 
 \mountstitle
@@ -258,7 +287,7 @@
 	basesize=25x50,
 	armour={\mountsprotection{6}},
 	options={
-		\barding{}=15
+		\barding{}=15,
 	},
 }
 
@@ -276,7 +305,7 @@
 	profile={< 7 4 - 5 4 3 4 3 7},
 	type=\monstrousbeast{},
 	basesize=50x75,
-	specialrules={\fear, \armourpiercing{1}},
+	specialrules={\fear{},\armourpiercing{1}},
 	armour={\mountsprotection{6}},
 }
 
@@ -285,66 +314,81 @@
 	profile={< 7 5 - 6 5 4 5 4 7},
 	type=\monstrousbeast{},
 	basesize=50x100,
-	specialrules={\fear, \fly{8}, \largetarget},
+	specialrules={\fear{},\fly{8},\largetarget},
 }
 
 \showunit{
 	name={\dragon{} (\oneofakind{})},
+	QRSname={\dragon},
 	profile={< 6 5 - 6 6 6 3 5 9},
 	type=\monster{},
 	basesize=50x100,
-	specialrules={\fly{7}, \breathweapondragon},
+	specialrules={\fly{7},\breathweapon{\Strength{} 4, \flamingattacks}},
 	armour={\innatedefence{3}},
 }
 
 \showunit{
 	name={\altarofbattle{} (\oneofakind{})},
+	QRSname={\altarofbattle},
 	profile={
-		\altarofbattle{}< - - - 5 5 5 - - -,
-		\horse{} (2)    < 8 3 - 3 - - 3 1 -,
+		\altar{}< - - - 5 5 5 - - -,
+		\horse{} (2)< 8 3 - 3 - - 3 1 -,
 	},
 	type=\chariot{},
 	basesize=50x100,
-	specialrules={\largetarget, \wardsave{4}, \stubborn, \holyrelic},
-	unitrules={\unitrule{\holyrelic}{\holyrelicrule}},
+	specialrules={\largetarget{},\wardsave{4},\stubborn{},\holyrelic},
 	options={\barding{}=25,},
+	additional={%
+		\def\tempunitrules{\unitrule{\holyrelic}{\holyrelicrule}}
+		\unitrules{\tempunitrules}
+	}
 }
 
 \showunit{
+	notinQRS=yes,
 	name={\arcaneengine},
 	profile={
-		\arcaneengine{}< - - - 5 5 5 - - -,
-		\crew{} (2)    < 4 3 3 3 - - 3 1 7,
-		\horse{} (2)   < 8 3 - 3 - - 3 1 -,
+		\engine{}< - - - 5 5 5 - - -,
+		\crew{} (2)< 4 3 3 3 - - 3 1 7,
+		\horse{} (2)< 8 3 - 3 - - 3 1 -,
 	},
 	type=\chariot{},
 	basesize=50x100,
-	specialrules={\largetarget, \channel},
+	specialrules={\largetarget{},\channel},
 	armour={\ha},
 	additional={
-		\begin{center}\musttakeoneofthefollowing{}\end{center}
+		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
 		\setlength{\columnseprule}{0.5pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}	
 		\begin{multicols}{2}
 		\raggedcolumns
-		\begin{center}{\largerfontsize\antiquefont\arcaneshield{}}
+		
+		\begin{center}{\largerfontsize\antiquefont\arcaneshield}\end{center}
 		
 		\noindent\arcaneshieldrule{}
 		
-		\columnbreak
-		\begin{center}{\largerfontsize\antiquefont\foresight{}}
+		\vspace*{\fill}\columnbreak
+		\begin{center}{\largerfontsize\antiquefont\foresight}\end{center}
 		
 		\noindent\foresightrule{}
 		
-		\end{multicols}
+		\vspace*{\fill}\end{multicols}
 	},
 }
+
+
+
+
+
+
+
 
 
 \coreunitstitle
 
 \showunit{
 	name={\lightinfantry},
+	QRSname={\lightinfantrySING},
 	cost=80,
 	profile={< 4 3 3 3 3 1 3 1 7},
 	type=\infantry{},
@@ -353,17 +397,21 @@
 	maxmodels=20,
 	costpermodel=7,
 	specialrules={\supportunit},
-	unitrules={\unitrule{\seasonedsoldierslight}{\seasonedsoldierslightrule}},
 	weapons={\crossbow},
 	options={
-		\replacecrossbowwithhandgun{}=\free,
-		\ifseasonedgeneraloptionlight{}=\permodel{}<2,
+		\ifseasonedgeneraloption{}=\permodel{}<2,
+		\replacecrossbowwithhandgun{}=\free{},
 	},
-	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
-}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% je sais pas faire les options du champion
+	commandgroup={champion=10, championoption=\replacehandgunwithlongrifle{}<5, secondchampionoption=\repeatergunoption{}<10, musician=10, banner=10, veteranstandardbearer=yessir},
+	additional={%
+		\def\tempunitrules{\unitrule{\seasonedsoldiers}{\seasonedsoldierslightrule}}
+		\unitrules{\tempunitrules}
+	},
+}
 
 \showunit{
 	name={\heavyinfantry},
+	QRSname={\heavyinfantrySING},
 	cost=80,
 	profile={< 4 3 3 3 3 1 3 1 7},
 	type=\infantry{},
@@ -371,11 +419,11 @@
 	unitsize=20,
 	maxmodels=50,
 	costpermodel=5,
-	specialrules={\supportunitheavy, \parentunitheavy},
-	unitrules={\unitrule{\seasonedsoldiersheavy}{\seasonedsoldiersheavyrule}},
-	weapons={\la, \shield},
+	specialrules={\supportunittwenty{},\parentunittwentyone},
+	unitrules={\unitrule{\seasonedsoldiers}{\seasonedsoldiersheavyrule}},
+	weapons={\la{},\shield},
 	options={
-		\ifseasonedgeneraloptionheavy{}=\permodel{}<1,
+		\ifseasonedgeneraloption{}=\permodel{}<1,
 		\combatweapononechoice{
 			\spear{}=\permodel{}<0.5,
 			\swapshieldforhalberd{}=\permodel{}<1,
@@ -385,9 +433,9 @@
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
 }
 
-
 \showunit{
 	name={\statemilitia},
+	QRSname={\statemilitiaSING},
 	cost=40,
 	profile={< 4 3 3 3 3 1 3 1 6},
 	type=\infantry{},
@@ -395,11 +443,11 @@
 	unitsize=10,
 	maxmodels=60,
 	costpermodel=4,
-	specialrules={\supportunitstatemilitia},
+	specialrules={\supportunittwenty},
 	weapons={\pw},
 	options={
-		\skirmishstatemilitia{}=\permodel{}<1,
-		\replacepwstatemilitia{
+		\skirmisher{} \ifNmodelsorless{15}=\permodel{}<1,
+		\replacepwwith{
 			\bow{}=\permodel{}<2,
 			\pistol{}=\permodel{}<2,
 		},
@@ -407,35 +455,43 @@
 	commandgroup={champion=10, musician=10, banner=10}
 }
 
-
 \showunit{
 	name={\electoralcavalry},
+	QRSname={\electoralcavalrySING},
 	cost=90,
 	profile={
 		\rider{}< 4 3 3 3 3 1 3 1 8,
 		\horse{}< 8 3 - 3 3 1 3 1 3,
 	},
-	type=\infantry{},
+	type=\cavalry{},
 	basesize=25x50,
 	unitsize=5,
 	maxmodels=15,
 	costpermodel=18,
-	weapons={\pw},
-	armour={\pa, \mountsprotection{6}, \barding},
+	weapons={\gw},
+	armour={\platearmour{},\mountsprotection{6},\barding},
 	options={
+		\imperialcavalryoption{}=\permodel{}<5,
 		\shield{}=\permodel{}<1,
 		\replacegwwithlance{}=\permodel{}<1,
-		\imperialcavalryoption{}=\permodel{}<5,
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
-	unitrules={\unitrules{\imperialcavalry}{\imperialcavalryrule}},
+	unitrules={\unitrule{\imperialcavalry}{\imperialcavalryrule}},
 }
+
+
+
+
+
+
+
 
 
 \specialunitstitle
 
 \showunit{
 	name={\imperialguard},
+	QRSname={\imperialguardSING},
 	cost=65,
 	profile={< 4 4 3 4 3 1 3 1 8},
 	type=\infantry{},
@@ -443,54 +499,32 @@
 	unitsize=10,
 	maxmodels=40,
 	costpermodel=9,
-	specialrules={\bodyguard, \parentunit},
-	armour={\pa, \shield},
+	specialrules={\bodyguard{},\parentunit},
+	armour={\platearmour{},\shield},
 	options={
 		\replaceshieldwithgw{}=\permodel{}<2,
 	},
 	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50}
 }
 
-
-
 \showunit{
-	name={\imperialrangers},
-	QRSname={\imperialranger},
-	cost=50,
-	profile={< 4 3 4 3 3 1 3 1 7},
+	name={\flagellants},
+	QRSname={\flagellant},
+	cost=100,
+	profile={< 4 3 3 3 4 1 3 1 6},
 	type=\infantry{},
 	basesize=20x20,
-	unitsize=5,
-	maxmodels=10,
-	costpermodel=10,
-	specialrules={\multipleshots{2}, \scout, \skirmisher},
-	weapons={\bow},
+	unitsize=10,
+	maxmodels=30,
+	costpermodel=8,
+	specialrules={\unbreakable{},\fanatical{},\zealots},
+	unitrules={
+		\unitrule{\fanatical}{\fanaticalrule}
+		\unitrule{\zealots}{\zealotsrule}
+	},
+	weapons={\flail},
 	commandgroup={champion=10}
 }
-
-
-\showunit{
-	name={\knightlyorders},
-	QRSname={\knightlyorder},
-	cost=145,
-	profile={
-		\rider{}< 4 4 3 4 3 1 4 2 8,
-		\horse{}< 8 3 - 3 3 1 3 1 3,
-	},
-	type=\cavalry{},
-	basesize=25x50,
-	unitsize=5,
-	maxmodels=12,
-	costpermodel=26,
-	specialrules={\bodyguard{} \only{\knightcommander{}, \general{}}},
-	weapons={\lance},
-	armour={\pa, \shield, \mountsprotection{6}, \barding},
-	options={
-		\replacelanceandshieldwithcavalryhammer{}=\free,
-	},
-	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
-}
-
 
 \showunit{
 	name={\reiters},
@@ -505,14 +539,14 @@
 	unitsize=5,
 	maxmodels=15,
 	costpermodel=15,
-	specialrules={\fastcavalry, \fireonimpact},
+	specialrules={\fastcavalry{},\fireonimpact},
 	unitrules={\unitrule{\fireonimpact}{\fireonimpactrule}},
 	weapons={\pistol},
-	armour={\la, \mountsprotection{6}},
+	armour={\la{},\mountsprotection{6}},
 	options={
 		\ha{}=\permodel{}<2,
-		\replacepistolreiters{
-			\lightlanceandshield{}=\free{},
+		\replacepistolwith{
+			\lightlance{} \wordand{} \shield{}=\free{},
 			\braceofpistols{}=\permodel{}<2,
 			\repeatergun{}=\permodel{}<3,
 		},
@@ -520,26 +554,44 @@
 	commandgroup={champion=10, championoption=\repeaterpistol{}<10, musician=10},
 }
 
-
 \showunit{
-	name={\flagellants},
-	QRSname={\flagellant},
-	cost=100,
-	profile={< 4 3 3 3 4 1 3 1 6},
+	name={\imperialrangers},
+	QRSname={\imperialranger},
+	cost=50,
+	profile={< 4 3 4 3 3 1 3 1 7},
 	type=\infantry{},
 	basesize=20x20,
-	unitsize=10,
-	maxmodels=30,
-	costpermodel=8,
-	specialrules={\unbreakable, \fanatical, \zealots},
-	unitrules={
-		\unitrule{\fanatical}{\fanaticalrule}
-		\unitrule{\zealots}{\zealotsrule}
-	},
-	weapons={\flail},
-	commandgroup={champion=10}
+	unitsize=5,
+	maxmodels=10,
+	costpermodel=10,
+	specialrules={\multipleshots{2},\scout{},\skirmisher},
+	weapons={\bow},
+	commandgroup={champion=10},
 }
 
+\showunit{
+	name={\knightlyorders},
+	QRSname={\knightlyordersSING},
+	cost=145,
+	profile={
+		\rider{}< 4 4 3 4 3 1 4 2 8,
+		\horse{}< 8 3 - 3 3 1 3 1 3,
+	},
+	type=\cavalry{},
+	basesize=25x50,
+	unitsize=5,
+	maxmodels=12,
+	costpermodel=26,
+	specialrules={\bodyguard{\general{}, 
+	\knightcommander}},
+	weapons={\lance},
+	armour={\platearmour{},\shield{},\mountsprotection{6},\barding},
+	options={
+		\replacelanceandshieldwithcavalryhammer{}\refsymbol{}=\free{},
+		\hspace*{0.3cm}\refsymbol{} \countsashalberd{}=,
+	},
+	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
+}
 
 \showunit{
 	name={\artillery{}},
@@ -551,37 +603,37 @@
 	unitsize=1,
 	basesize=60,
 	additional={
-		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
+		\vspace*{-0.5cm}\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
 		\setlength{\columnseprule}{0.5pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}	
 		\begin{multicols}{2}
 		\raggedcolumns		
 
-		\begin{center}{\largerfontsize\antiquefont\mortar{} (\pts{110})}
-		
-		\noindent\mortarrule{}
-		
 		\begin{center}{\largerfontsize\antiquefont\cannon{} (\pts{100})}
 		
 		\vspace{5pt}\zerotoXchoice{2}\end{center}
 		
 		\noindent\cannonrule{}
 		
-		\columnbreak
+		\vspace*{10pt}\begin{center}{\largerfontsize\antiquefont\mortar{} (\pts{110})}\end{center}
+		
+		\noindent\mortarrule{}
+		
+		\vspace*{\fill}\columnbreak
+		
 		\begin{center}{\largerfontsize\antiquefont\volleygun{} (\pts{125})}
 		
 		\vspace{5pt}\zerotoXchoice{2}\end{center}
 		
 		\noindent\volleygunrule{}
 		
-		\vspace*{\fill}
-		\begin{center}{\largerfontsize\antiquefont\imperialrocketeers{} (\pts{130})}
+		\vspace*{10pt}\begin{center}{\largerfontsize\antiquefont\imperialrocketeers{} (\pts{130})}
 		
 		\vspace{5pt}\zerotoXchoice{2}\end{center}
 		
 		\noindent\imperialrocketeersrule{}
 		
-		\end{multicols}
+		\vspace*{\fill}\end{multicols}
 		\setlength{\columnseprule}{0pt}
 	},
 }
@@ -604,62 +656,70 @@
 	type=\monstrouscavalry{},
 	basesize=50x75,
 	unitsize=3,
-	maxmodels=4,
+	maxmodels=7,
 	costpermodel=47,
-	specialrules={\fear{}, \armourpiercing{1} \only{\younggriffon{}}},
+	specialrules={\fear{},\armourpiercing{1} \only{\younggriffon{}}},
 	weapons={\halberd},
-	armour={\pa, \mountsprotection{6}},
+	armour={\platearmour{},\mountsprotection{6}},
 	options={
 		\replacehalberwithlanceandshield{}=\permodel{}<5,
 	},
 	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
 }
 
-
 \showunit{
 	name={\arcaneengine},
 	cost=140,
 	profile={
-		\arcaneengine{}< - - - 5 5 5 - - -,
-		\crew{} (2)    < 4 3 3 3 - - 3 1 7,
-		\horse{} (2)   < 8 3 - 3 - - 3 1 -,
+		\engine{}< - - - 5 5 5 - - -,
+		\crew{} (2)< 4 3 3 3 - - 3 1 7,
+		\horse{} (2)< 8 3 - 3 - - 3 1 -,
 	},
 	type=\chariot{},
 	basesize=50x100,
 	unitsize=1,
-	specialrules={\largetarget, \channel},
+	specialrules={\largetarget{},\channel},
 	armour={\ha},
 	additional={
-		\begin{center}\musttakeoneofthefollowing{}\end{center}
+		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
 		\setlength{\columnseprule}{0.5pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}	
 		\begin{multicols}{2}
 		\raggedcolumns
-		\begin{center}{\largerfontsize\antiquefont\arcaneshield{}}
+		
+		\begin{center}{\largerfontsize\antiquefont\arcaneshield}\end{center}
 		
 		\noindent\arcaneshieldrule{}
 		
-		\columnbreak
-		\begin{center}{\largerfontsize\antiquefont\foresight{}}
+		\vspace*{\fill}\columnbreak
+		\begin{center}{\largerfontsize\antiquefont\foresight}\end{center}
 		
 		\noindent\foresightrule{}
 		
-		\end{multicols}
+		\vspace*{\fill}\end{multicols}
 	},
 }
 
 \showunit{
 	name={\steamtank{} (\oneofakind{})},
+	QRSname={\steamtank},
 	cost=230,
 	profile={
-		\steamtank{}< - - - 6 6 7 3 - -,
-		\crew{} (1)    < - 3 4 3 - - 3 1 7,
+		\tank{}< \starsymbol{} - - 6 6 7 3 - -,
+		\crew{} (1)< - 3 4 3 - - 3 1 7,
 	},
 	type=\chariot{},
 	basesize=50x100,
 	unitsize=1,
-	specialrules={\largetarget, \unbreakable, \terror, \randommovement{\seesteamengine{}}, \grindingattacks{\seesteamengine{}} \only{\steamtank{}}, \breathweapontank \only{\steamtank{}}},
+	weapons={\repeatergun{},\steampoweredcannon},
 	armour={\innatedefence{1}},
-	unitrules={\unitrule{\steamengine}{\steamenginerule}},
+	unitequipment={\equipmentdef{\steampoweredcannon}{\steampoweredcannonrule}},
+	additional={%
+		\def\tempspecialrules{\largetarget{},\unbreakable{},\terror{},\randommovement{\seesteamengine},\grindingattacks{\seesteamengine} \only{\tank},\breathweapon{\Strength{} 2, \armourpiercing{3}} \only{\tank}}
+		\specialrules{\tempspecialrules}
+		
+		\def\tempunitrules{\unitrule{\steamengine}{\steamenginerule}}
+		\vspace*{0.15cm}\unitrules{\tempunitrules}
+	},
 }
 
