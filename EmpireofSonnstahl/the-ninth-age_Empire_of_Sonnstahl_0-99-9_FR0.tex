@@ -41,16 +41,16 @@
 \newcommand{\onthedouble}{En Quatrième Vitesse !}
 \newcommand{\steadymen}{Tenez Bon !}
 \newcommand{\readyaimfire}{Prêt ! En joue ! Feu !}
-\newcommand{\braceforimpact}{Premier Rang, Genou à Terre !} %M% trop spécifique IMO. Quelque-chose comme En position, ou Position Défensive ?
+\newcommand{\braceforimpact}{Premier Rang, Genou à Terre !}
 \newcommand{\seasonedgeneral}{Général Expérimenté}
 \newcommand{\greattactician}{Tacticien Talentueux}
 \newcommand{\imperialprince}{Prince Impérial}
 \newcommand{\legendarywarrior}{Guerrier Légendaire}
 \newcommand{\highpontiff}{Haut Pontife}
 \newcommand{\masterartificer}{Maître Artificier}
-\newcommand{\nobodyexpects}{Personne n'attends un ...} %M% demander ce qu'ils voulaient dire
+\newcommand{\nobodyexpects}{L'Inquisition Sait Tout}
 \newcommand{\witchhunter}{Chasseur de Sorcière}
-\newcommand{\daemonhunter}{Chasseur de Démon} %M% même nom que les nains. Je propose de revoir les nains.
+\newcommand{\daemonhunter}{Chasseur de Démon}
 \newcommand{\vampirehunter}{Chasseur de Vampire}
 \newcommand{\holyrelic}{Sainte Relique}
 \newcommand{\arcaneshield}{Bouclier Cabalistique}
@@ -72,7 +72,7 @@
 
 \newcommand{\marshal}{Maréchal}
 \newcommand{\knightcommander}{Maître de Chevalerie}
-\newcommand{\archwizard}{Seigneur Sorcier} %M% Suprême plutôt ?
+\newcommand{\archwizard}{Sorcier Suprême}
 \newcommand{\prelate}{Prélat}
 \newcommand{\prelates}{Prélats}
 \newcommand{\captain}{Capitaine}
@@ -89,15 +89,15 @@
 \newcommand{\heavyinfantrySING}{Soldat Lourd}
 \newcommand{\statemilitia}{Corps de Milice}
 \newcommand{\statemilitiaSING}{Milicien}
-\newcommand{\electoralcavalry}{Cavalerie d'Électeurs} %M% demander le fluff. Cavalerie Électorale est plus jolie
-\newcommand{\electoralcavalrySING}{Cavalier Électeur}
+\newcommand{\electoralcavalry}{Cavalerie Princière} %M%
+\newcommand{\electoralcavalrySING}{Cavalier Princier}
 
 % Special
 
 \newcommand{\imperialguard}{Garde Impériale}
 \newcommand{\imperialguardSING}{Garde Impérial}
-\newcommand{\imperialrangers}{Forestiers Impériaux} %M% Forestiers si ok avec le fluff ?
-\newcommand{\imperialranger}{Forestier Impérial}
+\newcommand{\imperialrangers}{Gardes-Chasses Impériaux}
+\newcommand{\imperialranger}{Garde-Chasse Impérial}
 \newcommand{\knightlyorders}{Ordres de Chevalerie}
 \newcommand{\knightlyordersSING}{Chevalier de l'Ordre}
 \newcommand{\reiters}{Reîtres}
@@ -108,7 +108,7 @@
 
 % Rare
 
-\newcommand{\knightsofthesungriffon}{Chevaliers du Griffon-Soleil} %M% Demander ce qu'est le Sun Griffon et vérifier si Griffon-Soleil est ok
+\newcommand{\knightsofthesungriffon}{Chevaliers du Griffon-Soleil}
 \newcommand{\knightofthesungriffon}{Chevalier du Griffon-S.}
 \newcommand{\arcaneengine}{Machine Cabalistique}
 \newcommand{\steamtank}{Tank à Vapeur}
@@ -167,9 +167,8 @@ La figurine peut donner deux \orders{} par tour plutôt qu'un seul. Ces deux \or
 }
 
 \newcommand{\imperialprincerule}{%
-La figurine gagne +1 Attaque. Elle est équipée de la Lame de Sonnstahl mais ne peut acheter aucune autre Arme Magique, et n'a accès qu'à \pts{25} au plus d'autres Objets Magiques.
+La figurine gagne +1 Attaque. Elle est équipée du Sonnstahl mais ne peut acheter aucune autre Arme Magique, et n'a accès qu'à \pts{25} au plus d'autres Objets Magiques.
 }
-%M% Revoir selon nom donné à l'épée
 
 \newcommand{\legendarywarriorrule}{%
 La figurine et son unité gagnent la règle \immunetopsychology{}. De plus, toute unité de \electoralcavalry{} peut être améliorée en \imperialcavalry{}.
@@ -428,14 +427,11 @@ La figurine peut donner un et un seul \order{} à une \parentunit{} ou une \supp
 
 \startpricelist
 
-\pricelistitem{Lame de Sonnstahl}{85}Type : \hw{}. Les attaques portées avec cette arme blessent automatiquement et ont la règle \armourpiercing{6}.
-%M% demander comment l'article devrait être (le, la)
+\pricelistitem{La Sonnstahl}{85}Type : \hw{}. Les attaques portées avec cette arme blessent automatiquement et ont la règle \armourpiercing{6}.
 
-\pricelistitem{Marteau à Sorcières}{35}Type : \hw{}. Les attaques portées avec cette arme ont +1 en Force et la règle \lightningreflexes{}.
-%M% à ou des ?
+\pricelistitem{Malleus Maleficarum}{35}Type : \hw{}. Les attaques portées avec cette arme ont +1 en Force et la règle \lightningreflexes{}.
 
-\pricelistitem{Masse des Étoiles}{30}Type : \gw{}. Le porteur gagne la règle \crushattack{} quand il attaque avec cette arme.
-%M% cosmic stars or pointy mace ?
+\pricelistitem{Masse-Étoile}{30}Type : \gw{}. Le porteur gagne la règle \crushattack{} quand il attaque avec cette arme.
 
 \endpricelist
 
@@ -475,7 +471,6 @@ Type : \platearmour{}. Le porteur gagne une Sauvegarde d'Armure de 1+.
 \startpricelist
 
 \pricelistitem{Bannière de Cohésion}{25}L'unité du porteur ne peut pas être Désorganisée par des unités ennemies sur ses flancs. Elle peut toujours être Désorganisée normalement par une unité sur son arrière.
-%M% Vérifier
 
 \pricelistitem{Bannière de l'Étalon}{15}Personnage monté uniquement.
 

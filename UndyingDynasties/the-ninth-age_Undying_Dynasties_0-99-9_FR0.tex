@@ -1,0 +1,514 @@
+
+\input{../Layout/AB_layout.tex}
+
+\newcommand{\booktitle}{Dynasties Immortelles}
+\newcommand{\version}{0.99.9}
+\newcommand{\frenchversion}{2.0}
+\newcommand{\booklogo}{pics/logo_big_UD.png}
+
+% Spells
+
+\newcommand{\sandattribute}{Les Morts sans Repos}
+
+
+% Army wide rules
+
+\newcommand{\risen}{Résurrection}
+\renewcommand{\labels@Invocation}{\risen}
+\newcommand{\rulersofthedead}{Maître des Morts} %M% vérifier différent VC
+
+% Army special rules
+
+\newcommand{\dusttodust}{De la Poussière à la Poussière} %M% verif différent VC
+\newcommand{\undeadconstruct}{Construction Mort-Vivante} %M% verif pareil que VC
+\newcommand{\undyingwill}{Volonté Immuable}
+\newcommand{\necromanticaura}{Aura Nécromantique} %M% verif pareil VC
+\newcommand{\mummyscurse}{Malédiction de la Momie}
+\newcommand{\undergroundambush}{Embuscade Souterraine}
+
+% Monarques
+
+\newcommand{\monarchsofundead}{Monarques des Morts-Vivants}
+\newcommand{\commanderoftheterracottaarmy}{Roi de l'Armée de Terre Cuite}
+\newcommand{\lordofthebarrowlegion}{Seigneur de la Légion des Tertres}
+
+
+% Armoury
+
+\newcommand{\aspenbow}{Arc d'Ébène} %M% faire vérifier ebene
+\newcommand{\greataspenbow}{Grand Arc d'Ébène}
+\newcommand{\giantaspenbow}{Arc d'Ébène Géant}
+
+% Army common type special rules
+
+\newcommand{\undeadcommonrules}{Règles spéciales des Morts-Vivants}
+
+
+% Other Rules
+
+% Hiérarque 
+
+\newcommand{\soulconduit}{Chenal Spirituel}
+
+% Héraut des Tombes
+
+\newcommand{\guardianswrath}{Colère des Gardiens}
+\newcommand{\royalguard}{Escorte Royale}
+
+% Nécrarchitecte
+
+\newcommand{\mastermason}{Maître Maçon}
+\newcommand{\masterofstone}{Maître de la Pierre}
+\newcommand{\masonsmenagerie}{Ménagerie du Maçon}
+
+% Guetteurs des Dunes
+
+\newcommand{\petrifyinggaze}{Regard Pétrifiant} %M% pareil que DE ?
+
+% Faucheurs Ailés
+
+\newcommand{\autonomous}{Autonomes} %M% verif avec VC
+
+% Colosse
+
+\newcommand{\scalesofdestiny}{Balance du Destin}
+
+% Sarcophage de Phatep
+
+\newcommand{\divinelight}{Lumière Divine}
+\newcommand{\phatepscurse}{Malédiction de Phatep}
+
+% Arche d'Alliance
+
+\newcommand{\divineprotection}{Protection Divine}
+\newcommand{\sacredark}{Arche Sacrée}
+
+% Catapulte d'Ossements
+
+\newcommand{\cursedammunition}{Projectiles Maudits}
+
+
+% Characters
+
+\newcommand{\pharaoh}{Pharaon}
+\newcommand{\pharaohs}{Pharaons}
+\newcommand{\deathculthierarch}{Hiérarque du Culte des Morts}
+\newcommand{\deathculthierarchs}{Hiérarques du Culte des Morts}
+\newcommand{\nomarch}{Nomarque}
+\newcommand{\nomarchs}{Nomarques}
+\newcommand{\deathcultaccolyte}{Acolyte du Culte des Morts}
+\newcommand{\deathcultaccolytes}{Acolytes du Culte des Morts}
+\newcommand{\tombharbinger}{Héraut des Tombes}
+\newcommand{\tombharbingers}{Héraut des Tombes}
+\newcommand{\tombarchitect}{Necrarchitecte} %M% ce ne sont pas les architectes des tombes plutôt ? je trouve ça plus classe.
+\newcommand{\tombarchitects}{Necrarchitectes}
+
+% Core
+
+\newcommand{\skeleton}{Squelette}
+\newcommand{\skeletons}{Squelettes}
+\newcommand{\skeletonarcher}{Archer Squelette}
+\newcommand{\skeletonarchers}{Archers Squelettes}
+\newcommand{\skeletoncavalry}{Cavaliers Squelettes}
+\newcommand{\skeletoncavalrySING}{Cavalier Squelette}
+\newcommand{\skeletonchariot}{Char Squelette}
+\newcommand{\skeletonchariots}{Chars Squelettes}
+
+
+% Special
+
+\newcommand{\necropolisguard}{Garde des Nécropoles}
+\newcommand{\necropolisguards}{Gardes des Nécropoles}
+\newcommand{\scarabswarm}{Nuée de Scarabées}
+\newcommand{\scarabswarms}{Nuées de Scarabées}
+\newcommand{\shabti}{Shabti}
+\newcommand{\shabtis}{Shabtis}
+\newcommand{\tombcataphract}{Cataphracte Tombale}
+\newcommand{\tombcataphracts}{Cataphractes Tombales}
+\newcommand{\greatvulture}{Grand Vautour}
+\newcommand{\greatvultures}{Grands Vautours}
+\newcommand{\sandscorpion}{Scorpion des Sables}
+\newcommand{\sandscorpions}{Scorpions des Sables}
+\newcommand{\sandstalker}{Guetteur des Dunes}
+\newcommand{\sandstalkers}{Guetteurs des Dunes}
+\newcommand{\battlesphinx}{Sphinx de Guerre}
+\newcommand{\battlesphinxs}{Sphinx de Guerre}
+
+
+% Rare
+
+\newcommand{\wingedreaper}{Faucheur Ailé}
+\newcommand{\wingedreapers}{Faucheurs Ailés}
+\newcommand{\dreadsphinx}{Sphinx de la Terreur} %M% Bof. décidemment dread c'est chiant. Effroyable ?
+\newcommand{\dreadsphinxs}{Sphinx de la Terreur}
+\newcommand{\colossus}{Colosse}
+\newcommand{\colossuss}{Colosses}
+\newcommand{\casketofphatep}{Sarcophage de Phatep}
+\newcommand{\casketofphateps}{Sarcophages de Phatep}
+\newcommand{\charnelcatapult}{Catapulte d'Ossements}
+\newcommand{\charnelcatapults}{Catapultes d'Ossements}
+
+
+% Mounts
+
+\newcommand{\skeletalhorse}{Cheval Squelette}
+\newcommand{\skeletalhorses}{Chevaux Squelettes}
+\newcommand{\amuut}{Amuut}
+\newcommand{\amuuts}{Amuuts}
+\newcommand{\royalsphinx}{Sphinx Royal}
+\newcommand{\royalsphinxs}{Sphinx Royaux}
+\newcommand{\arkofages}{Arche des Âges}
+\newcommand{\arksofages}{Arches des Âges}
+
+
+% Profile names
+
+\newcommand{\rider}{Cavalier}
+\newcommand{\charioteer}{Aurige}
+\newcommand{\charioteers}{Auriges}
+\newcommand{\cataphract}{Cataphracte}
+\newcommand{\cataphracts}{Cataphractes}
+\newcommand{\boundspirits}{Esprits Asservis}
+\newcommand{\casket}{Sarcophage}
+\newcommand{\caskets}{Sarcophages}
+
+
+% Profile wording
+
+\newcommand{\twoadditionalhorses}{Deux chevaux supplémentaires et socle de 100x100}
+\newcommand{\exchangescoutandlighttroopsforla}{Échanger \scout{} et \lighttroops{} contre une \la{}}
+\newcommand{\exchangeshieldandvanguardforaspenbow}{Échanger le \shield{} et \vanguard{} contre un \aspenbow{}}
+\newcommand{\replacecharnelcatapultwithcursedammunition}{Échanger la \charnelcatapult{} contre les \cursedammunition{}}
+
+
+% Profile rules
+
+% Hiérarque du Culte des Morts
+
+\newcommand{\soulconduitrule}{%
+Si une figurine avec cette règle se trouve sur le champ de bataille au début de votre phase de magie, vous jetez 7+1D3 pour les vents de magie au lieu de 2D6. Le nombre de dés de dissipation est toujours 6, sans compter les éventuels dés bonus (canalisation, etc...)
+}
+
+%Héraut des Tombes
+
+\newcommand{\guardianswrathrule}{%
+La figurine gagne la règle spéciale \hatred{} et la confère à l'unité qu'elle rejoint. Les montures ne sont pas affectées. 
+}
+
+\newcommand{\royalguardrule}{%
+Si un \pharaoh{} ou un \nomarch{} se trouve dans la même unité que cette figurine lors d'un corps à corps, il peut décider de transférer au \tombharbinger{} une touche (avant la résolution de blessure). Une figurine ne peut subir qu'une seule touche par phase de corps à corps à cause de cette règle. La règle \royalguard{} ne s'applique pas si le \pharaoh{} ou le \nomarch{} est en défi.
+}
+
+%Nécrarchitecte
+
+\newcommand{\masterofstonerule}{%
+À Après le déploiement des unités \scout{}, puis au début de chacun de vos tours, une unité alliée avec la règle \undeadconstruct{} à \distance{12} de cette figurine gagne la règle \regeneration{5}. La \regeneration{} dure jusqu'au début de votre prochain tour ou au moment où le \tombarchitect{} est retiré du jeu.
+}
+
+\newcommand{\mastermasonrule}{%
+La portée de la règle \masterofstone{} est augmentée de \distance{6}.
+}
+
+\newcommand{\masonsmenagerierule}{%
+Si cette figurine est le Général, une unité \shabtis{} de 6 figurines ou moins peut être prise comme Unité de Base plutôt que comme Unité Spéciale.
+}
+
+%Arche d'Alliance
+
+\newcommand{\sacredarkrule}{%
+Le Sorcier monté sur l'\arkofages{} ajoute \distance{3} à la portée de ses sorts. Le Sorcier ajoute aussi ces trois sorts à ceux qu'il connaît déjà :  Ouragan (Discipline \heavens{}), Fléau du Ponant (Discipline \heavens{}) et Sables Mouvants (Discipline \sands{}). En cas de sort en double, référez-vous au livre des règles.
+}
+
+\newcommand{\divineprotectionrule}{%
+Lorsqu'elle est montée par le Hiérophante, la figurine gagne une \wardsave{4}.
+}
+
+%Guetteurs des Dunes
+
+\newcommand{\petrifyinggazerule}{%
+Les figurines avec cette règle peuvent effectuer une attaque de tir avec le profil suivant : \portee{12}, Force 2, \armourpiercing{6}, \multipleshots{1D6+1}, \quicktofire{}. Lors du jet pour blesser, utilisez la plus haute Initiative de la cible comme Endurance.
+}
+
+%Faucheurs Ailés
+
+\newcommand{\autonomousrule}{%
+Les figurines avec cette règle peuvent effectuer des Marches Forcées même si elles sont hors de portée de la \inspiringpresence{} du Général.
+}
+
+%Colosse
+
+\newcommand{\scalesofdestinyrule}{%
+Arme de corps à corps. Type : Arme de base. Le porteur a -1 Attaque. Le porteur a deux Objets de Sorts de Puissance 4 : Regard Embrasé (Discipline \light{}) et Le Baiser de la Faucheuse (Discipline \death{}).
+}
+
+%Sarcophage de Phatep
+
+\newcommand{\divinelightrule}{%
+La figurine ajoute +1 à votre jet de Canalisation pendant votre tour. Les Sorciers ennemis à \distance{36} d'au moins un \casketofphatep{} subissent -1 à leurs lancements de sorts. Lorsque le \casketofphatep{} est retire du jeu, toutes les unités à \distance{12} subissent 3D3+3 touches Force 1, \armourpiercing{6}.
+}
+
+\newcommand{\phatepscurserule}{%
+Le \casketofphatep{} peut lancer le sort Jugement Divin (Discipline \sands{}), Objet de Sort, Puissance 4. Si elle s'est déplacée précédemment dans le tour, elle ne peut pas utiliser cette règle.
+}
+
+%Catapulte d'Ossements
+
+\newcommand{\cursedammunitionrule}{%
+Catapulte, Gabarit de \distance{5}, \portee{12-48}, Force 3, \flamingattacks{} et \magicalattacks{}. Une unité subissant au moins une perte à cause d'un tir de la Catapulte doit faire un test de panique comme si elle avait perdu 25\% de son effectif. De plus, les tests de panique causés par ce tir sont effectués avec un malus de -1 en Commandement.
+}
+
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+
+\input{../Layout/AB_titlepage.tex}
+
+\startarmywiderules
+
+\armyspecialruleentry{\risen{}}
+
+Certains profils d'unité contiennent une catégorie appelée \risen{} qui donne le nombre de Points de Vie Ressuscités grâce à l'attribut \sandattribute{} de la Discipline \sands{}.
+
+\armyspecialruleentry{\rulersofthedead{}}
+
+Votre armée doit contenir au moins un Sorcier qui utilise la Discipline \sands{} que vous désignez comme étant votre Hiérophante. Il doit être indiqué sur votre liste d'armée. Le Hiérophante et toutes les figurines de son unité gagnent la règle \regeneration{6}.
+
+\closearmywiderules
+
+
+
+
+
+
+
+
+\vspace*{1.5cm}
+\startarmyspecialrules
+
+\armyspecialruleentry{\dusttodust{}}
+
+À la fin de n'importe quelle phase durant laquelle le Hiérophante est retiré du jeu en tant que perte, toute unité de l'armée qui possède au moins une figurine avec la règle \dusttodust{} doit faire un test de Commandement. Si le test échoue, l'unité subit un nombre de blessures équivalent à la différence entre le résultat obtenu et la valeur de Commandement du test, sans aucune sauvegarde autorisée. Ces blessures sont réparties comme pour la règle \unstable{}, mais ne peuvent pas être assignées à une figurine n'ayant pas la règle \dusttodust{}. Le montant de blessures est réduit de un si l'unité est à portée de la règle \holdyourground{}.
+
+À la fin du Tour de Joueur suivant la mort du Hiérophante, un nouveau Hiérophante peut être choisi. Pour ce faire, vous devez nommer un autre Personnage éligible, c'est à dire un Sorcier utilisant la Discipline \sands{}. Ce Personnage est le nouveau Hiérophante.
+
+Au début de chacun de vos Tours de Joueur sans nouveau Hiérophante, toute unité qui possède au moins une figurine avec la règle \dusttodust{} doit faire un nouveau test de Commandement, et subir des blessures comme décrit ci-dessus.
+
+\armyspecialruleentry{\undeadconstruct{}}
+
+La figurine gagne les règles \dusttodust{} et \undead{}. Par ailleurs, une unité subit une blessure de moins lors de l'application de ces règles si au moins la moitié des figurines de l'unité possède la règle \undeadconstruct{}.
+
+\armyspecialruleentry{\undyingwill{}}
+
+Au début de n'importe quelle Phase de Corps à Corps, le Personnage peut conférer la valeur non modifiée de sa Capacité de Combat à toutes les figurines avec la règle \undead{} de son unité. S'il est monté sur une \largetarget{}, il peut à la place décider de conférer ce bonus à une unité alliée avec la règle \undead{} à moins de \distance{6}, à moins qu'il ne soit lui-même engagé au corps à corps. Dans ce dernier cas il ne peut conférer ce bonus qu'à une unité \undead{} engagée au corps à corps avec la même unité ennemie. Dans tous les cas, l'effet dure jusqu'à la fin de cette phase.
+
+\armyspecialruleentry{\necromanticaura{}}
+
+Toutes les unités alliées dans un rayon de \distance{6} d'une ou plusieurs figurines avec cette règle réduisent le nombre de blessures qu'elle subissent par les règles \dusttodust{} et \unstable{} de 1. Les figurines avec la règle \necromanticaura{} ne peuvent pas en bénéficier elles-mêmes.
+
+\armyspecialruleentry{\mummyscurse{}}
+
+Quand la figurine est retirée de la partie, la figurine qui lui a causé la blessure fatale subit une touche de Force 6 avec la règle \armourpiercing{6}. Si plusieurs figurines sont impliquées dans cette dernière blessure, déterminez aléatoirement qui est touché.
+
+\armyspecialruleentry{\undergroundambush{}}
+
+L'unité suit la règle \ambush{}. Cependant, au lieu d'entrer sur le champ de bataille à partir d'un bord de table, elle apparait à un endroit appelé le Point Souterrain. Au moment de le déterminer, le propriétaire commence par désigner un point à plus de \distance{3} de toute unité ennemie et à plus de \distance{0,5} de tout Terrain Infranchissable. Faites dévier ce point de \distance{2D6} pour obtenir le point souterrain. L'unité est alors placée avec le front du premier rang ou du rang arrière en contact avec le point souterrain. Si le point se trouve sous une unité ennemie, placez à la place l'unité embusquée en contact socle à socle avec le front avant de cette unité, en maximisant les figurines en contact comme en cas de charge. L'unité qui vient d'arriver est considérée comme ayant chargé et aucune réaction de charge ne peut être déclarée. S'il n'est pas possible de placer l'unité embusquée, considérez que le jet d'\ambush{} est raté et relancez le dé au prochain tour.
+
+\closearmyspecialrules
+
+
+
+
+
+
+
+
+
+\vspace*{1.5cm}
+\startarmyarmoury
+
+\startitemlistonecol
+
+\listitemonecol{\aspenbow} Arme de Tir. \range{24}, Force 3, \volleyfire{}. Cette arme ignore tous les modificateurs pour toucher au tir.
+
+\listitemonecol{\greataspenbow} Arme de Tir. \range{36}, Force 5, \volleyfire{}. Cette arme ignore tous les modificateurs pour toucher au tir. Compte comme une \hw{} avec -1 en Force au Corps à Corps.
+
+\enditemlistonecol
+
+\closearmyarmoury
+
+
+
+
+
+
+
+\startarmynewsection{\monarchsofundead}
+
+\spaceaftersection{}
+
+\begin{center}
+\noindent Ces options représentent des formes alternatives de l'armée que l'on peut rencontrer dans le vaste monde. Un \pharaoh{} peut décider de commander une des deux forces suivantes plutôt qu'une armée classique des Dynasties Immortelles.
+\end{center}
+
+\begin{multicols}{2}\raggedcolumns
+
+\begin{center}\armynewsubsection{\commanderoftheterracottaarmy}\end{center} %M% vérifier les accords
+
+\begin{itemize}[label={-}, leftmargin=*]
+\item Tous les \skeletons{}, \skeletonarchers{}, la \skeletoncavalry{} et la \necropolisguard{} \textbf{doivent} être améliorés au coût de \pts{3}\permodel{} pour gagner +1 en Endurance, -1 en Initiative et la règle \undeadconstruct{}.
+
+\item Une unité de \necropolisguard{} ne peut pas contenir plus de \textbf{30} figurines.
+
+\item Toutes les autres unités n'ayant pas déjà la règle \undeadconstruct{}, y-compris les Personnages, \textbf{doivent} être améliorés au coût de \pts{15}\permodel{} pour gagner +1 en Endurance, -1 en Initiative et la règle \undeadconstruct{}. Elles perdent la règle \flammable{} si elles l'avaient.
+
+\item Une unité de \skeletonchariots{} ne peut pas contenir plus de \textbf{6} figurines.
+
+\item La caractéristique \risen{} de toutes les figurines est fixée à 1.
+
+\item Les figurines non volantes qui possèdent la ou les règles \undergroundambush{} ou \lighttroops{} les perdent, et ne peuvent en aucun cas gagner ces règles.
+
+\item Les \greatvultures{}, \scarabswarms{} et \wingedreapers{} ne peuvent pas être pris dans cette armée.
+\end{itemize}
+
+\vspace*{\fill}\columnbreak
+
+\begin{center}\armynewsubsection{\lordofthebarrowlegion}\end{center}
+
+\begin{itemize}[label={-}, leftmargin=*]
+\item Les \skeletons{} et \skeletonarchers{} \textbf{doivent} prendre une \ha{} pour \pts{2}\permodel{}
+
+\item Les \skeletons{} peuvent échanger la \spear{} et le \shield{} contre une \halberd{} pour \pts{1}\permodel{}
+
+\item La \skeletoncavalry{} peut disposer d'une \lance{} pour \pts{3}\permodel{} et d'un \barding{} pour \pts{3}\permodel{}
+
+\item Les \skeletonchariots{} \textbf{doivent} prendre une \ha{} pour \pts{5}\permodel{} et peuvent prendre une \halberd{} pour \pts{5}\permodel{} Une unité de \skeletonchariots{} ne peut pas contenir plus de \textbf{7} figurines.
+
+\item La \necropolisguard{} doit prendre une \ha{} pour \pts{2}\permodel{} Une unité de \necropolisguard{} ne peut pas contenir plus de \textbf{35} figurines.
+
+\item Les \scarabswarms{} doivent gagner la règle \ethereal{} pour \pts{15}\permodel{} Une unité de \scarabswarms{} ne peut pas contenir plus de \textbf{4} figurines.
+
+\item La caractéristique \risen{} des figurines avec la règle \ethereal{} est fixée à 1.
+
+\item Les figurines de \monstrouscavalry{} ou avec la règle \largetarget{} ne peuvent pas être prises dans cette armée.
+
+\item Les figurines qui possèdent la ou les règles \undergroundambush{} ou \scout{} les perdent, et ne peuvent en aucun cas gagner ces règles.
+
+\item Les figurines non volantes qui possèdent une \ha{} et la règle \lighttroops{} perdent cette règle, et ne peuvent en aucun cas la regagner.
+\end{itemize}
+
+\vspace*{\fill}\end{multicols}
+
+\closearmynewsection
+
+
+
+
+
+
+
+
+\startarmymagicalitems
+
+\armymagicalweapons
+
+\startpricelist
+
+\pricelistitem{L'Éternel Vainqueur}{55}Figurine à pied uniquement.
+
+ Type : \halberd{}. Les attaques portées avec cette arme possèdent la règle \lethalstrike{}. Le porteur peut utiliser l'arme de deux manières : Attaque Ciblée ou Attaque Faucheuse. Choisissez au début de chaque Manche de Corps à Corps.
+ \begin{itemize}[label={-}]
+\item \textbf{Attaque Ciblée} : Les attaques portées avec cette arme gagnent la règle \multiplewounds{1D3}{}.
+\item \textbf{Attaque Faucheuse} : Toutes les attaques du porteur sont échangées contre une touche automatique à chaque figurine en contact socle à socle avec le porteur. Toutes les figurines qui peuvent effectuer une attaque de soutien contre le porteur subissent aussi une attaque qui touche sur 4+. Ces attaques suivent les règles normales de l'arme (\halberd{}, \lethalstrike{}).
+\end{itemize}
+%M% strike plutôt coup que attaque
+
+\pricelistitem{Fléau des Rois}{50/30} Type : \hw{}. Les attaques effectuées avec cette arme possèdent la règle \armourpiercing{1}. Chaque touche réussie avec cette arme occasionne deux touches.
+
+\endpricelist
+
+\armymagicalarmour
+
+\startpricelist
+
+\pricelistitem{Couronne des Pharaons}{45} Type : Aucun (Sauvegarde d'Armure 6+). Le porteur peut utiliser la règle \undyingwill{} sur une seule unité alliée à moins de \distance{6}. Si le porteur est engagé au corps à corps, il ne peut transférer sa Capacité de Combat non modifiée qu'à une unité avec la règle \undead{} alliée au corps à corps avec la même unité ennemie. De plus, vous pouvez choisir d'utiliser la règle \undyingwill{} durant la Phase de Tir en transférant sa Capacité de Tir à la place de sa Capacité de Combat. La règle \undyingwill{} ne peut être utilisée que lors d'une seule phase par Tour de Joueur. Si le porteur est monté sur une \largetarget{}, ajoutez \distance{6} à la portée de l'objet.
+
+\pricelistitem{Armure des Éternités}{35}Figurine à pied uniquement.
+
+Type : \platearmour{}. Le porteur gagne +1 Point de Vie.
+
+\endpricelist
+
+\armytalismans
+
+\startpricelist
+
+\pricelistitem{Broche Solaire}{15} Au début de chaque Manche de Corps à Corps, choisissez un élément de figurine en contact socle à socle avec le porteur. Il subit un malus de -1 sur sa caractéristique Attaque, jusqu'à un minimum de 1.
+
+\endpricelist
+
+\armyenchanteditems
+
+\startpricelist
+
+\pricelistitem{Masque de Mort de Teput}{35} Au début de chaque Manche de Corps à Corps, choisissez la règle \inspiringpresence{} ou \holdyourground{}. Les unités ennemies en contact socle à socle avec le porteur ne peuvent plus bénéficier de la règle choisie pour la durée de cette phase.
+%M% mortuaire ?
+
+\pricelistitem{Cape des Tempêtes de Sable}{30} L'unité du porteur gagne la règle \hardtarget{}.
+
+\pricelistitem{Char Solaire de Nephet-Râ}{25} Figurine sur \chariot{} uniquement.
+
+Les \impacthits{} causées par le \chariot{} du porteur et les Attaques de ses montures gagnent les règles \flamingattacks{} et \magicalattacks{} et sont résolues avec +1 en Force.
+
+\endpricelist
+
+\armyarcaneitems
+
+\startpricelist
+
+\pricelistitem{Livre des Morts}{50/35} La valeur de lancement des sorts de la Discipline \sands{} est réduite de 1 pour le porteur. De plus, l'Attribut de la Discipline \sands{} lancé par le porteur Ressuscite 1 PV supplémentaire sur la ou les unités ciblées qui ne sont ni des Personnages ni des Grandes Cibles.
+
+\endpricelist
+
+\armymagicalbanners
+
+\startpricelist
+
+\pricelistitem{Bannière des Ensablés}{65} Les figurines avec la règle \undergroundambush{} de l'armée peuvent ajouter +1 à leur jet d'\ambush{}. Signalez-le avant de lancer le dé. Si vous utilisez ce bonus, le point souterrain doit se trouver à moins de \distance{24} du porteur et ne dévie que de \distance{1D6}.
+
+\endpricelist
+
+\closearmymagicalitems
+
+
+
+
+
+
+
+
+%%% START OF THE ARMYLIST - Translators shouldn't have to edit it %%%
+
+%\input{UndyingDynasties_armylist.tex}
+
+
+%%% Quick Reference Sheet - AB_qrs.tex is automatic and shouldn't be edited %%%
+
+\quickrefsheettitle
+
+\input{../Layout/AB_qrs.tex}
+\bigskip
+
+%M% shooting table et risen table
+
+\restoregeometry
+
+\end{document}
+
