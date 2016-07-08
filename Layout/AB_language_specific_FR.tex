@@ -293,7 +293,8 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 \newcommand{\wizard}{Sorcier}
 \newcommand{\wizards}{Sorciers}
 
-\newcommand{\boundspell}[1]{Objet de Sort, Puissance #1}
+\newcommand{\boundspell}[1]{Objet de Sort\ifblank{#1}{}{, Puissance #1}}
+\newcommand{\boundspells}[1]{Objets de Sort\ifblank{#1}{}{, Puissance #1}}
 
 
 %%% Other rules %%%
