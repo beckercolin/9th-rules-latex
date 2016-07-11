@@ -449,6 +449,22 @@
 
 \newcommand{\alignment}[1]{\unitentry{#1}{\unitentryformat{\labels@alignment\spacebeforecolon{}:}\newline\textbf{#1}.}}
 
+
+%%% Dark Gods Alliance %%%
+
+\newcommand{\alliance}[1]{\unitentry{#1}{\unitentryformat{\labels@alliance\spacebeforecolon{}:}\newline\textbf{#1}.}}
+
+% Alliance options specific commands.
+\define@key{allianceoptions}{change}            {\def\allianceoptions@change{#1}}
+\define@key{allianceoptions}{lust}               {\def\allianceoptions@lust{#1}}
+\define@key{allianceoptions}{pestilence}      {\def\allianceoptions@pestilence{#1}}
+\define@key{allianceoptions}{wrath}         {\def\allianceoptions@wrath{#1}}
+\define@key{allianceoptions}{introsentence}         {\def\allianceoptions@introsentence{#1}}
+\newcommand{\defallianceoptions}{%
+	\setkeys{allianceoptions}{change=, lust=, pestilence=, wrath=, introsentence=,}%
+	\setkeys{allianceoptions}%
+}
+
 %%% Green Hide Race %%%
 
 \newcommand{\greenhideraceentry}[1]{\unitentry{#1}{\unitentryformat{\labels@greenhiderace\spacebeforecolon{}:}\newline\textbf{#1}.}}
@@ -727,6 +743,8 @@
 \define@key{unit}{magicpaths}{\def\unit@magicpaths{#1}}
 \define@key{unit}{equipment}{\def\unit@equipment{#1}}
 \define@key{unit}{alignment}{\def\unit@alignment{#1}}
+\define@key{unit}{alliance}{\def\unit@alliance{#1}}
+\define@key{unit}{allianceoptions}{\def\unit@allianceoptions{#1}}
 \define@key{unit}{greenhiderace}{\def\unit@greenhiderace{#1}}
 \define@key{unit}{weapons}{\def\unit@weapons{#1}}
 \define@key{unit}{armour}{\def\unit@armour{#1}}
@@ -801,7 +819,7 @@
 
 \newcommand{\defunit}{
 	\setkeys{unit}{%
-		notinQRS=, name=, QRSname=, profile=, cost=, invocation=, costpermodel=, maxmodels=, type=, unitsize=, basesize=, commonspecialrules=, commontype=, commonspecialrulesB=, commontypeB=, specialrules=, magiclevel=, magicpaths=, alignment=, greenhiderace=, equipment=, weapons=, armour=, wizardconclave=, unitequipment=, options=, mounts=, commandgroup=, unitrules=, additional=%
+		notinQRS=, name=, QRSname=, profile=, cost=, invocation=, costpermodel=, maxmodels=, type=, unitsize=, basesize=, commonspecialrules=, commontype=, commonspecialrulesB=, commontypeB=, specialrules=, magiclevel=, magicpaths=, alignment=, alliance=, allianceoptions=, greenhiderace=, equipment=, weapons=, armour=, wizardconclave=, unitequipment=, options=, mounts=, commandgroup=, unitrules=, additional=%
 	}%
 	\setkeys{unit}%
 }
@@ -841,6 +859,10 @@
 		\raggedcolumns
 		\vspace*{-0.3cm}{\setlength{\parskip}{0.3cm}
 		\expandafter\ifblank\expandafter{\unit@alignment}{}{\noindent\parbox{\columnwidth}{\alignment{\unit@alignment}}}
+
+		\expandafter\ifblank\expandafter{\unit@alliance}{}{\noindent\parbox{\columnwidth}{\alliance{\unit@alliance}}}
+		
+		\expandafter\ifblank\expandafter{\unit@allianceoptions}{}{\noindent\parbox{\columnwidth}{\expandafter\allianceoptions\expandafter{\unit@allianceoptions}}}
 		
 		\expandafter\ifblank\expandafter{\unit@greenhiderace}{}{\noindent\parbox{\columnwidth}{\greenhideraceentry{\unit@greenhiderace}}}
 		

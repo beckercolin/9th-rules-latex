@@ -244,6 +244,7 @@
 	basesize=50x100,
 	commontype=\predatorcommonrules{},
 	commonspecialrules={\bornpredator},
+	armour={\innatedefence{3}},
 	specialrules={\apexpredator{},\multiplewounds{1D3}{},\swiftstride},
 	unitrules={\unitrule{\apexpredator}{\apexpredatorrule}},
 }
@@ -358,12 +359,12 @@
 	additional={%
 		\def\tempoptions{
 			\caimansoption{}=\permodel{}<50,
+			\poisonedattacks{} (\closecombatonly{})=\permodel{}<1,
 			\onechoiceonly{
 				\skirmisheroption{}=\permodel{}<2,
 				\replacejavelinforpoisonedjavelin{}=\permodel{}<2,
 			},
 			\replacejavelinandshieldforshortbow{}=\free{},
-			\poisonedattacks{} (\closecombatonly{})=\permodel{}<2,
 		}
 		\vspace*{0.2cm}
 		\begin{center}\begin{minipage}{10cm}\options{\tempoptions}\end{minipage}\end{center}
@@ -465,6 +466,7 @@
 \showunit{
 	name={\caimans},
 	QRSname={\caiman},
+	cost=105,
 	profile={< 6 3 - 5 4 3 2 3 7},
 	type=\monstrousinfantry{},
 	basesize=40x40,
@@ -596,6 +598,8 @@
 	type=\monstrousbeast{},
 	basesize=40x40,
 	unitsize=1,
+	maxmodels=2,
+	costpermodel=60,
 	commontype=\reptiliancommonrules{},
 	commonspecialrules={\coldblooded},
 	specialrules={\skirmisher{},\strider{\water}},

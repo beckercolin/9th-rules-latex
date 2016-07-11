@@ -1,0 +1,637 @@
+\input{../Layout/AB_layout.tex}
+
+\renewcommand{\labels@magicalitems}{Objets démoniaques}
+\renewcommand{\labels@magicalweapons}{Armes démoniaques}
+\renewcommand{\labels@magicalarmour}{Armures démoniaques}
+\renewcommand{\labels@talismans}{Talismans démoniaques}
+\renewcommand{\labels@enchanteditems}{Objets enchantés démoniaques}
+\renewcommand{\labels@arcaneitems}{Objets cabalistiques démoniaques}
+
+\newcommand{\booktitle}{Légions Démoniaques}
+\newcommand{\version}{0.99.9}
+\newcommand{\frenchversion}{2.0}
+\newcommand{\booklogo}{pics/logo_big_DL.png}
+
+% Army wide rules
+
+\newcommand{\monotheistarmybonus}{Armée Monothéiste}
+
+% Army special rules
+
+\newcommand{\daemonofthedarkgods}{Démon des Dieux Sombres}
+\newcommand{\daemonoftruechaos}{\truechaos}
+\newcommand{\daemonofchange}{\dchange}
+\newcommand{\daemonoflust}{\dlust}
+\newcommand{\daemonofpestilence}{\pestilence}
+\newcommand{\daemonofwrath}{\wrath}
+\newcommand{\aspect}{Aspect}
+\newcommand{\aspects}{Aspects}
+\newcommand{\supremeaspect}{Aspect Suprême}
+\newcommand{\supremeaspects}{Aspects Suprêmes}
+\newcommand{\farseeing}{Vision Lointaine}
+\newcommand{\clawedcaress}{Caresse Lacérante}
+\newcommand{\contamination}{Contagion}
+\newcommand{\onslaught}{Assaut Inexorable}
+\newcommand{\powervortex}{Vortex de Puissance}
+\newcommand{\danceofdeath}{Danse de la Mort}
+\newcommand{\bloatedputrefaction}{Putréfaction Boursoufflée}
+\newcommand{\eternalfury}{Fureur Éternelle}
+
+% Army common type special rules
+
+\newcommand{\daemoncommonrules}{Règles Spéciales des Démons}
+
+% Armoury
+
+\newcommand{\firebolts}{Éclairs de Feu}
+\newcommand{\barbedclaws}{Pinces Barbelées}
+\newcommand{\elusive}{Insaisissable}
+\newcommand{\trailofmucus}{Traînée de Mucus}
+\newcommand{\bloodsword}{Épée de Sang}
+\newcommand{\hellblade}{Lame Démoniaque}
+
+% Spells
+
+\newcommand{\changesignature}{Feu d’Azur}
+\newcommand{\changespellone}{Bûcher Carmin}
+\newcommand{\changespelltwo}{Éclair Fluctuant}
+\newcommand{\lustspellthree}{Hystérie}
+\newcommand{\diseasespelltwo}{Bénédiction Infecte}
+
+% Other rules
+
+\newcommand{\wellofpower}{Puits de Puissance}
+\newcommand{\firestorm}{Déluge de Feu}
+\newcommand{\slashing}{Mille Coupures}
+\newcommand{\hellishreaper}{Faucheur Démoniaque}
+\newcommand{\hellishbreath}{Souffle Démoniaque}
+\newcommand{\hellishbombard}{Bombarde Démoniaque}
+\newcommand{\hellishbolt}{Trait Démoniaque}
+\newcommand{\searingfirestorm}{Déluge de Feu Dévorant}
+\newcommand{\auraofecstasy}{Exhalaisons Extatiques}
+\newcommand{\soulreaper}{Moissonneur d’Âme}
+\newcommand{\incinerator}{Incinérateur}
+\newcommand{\brasscannon}{Canon d'Airain}
+\newcommand{\bloodfeast}{Orgie Sanglante}
+
+%%% Names
+
+% Characters
+
+\newcommand{\daemonprince}{Prince Démon}
+\newcommand{\weaverofchange}{Tisseur du Changement}
+\newcommand{\courtesanoflust}{Courtisane de la Luxure}
+\newcommand{\fatherofpestilence}{Patriarche de la Pestilence}
+\newcommand{\fatherofpestilenceSHORT}{Patriarche de la Pest.}
+\newcommand{\scourgeofwrath}{Fléau du Courroux}
+\newcommand{\harbingerofchange}{Héraut du Changement}
+\newcommand{\harbingeroflust}{Héraut de la Luxure}
+\newcommand{\harbingerofpestilence}{Héraut de la Pestilence}
+\newcommand{\harbingerofwrath}{Héraut du Courroux}
+
+% Core
+
+\newcommand{\horror}{Horreur}
+\newcommand{\horrors}{Horreurs}
+\newcommand{\siren}{Sirène}
+\newcommand{\sirens}{Sirènes}
+\newcommand{\tallyman}{Spoliateur}
+\newcommand{\tallymen}{Spoliateurs}
+\newcommand{\slaughterer}{Massacreurs}
+\newcommand{\slaughterers}{Massacreurs}
+
+
+% Special
+
+\newcommand{\furie}{Furie}
+\newcommand{\furies}{Furies}
+\newcommand{\igniter}{Embraseur}
+\newcommand{\igniters}{Embraseurs}
+\newcommand{\skyserpent}{Ophidien Volant}
+\newcommand{\skyserpents}{Ophidien Volants}
+\newcommand{\mountedsiren}{Sirène Montée}
+\newcommand{\mountedsirens}{Sirènes Montées}
+\newcommand{\sirenchariot}{Char des Sirènes}
+\newcommand{\claudedfiend}{Démon Griffu}
+\newcommand{\claudedfiends}{Démons Griffus}
+\newcommand{\pestilentbeast}{Bête Pestilentielle}
+\newcommand{\pestilentbeasts}{Bêtes Pestilentielles}
+\newcommand{\plagueling}{Bambin Pesteux}
+\newcommand{\plaguelings}{Bambins Pesteux}
+\newcommand{\hellhound}{Molosse Démoniaque}
+\newcommand{\hellhounds}{Molosses Démoniaques}
+\newcommand{\crushercavalry}{Broyeurs Montés}
+\newcommand{\crushercavalrySING}{Broyeur Monté}
+
+% Rare
+
+\newcommand{\daemonengine}{Machine Démoniaque}
+\newcommand{\blazingchariot}{Char Flamboyant}
+\newcommand{\shrineoftemptation}{Autel de la Tentation}
+\newcommand{\carnalchariot}{Attelage Charnel}
+\newcommand{\blightflies}{Mouches Infectieuses}
+\newcommand{\bloodchariot}{Char Sanglant}
+\newcommand{\altarofslaughter}{Autel du Massacre}
+
+% Mounts
+
+\newcommand{\discofchange}{Disque du Changement}
+\newcommand{\steedoflust}{Coursier de la Luxure}
+\newcommand{\pestilentpalanquin}{Palanquin Pestilentiel}
+\newcommand{\blightfly}{Mouche Infectieuse}
+\newcommand{\crusher}{Broyeur}
+
+% Short names and multiprofiles names
+
+\newcommand{\steed}{Coursier}
+\newcommand{\rider}{Cavalier}
+\newcommand{\exaltedigniter}{Embraseur Exalté}
+\newcommand{\temptress}{Tentatrice}
+\newcommand{\oracle}{Oracle}
+\newcommand{\crew}{Équipage}
+\newcommand{\altarofblood}{Autel de Sang}
+\newcommand{\doombringer}{Émissaire de la Ruine}
+
+% Alliance layout
+
+\newcommand{\alliancesidepic}[1]{%
+\begin{minipage}[c][][b]{0.16\textwidth}
+\includegraphics[width=\textwidth]{pics/#1}
+\end{minipage}%
+}
+\newcommand{\alliancestartsidetext}[1]{%
+\begin{minipage}[c]{0.78\textwidth}
+\noindent\textbf{#1}\vspace{5pt}\newline
+}
+
+\newcommand{\allianceclosesidetext}{%
+\end{minipage}
+}
+
+\newcommand{\spacebetweenalliance}{\vspace{0.5cm}}
+
+% Profile wording
+
+\newcommand{\mayreplacedaemonoftruechaoswith}{Remplacer l'allégeance au \truechaos{} par}
+\newcommand{\daemonicitems}{Objets Démoniaques}
+\newcommand{\heroesandtheirmounts}{Héros et leurs Montures}
+\newcommand{\seeblazingchariotrareunit}{(voir l'Unité Rare \blazingchariot{})}
+\newcommand{\ifthegeneralbelongstothesamedarkgodmaytake}{\optionschoice{Si le Général est de même affiliation{,} peut prendre :}}
+\newcommand{\mayreplacebloodswordwithhellbladeandinnatedefence}{Remplacer l'\bloodsword{} par la \hellblade{} et \innatedefence{5}}
+\newcommand{\inamonotheistarmymaytake}{\optionschoice{Si c'est une Armée Monothéiste il peut prendre :}}
+\newcommand{\mayreplacebloodswordwithhellbladerideronlyandinnatedefence}{Remplacer l'\bloodsword{} par la \hellblade{} \only{\rider{}} et \innatedefence{5}}
+\newcommand{\temptressmaytakealashoflust}{La \temptress{} peut prendre un \lashoflust{}}
+
+
+% Profile rules
+
+\newcommand{\daemonprincemagic}{%
+Si le \daemonprince{} est amélioré en Sorcier, les Disciplines qui lui sont accessibles dépendent de son allégeance. Un Démon du \wrath{} ne peut pas être amélioré en Sorcier.
+
+\renewcommand{\arraystretch}{2}
+\begin{center}\begin{tabular}{rl}
+\hline
+\textbf{\truechaos} & Discipline \alchemy{}, \heavens{}, \fire{}, \death{} ou \shadows{}. \tabularnewline
+\textbf{\dchange} & Discipline \alchemy{} ou \change{}. \tabularnewline
+\textbf{\dlust} & Discipline \lust{} ou \shadows{}. \tabularnewline
+\textbf{\pestilence} & Discipline \disease{} ou \death{}. \tabularnewline
+\hline
+\end{tabular}\end{center}
+\renewcommand{\arraystretch}{1.2}
+}
+
+\newcommand{\wellofpowerrule}{%
+Le Sorcier a un bonus de +1 supplémentaire pour lancer ses sorts.
+}
+
+\newcommand{\firestormrule}{%
+Arme de tir : \range{18}, Force 4, \multipleshots{1D3}, \quicktofire{}.
+}
+
+\newcommand{\slashingrule}{%
+\sweepingattack{}, l'unité ennemie subit 1D3 touche Force 3 par \skyserpent{} de l'unité.
+}
+
+\newcommand{\hellishreaperrule}{%
+\textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline
+\range{12}, Force 4, \armourpiercing{3}, \multipleshots{2D6}.
+}
+
+\newcommand{\hellishbreathrule}{%
+\textbf{\artilleryweapon} de type \textbf{\flamethrower}.\newline
+\range{8}, Force 4, \flamingattacks{}. Ignorez le malus de -1 sur le tableau des incidents d'\artilleryweapon.
+}
+
+\newcommand{\hellishbombardrule}{%
+\textbf{\artilleryweapon} de type \textbf{\catapult} (\distance{3}).\newline
+\range{12-60}, Force 3[9], [\multiplewounds{\ordnance}{}].
+}
+
+\newcommand{\hellishboltrule}{%
+\textbf{\artilleryweapon} de type \textbf{\boltthrower}.\newline
+\range{48}, Force 6, \multiplewounds{1D3}{}, \armourpiercing{6}.
+}
+
+\newcommand{\searingfirestormrule}{%
+Cette arme peut être employée de deux manières :
+\begin{itemize}[label={-}]
+	\item Comme une \textbf{\artilleryweapon} de type \textbf{\boltthrower} (\distance{2D6}).\newline
+		\range{24}, Force 4+1D3*, \multiplewounds{1D3}{}, \armourpiercing{6}.
+	\item Comme une \textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline
+		\range{12}, Force 2+1D3*, \multipleshots{6}.
+\end{itemize}
+* Lancez une fois par phase de tir (après que les jets pour toucher aient été lancés) et appliquez cette Force à toutes les touches faites par cette arme. 
+}
+
+\newcommand{\auraofecstasyrule}{%
+Toutes les figurines \daemonoflust{} engagées dans le même combat qu'une figurine avec cette règle (y compris elle-même) gagnent \lightningreflexes{}.
+}
+
+\newcommand{\soulreaperrule}{%
+Les \impacthits{} infligées par un \carnalchariot{} gagnent \armourpiercing{6}. De plus, l'\oracle{} gagne +1 Attaque pour chaque blessure non sauvegardée causée par les \ímpacthits{} du \chariot{}. Ces Attaques sont perdues à la fin de la manche de combat.
+}
+
+\newcommand{\incineratorrule}{%
+Une figurine équipée d'un \incinerator{} gagne \fireborn{}.\newline
+\textbf{\artilleryweapon} de type \textbf{\flamethrower}.\newline
+\range{8}, Force 4, \flamingattacks{}.
+}
+
+\newcommand{\brasscannonrule}{%
+Ne peut être pris que si le Général est un \daemonofwrath{}. \newline
+\textbf{\artilleryweapon} de type \textbf{\cannon}(\distance{1D6}).\newline
+\range{48}, Force 10, \flamingattacks{}, \multiplewounds{\ordnance}{}, \armourpiercing{2}, \multipleshots{2D6}.\newline
+Si le \bloodchariot{} ne fait que pivoter (et aucun autre mouvement), il ne subit pas de malus pour mouvement et tir.
+}
+
+\newcommand{\bloodfeastrule}{%
+À chaque fois que cette figurine effectue avec succès une charge, toutes les unités amies \daemonofwrath{} engagées dans le même combat qu'elle gagnent \frenzy jusqu'à la fin de cette phase de combat.
+}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+
+\input{../Layout/AB_titlepage.tex}
+
+\startarmywiderules
+
+\spaceaftersection{}
+
+En plus des restrictions habituelles, les unités Démoniaques autres que les Démons du \truechaos{} suivent les restrictions suivantes :
+
+\vspace*{0.2cm}
+\renewcommand{\arraystretch}{2}
+\begin{center}\begin{tabular}{rccc}
+\hline
+ & Limite de duplication & (Patrouille) & (Grande Armée) \tabularnewline
+ Base & \textbf{max. 2} & max. 1 & max. 4 \tabularnewline
+ Spéciale & \textbf{max. 2} & max. 1 & max. 4 \tabularnewline
+ Rare & \textbf{max. 1} & max. 1 & max. 2 \tabularnewline
+\hline
+\end{tabular}\end{center}
+\renewcommand{\arraystretch}{1.2}
+\vspace*{0.2cm}
+
+Ces restrictions sont levées pour les unités dont l'allégeance va au même Dieu Sombre que le Général. Les armées dont le Général est un Démon du \truechaos{} ignorent ces restrictions.
+
+\armyspecialruleentry{\monotheistarmybonus}
+
+Si toutes les unités de l'armée ont une allégeance au même Dieu Sombre, les restrictions ci-dessus ne s'appliquent plus. De plus, certaines unités obtiennent des options supplémentaires.
+
+\closearmywiderules
+
+
+
+
+
+
+
+
+
+\newpage
+\startarmyspecialrules
+
+\armyspecialruleentry{\daemonofthedarkgods}
+
+Les Démons sont différents en fonction de leur allégeance à un Dieu Sombre. Chaque Dieu offre à ses démons son propre bonus, décrit ci-dessous. Toutes les figurines d'une même unité doivent appartenir au même Dieu Sombre. Les Personnages ne peuvent rejoindre que des unités démoniaques servant le même Dieu Sombre. Les figurines ne peuvent bénéficier des règles \holdyourground{} et \inspiringpresence{} que si elles proviennent d'un Démon appartenant au même Dieu Sombre qu'elles-mêmes, ou par un Démon du \truechaos{}.
+
+\spacebetweenalliance{}
+
+\alliancesidepic{logo_big_DL.png}
+\hfill\alliancestartsidetext{Démon du \truechaos}
+Aucun effet supplémentaire.
+\allianceclosesidetext{}
+
+\spacebetweenalliance{}
+
+\alliancestartsidetext{Démon du \dchange}
+Le Démon peut gagner une des règles suivantes, affectant les Attaques de Corps à Corps et de Tir : \divineattacks{}, \flamingattacks{} ou \hellfire{}. L'effet doit être choisi au début de chaque Manche de Corps à Corps et avant de tirer. Toutes les figurines d'une même unité doivent choisir la même règle. Les Attaques Spéciales ne sont pas affectées. Si le Démon est un Sorcier il peut, immédiatement après avoir lancer les dés pour générer ses sorts, choisir de tous les relancer une fois.
+\allianceclosesidetext{}\hfill
+\alliancesidepic{change.png}
+
+\spacebetweenalliance{}
+
+\alliancesidepic{wrath.png}
+\hfill\alliancestartsidetext{Démon du \wrath}
+Le Démon gagne +1 en Force lors de la première Manche de chaque Corps à Corps.
+\allianceclosesidetext{}
+
+\spacebetweenalliance{}
+
+\alliancestartsidetext{Démon de la \dlust}
+Le Démon gagne la règle \armourpiercing{+1}.
+\allianceclosesidetext{}\hfill
+\alliancesidepic{lust.png}
+
+\spacebetweenalliance{}
+
+\alliancesidepic{pestilence.png}
+\hfill\alliancestartsidetext{Démon de la \pestilence}
+Le Démon gagne les règles \poisonedattacks{} et \regeneration{5}. Les \toxicattacks{} ont un malus de -1 pour blesser le Démon.
+\allianceclosesidetext{}
+
+
+
+
+
+\newpage
+
+\armyspecialruleentry{\aspects}
+
+Les Démons peuvent recevoir des bonus appelés \textbf{\aspects{}}. L'effet d'un \aspect{} dépend du Dieu Sombre associé.
+
+\vspace{0.2cm}
+Les Personnages peuvent toujours obtenir un \aspect{}. Les Unités de Base peuvent être améliorée avec un \aspect{} si elles appartiennent au même Dieu Sombre que le Général. Certaines Unités Spéciales et Rares ne peuvent gagner un \aspect{} que dans une Armée Monothéiste où l'allégeance de toutes les figurines est au même Dieu Sombre. Plusieurs itérations d'un même \aspect{} n'apporte rien de plus que l'\aspect{} seul.
+
+\vspace{0.5cm}
+\renewcommand{\arraystretch}{2}
+\begin{center}\begin{tabular}{p{2.2cm}p{12cm}}
+\hline
+\textbf{\dchange} & \textbf{\farseeing}\vspace{3pt}\newline
+L'unité du porteur gagne \distance{6} de bonus de portée pour toutes ses Attaques de Tir qui utilise la Capacité de Tir. \tabularnewline
+\textbf{\wrath} & \textbf{\onslaught}\vspace{3pt}\newline
+L'unité du porteur gagne la règle \devastatingcharge{}. Les montures ne sont pas affectées. \tabularnewline
+\textbf{\dlust} & \textbf{\clawedcaress}\vspace{3pt}\newline
+L'unité du porteur gagne la règle \armourpiercing{+1}. \tabularnewline
+\textbf{\pestilence} & \textbf{\contamination}\vspace{3pt}\newline
+L'unité gagne la règle \poisonedattacks{}. Les attaques qui possèdent cette règle blessent automatiquement sur un jet naturel d'un point de moins : 6+ devient 5+, et 5+ devient 4+. \tabularnewline
+\hline
+\end{tabular}\end{center}
+
+\armyspecialruleentry{\supremeaspects}
+
+Les Personnages Démoniaques peuvent être amélioré avec l'\supremeaspect{} précisé dans leur profil.
+
+\vspace{0.5cm}
+\begin{center}\begin{tabular}{p{2.2cm}p{12cm}}
+\hline
+\textbf{\dchange} & \textbf{\powervortex}\vspace{3pt}\newline
+La Force des touches des sorts de la Discipline \change{} lancés par l'unité du porteur est augmentée de +1. \tabularnewline
+\textbf{\wrath} & \textbf{\eternalfury}\vspace{3pt}\newline
+L'unité du porteur gagne la règle \hatred{}. Les montures ne sont pas affectées. \tabularnewline
+\textbf{\dlust} & \textbf{\danceofdeath}\vspace{3pt}\newline
+L'unité du porteur gagne la règle \lightningreflexes{}. \tabularnewline
+\textbf{\pestilence} & \textbf{\bloatedputrefaction}\vspace{3pt}\newline
+L'unité du porteur gagne \regeneration{4}. \tabularnewline
+\hline
+\end{tabular}\end{center}
+\renewcommand{\arraystretch}{1.2}
+
+\closearmyspecialrules
+
+
+
+
+
+
+
+
+
+\newpage
+\startarmyarmoury
+
+\vspace*{-1.0cm}
+\armyspecialruleentry{Démons du \dchange}
+
+\startitemlistonecol
+
+\listitemonecol{\firebolts} Arme de Tir. \range{24}, \Strength{} 3, \quicktofire{}.
+
+\enditemlistonecol
+
+\armyspecialruleentry{Démons du \wrath}
+
+\startitemlistonecol
+
+\listitemonecol{\bloodsword} Arme de Corps à Corps. Type : \hw{}. Les attaques portées avec cette arme ont la règle \lethalstrike{}.
+
+\listitemonecol{\hellblade} Arme de Corps à Corps. Type : \hw{}. Les attaques portées avec cette arme ont toujours une Force de 5. Cette valeur ne peut jamais être modifiée.
+
+\enditemlistonecol
+
+\armyspecialruleentry{Démons de la \dlust}
+
+\startitemlistonecol
+
+\listitemonecol{\barbedclaws} Arme de Corps à Corps. Type : \hw{}. Les attaques portées avec cette arme ont un bonus de +1 pour blesser au Corps à Corps.
+
+\listitemonecol{\elusive} Les unités comprenant uniquement des figurines avec cette règle peuvent déclarer une Fuite en réponse à une charge même si elles possèdent la règle \immunetopsychology{}.
+
+\enditemlistonecol
+
+\armyspecialruleentry{Démons de la \pestilence}
+
+\startitemlistonecol
+
+\listitemonecol{\trailofmucus} Les unités ennemies n'obtiennent pas de bonus au résultat de combat pour avoir engagé le flanc ou l'arrière d'une unité comprenant au moins une figurine avec cette règle.
+
+\enditemlistonecol
+
+\closearmyarmoury
+
+
+
+
+
+
+
+
+\startarmynewsection{Objets démoniaques}
+
+\spaceaftersection{}
+
+Les Légions Démoniaques possèdent leurs propres Objets Magiques appelés Objets Démoniaques. Les Objets Démoniaques suivent les mêmes restrictions que leurs équivalents Magiques, à l'exception que les objets limités aux porteurs appartenant à un Dieu Sombre donné peuvent être dupliqués au sein d'une même armée. Tous les Objets Magiques de l'armée doivent être choisis dans la liste ci-dessous des Objets Démoniaques, à l'exception des Bannières Magiques qui peuvent provenir des Objets Magiques du Livre de Règle. 
+
+\begin{multicols}{2}\raggedcolumns
+
+\subtitle{Armes Démoniaques}\vspace{5pt}
+
+\startpricelist
+
+\pricelistitem{Lame Éternelle}{50/35}Type : \hw{}. Le porteur gagne +1 en Capacité de Combat, Force et Attaque lorsqu'il est engagé au Corps à Corps.
+
+\pricelistitem{Épée Mortelle}{40/30}Type : \hw{}. Les attaques portées avec cette arme ont les règles \lethalstrike{} et \multiplewounds{2}{\monster{}, \riddenmonster}.
+
+\pricelistitem{Touché Acide}{40/30}Type : \hw{}. À chaque Manche de Corps à Corps, toutes les figurines ennemies en contact avec le porteur subissent une touche avec la règle \toxicattacks{} à Initiative 10.
+
+\pricelistitem{Fouet de Luxure}{40/25}Démons de la \textbf{\dlust} uniquement.
+
+Type : Arme de Tir. \range{12}, Force de l'utilisateur, \multipleshots{2D6}, \quicktofire{}. Ne peut pas être utilisée après une Marche Forcée lors du même Tour de Joueur.
+
+\pricelistitem{Baguette d’Éther}{40/15}Démons du \textbf{\dchange} uniquement.
+
+Type : \hw{}. À chaque fois que le porteur lance ou dissipe un sort avec succès, lancez 1D6. Sur 4+, le porteur gagne un marqueur Charge. Pour chaque marqueur Charge, le porteur gagne +1 Attaque lorsqu'il attaque cette arme, de façon permanente.
+
+\pricelistitem{Lame d'Affliction}{20}Type : \hw{}. Le porteur gagne la règle \fear{} et les attaques qu'il porte avec cette arme ont la règle \divineattacks{}.
+
+\pricelistitem{Cherche-Cœur}{20/10}Type : \hw{}. Le porteur peut relancer tous les \result{1} pour toucher au Corps à Corps avec cette arme.
+
+\pricelistitem{Trident du Tourment}{15}Type : \hw{}. Le porteur gagne +1 en Initiative et en Capacité de Combat quand il combat avec cette arme au Corps à Corps, et les attaques qu'il porte avec cette arme ont la règle \armourpiercing{1}.
+
+\endpricelist
+
+\columnbreak
+
+\subtitle{Talismans démoniaques}\vspace{5pt}
+
+\startpricelist
+
+\pricelistitem{Aura Nauséeuse}{50}Démons de la \textbf{\pestilence} uniquement.
+
+L'Initiative des unités ennemies en contact socle à socle avec le porteur passe à 1 lors de la Phase de Corps à Corps.
+
+\pricelistitem{Entraves de la Réalité}{40}Le porteur gagne la règle \regeneration{4}.
+
+\pricelistitem{Collier d’Airain}{35}Démons du \textbf{\wrath} uniquement.
+
+Le porteur gagne la règle \magicresistance{3}.
+
+\pricelistitem{Manteau de Fer}{35}Le porteur gagne la règle \innatedefence{5}.
+
+\pricelistitem{Voile d'Ombre}{35}L'unité du porteur gagne les règles \hardtarget{} et \magicresistance{1}.
+
+\pricelistitem{Chaînes de Béatitude}{35/25}Démons de la \textbf{\dlust} uniquement.
+
+Les figurines ennemies attaquant le porteur voient leur caractéristique de Capacité de Combat divisée par deux, arrondie au supérieur, pour le toucher.
+
+\pricelistitem{Œil du Tisseur}{10}Une seule utilisation. Peut être activé lorsque le porteur rate un jet de \wardsave{}. Ce jet peut être relancé.
+
+\endpricelist
+
+\end{multicols}
+
+\newpage
+\begin{multicols}{2}\raggedcolumns
+
+\subtitle{Objets enchantés démoniaques}\vspace{5pt}
+
+\startpricelist
+
+\pricelistitem{Ailes Flamboyantes}{35}Démons du \textbf{\dchange} uniquement.
+
+Le porteur gagne la règle \fly{8}.
+
+\pricelistitem{Corne de Damnation}{35}Les unités ennemies au contact socle à socle avec le porteur ne peuvent pas bénéficier de la règle \holdyourground{}.
+
+\pricelistitem{Corne d'Obsidienne}{35}Une seule utilisation. Au lieu de tenter une dissipation, utilisez cet objet. Le sort est immédiatement dissipé. Cet objet ne peut être pris que si l'armée ne comprend aucun Sorcier.
+
+\pricelistitem{Couronne Démoniaque}{25}Le porteur gagne +1 en Commandement.
+
+\pricelistitem{Gemme-Portail}{20}Toutes les unités alliées à moins de \distance{6} subissent une blessure en moins à cause des tests ratés d'\daemonicinstability{}.
+
+\pricelistitem{Signe du Changement}{20}Démons du \textbf{\dchange} uniquement, \oneofakind{}.
+
+\boundspell{3}. \changespelltwo{} (Discipline \change{}).
+
+\pricelistitem{Signe de la Luxure}{20}Démons de la \textbf{\dlust} uniquement, \oneofakind{}.
+
+\boundspell{3}. \lustspellthree{} (Discipline \lust{}).
+
+\pricelistitem{Signe de la Pestilence}{20}Démons de la \textbf{\pestilence} uniquement, \oneofakind{}.
+
+\boundspell{3}. \diseasespelltwo{} (Discipline \disease{}).
+
+\pricelistitem{Orbe Noire}{15}Les tentatives de lancement de sorts de la Discipline \light{} des Sorciers ennemis subissent un malus de -2 sur leurs jets.
+
+\pricelistitem{Élixir des Âmes}{10}Une seule utilisation. Peut être activé au début d'une Étape des Autres Mouvements. Le porteur gagne +2 en Mouvement pour cette phase.
+
+\endpricelist
+
+\subtitle{Objets cabalistiques démoniaques}\vspace{5pt}
+
+\startpricelist
+
+\pricelistitem{Miroir du Changement}{40}Démons du \textbf{\dchange} uniquement.
+
+Au début de chaque Phase de Magie alliée, le porteur peut choisir un Sorcier ennemi en ligne de vue à moins de \distance{18}. Pour la durée de cette phase, il peut lancer les sorts ne provenant pas d'\boundspell{} que connaît le Sorcier choisi à la place de ses propres sorts. Aucun sort pouvant créer des unités ou Ressusciter des figurines ne peut être lancé de cette façon.
+
+\pricelistitem{Septième Sceau}{35}Une seule utilisation. Au lieu de tenter une dissipation, utilisez cet objet. Le sort est automatiquement dissipé.
+
+\pricelistitem{Bâton Fixe-Esprit}{30}Lorsque le porteur subit un Fiasco, il compte comme ayant lancé 1 Dé de Magie de moins.
+
+\pricelistitem{Magnétite de Sorcier}{30}Une seule utilisation. Immédiatement après avoir tenté un lancement ou une dissipation de sort, le porteur peut augmenter le résultat de son jet de 1D6. Cela ne compte pas comme un nouveau Dé de Pouvoir ou de Dissipation. C'est une exception à la règle des modificateurs magiques.
+
+\pricelistitem{Parchemins du Huitième Pacte}{25}Démons du \textbf{\dchange} uniquement.
+
+Le porteur peut choisir de générer ses sorts depuis n'importe laquelle des Disciplines Communes, sauf la Discipline \light{}. Votre choix doit toujours être indiqué sur votre liste d'armée.
+
+\pricelistitem{Crâne de Cacophrax}{25/15}Le porteur génère un sort supplémentaire.
+
+\endpricelist
+
+\end{multicols}
+\closearmynewsection
+
+
+
+
+
+
+
+
+%%% START OF THE ARMYLIST - Translators shouldn't have to edit it %%%
+
+\input{DaemonLegions_armylist.tex}
+
+
+%%% Quick Reference Sheet - AB_qrs.tex is automatic and shouldn't be edited %%%
+
+\quickrefsheettitle
+
+\input{../Layout/AB_qrs.tex}
+\bigskip
+\begin{center}
+\noindent{\antiquefont\Largefontsize\textbf{Armes de Tir des Démons}}
+\medskip
+
+%chariot crews
+
+%\rowcolors{1}{white}{black!10}
+%\noindent\begin{tabular}{lcccccc}
+%\textbf{Nom} & \textbf{Artillerie} & \textbf{Portée} & \textbf{\labels@S{}} & \textbf{\multipleshots{}} & \textbf{\multiplewounds{}} & \textbf{\armourpiercing{}} \tabularnewline
+%\firebolts{} & - & \distance{24} & 3 & - & - & - \tabularnewline
+%\firestorm{} & - & \distance{18} & 4 & 1D3 & - & - \tabularnewline
+%\hellishreaper{} & \volleygun{} & \distance{12} & 4 & 2D6 & - & 3 \tabularnewline
+%\hellishbreath{} & \flamethrower{} & \distance{8} & 4 & - & - & - \tabularnewline
+%\hellishbombard{} & \catapult{} (\distance{3})& \distance{12-60} & 3[9] & - & [\ordnance{}] & - \tabularnewline
+%\hellishbolt{} & \boltthrower{} & \distance{48} & 6 & - & 1D3 & 6 \tabularnewline
+%\searingfirestorm{} (1) & \boltthrower{} & \distance{24} & 4+1D3 & - & 1D3 & 6 \tabularnewline
+%\searingfirestorm{} (2) & \volleygun{} & \distance{24} & 2+1D3 & 6 & - & - \tabularnewline
+%\incinerator{} & \flamethrower{} & \distance{8} & 4 & - & - & - \tabularnewline
+%{} & \cannon{} (\distance{1D6}) & \distance{48} & 10 & - & \ordnance{} & 2 \tabularnewline
+%\end{tabular}
+
+\medskip
+\end{center}
+
+\restoregeometry
+
+\end{document}

@@ -1,0 +1,924 @@
+
+%%% v0.99.9
+
+\armylist
+
+\lordstitle
+
+\showunit{
+	name={\daemonprince},
+	cost=245,
+	profile={< 8 9 5 6 5 4 8 5 9},
+	type=\monster{},
+	basesize=50x50,
+	unitsize=1,
+	alliance={\daemonoftruechaos},
+	allianceoptions={introsentence=\mayreplacedaemonoftruechaoswith{}, change=20, lust=\free{}, pestilence=\free{}, wrath=\free{}},
+	commontype=\daemoncommonrules{},
+	commonspecialrules={\daemonicinstability{},\otherworldly},
+	specialrules={\stubborn},
+	options={
+		\magiclevelchoice{
+			\magiclevel{1}=40,
+			\magiclevel{2}=65,
+			\magiclevel{3}=130,
+			\magiclevel{4}=160,
+		},
+		\daemonicitems{}=\upto{}<100,
+		\fly{8}=40,
+		\ha{}=25,
+		\platearmour{}=55,
+	},
+	additional={%
+		\vspace*{0.3cm}\unitentryformat{\labels@magic\spacebeforecolon{}:}\newline\noindent
+		\daemonprincemagic{}	
+	},
+}
+
+\showunit{
+	name={\weaverofchange},
+	cost=540,
+	profile={< 8 6 6 6 6 6 6 5 9},
+	type=\monster{},
+	basesize=50x100,
+	unitsize=1,
+	alliance={\daemonofchange},
+	commontype=\daemoncommonrules{},
+	commonspecialrules={\daemonicinstability{},\otherworldly},
+	specialrules={\fly{8},\wellofpower},
+	magiclevel=4,
+	magicpaths={\alchemy{},\change},
+	unitrules={\unitrule{\wellofpower}{\wellofpowerrule}},
+	armour={\innatedefence{5}},
+	options={
+		\daemonicitems{}=\upto{}<100,
+		\supremeaspect{}\spacebeforecolon{}: \powervortex{}=35,
+	},
+}
+
+\showunit{
+	name={\scourgeofwrath},
+	cost=450,
+	profile={< 8 10 10 6 6 6 9 7 9},
+	type=\monster{},
+	basesize=50x100,
+	unitsize=1,
+	alliance={\daemonofwrath},
+	commontype=\daemoncommonrules{},
+	commonspecialrules={\daemonicinstability{},\otherworldly},
+	specialrules={\fly{8},\magicresistance{2}},
+	armour={\ha},
+	options={
+		\daemonicitems{}=\upto{}<100,
+		\onechoiceonly{
+			\aspect\spacebeforecolon{}: \onslaught{}=10,
+			\supremeaspect\spacebeforecolon{}: \eternalfury{}=30,
+		},
+	},
+}
+
+\showunit{
+	name={\courtesanoflust},
+	cost=455,
+	profile={< 10 9 6 6 6 6 10 6 9},
+	type=\monster{},
+	basesize=50x100,
+	unitsize=1,
+	alliance={\daemonoflust},
+	commontype=\daemoncommonrules{},
+	commonspecialrules={\daemonicinstability{},\otherworldly},
+	specialrules={\swiftstride},
+	magiclevel=2,
+	magicpaths={\lust{},\shadows},
+	armour={\innatedefence{5}},
+	options={
+		\magiclevelchoice{
+			\magiclevel{3}=65,
+			\magiclevel{4}=95,
+		},
+		\daemonicitems{}=\upto{}<100,
+		\onechoiceonly{
+			\aspect\spacebeforecolon{}: \clawedcaress{}=15,
+			\supremeaspect\spacebeforecolon{}: \danceofdeath{}=35,
+		},
+	},
+}
+
+\showunit{
+	name={\fatherofpestilence},
+	QRSname={\fatherofpestilenceSHORT},
+	cost=475,
+	profile={< 6 6 3 6 7 7 4 5 9},
+	type=\monster{},
+	basesize=50x100,
+	unitsize=1,
+	alliance={\daemonofpestilence},
+	commontype=\daemoncommonrules{},
+	commonspecialrules={\daemonicinstability{},\otherworldly},
+	magiclevel=1,
+	magicpaths={\disease{},\death},
+	armour={\innatedefence{5}},
+	options={
+		\magiclevelchoice{
+			\magiclevel{2}=25,
+			\magiclevel{3}=90,
+			\magiclevel{4}=120,
+		},
+		\daemonicitems{}=\upto{}<100,
+		\onechoiceonly{
+			\aspect\spacebeforecolon{}: \contamination{}=20,
+			\supremeaspect\spacebeforecolon{}: \bloatedputrefaction{}=45,
+		},
+		\flail{}=20,
+	},
+}
+
+
+
+
+
+
+
+
+
+\def\logolocalpath{../Layout/pics/logo_hero.png}%
+\clearpage\bigtitle{\heroesandtheirmounts}%
+\renewcommand{\profilecategory}{\labels@heroes}%
+
+\showunit{
+	name={\harbingerofchange},
+	cost=100,
+	profile={< 4 3 4 3 3 2 3 2 8},
+	type=\infantry{},
+	basesize=25x25,
+	unitsize=1,
+	alliance={\daemonofchange},
+	commontype=\daemoncommonrules{},
+	commonspecialrules={\daemonicinstability{},\otherworldly},
+	magiclevel=1,
+	magicpaths={\alchemy{},\change},
+	weapons={\firebolts},
+	options={
+		\bsb{}=25,
+		\magiclevel{2}=25,
+		\daemonicitems{}=\upto{}<50,
+		\onechoiceonly{
+			\aspect\spacebeforecolon{}: \farseeing{}=15,
+			\supremeaspect\spacebeforecolon{}: \powervortex{}=45,
+		},
+	},
+	mounts={
+		\discofchange{}=20,
+		\blazingchariot{}=100,
+	},
+}
+
+\def\logolocalpath{../Layout/pics/logo_mount.png}%
+\renewcommand{\profilecategory}{\labels@mounts}%
+
+\showunit{
+	name={\discofchange},
+	profile={< 1 3 - 4 4 1 4 3 7},
+	type=\warbeast{},
+	basesize=50x50,
+	alliance={\daemonofchange},
+	commontype=\daemoncommonrules{},
+	commonspecialrules={\otherworldly},
+	specialrules={\fly{8}},
+	armour={\mountsprotection{6}},
+}
+
+\showunit{
+	notinQRS=yes,
+	name={\blazingchariot},
+	profile={ \chariot{}< - - - 4 4 4 - - -,
+			  \skyserpent{} (2)< 1 3 - 4 - - 4 3 7},
+	type=\chariot{},
+	basesize=50x100,
+	alliance={\daemonofchange},
+	commontype=\daemoncommonrules{},
+	commonspecialrules={\otherworldly},
+	armour={\mountsprotection{6}},
+	specialrules={\fly{8},\quicktofire},
+	weapons={\searingfirestorm{} \only{\chariot} \seeblazingchariotrareunit{}},
+}
+
+\def\logolocalpath{../Layout/pics/logo_hero.png}%
+\renewcommand{\profilecategory}{\labels@heroes}%
+
+\newpage
+\showunit{
+	name={\harbingerofwrath},
+	cost=95,
+	profile={< 5 7 2 5 4 2 6 3 8},
+	type=\infantry{},
+	basesize=25x25,
+	unitsize=1,
+	alliance={\daemonofwrath},
+	commontype=\daemoncommonrules{},
+	commonspecialrules={\daemonicinstability,\otherworldly},
+	specialrules={\magicresistance{1}},
+	weapons={\bloodsword},
+	armour={\innatedefence{6},\la},
+	options={
+		\bsb{}=25,
+		\daemonicitems{}=\upto{}<50,
+		\onechoiceonly{
+			\aspect\spacebeforecolon{}: \onslaught{}=15,
+			\supremeaspect\spacebeforecolon{}: \eternalfury{}=40,
+		},
+		\innatedefence{4}=20,
+	},
+	mounts={
+		\crusher{}=50,
+	},
+}
+
+\def\logolocalpath{../Layout/pics/logo_mount.png}%
+\renewcommand{\profilecategory}{\labels@mounts}%
+
+\showunit{
+	name={\crusher},
+	profile={< 7 5 - 5 4 3 2 3 7},
+	type=\monstrousbeast{},
+	basesize=50x75,
+	alliance={\daemonofwrath},
+	commontype=\daemoncommonrules{},
+	commonspecialrules={\otherworldly},
+	armour={\mountsprotection{6}},
+	specialrules={\fear},
+}
+
+\def\logolocalpath{../Layout/pics/logo_hero.png}%
+\renewcommand{\profilecategory}{\labels@heroes}%
+
+\newpage
+\showunit{
+	name={\harbingeroflust},
+	cost=95,
+	profile={< 6 7 5 4 3 2 7 4 8},
+	type=\infantry{},
+	basesize=25x25,
+	unitsize=1,
+	alliance={\daemonoflust},
+	commontype=\daemoncommonrules{},
+	commonspecialrules={\daemonicinstability{},\otherworldly},
+	specialrules={\distracting},
+	magicpaths={\lust{},\shadows},
+	options={
+		\bsb{}=25,
+		\magiclevelchoice{
+			\magiclevel{1}=40,
+			\magiclevel{2}=65,
+		},
+		\daemonicitems{}=\upto{}<50,
+		\onechoiceonly{
+			\aspect\spacebeforecolon{}: \clawedcaress{}=15,
+			\supremeaspect\spacebeforecolon{}: \danceofdeath{}=40,
+		},
+		\combatweapononechoice{
+			\pw{}=5,
+			\barbedclaws{}=5,
+		},
+	},
+	mounts={
+		\steedoflust{}=25,
+		\sirenchariot{}=70,
+	},
+}
+
+\def\logolocalpath{../Layout/pics/logo_mount.png}%
+\renewcommand{\profilecategory}{\labels@mounts}%
+
+\showunit{
+	name={\steedoflust},
+	profile={< 10 3 - 3 3 1 5 1 7},
+	type=\warbeast{},
+	basesize=25x50,
+	alliance={\daemonoflust},
+	commontype=\daemoncommonrules{},
+	commonspecialrules={\otherworldly},
+	specialrules={\fastcavalry{},\elusive{},\poisonedattacks},
+	armour={\mountsprotection{6}},
+}
+
+\showunit{
+	notinQRS=yes,
+	name={\sirenchariot},
+	profile={\chariot{}< - - - 5 4 4 - - -,
+			  \mountedsiren{} (1)< - 5 4 3 - - 5 2 7,
+			  \steed{} (2)< 10 3 - 3 - - 5 1 7},
+	type=\chariot{},
+	basesize=50x100,
+	alliance={\daemonoflust},
+	commontype=\daemoncommonrules{},
+	commonspecialrules={\otherworldly},
+	armour={\mountsprotection{6}},
+	specialrules={\impacthits{+1},\poisonedattacks{} \only{\steed}},
+}
+
+\def\logolocalpath{../Layout/pics/logo_hero.png}%
+\renewcommand{\profilecategory}{\labels@heroes}%
+
+\newpage
+\showunit{
+	name={\harbingerofpestilence},
+	cost=95,
+	profile={< 4 5 5 5 5 2 4 3 8},
+	type=\infantry{},
+	basesize=25x25,
+	unitsize=1,
+	alliance={\daemonofpestilence},
+	commontype=\daemoncommonrules{},
+	commonspecialrules={\daemonicinstability{},\otherworldly},
+	magicpaths={\disease{},\death},
+	options={
+		\bsb{}=25,
+		\magiclevelchoice{
+			\magiclevel{1}=40,
+			\magiclevel{2}=65,
+		},
+		\daemonicitems{}=\upto{}<50,
+		\onechoiceonly{
+			\aspect\spacebeforecolon{}: \contamination{}=40,
+			\supremeaspect\spacebeforecolon{}: \bloatedputrefaction{}=40,
+		},
+		\combatweapononechoice{
+			\flail{}=10,
+			\halberd{}=15,
+		},
+	},
+	mounts={
+		\blightfly{}=40,
+		\pestilentpalanquin{}=40,
+	},
+}
+
+\def\logolocalpath{../Layout/pics/logo_mount.png}%
+\renewcommand{\profilecategory}{\labels@mounts}%
+
+\showunit{
+	name={\blightfly},
+	profile={< 1 4 3 5 5 3 2 2 7},
+	type=\monstrousbeast{},
+	basesize=50x75,
+	alliance={\daemonofpestilence},
+	commontype=\daemoncommonrules{},
+	commonspecialrules={\otherworldly},
+	armour={\mountsprotection{6}},
+	specialrules={\fly{6},\fear},
+}
+
+\showunit{
+	name={\pestilentpalanquin},
+	profile={< 4 3 3 3 3 3 3 6 7},
+	type=\infantry{},
+	basesize=50x50,
+	alliance={\daemonofpestilence},
+	commontype=\daemoncommonrules{},
+	commonspecialrules={\otherworldly},
+	armour={\mountsprotection{6}},
+}
+
+
+
+
+
+
+
+
+
+
+\coreunitstitle
+
+%\showunit{
+%	name={\horrors},
+%	QRSname={\horror},
+%	cost=80,
+%	profile={ < 4 3 3 3 3 1 3 1 7},
+%	type=\infantry{},
+%	basesize=25x25,
+%	unitsize=10,
+%	maxmodels=40,
+%	costpermodel=8,
+%	alliance={\daemonofchange},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\unitrules{\horrorsmagic}{\horrorsmagicrule}},
+%	options={
+%		\firebolts=\permodel{}<2,
+%		\ifthegeneralbelongstothesamedarkgodmaytake{
+%			\farseeing{}=\permodel{}<1,
+%		},
+%	},
+%	commandgroup={champion=70, musician=10, banner=10, veteranstandardbearer=yessir}
+%}
+%
+%\showunit{
+%	name={\sirens},
+%	QRSname={\siren},
+%	cost=130,
+%	profile={ < 6 5 4 3 3 1 5 2 7},
+%	type=\infantry{},
+%	basesize=25x25,
+%	unitsize=15,
+%	maxmodels=35,
+%	costpermodel=11,
+%	alliance={\daemonoflust},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	options={
+%		\ifthegeneralbelongstothesamedarkgodmaytake{
+%			\clawedcaress{}=45,
+%		},
+%	},
+%	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
+%}
+%
+%\newpage
+%\showunit{
+%	name={\tallymen},
+%	QRSname={\tallyman},
+%	cost=100,
+%	profile={ < 4 3 3 4 4 1 2 1 7},
+%	type=\infantry{},
+%	basesize=25x25,
+%	unitsize=10,
+%	maxmodels=30,
+%	costpermodel=12,
+%	alliance={\daemonofpestilence},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	options={
+%		\onechoiceonly{
+%			\trailofmucus{}=\permodel{}<1,
+%			\parry{}=\pertwomodel{}<3,
+%		},
+%		\ifthegeneralbelongstothesamedarkgodmaytake{
+%			\contamination{}=\permodel{}<2,
+%		},
+%	},
+%	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
+%}
+%
+%\showunit{
+%	name={\slaughterers},
+%	QRSname={\slaughterer},
+%	cost=100,
+%	profile={ < 5 5 2 4 3 1 4 1 7},
+%	type=\infantry{},
+%	basesize=25x25,
+%	unitsize=10,
+%	maxmodels=30,
+%	costpermodel=13,
+%	alliance={\daemonofwrath},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\magicresistance{1}},
+%	weapons={\bloodsword{}},
+%	options={
+%		\mayreplacebloodswordwithhellbladeandinnatedefence{}=\permodel{}<3,								\ifthegeneralbelongstothesamedarkgodmaytake{
+%			\onslaught{}=\permodel{}<1,
+%		},
+%	},
+%	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
+%}
+
+
+
+
+
+
+
+
+\specialunitstitle
+
+%\showunit{
+%	name={\furies},
+%	QRSname={\furie},
+%	cost=70,
+%	profile={ < 4 3 - 4 3 1 4 1 2},
+%	type=\infantry{},
+%	basesize=25x25,
+%	unitsize=5,
+%	maxmodels=15,
+%	costpermodel=10,
+%	alliance={\daemonoftruechaos},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\fly{10}, \skirmishers},
+%	options={
+%		\mayreplacedaemonoftruechaoswithdaemonof{
+%			\dchange{}=\permodel{}<2,
+%			\dlust{}=\permodel{}<2,
+%			\pestilence{}=\permodel{}<2,
+%			\wrath{}=\permodel{}<3,
+%		},
+%	},
+%}
+%
+%\showunit{
+%	name={\igniters},
+%	QRSname={\igniter},
+%	cost=135,
+%	profile={ < 6 3 4 4 4 1 4 2 7},
+%	type=\infantry{},
+%	basesize=25x25,
+%	unitsize=5,
+%	maxmodels=8,
+%	costpermodel=25,
+%	alliance={\daemonofchange},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\skirmishers},
+%	weapons={\firestorm{}},
+%	options={
+%		\inamonotheistarmymaytake{
+%			\farseeing{}=\permodel{}<4,
+%		},
+%	},
+%	commandgroup={champion=10},
+%	additional={%
+%		\def\tempequipment{\equipmentdef{\firestorm{}}{\firestormrule{}}}
+%		\unitequipment{\tempequipment}
+%	},
+%}
+%
+%\showunit{
+%	name={\skyserpents},
+%	QRSname={\skyserpent},
+%	cost=135,
+%	profile={ < 1 3 - 4 4 2 4 3 7},
+%	type=\warbeast{},
+%	basesize=40x40,
+%	unitsize=3,
+%	maxmodels=6,
+%	costpermodel=45,
+%	alliance={\daemonofchange},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\fly{9}, \skirmishers, \slashing},
+%	unitrules={\unitrule{\slashing}{\slashingrule}},
+%}
+%
+%\showunit{
+%	name={\mountedsirens},
+%	QRSname={\mountedsiren},
+%	cost=85,
+%	profile={ \rider       < 6 5 4 3 3 1 5 2 7,
+%			  \steedoflust < 10 3 - 3 3 1 5 1 7},
+%	type=\cavalry{},
+%	basesize=25x50,
+%	unitsize=5,
+%	maxmodels=15,
+%	costpermodel=15,
+%	alliance={\daemonoflust},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\fastcavalry, \poisonedattacks \only{\steedoflust}},
+%	armour={\mountsprotection{6}},
+%	options={
+%		\maytake{} \onechoiceonlyNOC{
+%			\barbedclaws{} \only{\rider}=\permodel{}<2,
+%			\elusive{}=10,
+%		},
+%		\ifthegeneralbelongstothesamedarkgodmaytake{
+%			\clawedcaress{}=\permodel{}<2,
+%		},
+%	},
+%	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50}
+%}
+%
+%\showunit{
+%	name={\sirenchariot},
+%	cost=100,
+%	profile={ \chariot{}          < - - - 5 4 4 - - -,
+%			  \mountedsiren{} (2) < - 5 4 3 - - 5 2 7,
+%			  \steedoflust{} (2)  < 10 3 - 3 3 1 5 1 7},
+%	type=\chariot{},
+%	basesize=50x100,
+%	unitsize=1,
+%	alliance={\daemonoflust},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\impacthits{+1}, \poisonedattacks \only{\steedoflust}},
+%	armour={\mountsprotection{6}},
+%	options={
+%		\barbedclaws{} \only{\mountedsiren{}}=10,
+%		\ifthegeneralbelongstothesamedarkgodmaytake{
+%			\clawedcaress{}=5,
+%		},
+%	},
+%}
+%
+%\showunit{
+%	name={\clawedfiends},
+%	QRSname={\clawedfiend},
+%	cost=100,
+%	profile={ < 10 5 - 4 4 3 5 3 7},
+%	type=\monstrousbeast{},
+%	basesize=40x40,
+%	unitsize=2,
+%	maxmodels=6,
+%	costpermodel=50,
+%	alliance={\daemonoflust},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\fear},
+%	options={
+%		\combatweapononechoice{
+%			\pw{}=\permodel{}<5,
+%			\barbedclaws{}=\permodel{}<10,
+%		},
+%		\ifthegeneralbelongstothesamedarkgodmaytake{
+%			\clawedcaress{}=\permodel{}<5,
+%		},
+%	},
+%}
+%
+%
+%\showunit{
+%	name={\pestilentbeasts},
+%	QRSname={\pestilentbeast},
+%	cost=120,
+%	profile={ < 6 3 - 4 5 3 2 4 7},
+%	type=\monstrousbeast{},
+%	basesize=40x40,
+%	unitsize=2,
+%	maxmodels=6,
+%	costpermodel=60,
+%	alliance={\daemonofpestilence},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\fear, \regeneration{4}, \trailofmucus},
+%	options={
+%		\ifthegeneralbelongstothesamedarkgodmaytake{
+%			\contamination{}=\permodel{}<7,
+%		},
+%	},
+%}
+%
+%\showunit{
+%	name={\plaguelings},
+%	QRSname={\plagueling},
+%	cost=75,
+%	profile={ < 4 3 3 2 3 5 2 5 7},
+%	type=\swarm{},
+%	basesize=40x40,
+%	unitsize=2,
+%	maxmodels=5,
+%	costpermodel=30,
+%	alliance={\daemonofpestilence},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\scout, \vanguard},
+%	options={
+%		\ifthegeneralbelongstothesamedarkgodmaytake{
+%			\contamination{}=\permodel{}<3,
+%		},
+%	},
+%}
+%
+%\showunit{
+%	name={\hellhounds},
+%	QRSname={\hellhound},
+%	cost=130,
+%	profile={ < 8 5 - 4 4 2 4 2 7},
+%	type=\warbeast{},
+%	basesize=25x50,
+%	unitsize=5,
+%	maxmodels=10,
+%	costpermodel=23,
+%	alliance={\daemonofwrath},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\magicresistance{3}},
+%	armour={\innatedefence{4}},
+%	options={
+%		\ambush{}=\permodel{}<4,
+%		\innatedefence{}=\permodel{}<6,
+%		\ifthegeneralbelongstothesamedarkgodmaytake{
+%			\onslaught{}=\permodel{}<3,
+%		},
+%	},
+%}
+%
+%\showunit{
+%	name={\crushercavalry},
+%	cost=160,
+%	profile={ \rider{} < 5 5 2 4 3 1 4 1 7,
+%			  \crusher{} < 7 5 - 5 4 3 2 3 7},
+%	type=\monstrouscavalry{},
+%	basesize=50x75,
+%	unitsize=3,
+%	maxmodels=5,
+%	costpermodel=60,
+%	alliance={\daemonofwrath},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\fear, \magicresistance{1}},
+%	weapons={\bloodsword{} \only{\rider}},
+%	armour={\innatedefence{6}, \mountsprotection{6}},
+%	options={
+%		\mayreplacebloodswordwithhellbladerideronlyandinnatedefence{}=\permodel{}<10,					\inamonotheistarmymaytake{
+%			\onslaught{}=\permodel{}<3,
+%		},
+%	},
+%	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50}
+%}
+
+
+
+
+
+
+
+\rareunitstitle
+
+%\showunit{
+%	name={\daemonengine \oneofakind},
+%	cost=230,
+%	profile={ < 8 3 4 6 6 7 3 4 7},
+%	type=\monster{},
+%	basesize=150x100,
+%	unitsize=1,
+%	alliance={\daemonoftruechaos},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\crushattack},
+%	armour={\innatedefence{4}},
+%	options={
+%		\mayreplacedaemonoftruechaoswithdaemonof{
+%			\dchange{}=10,
+%			\dlust{}=10,
+%			\pestilence{}=10,
+%			\wrath{}=10,
+%		},
+%		\pw{}=20,
+%	},
+%	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+%	ERU AU SECOURS !!!!!
+%	//////////////////////////////////////////////////////
+%}
+%
+%\showunit{
+%	name={\blazingchariot},
+%	cost=135,
+%	profile={ \chariot{}            < - - - 4 4 4 - - -,
+%			  \exaltedigniter{} (1) < - 4 4 4 - - 4 3 7,
+%			  \skyserpent{} (2)     < 1 3 - 4 - - 4 3 7},
+%	type=\chariot{},
+%	basesize=50x100,
+%	unitsize=1,
+%	alliance={\daemonofchange},
+%	armour={\mountsprotection{6}},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\fly{8}, \quicktofire},
+%	weapons={\searingfirestorm{}\only{\chariot}},
+%	unitequipment={\unitequipment{\searingfirestorm}{\searingfirestormrule}},
+%	options={
+%		\inamonotheistarmymaytake{
+%			\farseeing{}=10,
+%	},
+%}
+%
+%\showunit{
+%	name={\shrineoftemptation},
+%	cost=180,
+%	profile={ \chariot{}          < - - - 5 5 5 - - -,
+%			  \temptress{} (1)    < - 5 5 3 - - 5 4 7,
+%			  \mountedsiren{} (3) < - 5 4 3 - - 5 2 7,
+%			  \steedoflust{} (4)  < 10 3 - 3 3 1 5 1 7},
+%	type=\chariot{},
+%	basesize=100x150,
+%	unitsize=1,
+%	alliance={\daemonoflust},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\impacthits{+3}, \poisonedattacks \only{\steedoflust}},
+%	armour={\mountsprotection{6}},
+%	unitrules={\unitrule{\auraofecstasy}{\auraofecstasyrule}},
+%	options={
+%		\temptressmaytakealashoflust{}=15,
+%		\barbedclaws{} \only{\crew}=20,
+%		\auraofecstasy{}=15
+%		\ifthegeneralbelongstothesamedarkgodmaytake{
+%			\clawedcaress{}=15,
+%		},
+%	},
+%}
+%
+%\showunit{
+%	name={\carnalchariot},
+%	cost=110,
+%	profile={ \chariot{}          < - - - 5 5 5 - - -,
+%			  \oracle{} (1)       < - 5 4 3 - - 5 2 7,
+%			  \mountedsiren{} (2) < - 5 4 3 - - 5 2 7,
+%			  \steedoflust{} (2)  < 10 3 - 3 3 1 5 1 7},
+%	type=\chariot{},
+%	basesize=100x150,
+%	unitsize=1,
+%	alliance={\daemonoflust},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\impacthits{+1}, \poisonedattacks \only{\steedoflust}, \soulreaper},
+%	armour={\mountsprotection{6}},
+%	unitrules={\unitrule{\soulreaper}{\soulreaperrule}},
+%	options={
+%		\barbedclaws{} \only{\crew}=15,
+%		\ifthegeneralbelongstothesamedarkgodmaytake{
+%			\clawedcaress{}=10,
+%		},
+%	},
+%}
+%
+%\showunit{
+%	name={\blightflies},
+%	cost=170,
+%	profile={ \rider{}   < 4 4 4 4 4 1 2 2 7,
+%			  \blightfly < 1 4 - 5 5 3 2 2 7},
+%	type=\monstrouscavalry{},
+%	basesize=50x75,
+%	unitsize=3,
+%	maxmodels=5,
+%	costpermodel=70,
+%	alliance={\daemonofpestilence},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\fear, \fly{6}},
+%	options={
+%		\ifthegeneralbelongstothesamedarkgodmaytake{
+%			\contamination{}=\permodel{}<5,
+%		},
+%	},
+%	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50}
+%}
+%
+%\showunit{
+%	name={\bloodchariot},
+%	cost=165,
+%	profile={ \chariot{}         < - - - 5 5 4 - - -,
+%			  \slaughterer{} (2) < - 5 3 4 - - 4 1 7,
+%			  \crusher{} (1)     < 7 5 - 5 - - 2 3 7},
+%	type=\chariot{},
+%	basesize=50x100,
+%	unitsize=1,
+%	alliance={\daemonofwrath},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\fear, \impacthits{+1}, \magicresistance{1}},
+%	weapons={\bloodsword{} \only{\slaughterer}},
+%	armour={\innatedefence{4}, \mountsprotection{6}},
+%	options={
+%		\inamonotheistarmymaytake{
+%			\onslaught{}=10,
+%		},
+%	},
+%	additional={
+%		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
+%		\setlength{\columnseprule}{0.5pt}
+%		\renewcommand{\columnseprulecolor}{\color{black!30}}	
+%		\begin{multicols}{2}
+%		\raggedcolumns		
+%
+%		\begin{center}{\largerfontsize\antiquefont\incinerator{} (\free)}
+%		
+%		\noindent\incineratorrule{}
+%		
+%		\vspace*{\fill}\columnbreak
+%		\begin{center}{\largerfontsize\antiquefont\brasscannon{} (\free)}
+%		
+%		\noindent\brasscannonrule{}
+%		
+%
+%		\vspace*{\fill}
+%		\end{multicols}
+%		\setlength{\columnseprule}{0pt}
+%	},
+%}
+%
+%\showunit{
+%	name={\altarofslaughter (\oneofakind)},
+%	cost=180,
+%	profile={ \chariot{}         < - - - 5 6 4 - - -,
+%			  \doombringer{} (1) < - 5 3 4 - - 4 2 7,
+%			  \slaughterer{} (2) < - 5 3 4 - - 4 1 7,
+%			  \crusher{} (1)     < 7 5 - 5 - - 2 3 7},
+%	type=\chariot{},
+%	basesize=50x100,
+%	unitsize=1,
+%	alliance={\daemonofwrath},
+%	commontype=\daemoncommonrules{},
+%	commonspecialrules={\daemonicinstability, \otherwordly},
+%	specialrules={\fear, \impacthits{+1}, \magicresistance{2}},
+%	weapons={\bloodsword{} \only{\doombringerandslaughterer}},
+%	armour={\innatedefence{4}, \mountsprotection{6}},
+%	unitrules={\unitrule{\bloodfeast}{\bloodfeastrule}},
+%	options={
+%		\bloodfeast{}=15,
+%		\inamonotheistarmymaytake{
+%			\onslaught{}=15,
+%		},
+%	},
+

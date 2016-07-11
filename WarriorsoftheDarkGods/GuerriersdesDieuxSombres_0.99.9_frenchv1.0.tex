@@ -1,0 +1,369 @@
+\input{../Layout/AB_layout.tex}
+
+\newcommand{\booktitle}{Guerriers des Dieux Sombres}
+\newcommand{\version}{0.99.9}
+\newcommand{\frenchversion}{1.0}
+\newcommand{\booklogo}{pics/logo_big_WDG.png}
+
+%\newcommand{\translationteam}{\item \og AEnoriel \fg \item \og Anglachel \fg \item \og Astadriel \fg \item \og Batcat \fg \item \og Eru \fg\item \og Gandarin \fg \item \og Groumbahk \fg \item \og Iluvatar \fg \item \og Lamronchak \fg \item \og Mammstein \fg \item \og Bigfish \fg }
+
+\newcommand{\gazeofthegods}{Regard des Dieux}
+\newcommand{\markofthedarkgods}[1]{Marque des Dieux Sombres\ifblank{#1}{}{ (#1)}}
+\newcommand{\chosenbythegods}[1]{Choisi par les Dieux\ifblank{#1}{}{ (#1)}}
+\newcommand{\lightningrage}{Rage Éclair}
+\newcommand{\inspiregreatness}[1]{Inspire la Grandeur\ifblank{#1}{}{ (#1)}}
+\newcommand{\giftsofthegods}{Dons des Dieux}
+\newcommand{\giftofthegods}{Don des Dieux}
+\newcommand{\survivalofthefittest}{Survie du Plus Apte}
+\newcommand{\marksofthedaemonlegion}[1]{Marque des Légions Démoniaques\ifblank{#1}{}{ (#1)}}
+\newcommand{\wrathpriest}{Prêtre du Courroux}
+\newcommand{\wordsofscorn}{Murmures de Dédain}
+\newcommand{\wordsofwrath}{Cris de Courroux}
+\newcommand{\wordsofhate}{Souffle de Haine}
+\newcommand{\osklanderjarl}{Jarl d'Osklander}
+\newcommand{\makharkhan}{Jarl de Makhar}
+\newcommand{\inspirebarbarians}{Inspire les Barbares}
+\newcommand{\wastelandraiders}{Raid du Désespoir}
+\newcommand{\striderswhip}{Fouet Cauchemardesque}
+\newcommand{\trollbelch}{Bile de Troll}
+\newcommand{\warpedregeneration}{Régénération du Warp}
+\newcommand{\bloodbeastlink}{Lien de la Bête Sanguinaire}
+\newcommand{\wavesofchange}{Vagues du Changement}
+\newcommand{\mutantambush}{Embuscade Mutante}
+\newcommand{\lumbering}{Char Moisi}
+\newcommand{\hellmortar}{Canon Infernal}
+\newcommand{\unchained}{Déchainé}
+\newcommand{\hellscreammortar}{Mortier de l'Enfer}
+\newcommand{\attentionfrombeyond}{Les Dieux Observent}
+\newcommand{\giantattacks}{Attaques de Géant}
+\newcommand{\MarkofTrueChaos}[1]{Marque du Chaos intégral\ifblank{#1}{}{ (#1)}}
+\newcommand{\MarkofChange}[1]{Marque du Changement\ifblank{#1}{}{ (#1)}}
+\newcommand{\MarkofLust}[1]{Marque de la Luxure\ifblank{#1}{}{ (#1)}}
+\newcommand{\MarkofPestilence}[1]{Marque de la Pestilence\ifblank{#1}{}{ (#1)}}
+\newcommand{\MarkofWrath}[1]{Marque du Courroux\ifblank{#1}{}{ (#1)}}
+
+\newcommand{\TrueChaos}[1]{Chaos intégral\ifblank{#1}{}{ (#1)}}
+\newcommand{\Change}[1]{Changement\ifblank{#1}{}{ (#1)}}
+\newcommand{\Lust}[1]{Luxure\ifblank{#1}{}{ (#1)}}
+\newcommand{\Pestilence}[1]{Pestilence\ifblank{#1}{}{ (#1)}}
+\newcommand{\Wrath}[1]{Courroux\ifblank{#1}{}{ (#1)}}
+
+\newcommand{\ToxicAttacks}{Attaques toxiques}
+\newcommand{\daemonicinstability}{Instabilité démoniaque}
+
+% Army common type special rules
+
+\newcommand{\alliancecommonrules}{Alliance}
+\newcommand{\allianceoptionscommonrules}{Options d'Alliance (pts)}
+
+% QRS Invocation table
+
+% Profile wording
+
+% Profile rules
+
+\newcommand{\markchart}{%
+\textbf{Démon du Dieu Sombre}: Le Prince Démoniaque gagne les règles spéciales et l'accès aux différentes Disciplines de Magie en fonction du dieu auquel il appartient.
+\vspace*{0.1cm}
+\renewcommand{\arraystretch}{1.5}
+\begin{center}\begin{tabular}{M{2cm}m{10cm}M{3cm}}
+\hline
+		& \centering\textbf{Bonus} & \centering\textbf{Discipline de Magie}\tabularnewline
+
+\textbf{\TrueChaos{}}		   & Un démon de la marque du \TrueChaos{} gagne +1 en Commandement.	& \begin{flushleft}
+Si Sorcier, il a accès aux Disciplines \alchemy, \death, \fire, \heavens ou \shadows.
+\end{flushleft} \tabularnewline
+
+\textbf{\Change{}}		   & Une figurine avec cette marque peut choisir à chaque phase une des règles suivantes pour n'importe quelle attaque : \divineattacks, \flamingattacks\ ou \hellfire. {Choisissez au début de chaque phase de combat et avant de tirer  avec cette figurine. Les Attaques Spéciales ne sont pas affectées. Un Sorcier peut choisir de relancer tous les dés de sa génération de sorts.} Si Sorcier, il a accès aux Disciplines \change\ ou \alchemy.	& \begin{flushleft}
+Si sorcier, il a accès aux Disciplines \change\ ou \alchemy
+\end{flushleft} \tabularnewline
+
+\textbf{\Lust{}}		   & {Le porteur gagne la règle \armourpiercing{+1}.}	& \begin{flushleft}
+Si Sorcier, il a accès aux Disciplines \lust\ ou \shadows.
+\end{flushleft} \tabularnewline
+
+\textbf{\Pestilence{}}		   & {Le porteur gagne les règles \poisonedattacks et \regeneration{5}. {Les \toxicattacks ont -1 pour blesser contre le porteur.}}	& \begin{flushleft}
+Si Sorcier, il a accès aux Disciplines \disease\ ou \death.
+\end{flushleft} \tabularnewline
+
+\textbf{\Wrath{}}		   &  Une figurine avec cette marque gagne +1 en Force au premier round de chaque combat.	& \begin{flushleft}
+Les Sorciers ne peuvent jamais prendre, ni gagner cette marque.
+\end{flushleft} \tabularnewline
+
+\hline
+\end{tabular}\end{center}
+}
+
+\newcommand{\specialshootingweapon}{%
+\vspace*{0.1cm}
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{1}{}{lightgray}
+\begin{center}\begin{tabular}{M{3cm}m{5cm}M{1cm}M{0.5cm}M{2cm}M{2cm}M{2cm}}
+\hline
+		& \centering\textbf{\underline{SPECIAL SHOOTING WEAPON}} & \centering\textbf{Portée} & \centering\textbf{S} & Tir Multiple & Blessure Multiple & \centering\textbf{\armourpiercing{}}\tabularnewline
+
+Hellscream Cannon & Hellscream Cannon (1) Catapult (\distance{3}) & 12-60 & 4[9] & - & [Ordnance] & 1\tabularnewline
+
+& Hellscream Cannon (2) Catapult (\distance{3}) & 12-24 & 3 & - & - & 1\tabularnewline
+
+\hline
+\end{tabular}\end{center}
+}
+
+\begin{document}
+
+\input{../Layout/AB_titlepage.tex}
+
+% Règles spéciales de l'Armée
+
+\startarmyspecialrules
+
+\armyspecialruleentry{\markofthedarkgods{}}\\
+Chaque \markofthedarkgods{} entraîne des effets différents décrits ci-après. Chaque \markofthedarkgods{} est spécifiée entre parenthèses. Les figurines avec une \markofthedarkgods{} autre que \TrueChaos{} ne peuvent rejoindre que des unités avec la même \markofthedarkgods{} que la leur, ou des unités avec la \markofthedarkgods{Chaos Intégral}. La liste d'armée doit préciser quelle \markofthedarkgods{} a été choisie pour ces figurines. Les Sorciers ne peuvent pas rejoindre d'unité avec une \markofthedarkgods{Courroux} ou des figurines avec la règle \chosenbythegods{Courroux} et ne peuvent pas prendre de \markofthedarkgods{Courroux}. Une figurine avec la règle \markofthedarkgods{Courroux} ne peut rejoindre d'unité contenant au moins un Sorcier.\\
+
+\begin{wrapfigure}[5]{L}{0cm}
+\centering
+\includegraphics[width=2cm]{pics/WDG1.png}
+\end{wrapfigure}
+\textbf{\MarkofTrueChaos{}}\\
+Les unités dont la majorité des figurines possède la \markofthedarkgods{Chaos Intégral} peuvent relancer leurs tests de panique ratés. Les Sorciers ayant cette marque ont accès aux Disciplines suivantes : \alchemy, \heavens \only{Seigneur}, \fire, \death{} ou \shadows.\\
+
+\vspace{0.5cm}
+
+\begin{wrapfigure}[5]{L}{0cm}
+\centering
+\includegraphics[width=2cm]{pics/WDG2.png}
+\end{wrapfigure}
+\textbf{\MarkofChange{}}\\
+Lorsqu'ils tirent, ou au début de chaque combat, les éléments de la figurine possédant la \markofthedarkgods{Changement} peuvent choisir une des règles spéciales suivantes qui s'applique à leurs attaques de tir de cette phase, ou aux attaques de corps à corps de ce combat : \flamingattacks, \divineattacks,{\magicalattacks} ou \hellfire. Chaque figurine de l'unité doit choisir le même effet. Les attaques spéciales ne sont pas affectées. {Les Personnages } {ajoutent +1 à leurs lancements de sorts.} Les Sorciers ayant cette marque ont accès aux Disciplines suivantes : \alchemy ou \change{}. \\ \\
+
+\vspace{0.5cm}
+
+\begin{wrapfigure}[5]{L}{0cm}
+\centering
+\includegraphics[width=2cm]{pics/WDG3.png}
+\end{wrapfigure}
+
+\textbf{\MarkofWrath{}}\\
+Les éléments de figurines possédant la \markofthedarkgods{Courroux} gagnent +1 pour toucher au corps à corps {lorsqu'ils attaquent de front}, et ne peuvent pas Fuir en réaction à une charge.\\ \\
+
+\vspace{0.5cm}
+
+\begin{wrapfigure}[5]{L}{0cm}
+\centering
+\includegraphics[width=2cm]{pics/WDG4.png}
+\end{wrapfigure}
+\textbf{\MarkofLust{}}\\
+Les unités avec une majorité de figurines ayant la \markofthedarkgods{Luxure} peuvent relancer leurs jets de charge, poursuite et de \randommovement{}. Elles sont immunisées à la panique. Les Sorciers ayant cette marque ont accès aux Disciplines suivantes : \lust{} ou \shadows.\\ \\
+
+\vspace{0.5cm}
+
+\begin{wrapfigure}[5]{L}{0cm}
+\centering
+\includegraphics[width=2cm]{pics/WDG4.png}
+\end{wrapfigure}
+\textbf{{\LARGE \MarkofPestilence{}}}\\
+Les Attaques de corps à corps effectuées de front contre une figurine possédant la règle {\markofthedarkgods{Pestilence}} {reçoivent un malus de -1 pour toucher,} {mais touchent toujours sur 5+ ou mieux.} {Les éléments de figurine avec cette Marque ont} {-1 en Initiative (minimum 1).} Les Sorciers ayant cette marque ont accès aux Disciplines suivantes : \disease{} ou \death.
+
+% Chosen of Gods
+
+\armyspecialruleentry{\chosenbythegods{}}\\
+Les figurines avec la règle \chosenbythegods{} gagnent les effets suivants {en plus des effets de leur \markofthedarkgods{}} :\\
+
+
+\begin{tabular}{ll}
+
+\begin{tabular}{ll}
+\includegraphics[width=1cm]{pics/WDG1.png} & \begin{tabular}{p{6cm}} {\LARGE \textbf{\MarkofChange{}}}\\\wizardconclave{Niveau 1 : Bûcher Carmin, Feu d'Azur}.
+Les {3 premiers} sorts de dégâts de la Discipline \change
+lancés (réussis ou non) par des Sorciers dans l'unité gagnent +1 en Force. 
+\end{tabular}\\
+\end{tabular} 
+
+&
+
+\begin{tabular}{ll}
+\includegraphics[width=1cm]{pics/WDG1.png} & \begin{tabular}{p{6cm}} {\LARGE \textbf{\MarkofLust{}}}\\
+{+2} en Mouvement et \skirmisher,
+{mais ne peuvent ajouter aucune figurine supplémentaire}
+{à leur taille initiale.}
+\end{tabular}\\
+\end{tabular}\\
+
+\begin{tabular}{ll}
+\includegraphics[width=1cm]{pics/WDG1.png} & \begin{tabular}{l} {\LARGE \textbf{\MarkofPestilence{}}}\\Gagne \textsc{\fear} \end{tabular}\\
+\end{tabular}
+
+& 
+
+\begin{tabular}{ll}
+\includegraphics[width=1cm]{pics/WDG1.png} & \begin{tabular}{l} {\LARGE \textbf{\MarkofWrath{}}}\\ Gagne \textsc{\frenzy} \end{tabular}\\
+\end{tabular}
+
+\end{tabular}
+
+
+\armyspecialruleentry{\gazeofthegods}
+Une figurine bénéficiant de cette règle spéciale ne peut pas refuser un défi, et doit le lancer si aucune autre figurine ne le fait. Immédiatement après avoir tué un Personnage qui n’est pas un Champion au cours d’un défi, ou tué un monstre, {l'élément de figurine avec la règle \gazeofthegods peut relancer tous ses jets pour toucher et pour blesser jusqu'à la prochaine phase de magie du joueur actuel. Si deux figurines avec cette règle tuent un Monstre à la même étape d'Initiative, choisissez laquelle bénéficiera des effets bonus.}
+
+\armyspecialruleentry{\lightningrage}
+La figurine a une \wardsave{2} contre les attaques avec la règle \lightningattacks. Si une figurine est touchée par une \textit{Attaque Foudroyante}, elle gagne la règle spéciale \frenzy.
+
+\armyspecialruleentry{\inspiregreatness{}}
+Tant qu'au moins une figurine avec cette règle se trouve dans une unité du même type de troupe qu'elle-même, {toutes les figurines d'Infanterie de} l'unité peuvent effectuer une attaque de soutien supplémentaire au deuxième rang (mais pas au troisième).
+
+\armyspecialruleentry{{\survivalofthefittest}}
+{Votre armée ne peut inclure qu'au maximum 2 figurines avec à la fois les règles \largetarget et \fly{}. Cette limite passe à 4 pour une Grande Armée, et à 1 pour une Patrouille.}
+
+\vspace{1cm}
+
+\closearmyspecialrules
+
+% Armurerie
+
+\startarmyarmoury
+
+{\Large \textbf{Lame démoniaque}}: Arme de corps à corps. Lorsqu'il utilise cette arme, le porteur gagne +1 en Force, \magicalattacks.
+
+\closearmyarmoury
+
+\newpage
+
+% Gifts of the Dark Gods
+
+\startarmynewsection{\giftsofthegods}
+
+\spaceaftersection{}
+
+\begin{tabular}{p{8cm}}
+\begin{tabular}{c}
+Les \giftsofthegods ne peuvent pas être dupliqués dans une armée, sauf mention contraire.
+\end{tabular}
+\end{tabular}
+
+\begin{multicols}{2}\raggedcolumns
+
+\startpricelist
+
+\pricelistitem{Briseur Bestial}{70} Le porteur gagne la règle \terror. Si le porteur est votre Général, la limite maximale des figurines soumises à la règle \survivalofthefittest est augmentée de 1.
+
+\pricelistitem{Ailes Démoniaques}{50} \only{Figurine à pied}. Le porteur gagne \fly{8}.
+
+\pricelistitem{Voie du Déchu}{45} \only{Personnage d'Infanterie à pied}. Une figurine avec ce Don gagne +1 en Mouvement, +1 Point de Vie, -1 en Initiative, un socle de 40x40 mm et devient du type Infanterie Monstrueuse.
+
+\pricelistitem{Troisième Œil du Changement}{Prince Démon 45-Les autres 30} Le porteur de ce \giftsofthegods{} augmente sa \wardsave{} d'un point, jusqu'à un maximum de 4+.
+
+\pricelistitem{Sang de Sauvageon}{40} Le porteur gagne \inspiringpresence, qu'il soit le Général ou non. Mais seules les unités avec le type de troupe Bête de Guerre, Bête Monstrueuse, Infanterie Monstrueuse ou Monstre peuvent recevoir cette \inspiringpresence.\\
+\\
+Si le porteur est votre Général, sa \inspiringpresence n'est plus limitée aux unités ci-dessus. De plus, une unique unité de Trolls des Désolations (6 figurines maximum) peut être prise en Unité de Base.\\
+\\
+Si le porteur est Sorcier, il doit utiliser la Discipline \wilderness, même s'il n'y a pas accès.
+
+\endpricelist
+
+\columnbreak
+
+\startpricelist
+
+\pricelistitem{Miasmes Nécrosés}{40} \markofthedarkgods{Pestilence} seulement. La figurine gagne une \breathweapon{\ToxicAttacks{}}. De plus, à chaque Phase de combat, chaque figurine ennemie en contact avec le porteur subit une touche Force 1 avec la règle \armourpiercing{6} à Initiative 10.
+
+\pricelistitem{Peau Tannée de la Désolation}{30} Le porteur gagne \innatedefence{6} {ou \innatedefence{5} si le porteur est du type Infanterie}. Ce \giftsofthegods{} ne peut être pris par une figurine montée sur Manticore.
+
+\pricelistitem{Grâce Infernale}{25} \only{\markofthedarkgods{Luxure}}. Figurine à pied. Si le porteur est du type de troupe Infanterie, il gagne +2 en Mouvement, sinon il gagne la règle \swiftstride.
+
+\pricelistitem{Suceur d'Âmes}{20} \only{\markofthedarkgods{Courroux}}. Si le porteur inflige au moins une blessure au corps à corps (sans compter les Attaques Spéciales), lancez 1D6 à la fin de la phase. Sur un résultat de 4+, le porteur regagne 1 Point de Vie. (Notez que cette règle peut être utilisée pour redonner des points de vie à une figurine avec profil combiné, mais pas à une figurine du type Monstre.)
+
+\endpricelist
+
+\end{multicols}
+
+\closearmynewsection
+
+% Magical Items
+
+%\startarmymagicalitems
+
+\closearmynewsection
+
+\startarmymagicalitems
+
+\begin{tabular}{c}
+{Certains objets sont réservés à certaines figurines ayant 
+la \markofthedarkgods{} ou le \giftofthegods{}.}
+\end{tabular}
+
+\armymagicalweapons
+
+\startpricelist
+
+\pricelistitem{Lame Brûlante du Chaos}{65}
+
+{Type : \hw{}. Arme à une main. Les attaques faites par cette arme ont \flamingattacks, \multiplewounds{1D3}{} et \armourpiercing{6}. Après que toutes les attaques ont été résolues, pour chaque figurine tuée par cette épée, son unité subit une touche de Force 4 avec la règle \flamingattacks.}
+
+\pricelistitem{Lance de Gagnir}{25}
+
+{Type : Lance. Les Attaques effectuées avec cette arme gagnent +1 en Force et la règle \lethalstrike.}
+
+\endpricelist
+
+\armymagicalarmour
+
+\startpricelist
+
+\pricelistitem{Bouclier Runique du Dueliste}{10}
+
+{Type: Bouclier. Au début de chaque phase de Combat, désignez une figurine ennemie en contact socle à socle avec le porteur. Pour la durée de cette phase, un élément de cette figurine (de votre choix) a -1 Attaque (minimum de 1).}
+
+\endpricelist
+
+\armyarcaneitems
+
+\startpricelist
+
+\pricelistitem{Idole Démoniaque}{35}
+{À chaque fois qu'une figurine ennemie effectue un jet sur le tableau des Fiascos, vous pouvez augmenter ou réduire de 1 ce résultat.}
+
+\endpricelist
+
+\armymagicalbanners
+
+\startpricelist
+
+\pricelistitem{Étendard aux Neuf Queues}{50} - Infanterie seulement
+
+{Les unités alliées uniquement d'infanterie n'ayant pas la règle \skirmisher à \distance{12} de cette bannière gagnent +1 en Mouvement.}
+
+\pricelistitem{Bannière de Transmutation}{30}{\markofthedarkgods{Changement} seulement.}
+
+{Toutes les attaques de tir faites contre cette unité ont -1 sur leurs jets pour blesser.}
+
+\pricelistitem{Bannière de Furie}{25}{\markofthedarkgods{Courroux} seulement.} 
+
+{Le porteur gagne la règle \frenzy et ne peut la perdre que si la bannière est capturée ou détruite. Toutes les figurines de l'unité du porteur gagnent la règle \frenzy, tant que le porteur a aussi la \frenzy et reste dans l'unité.}
+
+\pricelistitem{Bannière de la Tentation}{25 - \markofthedarkgods{Luxure} seulement.}
+
+{Une seule utilisation. La bannière peut être activée lorsque le porteur déclare une charge.} {La cible} chargée par le porteur de cette bannière ne peut que Maintenir sa Position, à moins qu'elle ne soit déjà en train de fuir. {L'unité peut déclarer une réaction de Fuite si elle est chargée ultérieurement par une autre unité.}
+
+\pricelistitem{Bannière d'Immondices}{25}
+
+{\markofthedarkgods{Pestilence} seulement. Toutes les figurines de l'unité du porteur ont \poisonedattacks.}
+
+\endpricelist
+
+\closearmymagicalitems
+
+
+%%% START OF THE ARMYLIST - Translators shouldn't have to edit it %%%
+
+\input{GuerriersdesDieuxSombres_armylist.tex}
+
+%%% Quick Reference Sheet - AB_qrs.tex is automatic and shouldn't be edited %%%
+
+\quickrefsheettitle
+
+\input{../Layout/AB_qrs.tex}
+
+\specialshootingweapon
+
+\end{document}

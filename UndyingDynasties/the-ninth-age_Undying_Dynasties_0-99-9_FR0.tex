@@ -190,7 +190,7 @@
 \newcommand{\twoadditionalskeletalhorses}{Deux \skeletalhorses{} supplémentaires}
 \newcommand{\increasedbasesize}{Taille de socle augmentée à \unit{100x100}{\milli\meter}}
 \newcommand{\exchangescoutandlighttroopsforla}{Remplacer les règles \scout{} et \lighttroops{} par une \la{}}
-\newcommand{\exchangeshieldandvanguardforaspenbow}{Remplacer le \shield{} et \vanguard{} par un \aspenbow{}}
+\newcommand{\exchangeshieldandvanguardforaspenbow}{Remplacer le \shield{} et la règle \vanguard{} par un \aspenbow{}}
 \newcommand{\replacecharnelcatapultwithcursedammunition}{Remplacer la \charnelcatapult{} par les\newline \cursedammunition{}}
 
 
@@ -262,7 +262,8 @@ Arme de Corps à Corps. Type : \hw{}. Le porteur a -1 Attaque au Corps à Corps.
 }
 
 \newcommand{\giantaspenbowrule}{%
- Arme de Tir. \range{48}, Force 6, \multiplewounds{1D3}, \armourpiercing{6}. Cette arme ignore tous les modificateurs pour toucher au tir. Compte comme une \hw{} avec -1 en Force au Corps à Corps.
+\textbf{\artilleryweapon} de type \textbf{\boltthrower}.\newline
+\range{48}, Force 6, \multiplewounds{1D3}{}, \armourpiercing{6}. Cette arme ignore tous les modificateurs pour toucher au tir.
 }
 
 %Sarcophage de Phatep
@@ -272,7 +273,7 @@ La figurine ajoute +1 à votre jet de Canalisation pendant les Phases de Magie a
 }
 
 \newcommand{\phatepscurserule}{%
-Le \casketofphatep{} possède un \boundspell{4} : \sandsspellfour{} (Discipline \sands{}). Il ne peut l'utiliser que si il ne s'est pas déplacé durant ce Tour de Joueur.
+Le \casketofphatep{} possède un \boundspell{4} : \sandsspellfour{} (Discipline \sands{}). Il ne peut l'utiliser que s'il ne s'est pas déplacé durant ce Tour de Joueur.
 }
 
 %Catapulte d'Ossements
@@ -286,7 +287,7 @@ Le \casketofphatep{} possède un \boundspell{4} : \sandsspellfour{} (Discipline 
 \textbf{\artilleryweapon} de type \textbf{\catapult{} (\distance{5})}.\newline
 \range{12-48}, \Strength{} 3, \flamingattacks{}, \magicalattacks{}.
 
-Une unité qui subit au moins une perte suite à cette arme doit subir un test de Panique comme si elle avait subit au moins 25\% de pertes. Ce test est fait avec un malus de -1 en Commandement.
+Une unité qui subit au moins une perte causée par cette arme doit subir un test de Panique comme si elle avait subi au moins 25\% de pertes. Ce test est fait avec un malus de -1 en Commandement.
 }
 
 % QRS
@@ -350,7 +351,7 @@ La figurine gagne les règles \dusttodust{} et \undead{}. Par ailleurs, une unit
 
 \armyspecialruleentry{\undyingwill{}}
 
-Au début de n'importe quelle Phase de Corps à Corps, le Personnage peut conférer la valeur non modifiée de sa Capacité de Combat à toutes les figurines avec la règle \undead{} de son unité. S'il est monté sur une \largetarget{}, il peut à la place décider de conférer ce bonus à une unité alliée avec la règle \undead{} à moins de \distance{6}, à moins qu'il ne soit lui-même engagé au corps à corps. Dans ce dernier cas il ne peut conférer ce bonus qu'à une unité \undead{} engagée au corps à corps avec la même unité ennemie. Dans tous les cas, l'effet dure jusqu'à la fin de cette phase.
+Au début de n'importe quelle Phase de Corps à Corps, le Personnage peut conférer la valeur non modifiée de sa Capacité de Combat à toutes les figurines avec la règle \undead{} de son unité. S'il est monté sur une \largetarget{}, il peut à la place décider de conférer ce bonus à une unité alliée avec la règle \undead{} à moins de \distance{6}, à moins qu'il ne soit lui-même engagé au corps à corps. Dans ce dernier cas, il ne peut conférer ce bonus qu'à une unité \undead{} engagée au corps à corps avec la même unité ennemie. Dans tous les cas, l'effet dure jusqu'à la fin de cette phase.
 
 \armyspecialruleentry{\necromanticaura{}}
 
@@ -362,7 +363,7 @@ Quand la figurine est retirée de la partie, la figurine qui lui a causé la ble
 
 \armyspecialruleentry{\undergroundambush{}}
 
-L'unité suit la règle \ambush{}. Cependant, au lieu d'entrer sur le champ de bataille à partir d'un bord de table, elle apparait à un endroit appelé le Point Souterrain. Au moment de le déterminer, le propriétaire commence par désigner un point à plus de \distance{3} de toute unité ennemie et à plus de \distance{0,5} de tout Terrain Infranchissable. Faites dévier ce point de \distance{2D6} pour obtenir le point souterrain. L'unité est alors placée avec le front du premier rang ou du rang arrière en contact avec le point souterrain. Si le point se trouve sous une unité ennemie, placez à la place l'unité embusquée en contact socle à socle avec le front avant de cette unité, en maximisant les figurines en contact comme en cas de charge. L'unité qui vient d'arriver est considérée comme ayant chargé et aucune réaction de charge ne peut être déclarée. S'il n'est pas possible de placer l'unité embusquée, considérez que le jet d'\ambush{} est raté et relancez le dé au prochain tour.
+L'unité suit la règle \ambush{}. Cependant, au lieu d'entrer sur le champ de bataille à partir d'un bord de table, elle apparait à un endroit appelé le Point Souterrain. Au moment de le déterminer, le propriétaire commence par désigner un point à plus de \distance{3} de toute unité ennemie et à plus de \distance{0,5} de tout Terrain Infranchissable. Faites dévier ce point de \distance{2D6} pour obtenir le point souterrain. L'unité est alors placée avec le front du premier rang ou du rang arrière en contact avec le point souterrain. Si le point se trouve sous une unité ennemie, placez plutôt l'unité embusquée en contact socle à socle avec le front avant de cette unité, en maximisant les figurines en contact comme en cas de charge. L'unité qui vient d'arriver est considérée comme ayant chargé et aucune réaction de charge ne peut être déclarée. S'il n'est pas possible de placer l'unité embusquée, considérez que le jet d'\ambush{} est raté et relancez le dé au prochain tour.
 
 \closearmyspecialrules
 
@@ -406,9 +407,9 @@ L'unité suit la règle \ambush{}. Cependant, au lieu d'entrer sur le champ de b
 \begin{center}\armynewsubsection{\commanderoftheterracottaarmy}\end{center} %M% vérifier les accords
 
 \begin{itemize}[label={-}, leftmargin=*]
-\item Tous les \skeletons{}, \skeletonarchers{}, la \skeletoncavalry{} et la \necropolisguard{} \textbf{doivent} être améliorés au coût de \pts{3}\permodel{} pour gagner +1 en Endurance, -1 en Initiative et la règle \undeadconstruct{}.
+\item Tous les \skeletons{}, \skeletonarchers{}, \skeletoncavalry{} et \necropolisguards{} \textbf{doivent} être améliorés au coût de \pts{3}\permodel{} pour gagner +1 en Endurance, -1 en Initiative et la règle \undeadconstruct{}.
 
-\item Une unité de \necropolisguard{} ne peut pas contenir plus de \textbf{30} figurines.
+\item Une unité de \necropolisguards{} ne peut pas contenir plus de \textbf{30} figurines.
 
 \item Toutes les autres unités n'ayant pas déjà la règle \undeadconstruct{}, y-compris les Personnages, \textbf{doivent} être améliorés au coût de \pts{15}\permodel{} pour gagner +1 en Endurance, -1 en Initiative et la règle \undeadconstruct{}. Elles perdent la règle \flammable{} si elles l'avaient.
 
@@ -430,17 +431,17 @@ L'unité suit la règle \ambush{}. Cependant, au lieu d'entrer sur le champ de b
 
 \item Les \skeletons{} peuvent échanger la \spear{} et le \shield{} contre une \halberd{} pour \pts{1}\permodel{}
 
-\item La \skeletoncavalry{} peut disposer d'une \lance{} pour \pts{3}\permodel{} et d'un \barding{} pour \pts{3}\permodel{}
+\item Les \skeletoncavalry{} peuvent disposer d'une \lance{} pour \pts{3}\permodel{} et d'un \barding{} pour \pts{3}\permodel{}
 
 \item Les \skeletonchariots{} \textbf{doivent} prendre une \ha{} pour \pts{5}\permodel{} et peuvent prendre une \halberd{} pour \pts{5}\permodel{} Une unité de \skeletonchariots{} ne peut pas contenir plus de \textbf{7} figurines.
 
-\item La \necropolisguard{} doit prendre une \ha{} pour \pts{2}\permodel{} Une unité de \necropolisguard{} ne peut pas contenir plus de \textbf{35} figurines.
+\item Les \necropolisguards{} \textbf{doivent} prendre une \ha{} pour \pts{2}\permodel{} Une unité de \necropolisguards{} ne peut pas contenir plus de \textbf{35} figurines.
 
-\item Les \scarabswarms{} doivent gagner la règle \ethereal{} pour \pts{15}\permodel{} Une unité de \scarabswarms{} ne peut pas contenir plus de \textbf{4} figurines.
+\item Les \scarabswarms{} \textbf{doivent} gagner la règle \ethereal{} pour \pts{15}\permodel{} Une unité de \scarabswarms{} ne peut pas contenir plus de \textbf{4} figurines.
 
 \item La caractéristique \risen{} des figurines avec la règle \ethereal{} est fixée à 1.
 
-\item Les figurines de \monstrouscavalry{} ou avec la règle \largetarget{} ne peuvent pas être prises dans cette armée.
+\item L'armée ne peut pas contenir de figurines de \monstrouscavalry{} ou avec la règle \largetarget{}.
 
 \item Les figurines qui possèdent la ou les règles \undergroundambush{} ou \scout{} les perdent, et ne peuvent en aucun cas gagner ces règles.
 
@@ -472,7 +473,7 @@ L'unité suit la règle \ambush{}. Cependant, au lieu d'entrer sur le champ de b
 \item \textbf{Frappe Faucheuse} : Toutes les attaques du porteur sont échangées contre une touche automatique à chaque figurine en contact socle à socle avec le porteur. Toutes les figurines qui peuvent effectuer une attaque de soutien contre le porteur subissent aussi une attaque qui touche sur 4+. Ces attaques suivent les règles normales de l'arme (\halberd{}, \lethalstrike{}).
 \end{itemize}
 
-\pricelistitem{Fléau des Rois}{50/30} Type : \hw{}. Les attaques effectuées avec cette arme possèdent la règle \armourpiercing{1}. Chaque touche réussie avec cette arme occasionne deux touches.
+\pricelistitem{Fléau des Rois}{50/30} Type : \hw{}. Les attaques effectuées avec cette arme possèdent la règle \armourpiercing{1}. Chaque touche réussie avec cette arme occasionne une touche supplémentaire automatique pour un total de deux touches.
 
 \endpricelist
 

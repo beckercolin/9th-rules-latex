@@ -29,6 +29,77 @@
 	#1~\labels@points}}}%
 }
 
+% Dark gods
+\newcommand{\dchange}{Changement}
+\newcommand{\dlust}{Luxure}
+\newcommand{\pestilence}{Pestilence}
+\newcommand{\wrath}{Courroux}
+\newcommand{\truechaos}{Chaos Intégral}
+
+% Nothing to edit here
+\newcommand{\alliancepts}[1]{
+\ifsubstring{#1}{\free}{%
+		\free{}%
+	}{%
+	\ifsubstring{#1}{\permodel}{%
+		\splitatinf{#1}\myoption\myvalue%
+		\pts{\myvalue}\permodel{}%
+	}{%
+	\pts{#1}
+	}}
+}
+
+% You might wanna change the order of the gods - advanced user
+\newcommand{\allianceoptions}[1]{%
+	\defallianceoptions{#1}%
+	\unitentryformat{\labels@allianceoptions\spacebeforecolon{}:}\newline
+	\expandafter\ifblank\expandafter{\allianceoptions@introsentence}{}{\noindent\allianceoptions@introsentence{}\spacebeforecolon{}:}
+	
+	\expandafter\ifblank\expandafter{\allianceoptions@change}{}{
+		\setlength{\columnseprule}{0.5pt}
+		\renewcommand{\columnseprulecolor}{\color{black!30}}
+		\vspace*{-0.2cm}\begin{multicols}{4}\raggedcolumns
+		
+			\begin{center}
+			\noindent\dchange{}
+			
+			\noindent\alliancepts{\allianceoptions@change}
+			\vspace*{-0.3cm}
+			\end{center}
+		
+		\columnbreak
+
+			\begin{center}
+			\noindent\wrath{}
+			
+			\noindent\alliancepts{\allianceoptions@wrath}
+			\vspace*{-0.3cm}
+			\end{center}
+		
+		\columnbreak
+		
+			\begin{center}
+			\noindent\dlust{}
+			
+			\noindent\alliancepts{\allianceoptions@lust}
+			\vspace*{-0.3cm}
+			\end{center}
+		
+		\columnbreak
+
+			\begin{center}
+			\noindent\pestilence{}
+			
+			\noindent\alliancepts{\allianceoptions@pestilence}
+			\vspace*{-0.3cm}
+			\end{center}
+			
+		\end{multicols}
+		\setlength{\columnseprule}{0pt}
+	}
+}
+
+
 %%% Labels %%%
 
 % Profile
@@ -63,8 +134,10 @@
 
 \newcommand{\labels@basesize}{Socle}
 \newcommand{\labels@trooptype}{Type de troupe}
-\newcommand{\labels@specialrules}{Règles spéciales}
+\newcommand{\labels@specialrules}{Règles Spéciales}
 \newcommand{\labels@alignment}{Allégeance}
+\newcommand{\labels@alliance}{Allégeance}
+\newcommand{\labels@allianceoptions}{Options d'Allégeance}
 \newcommand{\labels@greenhiderace}{Race de Peaux Vertes}
 \newcommand{\labels@equipment}{Équipement}
 \newcommand{\labels@weapons}{Armes}
@@ -74,7 +147,7 @@
 \newcommand{\labels@charactermounts}{Montures de Personnages}
 \newcommand{\labels@mounts}{Montures}
 \newcommand{\labels@mount}{Monture}
-\newcommand{\labels@specialequipment}{Équipement spécial}
+\newcommand{\labels@specialequipment}{Équipement Spécial}
 
 % Command groups
 

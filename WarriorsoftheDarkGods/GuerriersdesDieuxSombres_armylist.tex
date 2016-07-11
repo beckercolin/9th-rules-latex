@@ -1,0 +1,900 @@
+
+%%% v0.99.9
+
+\armylist
+
+\lordstitle
+
+\showunit{
+	name={Prince Démoniaque},
+	cost={245},
+	profile={< 8 9 5 6 5 4 8 5 9},
+	type=\monster{},
+	basesize=50x50,
+	unitsize={1},
+	commontype=\alliancecommonrules,
+	commonspecialrules={\markofthedarkgods{Chaos Intégral}},
+	specialrules={\otherworldly, \daemonicinstability, \stubborn},
+	options={
+    	\magicalitemsallowance =\upto{}<25,
+    	Peut choisir jusqu'à 2 \giftsofthegods =\unlimited,
+ 		{Armure de plates}=60,
+		\optionschoice{Peut remplacer sa marque Chaos Intégral par une autre marque:}{
+			{Changement}={30},
+			{Courroux}={30},
+			{Luxure}={20},
+			{Pestilence}=40},	 		
+ 		\magiclevelchoice{
+			\magiclevel{1}=40,
+			\magiclevel{2}=65,
+			\magiclevel{3}=130,
+			\magiclevel{4}=160,
+			},
+		},
+	additional={%
+		\markchart
+	},		
+}
+
+\showunit{
+	name={Conquérant du Néant},
+	cost={160},
+	profile={< 4 8 3 5 5 3 7 5 9},
+	type=\infantry{},
+	basesize=25x25,
+	unitsize=1,
+	commontype=\alliancecommonrules,
+	commonspecialrules={\markofthedarkgods{Chaos Intégral}},	
+	specialrules={\inspiregreatness{}, \markofthedarkgods{Chaos Intégral}, \gazeofthegods},
+	armour={Armure de plates},
+	options={
+	    Peut choisir un seul \giftofthegods{} = \unlimited,
+		\magicalitemsallowance =\upto{}<100,
+		\optionschoice{Peut remplacer sa marque Chaos Intégral par une autre marque:}{
+			{Changement}={30},
+			{Courroux}={30},
+			{Luxure}={20},
+			{Pestilence}=40},		
+		\shield{}=5,
+		\weapononechoice{
+			\pw{}=10,
+			Fléau=10,
+			\halberd{}=15,
+			\gw{}=15,
+			\lance{}=15,
+		},
+	},
+	mounts={
+		Palanquin de Pestilence={15},		
+		Broyeur=40,		
+		Monture-Démon={40},
+		Monture du Néant={40},
+		Monture de Luxure={40},
+		Char de la Désolation={40},
+		Disque du Changement=60,
+		Manticore=120,
+		Dragon du Warp=270,
+	},
+}
+
+\showunit{
+	name={Seigneur Sorcier},
+	cost={200},
+	profile={< 4 5 3 4 4 3 5 3 8},
+	type=\infantry{},
+	basesize=25x25,
+	unitsize=1,
+	commontype=\alliancecommonrules,
+	commonspecialrules={\markofthedarkgods{Chaos Intégral}},
+	armour={Armure de plates},
+	specialrules={\gazeofthegods},
+	magiclevel=3,
+	magicpaths={qui dépend de la \markofthedarkgods{}},
+	options={
+	    Peut choisir un seul \giftofthegods{} = \unlimited,	
+		\magiclevel{4}=30,
+		\magicalitemsallowance =\upto{}<100,
+		\optionschoice{Peut remplacer sa marque Chaos Intégral par une autre marque:}{
+			{Changement}={40},
+			{Luxure}={10},
+			{Pestilence}=15},		
+	},
+	mounts={
+		Palanquin de Pestilence={15},
+		Monture de Luxure={30},
+		Monture du Néant={35},
+		Char de la Désolation={40},
+		Disque du Changement={50},		
+		Monture-Démon={60},
+		Manticore={120},
+		Dragon du Warp={320},
+	},
+}
+
+
+
+
+
+\heroestitle
+
+\showunit{
+	name={Héraut de l'Abîme},
+	cost=100,
+	profile={< 4 7 3 5 4 2 6 4 8},
+	type=\infantry{},
+	basesize=25x25,
+	unitsize=1,
+	commontype=\alliancecommonrules,
+	commonspecialrules={\markofthedarkgods{Chaos Intégral}},
+	armour={Armure de plates},
+	specialrules={\inspiregreatness{}, \gazeofthegods},	
+	options={
+	    Peut choisir un seul \giftofthegods{} = \unlimited,		
+		\optionschoice{Peut remplacer sa marque Chaos Intégral par une autre marque:}{
+			{Changement}={20},
+			{Courroux}={20},
+			{Luxure}={10},
+			{Pestilence}=30},		
+		\bsb{}=25,
+		\magicalitemsallowance{}=\upto{}<50,
+		\shield{}=5,
+		\weapononechoice{
+			\pw{}=5,
+			\flail{}=5,
+			\halberd{}=10,
+			\gw{}=10,
+			\lance{}=15,
+		},
+	},	
+	mounts={
+		Monture du Néant=30,
+		Palanquin de Pestilence={30},
+		Broyeur=35,
+		Monture de Luxure=35,
+		Disque du Changement=50,
+		Char de la Désolation={50},
+		Monture-Démon={60},
+		Manticore ={155},
+	},
+}
+
+\showunit{
+	name={Sorcier},
+	cost=-,
+	profile={< 4 5 3 4 4 2 4 2 8},
+	type=\infantry{},
+	basesize=25x25,
+	unitsize=1,
+	armour={Armure de plates},
+	specialrules={\gazeofthegods},			
+	additional={%
+		\begin{center}\mustbecomeoneofthefollowingNOC{}\end{center}
+		\setlength{\columnseprule}{0.5pt}
+		\renewcommand{\columnseprulecolor}{\color{black!30}}
+		\begin{multicols}{2}\raggedcolumns
+\begin{center}\largerfontsize\antiquefont Sorcier (90 pts)\end{center}%	
+		\textit{\large \alliancecommonrules{}}\newline
+		\markofthedarkgods{Chaos Intégral}\newline
+		\newline
+		{\normalsize \textit{\large Magie:}}\newline
+		\textbf{\magiclevel{1}}
+		Utilise les sorts des Disciplines qui dépendent de sa \markofthedarkgods{}
+		\def\tempoptions{%
+		    Peut choisir un seul \giftofthegods{} = \unlimited,
+			\magicalweaponallowance{}=\upto{}<50,
+			\magiclevel{2}=25,
+			\optionschoice{Peut remplacer sa marque Chaos Intégral par une autre marque:}{
+			{Changement}={25},
+			{Luxure}={10},
+			{Pestilence}=15},
+		}%
+
+		\def\tempmounts{Monture de Luxure=20,
+		Monture du Néant=25,
+		Palanquin de Pestilence={30},
+		Disque du Changement=50,
+		Char de la Désolation={50},
+		Monture-Démon={60},}%
+		
+		\def\tempmagie{magiclevel{3}}%	
+		
+		\vspace*{0.1cm}
+		\options{\tempoptions}
+		\vspace*{0.1cm}
+		\mounts{\tempmounts}
+		\columnbreak
+		\begin{center}\largerfontsize\antiquefont 				        \wrathpriest{} (\pts{100})\end{center}
+		\textit{{\large \alliancecommonrules}}\newline		
+		\MarkofWrath{}\newline
+
+		\def\tempspecialrules{\inspiregreatness{}, \magicresistance{2}}%
+		\specialrules{\tempspecialrules}%
+		\vskip 0.1cm
+		\textbf{\wordsofscorn{}}: {Peut dissiper comme s'il était un \magiclevel{3}.}
+		\def\tempoptions{%
+		    Peut choisir un seul \giftofthegods{} = \unlimited,
+			\magicalweaponallowance{}=\upto{}<50,
+			\weapononechoice{
+				\flail{}=5,
+				\pw{}=10,			
+			},
+		}%
+
+		\options{\tempoptions}		
+		\def\tempmounts{Monture du Néant=25,
+		Broyeur={30},
+		Char de la Désolation={50},
+		Monture-Démon={60},}%		
+		\mounts{\tempmounts}%
+		\end{multicols}
+		\setlength{\columnseprule}{0pt}
+	},
+}
+
+\showunit{
+	name={Jarl Barbare},
+	cost=45,
+	profile={< 4 5 4 4 4 2 5 3 8},
+	type=\infantry{},
+	basesize=25x25,
+	unitsize=1,
+	commontype=\alliancecommonrules,
+	commonspecialrules={\markofthedarkgods{Chaos Intégral}},
+	armour={Armure légère},
+	specialrules={\textbf{\inspirebarbarians{}}: lorsque cette figurine rejoint une unité de Barbares ou de Cavaliers Barbares, celle-ci gagne la règle \fightinextrarank{}. 
+	Une unité ne peut bénéficier que d'une de ces règles : \inspirebarbarians{} ou \inspiregreatness{}. Choisissez laquelle au début de chaque phase de combat},	
+	options={
+	    Peut choisir un seul \giftofthegods{} = \unlimited,		
+		\optionschoice{Peut remplacer sa marque Chaos Intégral par une autre marque:}{
+			{Changement}={5},
+			{Luxure}={5},			
+			{Courroux}={10},
+			{Pestilence}=15},		
+		\bsb{}\refsymbol{}=25,
+		{\refsymbol{} uniquement si un autre Chef Barbare est Général},
+		\magicalitemsallowance{}=\upto{}<50,
+		\shield{}=4,
+		\ha{}=5,
+		\weapononechoice{
+			\pw{}=3,
+			\flail{}=3,
+			\spear{}=3,
+			\lance{}=3,
+			\gw{}=4,
+		},
+	},	
+	mounts={
+		Cheval de guerre=20,
+	},
+	additional={\refsymbol{} Uniquement si un autre Chef Barbare est Général},
+	additional={%
+		\begin{center}Peut avoir une des améliorations suivantes\end{center}
+		\setlength{\columnseprule}{0.5pt}
+		\renewcommand{\columnseprulecolor}{\color{black!30}}
+		\begin{multicols}{2}\raggedcolumns
+		\begin{center}\largerfontsize\antiquefont \osklanderjarl{} (40 pts) - \oneofakind, \only{Infanterie}\end{center}%	
+		\def\tempspecialrules{Cette figurine gagne \vanguard{} et \ambush{}. {Avant le début de la partie, vous pouvez} choisir une unité de Barbares qui possède la même Marque que le \osklanderjarl, celle-ci gagne \vanguard. {Si elle est composée de 25 figurines maximum, elle gagne aussi} \ambush{}. Ce Jarl Barbare doit être déployé dans cette unité}%
+		\specialrules{\tempspecialrules}%		
+		\columnbreak
+		\begin{center}\largerfontsize\antiquefont 				        \makharkhan{} (\pts{30}) - \oneofakind \end{center}%
+		\def\tempspecialrules{Ce Jarl Barbare est monté sur un Cheval de Guerre (gratuitement). Cette figurine gagne {\thunderouscharge}. Si cette figurine rejoint une unité de Cavaliers Barbares, cette unité gagne également \thunderouscharge}%
+		\specialrules{\tempspecialrules}%
+		\end{multicols}
+		\setlength{\columnseprule}{0pt}
+	},	
+}
+
+
+
+
+
+\mountstitle
+
+La section Montures concerne les montures de personnages. Les montures pour non-personnages suivent les règles données dans leur description d'unité.
+
+\showunit{
+	name={Cheval de Guerre},
+	profile={< 8 3 - 3 3 1 3 1 5,},
+	type=\warbeast{},
+	basesize=25x50,
+	specialrules={\fastcavalry},
+	armour={\mountsprotection{6}},
+	options={
+		Peut échanger \fastcavalry{} avec \mountsprotection{5}=10,
+	},
+}
+
+\showunit{
+	name={Monture du Néant},
+	profile={< 8 3 - 4 3 1 3 1 5},
+	type=\warbeast{},
+	basesize=25x50,
+	armour={\mountsprotection{6}, Caparaçon},
+}
+
+\showunit{
+	name={Monture-Démon},
+	profile={< 8 4 - 5 5 3 2 2 8},
+	type=Bête Monstrueuse,
+	basesize=50x50,
+	specialrules={\magicalattacks, \fear},
+	armour={\mountsprotection{6}},
+	options={{Caparaçon}=10},
+}
+
+\showunit{
+	name={Disque du Changement},
+	profile={< 1 3 - 4 4 1 4 3 7},
+	type=Bête de Guerre,
+	basesize=50x50,
+	specialrules={\magicalattacks, \fly{{8}}},
+	armour={\mountsprotection{6}},
+	unitrules={Le Personnage doit posséder la \MarkofChange{}},
+}
+
+\showunit{
+	name={Palanquin de Pestilence},
+	profile={< 4 3 3 3 3 3 3 6 7},
+	type=Infanterie,
+	basesize=50x50,
+	specialrules={\poisonedattacks, \magicalattacks},
+	armour={\mountsprotection{6}},
+	unitrules={Le Personnage doit posséder la \MarkofPestilence{}},
+}
+
+\showunit{
+	name={Broyeur},
+	profile={< 7 5 - 5 4 3 2 3 7},
+	type=Bête Monstrueuse,
+	basesize=50x75,
+	specialrules={\magicalattacks, \fear},
+	armour={\mountsprotection{6}},
+	unitrules={Le Personnage doit posséder la \MarkofWrath{}},
+}
+
+\showunit{
+	name={Monture de Luxure},
+	profile={< 10 3 - 3 3 1 5 1 7},
+	type=Bête de Guerre,
+	basesize=25x50,
+	specialrules={\poisonedattacks, \magicalattacks, \vanguard},
+	armour={\mountsprotection{6}},
+	unitrules={Le Personnage doit posséder la \MarkofLust{}},
+}
+
+\showunit{
+	name={Char de la Ruine},
+	profile={Char < - - - 5 5 4 - - -,
+			 Équipage (1) < - 5 3 4 - - 4 2 8,
+			 Monture du Néant (2) < 8 3 - 4 - - 3 1 -
+			 },
+	type=Char,
+	basesize=50x100,
+	specialrules={\markofthedarkgods{la même marque que celle du Personnage monté, uniquement l'équipage}, {\impacthits{+1}}},
+	unitrules={\unitrule{{\wastelandraiders}}{{N'importe quel Char de la Ruine avec paire de Monture du Néant pris dans l'armée avec une figurine avec cette règle peut être pris en unité de base au lieu d'unité spéciale. \newline Note : Le Personnage doit alors payer 20 pts supplémentaire par unité de ce type prise en choix de base.}}},
+	weapons={Hallebarde (Équipage seulement)},
+	armour={\mountsprotection{6}},
+	options={
+		Caparaçon=20,
+		{\wastelandraiders{} \only{Général}}=\permodel{}<20,
+	},
+}
+
+\showunit{
+	name={Manticore},
+	profile={< 6 5 - 5 5 4 5 3 5},
+	type=Bête Monstrueuse,
+	basesize=50x100,
+	specialrules={\multiplewounds{1D3}{}, \lethalstrike, \frenzy, \largetarget, \fear, {\survivalofthefittest}, \fly{8}},
+}
+
+\showunit{
+	name={Dragon du Néant},
+	profile={< 6 5 1 6 6 6 3 6 9},
+	type=Monstre,
+	basesize=50x100,
+	specialrules={\breathweapon{Force 4, \flamingattacks}, \breathweapon{Force 3, \armourpiercing{3}}, {\survivalofthefittest}, \fly{7}},
+	armour={\innatedefence{3}},	
+}
+
+
+
+
+\coreunitstitle
+
+\showunit{
+	name={Guerriers du Néant},
+	cost={110},
+	profile={< 4 5 3 4 4 1 4 2 8},
+	type=Infanterie,
+	unitsize=10,
+	costpermodel=13,
+	maxmodels=20,
+	basesize=25x25,
+	specialrules={\markofthedarkgods{Chaos Intégral}},
+	armour={Armure de plates, {Bouclier}},
+	options={
+		\optionschoice{Peut remplacer sa marque Chaos Intégral par une autre marque ({max 25 figurines})}{
+			{Changement}=\permodel{}<1,
+			{Courroux}=\permodel{}<2,
+			{Luxure}=\permodel{}<1,
+			{Pestilence}=\permodel{}<3},
+		\optionschoice{Peut avoir (un seul choix)}{
+		{Paire d'armes}=\permodel{}<1,
+		{Arme lourde} =\permodel{}<2,
+		Hallebarde =\permodel{}< 3},
+	},
+    commandgroup={champion=10,  musician=10, banner=10, veteranstandardbearer=yessir},
+}
+
+\showunit{
+	name={Déchus},
+	cost={85},
+	profile={< 6 4 - 4 4 1 4 * 8},
+	type=Infanterie,
+	unitsize=5,
+	costpermodel=15,
+	maxmodels=7,
+	basesize=25x25,
+	specialrules={\randomattacks{1D3}, \frenzy, \immunetopsychology, \markofthedarkgods{Chaos Intégral}, \skirmishers},
+	armour={Armure de plates},
+	options={
+		\optionschoice{Peut remplacer sa marque Chaos Intégral par une autre marque}			{
+			{Changement}=\permodel{}<1,
+			{Courroux}=\permodel{}<2,
+			{Luxure}=\permodel{}<1,
+			{Pestilence}=\permodel{}<3},
+	},
+	commandgroup={champion=10},
+}
+
+\showunit{
+	name={Molosses de Guerre},
+	cost={45},
+	profile={< 7 4 - 3 3 1 3 1 5},
+	type=Bête de Guerre,
+	unitsize=5,
+	maxmodels=30,
+	costpermodel=4,
+	basesize=25x50,
+	specialrules={\poisonedattacks, \vanguard, \insignificant},
+	options={
+		\innatedefence{{5}}=\permodel{}<2,
+	},
+}
+
+\showunit{
+	name={Barbares},
+	cost={70},
+	profile={< 4 4 3 3 3 1 3 1 7},
+	type=Infanterie,
+	unitsize={20},
+	maxmodels={30},
+	costpermodel=5,
+	basesize=25x25,
+	specialrules={\markofthedarkgods{Chaos Intégral}},
+	armour={Armure légère},
+	options={
+		\optionschoice{Peut remplacer sa marque Chaos Intégral par une autre marque}{
+			{Changement}=\permodel{}<1,
+			{Courroux}=\permodel{}<1,
+			{Luxure}=\permodel{}<1,
+			{Pestilence}=\permodel{}<2},
+		{Armes de jet} =\permodel{}<1,
+		\optionschoice{Peut prendre (un seul choix)}{
+		Paire d'armes=\free,
+		Bouclier=\permodel{}<1,
+		Lance {et bouclier}=\permodel{}<1,
+		{Fléau}=\permodel{}<2,
+		Arme lourde=\permodel{}<3,}
+	},
+	commandgroup={champion=10, banner=10, veteranstandardbearer=yessir, musician=10},
+}
+
+\showunit{
+	name={Cavaliers Barbares},
+	cost={75},
+	profile={Barbare < 4 4 3 3 3 1 3 1 7,
+			 Cheval de guerre < 8 3 - 3 3 1 3 1 5},
+	type=Cavalerie,
+	unitsize=5,
+	maxmodels=10,
+	costpermodel=11,
+	basesize=25x50,
+	specialrules={\fastcavalry, \markofthedarkgods{Chaos Intégral, Barbare uniquement}},
+	armour={Armure légère, {\mountsprotection{6}}},
+	options={
+		\optionschoice{Peut remplacer sa marque Chaos Intégral par une autre marque}{
+			{Changement}=\permodel{}<1,
+			{Courroux}=\permodel{}<2,
+			{Luxure}=\permodel{}<2,
+			{Pestilence}=\permodel{}<2},
+		{Peut remplacer \fastcavalry par \mountsprotection{5}}=\permodel{}<1,
+		Bouclier=\permodel{}<1,
+		Armes de jet =\permodel{}<2,
+		\optionschoice{Peut prendre (un seul choix)}{
+		Lance légère =\permodel{}<1,
+		Fléau =\permodel{}<1,},
+	},
+	commandgroup={champion=10, banner=10, veteranstandardbearer=yessir, musician=10},
+}
+
+
+
+
+
+
+\specialunitstitle
+
+\showunit{
+	name={Char de la Ruine},
+	cost={95},
+	profile={Char < - - - 5 5 - - - -,
+			 Équipage (2) < - 5 3 4 - - 4 2 8,
+			 [Monture du Néant (2)] < 8 3 - 4 - 4 3 1 5,
+			 [Bête Broyeuse (1)] < 6 4 - 5 - 6 2 3 6
+			 },
+	type=Char,
+	unitsize=1,
+	basesize=50x100,
+	specialrules={\markofthedarkgods{Chaos Intégral}(Équipage seulement), \impacthits{+1}},
+	unitrules={
+		\unitrule{Bête Broyeuse}{{Une figurine tirée par une Bête Broyeuse gagne les règles \grindingattacks{1D3} \only{Bête Broyeuse}, \fear{} et \mountsprotection{6}. \\
+		Elle peut avoir \mountsprotection{5} pour un coût de 15 pts..}}},
+	armour={Armure de plates},
+	weapons={Hallebarde (Équipage seulement)},
+	options={
+		\optionschoice{Peut remplacer sa marque Chaos Intégral par une autre marque}{
+			{Changement}=10,
+			{Courroux}=10,
+			{Luxure}=20,
+			{Pestilence}=20},
+		\optionschoice{{Doit choisir les montures du Char (un seul choix)}}{
+			{Monture du Néant}=\free,
+			{Bête Broyeuse}=45},
+	}
+}
+
+\showunit{
+	name={Chevaliers de la Destruction},
+	cost={170},	
+	profile={Chevalier < 4 5 3 4 4 1 5 2 8,
+			 Monture du Néant < 8 3 - 4 3 1 3 1 5},
+	type=Cavalerie,
+	unitsize=5,
+	maxmodels=5,
+	costpermodel=32,
+	basesize=25x50,
+	specialrules={\markofthedarkgods{Chaos Intégral}(Chevalier uniquement), \fear},
+	armour={Armure de plates, Bouclier, Caparaçon, \mountsprotection{6}},
+	weapons={Lance de cavalerie (Chevalier uniquement)},
+	options={
+		\optionschoice{Peut remplacer sa marque Chaos Intégral par une autre marque}{
+			{Changement}=\permodel{}<2,
+			{Courroux}=\permodel{}<3,
+			{Luxure}=\permodel{}<3,
+			{Pestilence}=\permodel{}<4},
+		Peut remplacer sa Lance de cavalerie par une Lame démoniaque =\permodel{}<4,
+	},
+	commandgroup={champion=10, banner=10, bannerallowance=50, musician=10},
+}
+
+\showunit{
+	name={Bénis par les Dieux},
+	cost={120},
+	profile={< 4 6 3 4 4 1 5 2 8},
+	type=Infanterie,
+	unitsize=10,
+	maxmodels={15},
+	costpermodel=12,
+	basesize=25x25,
+	specialrules={\immunetopsychology, \chosenbythegods{Chaos Intégral}},
+	armour={Armure de plates, {Bouclier}},
+	options={
+		\optionschoice{Peut remplacer sa marque Chaos Intégral par une autre marque}{
+			{Changement}=\permodel{}<2,
+			{Courroux}=\permodel{}<3,
+			{Luxure}=40,
+			{Pestilence}=\permodel{}<4},
+		\optionschoice{Peut prendre (un seul choix)}{
+		{Paire d'armes}=\permodel{}<1,
+		{Arme lourde}=\permodel{}<2,
+		Hallebarde=\permodel{}<3,
+		},
+	},
+	commandgroup={champion=10, championallowance=25, banner=10, bannerallowance=50, musician=10},
+}
+
+
+
+\showunit{
+	name={Favoris des Dieux},
+	cost={100},
+	profile={< 5 5 3 4 4 3 4 3 8},
+	type=Infanterie Monstrueuse,
+	unitsize=3,
+	maxmodels=6,
+	costpermodel=30,
+	basesize=40x40,
+	specialrules={\chosenbythegods{Chaos Intégral}},
+	armour={Armure de plates},
+	options={
+		\optionschoice{Peut remplacer sa marque Chaos Intégral par une autre marque}{
+			{Changement}=\permodel{}<4,
+			{Courroux}=\permodel{}<6,
+			{Luxure}=50,
+			{Pestilence}=\permodel{}<8},
+		Bouclier=\permodel{}<3,
+		\optionschoice{Peut prendre (un seul choix)}{
+		{Paire d'armes}=\permodel{}<3,
+		{Fléau}=\permodel{}<5,
+		{Hallebarde}=\permodel{}<7,
+		{Arme lourde}=\permodel{}<7,
+		},
+	},
+	commandgroup={champion=10, championallowance=25, banner=10, bannerallowance=25, musician=10},
+}
+
+
+\showunit{
+	name={Arpenteurs de Luxure},
+	cost={{75}},
+	profile={Arpenteur < 4 4 4 3 3 1 5 1 7,
+			 Monture de Luxure < 10 3 - 3 3 1 5 1 7},
+	type=Cavalerie,
+	unitsize=5,
+	maxmodels=10,
+	costpermodel=10,
+	basesize=25x50,
+	specialrules={\poisonedattacks{} (Monture de Luxure uniquement), \fastcavalry{}, \MarkofLust{} \only{Arpenteur}, \lightningreflexes{} (Arpenteur uniquement)},
+	armour={Bouclier, Lance légère, \striderswhip, \mountsprotection{6}},
+	unitrules={\unitrule{\striderswhip}{Arme de tir avec le profil suivant : portée 6", Force de l'utilisateur, \quicktofire{}.\newline {Les unités qui subissent au moins une touche de cette arme {voient leur Initiative réduite à 1 au corps à corps}, et gagnent la règle \stupidity. Ces effets durent jusqu'au début de votre prochaine phase de Tir.}}},
+	commandgroup={champion=10, banner=10, musician=10},
+}
+
+\showunit{
+	name={Trolls des Désolations},
+	cost={100},
+	profile={< 6 3 1 5 4 3 1 3 4},
+	type=Infanterie Monstrueuse,
+	unitsize=3,
+	maxmodels={7},
+	costpermodel=42,
+	basesize=40x40,
+	specialrules={\trollbelch, {\fear}, \regeneration{4}, \stupidity},
+	unitrules={
+		\unitrule{\trollbelch}{À la place de ses attaques normales, n'importe quel Troll  peut choisir d'effectuer une seule attaque qui touche automatiquement, à Force 5 et \armourpiercing{6}.}
+	},
+	options={
+		{Peut recevoir la \MarkofPestilence{}}=\permodel{}<6,
+		Paire d'armes=\permodel{}<3,
+	},
+}
+
+\showunit{
+	name={Centaures-Dragon},
+	cost={205},
+	profile={< 7 4 2 5 5 4 2 3 8},
+	type=Bête Monstrueuse,
+	unitsize=3,
+	maxmodels=2,
+	costpermodel=68,
+	basesize=50x75,
+	specialrules={\markofthedarkgods{Chaos Intégral}, \stomp{2}, \lightningrage},
+	armour={Armure légère, \innatedefence{5}},
+	options={
+		\optionschoice{Peut prendre (un seul choix)}{
+		Paire d'armes=\permodel{}< 3,
+		Hallebarde =\permodel{}< 6,
+		{Arme lourde} =\permodel{}< 10,
+		},
+	},
+	commandgroup={champion=10, banner=10, musician=10},
+}
+
+\showunit{
+	name={Progéniture Mutante},
+	cost={65},
+	profile={< * 3 - 4 5 3 2 * 10},
+	type=Bête Monstrueuse,
+	unitsize=1,
+	basesize=40x40,
+	specialrules={\randomattacks{1D6+1}, \mutantambush, \unbreakable, \markofthedarkgods{Chaos Intégral}, \randommovement{3D6}, \fear},
+	unitrules={\unitrule{\mutantambush}{Cette règle fonctionne comme une \ambush normale avec une règle supplémentaire. Lorsque la Progéniture Mutante entre en jeu, elle peut faire un \randommovement{2D6} comme si elle était dans la sous-phase des Mouvements Obligatoires, mais en traitant toutes les unités (amies comme ennemies) comme des Terrains Infranchissables.}},
+	options={
+		\optionschoice{Peut remplacer sa marque Chaos Intégral par une autre marque}{
+			{Changement}=5,
+			{Courroux}=5,
+			{Luxure}=15,
+			{Pestilence}=10},
+	},
+}
+
+\showunit{
+	name={Bête Sanguinaire},
+	cost=175,
+	profile={< 7 3 0 6 5 5 3 5 4},
+	type=Monstre,
+	unitsize=1,
+	basesize=50x100,
+	specialrules={\frenzy, \hatred, \bloodbeastlink},
+	unitrules={\unitrule{\bloodbeastlink}{Lorsque vous déployez la Bête Sanguinaire, choisissez un personnage de votre armée pour qu'il devienne son maître. Tant que le maître est en vie, la Bête Sanguinaire peut utiliser sa Capacité de Combat et son Commandement. Un personnage ne peut être le maître que d'une Bête Sanguinaire. Une Bête Sanguinaire ne peut recevoir la \inspiringpresence{} du Général.}},
+	armour={\innatedefence{4}},	
+}
+
+
+
+
+
+
+\rareunitstitle
+
+\showunit{
+	name={Broyeurs du Courroux},
+	cost={170},
+	profile={Cavalier < 4 5 3 4 4 1 5 2 8,
+			 Broyeur < 7 5 - 5 4 3 2 3 7},
+	type=Cavalerie Monstrueuse,
+	unitsize=2,
+	maxmodels=3,
+	costpermodel=55,
+	basesize=50x75,
+	specialrules={\magicalattacks{} (Broyeur uniquement), \frenzy{} (Cavalier uniquement), \MarkofWrath{}, \fear},
+	armour={Armure de plates, Bouclier, \mountsprotection{6}},
+	options={
+		\optionschoice{Peut prendre une arme (un seul choix)}{
+		{Lance de cavalerie}=\permodel{}<2,
+		{Lame démoniaque}=\permodel{}<6,}
+	},
+	commandgroup={champion=10, banner=10, bannerallowance=50, musician=10},
+}
+
+\showunit{
+	name={Canon Hurleur},
+	cost={190},
+	profile={< 4 4 3 5 6 5 1 4 7},
+	type=Monstre,
+	unitsize=1,
+	basesize=100x150,
+	specialrules={\hellmortar, \otherworldly, \frenzy, {\daemonicinstability}, \hellscreammortar, {\stubborn}},
+	unitrules={
+		\unitrule{\hellmortar}{Catapulte (\distance{3}) avec le profil suivant : portée \distance{12-60}, Force 4[9], [\multiplewounds{\ordnance}{}], \armourpiercing{1}, {\moveorfire}. Une unité subissant au moins une perte du \hellmortar doit immédiatement effectuer un test de panique, comme si elle avait subi 25\% de perte.}
+		\unitrule{\hellscreammortar}{{Catapulte (\distance{3}) avec le profil suivant : portée \distance{6-24}, Force 3, \armourpiercing{1}. Une unité subissant au moins une perte du \hellmortar doit immédiatement effectuer un test de panique, comme si elle avait subi 25\% de perte.}}},
+	armour={\innatedefence{5}},	
+}
+
+\showunit{
+	name={Autel de Bataille},
+	cost={130},
+	profile={ Prêtre (1) < - 5 3 4 - - 4 2 8,
+			 Porteur (1) < 5 3 - 4 5 5 2 * 7},
+	type=Infanterie Monstrueuse,
+	unitsize=1,
+	basesize=50x100,
+	specialrules={\randomattacks{3D3} (Porteur uniquement), {\lumbering}, \largetarget, \attentionfrombeyond, \markofthedarkgods{Chaos Intégral}, \fear, \wardsave{4}},
+	unitrules={
+	\unitrule{\attentionfrombeyond}{Cette figurine donne {\hardtarget} aux unités amies dans un rayon de \distance{{6}}. Les figurines avec la règle \largetarget{} ne bénéficient pas de cette règle. Cette figurine gagne aussi un effet spécial en fonction de sa \markofthedarkgods{}. Si elle gagne un objet de sort du type Augmentation, alors elle ne peut que cibler les unités amies dont la majorité des figurines partage la même \markofthedarkgods{}, ou les unités avec \markofthedarkgods{Chaos Intégral}. Il en va de même pour les sorts du type Aura.\\
+	\newline
+	\begin{tabular}{M{1.5cm}|m{5cm}}
+	\hline
+	Chaos Intégral & objet de sort (Puissance 5) :\\
+	& contient le sort Ouragan de la Discipline \heavens.\\
+	\hline
+	Changement & objet de sort (Puissance 5) :\\
+	& contient le sort Éclair Fluctuant de la Discipline \change.\\
+	\hline
+	Courroux & Cette figurine donne la règle spéciale \magicresistance{2} à toutes les unités amies {dont la majorité des figurines} {ont \MarkofWrath{}} {ou \markofthedarkgods{Chaos Intégral}} dans les \distance{6}.\\
+	\hline
+	Luxure & objet de sort (Puissance 5) :\\
+	& contient le sort Hystérie de la Discipline \lust.\\
+	\hline
+	Pestilence & objet de sort (Puissance 5) :\\
+	& contient le sort {Miasmes de Pourriture} de la Discipline {\disease}.\\
+	\hline
+	\end{tabular}
+	}
+},
+	armour={Armure lourde, \mountsprotection{6}},
+	options={
+		Peut remplacer sa marque Chaos Intégral par une autre marque = 10,
+	},
+}
+
+\showunit{
+	name={Chimère},
+	cost={200},
+	profile={< 6 4 - 6 5 4 3 7 5},
+	type=Monstre,
+	unitsize=1,
+	basesize=50x100,
+	specialrules={\regeneration{5}, \survivalofthefittest, \fly{8}},
+	armour={\innatedefence{4}},	
+	options={
+		\breathweapon{Force 4, \flamingattacks}=30,
+	},
+}
+
+\showunit{
+	name={Monstruosité à Vortex},
+	cost=175,
+	profile={< 6 4 - 5 5 5 3 * 8},
+	type=Monstre,
+	unitsize=1,
+	basesize=50x100,
+	specialrules={\randomattacks{1D6+2}, \hardtarget, \channel, {\markofthedarkgods{Changement}}, \wardsave{5}, \wavesofchange},
+	unitrules={\unitrule{\wavesofchange}{Les unités ennemies à \distance{6} ou moins d'une figurine avec cette règle spéciale sont affectées par la \fear{} comme si elles étaient en contact avec celle-ci. Chaque unité amie à \distance{6} ou moins d'une figurine avec cette règle spéciale est immunisée à la \fear{}.\newline
+	 Les Sorciers alliés peuvent lancer des sorts du type Dommage à travers cette figurine si elle se trouve dans un rayon de \distance{24} du lanceur. Lorsque le Sorcier utilise cette faculté, mesurez la distance à partir de la Monstruosité à Vortex, et utilisez son arc de vue et sa ligne de vue. Un Sorcier peut lancer des sorts du type Projectile même s'il est engagé en combat tant que la Monstruosité à Vortex ne l'est pas. Si le sort est un fiasco, le Sorcier subit les effets habituels tandis que la Monstruosité à Vortex subit une touche de Force NDP+2.}},
+	armour={\innatedefence{5}},	
+}
+
+
+\showunit{
+	name={Centaure-Dragon Ancien},
+	cost={230},
+	profile={< 7 6 3 6 6 6 4 5 9},
+	type=Monstre,
+	unitsize=1,
+	basesize=50x75,
+	specialrules={\immunetopsychology, \lightningrage, \swiftstride},
+	armour={\innatedefence{4}},	
+	options={
+		{Armure légère}=20,
+		\optionschoice{Peut prendre une seule arme}{
+		{Paire d'armes}= 20,
+		{Arme lourde} =20,
+		{Hallebarde} =20,
+	}},
+}
+
+
+
+\showunit{
+	name={Géant des Désolations},
+	cost=140,
+	profile={Géant des Désolations < 6 3 - 6 5 6 3 * 10},
+	type=Monstre,
+	unitsize=1,
+	basesize=50x75,
+	specialrules={\giantattacks, {\chosenbythegods{Chaos Intégral}}, \immunetopsychology, \stubborn},
+	unitrules={\unitrule{{\chosenbythegods{Changement}}}{{Un \chosenbythegods{Changement} peut devenir Champion pour 90 pts.}}},
+	options={
+		\optionschoice{Peut remplacer sa marque Chaos Intégral par une autre marque}{
+			{Changement}=30,
+			{Courroux}=\free,
+			{Luxure}=60,
+			{Pestilence}=10},
+	},
+	additional={
+		\begin{description}
+			\item[*Attaques de Géant :] Quand un Géant attaque au corps à corps, au lieu d'attaquer normalement, choisissez une unité en contact socle à socle avec lui qui va subir son attaque, lancez 1D6 et consultez ce que donne le résultat de son attaque dans l'une des deux tables ci-dessous en fonction du type de troupe de l'unité. Il est important de noter que l'attaque du Géant compte comme une attaque de corps à corps et suit ainsi normalement les règles des attaques de corps à corps. Le Géant peut également faire son \stomp{} normalement.
+			\setlength\multicolsep{12.0pt plus 4.0pt minus 3pt}
+			\begin{multicols}{2}
+				Si l'unité est de type Infanterie, Bête de Guerre, Nuée, Machine de Guerre, Cavalerie :	
+				\renewcommand{\arraystretch}{1.5}	
+				\begin{center}\begin{tabular}{cl}
+   					\hline
+					1 & Hurle \tabularnewline
+					2 & Saute \tabularnewline
+					3 & Ramasse \tabularnewline
+					4-6 & Frappe \tabularnewline
+					\hline
+				\end{tabular}\end{center}
+				Si l'unité est de type Bête Monstrueuse, Infanterie Monstrueuse, Cavalerie Monstrueuse, Monstre, Monstre Monté, Char :
+				\begin{center}\begin{tabular}{cl}
+					\hline	
+					1 & Hurle \tabularnewline
+					2-3 & Tape comme un sourd \tabularnewline
+					4-6 & Fracasse \tabularnewline
+					\hline
+				\end{tabular}\end{center}
+				\renewcommand{\arraystretch}{1.2} % return to default
+			\end{multicols}
+			\item[Hurle :] Ni le Géant, ni l'unité sélectionnée par le Géant ne peuvent faire d'attaques au cours de cette Phase de Corps à Corps. Les attaques déjà réalisées, incluant celles réalisées simultanément avec cette attaque, ne sont pas concernées. Le camp du Géant gagne automatiquement le combat de 2. Si deux Géants opposés, ou plus, \og Hurlent \fg , le résultat du combat est un match nul.
+			\item[Saute :]  L'unité sélectionnée subit 1D6 touches avec la Force du Géant. Le Géant doit faire un test de Terrain Dangereux (1).
+			\item[Ramasse :] Choisissez une figurine dans l'unité préalablement sélectionnée et en contact socle à socle avec le Géant. Cette figurine doit faire un test de Force et un test de Capacité de Combat. Pour chaque test raté, la figurine subit une touche avec la Force du Géant et suivant la règle spéciale \multiplewounds{1D3}{}.
+			\item[Frappe :] Le Géant fait 2D6 attaques sur l'unité qu'il a préalablement choisie.
+			\item [Tape comme un sourd :] Choisissez une figurine en contact socle à socle avec le Géant dans l'unité préalablement sélectionnée. Cette figurine doit faire un test d'Initiative. Si elle échoue, la figurine subit 2D6 blessures avec la règle spéciale \armourpiercing{6}.
+			\item[Fracasse :] Choisissez une figurine dans l'unité préalablement sélectionnée et en contact socle à socle avec le Géant. Cette figurine subit une blessure avec la règle spéciale \armourpiercing{6}. Si la figurine n'a pas encore attaqué, elle ne peut pas le faire au cours de cette manche. Si la figurine a déjà réalisé ses attaques, elle ne pourra pas attaquer au cours du tour à venir de l'autre joueur.
+		\end{description}
+	},
+}
