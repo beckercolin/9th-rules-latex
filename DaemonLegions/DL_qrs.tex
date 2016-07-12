@@ -1,0 +1,96 @@
+
+\renewcommand{\QRSprinttab}[1]{%
+	\global\booltrue{whiterow}%
+	\DTLforeach*[#1]%
+	{profiles}{\rowname=name, \rowtrooptype=trooptype, \rowcategory=category, \rowprofile=profile, \rowmulti=multipleprofile, \rowalliancepic=alliancepic}{%
+      		\QRSprintline{\rowname}{\rowcategory}{\rowprofile}{\rowmulti}%
+	}%
+}%
+
+\renewcommand{\QRScheckifempty}[1]{%
+	\global\booltrue{QRSisempty}%
+	\DTLforeach*[#1]%
+	{profiles}{\rowname=name, \rowtrooptype=trooptype, \rowcategory=category, \rowprofile=profile, \rowmulti=multipleprofile, \rowalliancepic=alliancepic}{%
+		\global\boolfalse{QRSisempty}\dtlbreak%
+	}%
+}%
+
+\begin{center}
+{\antiquefont\bfseries \labels@lordsInitial}\spacebeforecolon{}: \labels@lords{} - %
+{\antiquefont\bfseries \labels@heroesInitial}\spacebeforecolon{}: \labels@heroes{} - %
+{\antiquefont\bfseries \labels@coreunitsInitial}\spacebeforecolon{}: \labels@coreunits{} - %
+{\antiquefont\bfseries \labels@specialunitsInitial}\spacebeforecolon{}: \labels@specialunits{} - %
+{\antiquefont\bfseries \labels@rareunitsInitial}\spacebeforecolon{}: \labels@rareunits{} - %
+{\antiquefont\bfseries \labels@mountsInitial}\spacebeforecolon{}: \labels@charactermounts{} \labels@only{}%
+\end{center}
+
+\begin{multicols}{2}\raggedcolumns
+
+\begin{center}\includegraphics[width=1.2cm]{pics/truechaos.png}\end{center}
+
+\QRScheckifempty{%
+	\DTLiseq{\rowalliancepic}{truechaos}%
+}%
+\QRSifnotempty{%
+	\QRSstarttab{\truechaos}%
+	\QRSprinttab{%
+		\DTLiseq{\rowalliancepic}{truechaos}%
+	}%
+	\QRSclosetab{}%
+}%
+
+\begin{center}\includegraphics[width=1.2cm]{pics/change.png}\end{center}
+
+\QRScheckifempty{%
+	\DTLiseq{\rowalliancepic}{change}%
+}%
+\QRSifnotempty{%
+	\QRSstarttab{\dchange}%
+	\QRSprinttab{%
+		\DTLiseq{\rowalliancepic}{change}%
+	}%
+	\QRSclosetab{}%
+}%
+
+\begin{center}\includegraphics[width=1.2cm]{pics/wrath.png}\end{center}
+
+\QRScheckifempty{%
+	\DTLiseq{\rowalliancepic}{wrath}%
+}%
+\QRSifnotempty{%
+	\QRSstarttab{\wrath}%
+	\QRSprinttab{%
+		\DTLiseq{\rowalliancepic}{wrath}%
+	}%
+	\QRSclosetab{}%
+}%
+
+\begin{center}\includegraphics[width=1.2cm]{pics/lust.png}\end{center}
+
+\QRScheckifempty{%
+	\DTLiseq{\rowalliancepic}{lust}%
+}%
+\QRSifnotempty{%
+	\QRSstarttab{\dlust}%
+	\QRSprinttab{%
+		\DTLiseq{\rowalliancepic}{lust}%
+	}%
+	\QRSclosetab{}%
+}%
+
+\begin{center}\includegraphics[width=1.2cm]{pics/pestilence.png}\end{center}
+
+\QRScheckifempty{%
+	\DTLiseq{\rowalliancepic}{pestilence}%
+}%
+\QRSifnotempty{%
+	\QRSstarttab{\pestilence}%
+	\QRSprinttab{%
+		\DTLiseq{\rowalliancepic}{pestilence}%
+	}%
+	\QRSclosetab{}%
+}%
+
+\ifdef{\QRSnote}{\QRSnote}{}
+
+\end{multicols}

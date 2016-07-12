@@ -135,6 +135,7 @@
 \newcommand{\profiledtbfillcategory}[1]{\DTLnewdbentry{profiles}{category}{#1}}
 \newcommand{\profiledtbfilltrooptype}[1]{\DTLnewdbentry{profiles}{trooptype}{#1}}
 \newcommand{\profiledtbfillinvocation}[1]{\DTLnewdbentry{profiles}{invocation}{#1}}
+\newcommand{\profiledtbfillalliancepic}[1]{\DTLnewdbentry{profiles}{alliancepic}{#1}}
 \newcommand{\profiledtbfillprofile}[1]{\DTLnewdbentry{profiles}{profile}{#1}}
 \newcommand{\profiledtbfillmultipleprofile}[1]{\DTLnewdbentry{profiles}{multipleprofile}{#1}}
 
@@ -744,6 +745,7 @@
 \define@key{unit}{equipment}{\def\unit@equipment{#1}}
 \define@key{unit}{alignment}{\def\unit@alignment{#1}}
 \define@key{unit}{alliance}{\def\unit@alliance{#1}}
+\define@key{unit}{alliancepic}{\def\unit@alliancepic{#1}}
 \define@key{unit}{allianceoptions}{\def\unit@allianceoptions{#1}}
 \define@key{unit}{greenhiderace}{\def\unit@greenhiderace{#1}}
 \define@key{unit}{weapons}{\def\unit@weapons{#1}}
@@ -819,7 +821,7 @@
 
 \newcommand{\defunit}{
 	\setkeys{unit}{%
-		notinQRS=, name=, QRSname=, profile=, cost=, invocation=, costpermodel=, maxmodels=, type=, unitsize=, basesize=, commonspecialrules=, commontype=, commonspecialrulesB=, commontypeB=, specialrules=, magiclevel=, magicpaths=, alignment=, alliance=, allianceoptions=, greenhiderace=, equipment=, weapons=, armour=, wizardconclave=, unitequipment=, options=, mounts=, commandgroup=, unitrules=, additional=%
+		notinQRS=, name=, QRSname=, profile=, cost=, invocation=, costpermodel=, maxmodels=, type=, unitsize=, basesize=, commonspecialrules=, commontype=, commonspecialrulesB=, commontypeB=, specialrules=, magiclevel=, magicpaths=, alignment=, alliance=, alliancepic=, allianceoptions=, greenhiderace=, equipment=, weapons=, armour=, wizardconclave=, unitequipment=, options=, mounts=, commandgroup=, unitrules=, additional=%
 	}%
 	\setkeys{unit}%
 }
@@ -860,7 +862,14 @@
 		\vspace*{-0.3cm}{\setlength{\parskip}{0.3cm}
 		\expandafter\ifblank\expandafter{\unit@alignment}{}{\noindent\parbox{\columnwidth}{\alignment{\unit@alignment}}}
 
-		\expandafter\ifblank\expandafter{\unit@alliance}{}{\noindent\parbox{\columnwidth}{\alliance{\unit@alliance}}}
+		\expandafter\ifblank\expandafter{\unit@alliance}{}{\noindent\parbox{\columnwidth}{%
+		\begin{minipage}[c][][b]{0.045\textwidth}%
+			\includegraphics[width=\textwidth]{pics/\unit@alliancepic.png}%
+		\end{minipage}%
+		\hspace*{0.15cm}\begin{minipage}[c]{0.40\textwidth}%
+			\alliance{\unit@alliance}%
+		\end{minipage}\vspace*{-0.1cm}%
+		}}
 		
 		\expandafter\ifblank\expandafter{\unit@allianceoptions}{}{\noindent\parbox{\columnwidth}{\expandafter\allianceoptions\expandafter{\unit@allianceoptions}}}
 		
@@ -902,6 +911,7 @@
 	\expandafter\profiledtbfillcategory\expandafter{\profilecategory}%
 	\expandafter\profiledtbfilltrooptype\expandafter{\unit@type}%
 	\expandafter\ifblank\expandafter{\unit@invocation}{}{\expandafter\profiledtbfillinvocation\expandafter{\unit@invocation}}%
+	\expandafter\ifblank\expandafter{\unit@alliancepic}{}{\expandafter\profiledtbfillalliancepic\expandafter{\unit@alliancepic}}%
 	\expandafter\profiledtbfillcarac\expandafter{\unit@profile}
 	}{}%
 }

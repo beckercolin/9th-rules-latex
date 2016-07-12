@@ -97,7 +97,7 @@
 \newcommand{\sirens}{Sirènes}
 \newcommand{\tallyman}{Spoliateur}
 \newcommand{\tallymen}{Spoliateurs}
-\newcommand{\slaughterer}{Massacreurs}
+\newcommand{\slaughterer}{Massacreur}
 \newcommand{\slaughterers}{Massacreurs}
 
 
@@ -108,12 +108,12 @@
 \newcommand{\igniter}{Embraseur}
 \newcommand{\igniters}{Embraseurs}
 \newcommand{\skyserpent}{Ophidien Volant}
-\newcommand{\skyserpents}{Ophidien Volants}
+\newcommand{\skyserpents}{Ophidiens Volants}
 \newcommand{\mountedsiren}{Sirène Montée}
 \newcommand{\mountedsirens}{Sirènes Montées}
 \newcommand{\sirenchariot}{Char des Sirènes}
-\newcommand{\claudedfiend}{Démon Griffu}
-\newcommand{\claudedfiends}{Démons Griffus}
+\newcommand{\clawedfiend}{Démon Griffu}
+\newcommand{\clawedfiends}{Démons Griffus}
 \newcommand{\pestilentbeast}{Bête Pestilentielle}
 \newcommand{\pestilentbeasts}{Bêtes Pestilentielles}
 \newcommand{\plagueling}{Bambin Pesteux}
@@ -176,11 +176,12 @@
 \newcommand{\daemonicitems}{Objets Démoniaques}
 \newcommand{\heroesandtheirmounts}{Héros et leurs Montures}
 \newcommand{\seeblazingchariotrareunit}{(voir l'Unité Rare \blazingchariot{})}
-\newcommand{\ifthegeneralbelongstothesamedarkgodmaytake}{\optionschoice{Si le Général est de même affiliation{,} peut prendre :}}
-\newcommand{\mayreplacebloodswordwithhellbladeandinnatedefence}{Remplacer l'\bloodsword{} par la \hellblade{} et \innatedefence{5}}
-\newcommand{\inamonotheistarmymaytake}{\optionschoice{Si c'est une Armée Monothéiste il peut prendre :}}
-\newcommand{\mayreplacebloodswordwithhellbladerideronlyandinnatedefence}{Remplacer l'\bloodsword{} par la \hellblade{} \only{\rider{}} et \innatedefence{5}}
-\newcommand{\temptressmaytakealashoflust}{La \temptress{} peut prendre un \lashoflust{}}
+\newcommand{\ifthegeneralbelongstothesamedarkgod}{Si le Général a la même allégeance que l'unité{,}}
+\newcommand{\mayreplacebloodswordwithhellbladeandinnatedefence}{Remplacer l'\bloodsword{} par\newline une \hellblade{} et \innatedefence{5}}
+\newcommand{\inamonotheistarmymaytake}{Si l'armée est Monothéiste{,}}
+\newcommand{\mayreplacebloodswordwithhellbladerideronlyandinnatedefence}{Remplacer l'\bloodsword{} par\newline une \hellblade{} et \innatedefence{5}}
+\newcommand{\maytakeoneartilleryweapon}{Peut prendre une \artilleryweapon{} :}
+\newcommand{\lashoflust}{Fouet de Luxure}
 
 
 % Profile rules
@@ -205,70 +206,83 @@ Le Sorcier a un bonus de +1 supplémentaire pour lancer ses sorts.
 }
 
 \newcommand{\firestormrule}{%
-Arme de tir : \range{18}, Force 4, \multipleshots{1D3}, \quicktofire{}.
+Arme de Tir. \range{18}, \Strength{} 4, \multipleshots{1D3}, \quicktofire{}.
 }
 
 \newcommand{\slashingrule}{%
-\sweepingattack{}, l'unité ennemie subit 1D3 touche Force 3 par \skyserpent{} de l'unité.
+\sweepingattack{}. L'unité ennemie subit 1D3 touches de Force 3 par \skyserpent{} de l'unité.
 }
 
 \newcommand{\hellishreaperrule}{%
 \textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline
-\range{12}, Force 4, \armourpiercing{3}, \multipleshots{2D6}.
+\range{12}, \Strength{} 4, \armourpiercing{3}, \multipleshots{2D6}.
 }
 
 \newcommand{\hellishbreathrule}{%
 \textbf{\artilleryweapon} de type \textbf{\flamethrower}.\newline
-\range{8}, Force 4, \flamingattacks{}. Ignorez le malus de -1 sur le tableau des incidents d'\artilleryweapon.
+\range{8}, \Strength{} 4, \flamingattacks{}. Ignorez le malus de -1 sur la Table des Incidents de Tir.
 }
 
 \newcommand{\hellishbombardrule}{%
-\textbf{\artilleryweapon} de type \textbf{\catapult} (\distance{3}).\newline
-\range{12-60}, Force 3[9], [\multiplewounds{\ordnance}{}].
+\textbf{\artilleryweapon} de type \textbf{\catapult{} (\distance{3})}.\newline
+\range{12-60}, \Strength{} 3 [9], [\multiplewounds{\ordnance}{}].
 }
 
 \newcommand{\hellishboltrule}{%
 \textbf{\artilleryweapon} de type \textbf{\boltthrower}.\newline
-\range{48}, Force 6, \multiplewounds{1D3}{}, \armourpiercing{6}.
+\range{48}, \Strength{} 6, \multiplewounds{1D3}{}, \armourpiercing{6}.
 }
 
 \newcommand{\searingfirestormrule}{%
-Cette arme peut être employée de deux manières :
+Cette arme peut être utilisée de deux manières :
 \begin{itemize}[label={-}]
-	\item Comme une \textbf{\artilleryweapon} de type \textbf{\boltthrower} (\distance{2D6}).\newline
-		\range{24}, Force 4+1D3*, \multiplewounds{1D3}{}, \armourpiercing{6}.
+	\item Comme une \textbf{\artilleryweapon} de type \textbf{\boltthrower}.\newline
+		\range{24}, \Strength{} 4+1D3\refsymbol{}, \multiplewounds{1D3}{}, \armourpiercing{6}.
 	\item Comme une \textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline
-		\range{12}, Force 2+1D3*, \multipleshots{6}.
+		\range{24}, \Strength{} 2+1D3\refsymbol{}, \multipleshots{6}.
 \end{itemize}
-* Lancez une fois par phase de tir (après que les jets pour toucher aient été lancés) et appliquez cette Force à toutes les touches faites par cette arme. 
+
+\refsymbol{} Lancez le dé une fois par Phase de Tir, après avoir déterminé les touches, et appliquez cette Force à toutes les touches de la phase. 
 }
 
 \newcommand{\auraofecstasyrule}{%
-Toutes les figurines \daemonoflust{} engagées dans le même combat qu'une figurine avec cette règle (y compris elle-même) gagnent \lightningreflexes{}.
+Tous les Démons de la \dlust{} alliés engagés dans le même combat que la figurine gagnent la règle \lightningreflexes{}, y compris la figurine elle-même.
 }
 
 \newcommand{\soulreaperrule}{%
-Les \impacthits{} infligées par un \carnalchariot{} gagnent \armourpiercing{6}. De plus, l'\oracle{} gagne +1 Attaque pour chaque blessure non sauvegardée causée par les \ímpacthits{} du \chariot{}. Ces Attaques sont perdues à la fin de la manche de combat.
+Les \impacthits{} infligées par la figurine ont la règle \armourpiercing{6}. De plus, l'\oracle{} gagne +1 Attaque pour chaque blessure non sauvegardée causée par ces \impacthits{}. Ces attaques supplémentaires sont perdues à la fin de la Manche de Corps à Corps.
 }
 
 \newcommand{\incineratorrule}{%
-Une figurine équipée d'un \incinerator{} gagne \fireborn{}.\newline
 \textbf{\artilleryweapon} de type \textbf{\flamethrower}.\newline
-\range{8}, Force 4, \flamingattacks{}.
+\range{8}, \Strength{} 4, \flamingattacks{}.
+
+\vspace*{5pt}
+La figurine gagne la règle \fireborn{}.
 }
 
 \newcommand{\brasscannonrule}{%
-Ne peut être pris que si le Général est un \daemonofwrath{}. \newline
-\textbf{\artilleryweapon} de type \textbf{\cannon}(\distance{1D6}).\newline
-\range{48}, Force 10, \flamingattacks{}, \multiplewounds{\ordnance}{}, \armourpiercing{2}, \multipleshots{2D6}.\newline
-Si le \bloodchariot{} ne fait que pivoter (et aucun autre mouvement), il ne subit pas de malus pour mouvement et tir.
+Ne peut être pris que si le Général est un \daemonofwrath{}.
+
+\vspace*{5pt}
+\textbf{\artilleryweapon} de type \textbf{\cannon{} (\distance{1D6})}.\newline
+\range{48}, \Strength{} 10, \flamingattacks{}, \multiplewounds{\ordnance}{}, \armourpiercing{2}.
+
+\vspace*{5pt}
+Si le \bloodchariot{} ne fait que des Pivots et n'effectue aucun mouvement supplémentaire, il ne souffre pas de la pénalité pour bouger et tirer.
 }
 
 \newcommand{\bloodfeastrule}{%
-À chaque fois que cette figurine effectue avec succès une charge, toutes les unités amies \daemonofwrath{} engagées dans le même combat qu'elle gagnent \frenzy jusqu'à la fin de cette phase de combat.
+À chaque fois que cette figurine réussit une charge, tous les Démons du \wrath{} engagés dans le même combat qu'elle gagnent la règle \frenzy{} jusqu'à la fin de la Phase de Corps à Corps.
 }
 
+\newcommand{\firstnote}{1}
+\newcommand{\secondnote}{2}
+\newcommand{\QRSnote}{%
+\noindent$^{\firstnote}$ Un membre d'équipage de moins quand il sert de monture.
 
+\noindent$^{\secondnote}$ Pas d'\igniter{} quand il sert de monture.
+}
 
 
 
@@ -325,7 +339,7 @@ Les Démons sont différents en fonction de leur allégeance à un Dieu Sombre. 
 
 \spacebetweenalliance{}
 
-\alliancesidepic{logo_big_DL.png}
+\alliancesidepic{truechaos.png}
 \hfill\alliancestartsidetext{Démon du \truechaos}
 Aucun effet supplémentaire.
 \allianceclosesidetext{}
@@ -612,25 +626,34 @@ Le porteur peut choisir de générer ses sorts depuis n'importe laquelle des Dis
 \noindent{\antiquefont\Largefontsize\textbf{Armes de Tir des Démons}}
 \medskip
 
-%chariot crews
-
-%\rowcolors{1}{white}{black!10}
-%\noindent\begin{tabular}{lcccccc}
-%\textbf{Nom} & \textbf{Artillerie} & \textbf{Portée} & \textbf{\labels@S{}} & \textbf{\multipleshots{}} & \textbf{\multiplewounds{}} & \textbf{\armourpiercing{}} \tabularnewline
-%\firebolts{} & - & \distance{24} & 3 & - & - & - \tabularnewline
-%\firestorm{} & - & \distance{18} & 4 & 1D3 & - & - \tabularnewline
-%\hellishreaper{} & \volleygun{} & \distance{12} & 4 & 2D6 & - & 3 \tabularnewline
-%\hellishbreath{} & \flamethrower{} & \distance{8} & 4 & - & - & - \tabularnewline
-%\hellishbombard{} & \catapult{} (\distance{3})& \distance{12-60} & 3[9] & - & [\ordnance{}] & - \tabularnewline
-%\hellishbolt{} & \boltthrower{} & \distance{48} & 6 & - & 1D3 & 6 \tabularnewline
-%\searingfirestorm{} (1) & \boltthrower{} & \distance{24} & 4+1D3 & - & 1D3 & 6 \tabularnewline
-%\searingfirestorm{} (2) & \volleygun{} & \distance{24} & 2+1D3 & 6 & - & - \tabularnewline
-%\incinerator{} & \flamethrower{} & \distance{8} & 4 & - & - & - \tabularnewline
-%{} & \cannon{} (\distance{1D6}) & \distance{48} & 10 & - & \ordnance{} & 2 \tabularnewline
-%\end{tabular}
-
-\medskip
+\rowcolors{1}{white}{black!10}
+\noindent\begin{tabular}{lcccccc}
+\textbf{Nom} & \textbf{Artillerie} & \textbf{Portée} & \textbf{\labels@S{}} & \textbf{\multipleshots{}} & \textbf{\multiplewounds{}} & \textbf{\armourpiercing{}} \tabularnewline
+\firebolts{} & - & \distance{24} & 3 & - & - & - \tabularnewline
+\firestorm{} & - & \distance{18} & 4 & 1D3 & - & - \tabularnewline
+\searingfirestorm{} (1) & \boltthrower{} & \distance{24} & 4 + 1D3 & - & 1D3 & 6 \tabularnewline
+\searingfirestorm{} (2) & \volleygun{} & \distance{24} & 2 + 1D3 & 6 & - & - \tabularnewline
+\incinerator{} & \flamethrower{} & \distance{8} & 4 & - & - & - \tabularnewline
+\brasscannon{} & \cannon{} (\distance{1D6}) & \distance{48} & 10 & - & \ordnance{} & 2 \tabularnewline
+\hellishreaper{} & \volleygun{} & \distance{12} & 4 & 2D6 & - & 3 \tabularnewline
+\hellishbreath{} & \flamethrower{} & \distance{8} & 4 & - & - & - \tabularnewline
+\hellishbombard{} & \catapult{} (\distance{3}) & \distance{12-60} & 3 [9] & - & [\ordnance{}] & - \tabularnewline
+\hellishbolt{} & \boltthrower{} & \distance{48} & 6 & - & 1D3 & 6 \tabularnewline
+\end{tabular}
 \end{center}
+
+\renewcommand{\labels@quickrefsheet}{Fiche de référence monothéiste}
+\renewcommand{\firstnote}{2}
+\renewcommand{\secondnote}{1}
+\renewcommand{\QRSnote}{%
+\noindent$^{\secondnote}$ Pas d'\igniter{} quand il sert de monture.
+
+\noindent$^{\firstnote}$ Un membre d'équipage de moins quand il sert de monture.
+}
+
+\quickrefsheettitle
+
+\input{DL_qrs.tex}
 
 \restoregeometry
 
