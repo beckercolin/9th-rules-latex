@@ -2,8 +2,21 @@
 
 \newcommand{\booktitle}{Elfes des Ténèbres}
 \newcommand{\version}{0.99.9}
-\newcommand{\frenchversion}{2.2}
+\newcommand{\frenchversion}{2.3}
 \newcommand{\booklogo}{pics/logo_big_DE.png}
+\newcommand{\tocfirstcolumn}{%
+\tocentry{specialrulestitle}{\labels@armyspecialrules}
+
+\tocentry{cultstitle}{Cultes}
+
+\tocentry{armourytitle}{\labels@armoury}
+
+\tocentry{magicalitemstitle}{\labels@magicalitems}
+
+\tocentry{lordtitle}{\labels@armylist}
+
+\tocentry{QRStitle}{\labels@quickrefsheet}
+}
 
 % Army special rules
 
@@ -29,9 +42,27 @@
 \newcommand{\cultrivalry}{Cultes Rivaux}
 \newcommand{\cultistgeneral}{Zélote}
 
+% Magical Items
+
+\newcommand{\headmansaxe}{Hache du Bourreau}
+\newcommand{\beastmasterslash}{Fouet de Domination}
+
+\newcommand{\crimsonmail}{Armure Pourpre}
+
+\newcommand{\midnightcloak}{Manteau de Minuit}
+\newcommand{\amuletofspite}{Amulette Malveillante}
+
+\newcommand{\ringofshadows}{Anneau d'Obscurité}
+
+\newcommand{\daggerofmoraec}{Dague de Moraec}
+\newcommand{\wanderingfamiliar}{Familier Mystique}
+
+\newcommand{\bannerofgardaecos}{Étendard de Gar Daecos}
+\newcommand{\bannerofblood}{Bannière Ensanglantée}
+
 % Army common type special rules
 
-\newcommand{\elvencommonrules}{Règles spéciales Elfes}
+\newcommand{\elvencommonrules}{Règles Spéciales des Elfes}
 
 % Other Rules
 
@@ -65,50 +96,11 @@
 
 \newcommand{\dreadprince}{Oppresseur}
 \newcommand{\exaltedoracle}{Oracle Exalté}
+
 \newcommand{\captain}{Tourmenteur}
 \newcommand{\cultpriest}{Prêtresse du Culte}
 \newcommand{\oracle}{Oracle}
 \newcommand{\assassin}{Assassin}
-
-% Core
-
-\newcommand{\dreadlegionnaire}{Légionnaire Sadique}
-\newcommand{\dreadlegionnaires}{Légionnaires Sadiques}
-\newcommand{\repeaterauxiliary}{Perce-Cœur}
-\newcommand{\repeaterauxiliaries}{Perce-Cœurs}
-\newcommand{\corsair}{Corsaire}
-\newcommand{\corsairs}{Corsaires}
-\newcommand{\darkraider}{Pillard des Ténèbres}
-\newcommand{\darkraiders}{Pillards des Ténèbres}
-\newcommand{\bladeofnabh}{Lame de Nabh}
-\newcommand{\bladesofnabh}{Lames de Nabh}
-
-% Special
-
-\newcommand{\dancerofyema}{Danseuse de Yema}
-\newcommand{\dancersofyema}{Danseuses de Yema}
-\newcommand{\executioner}{Bourreau}
-\newcommand{\executioners}{Bourreaux}
-\newcommand{\towerguard}{Garde des Tours Noires}
-\newcommand{\harpie}{Harpie}
-\newcommand{\harpies}{Harpies}
-\newcommand{\dreadknight}{Chevalier Prédateur}
-\newcommand{\dreadknights}{Chevaliers Prédateurs}
-\newcommand{\raptorchariot}{Char Prédateur}
-\newcommand{\medusa}{Méduse}
-\newcommand{\medusas}{Méduses}
-\newcommand{\divinealtar}{Autel Divin}
-
-% Rare
-
-\newcommand{\darkacolytes}{Disciples des Arts Interdits}
-\newcommand{\darkacolyte}{Disciple des Arts Interdits}
-\newcommand{\kraken}{Kraken}
-\newcommand{\hydra}{Hydre}
-\newcommand{\huntingchariot}{Char Veneur}
-\newcommand{\dreadreaper}{Baliste Écorcheuse}
-\newcommand{\ravencloak}{Rôdeur de l'Ombre}
-\newcommand{\ravencloaks}{Rôdeurs de l'Ombre}
 
 % Mounts
 
@@ -117,6 +109,62 @@
 \newcommand{\pegasus}{Pégase}
 \newcommand{\manticore}{Manticore}
 \newcommand{\dragon}{Dragon}
+
+% Core
+
+\newcommand{\dreadlegionnaire}{Légionnaire Sadique}
+\newcommand{\dreadlegionnaires}{Légionnaires Sadiques}
+
+\newcommand{\repeaterauxiliary}{Perce-Cœur}
+\newcommand{\repeaterauxiliaries}{Perce-Cœurs}
+
+\newcommand{\corsair}{Corsaire}
+\newcommand{\corsairs}{Corsaires}
+
+\newcommand{\darkraider}{Pillard des Ténèbres}
+\newcommand{\darkraiders}{Pillards des Ténèbres}
+
+\newcommand{\bladeofnabh}{Lame de Nabh}
+\newcommand{\bladesofnabh}{Lames de Nabh}
+
+% Special
+
+\newcommand{\dancerofyema}{Danseuse de Yema}
+\newcommand{\dancersofyema}{Danseuses de Yema}
+
+\newcommand{\executioner}{Bourreau}
+\newcommand{\executioners}{Bourreaux}
+
+\newcommand{\towerguard}{Garde des Tours Noires}
+
+\newcommand{\harpie}{Harpie}
+\newcommand{\harpies}{Harpies}
+
+\newcommand{\dreadknight}{Chevalier Prédateur}
+\newcommand{\dreadknights}{Chevaliers Prédateurs}
+
+\newcommand{\raptorchariot}{Char Prédateur}
+
+\newcommand{\medusa}{Méduse}
+\newcommand{\medusas}{Méduses}
+
+\newcommand{\divinealtar}{Autel Divin}
+
+% Rare
+
+\newcommand{\darkacolytes}{Disciples des Arts Interdits}
+\newcommand{\darkacolyte}{Disciple des Arts Interdits}
+
+\newcommand{\kraken}{Kraken}
+
+\newcommand{\hydra}{Hydre}
+
+\newcommand{\huntingchariot}{Char Veneur}
+
+\newcommand{\dreadreaper}{Baliste Écorcheuse}
+
+\newcommand{\ravencloak}{Rôdeur de l'Ombre}
+\newcommand{\ravencloaks}{Rôdeurs de l'Ombre}
 
 % Profile names
 
@@ -298,7 +346,7 @@ Si un \beastmaster{} fait partie de l'armée, un unique \kraken{} peut être pri
 
 
 
-\startarmynewsection{Cultes}
+\toctarget{cultstitle}{\startarmynewsection{Cultes}}
 
 \newcommand{\logosize}{4cm}
 \begin{multicols}{2}\raggedcolumns
@@ -353,11 +401,11 @@ Si le Général de l'armée appartient à un Culte, l'armée ne peut pas conteni
 
 \startpricelist
 
-\pricelistitem{Hache du Bourreau}{60/40}\infantry{} uniquement.
+\pricelistitem{\headmansaxe}{60/40}\infantry{} uniquement.
 
 Type : \gw{}. Les attaques portées avec cette arme ont un bonus de +3 en Force (au lieu de +2) et la règle \multiplewounds{2}{}.
 
-\pricelistitem{Fouet de Domination}{35/25}Type : \hw{}. Le porteur gagne +1 Attaque. Les attaques de Corps à Corps effectuées avec cette arme sont toujours résolues avec une Force de 5 (ignorez tout type de modificateur). Toute figurine subissant une blessure non sauvegardée par cette arme voit sa Capacité de Combat réduite à 1 jusqu'à la fin de la Manche de Corps à Corps.
+\pricelistitem{\beastmasterslash}{35/25}Type : \hw{}. Le porteur gagne +1 Attaque. Les attaques de Corps à Corps effectuées avec cette arme sont toujours résolues avec une Force de 5 (ignorez tout type de modificateur). Toute figurine subissant une blessure non sauvegardée par cette arme voit sa Capacité de Combat réduite à 1 jusqu'à la fin de la Manche de Corps à Corps.
 
 \endpricelist
 
@@ -365,7 +413,7 @@ Type : \gw{}. Les attaques portées avec cette arme ont un bonus de +3 en Force 
 
 \startpricelist
 
-\pricelistitem{Armure Pourpre}{20}\infantry{} uniquement.
+\pricelistitem{\crimsonmail}{20}\infantry{} uniquement.
 
 Type : \ha{}. Pour chaque blessure non sauvegardée que le porteur inflige en Corps à Corps, il gagne +1 en Sauvegarde d'Armure pour le reste de la partie. La Sauvegarde d'Armure ne peut pas être mieux que 1+.
 
@@ -375,9 +423,9 @@ Type : \ha{}. Pour chaque blessure non sauvegardée que le porteur inflige en Co
 
 \startpricelist
 
-\pricelistitem{Manteau de Minuit}{50}Le porteur gagne une \wardsave{3} contre les Attaques à Distance uniquement. De plus, le porteur gagne les règles \multiplewounds{1D3}{} et \lethalstrike{} lors de la première Manche de chaque Corps à Corps.
+\pricelistitem{\midnightcloak}{50}Le porteur gagne une \wardsave{3} contre les Attaques à Distance uniquement. De plus, le porteur gagne les règles \multiplewounds{1D3}{} et \lethalstrike{} lors de la première Manche de chaque Corps à Corps.
 
-\pricelistitem{Amulette Malveillante}{35}Si un Sorcier ennemi à moins de \distance{12} tente de lancer un sort, et qu'au moins deux des Dés de Pouvoirs utilisés ont eu pour résultat un double, le lanceur subit un Fiasco, même si la tentative échoue ou le sort est dissipé. Un lancer de sort ne peut générer qu'un seul Fiasco.
+\pricelistitem{\amuletofspite}{35}Si un Sorcier ennemi à moins de \distance{12} tente de lancer un sort, et qu'au moins deux des Dés de Pouvoirs utilisés ont eu pour résultat un double, le lanceur subit un Fiasco, même si la tentative échoue ou le sort est dissipé. Un lancer de sort ne peut générer qu'un seul Fiasco.
 
 \endpricelist
 
@@ -385,7 +433,7 @@ Type : \ha{}. Pour chaque blessure non sauvegardée que le porteur inflige en Co
 
 \startpricelist
 
-\pricelistitem{Anneau d'Obscurité}{40} La figurine du porteur et toutes les figurines d'Infanterie de son unité comptent comme étant à Couvert Léger. Si une figurine affectée par cet objet est déjà à Couvert Léger, elle compte alors comme étant à Couvert Lourd. Les Attaques de Corps à Corps contre une figurine affectée par cet objet sont résolues avec un malus de -1 en Capacité de Combat, jusqu'à un minimum de 1.
+\pricelistitem{\ringofshadows}{40} La figurine du porteur et toutes les figurines d'Infanterie de son unité comptent comme étant à Couvert Léger. Si une figurine affectée par cet objet est déjà à Couvert Léger, elle compte alors comme étant à Couvert Lourd. Les Attaques de Corps à Corps contre une figurine affectée par cet objet sont résolues avec un malus de -1 en Capacité de Combat, jusqu'à un minimum de 1.
 
 \endpricelist
 
@@ -393,9 +441,9 @@ Type : \ha{}. Pour chaque blessure non sauvegardée que le porteur inflige en Co
 
 \startpricelist
 
-\pricelistitem{Dague de Moraec}{35/25}Au début de chacune de vos Phases de Magie, le porteur peut infliger 1D3 blessures sans aucune sauvegarde à son unité. Dans ce cas, les sorts lancés par le porteur voient leur valeur de lancement réduite d'autant que le nombre de blessures infligées de cette manière, jusqu'à la fin de cette Phase de Magie.
+\pricelistitem{\daggerofmoraec}{35/25}Au début de chacune de vos Phases de Magie, le porteur peut infliger 1D3 blessures sans aucune sauvegarde à son unité. Dans ce cas, les sorts lancés par le porteur voient leur valeur de lancement réduite d'autant que le nombre de blessures infligées de cette manière, jusqu'à la fin de cette Phase de Magie.
 
-\pricelistitem{Familier Mystique}{25}Au début de chacune de vos Phases de Magie, placez un Familier, figurine avec un socle de \unit{20x20}{\milli\meter}, à moins de \distance{6} du porteur, et à plus de \distance{1} de toute figurine ou Terrain Infranchissable. Le Familier est de taille Petite. Quand il lance un sort, à l'exception d'un sort lié à un Objet de Sort, le porteur peut choisir de déterminer la ligne de vue, la portée et l'arc frontal depuis le Familier. Il doit utiliser toutes les caractéristiques du Familier ou les siennes, il n'est pas possible de combiner. À la fin de la Phase, retirez le Familier du champ de bataille.
+\pricelistitem{\wanderingfamiliar}{25}Au début de chacune de vos Phases de Magie, placez un Familier, figurine avec un socle de \unit{20x20}{\milli\meter}, à moins de \distance{6} du porteur, et à plus de \distance{1} de toute figurine ou Terrain Infranchissable. Le Familier est de taille Petite. Quand il lance un sort, à l'exception d'un sort lié à un Objet de Sort, le porteur peut choisir de déterminer la ligne de vue, la portée et l'arc frontal depuis le Familier. Il doit utiliser toutes les caractéristiques du Familier ou les siennes, il n'est pas possible de combiner. À la fin de la Phase, retirez le Familier du champ de bataille.
 
 \endpricelist
 
@@ -403,11 +451,11 @@ Type : \ha{}. Pour chaque blessure non sauvegardée que le porteur inflige en Co
 
 \startpricelist
 
-\pricelistitem{Étendard de Gar Daecos}{60}\fleetcommander{} uniquement.
+\pricelistitem{\bannerofgardaecos}{60}\fleetcommander{} uniquement.
 
 Toutes les unités de \corsairs{} et de \dreadlegionnaires{} à moins de \distance{6} du porteur reçoivent un bonus de +1 pour blesser au Corps à Corps.
 
-\pricelistitem{Bannière Ensanglantée}{35}Les éléments de figurine dotés de la règle \killerinstinct{} dans l'unité du porteur peuvent relancer les jets pour blesser ratés ayant donné \result{1} ou \result{2} au Corps à Corps.
+\pricelistitem{\bannerofblood}{35}Les éléments de figurine dotés de la règle \killerinstinct{} dans l'unité du porteur peuvent relancer les jets pour blesser ratés ayant donné \result{1} ou \result{2} au Corps à Corps.
 
 \endpricelist
 

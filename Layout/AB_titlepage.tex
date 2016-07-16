@@ -53,7 +53,27 @@ Beta v\version{} - \today{}}
 
 {\fontsize{10}{12}\selectfont
 
-\ifdef{\labels@introduction}{\labels@introduction}{\vphantom{1pt}}
+\begin{center}\noindent{\Largerfontsize\textbf{\labels@tableofcontents}}\end{center}
+
+\vspace*{0.2cm}\begin{multicols}{2}
+
+\tocfirstcolumn
+
+\vspace*{\fill}\columnbreak
+
+\tocentry{lordtitle}{\labels@lords}
+
+\tocentry{herotitle}{\labels@heroes}
+
+\tocentry{coretitle}{\labels@coreunits}
+
+\tocentry{specialtitle}{\labels@specialunits}
+
+\tocentry{raretitle}{\labels@rareunits}
+
+\vspace*{\fill}\end{multicols}
+
+\ifdef{\labels@introduction}{\vspace{0.7cm}\labels@introduction}{\vphantom{1pt}}
 \vfill
 
 \noindent\newrule{\labels@rulechanges}

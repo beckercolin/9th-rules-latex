@@ -2,8 +2,21 @@
 
 \newcommand{\booktitle}{Hardes Bestiales}
 \newcommand{\version}{0.99.9}
-\newcommand{\frenchversion}{2.1}
+\newcommand{\frenchversion}{2.2}
 \newcommand{\booklogo}{pics/logo_big_BH.png}
+\newcommand{\tocfirstcolumn}{%
+\tocentry{specialrulestitle}{\labels@armyspecialrules}
+
+\tocentry{armourytitle}{\labels@armoury}
+
+\tocentry{totemstitle}{\totems}
+
+\tocentry{magicalitemstitle}{\labels@magicalitems}
+
+\tocentry{lordtitle}{\labels@armylist}
+
+\tocentry{QRStitle}{\labels@quickrefsheet}
+}
 
 
 % Army special rules
@@ -17,28 +30,42 @@
 
 % Army common type special rules
 
-\newcommand{\beastscommonrules}{Règles spéciales des Bêtes}
+\newcommand{\beastscommonrules}{Règles Spéciales des Bêtes}
 
 % Armoury
 
 \newcommand{\soothsayerstaff}{Bâton de Devin}
 \newcommand{\beastaxe}{Hache Bestiale}
 
+% Spells
+
+\newcommand{\wildernessspellone}{Essaim d’Insectes}
+
 % Totems
 
 \newcommand{\totem}{Totem}
 \newcommand{\totems}{Totems}
-
-% Spells
-
-\newcommand{\wildernessone}{Essaim d’Insectes}
-
-% Totems
-
 \newcommand{\gnarledhidetotem}{Totem de la Peau Noueuse}
 \newcommand{\bloodedhorntotem}{Totem de la Corne Sanglante}
 \newcommand{\cloudedeyetotem}{Totem de l’Œil Embué}
 \newcommand{\blackwingtotem}{Totem de l'Aile Noire}
+
+% Magical Items
+
+\newcommand{\theimpaler}{L'Empaleur}
+\newcommand{\leechingblade}{Lame Sangsue}
+
+\newcommand{\aaghorsflayedhide}{Peau Écorchée d'Aaghor}
+
+\newcommand{\pillagericon}{Icône du Pillard}
+\newcommand{\eyeofdominance}{Œil de Domination}
+
+\newcommand{\seedofthedarkforest}{Graine de la Forêt Obscure}
+\newcommand{\gourdofbeetles}{Gourde de Scarabées}
+\newcommand{\darkrain}{Pluie Noire}
+\newcommand{\crownofhorns}{Couronne de Cornes}
+
+\newcommand{\bannerofthewildherd}{Bannière de la Horde Sauvage}
 
 % Other rules
 
@@ -85,7 +112,8 @@
 \newcommand{\wildhornherd}{Harde de Fières-Cornes}
 \newcommand{\wildhornherdSINGULAR}{Fière-Corne}
 \newcommand{\wildhorns}{Fières-Cornes}
-\newcommand{\wildhorn}{Fière-Corne}
+\def\hyp{-\penalty0\hskip0pt\relax}
+\newcommand{\wildhorn}{Fière\hyp{}Corne}
 \newcommand{\mongrelherd}{Harde de Demi-Cornes}
 \newcommand{\mongrelherdSINGULAR}{Demi-Corne}
 \newcommand{\mongrelraider}{Pillard Demi-Corne}
@@ -137,7 +165,7 @@
 % Profile wording
 
 \newcommand{\totembearer}{Porteur de \totem}
-\newcommand{\onlyifnotmounted}{seulement si non monté.}
+\newcommand{\onlyifnotmounted}{seulement si à pied.}
 \newcommand{\replacehalberdwithgw}{Échanger la \halberd{} contre une \gw{}}
 
 
@@ -261,6 +289,7 @@ Au début de chaque Manche de Corps à Corps, chaque unité avec au moins une fi
 \armyspecialruleentry{\drunkard}
 
 Avant de déployer votre armée, choisissez pour chaque unité avec cette règle son état de sobriété : \sober{} ou \drunk{}. Les Personnages avec cette règle ne peuvent rejoindre que des unités l'ayant aussi et étant dans le même état de sobriété.
+
 \begin{multicols}{2}
 	\raggedcolumns
 	\begin{center}{\Largerfontsize\antiquefont\sober{}}\end{center}
@@ -316,7 +345,7 @@ Les touches occasionnées par la règle \stomp{} ne peuvent jamais être distrib
 
 
 
-\startarmynewsectionSP{\totems}
+\toctarget{totemstitle}{\startarmynewsectionSP{\totems}}
 
 \spaceaftersection{}
 
@@ -367,12 +396,12 @@ Les \totems{} sont des améliorations spéciales dont peuvent disposer certains 
 
 \startpricelist
 
-\pricelistitem{L'Empaleur}{40}Personnages sans la règle \ambush{} uniquement.
+\pricelistitem{\theimpaler}{40}Personnages sans la règle \ambush{} uniquement.
 
 Type : \hw{}. Les attaques portées avec cette arme ont +2 en Force lors de la Manche de Corps à Corps directement après que l'unité du porteur a chargé, et uniquement contre l'ennemi qui a été chargé. Cette arme peut aussi être utilisée comme une \textbf{\artilleryweapon} de type \textbf{\boltthrower}.\newline
 \range{18}, \Strength{} 6, \multiplewounds{1D3}{}, \armourpiercing{6}. Les tirs réalisés avec cette arme ne souffrent d'aucun malus pour toucher.
 
-\pricelistitem{Lame Sangsue}{15}\soothsayers{} et \gnarledsoothsayers{} uniquement.
+\pricelistitem{\leechingblade}{15}\soothsayers{} et \gnarledsoothsayers{} uniquement.
 
 Type : \hw{}. Avant que le porteur ne fasse un jet pour un test de Panique, il peut décider de perdre 1 Point de Vie. Cela doit être la première fois que le jet est effectué, il ne peut pas s'agir d'une relance. Le test de Panique est alors automatiquement réussi.
 
@@ -382,7 +411,7 @@ Type : \hw{}. Avant que le porteur ne fasse un jet pour un test de Panique, il p
 
 \startpricelist
 
-\pricelistitem{Peau Écorchée d'Aaghor}{60/50}Type : Aucun. Le porteur gagne +1 en Endurance et la règle \regeneration{4}, mais il ne peut porter aucune armure standard.
+\pricelistitem{\aaghorsflayedhide}{60/50}Type : Aucun. Le porteur gagne +1 en Endurance et la règle \regeneration{4}, mais il ne peut porter aucune armure standard.
 
 \endpricelist
 
@@ -390,9 +419,9 @@ Type : \hw{}. Avant que le porteur ne fasse un jet pour un test de Panique, il p
 
 \startpricelist
 
-\pricelistitem{Icône du Pillard}{25}Les unités alliées à moins de \distance{12} entièrement composées de \razortusks{} ou d'un seul \chariot{}, qui n'est pas une monture de Personnage, gagnent la règle \vanguard{}.
+\pricelistitem{\pillagericon}{25}Les unités alliées à moins de \distance{12} entièrement composées de \razortusks{} ou d'un seul \chariot{}, qui n'est pas une monture de Personnage, gagnent la règle \vanguard{}.
 
-\pricelistitem{Œil de Domination}{15}Le porteur ne peut être touché que sur des \result{6} par les Attaques de Corps à Corps portées par des \swarms{}, \warbeasts{}, \monstrousbeasts{}, \monsters{}, montures de \cavalry{}, de \monstrouscavalry{}, de \riddenmonsters{} ou encore de \chariots{}. Les équipages et cavaliers ne sont pas affectés.
+\pricelistitem{\eyeofdominance}{15}Le porteur ne peut être touché que sur des \result{6} par les Attaques de Corps à Corps portées par des \swarms{}, \warbeasts{}, \monstrousbeasts{}, \monsters{}, montures de \cavalry{}, de \monstrouscavalry{}, de \riddenmonsters{} ou encore de \chariots{}. Les équipages et cavaliers ne sont pas affectés.
 
 \endpricelist
 
@@ -400,13 +429,13 @@ Type : \hw{}. Avant que le porteur ne fasse un jet pour un test de Panique, il p
 
 \startpricelist
 
-\pricelistitem{Graine de la Forêt Obscure}{40}Une seule utilisation. Après le déploiement de tous les joueurs, juste après avoir bougé les unités avec la règle \vanguard{}, le porteur peut placer une seule Forêt sur le champ de bataille,  de taille maximale \distance{10} par \distance{6}. Son centre doit être situé à moins de \distance{12} du porteur, et elle doit être à plus de \distance{1} de toute unité ennemie. Toutes les figurines alliées qui se trouvent même partiellement dans cette Forêt ajoutent +1 aux résultats de leurs jets de lancement pour les sorts de type Amélioration ou Malédiction et les sorts de Totem. Cette règle est une exception à la restriction sur les bonus de lancement des Objets de Sort.
+\pricelistitem{\seedofthedarkforest}{40}Une seule utilisation. Après le déploiement de tous les joueurs, juste après avoir bougé les unités avec la règle \vanguard{}, le porteur peut placer une seule Forêt sur le champ de bataille,  de taille maximale \distance{10} par \distance{6}. Son centre doit être situé à moins de \distance{12} du porteur, et elle doit être à plus de \distance{1} de toute unité ennemie. Toutes les figurines alliées qui se trouvent même partiellement dans cette Forêt ajoutent +1 aux résultats de leurs jets de lancement pour les sorts de type Amélioration ou Malédiction et les sorts de Totem. Cette règle est une exception à la restriction sur les bonus de lancement des Objets de Sort.
 
-\pricelistitem{Gourde de Scarabées}{35}\boundspell{4}. \wildernessone{} (Discipline \wilderness{}).
+\pricelistitem{\gourdofbeetles}{35}\boundspell{4}. \wildernessspellone{} (Discipline \wilderness{}).
 
-\pricelistitem{Pluie Noire}{25}Une seule utilisation. Cet objet s'active automatiquement au début du premier Tour de Jeu, sauf si le porteur n'est pas sur le champ de bataille à ce moment-là. Dans ce cas, l'objet ne peut pas être utilisé. Son effet dure jusqu'au début du prochain Tour de Jeu. Si l'adversaire a eu le second Tour de Joueur, tous les tirs de sa Phase de Tir subissent une pénalité de -2 pour toucher. Ce malus est réduit à -1 si l'adversaire a commencé la partie.
+\pricelistitem{\darkrain}{25}Une seule utilisation. Cet objet s'active automatiquement au début du premier Tour de Jeu, sauf si le porteur n'est pas sur le champ de bataille à ce moment-là. Dans ce cas, l'objet ne peut pas être utilisé. Son effet dure jusqu'au début du prochain Tour de Jeu. Si l'adversaire a eu le second Tour de Joueur, tous les tirs de sa Phase de Tir subissent une pénalité de -2 pour toucher. Ce malus est réduit à -1 si l'adversaire a commencé la partie.
 
-\pricelistitem{Couronne de Cornes}{10}Le porteur, les figurines de son unité ainsi que toutes les figurines qui bénéficient de sa \inspiringpresence{}, si le porteur dispose de cette règle, réussissent automatiquement tous leurs tests d'\primalinstinct{}.
+\pricelistitem{\crownofhorns}{10}Le porteur, les figurines de son unité ainsi que toutes les figurines qui bénéficient de sa \inspiringpresence{}, si le porteur dispose de cette règle, réussissent automatiquement tous leurs tests d'\primalinstinct{}.
 
 \endpricelist
 
@@ -414,7 +443,7 @@ Type : \hw{}. Avant que le porteur ne fasse un jet pour un test de Panique, il p
 
 \startpricelist
 
-\pricelistitem{Bannière de la Horde Sauvage}{25}Une seule utilisation. Peut être activée au début de n'importe quelle Manche de Corps à Corps. Pour la durée de cette manche, tous les \wildhorns{} de l'unité du porteur gagnent +1 en Force.
+\pricelistitem{\bannerofthewildherd}{25}Une seule utilisation. Peut être activée au début de n'importe quelle Manche de Corps à Corps. Pour la durée de cette manche, tous les \wildhorns{} de l'unité du porteur gagnent +1 en Force.
 
 \endpricelist
 
@@ -448,7 +477,7 @@ Type : \hw{}. Avant que le porteur ne fasse un jet pour un test de Panique, il p
 \hurlattack{} (\cyclops{}) & \catapult{} (\distance{3}) & \distance{6-36} & 3 [9] & - & [\ordnance{}] & - \tabularnewline
 \end{tabular}
 
-\bigskip
+\bigskip\medskip
 \noindent{\antiquefont\Largefontsize\textbf{Sorts de Totem}}
 \medskip
 

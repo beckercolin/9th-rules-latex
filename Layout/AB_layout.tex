@@ -40,12 +40,14 @@
 
 %% Page utilities
 \usepackage{multicol}			% Allows to divide a part of the page in multiple columns.
+\usepackage{fancyhdr}		% For custom headers and foot texts
+\pagestyle{fancy}
 	
 %% Others
 \usepackage{keyval}             % Used to create maps of commands/labels/objects.
 	\makeatletter                  % Mandatory for the usage of keyval.
 \usepackage{xstring}            % String parsing, cutting, etc.
-\usepackage{hyperref} % Links in PDF.
+\usepackage[hidelinks]{hyperref} % Links in PDF.
 
 
 %%% Update of the dotfill command to always get dots
@@ -188,31 +190,58 @@
 \newcommand{\textIT}[1]{\textit{\largefontsize{#1}}}
 
 
+%%% Table of Contents %%%
+
+\newcommand{\toctarget}[1]{%
+\phantomsection\label{#1}%
+\hypertarget{#1}%
+}
+
+\newcommand{\tocentry}[2]{%
+\noindent\hyperlink{#1}{#2}\dotfill\pageref{#1}%
+}
+
+
+%%% Headers %%%
+
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{\textcolor{black!30}{%
+\hyperlink{lordtitle}{\labels@lordsInitial}\hspace*{0.4cm}
+\hyperlink{herotitle}{\labels@heroesInitial}\hspace*{0.4cm}
+\hyperlink{coretitle}{\labels@coreunitsInitial}\hspace*{0.4cm}
+\hyperlink{specialtitle}{\labels@specialunitsInitial}\hspace*{0.4cm}
+\hyperlink{raretitle}{\labels@rareunitsInitial}\hspace*{0.4cm}
+}}
+
 %%% Titles %%%
 
 \newcommand{\lordstitle}{%
 \def\logolocalpath{../Layout/pics/logo_lord.png}%
-\bigtitle{\labels@lords}%
+\toctarget{lordtitle}{\bigtitle{\labels@lords}}%
 \renewcommand{\profilecategory}{\labels@lords}%
 }
 \newcommand{\heroestitle}{%
 \def\logolocalpath{../Layout/pics/logo_hero.png}%
-\clearpage\bigtitle{\labels@heroes}%
+\clearpage%
+\toctarget{herotitle}{\bigtitle{\labels@heroes}}%
 \renewcommand{\profilecategory}{\labels@heroes}%
 }
 \newcommand{\coreunitstitle}{%
 \def\logolocalpath{../Layout/pics/logo_core.png}%
-\clearpage\bigtitle{\labels@coreunits}%
+\clearpage%
+\toctarget{coretitle}{\bigtitle{\labels@coreunits}}%
 \renewcommand{\profilecategory}{\labels@coreunits}%
 }
 \newcommand{\specialunitstitle}{%
 \def\logolocalpath{../Layout/pics/logo_special.png}%
-\clearpage\bigtitle{\labels@specialunits}%
+\clearpage%
+\toctarget{specialtitle}{\bigtitle{\labels@specialunits}}%
 \renewcommand{\profilecategory}{\labels@specialunits}%
 }
 \newcommand{\rareunitstitle}{%
 \def\logolocalpath{../Layout/pics/logo_rare.png}%
-\clearpage\bigtitle{\labels@rareunits}%
+\clearpage%
+\toctarget{raretitle}{\bigtitle{\labels@rareunits}}%
 \renewcommand{\profilecategory}{\labels@rareunits}%
 }
 \newcommand{\mountstitle}{%
@@ -221,18 +250,18 @@
 \renewcommand{\profilecategory}{\labels@mounts}%
 }
 
-\newcommand{\startarmywiderules}{\newpage\bigtitle{\labels@armywiderules}\largefontsize}
+\newcommand{\startarmywiderules}{\newpage\toctarget{widerulestitle}{\bigtitle{\labels@armywiderules}}\largefontsize}
 \newcommand{\closearmywiderules}{\normalfontsize}
 \newcommand{\armywideruleentry}[1]{\subtitle{#1}\vspace{5pt}}
 
-\newcommand{\startarmyspecialrules}{\bigtitle{\labels@armyspecialrules}\largefontsize}
+\newcommand{\startarmyspecialrules}{\toctarget{specialrulestitle}{\bigtitle{\labels@armyspecialrules}}\largefontsize}
 \newcommand{\closearmyspecialrules}{\normalfontsize}
 \newcommand{\armyspecialruleentry}[1]{\subtitle{#1}\vspace{5pt}}
 
-\newcommand{\startarmyarmoury}{\bigtitle{\labels@armoury}\largefontsize\subtitle{}}
+\newcommand{\startarmyarmoury}{\toctarget{armourytitle}{\bigtitle{\labels@armoury}}\largefontsize\subtitle{}}
 \newcommand{\closearmyarmoury}{\normalfontsize}
 
-\newcommand{\startarmymagicalitems}{\newpage\largefontsize\bigtitle{\labels@magicalitems}\begin{multicols}{2}\raggedcolumns}
+\newcommand{\startarmymagicalitems}{\newpage\largefontsize\toctarget{magicalitemstitle}{\bigtitle{\labels@magicalitems}}\begin{multicols}{2}\raggedcolumns}
 \newcommand{\closearmymagicalitems}{\end{multicols}\normalfontsize}
 
 \newcommand{\armymagicalweapons}{\subtitle{\labels@magicalweapons}}
@@ -251,8 +280,8 @@
 
 \newcommand{\armylist}{\clearpage}
 
-\newcommand{\quickrefsheettitle}{\clearpage\newgeometry{top=1.6cm, bottom=2cm, left=1cm, right=1cm}\bigtitle{\labels@quickrefsheet}\vspace*{0.4cm}}
-\newcommand{\changelogtitle}{\clearpage\bigtitle{\labels@changelog}\spaceaftersection{}}
+\newcommand{\quickrefsheettitle}{\clearpage\newgeometry{top=1.6cm, bottom=2cm, left=1cm, right=1cm}\toctarget{QRStitle}{\bigtitle{\labels@quickrefsheet}}\vspace*{0.4cm}}
+\newcommand{\changelogtitle}{\clearpage\toctarget{changelogtitle}{\bigtitle{\labels@changelog}}\spaceaftersection{}}
 
 \newcommand{\spaceaftersection}{\vspace{0.8cm}}
 
@@ -261,19 +290,21 @@
 
 %%% Custom lists and description for first sections of the army books
 
-\newcommand{\startpricelist}{\begin{samepage}\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm]}
+\setlength{\columnsep}{1cm}
+
+\newcommand{\startpricelist}{\begin{samepage}\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=10pt]}
 \def\endpricelist{\end{description}\end{samepage}}
 \newcommand{\pricelistitem}[2]{\item \option{\textbf{#1}}{#2}\newline}
 \newcommand{\nopricelistitem}[1]{\item \textbf{#1}\newline}
 
-\newcommand{\startpricelistNSP}{\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm]}
+\newcommand{\startpricelistNSP}{\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=10pt]}
 \def\endpricelistNSP{\end{description}}
 
-\newcommand{\startitemlist}{\begin{multicols}{2}\raggedcolumns\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm]}
+\newcommand{\startitemlist}{\begin{multicols}{2}\raggedcolumns\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=10pt]}
 \def\enditemlist{\end{description}\end{multicols}}
 \newcommand{\listitem}[1]{\item[#1\spacebeforecolon{}:]}
 
-\newcommand{\startitemlistonecol}{\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm]}
+\newcommand{\startitemlistonecol}{\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=10pt]}
 \def\enditemlistonecol{\end{description}}
 \newcommand{\listitemonecol}[1]{\item \textbf{#1\spacebeforecolon{}:}\newline}
 
@@ -858,10 +889,22 @@
 	\noindent\begin{center}\textcolor{black!30}{\rule{\columnwidth}{1pt}}\end{center}
 	\vspace*{-0.2cm}
 	\setlength\multicolsep{0pt}
+	\setlength{\columnsep}{10pt}
 	\begin{multicols}{2}
 		\raggedcolumns
 		\vspace*{-0.3cm}{\setlength{\parskip}{0.3cm}
-		\expandafter\ifblank\expandafter{\unit@alignment}{}{\noindent\parbox{\columnwidth}{\alignment{\unit@alignment}}}
+		\expandafter\ifblank\expandafter{\unit@alignment}{}{\noindent\parbox{\columnwidth}{%
+		\expandafter\ifblank\expandafter{\unit@alliancepic}{
+		\alignment{\unit@alignment}
+		}{
+		\begin{minipage}[c][][b]{0.045\textwidth}%
+			\includegraphics[width=\textwidth]{pics/\unit@alliancepic.png}%
+		\end{minipage}%
+		\hspace*{0.15cm}\begin{minipage}[c]{0.40\textwidth}%
+			\alignment{\unit@alignment}%
+		\end{minipage}\vspace*{-0.1cm}%
+		}
+		}}
 
 		\expandafter\ifblank\expandafter{\unit@alliance}{}{\noindent\parbox{\columnwidth}{%
 		\expandafter\ifblank\expandafter{\unit@alliancepic}{

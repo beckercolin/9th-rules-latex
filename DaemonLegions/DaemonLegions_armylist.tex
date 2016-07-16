@@ -147,7 +147,7 @@
 
 
 \def\logolocalpath{../Layout/pics/logo_hero.png}%
-\clearpage\bigtitle{\heroesandtheirmounts}%
+\clearpage\toctarget{herotitle}{\bigtitle{\heroesandtheirmounts}}%
 \renewcommand{\profilecategory}{\labels@heroes}%
 
 \showunit{
@@ -754,13 +754,12 @@
 \rareunitstitle
 
 \showunit{
-	name={\daemonengine{} (\oneofakind)},
-	QRSname={\daemonengine},
+	name={\daemonengine},
 	cost=230,
 	profile={< 8 3 4 6 6 7 3 4 7},
 	type=\monster{},
 	basesize=150x100,
-	unitsize=1,
+	unitsize=SPECIAL-{\textbf{(\oneofakind)} \labels@Singlemodel{}},
 	alliance={\daemonoftruechaos},
 	alliancepic={truechaos},
 	allianceoptions={introsentence=\mayreplacedaemonoftruechaoswith{}, change=10, lust=10, pestilence=10, wrath=10},
@@ -774,7 +773,8 @@
 	additional={
 		\vspace*{-0.2cm}\begin{center}\maytakeoneartilleryweapon{}\end{center}
 		\setlength{\columnseprule}{0.5pt}
-		\renewcommand{\columnseprulecolor}{\color{black!30}}	
+		\renewcommand{\columnseprulecolor}{\color{black!30}}
+		\setlength{\columnsep}{1cm}
 		\begin{multicols}{2}
 		\raggedcolumns		
 
@@ -851,7 +851,8 @@
 	additional={
 		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
 		\setlength{\columnseprule}{0.5pt}
-		\renewcommand{\columnseprulecolor}{\color{black!30}}	
+		\renewcommand{\columnseprulecolor}{\color{black!30}}
+		\setlength{\columnsep}{1cm}
 		\vspace*{-0.2cm}\begin{multicols}{2}
 		\raggedcolumns		
 
@@ -871,8 +872,7 @@
 }
 
 \showunit{
-	name={\altarofslaughter{} (\oneofakind)},
-	QRSname={\altarofslaughter},
+	name={\altarofslaughter},
 	cost=180,
 	profile={ \chariot{}< - - - 5 6 4 - - -,
 			  \doombringer{} (1)< - 5 3 4 - - 4 2 7,
@@ -880,7 +880,7 @@
 			  \crusher{} (1)< 7 5 - 5 - - 2 3 7},
 	type=\chariot{},
 	basesize=50x100,
-	unitsize=1,
+	unitsize=SPECIAL-{\textbf{(\oneofakind)} \labels@Singlemodel{}},
 	alliance={\daemonofwrath},
 	alliancepic={wrath},
 	commontype=\daemoncommonrules{},
@@ -925,7 +925,7 @@
 \showunit{
 	name={\carnalchariot},
 	cost=110,
-	profile={ \chariot{}< - - - 5 5 5 - - -,
+	profile={ \chariot{}< - - - 4 4 4 - - -,
 			  \oracle{} (1)< - 5 4 3 - - 5 2 7,
 			  \mountedsiren{} (2)< - 5 4 3 - - 5 2 7,
 			  \steed{} (2)< 10 3 - 3 - - 5 1 7},
@@ -966,6 +966,7 @@
 	alliancepic={pestilence},
 	commontype=\daemoncommonrules{},
 	commonspecialrules={\daemonicinstability{},\otherworldly},
+	armour={\mountsprotection{6}},
 	specialrules={\fear{},\fly{6}},
 	options={
 		\inamonotheistarmymaytake{}

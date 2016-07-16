@@ -11,6 +11,21 @@
 \newcommand{\version}{0.99.9}
 \newcommand{\frenchversion}{2.0}
 \newcommand{\booklogo}{pics/logo_big_DL.png}
+\newcommand{\tocfirstcolumn}{%
+\tocentry{widerulestitle}{\labels@armywiderules}
+
+\tocentry{specialrulestitle}{\labels@armyspecialrules}
+
+\tocentry{armourytitle}{\labels@armoury}
+
+\tocentry{magicalitemstitle}{\labels@magicalitems}
+
+\tocentry{lordtitle}{\labels@armylist}
+
+\tocentry{QRStitle}{\labels@quickrefsheet}
+
+\tocentry{QRSmonotitle}{Fiche de référence monothéiste}
+}
 
 % Army wide rules
 
@@ -49,6 +64,43 @@
 \newcommand{\trailofmucus}{Traînée de Mucus}
 \newcommand{\bloodsword}{Épée de Sang}
 \newcommand{\hellblade}{Lame Démoniaque}
+
+% Magical Items
+
+\newcommand{\eternalsword}{Lame Éternelle}
+\newcommand{\mortalblade}{Épée Mortelle}
+\newcommand{\dissolvingtouch}{Toucher Acide}
+\newcommand{\lashoflust}{Fouet de Luxure}
+\newcommand{\aetherwand}{Baguette d'Éther}
+\newcommand{\heartseeker}{Cherche-Cœur}
+\newcommand{\bladeofgrief}{Lame d'Affliction}
+\newcommand{\tridentoftorment}{Trident du Tourment}
+
+\newcommand{\nauseatingaura}{Aura Nauséeuse}
+\newcommand{\shacklesofreality}{Entraves de la Réalité}
+\newcommand{\ironhide}{Manteau de Fer}
+\newcommand{\brasscollar}{Collier d’Airain}
+\newcommand{\veilofshadows}{Voile d’Ombre}
+\newcommand{\blissfulbindings}{Chaînes de Béatitude}
+\newcommand{\weaverseye}{Œil du Tisseur}
+
+\newcommand{\blazingwings}{Ailes Flamboyantes}
+\newcommand{\hornofdamnation}{Corne de Damnation}
+\newcommand{\obsidianhorn}{Corne d'Obsidienne}
+\newcommand{\hellishcrown}{Couronne Démoniaque}
+\newcommand{\blackorb}{Orbe Noire}
+\newcommand{\tokenofchange}{Signe du Changement}
+\newcommand{\tokenoflust}{Signe de la Luxure}
+\newcommand{\tokenofpestilence}{Signe de la Pestilence}
+\newcommand{\portalgem}{Gemme-Portail}
+\newcommand{\elixirofsouls}{Élixir des Âmes}
+
+\newcommand{\mirrorofchange}{Miroir du Changement}
+\newcommand{\seventhseal}{Septième Sceau}
+\newcommand{\soulboundstaff}{Bâton Fixe-Esprit}
+\newcommand{\sorcererslodestone}{Magnétite de Sorcier.}
+\newcommand{\scrollsoftheeighthpact}{Parchemins du Huitième Pacte}
+\newcommand{\skullofcacophrax}{Crâne de Cacophrax}
 
 % Spells
 
@@ -181,7 +233,6 @@
 \newcommand{\inamonotheistarmymaytake}{Si l'armée est Monothéiste{,}}
 \newcommand{\mayreplacebloodswordwithhellbladerideronlyandinnatedefence}{Remplacer l'\bloodsword{} par\newline une \hellblade{} et \innatedefence{5}}
 \newcommand{\maytakeoneartilleryweapon}{Peut prendre une \artilleryweapon{} :}
-\newcommand{\lashoflust}{Fouet de Luxure}
 
 
 % Profile rules
@@ -262,7 +313,7 @@ La figurine gagne la règle \fireborn{}.
 }
 
 \newcommand{\brasscannonrule}{%
-Ne peut être pris que si le Général est un \daemonofwrath{}.
+Ne peut être pris que si le Général est un Démon du \wrath{}.
 
 \vspace*{5pt}
 \textbf{\artilleryweapon} de type \textbf{\cannon{} (\distance{1D6})}.\newline
@@ -335,7 +386,7 @@ Si toutes les unités de l'armée ont une allégeance au même Dieu Sombre, les 
 
 \armyspecialruleentry{\daemonofthedarkgods}
 
-Les Démons sont différents en fonction de leur allégeance à un Dieu Sombre. Chaque Dieu offre à ses démons son propre bonus, décrit ci-dessous. Toutes les figurines d'une même unité doivent appartenir au même Dieu Sombre. Les Personnages ne peuvent rejoindre que des unités démoniaques servant le même Dieu Sombre. Les figurines ne peuvent bénéficier des règles \holdyourground{} et \inspiringpresence{} que si elles proviennent d'un Démon appartenant au même Dieu Sombre qu'elles-mêmes, ou par un Démon du \truechaos{}.
+Les Démons sont différents en fonction de leur allégeance à un Dieu Sombre. Chaque Dieu offre à ses démons son propre bonus, décrit ci-dessous. Toutes les figurines d'une même unité doivent appartenir au même Dieu Sombre. Les Personnages ne peuvent rejoindre que des unités démoniaques servant le même Dieu Sombre. Les figurines ne peuvent bénéficier des règles \holdyourground{} et \inspiringpresence{} que si elles proviennent d'un Démon appartenant au même Dieu Sombre qu'elles-mêmes, ou d'un Démon du \truechaos{}.
 
 \spacebetweenalliance{}
 
@@ -347,7 +398,7 @@ Aucun effet supplémentaire.
 \spacebetweenalliance{}
 
 \alliancestartsidetext{Démon du \dchange}
-Le Démon peut gagner une des règles suivantes, affectant les Attaques de Corps à Corps et de Tir : \divineattacks{}, \flamingattacks{} ou \hellfire{}. L'effet doit être choisi au début de chaque Manche de Corps à Corps et avant de tirer. Toutes les figurines d'une même unité doivent choisir la même règle. Les Attaques Spéciales ne sont pas affectées. Si le Démon est un Sorcier il peut, immédiatement après avoir lancer les dés pour générer ses sorts, choisir de tous les relancer une fois.
+Le Démon peut gagner une des règles suivantes, affectant les Attaques de Corps à Corps et de Tir : \divineattacks{}, \flamingattacks{} ou \hellfire{}. L'effet doit être choisi au début de chaque Manche de Corps à Corps et avant de tirer. Toutes les figurines d'une même unité doivent choisir la même règle. Les Attaques Spéciales ne sont pas affectées. Si le Démon est un Sorcier, il peut, immédiatement après avoir lancé les dés pour générer ses sorts, choisir de tous les relancer une fois.
 \allianceclosesidetext{}\hfill
 \alliancesidepic{change.png}
 
@@ -380,29 +431,29 @@ Le Démon gagne les règles \poisonedattacks{} et \regeneration{5}. Les \toxicat
 
 \armyspecialruleentry{\aspects}
 
-Les Démons peuvent recevoir des bonus appelés \textbf{\aspects{}}. L'effet d'un \aspect{} dépend du Dieu Sombre associé.
+Les Démons peuvent recevoir des bonus appelés \textbf{\aspects}. L'effet d'un \aspect{} dépend du Dieu Sombre associé.
 
 \vspace{0.2cm}
-Les Personnages peuvent toujours obtenir un \aspect{}. Les Unités de Base peuvent être améliorée avec un \aspect{} si elles appartiennent au même Dieu Sombre que le Général. Certaines Unités Spéciales et Rares ne peuvent gagner un \aspect{} que dans une Armée Monothéiste où l'allégeance de toutes les figurines est au même Dieu Sombre. Plusieurs itérations d'un même \aspect{} n'apporte rien de plus que l'\aspect{} seul.
+Les Personnages peuvent toujours obtenir un \aspect{}. Les Unités de Base peuvent être améliorées avec un \aspect{} si elles appartiennent au même Dieu Sombre que le Général. Certaines Unités Spéciales et Rares ne peuvent gagner un \aspect{} que dans une Armée Monothéiste où l'allégeance de toutes les figurines va au même Dieu Sombre. Plusieurs itérations d'un même \aspect{} n'apportent rien de plus que l'\aspect{} seul.
 
 \vspace{0.5cm}
 \renewcommand{\arraystretch}{2}
 \begin{center}\begin{tabular}{p{2.2cm}p{12cm}}
 \hline
 \textbf{\dchange} & \textbf{\farseeing}\vspace{3pt}\newline
-L'unité du porteur gagne \distance{6} de bonus de portée pour toutes ses Attaques de Tir qui utilise la Capacité de Tir. \tabularnewline
+L'unité du porteur augmente de \distance{6} la portée de toutes ses Attaques de Tir qui utilise la Capacité de Tir. \tabularnewline
 \textbf{\wrath} & \textbf{\onslaught}\vspace{3pt}\newline
 L'unité du porteur gagne la règle \devastatingcharge{}. Les montures ne sont pas affectées. \tabularnewline
 \textbf{\dlust} & \textbf{\clawedcaress}\vspace{3pt}\newline
 L'unité du porteur gagne la règle \armourpiercing{+1}. \tabularnewline
 \textbf{\pestilence} & \textbf{\contamination}\vspace{3pt}\newline
-L'unité gagne la règle \poisonedattacks{}. Les attaques qui possèdent cette règle blessent automatiquement sur un jet naturel d'un point de moins : 6+ devient 5+, et 5+ devient 4+. \tabularnewline
+L'unité gagne la règle \poisonedattacks{}. Les attaques qui possèdent déjà cette règle blessent automatiquement sur un jet naturel d'un point de moins : 6+ devient 5+, et 5+ devient 4+. \tabularnewline
 \hline
 \end{tabular}\end{center}
 
 \armyspecialruleentry{\supremeaspects}
 
-Les Personnages Démoniaques peuvent être amélioré avec l'\supremeaspect{} précisé dans leur profil.
+Les Personnages Démoniaques peuvent être améliorés par l'\supremeaspect{} précisé dans leur profil.
 
 \vspace{0.5cm}
 \begin{center}\begin{tabular}{p{2.2cm}p{12cm}}
@@ -478,7 +529,7 @@ L'unité du porteur gagne \regeneration{4}. \tabularnewline
 
 
 
-\startarmynewsection{Objets démoniaques}
+\toctarget{magicalitemstitle}{\startarmynewsection{Objets démoniaques}}
 
 \spaceaftersection{}
 
@@ -490,53 +541,52 @@ Les Légions Démoniaques possèdent leurs propres Objets Magiques appelés Obje
 
 \startpricelist
 
-\pricelistitem{Lame Éternelle}{50/35}Type : \hw{}. Le porteur gagne +1 en Capacité de Combat, Force et Attaque lorsqu'il est engagé au Corps à Corps.
+\pricelistitem{\eternalsword}{50/35}Type : \hw{}. Le porteur gagne +1 en Capacité de Combat, Force et Attaque lorsqu'il est engagé au Corps à Corps.
 
-\pricelistitem{Épée Mortelle}{40/30}Type : \hw{}. Les attaques portées avec cette arme ont les règles \lethalstrike{} et \multiplewounds{2}{\monster{}, \riddenmonster}.
+\pricelistitem{\mortalblade}{40/30}Type : \hw{}. Les attaques portées avec cette arme ont les règles \lethalstrike{} et \multiplewounds{2}{\monster{}, \riddenmonster}.
 
-\pricelistitem{Touché Acide}{40/30}Type : \hw{}. À chaque Manche de Corps à Corps, toutes les figurines ennemies en contact avec le porteur subissent une touche avec la règle \toxicattacks{} à Initiative 10.
+\pricelistitem{\dissolvingtouch}{40/30}Type : \hw{}. À chaque Manche de Corps à Corps, toutes les figurines ennemies en contact avec le porteur subissent une touche avec la règle \toxicattacks{} à Initiative 10.
 
-\pricelistitem{Fouet de Luxure}{40/25}Démons de la \textbf{\dlust} uniquement.
+\pricelistitem{\lashoflust}{40/25}Démons de la \textbf{\dlust} uniquement.
 
-Type : Arme de Tir. \range{12}, Force de l'utilisateur, \multipleshots{2D6}, \quicktofire{}. Ne peut pas être utilisée après une Marche Forcée lors du même Tour de Joueur.
+Type : Arme de Tir. \range{12}, Force de l'utilisateur, \multipleshots{2D6}, \quicktofire{}. Ne peut pas être utilisé après une Marche Forcée lors du même Tour de Joueur.
 
-\pricelistitem{Baguette d’Éther}{40/15}Démons du \textbf{\dchange} uniquement.
+\pricelistitem{\aetherwand}{40/15}Démons du \textbf{\dchange} uniquement.
 
-Type : \hw{}. À chaque fois que le porteur lance ou dissipe un sort avec succès, lancez 1D6. Sur 4+, le porteur gagne un marqueur Charge. Pour chaque marqueur Charge, le porteur gagne +1 Attaque lorsqu'il attaque cette arme, de façon permanente.
+Type : \hw{}. À chaque fois que le porteur lance ou dissipe un sort avec succès, lancez 1D6. Sur 4+, le porteur gagne un marqueur Charge. Pour chaque marqueur Charge, le porteur gagne +1 Attaque lorsqu'il attaque avec cette arme, de façon permanente.
 
-\pricelistitem{Lame d'Affliction}{20}Type : \hw{}. Le porteur gagne la règle \fear{} et les attaques qu'il porte avec cette arme ont la règle \divineattacks{}.
+\pricelistitem{\bladeofgrief}{20}Type : \hw{}. Le porteur gagne la règle \fear{} et les attaques qu'il porte avec cette arme ont la règle \divineattacks{}.
 
-\pricelistitem{Cherche-Cœur}{20/10}Type : \hw{}. Le porteur peut relancer tous les \result{1} pour toucher au Corps à Corps avec cette arme.
+\pricelistitem{\heartseeker}{20/10}Type : \hw{}. Le porteur peut relancer tous les \result{1} pour toucher au Corps à Corps avec cette arme.
 
-\pricelistitem{Trident du Tourment}{15}Type : \hw{}. Le porteur gagne +1 en Initiative et en Capacité de Combat quand il combat avec cette arme au Corps à Corps, et les attaques qu'il porte avec cette arme ont la règle \armourpiercing{1}.
+\columnbreak\vspace*{1cm}
+\pricelistitem{\tridentoftorment}{15}Type : \hw{}. Le porteur gagne +1 en Initiative et en Capacité de Combat quand il combat avec cette arme au Corps à Corps, et les attaques qu'il porte avec cette arme ont la règle \armourpiercing{1}.
 
 \endpricelist
-
-\columnbreak
 
 \subtitle{Talismans démoniaques}\vspace{5pt}
 
 \startpricelist
 
-\pricelistitem{Aura Nauséeuse}{50}Démons de la \textbf{\pestilence} uniquement.
+\pricelistitem{\nauseatingaura}{50}Démons de la \textbf{\pestilence} uniquement.
 
 L'Initiative des unités ennemies en contact socle à socle avec le porteur passe à 1 lors de la Phase de Corps à Corps.
 
-\pricelistitem{Entraves de la Réalité}{40}Le porteur gagne la règle \regeneration{4}.
+\pricelistitem{\shacklesofreality}{40}Le porteur gagne la règle \regeneration{4}.
 
-\pricelistitem{Collier d’Airain}{35}Démons du \textbf{\wrath} uniquement.
+\pricelistitem{\brasscollar}{35}Démons du \textbf{\wrath} uniquement.
 
 Le porteur gagne la règle \magicresistance{3}.
 
-\pricelistitem{Manteau de Fer}{35}Le porteur gagne la règle \innatedefence{5}.
+\pricelistitem{\ironhide}{35}Le porteur gagne la règle \innatedefence{5}.
 
-\pricelistitem{Voile d'Ombre}{35}L'unité du porteur gagne les règles \hardtarget{} et \magicresistance{1}.
+\pricelistitem{\veilofshadows}{35}L'unité du porteur gagne les règles \hardtarget{} et \magicresistance{1}.
 
-\pricelistitem{Chaînes de Béatitude}{35/25}Démons de la \textbf{\dlust} uniquement.
+\pricelistitem{\blissfulbindings}{35/25}Démons de la \textbf{\dlust} uniquement.
 
 Les figurines ennemies attaquant le porteur voient leur caractéristique de Capacité de Combat divisée par deux, arrondie au supérieur, pour le toucher.
 
-\pricelistitem{Œil du Tisseur}{10}Une seule utilisation. Peut être activé lorsque le porteur rate un jet de \wardsave{}. Ce jet peut être relancé.
+\pricelistitem{\weaverseye}{10}Une seule utilisation. Peut être activé lorsque le porteur rate un jet de \wardsave{}. Ce jet peut être relancé.
 
 \endpricelist
 
@@ -549,33 +599,33 @@ Les figurines ennemies attaquant le porteur voient leur caractéristique de Capa
 
 \startpricelist
 
-\pricelistitem{Ailes Flamboyantes}{35}Démons du \textbf{\dchange} uniquement.
+\pricelistitem{\blazingwings}{35}Démons du \textbf{\dchange} uniquement.
 
 Le porteur gagne la règle \fly{8}.
 
-\pricelistitem{Corne de Damnation}{35}Les unités ennemies au contact socle à socle avec le porteur ne peuvent pas bénéficier de la règle \holdyourground{}.
+\pricelistitem{\hornofdamnation}{35}Les unités ennemies au contact socle à socle avec le porteur ne peuvent pas bénéficier de la règle \holdyourground{}.
 
-\pricelistitem{Corne d'Obsidienne}{35}Une seule utilisation. Au lieu de tenter une dissipation, utilisez cet objet. Le sort est immédiatement dissipé. Cet objet ne peut être pris que si l'armée ne comprend aucun Sorcier.
+\pricelistitem{\obsidianhorn}{35}Une seule utilisation. Au lieu de tenter une dissipation, utilisez cet objet. Le sort est immédiatement dissipé. Cet objet ne peut être pris que si l'armée ne comprend aucun Sorcier.
 
-\pricelistitem{Couronne Démoniaque}{25}Le porteur gagne +1 en Commandement.
+\pricelistitem{\hellishcrown}{25}Le porteur gagne +1 en Commandement.
 
-\pricelistitem{Gemme-Portail}{20}Toutes les unités alliées à moins de \distance{6} subissent une blessure en moins à cause des tests ratés d'\daemonicinstability{}.
+\pricelistitem{\portalgem}{20}Toutes les unités alliées à moins de \distance{6} subissent une blessure en moins lors des tests ratés d'\daemonicinstability{}.
 
-\pricelistitem{Signe du Changement}{20}Démons du \textbf{\dchange} uniquement, \oneofakind{}.
+\pricelistitem{\tokenofchange}{20}Démons du \textbf{\dchange} uniquement, \oneofakind{}.
 
 \boundspell{3}. \changespelltwo{} (Discipline \change{}).
 
-\pricelistitem{Signe de la Luxure}{20}Démons de la \textbf{\dlust} uniquement, \oneofakind{}.
+\pricelistitem{\tokenoflust}{20}Démons de la \textbf{\dlust} uniquement, \oneofakind{}.
 
 \boundspell{3}. \lustspellthree{} (Discipline \lust{}).
 
-\pricelistitem{Signe de la Pestilence}{20}Démons de la \textbf{\pestilence} uniquement, \oneofakind{}.
+\pricelistitem{\tokenofpestilence}{20}Démons de la \textbf{\pestilence} uniquement, \oneofakind{}.
 
 \boundspell{3}. \diseasespelltwo{} (Discipline \disease{}).
 
-\pricelistitem{Orbe Noire}{15}Les tentatives de lancement de sorts de la Discipline \light{} des Sorciers ennemis subissent un malus de -2 sur leurs jets.
+\pricelistitem{\blackorb}{15}Tout Sorcier ennemi qui tente de lancer un sort de la Discipline \light{} subit un malus de -2 sur ses jets.
 
-\pricelistitem{Élixir des Âmes}{10}Une seule utilisation. Peut être activé au début d'une Étape des Autres Mouvements. Le porteur gagne +2 en Mouvement pour cette phase.
+\pricelistitem{\elixirofsouls}{10}Une seule utilisation. Peut être activé au début d'une Étape des Autres Mouvements. Le porteur gagne +2 en Mouvement pour cette phase.
 
 \endpricelist
 
@@ -583,21 +633,21 @@ Le porteur gagne la règle \fly{8}.
 
 \startpricelist
 
-\pricelistitem{Miroir du Changement}{40}Démons du \textbf{\dchange} uniquement.
+\pricelistitem{\mirrorofchange}{40}Démons du \textbf{\dchange} uniquement.
 
 Au début de chaque Phase de Magie alliée, le porteur peut choisir un Sorcier ennemi en ligne de vue à moins de \distance{18}. Pour la durée de cette phase, il peut lancer les sorts ne provenant pas d'\boundspell{} que connaît le Sorcier choisi à la place de ses propres sorts. Aucun sort pouvant créer des unités ou Ressusciter des figurines ne peut être lancé de cette façon.
 
-\pricelistitem{Septième Sceau}{35}Une seule utilisation. Au lieu de tenter une dissipation, utilisez cet objet. Le sort est automatiquement dissipé.
+\pricelistitem{\seventhseal}{35}Une seule utilisation. Au lieu de tenter une dissipation, utilisez cet objet. Le sort est automatiquement dissipé.
 
-\pricelistitem{Bâton Fixe-Esprit}{30}Lorsque le porteur subit un Fiasco, il compte comme ayant lancé 1 Dé de Magie de moins.
+\pricelistitem{\soulboundstaff}{30}Lorsque le porteur subit un Fiasco, il compte comme ayant lancé 1 Dé de Magie de moins.
 
-\pricelistitem{Magnétite de Sorcier}{30}Une seule utilisation. Immédiatement après avoir tenté un lancement ou une dissipation de sort, le porteur peut augmenter le résultat de son jet de 1D6. Cela ne compte pas comme un nouveau Dé de Pouvoir ou de Dissipation. C'est une exception à la règle des modificateurs magiques.
+\pricelistitem{\sorcererslodestone}{30}Une seule utilisation. Immédiatement après avoir tenté un lancement ou une dissipation de sort, le porteur peut augmenter le résultat de son jet de 1D6. Cela ne compte pas comme un nouveau Dé de Pouvoir ou de Dissipation. C'est une exception à la règle des modificateurs magiques.
 
-\pricelistitem{Parchemins du Huitième Pacte}{25}Démons du \textbf{\dchange} uniquement.
+\pricelistitem{\scrollsoftheeighthpact}{25}Démons du \textbf{\dchange} uniquement.
 
 Le porteur peut choisir de générer ses sorts depuis n'importe laquelle des Disciplines Communes, sauf la Discipline \light{}. Votre choix doit toujours être indiqué sur votre liste d'armée.
 
-\pricelistitem{Crâne de Cacophrax}{25/15}Le porteur génère un sort supplémentaire.
+\pricelistitem{\skullofcacophrax}{25/15}Le porteur génère un sort supplémentaire.
 
 \endpricelist
 
@@ -642,7 +692,6 @@ Le porteur peut choisir de générer ses sorts depuis n'importe laquelle des Dis
 \end{tabular}
 \end{center}
 
-\renewcommand{\labels@quickrefsheet}{Fiche de référence monothéiste}
 \renewcommand{\firstnote}{2}
 \renewcommand{\secondnote}{1}
 \renewcommand{\QRSnote}{%
@@ -651,7 +700,7 @@ Le porteur peut choisir de générer ses sorts depuis n'importe laquelle des Dis
 \noindent$^{\firstnote}$ Un membre d'équipage de moins quand il sert de monture.
 }
 
-\quickrefsheettitle
+\clearpage\toctarget{QRSmonotitle}{\bigtitle{Fiche de référence monothéiste}}\vspace*{0.4cm}
 
 \input{DL_qrs.tex}
 
