@@ -1,5 +1,5 @@
 
-\newcommand{\translationteam}{\item \og AEnoriel \fg \item \og Anglachel \fg \item \og Astadriel \fg \item \og Batcat \fg \item \og Bigfish \fg \item \og Eru \fg  \item \og Gandarin \fg \item \og Groumbahk \fg \item \og Iluvatar \fg \item \og Mammstein \fg \item \og Schlagrabak \fg}
+\newcommand{\translationteam}{\item \og AEnoriel \fg \item \og Anglachel \fg \item \og Astadriel \fg \item \og Batcat \fg \item \og Bigfish \fg \item \og Eru \fg  \item \og Gandarin \fg \item \og Groumbahk \fg \item \og Iluvatar \fg \item \og Mammstein \fg \item \og Shlagrabak \fg}
 
 %%% Commands %%%
 
@@ -55,7 +55,39 @@
 	\unitentryformat{\labels@allianceoptions\spacebeforecolon{}:}\newline
 	\expandafter\ifblank\expandafter{\allianceoptions@introsentence}{}{\noindent\allianceoptions@introsentence{}\spacebeforecolon{}:}
 	
-	\expandafter\ifblank\expandafter{\allianceoptions@change}{}{
+	\expandafter\ifblank\expandafter{\allianceoptions@wrath}{
+		\setlength{\columnseprule}{0.5pt}
+		\renewcommand{\columnseprulecolor}{\color{black!30}}
+		\vspace*{-0.2cm}\begin{multicols}{3}\raggedcolumns
+		
+			\begin{center}
+			\noindent\dchange{}
+			
+			\noindent\alliancepts{\allianceoptions@change}
+			\vspace*{-0.3cm}
+			\end{center}
+		
+		\columnbreak
+		
+			\begin{center}
+			\noindent\dlust{}
+			
+			\noindent\alliancepts{\allianceoptions@lust}
+			\vspace*{-0.3cm}
+			\end{center}
+		
+		\columnbreak
+
+			\begin{center}
+			\noindent\pestilence{}
+			
+			\noindent\alliancepts{\allianceoptions@pestilence}
+			\vspace*{-0.3cm}
+			\end{center}
+			
+		\end{multicols}
+		\setlength{\columnseprule}{0pt}	
+	}{
 		\setlength{\columnseprule}{0.5pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
 		\vspace*{-0.2cm}\begin{multicols}{4}\raggedcolumns

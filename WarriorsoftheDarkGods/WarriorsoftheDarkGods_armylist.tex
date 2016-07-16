@@ -1,0 +1,967 @@
+
+%%% v0.99.9
+
+\armylist
+
+\lordstitle
+
+\showunit{
+	name={\daemonprince},
+	cost=245,
+	profile={< 8 9 5 6 5 4 8 5 9},
+	type=\monster{},
+	basesize=50x50,
+	unitsize={1},
+	alliance={\daemonoftruechaos},
+	alliancepic={truechaos},
+	allianceoptions={introsentence=\mayreplacedaemonoftruechaoswith{}, change=20, lust=\free{}, pestilence=\free{}, wrath=\free{}},
+	specialrules={\otherworldly{},\daemonicinstability{},\stubborn{},\daemonofadarkgod},
+	options={
+		\maytakeuptotwogifts{}=\unlimited{},
+ 		\magiclevelchoice{
+			\magiclevel{1}=40,
+			\magiclevel{2}=65,
+			\magiclevel{3}=130,
+			\magiclevel{4}=160,
+		},
+    	\magicalitemsallowance{}=\upto{}<25,
+ 		\platearmour{}=60,	
+	},
+	additional={%
+		\def\tempunitrules{\unitrule{\daemonofadarkgod}{\daemonofadarkgodrule}}
+		\vspace*{0.3cm}\unitrules{\tempunitrules}
+	},		
+}
+
+\showunit{
+	name={\lordofchaos},
+	cost=160,
+	profile={< 4 8 3 5 5 3 7 5 9},
+	type=\infantry{},
+	basesize=25x25,
+	unitsize=1,
+	alliance={\markoftruechaos},
+	alliancepic={truechaos},
+	allianceoptions={introsentence=\mayreplacemarkoftruechaoswith{}, change=30, lust=20, pestilence=40, wrath=30},
+	specialrules={\inspiregreatness{},\gazeofthegods},
+	armour={\platearmour},
+	options={
+	    \maytakeasinglegift{}=\unlimited{},
+		\magicalitemsallowance{}=\upto{}<100,	
+		\shield{}=5,
+		\weapononechoice{
+			\flail{}=10,
+			\pw{}=10,
+			\gw{}=15,
+			\halberd{}=15,
+			\lance{}=15,
+		},
+	},
+	additional={%
+		\def\tempmounts{
+			\optionschoiceTWOCOL{}{
+				\wastelandsteed{}=40,
+				\hspace*{-0.3cm}\wastelandchariot{}=40,
+				\hspace*{-0.3cm}\daemonicsteed{}=40,
+				\hspace*{-0.3cm}\manticore{}=120,
+				\hspace*{-0.3cm}\wastelanddragon{}=270,
+				\columnbreak\discofchange{}=60,
+				\crusher{}=40,
+				\steedoflust{}=40,
+				\pestilentpalanquin{}=15,
+			},
+		}
+		\mounts{\tempmounts}
+	},
+}
+
+\showunit{
+	name={\sorcererlord},
+	cost=200,
+	profile={< 4 5 3 4 4 3 5 3 8},
+	type=\infantry{},
+	basesize=25x25,
+	unitsize=1,
+	alliance={\markoftruechaos},
+	alliancepic={truechaos},
+	allianceoptions={introsentence=\mayreplacemarkoftruechaoswith{}, change=40, lust=10, pestilence=15},
+	armour={\platearmour},
+	specialrules={\gazeofthegods},
+	magiclevel=3,
+	magicpaths={\pathdependingonthemodelsmark},
+	options={
+	    \maytakeasinglegift{}=\unlimited{},
+		\magiclevel{4}=30,
+		\magicalitemsallowance{}=\upto{}<100,
+	},
+	additional={%
+		\def\tempmounts{
+			\optionschoiceTWOCOL{}{
+				\wastelandsteed{}=30,
+				\hspace*{-0.3cm}\wastelandchariot{}=40,
+				\hspace*{-0.3cm}\daemonicsteed{}=60,
+				\hspace*{-0.3cm}\manticore{}=120,
+				\hspace*{-0.3cm}\wastelanddragon{}=320,
+				\columnbreak\discofchange{}=50,
+				\steedoflust{}=30,
+				\pestilentpalanquin{}=15,
+			},
+		}
+		\mounts{\tempmounts}
+	},
+}
+
+
+
+
+
+
+
+\heroestitle
+
+
+\showunit{
+	name={\sorcerer},
+	profile={< 4 5 3 4 4 2 4 2 8},
+	type=\infantry{},
+	basesize=25x25,
+	unitsize=1,
+	armour={\platearmour},
+	specialrules={\gazeofthegods},			
+	additional={%
+		\vspace*{-0.1cm}\begin{center}\mustbecomeoneofthefollowingNOC{}\end{center}
+		\setlength{\columnseprule}{0.5pt}
+		\renewcommand{\columnseprulecolor}{\color{black!30}}
+
+		\vspace*{-0.2cm}\begin{multicols}{2}\raggedcolumns
+
+		\begin{center}\Largefontsize{\antiquefont\sorcerer{} (\pts{90})}\end{center}%	
+
+		\def\tempalliance{\markoftruechaos}
+		\def\tempalliancepic{truechaos}
+		\def\tempallianceoptions{introsentence=\mayreplacemarkoftruechaoswith{}, change=25, lust=10, pestilence=15}
+		\def\tempmagiclvl{1}
+		\def\tempmagicpaths{\pathdependingonthemodelsmark}
+
+		\vspace*{-0.3cm}{\setlength{\parskip}{0.3cm}
+		\noindent\parbox{\columnwidth}{\begin{minipage}[c][][b]{0.045\textwidth}%
+			\includegraphics[width=\textwidth]{pics/\tempalliancepic.png}%
+		\end{minipage}%
+		\hspace*{0.15cm}\begin{minipage}[c]{0.40\textwidth}%
+			\alliance{\tempalliance}%
+		\end{minipage}\vspace*{-0.1cm}}
+		
+		\noindent\parbox{\columnwidth}{\expandafter\allianceoptions\expandafter{\tempallianceoptions}}
+		
+		\magic{\tempmagiclvl}{\tempmagicpaths}
+		}
+
+		\def\tempmounts{
+			\steedoflust{}=20,
+			\wastelandsteed{}=25,
+			\pestilentpalanquin{}=30,
+			\wastelandchariot{}=50,
+			\discofchange{}=50,
+			\daemonicsteed{}=60,
+		}
+		
+		\def\tempoptions{
+	 	   \maytakeasinglegift{}=\unlimited{},
+			\magiclevel{2}=25,
+			\magicalitemsallowance{}=\upto{}<50,			
+		}
+		
+		\vspace*{0.2cm}
+		\mounts{\tempmounts}
+		\options{\tempoptions}
+
+		\vspace*{\fill}\columnbreak
+		
+		\begin{center}\Largefontsize{\antiquefont\wrathpriest{} (\pts{100})}\end{center}
+
+		\def\tempalliance{\markofwrath}
+		\def\tempalliancepic{wrath}
+		\def\tempspecialrules{\inspiregreatness{},\magicresistance{2},\wordsofscorn}
+		\def\tempunitrules{\unitrule{\wordsofscorn}{\wordsofscornrule}}
+		\def\tempmounts{
+			\wastelandsteed{}=25,
+			\crusher{}=30,
+			\wastelandchariot{}=50,
+			\daemonicsteed{}=60,
+		}
+		\def\tempoptions{
+	 	   \maytakeasinglegift{}=\unlimited{},
+			\magicalitemsallowance{}=\upto{}<50,		
+			\weapononechoice{
+				\flail{}=5,
+				\gw{}=10,
+			},		
+		}
+
+		\vspace*{-0.3cm}{\setlength{\parskip}{0.3cm}
+		\noindent\begin{minipage}[c][][b]{0.045\textwidth}%
+			\includegraphics[width=\textwidth]{pics/\tempalliancepic.png}%
+		\end{minipage}%
+		\hspace*{0.15cm}\begin{minipage}[c]{0.40\textwidth}%
+			\alliance{\tempalliance}%
+		\end{minipage}\vspace*{-0.1cm}%
+		
+		\noindent\specialrules{\tempspecialrules}
+		}
+		
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
+		
+		\mounts{\tempmounts}
+		
+		\options{\tempoptions}
+		\vspace*{\fill}\end{multicols}
+		\setlength{\columnseprule}{0pt}
+	},
+}
+
+\showunit{
+	name={\harbingerofchaos},
+	cost=100,
+	profile={< 4 7 3 5 4 2 6 4 8},
+	type=\infantry{},
+	basesize=25x25,
+	unitsize=1,
+	alliance={\markoftruechaos},
+	alliancepic={truechaos},
+	allianceoptions={introsentence=\mayreplacemarkoftruechaoswith{}, change=20, lust=10, pestilence=30, wrath=20},
+	armour={\platearmour},
+	specialrules={\inspiregreatness{}, \gazeofthegods},	
+	options={
+		\bsb{}=25,
+	    \maytakeasinglegift{}=\unlimited{},
+		\magicalitemsallowance{}=\upto{}<50,
+		\shield{}=5,
+		\weapononechoice{
+			\flail{}=5,
+			\pw{}=5,
+			\gw{}=10,
+			\halberd{}=10,
+			\lance{}=15,
+		},
+	},
+	additional={%
+		\def\tempmounts{
+			\optionschoiceTWOCOL{}{
+				\wastelandsteed{}=30,
+				\hspace*{-0.3cm}\wastelandchariot{}=50,
+				\hspace*{-0.3cm}\daemonicsteed{}=60,
+				\hspace*{-0.3cm}\manticore{}=155,
+				\discofchange{}=50,
+				\crusher{}=35,
+				\steedoflust{}=35,
+				\pestilentpalanquin{}=30,
+			},
+		}
+		\vspace*{0.2cm}\mounts{\tempmounts}
+	},
+}
+
+\showunit{
+	name={\barbarianchief},
+	cost=45,
+	profile={< 4 5 4 4 4 2 5 3 8},
+	type=\infantry{},
+	basesize=25x25,
+	unitsize=1,
+	alliance={\markoftruechaos},
+	alliancepic={truechaos},
+	allianceoptions={introsentence=\mayreplacemarkoftruechaoswith{}, change=5, lust=5, pestilence=15, wrath=10},
+	armour={\la},
+	specialrules={\inspirebarbarians},
+	options={
+		\bsb{}\refsymbol{}=25,
+		\hspace*{0.3cm}\refsymbol{} \onlyifanotherBCisthegeneral{}=,
+		\maytakeasinglegift{}=\unlimited{},
+		\magicalitemsallowance{}=\upto{}<50,
+		\shield{}=4,
+		\ha{}=5,
+		\throwingweapons{}=3,
+		\weapononechoice{
+			\flail{}=3,
+			\spear{}=3,
+			\lightlance{}=3,
+			\pw{}=3,
+			\gw{}=4,
+		},
+	},	
+	mounts={
+		\warhorse{}=20,
+	},
+	additional={%
+		\def\tempunitrules{\unitrule{\inspirebarbarians}{\inspirebarbariansrule}}
+		\unitrules{\tempunitrules}
+		
+		\begin{center}\maytakeoneofthefollowingrules{}\spacebeforecolon{}:\end{center}
+		\setlength{\columnseprule}{0.5pt}
+		\renewcommand{\columnseprulecolor}{\color{black!30}}
+		\begin{multicols}{2}\raggedcolumns
+		
+		\begin{center}\Largefontsize\antiquefont\osklanderjarl{} (\pts{40})
+		
+		\oneofakind{}, \only{\infantry}\end{center}
+		
+		\noindent\osklanderjarlrule{}
+		
+		\vspace*{\fill}\columnbreak
+		
+		\begin{center}\Largefontsize\antiquefont\makharkhan{} (\pts{30})
+		
+		\oneofakind{}\end{center}
+		
+		\noindent\makharkhanrule{}
+		
+		\vspace*{\fill}\end{multicols}
+		\setlength{\columnseprule}{0pt}
+	},	
+}
+
+
+
+
+
+
+
+
+
+
+
+\mountstitle
+
+\showunit{
+	name={\warhorse},
+	profile={< 8 3 - 3 3 1 3 1 5},
+	type=\warbeast{},
+	basesize=25x50,
+	specialrules={\fastcavalry},
+	armour={\mountsprotection{6}},
+	additional={%
+		\def\tempoptions{\mayexchangefastcavformountsprotection{}=10,}
+		\vspace*{0.15cm}\options{\tempoptions}
+	},
+}
+
+\showunit{
+	name={\wastelandsteed},
+	QRSname={\wastelandsteedSHORT},
+	profile={< 8 3 - 4 3 1 3 1 5},
+	type=\warbeast{},
+	basesize=25x50,
+	armour={\mountsprotection{6},\barding},
+}
+
+\showunit{
+	name={\daemonicsteed},
+	profile={< 8 4 - 5 5 3 2 2 8},
+	type=\monstrousbeast{},
+	basesize=50x50,
+	specialrules={\magicalattacks{},\fear},
+	armour={\mountsprotection{6}},
+	options={\barding{}=10,},
+}
+
+\showunit{
+	notinQRS=yes,
+	name={\wastelandchariot},
+	profile={\chariot{}< - - - 5 5 4 - - -,
+			 \crew{} (1)< - 5 3 4 - - 4 2 8,
+			 \wastesteed{} (2)< 8 3 - 4 - - 3 1 -,
+			 },
+	type=\chariot{},
+	basesize=50x100,
+	alliance={\samemarkasthecharacter{} \textnormal{\only{\crew}}},
+	specialrules={\impacthits{+1}},
+	weapons={\halberd{} \only{\crew}},
+	armour={\mountsprotection{6}},
+	options={
+		\barding{}=20,
+		\wastelandraider{} \only{\general}=\permodel{}<20,
+	},
+	unitrules={\unitrule{\wastelandraider}{\wastelandraiderrule}},
+}
+
+\showunit{
+	name={\manticore},
+	profile={< 6 5 - 5 5 4 5 3 5},
+	type=\monstrousbeast{},
+	basesize=50x100,
+	unitsize=SPECIAL-{\textbf{(\survivalofthefittest{})}},
+	additional={%
+		\def\tempspecialrules{\multiplewounds{1D3}{},\lethalstrike{},\frenzy{},\largetarget{},\fear{},\fly{8}}
+		\vspace*{-0.2cm}\specialrules{\tempspecialrules}
+	},
+}
+
+\showunit{
+	name={\wastelanddragon},
+	QRSname={\wastelanddragonSHORT},
+	profile={< 6 5 1 6 6 6 3 6 9},
+	type=\monster{},
+	basesize=50x100,
+	unitsize=SPECIAL-{\textbf{(\oneofakind{}, \survivalofthefittest{})}},
+	armour={\innatedefence{3}},	
+	additional={%
+		\def\tempspecialrules{\breathweapon{\Strength{} 4, \flamingattacks}, \breathweapon{\Strength{} 3, \armourpiercing{3}},\fly{7}}
+		\vspace*{0.3cm}\specialrules{\tempspecialrules}
+	}
+}
+
+\newpage
+\showunit{
+	name={\discofchange},
+	profile={< 1 3 - 4 4 1 4 3 7},
+	type=\warbeast{},
+	basesize=50x50,
+	unitsize=SPECIAL-{\textbf{\only{\markofchange}}},
+	alliance={\markofchange},
+	alliancepic={change},
+	specialrules={\magicalattacks{},\fly{8}},
+	armour={\mountsprotection{6}},
+}
+
+\showunit{
+	name={\crusher},
+	profile={< 7 5 - 5 4 3 2 3 7},
+	type=\monstrousbeast{},
+	basesize=50x75,
+	unitsize=SPECIAL-{\textbf{\only{\markofwrath}}},
+	alliance={\markofwrath},
+	alliancepic={wrath},
+	specialrules={\magicalattacks{},\fear},
+	armour={\mountsprotection{6}},
+}
+
+\showunit{
+	name={\steedoflust},
+	profile={< 10 3 - 3 3 1 5 1 8},
+	type=\warbeast{},
+	basesize=25x50,
+	unitsize=SPECIAL-{\textbf{\only{\markoflust}}},
+	alliance={\markoflust},
+	alliancepic={lust},
+	specialrules={\poisonedattacks{},\magicalattacks{},\vanguard},
+	armour={\mountsprotection{6}},
+}
+
+\showunit{
+	name={\pestilentpalanquin},
+	profile={< 4 3 3 3 3 3 3 6 7},
+	type=\infantry{},
+	basesize=50x50,
+	unitsize=SPECIAL-{\textbf{\only{\markofpestilence}}},
+	alliance={\markofpestilence},
+	alliancepic={pestilence},
+	specialrules={\poisonedattacks{},\magicalattacks},
+	armour={\mountsprotection{6}},
+}
+
+
+
+
+
+
+
+
+
+
+\coreunitstitle
+
+\showunit{
+	name={\wastelandwarriors},
+	QRSname={\wastelandwarrior},
+	cost=110,
+	profile={< 4 5 3 4 4 1 4 2 8},
+	type=\infantry{},
+	unitsize=10,
+	costpermodel=13,
+	maxmodels=30,
+	basesize=25x25,
+	alliance={\markoftruechaos},
+	alliancepic={truechaos},
+	allianceoptions={introsentence=\mayreplacemarkoftruechaoswith{} \Xmodelsorless{25}, change=\permodel{}<1, lust=\permodel{}<1, pestilence=\permodel{}<3, wrath=\permodel{}<2},
+	armour={\platearmour{},\shield},
+	options={
+		\weapononechoice{
+			\pw{}=\permodel{}<1,
+			\gw{}=\permodel{}<2,
+			\halberd{}=\permodel{}< 3
+		},
+	},
+    commandgroup={champion=10,  musician=10, banner=10, veteranstandardbearer=yessir},
+}
+
+\showunit{
+	name={\fallen},
+	QRSname={\fallenSING},
+	cost=85,
+	profile={< 6 4 - 4 4 1 4 \starsymbol{} 8},
+	type=\infantry{},
+	unitsize=5,
+	costpermodel=15,
+	maxmodels=12,
+	basesize=25x25,
+	alliance={\markoftruechaos},
+	alliancepic={truechaos},
+	allianceoptions={introsentence=\mayreplacemarkoftruechaoswith{}, change=\permodel{}<1, lust=\permodel{}<1, pestilence=\permodel{}<3, wrath=\permodel{}<2},
+	specialrules={\randomattacks{1D3},\frenzy{},\immunetopsychology{},\skirmisher},
+	armour={\platearmour},
+	commandgroup={champion=10},
+}
+
+\showunit{
+	name={\warhounds},
+	QRSname={\warhound},
+	cost=45,
+	profile={< 7 4 - 3 3 1 3 1 5},
+	type=\warbeast{},
+	unitsize=5,
+	maxmodels=35,
+	costpermodel=4,
+	basesize=25x50,
+	specialrules={\poisonedattacks{},\vanguard{},\insignificant},
+	options={
+		\innatedefence{5}=\permodel{}<2,
+	},
+}
+
+\showunit{
+	name={\barbarians},
+	QRSname={\barbarian},
+	cost=70,
+	profile={< 4 4 3 3 3 1 3 1 7},
+	type=\infantry{},
+	unitsize=20,
+	maxmodels=50,
+	costpermodel=5,
+	basesize=25x25,
+	alliance={\markoftruechaos},
+	alliancepic={truechaos},
+	allianceoptions={introsentence=\mayreplacemarkoftruechaoswith{}, change=\permodel{}<1, lust=\permodel{}<1, pestilence=\permodel{}<2, wrath=\permodel{}<1},
+	armour={\la},
+	options={
+		\throwingweapons{}=\permodel{}<1,
+		\onechoiceonly{
+			\pw{}=\free{},
+			\shield{}=\permodel{}<1,
+			\spear{} \wordand{} \shield{}=\permodel{}<1,
+			\flail{}=\permodel{}<2,
+			\gw{}=\permodel{}<3,
+		},
+	},
+	commandgroup={champion=10, banner=10, veteranstandardbearer=yessir, musician=10},
+}
+
+\showunit{
+	name={\barbarianhorsemen},
+	QRSname={\barbarianhorseman},
+	cost=75,
+	profile={\rider{}< 4 4 3 3 3 1 3 1 7,
+			 \warhorse{}< 8 3 - 3 3 1 3 1 5
+	},
+	type=\cavalry{},
+	unitsize=5,
+	maxmodels=15,
+	costpermodel=11,
+	basesize=25x50,
+	alliance={\markoftruechaos{} \textnormal{\only{\rider}}},
+	alliancepic={truechaos},
+	allianceoptions={introsentence=\mayreplacemarkoftruechaoswith{}, change=\permodel{}<1, lust=\permodel{}<2, pestilence=\permodel{}<2, wrath=\permodel{}<2},
+	specialrules={\fastcavalry},
+	armour={\la{},\mountsprotection{6}},
+	options={
+		\mayexchangefastcavformountsprotection{}=\permodel{}<1,
+		\shield{}=\permodel{}<1,
+		\throwingweapons{}=\permodel{}<2,
+		\weapononechoice{
+			\flail{}=\permodel{}<1,
+			\lightlance{}=\permodel{}<1,
+		},
+	},
+	commandgroup={champion=10, banner=10, veteranstandardbearer=yessir, musician=10},
+}
+
+
+
+
+
+
+
+
+
+\specialunitstitle
+
+\showunit{
+	name={\wastelandchariot},
+	QRSname={\wastelandchariot{}\refsymbol},
+	profile={\chariot{}< - - - 5 5 - - - -,
+			 \crew{} (2)< - 5 3 4 - - 4 2 8,
+			 [\wastesteed{} (2)]< 8 3 - 4 - 4 3 1 5,
+			 [\mauler{} (1)]< 6 4 - 5 - 6 2 3 6,
+	},
+	type=\chariot{},
+	unitsize=1,
+	basesize=50x100,
+	alliance={\markoftruechaos{} \textnormal{\only{\crew}}},
+	alliancepic={truechaos},
+	allianceoptions={introsentence=\mayreplacemarkoftruechaoswith{}, change=10, lust=20, pestilence=20, wrath=10},
+	specialrules={\impacthits{+1}},
+	weapons={\halberd{} \only{\crew}},
+	additional={%
+		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
+		\setlength{\columnseprule}{0.5pt}
+		\renewcommand{\columnseprulecolor}{\color{black!30}}
+		\vspace*{-0.2cm}\begin{multicols}{2}\raggedcolumns
+		
+		\begin{center}\Largefontsize\antiquefont\pairofwastesteeds{} (\pts{95})\end{center}
+		
+		\def\temparmour{\platearmour}
+		\armour{\temparmour}
+		
+		\vspace*{\fill}\columnbreak
+		
+		\begin{center}\Largefontsize\antiquefont\mauler{} (\pts{140})\end{center}
+		
+		\def\temparmour{\platearmour{},\mountsprotection{6}}
+		\armour{\temparmour}
+		
+		\def\tempspecialrules{\fear{},\grindingattacks{1D3} \only{\mauler}}
+		\vspace*{0.3cm}\specialrules{\tempspecialrules}
+		
+		\def\tempoptions{\mountsprotection{5}=15,}
+		\vspace*{0.2cm}\options{\tempoptions}
+		
+		\vspace*{\fill}\end{multicols}
+		\setlength{\columnseprule}{0pt}
+	},
+}
+
+\showunit{
+	name={\wastelandknights},
+	QRSname={\wastelandknight},
+	cost=170,	
+	profile={\rider{}< 4 5 3 4 4 1 5 2 8,
+					\wastesteed{}< 8 3 - 4 3 1 3 1 5},
+	type=\cavalry{},
+	unitsize=5,
+	maxmodels=10,
+	costpermodel=32,
+	basesize=25x50,
+	alliance={\markoftruechaos{} \textnormal{\only{\rider}}},
+	alliancepic={truechaos},
+	allianceoptions={introsentence=\mayreplacemarkoftruechaoswith{}, change=\permodel{}<2, lust=\permodel{}<3, pestilence=\permodel{}<4, wrath=\permodel{}<3},
+	specialrules={\fear},
+	armour={\platearmour{},\shield{},\barding{},\mountsprotection{6}},
+	weapons={\lance{} \only{\rider}},
+	options={
+		\mayreplacelancewithdaemonweapon{}=\permodel{}<4,
+	},
+	commandgroup={champion=10, banner=10, bannerallowance=50, musician=10},
+}
+
+\showunit{
+	name={\chosen},
+	QRSname={\chosenSING},
+	cost=120,
+	profile={< 4 6 3 4 4 1 5 2 8},
+	type=\infantry{},
+	unitsize=10,
+	maxmodels=25,
+	costpermodel=12,
+	basesize=25x25,
+	alliance={\markoftruechaos},
+	alliancepic={truechaos},
+	allianceoptions={introsentence=\mayreplacemarkoftruechaoswith{}, change=\permodel{}<2, lust=40, pestilence=\permodel{}<4, wrath=\permodel{}<3},
+	specialrules={\immunetopsychology{},\chosenofthegods},
+	armour={\platearmour{},\shield},
+	options={
+		\weapononechoice{
+			\pw{}=\permodel{}<1,
+			\gw{}=\permodel{}<2,
+			\halberd{}=\permodel{}<3,
+		},
+	},
+	commandgroup={champion=10 [80], chosenofchangeopt=[\chosenofchange], championallowance=25, banner=10, bannerallowance=50, musician=10},
+}
+
+\showunit{
+	name={\oncechosen},
+	QRSname={\oncechosenSING},
+	cost=100,
+	profile={< 5 5 3 4 4 3 4 3 8},
+	type=\monstrousinfantry{},
+	unitsize=3,
+	maxmodels=9,
+	costpermodel=30,
+	basesize=40x40,
+	alliance={\markoftruechaos},
+	alliancepic={truechaos},
+	allianceoptions={introsentence=\mayreplacemarkoftruechaoswith{}, change=\permodel{}<4, lust=50, pestilence=\permodel{}<8, wrath=\permodel{}<6},
+	specialrules={\chosenofthegods},
+	armour={\platearmour},
+	options={
+		\shield{}=\permodel{}<3,
+		\weapononechoice{
+			\pw{}=\permodel{}<3,
+			\flail{}=\permodel{}<5,
+			\gw{}=\permodel{}<7,
+			\halberd{}=\permodel{}<7,
+		},
+	},
+	commandgroup={champion=10 [70], chosenofchangeopt=[\chosenofchange], championallowance=25, banner=10, bannerallowance=25, musician=10},
+}
+
+\showunit{
+	name={\hellriders},
+	QRSname={\hellrider},
+	cost=75,
+	profile={\rider{}< 4 4 4 3 3 1 5 1 7,
+					\steedoflust{}< 10 3 - 3 3 1 5 1 7,
+	},
+	type=\cavalry{},
+	unitsize=5,
+	maxmodels=15,
+	costpermodel=10,
+	basesize=25x50,
+	alliance={\markoflust},
+	alliancepic={lust},
+	armour={\shield{},\mountsprotection{6}},
+	weapons={\lightlance{},\hellishwhip},
+	commandgroup={champion=10, banner=10, musician=10},
+	additional={%
+		\def\tempspecialrules{\poisonedattacks{} \only{\steed},\fastcavalry{},\lightningreflexes{} \only{\rider}}
+		\specialrules{\tempspecialrules}
+		
+		\def\tempunitequipment{\equipmentdef{\hellishwhip}{\hellishwhiprule}}
+		\vspace*{0.1cm}\unitequipment{\tempunitequipment}
+	},
+}
+
+\showunit{
+	name={\wastelandtrolls},
+	QRSname={\wastelandtroll},
+	cost=100,
+	profile={< 6 3 1 5 4 3 1 3 4},
+	type=\monstrousinfantry{},
+	unitsize=3,
+	maxmodels=10,
+	costpermodel=42,
+	basesize=40x40,
+	specialrules={\trollbelch{},\fear{},\regeneration{4},\stupidity},
+	unitrules={\unitrule{\trollbelch}{\trollbelchrule}},
+	options={
+		\markofpestilence{}=\permodel{}<6,
+		 \pw{}=\permodel{}<3,
+	},
+}
+
+\showunit{
+	name={\dragoncentaurs},
+	QRSname={\dragoncentaur},
+	cost=205,
+	profile={< 7 4 2 5 5 4 2 3 8},
+	type=\monstrousbeast{},
+	unitsize=3,
+	maxmodels=5,
+	costpermodel=68,
+	basesize=50x75,
+	alliance={\markoftruechaos},
+	alliancepic={truechaos},
+	specialrules={\stomp{2},\lightningrage},
+	armour={\la{},\innatedefence{5}},
+	options={
+		\weapononechoice{
+			\pw{}=\permodel{}<3,
+			\halberd{}=\permodel{}<6,
+			\gw{}=\permodel{}<10,
+		},
+	},
+	commandgroup={champion=10, banner=10, musician=10},
+}
+
+\showunit{
+	name={\fallenbeast},
+	cost=65,
+	profile={< \starsymbol{} 3 - 4 5 3 2 \starsymbol{} 10},
+	type=\monstrousbeast{},
+	unitsize=1,
+	basesize=40x40,
+	alliance={\markoftruechaos},
+	alliancepic={truechaos},
+	allianceoptions={introsentence=\mayreplacemarkoftruechaoswith{}, change=5, lust=15, pestilence=10, wrath=5},
+	additional={%
+		\def\tempspecialrules{\randomattacks{1D6+1},\unbreakable{},\randommovement{3D6},\fear{},\wastelandwanderer}
+		\vspace*{0.2cm}\specialrules{\tempspecialrules}
+		
+		\def\tempunitrules{\unitrule{\wastelandwanderer}{\wastelandwandererrule}}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
+	},
+}
+
+\showunit{
+	name={\bloodbeast},
+	cost=175,
+	profile={< 7 3 - 6 5 5 3 5 4},
+	type=\monster{},
+	unitsize=1,
+	basesize=50x100,
+	specialrules={\frenzy{},\hatred{},\ritesofbinding},
+	armour={\innatedefence{4}},	
+	additional={%
+		\def\tempunitrules{\unitrule{\ritesofbinding}{\ritesofbindingrule}}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
+	},
+}
+
+
+
+
+
+
+
+
+
+\rareunitstitle
+
+\showunit{
+	name={\crusherknights},
+	QRSname={\crusherknight},
+	cost=170,
+	profile={\rider{}< 4 5 3 4 4 1 5 2 8,
+			 		\crusher{}< 7 5 - 5 4 3 2 3 7},
+	type=\monstrouscavalry{},
+	unitsize=2,
+	maxmodels=5,
+	costpermodel=55,
+	basesize=50x75,
+	alliance={\markofwrath},
+	alliancepic={wrath},
+	specialrules={\magicalattacks{} \only{\rider},\chosenofthegods{} \only{\rider},\fear},
+	armour={\platearmour{},\shield{},\mountsprotection{6}},
+	options={
+		\weapononechoice{
+			\lance{}=\permodel{}<2,
+			\daemonweapon{}=\permodel{}<6,
+		},
+	},
+	commandgroup={champion=10, banner=10, bannerallowance=50, musician=10},
+}
+
+\showunit{
+	name={\hellscreamcannon},
+	cost=190,
+	profile={< 4 4 3 5 6 5 1 4 7},
+	type=\monster{},
+	unitsize=1,
+	basesize=100x150,
+	specialrules={\otherworldly{},\frenzy{},\daemonicinstability{},\stubborn},
+	weapons={\hellscreamcannon},
+	armour={\innatedefence{5}},	
+	additional={%
+		\def\tempunitequipment{\equipmentdef{\hellscreamcannon}{\hellscreamcannonrule}}
+		\vspace*{0.1cm}\unitequipment{\tempunitequipment}
+	}
+}
+
+\showunit{
+	name={\battleshrine},
+	cost=130,
+	profile={\shrinepriest{} (1)< - 5 3 4 - - 4 2 8,
+			 		\shrinebearers{}< 5 3 - 4 5 5 2 \starsymbol{} 7},
+	type=\monstrousinfantry{},
+	unitsize=1,
+	basesize=50x100,
+	alliance={\markoftruechaos},
+	alliancepic={truechaos},
+	allianceoptions={introsentence=\mayreplacemarkoftruechaoswith{}, change=10, lust=10, pestilence=10, wrath=10},
+	armour={\mountsprotection{6},\ha},
+	additional={%
+		\def\tempspecialrules{\randomattacks{3D3} \only{\shrinebearers},\largetarget{},\thedarkgodsarewatching{},\fear{},\wardsave{4}}
+		\vspace*{0.2cm}\specialrules{\tempspecialrules}
+		
+		\def\tempunitrules{\unitrule{\thedarkgodsarewatching}{\thedarkgodsarewatchingrule}}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
+	},
+}
+
+\showunit{
+	name={\chimera},
+	cost=200,
+	profile={< 6 4 - 6 5 4 3 7 5},
+	type=\monster{},
+	unitsize=SPECIAL-{\textbf{(\survivalofthefittest{})} \labels@Singlemodel{}},
+	basesize=50x100,
+	specialrules={\regeneration{5},\fly{8}},
+	armour={\innatedefence{4}},	
+	options={
+		\breathweapon{\Strength{} 4, \flamingattacks}=30,
+	},
+}
+
+\showunit{
+	name={\vortexfiend},
+	cost=175,
+	profile={< 6 4 - 5 5 5 3 \starsymbol{} 8},
+	type=\monster{},
+	unitsize=1,
+	basesize=50x100,
+	alliance={\markofchange},
+	alliancepic={change},
+	armour={\innatedefence{5}},	
+	additional={%
+		\def\tempspecialrules{\randomattacks{1D6+2},\hardtarget{},\channel{},\wardsave{5},\wavesofchange}
+		\vspace*{0.3cm}\specialrules{\tempspecialrules}
+		
+		\def\tempunitrules{\unitrule{\wavesofchange}{\wavesofchangerule}}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
+	},
+}
+
+\showunit{
+	name={\elderdragoncentaur},
+	cost=230,
+	profile={< 7 6 3 6 6 6 4 5 9},
+	type=\monster{},
+	unitsize=1,
+	basesize=50x75,
+	specialrules={\immunetopsychology{},\lightningrage{},\swiftstride},
+	armour={\innatedefence{4}},	
+	options={
+		\la{}=20,
+		\weapononechoice{
+			\gw{}=20,
+			\halberd{}=20,
+			\pw{}=20,
+		},
+	},
+}
+
+\showunit{
+	name={\wastelandgiant},
+	cost=140,
+	profile={< 6 3 - 6 5 6 3 \starsymbol{} 10},
+	type=\monster{},
+	basesize=50x75,
+	unitsize=1,
+	alliance={\markoftruechaos},
+	alliancepic={truechaos},
+	allianceoptions={introsentence=\mayreplacemarkoftruechaoswith{}, change=30, lust=60, pestilence=10, wrath=\free},
+	specialrules={\immunetopsychology{},\stubborn{},\giantattacks{},\chosenofthegods},
+	commandgroup={champion=90, championrestriction=\markofchange},
+	additional={%
+		\def\tempunitrules{%
+			\unitrule{\giantattacks}{\giantattacksrule}
+			\unitrule{\bellow}{\bellowrule}
+			\unitrule{\jump}{\jumprule}
+			\unitrule{\grab}{\grabrule}
+			\unitrule{\swing}{\swingrule}
+			\unitrule{\thump}{\thumprule}
+			\unitrule{\smashname}{\smashrule}
+		}
+		\vspace*{0.3cm}\unitrules{\tempunitrules}
+		\giantattackstable
+	},
+}

@@ -584,6 +584,7 @@
 % Command group specific commands.
 \define@key{commandgroup}{restriction}            {\def\commandgroup@restriction{#1}}
 \define@key{commandgroup}{champion}               {\def\commandgroup@champion{#1}}
+\define@key{commandgroup}{chosenofchangeopt}               {\def\commandgroup@chosenofchangeopt{#1}}
 \define@key{commandgroup}{championallowance}      {\def\commandgroup@championallowance{#1}}
 \define@key{commandgroup}{championoption}         {\def\commandgroup@championoption{#1}}
 \define@key{commandgroup}{secondchampionoption}         {\def\commandgroup@secondchampionoption{#1}}
@@ -600,7 +601,7 @@
 \define@key{commandgroup}{musicianrestriction}    {\def\commandgroup@musicianrestriction{#1}}
 \newcommand{\defcommandgroup}{%
 	\setkeys{commandgroup}{restriction=,
-	                       champion=, championallowance=, championoption=, secondchampionoption=, championprerestriction=, 
+	                       champion=, chosenofchangeopt=, championallowance=, championoption=, secondchampionoption=, championprerestriction=, 
 	                       championrestriction=, banner=, bannerallowance=, veteranstandardbearer=, 
 	                       singlebannerallowance=, condsinglebannerallowance=, banneroption=, 
 	                       bannerrestriction=, musician=, musicianrestriction=}%
@@ -621,7 +622,7 @@
 			% Champion handling.
 			\ifdefempty{\commandgroup@champion}{}{% We have a champion!
 			\ifdefempty{\commandgroup@championprerestriction}{% There is no prerestriction to have a champion
-				\item \hspace*{-0.04cm}\option{\labels@champion%
+				\item \hspace*{-0.04cm}\option{\labels@champion\ifdefempty{\commandgroup@chosenofchangeopt}{}{ \commandgroup@chosenofchangeopt}%
 					% Possible restrictions to taking a champion
 				    \expandafter\ifblank\expandafter{\commandgroup@championrestriction}{}{ \only{\commandgroup@championrestriction}}%
 				    % Cost of a champion
@@ -638,7 +639,7 @@
 						\par\option{\hspace*{0.3cm}\local@option}{\local@cost}}%
 			}{% There is a pre-restriction to have a champion
 				\item \hspace*{-0.04cm}\commandgroup@championprerestriction	\newline%
-				\option{\labels@champion}{\commandgroup@champion}%
+				\option{\labels@champion\ifdefempty{\commandgroup@chosenofchangeopt}{}{ \commandgroup@chosenofchangeopt}}{\commandgroup@champion}%
 				% Magical allowance of the champion. Should probably not be used, champion option can do it as well and is more flexible.
 				\ifdefempty{\commandgroup@championallowance}{}{\par\option[\upto]{\hspace*{0.3cm}- \labels@championallowance}{\commandgroup@championallowance}}%
 				% Any option available to the champion, in the form option:cost
@@ -863,12 +864,16 @@
 		\expandafter\ifblank\expandafter{\unit@alignment}{}{\noindent\parbox{\columnwidth}{\alignment{\unit@alignment}}}
 
 		\expandafter\ifblank\expandafter{\unit@alliance}{}{\noindent\parbox{\columnwidth}{%
+		\expandafter\ifblank\expandafter{\unit@alliancepic}{
+		\alliance{\unit@alliance}
+		}{
 		\begin{minipage}[c][][b]{0.045\textwidth}%
 			\includegraphics[width=\textwidth]{pics/\unit@alliancepic.png}%
 		\end{minipage}%
 		\hspace*{0.15cm}\begin{minipage}[c]{0.40\textwidth}%
 			\alliance{\unit@alliance}%
 		\end{minipage}\vspace*{-0.1cm}%
+		}
 		}}
 		
 		\expandafter\ifblank\expandafter{\unit@allianceoptions}{}{\noindent\parbox{\columnwidth}{\expandafter\allianceoptions\expandafter{\unit@allianceoptions}}}

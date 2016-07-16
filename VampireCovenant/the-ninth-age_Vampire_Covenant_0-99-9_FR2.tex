@@ -1,3 +1,5 @@
+
+
 \input{../Layout/AB_layout.tex}
 
 \newcommand{\booktitle}{Conclaves Vampiriques}
@@ -15,9 +17,9 @@
 
 % Army special rules
 
-\newcommand{\ashestoashes}{Poussière Tu Redeviendras Poussière}
-\newcommand{\wailofwoe}{Plainte Stridente}
-\newcommand{\awaken}[1]{Sombre Réveil\ifblank{#1}{}{ (#1)}}
+\newcommand{\ashestoashes}{Des Cendres aux Cendres}
+\newcommand{\wailofwoe}{Plainte Funèbre}
+\newcommand{\awaken}[1]{Éveil\ifblank{#1}{}{ (#1)}}
 \newcommand{\reaper}{Moissonneur}
 \newcommand{\vampiric}[1]{Vampirique\ifblank{#1}{}{ (#1+)}}
 \newcommand{\necromanticaura}{Aura Nécromantique}
@@ -49,9 +51,9 @@
 
 \newcommand{\unlivingshield}{Bouclier Non-Vivant}
 \newcommand{\stormofwings}{Déluge d'Ailes}
-\newcommand{\wakethedead}{Debout les Morts}
+\newcommand{\wakethedead}{Relever les Morts}
 \def\endlesshorde{Horde sans Fin} % \def necessary: a \newcommand name can't start with "end"
-\newcommand{\bonepyre}{Bûcher Infernal}
+\newcommand{\bonepyre}{Bûcher d'Ossements}
 \newcommand{\bringoutyourdead}{Sortez vos Macchabées}
 \newcommand{\cart}{Charrette}
 \newcommand{\unholydominion}{Vasque de Sang}
@@ -88,13 +90,13 @@
 \newcommand{\vampirelord}{Comte Vampire}
 \newcommand{\vampirelords}{Comtes Vampires}
 \newcommand{\necromancerlord}{Maître Nécromant}
-\newcommand{\vampirehero}{Baron Vampire}
-\newcommand{\vampireheroes}{Barons Vampires}
+\newcommand{\vampirehero}{Courtisan Vampire}
+\newcommand{\vampireheroes}{Courtisans Vampires}
 \newcommand{\barrowking}{Roi des Tertres}
 \newcommand{\barrowkings}{Rois des Tertres}
 \newcommand{\necromancer}{Nécromant}
-\newcommand{\fellwraith}{Apparition Lugubre}
-\newcommand{\banshee}{Âme en Peine}
+\newcommand{\fellwraith}{Spectre Lugubre}
+\newcommand{\banshee}{Banshee}
 
 % Core
 
@@ -122,8 +124,8 @@
 \newcommand{\cadaverwagon}{Charrette à Cadavres}
 \newcommand{\cadaverwagons}{Charrettes à Cadavres}
 \newcommand{\varkolak}{Varkolak}
-\newcommand{\phantomhost}{Horde de Spectres}
-\newcommand{\vampirespawn}{Progéniture Vampi\-ri\-que}
+\newcommand{\phantomhost}{Horde d'Ectoplasmes}
+\newcommand{\vampirespawn}{Engeance Vampi\-ri\-que}
 \newcommand{\courtofthedamned}{Cortège de Damnées}
 
 % Rare
@@ -131,8 +133,8 @@
 \newcommand{\vampireknight}{Chevalier Vampire}
 \newcommand{\vampireknights}{Chevaliers Vampires}
 \newcommand{\darkcoach}{Carrosse Impie}
-\newcommand{\wraith}{Apparition Vaga\-bon\-de}
-\newcommand{\wraiths}{Apparitions Vaga\-bon\-des}
+\newcommand{\wraith}{Spectre} %L% il y avait en plus vagabonds, vous voulez laisser ?
+\newcommand{\wraiths}{Spectres}
 \newcommand{\wingedreaper}{Faucheur Ailé}
 \newcommand{\wingedreapers}{Faucheurs Ailés}
 \newcommand{\altarofundeath}{Autel de la Non-Vie}
@@ -163,7 +165,7 @@
 \newcommand{\altar}{Autel}
 \newcommand{\coach}{Carrosse}
 \newcommand{\coachman}{Cocher}
-\newcommand{\awakenedvampire}{Vampire Réveillé}
+\newcommand{\awakenedvampire}{Vampire Éveillé}
 
 
 % QRS Invocation table
@@ -435,7 +437,7 @@ La Vampire perd une Attaque et obtient la règle \lightningreflexes{}. Si elle n
 \bloodties{} : \textbf{\courtofthedamned{}}.
 
 \vspace{0.5cm}
-\ancientbloodpower{} : \textbf{Commandement}\dotfill\pts{50}\newline%
+\ancientbloodpower{} : \textbf{Autorité}\dotfill\pts{50}\newline%
 Toutes les figurines ordinaires de l'unité rejointe par la Vampire obtiennent une Capacité de Combat de 5.
 
 \armynewsubsection{\bloodline{} des \strigois{}\dotfill\pts{55/30}}
@@ -592,7 +594,7 @@ Toute figurine allouant des attaques de Corps à Corps au porteur ne reçoit auc
 
 \startpricelist
 
-\pricelistitem{Baguette de Gerhard Langue Noire}{45} Une armée possédant cet objet peut relancer ses jets de Canalisation ratés. De plus, quand le porteur lance le sort \necromancysignaturespell{} (Discipline \necromancy{}), un dé pour déterminer le nombre de Points de Vie Ressuscités peut être relancé pour chaque unité ciblée.
+\pricelistitem{Baguette de Gerhard le Noir}{45} Une armée possédant cet objet peut relancer ses jets de Canalisation ratés. De plus, quand le porteur lance le sort \necromancysignaturespell{} (Discipline \necromancy{}), un dé pour déterminer le nombre de Points de Vie Ressuscités peut être relancé pour chaque unité ciblée.
 
 \pricelistitem{Tome Impie}{35} \boundspell{4} : \necromancyspelltwo{} (Discipline \necromancy{}).
 
@@ -663,3 +665,4 @@ Toute figurine allouant des attaques de Corps à Corps au porteur ne reçoit auc
 \restoregeometry
 
 \end{document}
+
