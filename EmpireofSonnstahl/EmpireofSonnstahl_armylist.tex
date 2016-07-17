@@ -34,6 +34,7 @@
 	additional={
 		\begin{center}\mayupgrademarshal{}\end{center}
 		\setlength{\columnseprule}{0.5pt}
+		\setlength{\columnsep}{1cm}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}	
 		\begin{multicols}{3}
 		\raggedcolumns
@@ -134,7 +135,7 @@
 	},
 		additional={%
 		\def\tempunitrules{\unitrule{\highpontiff}{\highpontiffrule}}
-		\unitrules{\tempunitrules}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
 	},
 }
 
@@ -318,24 +319,24 @@
 }
 
 \showunit{
-	name={\dragon{} (\oneofakind{})},
-	QRSname={\dragon},
+	name={\dragon},
 	profile={< 6 5 - 6 6 6 3 5 9},
 	type=\monster{},
+	unitsize=SPECIAL-{\textbf{(\oneofakind)}},
 	basesize=50x100,
 	specialrules={\fly{7},\breathweapon{\Strength{} 4, \flamingattacks}},
 	armour={\innatedefence{3}},
 }
 
 \showunit{
-	name={\altarofbattle{} (\oneofakind{})},
-	QRSname={\altarofbattle},
+	name={\altarofbattle},
 	profile={
 		\altar{}< - - - 5 5 5 - - -,
 		\horse{} (2)< 8 3 - 3 - - 3 1 -,
 	},
 	type=\chariot{},
 	basesize=50x100,
+	unitsize=SPECIAL-{\textbf{(\oneofakind)}},
 	specialrules={\largetarget{},\wardsave{4},\stubborn{},\holyrelic},
 	options={\barding{}=25,},
 	additional={%
@@ -359,6 +360,7 @@
 	additional={
 		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
 		\setlength{\columnseprule}{0.5pt}
+		\setlength{\columnsep}{1cm}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}	
 		\begin{multicols}{2}
 		\raggedcolumns
@@ -594,7 +596,7 @@
 }
 
 \showunit{
-	name={\artillery{}},
+	name={\artillery},
 	profile={
 		\machine{} < - - - - 7 3 - - -,
 		\crew{} (3)< 4 3 3 3 3 - 3 1 7,
@@ -605,6 +607,7 @@
 	additional={
 		\vspace*{-0.5cm}\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
 		\setlength{\columnseprule}{0.5pt}
+		\setlength{\columnsep}{1cm}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}	
 		\begin{multicols}{2}
 		\raggedcolumns		
@@ -683,6 +686,7 @@
 	additional={
 		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
 		\setlength{\columnseprule}{0.5pt}
+		\setlength{\columnsep}{1cm}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}	
 		\begin{multicols}{2}
 		\raggedcolumns
@@ -701,8 +705,7 @@
 }
 
 \showunit{
-	name={\steamtank{} (\oneofakind{})},
-	QRSname={\steamtank},
+	name={\steamtank},
 	cost=230,
 	profile={
 		\tank{}< \starsymbol{} - - 6 6 7 3 - -,
@@ -710,7 +713,7 @@
 	},
 	type=\chariot{},
 	basesize=50x100,
-	unitsize=1,
+	unitsize=SPECIAL-{\textbf{(\oneofakind) \labels@Singlemodel}},
 	weapons={\repeatergun{},\steampoweredcannon},
 	armour={\innatedefence{1}},
 	unitequipment={\equipmentdef{\steampoweredcannon}{\steampoweredcannonrule}},

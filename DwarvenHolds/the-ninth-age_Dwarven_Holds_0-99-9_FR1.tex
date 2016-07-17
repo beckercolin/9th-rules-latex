@@ -4,6 +4,21 @@
 \newcommand{\version}{0.99.9}
 \newcommand{\frenchversion}{2.1}
 \newcommand{\booklogo}{pics/logo_big_DH.png}
+\newcommand{\tocfirstcolumn}{%
+\tocentry{widerulestitle}{\labels@armywiderules}
+
+\tocentry{specialrulestitle}{\labels@armyspecialrules}
+
+\tocentry{armourytitle}{\labels@armoury}
+
+\tocentry{battlerunestitle}{\battlerunes}
+
+\tocentry{dwarvenrunestitle}{\dwarvenrunes}
+
+\tocentry{lordtitle}{\labels@armylist}
+
+\tocentry{QRStitle}{\labels@quickrefsheet}
+}
 
 % Army wide rules
 
@@ -23,14 +38,71 @@
 
 % Army common type special rules
 
-\newcommand{\dwarvencommonrules}{Règles spéciales des Nains}
-\newcommand{\seekerscommonrules}{Règles spéciales des Chasseurs}
+\newcommand{\dwarvencommonrules}{Règles Spéciales des Nains}
+\newcommand{\seekerscommonrules}{Règles Spéciales des Chasseurs}
 
 % Armoury
 
 \newcommand{\wyrmslayerrocket}{Roquettes Tueuses de Wyrm}
 \newcommand{\forgerepeater}{Sulfateuse}
 
+% Battle Runes
+
+\newcommand{\battlerunes}{Runes de Bataille}
+
+\newcommand{\runeofmetal}{Rune de Métal}
+\newcommand{\runeofresolve}{Rune de Résolution}
+\newcommand{\runeofreckoning}{Rune de Jugement}
+\newcommand{\runeofoaths}{Rune du Serment}
+\newcommand{\runeofgleaming}{Rune Luisante}
+\newcommand{\runeofresilience}{Rune de Résistance}
+
+% Dwarven Runes
+
+\newcommand{\dwarvenrunes}{Runes Naines}
+
+\newcommand{\runeofpenetrating}{Rune de Pénétration}
+\newcommand{\runeofdestruction}{Rune de Destruction}
+\newcommand{\runeofsmashing}{Rune Brisante}
+\newcommand{\runeofcraftsmanship}{Rune de l'Art de la Forge}
+\newcommand{\runeofmight}{Rune de Puissance}
+\newcommand{\runeofprecision}{Rune de Précision}
+\newcommand{\runeofquickening}{Rune d'Accélération}
+\newcommand{\runeoffury}{Rune de Fureur}
+\newcommand{\runeoffire}{Rune de Feu}
+
+\newcommand{\runeofresistance}{Rune d'Endurance}
+\newcommand{\runeofbronze}{Rune de Bronze}
+\newcommand{\runeofsteel}{Rune d'Acier}
+\newcommand{\runeofmountains}{Rune des Montagnes}
+\newcommand{\runeofaegis}{Rune d'Aegis}
+\newcommand{\runeofiron}{Rune de Fer}
+\newcommand{\runeofcrushing}{Rune d'Écrasement}
+
+\newcommand{\runeofretribution}{Rune de Vengeance}
+\newcommand{\runeofdragonsbreath}{Rune du Dragon}
+\newcommand{\runeofcourage}{Rune de Courage}
+\newcommand{\runeofinfamy}{Rune d'Infamie}
+\newcommand{\runeofshielding}{Rune Bouclier}
+\newcommand{\runeofkinship}{Rune d'Empathie}
+\newcommand{\runeoftheforge}{Rune de la Forge}
+
+\newcommand{\runeofgrounding}{Rune de Connaissance}
+\newcommand{\runeofmastery}{Rune de Maîtrise}
+\newcommand{\runeofdevouring}{Rune Dévoreuse de Sort}
+\newcommand{\runeofdenial}{Rune de Déni}
+\newcommand{\runeofbrilliance}{Rune Brillante}
+\newcommand{\runeofharnessing}{Rune de Harcèlement}
+
+\newcommand{\runicstandardofshielding}{Bannière Runique de Protection}
+\newcommand{\runicstandardofdismay}{Bannière Runique de Confusion}
+\newcommand{\runicstandardofswiftness}{Bannière Runique de Hardiesse}
+
+% Anvil Runes
+
+\newcommand{\runeofstorms}{Rune des Tempêtes}
+\newcommand{\runeofshattering}{Rune Fracassante}
+\newcommand{\runeofcleansing}{Rune d'Apaisement}
 
 % Characters rules
 
@@ -174,19 +246,19 @@ La figurine gagne la règle \multiplewounds{2}{\monstrousbeasts{}, \monstrouscav
 
 \newcommand{\runecraftmasteryrule}{%
 L'\runicmaster{} et son unité disposent de la règle \armourpiercing{1}. Il peut dissiper comme un Maître Sorcier et utiliser ses Runes de Bataille comme des Objets de Sort, avec au choix :
-\begin{customsubitemize}
+\begin{itemize}[label={-}]
 \item Niveau de Puissance 4, \range{6}.
 \item Niveau de Puissance 5, \range{12}.
-\end{customsubitemize}
+\end{itemize}
 }
 
 \newcommand{\mastermarksmanrule}{%
 Au lieu d'utiliser la règle \engineer{}, un \masterengineer{} peut, au début de la Phase de Tir et pour la durée de celle-ci, octroyer un des bonus suivants à une unité d'Infanterie alliée située à moins de \distance{6} :
-\begin{customsubitemize}
+\begin{itemize}[label={-}]
 \item L'unité gagne un bonus de +1 pour toucher au Tir.
 \item L'unité peut relancer les jets pour blesser ayant donné \result{1} au Tir.
 \item La portée des Armes de Tir de l'unité augmente de \distance{1D6+1}.
-\end{customsubitemize}
+\end{itemize}
 
 Un bonus donné ne peut pas se cumuler sur une même unité.
 }
@@ -197,10 +269,10 @@ Le \thane{} et tous les \clanwarriors{} de son unité gagnent la règle \fightin
 
 \newcommand{\runecraftrule}{%
 Le \runicsmith{} et son unité disposent de la règle \armourpiercing{1}. Il peut dissiper comme un Sorcier Apprenti et utiliser ses Runes de Bataille comme des Objets de Sort, avec au choix :
-\begin{customsubitemize}
+\begin{itemize}[label={-}]
 \item Niveau de Puissance 4, Unité du Lanceur.
 \item Niveau de Puissance 5, \range{6}.
-\end{customsubitemize}
+\end{itemize}
 }
 
 % Anvil
@@ -218,19 +290,19 @@ L'\anvilofpower{} peut dissiper comme un Sorcier Apprenti. Elle peut choisir jus
 \centering\textbf{Effet}
 \tabularnewline\hline
 
-Rune des Tempêtes\newline (\pts{5}) &
+\runeofstorms\newline (\pts{5}) &
 Dégâts\newline Malédiction &
 Immédiat\newline Dure un Tour &
 La cible subit immédiatement 1D6 touches de Force 6 avec la règle \lightningattacks{}. La cible ne peut plus utiliser la règle \fly{} pendant la durée du sort.
 \tabularnewline\hline
 
-Rune Fracassante\newline (\pts{5}) &
+\runeofshattering\newline (\pts{5}) &
 Dégâts\newline Malédiction &
 Immédiat\newline Dure un Tour &
 La cible subit immédiatement 2D6 touches de Force 4. Toute unité subissant au moins une blessure de ces touches subit un malus de -1 sur ses jets pour toucher au Corps à Corps, et traite tous les décors, y compris les Terrains Dégagés, comme des Terrains Dangereux (1).
 \tabularnewline\hline
 
-Rune d'Apaisement\newline (\free{}) &
+\runeofcleansing\newline (\free{}) &
 Universelle &
 Immédiat &
 Choisissez un sort de type Dure un tour ou Reste en jeu affectant la cible. Ce sort prend immédiatement fin. 
@@ -320,7 +392,7 @@ La \wardsave{} accordée par la règle \shieldwall{} est toujours de 5+.
 \newcommand{\majestyofhighkingsrule}{%
 Si un Général est monté sur le \warthrone{}, la portée de sa règle \inspiringpresence{} passe à \distance{18}. Toutes les unités amies à moins de \distance{6} gagnent la règle \swiftstride{}. Si le Personnage sur le \warthrone{} était dans une unité lorsqu'il est tué, l'unité gagne la règle \frenzy{}.
 
-L'\fieldartillery{} passe des Unités Spéciales aux Unités Rares.
+\vspace*{5pt}L'\fieldartillery{} passe des Unités Spéciales aux Unités Rares.
 }
 
 % Weapons
@@ -446,7 +518,7 @@ Juste avant qu'elle soit retirée comme perte suite à une attaque de Corps à C
 
 
 
-\startarmynewsection{Runes de Bataille}\subtitle{}
+\toctarget{battlerunestitle}{\startarmynewsection{Runes de Bataille}}\subtitle{}
 
 Les \runicmasters{}, les \runicsmiths{} et les \anvilsofpower{} peuvent disposer de ces Runes, en suivant les règles détaillées dans leur profil, et les lancer comme des Objets de Sort. Aucune Rune de Bataille ne peut être choisie plus de deux fois dans une même armée. Ce chiffre est réduit à un pour les Patrouilles et augmenté à quatre pour les Grandes Armées.
 
@@ -463,42 +535,42 @@ Les \runicmasters{}, les \runicsmiths{} et les \anvilsofpower{} peuvent disposer
 \tabularnewline\hline
 
 \Z{} & \includegraphics[valign=m, width=\runewidth]{pics/battlerune_metal.png} &
-Rune du Métal &
+\runeofmetal &
 Amélioration &
 Dure un Tour &
 La cible peut relancer ses jets de Sauvegarde d'Armure ratés.
 \tabularnewline\hline
 
 \Z{} & \includegraphics[valign=m, width=\runewidth]{pics/battlerune_resolve.png} &
-Rune de Résolution &
+\runeofresolve &
 Amélioration &
 Immédiat &
 L'unité alliée ciblée peut effectuer un Mouvement Magique de \distance{6}. 
 \tabularnewline\hline
 
 \Z{} & \includegraphics[valign=m, width=\runewidth]{pics/battlerune_reckoning.png} &
-Rune de Jugement &
+\runeofreckoning &
 Amélioration &
 Dure un Tour &
 L'unité alliée ciblée peut relancer ses jets pour toucher ratés au Corps à Corps.
 \tabularnewline\hline
 
 \Z{} & \includegraphics[valign=m, width=\runewidth]{pics/battlerune_oaths.png} &
-Rune du Serment &
+\runeofoaths &
 Amélioration &
 Dure un Tour &
 La cible gagne les règles \stubborn{} et \immunetopsychology{}.
 \tabularnewline\hline
 
 \Z{} & \includegraphics[valign=m, width=\runewidth]{pics/battlerune_gleaming.png} &
-Rune Luisante &
+\runeofgleaming &
 Amélioration &
 Dure un Tour &
 La cible gagne les règles \hardtarget{} et \distracting{}.
 \tabularnewline\hline
 
 \Z{} & \includegraphics[valign=m, width=\runewidth]{pics/battlerune_resilience.png} &
-Rune de Résistance &
+\runeofresilience &
 Amélioration &
 Dure un Tour &
 Les jets pour blesser contre la cible subissent un malus de -1. Plusieurs instances de ce sort sur une même unité ne s'additionnent pas.
@@ -511,7 +583,7 @@ Les jets pour blesser contre la cible subissent un malus de -1. Plusieurs instan
 
 
 
-\startarmynewsection{Runes Naines}\subtitle{}
+\toctarget{dwarvenrunestitle}{\startarmynewsection{Runes Naines}}\subtitle{}
 
 Les armées des Forteresses Naines n'utilisent pas les Objets Magiques Communs, sauf les Bannières Magiques, mais créent plutôt les leurs en utilisant des Runes Naines. Les objets ainsi forgés sont appelés Objets Runiques et suivent les règles habituelles des Objets Magiques. Une Arme Runique compte donc par exemple comme une Arme Magique. Chaque combinaison de Runes correspond à un unique Objet Magique qui ne peut pas être dupliqué au sein d'une même armée. Une Rune peut être dupliquée sur un même objet s'il n'y a pas de mention contraire.
 
@@ -523,31 +595,31 @@ Toute \hw{} ou \pw{} peut être enchâssée d'un maximum de trois Runes parmi ce
 
 \startpricelist
 
-\pricelistitem{Rune de Pénétration}{40/30}\oneofakind{}.
+\pricelistitem{\runeofpenetrating}{40/30}\oneofakind{}.
 
 Les attaques portées avec l'arme gagnent la règle\armourpiercing{6}.
 
-\pricelistitem{Rune de Destruction}{40/20}\oneofakind{}.
+\pricelistitem{\runeofdestruction}{40/20}\oneofakind{}.
 
 Les attaques portées avec l'arme gagnent la règle \multiplewounds{1D3}{}.
 
-\pricelistitem{Rune Brisante}{35/25}\oneofakind{}.
+\pricelistitem{\runeofsmashing}{35/25}\oneofakind{}.
 
 Les attaques portées avec l'arme ont Force 10 quand la cible possède une Endurance de 5 ou plus.
 
-\pricelistitem{Rune de Puissance}{20}Les attaques portées avec l'arme ont un bonus de +1 en Force pour chaque Rune de Puissance enchâssée.
+\pricelistitem{\runeofmight}{20}Les attaques portées avec l'arme ont un bonus de +1 en Force pour chaque Rune de Puissance enchâssée.
 
-\pricelistitem{Rune de Précision}{20}Le porteur gagne la règle \lightningreflexes{}.
+\pricelistitem{\runeofprecision}{20}Le porteur gagne la règle \lightningreflexes{}.
 
-\pricelistitem{Rune d'Accélération}{20}Le porteur attaque avec un bonus de +2 en Initiative pour chaque Rune d'Accélération enchâssée.
+\pricelistitem{\runeofquickening}{20}Le porteur attaque avec un bonus de +2 en Initiative pour chaque Rune d'Accélération enchâssée.
 
-\pricelistitem{Rune de l'Art de la Forge}{20/15}\oneofakind{}.
+\pricelistitem{\runeofcraftsmanship}{20/15}\oneofakind{}.
 
 L'arme devient une \gw{}.
 
-\pricelistitem{Rune de Fureur}{15}Le porteur gagne +1 Attaque par Rune de Fureur enchâssée.
+\pricelistitem{\runeoffury}{15}Le porteur gagne +1 Attaque par Rune de Fureur enchâssée.
 
-\pricelistitem{Rune de Feu}{5}Les attaques portées avec l'arme ont la règle \flamingattacks{}.
+\pricelistitem{\runeoffire}{5}Les attaques portées avec l'arme ont la règle \flamingattacks{}.
 
 \endpricelist
 
@@ -558,21 +630,21 @@ Tout ensemble d'armure peut être enchâssé d'un maximum de trois Runes parmi c
 
 \startpricelist
 
-\pricelistitem{Rune d'Endurance}{45}\oneofakind{}.
+\pricelistitem{\runeofresistance}{45}\oneofakind{}.
 
 Les jets pour blesser réussis contre le porteur doivent être relancés.
 
-\pricelistitem{Rune de Bronze}{30}Le porteur gagne +1 Point de Vie.
+\pricelistitem{\runeofbronze}{30}Le porteur gagne +1 Point de Vie.
 
-\pricelistitem{Rune d'Acier}{30}Le porteur peut relancer ses jets de Sauvegarde d'Armure ratés.
+\pricelistitem{\runeofsteel}{30}Le porteur peut relancer ses jets de Sauvegarde d'Armure ratés.
 
-\pricelistitem{Rune des Montagnes}{30}Le porteur gagne +1 en Endurance jusqu'à un maximum de 6.
+\pricelistitem{\runeofmountains}{30}Le porteur gagne +1 en Endurance jusqu'à un maximum de 6.
 
-\pricelistitem{Rune d'Aegis}{15}Le porteur gagne la règle \magicresistance{1} ou augmente cet effet de +1 par Rune, jusqu'à \magicresistance{4} au mieux. Cela n'augmente pas la \magicresistance{} qui serait obtenue par le biais d'une autre figurine de l'unité du porteur.
+\pricelistitem{\runeofaegis}{15}Le porteur gagne la règle \magicresistance{1} ou augmente cet effet de +1 par Rune, jusqu'à \magicresistance{4} au mieux. Cela n'augmente pas la \magicresistance{} qui serait obtenue par le biais d'une autre figurine de l'unité du porteur.
 
-\pricelistitem{Rune de Fer}{10} Le porteur gagne une \innatedefence{6}. Une autre Rune peut être ajoutée pour passer cet effet à (5+).
+\pricelistitem{\runeofiron}{10} Le porteur gagne une \innatedefence{6}. Une autre Rune peut être ajoutée pour passer cet effet à (5+).
 
-\pricelistitem{Rune d'Écrasement}{10} Le porteur gagne la règle \impacthits{+1}.
+\pricelistitem{\runeofcrushing}{10} Le porteur gagne la règle \impacthits{+1}.
 
 \endpricelist
 
@@ -583,21 +655,21 @@ Un maximum de 3 Runes de cet ensemble peuvent être sélectionnées et comptent 
 
 \startpricelist
 
-\pricelistitem{Rune de Vengeance}{35}\oneperarmy{}.
+\pricelistitem{\runeofretribution}{35}\oneperarmy{}.
 
 Usage Unique. Peut être activée au début de n'importe quelle Phase de Mouvement. Les unités amies à moins de \distance{6} du porteur gagnent la règle \devastatingcharge{} jusqu'à la fin du Tour de Joueur.
 
-\pricelistitem{Rune du Dragon}{35}Le porteur gagne la règle \breathweapon{Force 4, \flamingattacks{} et \magicalattacks{}}.
+\pricelistitem{\runeofdragonsbreath}{35}Le porteur gagne la règle \breathweapon{Force 4, \flamingattacks{} et \magicalattacks{}}.
 
-\pricelistitem{Rune de Courage}{30}Usage Unique. Peut être activée au début de n'importe quelle Manche de Corps à Corps. Le porteur gagne la règle \stubborn{} pour la durée de la Phase.
+\pricelistitem{\runeofcourage}{30}Usage Unique. Peut être activée au début de n'importe quelle Manche de Corps à Corps. Le porteur gagne la règle \stubborn{} pour la durée de la Phase.
 
-\pricelistitem{Rune d'Infamie}{20}Le porteur provoque la \fear{}.
+\pricelistitem{\runeofinfamy}{20}Le porteur provoque la \fear{}.
 
-\pricelistitem{Rune Bouclier}{15}Le porteur gagne une \wardsave{6} ou améliore la valeur de cette \wardsave{} de 1 par Rune. L'effet de cette Rune ne s'additionne \textbf{qu}'avec lui-même et la règle \shieldwall{}, et jusqu'à obtenir 4+ au mieux. Ceci n'affecte pas l'interaction avec la \magicresistance{}.
+\pricelistitem{\runeofshielding}{15}Le porteur gagne une \wardsave{6} ou améliore la valeur de cette \wardsave{} de 1 par Rune. L'effet de cette Rune ne s'additionne \textbf{qu}'avec lui-même et la règle \shieldwall{}, et jusqu'à obtenir 4+ au mieux. Ceci n'affecte pas l'interaction avec la \magicresistance{}.
 
-\pricelistitem{Rune d'Empathie}{10}Le porteur gagne les règles \vanguard{} et \scout{} mais ne peut pas être monté sur un \warthrone{}.
+\pricelistitem{\runeofkinship}{10}Le porteur gagne les règles \vanguard{} et \scout{} mais ne peut pas être monté sur un \warthrone{}.
 
-\pricelistitem{Rune de la Forge}{5}Le porteur gagne la règle \fireborn{}.
+\pricelistitem{\runeoftheforge}{5}Le porteur gagne la règle \fireborn{}.
 
 \endpricelist
 
@@ -605,27 +677,30 @@ Usage Unique. Peut être activée au début de n'importe quelle Phase de Mouveme
 
 Les figurines avec la règle \runecraft{} ou \runecraftmastery{} peuvent prendre un maximum de 3 Runes de cet ensemble qui comptent alors comme un unique Objet Cabalistique.
 
-\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm] % to remove samepage
+\startpricelistNSP
 
-\pricelistitem{Rune de Connaissance}{50}\oneofakind{}.
+\pricelistitem{\runeofgrounding}{50}\oneofakind{}.
 
 À la fin de votre Phase de Magie, vous pouvez mettre de côté un Dé de Magie et l'ajouter à votre réserve à la Phase de Magie suivante, immédiatement après avoir jeté les dés pour les Flux de Magie.
 
-\pricelistitem{Rune de Maîtrise}{40}Une fois par Phase de Magie, le porteur peut relancer un Dé de Pouvoir utilisé pour un Objet de Sort.
+\pricelistitem{\runeofmastery}{40}Une fois par Phase de Magie, le porteur peut relancer un Dé de Pouvoir utilisé pour un Objet de Sort.
 
-\pricelistitem{Rune Dévoreuse de Sort}{35}\oneperarmy{}.
+\columnbreak
+\vspace*{1.93cm}
+
+\pricelistitem{\runeofdevouring}{35}\oneperarmy{}.
 
 Usage Unique. Le joueur peut décider d'utiliser cette Rune plutôt que de tenter une dissipation. Le sort est lancé normalement, mais il est ensuite perdu et ne peut plus être relancé de la partie. Cette Rune ne peut pas être combinée avec une Rune de Déni sur un même objet.
 
-\pricelistitem{Rune de Déni}{35}\oneperarmy{}.
+\pricelistitem{\runeofdenial}{35}\oneperarmy{}.
 
 Usage Unique. Le joueur peut décider d'utiliser cette Rune plutôt que de tenter une dissipation. Le sort est automatiquement dissipé.
 
-\pricelistitem{Rune Brillante}{35} Le porteur ajoute un bonus de +1 à tous ses jets de dissipation ainsi qu'aux jets de lancement de sorts liés à des Objets de Sort. Cela passe outre les restrictions habituelles empêchant les modificateurs de lancement pour les Objets de Sort.
+\pricelistitem{\runeofbrilliance}{35} Le porteur ajoute un bonus de +1 à tous ses jets de dissipation ainsi qu'aux jets de lancement de sorts liés à des Objets de Sort. Cela passe outre les restrictions habituelles empêchant les modificateurs de lancement pour les Objets de Sort.
 
-\pricelistitem{Rune de Harcèlement}{25} Le joueur profite d'un bonus de +1 sur ses jets de \channel{} tandis que l'adversaire subit un malus de -1 sur les siens.
+\pricelistitem{\runeofharnessing}{25} Le joueur profite d'un bonus de +1 sur ses jets de \channel{} tandis que l'adversaire subit un malus de -1 sur les siens.
 
-\end{description}
+\endpricelistNSP
 
 \subtitle{Bannières Runiques}\vspace{5pt}
 
@@ -633,11 +708,11 @@ Les armées des Forteresses Naines peuvent aussi bien utiliser les Bannières Ma
 
 \startpricelist
 
-\pricelistitem{Bannière Runique de Protection}{45}Toutes les unités alliées à moins de \distance{6} du porteur gagnent une \wardsave{5} contre les Attaques de Tir.
+\pricelistitem{\runicstandardofshielding}{45}Toutes les unités alliées à moins de \distance{6} du porteur gagnent une \wardsave{5} contre les Attaques de Tir.
 
-\pricelistitem{Bannière Runique de Confusion}{30}Les unités chargeant l'unité du porteur réduisent leur distance de charge de \distance{1D6}. Jetez le dé pour chaque unité qui charge avant de les déplacer. Cela peut provoquer une charge ratée.
+\pricelistitem{\runicstandardofdismay}{30}Les unités chargeant l'unité du porteur réduisent leur distance de charge de \distance{1D6}. Jetez le dé pour chaque unité qui charge avant de les déplacer. Cela peut provoquer une charge ratée.
 
-\pricelistitem{Bannière Runique de Hardiesse}{25}L'unité du porteur gagne la règle \vanguard{}.
+\pricelistitem{\runicstandardofswiftness}{25}L'unité du porteur gagne la règle \vanguard{}.
 
 \endpricelist
 

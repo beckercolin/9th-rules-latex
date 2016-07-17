@@ -2,8 +2,21 @@
 
 \newcommand{\booktitle}{Hautes Lignées Elfes}
 \newcommand{\version}{0.99.9}
-\newcommand{\frenchversion}{2.0}
+\newcommand{\frenchversion}{2.1}
 \newcommand{\booklogo}{pics/logo_big_HBE.png}
+\newcommand{\tocfirstcolumn}{%
+\tocentry{specialrulestitle}{\labels@armyspecialrules}
+
+\tocentry{armourytitle}{\labels@armoury}
+
+\tocentry{honourstitle}{\honours}
+
+\tocentry{magicalitemstitle}{\labels@magicalitems}
+
+\tocentry{lordtitle}{\labels@armylist}
+
+\tocentry{QRStitle}{\labels@quickrefsheet}
+}
 
 % Army special rules
 
@@ -14,7 +27,7 @@
 
 % Army common type special rules
 
-\newcommand{\elvencommonrules}{Règles spéciales des Elfes}
+\newcommand{\elvencommonrules}{Règles Spéciales des Elfes}
 
 % Armoury
 
@@ -27,17 +40,46 @@
 \newcommand{\honour}{Honneur}
 \newcommand{\honours}{Honneurs}
 
+\newcommand{\masterofcanreigtower}{Maître de la Tour de Canreig}
+\newcommand{\princeofryma}{Prince de Ryma}
+\newcommand{\fleetofficer}{Commodore}
+\newcommand{\highwardenoftheflame}{Haut Gardien de la Flamme}
+\newcommand{\queenscompanion}{Suivante de la Reine}
+\newcommand{\royalhuntsman}{Chasseur Royal}
+\newcommand{\asfadscholar}{Érudit d’Asfad}
+\newcommand{\orderofthefieryheart}{Ordre du Cœur de Feu}
+
+% Magical Items
+
+\newcommand{\greatbowofelu}{Grand Arc d’Azur}
+\newcommand{\spearoftheblazingdawn}{Lance de l’Aube Éclatante}
+
+\newcommand{\daemonhuntershelm}{Heaume du Chasseur de Démon}
+
+\newcommand{\gleamingrobes}{Robes Étincelantes}
+
+\newcommand{\cloakofthestars}{Cape des Étoiles}
+\newcommand{\shardofcenyrn}{Éclat de Cenyrn}
+
+\newcommand{\amethystcrystal}{Cristal d’Améthyste}
+\newcommand{\bookofmeladys}{Livre de Meladys}
+
+\newcommand{\bannerofbecalming}{Bannière d’Apaisement}
+\newcommand{\warbannerofryma}{Bannière de Bataille de Ryma}
+
 % Spells
 
 \newcommand{\drainmagicspell}{Drain Magique}
-\newcommand{\thunderboltspell}{Choc Foudroyant}
+
+\newcommand{\heavensspelltwo}{Choc Foudroyant}
+\newcommand{\firespelltwo}{Épées Flamboyantes}
 
 % Other rules
 
 \newcommand{\swordsworn}{Serment de l'Épée}
 \newcommand{\lionsfur}{Fourrure de Lion}
 \newcommand{\steadyaim}{Visée Stable}
-\newcommand{\elvenboltthrower}{Faucheuse Garde-Mer}
+\newcommand{\elvenboltthrower}{Baliste Elfe}
 \newcommand{\repeatingshots}{Tir à Répétition}
 \newcommand{\skyreaper}{Faucheuse des Airs}
 \newcommand{\aldanwarhorn}{Cor d'Aldan}
@@ -53,24 +95,31 @@
 % Characters
 
 \newcommand{\highprince}{Haut Prince}
-\newcommand{\archmage}{Archimage}
-\newcommand{\commander}{Commandant}
-\newcommand{\mage}{Mage}
 \newcommand{\highprinces}{Hauts Princes}
+
+\newcommand{\archmage}{Archimage}
 \newcommand{\archmages}{Archimages}
+
+\newcommand{\commander}{Commandant}
 \newcommand{\commanders}{Commandants}
+
+\newcommand{\mage}{Mage}
 \newcommand{\mages}{Mages}
 
 % Core
 
 \newcommand{\citizenspears}{Lanciers Plébéiens}
 \newcommand{\citizenspear}{Lancier Plébéien}
+
 \newcommand{\citizenarchers}{Archers Plébéiens}
 \newcommand{\citizenarcher}{Archer Plébéien}
+
 \newcommand{\seaguards}{Gardes-Mer}
 \newcommand{\seaguard}{Garde-Mer}
+
 \newcommand{\highbornlancers}{Lance Patricienne}
 \newcommand{\highbornlancer}{Lance Patricienne}
+
 \newcommand{\eleinreavers}{Patrouilleurs d'Elein} 
 \newcommand{\eleinreaver}{Patrouilleur d'Elein}
 
@@ -78,6 +127,7 @@
 
 \newcommand{\swordmasters}{Maîtres de l'Épée}
 \newcommand{\swordmaster}{Maître de l'Épée}
+
 \newcommand{\lionguards}{Gardes-Lion}
 \newcommand{\lionguard}{Garde-Lion}
 \newcommand{\flamewardens}{Protecteurs de la Flamme}
@@ -93,17 +143,22 @@
 % Rare
 
 \newcommand{\queensguard}{Gardes de la Reine}
+\newcommand{\queensguardSING}{Garde de la Reine}
+
 \newcommand{\skysloop}{Char Rapace}
+
 \newcommand{\gianteagles}{Aigles Géants}
+\newcommand{\gianteagle}{Aigle Géant}
+
 \newcommand{\firephoenix}{Phénix de Feu}
 \newcommand{\firephoenixes}{Phénix de Feu}
+
 \newcommand{\frostphoenix}{Phénix de Glace}
 \newcommand{\frostphoenixes}{Phénix de Glace}
 
 
 % Mounts
 
-\newcommand{\gianteagle}{Aigle Géant}
 \newcommand{\griffon}{Griffon}
 \newcommand{\elvenhorse}{Cheval Elfique}
 \newcommand{\youngdragon}{Jeune Dragon}
@@ -145,19 +200,17 @@
 \end{minipage}
 }
 
-\newcommand{\spacebetweenhonours}{\vspace{0.8cm}}
+\newcommand{\spacebetweenhonours}{\vspace{1.2cm}}
 
 % Profile wording
 
-\newcommand{\honourchoice}{Peut choisir un seul \honour}
+\newcommand{\honourchoice}{Un seul \honour}
 \newcommand{\anybattlepaths}{la Discipline Commune de son choix}
 \newcommand{\ambushseaguardoption}{\ambush{} (max. 20 figs., \oneofakind)}
-\newcommand{\skirmishlionguardoption}{\skirmishers{} (max. 15 figs., \oneofakind)}
-\newcommand{\maytakealdanwarhorn}{Peut avoir \aldanwarhorn}
-\newcommand{\maytakestormpennant}{Peut avoir \stormpennant}
+\newcommand{\skirmishlionguardoption}{\skirmisher{} (max. 15 figs., \oneofakind)}
 \newcommand{\firephoenixmountmention}{Voir l'unité Rare Phénix de Feu pour le détail des règles.}
 \newcommand{\frostphoenixmountmention}{Voir l'unité Rare Phénix de Glace pour le détail des règles.}
-\newcommand{\ifmountedbyhighprinceupgradetoancientdragon}{Si monté par un \highprince{}{,}\newline peut devenir un \ancientdragon}
+\newcommand{\ifmountedbyhighprince}{Si monté par un \highprince{}{,}}
 \newcommand{\ancientdragonbasesizenote}{La taille de son socle passe alors à \unit{100x150}{\milli\meter}.}
 
 % Profile rules
@@ -175,17 +228,20 @@ Le porteur gagne une \innatedefence{6} qui passe à (5+) contre les Attaques de 
 }
 
 \newcommand{\elvenboltthrowerrule}{%
-\textbf{\artilleryweapon} de type \textbf{\boltthrower}.\newline
+\textbf{\artilleryweapon} de type \textbf{\boltthrower}.
+
 \range{48}, \Strength{} 6, \multiplewounds{1D3}{}, \armourpiercing{6}.
 }
 
 \newcommand{\repeatingshotsrule}{%
-La \elvenboltthrower{} peut aussi être utilisée comme une \textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline
+La \elvenboltthrower{} peut aussi être utilisée comme une \textbf{\artilleryweapon} de type \textbf{\volleygun}.
+
 \range{48}, \Strength{} 4, \armourpiercing{1}, \multipleshots{6}.
 }
 
 \newcommand{\skyreaperrule}{%
-\textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline
+\textbf{\artilleryweapon} de type \textbf{\volleygun}.
+
 \range{24}, \Strength{} 5, \armourpiercing{1}, \multipleshots{4}, \quicktofire{}.
 }
 
@@ -194,7 +250,7 @@ Les unités ennemies à moins de \distance{12} d'au moins une figurine avec cett
 }
 
 \newcommand{\stormpennantrule}{%
-Les Attaques de Corps à Corps et les \impacthits{} de la figurine gagnent la règle \lightningattacks{}. La figurine gagne un \boundspell{4} : \thunderboltspell{} (Discipline \heavens{}).
+Les Attaques de Corps à Corps et les \impacthits{} de la figurine gagnent la règle \lightningattacks{}. La figurine gagne un \boundspell{4}. \heavensspelltwo{} (Discipline \heavens{}).
 }
 
 \newcommand{\flameswooprule}{%
@@ -202,7 +258,9 @@ Les Attaques de Corps à Corps et les \impacthits{} de la figurine gagnent la r�
 }
 
 \newcommand{\rebirthrule}{%
-La première fois qu'un \firephoenix{} perd son dernier Point de Vie, lancez 1D6. Sur 5+ (ou 3+ s'il est monté), placez un marqueur centré sur la dernière position de la figurine. Si le jet est raté, la figurine est retirée comme perte. Au début de l'étape des Autres Mouvements du prochain Tour de Joueur, replacez le \firephoenix{} et son Personnage (s'il en portait un) sur la table. Le centre de la figurine doit être placé à \distance{3} au plus du marqueur, et à plus d'\distance{1} de toute autre figurine ou Terrain Infranchissable. Il peut être orienté dans la direction de votre choix. Si vous ne pouvez pas le placer, la figurine est considérée comme perdue et ne revient plus en jeu. Si elle revient en jeu, il s'agit de la même figurine que celle qui a quitté le jeu, avec tous les effets de jeu la ciblant précédemment, tels que les sorts Restant en Jeu, avec l'exception qu'il ne lui reste plus qu'un seul Point de Vie.
+La première fois qu'un \firephoenix{} perd son dernier Point de Vie, lancez 1D6. Sur 5+ (ou 3+ s'il est monté), placez un marqueur centré sur la dernière position de la figurine. Si le jet est raté, la figurine est retirée comme perte.
+
+\vspace*{5pt}Au début de l'Étape des Autres Mouvements du prochain Tour de Joueur, replacez le \firephoenix{} et son Personnage (s'il en portait un) sur la table. Le centre de la figurine doit être placé à \distance{3} au plus du marqueur, et à plus d'\distance{1} de toute autre figurine ou Terrain Infranchissable. Il peut être orienté dans la direction de votre choix. Si vous ne pouvez pas le placer, la figurine est considérée comme perdue et ne revient plus en jeu. Si elle revient en jeu, il s'agit de la même figurine que celle qui a quitté le jeu, avec tous les effets de jeu la ciblant précédemment, tels que les sorts Restant en Jeu, avec l'exception qu'il ne lui reste plus qu'un seul Point de Vie.
 }
 
 \newcommand{\chillaurarule}{%
@@ -230,11 +288,11 @@ Si votre armée contient au moins une figurine avec cette règle, ajoutez +1 à 
 
 \armyspecialruleentry{\valiant}
 
-La figurine gagne la règle \stubborn{} si elle est en contact avec un ennemi qui provoque la \fear{}. Les figurines ordinaires gagnent aussi \bodyguard{\highprince{}, \commander{}}, mais seulement pour un Personnage avec l’Honneur Chasseur Royal ou n'ayant pas choisi d'Honneur.
+La figurine gagne la règle \stubborn{} si elle est en contact avec un ennemi qui provoque la \fear{}. Les figurines ordinaires gagnent aussi \bodyguard{\highprince{}, \commander{}}, mais seulement pour un Personnage avec l’Honneur \royalhuntsman{} ou n'ayant pas choisi d'Honneur.
 
 \armyspecialruleentry{\lastoftheirkind}
 
-Votre armée ne peut pas inclure plus de deux figurines parmi cette liste : \youngdragon{}, \dragon{}, \firephoenixes{} et \frostphoenixes{}. Cela inclut les montures de Personnage. Cette limite passe à 4 pour une Grande Armée et à 1 pour une Patrouille.
+Votre armée ne peut pas inclure plus de deux figurines parmi cette liste : \youngdragons{}, \dragons{}, \firephoenixes{} et \frostphoenixes{}. Cela inclut les montures de Personnage. Cette limite passe à 4 pour une Grande Armée et à 1 pour une Patrouille.
 
 \closearmyspecialrules
 
@@ -259,18 +317,19 @@ Votre armée ne peut pas inclure plus de deux figurines parmi cette liste : \you
 
 
 
-
-\startarmynewsection{\honours}
+\newpage
+\toctarget{honourstitle}{\startarmynewsection{\honours}}
 
 \armynewsubsection{\honours{} des \highprinces{} et des \commanders{}}
 \vspace{0.5cm}
 
 \honoursidepic{logo_tower.png}
 \hfill
-\honourstartsidetext{Maître de la Tour de Canreig}{150/75}\oneofakind{}.\vspace{5pt}
+\honourstartsidetext{\masterofcanreigtower}{150/75}\oneofakind{}.\vspace{5pt}
 
-La figurine gagne les règles \swordsworn{} (voir l'unité spéciale \swordmasters{}) et \masterofbalance{}. Elle devient un \textbf{\magiclevel{1}}. Les \commanders{} choisissent \textbf{deux} sorts de la Discipline des Huit Vents, qui réunit les sorts primaires des huit Disciplines Communes. Les sorts choisis doivent être inscrits sur la feuille d'armée. Les \highprinces{} connaissent tous les sorts de la Discipline des Huit Vents.\newline
-Le nombre de sorts connus ne peut alors jamais être augmenté.
+La figurine gagne les règles \swordsworn{} (voir l'unité spéciale \swordmasters{}) et \masterofbalance{}. Elle devient un \textbf{\magiclevel{1}}. Les \commanders{} choisissent \textbf{deux} sorts de la Discipline des Huit Vents, qui réunit les sorts primaires des huit Disciplines Communes. Les sorts choisis doivent être inscrits sur la feuille d'armée. Les \highprinces{} connaissent tous les sorts de la Discipline des Huit Vents.
+
+\vspace{5pt}Le nombre de sorts connus ne peut alors jamais être augmenté.
 \honourmulticols{}
 \def\tempmounts{À pied uniquement=,}
 \vspace*{-0.3cm}\mounts{\tempmounts}\columnbreak\phantom{debug}
@@ -278,9 +337,11 @@ Le nombre de sorts connus ne peut alors jamais être augmenté.
 
 \spacebetweenhonours{}
 
-\honourstartsidetext{Prince de Ryma}{30}\oneofakind{}. \highprince{} uniquement.\vspace{5pt}
+\honourstartsidetext{\princeofryma}{30}\oneofakind{}. \highprince{} uniquement.\vspace{5pt}
 
-La figurine gagne la règle \devastatingcharge{} et sa monture n'est pas comptée pour la règle \lastoftheirkind{}. Elle \textbf{doit} sélectionner une des trois montures suivantes :
+La figurine gagne la règle \devastatingcharge{} et sa monture n'est pas comptée pour la règle \lastoftheirkind{}.
+
+\vspace{5pt}Elle \textbf{doit} sélectionner une des trois montures suivantes :
 \honourmulticols{}
 \def\tempmounts{\elvenhorse{}=\free{},\youngdragon{}=230,\dragon{}=295,}
 \vspace*{-0.3cm}\mounts{\tempmounts}\columnbreak\phantom{debug}
@@ -292,18 +353,22 @@ La figurine gagne la règle \devastatingcharge{} et sa monture n'est pas compté
 
 \honoursidepic{logo_fleet.png}
 \hfill
-\honourstartsidetext{Commodore}{20}La figurine gagne les règles \weaponmaster{} et \steadyaim{} (voir l'unité de base \seaguards{}). Elle peut acheter n'importe quel nombre d'armes standard. Si la figurine est à pied, son unité peut effectuer une Reformation de Combat lorsqu'elle est chargée avec succès, immédiatement après que toutes les unités ennemies ont été amenées au contact. Cette Reformation suit les règles habituelles de Reformation de Combat. Le Commodore n'a accès qu'aux montures de la liste ci-dessous.
+\honourstartsidetext{\fleetofficer}{20}La figurine gagne les règles \weaponmaster{} et \steadyaim{} (voir l'unité de base \seaguards{}). Elle peut acheter n'importe quel nombre d'armes standard. Si la figurine est à pied, son unité peut effectuer une Reformation de Combat lorsqu'elle est chargée avec succès, immédiatement après que toutes les unités ennemies ont été amenées au contact. Cette Reformation suit les règles habituelles de Reformation de Combat.
+
+\vspace{5pt}Le Commodore n'a accès qu'aux montures de la liste ci-dessous.
 \honourmulticols{}
 \def\tempmounts{\gianteagle{}=40,\skysloop{}=120,}
 \def\tempoptions{\ambush{} \only{\commander{} à pied}=15,}
-\vspace*{-0.3cm}\mounts{\tempmounts}\columnbreak\vspace*{-0.4cm}\options{\tempoptions}
+\vspace*{-0.3cm}\mounts{\tempmounts}\vspace*{\fill}\columnbreak\vspace*{-0.4cm}\options{\tempoptions}\vspace*{\fill}
 \honourclosesidetext{}
 
 \spacebetweenhonours{}
 
-\honourstartsidetext{Haut Gardien de la Flamme}{85/70}La figurine gagne les règles \divineattacks{}, \immunetopsychology{}, \magicresistance{1} et \wardsave{4}. Son unité gagne la règle \magicalattacks{}. Les montures de la figurine sont restreintes aux choix suivants :
+\honourstartsidetext{\highwardenoftheflame}{85/70}La figurine gagne les règles \divineattacks{}, \immunetopsychology{}, \magicresistance{1} et \wardsave{4}. Son unité gagne la règle \magicalattacks{}.
+
+\vspace{5pt}Les montures de la figurine sont restreintes aux choix suivants :
 \honourmulticols{}
-\def\tempmounts{\firephoenix{}=160/190,\frostphoenix{}\refsymbol{}=200,\refsymbol{} \highprince{} \labels@only{}=,}
+\def\tempmounts{\firephoenix{}=160/190,\frostphoenix{}\refsymbol{}=200,\hspace*{0.3cm}\refsymbol{} \highprince{} \labels@only{}=,}
 \vspace*{-0.3cm}\mounts{\tempmounts}\columnbreak\phantom{debug}
 \honourclosesidetext{}
 \hfill
@@ -313,20 +378,22 @@ La figurine gagne la règle \devastatingcharge{} et sa monture n'est pas compté
 
 \honoursidepic{logo_queen.png}
 \hfill
-\honourstartsidetext{Suivante de la Reine}{20}La figurine gagne la règle \multipleshots{3}. Son unité gagne la règle \quicktofire{}.
+\honourstartsidetext{\queenscompanion}{20}La figurine gagne la règle \multipleshots{3}. Son unité gagne la règle \quicktofire{}.
 \honourmulticols{}
 \def\tempmounts{À pied uniquement=,}
-\def\tempoptions{\maytakeonechoiceonly{%
+\def\tempoptions{\onechoiceonly{%
 	\moonlightarrows{}=5,
 	\scout{}{,} \bitterarrows{}=20,
 	},
 }
-\vspace*{-0.3cm}\mounts{\tempmounts}\columnbreak\vspace*{-0.4cm}\options{\tempoptions}
+\vspace*{-0.3cm}\mounts{\tempmounts}\vspace*{\fill}\columnbreak\vspace*{-0.4cm}\options{\tempoptions}\vspace*{\fill}
 \honourclosesidetext{}
 
 \spacebetweenhonours{}
 
-\honourstartsidetext{Chasseur Royal}{60/45}La figurine gagne la règle \valiant{} et une \lionsfur{} (voir l'unité spéciale \lionguards{}). Elle ne peut pas prendre d'\dragonforgedarmour{}. Lorsqu'il se bat avec une \gw{}, il gagne la règle \multiplewounds{2}{\monstrouscavalry{}, \monstrousbeast{}, \monster{}, \riddenmonster{}}. Son unité est immunisée aux effets de la \fear{} et de la \terror{}. Il n'a accès qu'à la monture suivante :
+\honourstartsidetext{\royalhuntsman}{60/45}La figurine gagne la règle \valiant{} et une \lionsfur{} (voir l'unité spéciale \lionguards{}). Elle ne peut pas prendre d'\dragonforgedarmour{}. Lorsqu'elle se bat avec une \gw{}, elle gagne la règle \multiplewounds{2}{\monstrouscavalry{}, \monstrousbeast{}, \monster{}, \riddenmonster}. Son unité est immunisée aux effets de la \fear{} et de la \terror{}.
+
+\vspace{5pt}Elle n'a accès qu'à la monture suivante :
 \honourmulticols{}
 \def\tempmounts{\lionchariot{}=35/60,}
 \vspace*{-0.3cm}\mounts{\tempmounts}\columnbreak\phantom{debug}
@@ -341,18 +408,20 @@ La figurine gagne la règle \devastatingcharge{} et sa monture n'est pas compté
 
 \honoursidepic{logo_scholar.png}
 \hfill
-\honourstartsidetext{Érudit d'Asfad}{40/30}Tout sort lancé par le Sorcier voit sa portée augmenter de \distance{6}. L'effet n'est que de \distance{3} pour les sorts de type Aura, et il n'a pas d'effet sur les sorts de type Vortex, les Objets de Sort et les sorts sans portée. De plus, le Sorcier gagne l'\boundspell{4} suivant :\vspace{5pt}\newline
+\honourstartsidetext{\asfadscholar}{40/30}Tout sort lancé par le Sorcier voit sa portée augmenter de \distance{6}. L'effet n'est que de \distance{3} pour les sorts de type Aura, et il n'a pas d'effet sur les sorts de type Vortex, les Objets de Sort et les sorts sans portée. De plus, le Sorcier gagne un \boundspell{4} :\vspace{5pt}\newline
 \textbf{Drain Magique}. Type : Universel, \range{18}. Durée : Immédiat.\newline Tous les sorts affectant la cible dont la Durée est Dure un Tour ou Reste en Jeu disparaissent immédiatement.\vspace{5pt}\newline
 La figurine a accès à ses montures habituelles.
 \end{minipage}
 
 \spacebetweenhonours{}
 
-\honourstartsidetext{Ordre du C\oe{}ur de Feu}{220/205}Le Sorcier doit choisir la Discipline \fire{}, et connaît toujours le sort Épées Flamboyantes (Discipline \fire{}) en plus de ses sorts normaux. Si ce sort est tiré lors de la génération des sorts, relancez le dé correspondant jusqu'à obtenir un autre sort. Cela n'empêche pas d'autres Sorciers d'avoir accès au sort. De plus, la figurine ignore les mots-clés Projectile et Dégâts lorsqu'elle lance un sort contre une unité avec laquelle elle est engagée au Corps à Corps. Elle \textbf{doit} sélectionner une des deux montures suivantes :
+\honourstartsidetext{\orderofthefieryheart}{220/205}Le Sorcier doit choisir la Discipline \fire{}, et connaît toujours le sort \firespelltwo{} (Discipline \fire{}) en plus de ses sorts normaux. Si ce sort est tiré lors de la génération des sorts, relancez le dé correspondant jusqu'à obtenir un autre sort. Cela n'empêche pas d'autres Sorciers d'avoir accès au sort. De plus, la figurine ignore les mots-clés Projectile et Dégâts lorsqu'elle lance un sort contre une unité avec laquelle elle est engagée au Corps à Corps.
+
+\vspace{5pt}Elle \textbf{doit} sélectionner une des deux montures suivantes :
 \honourmulticols{}
-\def\tempmounts{\youngdragon{}=\free{},\dragon{}\refsymbol{}=130,\refsymbol{} \archmage{} \labels@only{}=,}
+\def\tempmounts{\youngdragon{}=\free{},\dragon{}\refsymbol{}=130,\hspace*{0.3cm}\refsymbol{} \archmage{} \labels@only{}=,}
 \def\tempoptions{\dragonforgedarmour{}=15/12,}
-\vspace*{-0.3cm}\mounts{\tempmounts}\columnbreak\vspace*{-0.4cm}\options{\tempoptions}
+\vspace*{-0.3cm}\mounts{\tempmounts}\vspace*{\fill}\columnbreak\vspace*{-0.4cm}\options{\tempoptions}\vspace*{\fill}
 \honourclosesidetext{}
 \hfill
 \honoursidepic{logo_fieryheart.png}
@@ -372,10 +441,10 @@ La figurine a accès à ses montures habituelles.
 
 \startpricelist
 
-\pricelistitem{Grand Arc d'Azur}{35}Type : \longbow{}. \range{30}, Force de l'utilisateur +1, \armourpiercing{1}, \multipleshots{3}.
+\pricelistitem{\greatbowofelu}{35}Type : \longbow{}. \range{30}, Force de l'utilisateur +1, \armourpiercing{1}, \multipleshots{3}.
 
 
-\pricelistitem{Lance de l'Aube Éclatante}{30/20}Personnages uniquement.
+\pricelistitem{\spearoftheblazingdawn}{30/20}Personnage uniquement.
 
 Type : \spear{}. La Force des attaques effectuées avec cette arme est supérieure d'un point à l'Endurance de la cible. Si la Force était déjà supérieure, ignorez la règle.
 
@@ -385,7 +454,7 @@ Type : \spear{}. La Force des attaques effectuées avec cette arme est supérieu
 
 \startpricelist
 
-\pricelistitem{Heaume du Chasseur de Démon}{35/25}Ne peut pas être pris par une \largetarget{}.
+\pricelistitem{\daemonhuntershelm}{35/25}Ne peut pas être pris par une \largetarget{}.
 
 Type : Aucun (Sauvegarde d'Armure de 6+). Le porteur gagne une \wardsave{3} contre les \magicalattacks{}.
 
@@ -395,7 +464,7 @@ Type : Aucun (Sauvegarde d'Armure de 6+). Le porteur gagne une \wardsave{3} cont
 
 \startpricelist
 
-\pricelistitem{Robes Étincelantes}{45}\archmage{} ou \mage{} à pied uniquement.
+\pricelistitem{\gleamingrobes}{45}\archmage{} ou \mage{} à pied uniquement.
 
 Le porteur gagne la règle \ethereal{}. Il ne peut pas porter d'attaques, y compris spéciales.
 
@@ -405,19 +474,24 @@ Le porteur gagne la règle \ethereal{}. Il ne peut pas porter d'attaques, y comp
 
 \startpricelist
 
-\pricelistitem{Cape des Étoiles}{20}Les sorts ciblant l'unité du lanceur subissent un malus de -1 sur leur jet de lancement.
+\pricelistitem{\cloakofthestars}{20}Les sorts ciblant l'unité du lanceur subissent un malus de -1 sur leur jet de lancement.
 
-\pricelistitem{Éclat de Cenyrn}{10}Usage Unique. Activez-le au début de n'importe quelle Phase de Corps à Corps. Les effets durent jusqu'à la fin de cette phase. Après avoir lancé les dés pour toucher, le porteur peut choisir de relancer \textbf{tous} ces dés. Après avoir lancé les dés pour blesser, le porteur peut choisir de relancer \textbf{tous} ces dés. Les jets de sauvegarde de toute sorte réussis contre des blessures infligées par le porteur doivent être relancés. À la fin de cette phase, le porteur subit une blessure sans aucune sauvegarde autorisée avec la règle \multiplewounds{2}{\riddenmonster}.
+\pricelistitem{\shardofcenyrn}{10}Usage Unique. Activez-le au début de n'importe quelle Phase de Corps à Corps. Les effets durent jusqu'à la fin de cette phase.
+
+Après avoir lancé les dés pour toucher, le porteur peut choisir de relancer \textbf{tout} ces dés. Après avoir lancé les dés pour blesser, le porteur peut choisir de relancer \textbf{tout} ces dés. Les jets de sauvegarde de toute sorte réussis contre des blessures infligées par le porteur doivent être relancés.
+
+À la fin de cette phase, le porteur subit une blessure sans aucune sauvegarde autorisée avec la règle \multiplewounds{2}{\riddenmonster}.
 
 \endpricelist
 
+\columnbreak
 \armyarcaneitems
 
 \startpricelist
 
-\pricelistitem{Cristal d'Améthyste}{55}Pendant le tour de votre adversaire, après avoir déterminé les Flux de Magie, vous pouvez retirer un Dé de Pouvoir de sa réserve. Ajoutez +1 à votre jet de Canalisation pour cette phase.
+\pricelistitem{\amethystcrystal}{55}Pendant le tour de votre adversaire, après avoir déterminé les Flux de Magie, vous pouvez retirer un Dé de Pouvoir de sa réserve. Ajoutez +1 à votre jet de Canalisation pour cette phase.
 
-\pricelistitem{Livre de Meladys}{45/25}Une fois par Phase de Magie, le porteur peut relancer un Dé de Pouvoir utilisé pour une tentative de lancement de sort, à condition que ce dé n'ait pas donné un \result{6} naturel.
+\pricelistitem{\bookofmeladys}{45/25}Une fois par Phase de Magie, le porteur peut relancer un Dé de Pouvoir utilisé pour une tentative de lancement de sort, à condition que ce dé n'ait pas donné un \result{6} naturel.
 
 \endpricelist
 
@@ -425,9 +499,9 @@ Le porteur gagne la règle \ethereal{}. Il ne peut pas porter d'attaques, y comp
 
 \startpricelist
 
-\pricelistitem{Bannière d'Apaisement}{35}Le porteur gagne la règle \channel{}. Au début de chaque Phase de Magie adverse, choisissez un Sorcier allié à moins de \distance{12} du porteur. Ce Sorcier gagne un bonus de +1 pour dissiper lors de cette phase.
+\pricelistitem{\bannerofbecalming}{35}Le porteur gagne la règle \channel{}. Au début de chaque Phase de Magie adverse, choisissez un Sorcier allié à moins de \distance{12} du porteur. Ce Sorcier gagne un bonus de +1 pour dissiper lors de cette phase.
 
-\pricelistitem{Bannière de Bataille de Ryma}{30}L'unité du porteur gagne la règle \thunderouscharge{}. Les montures ne sont pas affectées.
+\pricelistitem{\warbannerofryma}{30}L'unité du porteur gagne la règle \thunderouscharge{}. Les montures ne sont pas affectées.
 
 \endpricelist
 

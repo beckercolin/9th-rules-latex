@@ -6,14 +6,14 @@
 \lordstitle
 
 \showunit{
-	name={\king{}},
-	cost={135},
+	name={\king},
+	cost=135,
 	profile={< 3 7 4 4 5 3 4 4 10},
 	type=\infantry{},
 	unitsize=1,
 	basesize=20x20,
 	commontype=\dwarvencommonrules{},
-	commonspecialrules={\relentless{},\shieldwall{},\sturdy{}},
+	commonspecialrules={\relentless{},\shieldwall{},\sturdy},
 	armour={\platearmour{}},
 	options={
 		\maytakerunicitems{}=\upto{}<125,
@@ -58,10 +58,12 @@
 
 
 
-\clearpage\lordstitle
+\clearpage
+\def\logolocalpath{../Layout/pics/logo_lord.png}%
+\renewcommand{\profilecategory}{\labels@lords}%
 
 \showunit{
-	name={\daemonseeker{}},
+	name={\daemonseeker},
 	cost={130},
 	profile={< 3 7 4 5 5 3 5 5 10},
 	type=\infantry{},
@@ -89,7 +91,7 @@
 }	
 
 \showunit{
-	name={\runicmaster{}},
+	name={\runicmaster},
 	cost={125},
 	profile={< 3 6 4 4 5 3 3 2 9},
 	type= \infantry{} ,
@@ -111,7 +113,7 @@
 }
 
 \showunit{
-	name={\masterengineer{}},
+	name={\masterengineer},
 	cost={100},
 	profile={< 3 6 4 4 5 3 3 2 9},
 	type=\infantry{},
@@ -151,7 +153,7 @@
 \heroestitle
 
 \showunit{
-	name={\thane{}},
+	name={\thane},
 	cost={70},
 	profile={< 3 6 4 4 5 2 3 3 9},
 	type=\infantry{},
@@ -181,7 +183,7 @@
 }
 
 \showunit{
-	name={\dwarfengineer{}},
+	name={\dwarfengineer},
 	cost={65},
 	profile={< 3 5 4 4 4 2 3 2 9},
 	type=\infantry{},
@@ -207,7 +209,7 @@
 }
 
 \showunit{
-	name={\runicsmith{}},
+	name={\runicsmith},
 	cost={70},
 	profile={< 3 5 3 4 4 2 3 2 9},
 	type=\infantry{},
@@ -229,7 +231,7 @@
 }
 
 \showunit{
-	name={\dragonseeker{}},
+	name={\dragonseeker},
 	cost={50},
 	profile={< 3 6 3 4 5 2 4 4 10},
 	type=\infantry{},
@@ -264,8 +266,8 @@
 \coreunitstitle
 
 \showunit{
-	name={\clanwarriors{}},
-	QRSname={\clanwarrior{}},
+	name={\clanwarriors},
+	QRSname={\clanwarrior},
 	cost={60},
 	profile={< 3 4 3 3 4 1 2 1 9},
 	costpermodel=7,
@@ -290,8 +292,8 @@
 }
 
 \showunit{
-	name={\greybeards{}},
-	QRSname={\greybeard{}},
+	name={\greybeards},
+	QRSname={\greybeard},
 	cost={90},
 	profile={< 3 5 3 4 4 1 2 1 9},
 	costpermodel=11,
@@ -316,8 +318,8 @@
 }
 
 \showunit{
-	name={\clanmarksmen{}},
-	QRSname={\clanmarksman{}},
+	name={\clanmarksmen},
+	QRSname={\clanmarksman},
 	cost={110},
 	profile={ < 3 4 3 3 4 1 2 1 9},
 	costpermodel=11,
@@ -343,11 +345,21 @@
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
 }	
 
+
+
+
+
+
+
+
+
+
+
 \specialunitstitle
 
 \showunit{
-	name={\deepwatch{}},
-	QRSname={\deepwatchSINGULAR{}},
+	name={\deepwatch},
+	QRSname={\deepwatchSINGULAR},
 	cost={110},
 	profile={ < 3 5 3 4 4 1 2 1 9},
 	costpermodel=15,
@@ -366,7 +378,7 @@
 }
 
 \showunit{
-	name={\kingsguard{}},
+	name={\kingsguard},
 	cost={130},
 	profile={ < 3 5 3 4 4 1 2 2 9},
 	costpermodel=16,
@@ -386,8 +398,8 @@
 }
 
 \showunit{
-	name={\forgewardens{}},
-	QRSname={\forgewarden{}},
+	name={\forgewardens},
+	QRSname={\forgewarden},
 	cost={140},
 	profile={ < 3 5 3 4 4 1 2 1 9},
 	costpermodel=14,
@@ -407,8 +419,8 @@
 }
 
 \showunit{
-	name={\seekers{}},
-	QRSname={\seeker{}},
+	name={\seekers},
+	QRSname={\seeker},
 	cost={55},
 	profile={ < 3 4 3 4 4 1 2 1 10},
 	costpermodel=11,
@@ -429,11 +441,11 @@
 }
 
 \showunit{
-	name={\steamcopters{}},
-	QRSname={\steamcopter{}},
+	name={\steamcopters},
+	QRSname={\steamcopter},
 	profile={
-		\copter{} < 1 - - - 5 3 - - -,
-		\pilot{} < - 4 3 4 4 - 2 2 9,
+		\copter{}< 1 - - - 5 3 - - -,
+		\pilot{}< - 4 3 4 4 - 2 2 9,
 		},
 	type=\cavalry{},
 	basesize=40x40,
@@ -493,8 +505,8 @@
 }
 
 \showunit{
-	name={\miners{}},
-	QRSname={\miner{}},
+	name={\miners},
+	QRSname={\miner},
 	cost={90},
 	profile={ < 3 4 3 4 4 1 2 1 9},
 	costpermodel=10,
@@ -518,7 +530,7 @@
 }
 
 \showunit{
-	name={\fieldartillery{}},
+	name={\fieldartillery},
 	profile={
 		\machine{} < - - - - 7 3 - - -,
 		\crew{} (3) < 3 4 3 3 4 - 2 1 9,
@@ -671,17 +683,16 @@
 }		
 
 \showunit{
-	name={\grudgemachine{} (\oneofakind{})\refsymbol{}},
-	QRSname={\grudgemachine},
+	name={\grudgemachine},
 	profile={
 		\machine{}< - - - - 7 3 - - -,
 		\crew{} (3)< 3 4 3 3 4 - 2 1 9,
 	},
 	type=\warmachine{},
-	unitsize=1,
+	unitsize=SPECIAL-{\textbf{(\oneofakind{})}\refsymbol{} \labels@Singlemodel},
 	basesize=60,
-	specialrules={\stubborn{}},
-	armour={\ha{}},
+	specialrules={\stubborn},
+	armour={\ha},
 	options={
 		\engineeringrune{}=15,
 	},
@@ -726,15 +737,14 @@
 }	
 
 \showunit{
-	name={\anvilofpower{} (\oneofakind{})},
-	QRSname={\anvilofpower{}},
-	cost={150},
+	name={\anvilofpower},
+	cost=150,
 	profile={
 		\anvil{}< - - - - 7 3 - - -,
 		\anvilcrew{} (3)< 3 5 3 4 4 - 2 1 9,
 	},
 	type=\warmachine{},
-	unitsize=1,
+	unitsize=SPECIAL-{\textbf{(\oneofakind)} \labels@Singlemodel},
 	basesize=60,
 	specialrules={\channel{},\runicanvil{},\unbreakable{},\magicresistance{2},\wardsave{5}},
 	armour={\platearmour},

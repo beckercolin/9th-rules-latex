@@ -2,8 +2,19 @@
 
 \newcommand{\booktitle}{Empire de Sonnstahl}
 \newcommand{\version}{0.99.9}
-\newcommand{\frenchversion}{2.0}
+\newcommand{\frenchversion}{2.1}
 \newcommand{\booklogo}{pics/logo_big_EoS.png}
+\newcommand{\tocfirstcolumn}{%
+\tocentry{specialrulestitle}{\labels@armyspecialrules}
+
+\tocentry{armourytitle}{\labels@armoury}
+
+\tocentry{magicalitemstitle}{\labels@magicalitems}
+
+\tocentry{lordtitle}{\labels@armylist}
+
+\tocentry{QRStitle}{\labels@quickrefsheet}
+}
 
 
 % Army special rules
@@ -14,22 +25,6 @@
 \newcommand{\supportingactions}{Actions de Soutien}
 \newcommand{\order}{Ordre}
 \newcommand{\orders}{Ordres}
-
-% Armoury
-
-\newcommand{\repeatergun}{Arquebuse à Répétition}
-\newcommand{\repeaterpistol}{Pistolet à Répétition}
-\newcommand{\longrifle}{Long Fusil}
-
-
-% Spells
-
-\newcommand{\heavenstwo}{Choc Foudroyant}
-\newcommand{\lightone}{Bouclier Protecteur}
-\newcommand{\lightsix}{Exorcisme}
-
-
-% Other rules
 
 \newcommand{\ullorsblessing}{Bénédiction d’Ullor}
 \newcommand{\sunnasblessing}{Bénédiction de Sunna}
@@ -42,6 +37,39 @@
 \newcommand{\steadymen}{Tenez Bon !}
 \newcommand{\readyaimfire}{Prêt ! En joue ! Feu !}
 \newcommand{\braceforimpact}{Premier Rang, Genou à Terre !}
+
+% Armoury
+
+\newcommand{\repeatergun}{Arquebuse à Répétition}
+\newcommand{\repeaterpistol}{Pistolet à Répétition}
+\newcommand{\longrifle}{Long Fusil}
+
+% Magical Items
+
+\newcommand{\thesonnstahl}{La Sonnstahl}
+\newcommand{\hammerofwitches}{Malleus Maleficarum}
+\newcommand{\starmace}{Masse-Étoile}
+
+\newcommand{\blessedarmouroffrederickthegreat}{Armure Bénie de Frédéric le Grand}
+\newcommand{\theblackhelm}{Le Heaume Noir}
+\newcommand{\armourofvolund}{Armure de Volund}
+
+\newcommand{\thewintercloak}{Cape de l’Hiver}
+
+\newcommand{\locketofsunna}{Médaillon de Sunna}
+
+\newcommand{\bannerofthestallion}{Bannière de l’Étalon}
+\newcommand{\bannerofunity}{Bannière de Cohésion}
+
+% Spells
+
+\newcommand{\heavensspelltwo}{Choc Foudroyant}
+\newcommand{\lightspellone}{Bouclier Protecteur}
+\newcommand{\lightspellsix}{Exorcisme}
+
+
+% Other rules
+
 \newcommand{\seasonedgeneral}{Général Expérimenté}
 \newcommand{\greattactician}{Tacticien Talentueux}
 \newcommand{\imperialprince}{Prince Impérial}
@@ -167,7 +195,7 @@ La figurine peut donner deux \orders{} par tour plutôt qu'un seul. Ces deux \or
 }
 
 \newcommand{\imperialprincerule}{%
-La figurine gagne +1 Attaque. Elle est équipée de la Sonnstahl mais ne peut acheter aucune autre Arme Magique, et n'a accès qu'à \pts{25} au plus d'autres Objets Magiques.
+La figurine gagne +1 Attaque. Elle est équipée de \thesonnstahl{} mais ne peut acheter aucune autre Arme Magique, et n'a accès qu'à \pts{25} au plus d'autres Objets Magiques.
 }
 
 \newcommand{\legendarywarriorrule}{%
@@ -185,6 +213,7 @@ La figurine peut donner l'Ordre \textbf{\readyaimfire} à une \parentunit{} ou \
 La figurine peut choisir l'une des spécialités ci-dessous au début de la partie.
 
 \setlength{\columnseprule}{0.5pt}
+\setlength{\columnsep}{1cm}
 \renewcommand{\columnseprulecolor}{\color{black!30}}	
 \begin{multicols}{3}
 \raggedcolumns
@@ -211,19 +240,19 @@ La figurine peut choisir l'une des spécialités ci-dessous au début de la part
 \newcommand{\holyrelicrule}{%
 Toutes les unités se trouvant à moins de \distance{6} gagnent la règle \hatred{}. Ceci n'affecte pas les montures. Toutes les \blessings{} lancées par le Personnage dont l'\altar{} est la monture échangent leur type Unité du Lanceur contre le type Aura et \range{6}.
 
-Enfin le Personnage gagne un \boundspell{4}. \lightsix{} (Discipline \light{}).
+\vspace*{5pt}Enfin le Personnage gagne un \boundspell{4}. \lightspellsix{} (Discipline \light{}).
 }
 
 \newcommand{\arcaneshieldrule}{%
 Toute unité alliée à moins de \distance{6} gagne la règle \distracting{}.
 
-\vspace{5pt}\noindent La \engine{} gagne un \boundspell{3}. \lightone{} (Discipline \light{}).
+\vspace{5pt}\noindent La \engine{} gagne un \boundspell{3}. \lightspellone{} (Discipline \light{}).
 }
 
 \newcommand{\foresightrule}{%
 Toute unité alliée à moins de \distance{6} gagne la règle \lightningreflexes{}.
 
-\vspace{5pt}\noindent La \engine{} gagne un \boundspell{4}. \heavenstwo{} (Discipline \heavens{}).
+\vspace{5pt}\noindent La \engine{} gagne un \boundspell{4}. \heavensspelltwo{} (Discipline \heavens{}).
 }
 
 
@@ -427,11 +456,11 @@ La figurine peut donner un et un seul \order{} à une \parentunit{} ou une \supp
 
 \startpricelist
 
-\pricelistitem{La Sonnstahl}{85}Type : \hw{}. Les attaques portées avec cette arme blessent automatiquement et ont la règle \armourpiercing{6}.
+\pricelistitem{\thesonnstahl}{85}Type : \hw{}. Les attaques portées avec cette arme blessent automatiquement et ont la règle \armourpiercing{6}.
 
-\pricelistitem{Malleus Maleficarum}{35}Type : \hw{}. Les attaques portées avec cette arme ont +1 en Force et la règle \lightningreflexes{}.
+\pricelistitem{\hammerofwitches}{35}Type : \hw{}. Les attaques portées avec cette arme ont +1 en Force et la règle \lightningreflexes{}.
 
-\pricelistitem{Masse-Étoile}{30}Type : \gw{}. Le porteur gagne la règle \crushattack{} quand il attaque avec cette arme.
+\pricelistitem{\starmace}{30}Type : \gw{}. Le porteur gagne la règle \crushattack{} quand il attaque avec cette arme.
 
 \endpricelist
 
@@ -439,13 +468,13 @@ La figurine peut donner un et un seul \order{} à une \parentunit{} ou une \supp
 
 \startpricelist
 
-\pricelistitem{Armure Bénie de Frédéric le Grand}{35}Figurine à pied uniquement.
+\pricelistitem{\blessedarmouroffrederickthegreat}{35}Figurine à pied uniquement.
 
 Type : \platearmour{}. Le porteur gagne une Sauvegarde d'Armure de 1+.
 
-\pricelistitem{Armure de Volund}{25}Type : \platearmour{}. Les attaques dirigées contre le porteur perdent la règle \lethalstrike{}.
+\pricelistitem{\armourofvolund}{25}Type : \platearmour{}. Les attaques dirigées contre le porteur perdent la règle \lethalstrike{}.
 
-\pricelistitem{Le Heaume Noir}{15}Type : Aucun (Sauvegarde d'Armure 
+\pricelistitem{\theblackhelm}{15}Type : Aucun (Sauvegarde d'Armure 
 6+). Le porteur gagne la règle \fear{}.
 
 \endpricelist
@@ -454,7 +483,7 @@ Type : \platearmour{}. Le porteur gagne une Sauvegarde d'Armure de 1+.
 
 \startpricelist
 
-\pricelistitem{Cape de l'Hiver}{50}Le porteur gagne les règles \distracting{}, \fireborn{} et \wardsave{5}.
+\pricelistitem{\thewintercloak}{50}Le porteur gagne les règles \distracting{}, \fireborn{} et \wardsave{5}.
 
 \endpricelist
 
@@ -462,7 +491,7 @@ Type : \platearmour{}. Le porteur gagne une Sauvegarde d'Armure de 1+.
 
 \startpricelist
 
-\pricelistitem{Médaillon de Sunna}{35}Lorsque le porteur combat en Défi, chaque combattant prend les caractéristiques non modifiées de Force, d'Endurance, d'Initiative et d'Attaque de son adversaire. Les valeurs du profil de la monture de la figurine ennemie ne sont jamais utilisées dans l'échange.
+\pricelistitem{\locketofsunna}{35}Lorsque le porteur combat en Défi, chaque combattant prend les caractéristiques non modifiées de Force, d'Endurance, d'Initiative et d'Attaque de son adversaire. Les valeurs du profil de la monture de la figurine ennemie ne sont jamais utilisées dans l'échange.
 
 \endpricelist
 
@@ -470,9 +499,9 @@ Type : \platearmour{}. Le porteur gagne une Sauvegarde d'Armure de 1+.
 
 \startpricelist
 
-\pricelistitem{Bannière de Cohésion}{25}L'unité du porteur ne peut pas être Désorganisée par des unités ennemies sur ses flancs. Elle peut toujours être Désorganisée normalement par une unité sur son arrière.
+\pricelistitem{\bannerofunity}{25}L'unité du porteur ne peut pas être Désorganisée par des unités ennemies sur ses flancs. Elle peut toujours être Désorganisée normalement par une unité sur son arrière.
 
-\pricelistitem{Bannière de l'Étalon}{15}Personnage monté uniquement.
+\pricelistitem{\bannerofthestallion}{15}Personnage monté uniquement.
 
 L'unité du porteur et toute unité alliée ayant la règle \swiftstride{} à moins de \distance{12} peuvent relancer les dés ayant donné \result{1} sur leurs jets de charge, Charge Irrésistible, Mouvement Aléatoire et poursuite.
 
