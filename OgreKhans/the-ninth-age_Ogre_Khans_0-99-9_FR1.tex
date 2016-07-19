@@ -2,8 +2,23 @@
 
 \newcommand{\booktitle}{Khans Ogres}
 \newcommand{\version}{0.99.9}
-\newcommand{\frenchversion}{2.0}
+\newcommand{\frenchversion}{2.1}
 \newcommand{\booklogo}{pics/logo_big_OK.png}
+\newcommand{\tocfirstcolumn}{%
+\tocentry{widerulestitle}{\labels@armywiderules}
+
+\tocentry{specialrulestitle}{\labels@armyspecialrules}
+
+\tocentry{armourytitle}{\labels@armoury}
+
+\tocentry{bignamestitle}{Grands noms}
+
+\tocentry{magicalitemstitle}{\labels@magicalitems}
+
+\tocentry{lordtitle}{\labels@armylist}
+
+\tocentry{QRStitle}{\labels@quickrefsheet}
+}
 
 % Army wide rules
 
@@ -15,7 +30,7 @@
 
 % Army common type special rules
 
-\newcommand{\ogrecommonrules}{Règles spéciales des Ogres}
+\newcommand{\ogrecommonrules}{Règles Spéciales des Ogres}
 
 % Armoury
 
@@ -29,6 +44,32 @@
 
 \newcommand{\bigname}{Grand Nom}
 \newcommand{\bignames}{Grands Noms}
+
+\newcommand{\hellfist}{Poing de Fer Démoniaque}
+\newcommand{\wildheart}{Cœur Sauvage}
+\newcommand{\trolleater}{Mangeur de Troll}
+\newcommand{\headhunter}{Chasseur de Tête}
+\newcommand{\spinesplitter}{Pourfendeur de Moelle Épinière}
+\newcommand{\hoardmaster}{Maître des Trésors de Guerre}
+\newcommand{\rottenjaw}{Mâchoire Pourrie}
+
+% Magical Items
+
+\newcommand{\khagadaismaul}{Masse de Khagadai}
+\newcommand{\heartripper}{Transperce-Cœur}
+\newcommand{\axebreakergauntlet}{Gantelet Brise-Hache}
+
+\newcommand{\mammothhidecloak}{Cape en Cuir de Mammouth}
+\newcommand{\yetifurs}{Fourrure de Yéti}
+
+\newcommand{\blindeyeofnyanggai}{Œil Aveugle de Nyanggai}
+
+\newcommand{\daemonheart}{Coeur de Démon}
+
+\newcommand{\aurochscharm}{Sortilège de l'Aurochs}
+
+\newcommand{\dragonskinbanner}{Étendard en Peau de Dragon}
+\newcommand{\skullofqenghet}{Crâne de Qenghet}
 
 % Spells
 
@@ -235,7 +276,7 @@ Si la figurine subit une blessure assujettie à la règle \multiplewounds{}{}, l
 }
 
 \newcommand{\freezingaurarule}{%
-Toutes les unités ennemies dans un rayon de \distance{6} de la figurine subissent -3 en Initiative, jusqu'à un minimum de 1. De plus, la figurine dispose d'un \boundspell{3} : \heavenssignature{} (Discipline \heavens{}).
+Toutes les unités ennemies dans un rayon de \distance{6} de la figurine subissent -3 en Initiative, jusqu'à un minimum de 1. De plus, la figurine dispose d'un \boundspell{3}. \heavenssignature{} (Discipline \heavens{}).
 }
 
 \newcommand{\dowhatyouretoldrule}{%
@@ -248,6 +289,7 @@ Quand un Géant attaque au Corps à Corps, au lieu d'attaquer normalement, chois
 
 \newcommand{\giantattackstable}{%
 \setlength{\columnseprule}{0.5pt}
+\setlength{\columnsep}{1cm}
 \renewcommand{\columnseprulecolor}{\color{black!30}}
 \vspace*{-0.5cm}\begin{multicols}{2}
 	\noindent Si l'unité est de type \infantry{}, \warbeast{}, \cavalry{}, \swarm{} ou \warmachine{}  :	
@@ -320,6 +362,12 @@ Toutes les unités dans l'armée dotées d'un Porte-étendard bénéficient de c
 
 \closearmywiderules
 
+
+
+
+
+
+
 \vspace*{1.5cm}
 \startarmyspecialrules
 
@@ -328,6 +376,16 @@ Toutes les unités dans l'armée dotées d'un Porte-étendard bénéficient de c
 La figurine est immunisée aux effets de la règle Peur. Si elle est à pied, elle gagne la règle \impacthits{1} si c'est une figurine ordinaire et \impacthits{1D3} si c'est un Personnage.
 
 \closearmyspecialrules
+
+
+
+
+
+
+
+
+
+
 
 \vspace*{1.5cm}
 \startarmyarmoury
@@ -347,7 +405,12 @@ La figurine est immunisée aux effets de la règle Peur. Si elle est à pied, el
 \closearmyarmoury
 
 
-\startarmynewsection{Grands Noms}
+
+
+
+
+\newpage
+\toctarget{bignamestitle}{\startarmynewsection{\bignames}}
 
 \spaceaftersection{}
 
@@ -356,46 +419,50 @@ Chaque Personnage Ogre peut prendre un unique Grand Nom. Les Grands Noms suivent
 \begin{multicols}{2}
 \startpricelistNSP
 
-\pricelistitem{Poing de l'Enfer}{50}\greatkhan{} uniquement.
+\pricelistitem{\hellfist}{50}\greatkhan{} uniquement.
 
 Il prend possession d'une Arme Magique de type \ironfist{}. Toute figurine dans l'armée peut prendre une Marque des Dieux Sombres du Livre d'Armée des Guerriers des Dieux Sombres, pour le coût suivant :
 \vspace*{-0.3cm}{\normalfontsize
 \begin{center}\rowcolors{1}{white}{black!10}\hspace*{-0.1cm}\begin{tabular}{@{}lllll@{}}
-& Changement & Luxure & Pestilence & Courroux \tabularnewline
-Seigneur & 40 & 15 & 30 & 40 \tabularnewline
-Héros & 25 & 15 & 25 & 25 \tabularnewline
-Inf. Monstr.& 3 & 4 & 6\refsymbol{} & 6\refsymbol{} \tabularnewline
-Cav. Monstr. & 4 & 6 & 8 & 6 \tabularnewline
-\chariot{} & 4 & 6 & 8 & 6 \tabularnewline
-\monster{} & 3 & 15 & 5 & 10 \tabularnewline
-\riddenmonster{} & 3 & 15 & 5 & 10 \tabularnewline
+& \dchange{} & \wrath{} & \dlust{} & \pestilence{} \tabularnewline
+Seigneur & 40 & 40 & 15 & 30 \tabularnewline
+Héros & 25 & 25 & 15 & 25 \tabularnewline
+Inf. Monstr.& 3 & 6\refsymbol{}  & 4 & 6\refsymbol{} \tabularnewline
+Cav. Monstr. & 4 & 6 & 6 & 8 \tabularnewline
+\chariot{} & 4 & 6 & 6 & 8 \tabularnewline
+\monster{} & 3 & 10 & 15 & 5 \tabularnewline
+\riddenmonster{} & 3 & 10 & 15 & 5 \tabularnewline
 \end{tabular}\end{center}
 }
 
-\refsymbol{} La taille maximale d'une unité de base qui possède la Marque de la Pestilence ou du Courroux est réduite de deux figurines.
+\refsymbol{} La taille maximale d'une unité de base qui possède la Marque de la \pestilence{} ou du \wrath{} est réduite de deux figurines.
 
-Toute figurine peut aussi choisir la Marque du Chaos Intégral pour 3 pts par figurine. Tous les personnages dans l'armée doivent prendre une Marque. Les montures ne sont pas affectées par les effets des Marques, sauf si le contraire est précisé.
+Toute figurine peut aussi choisir la Marque du \truechaos{} pour 3 pts par figurine. Tous les personnages dans l'armée doivent prendre une Marque. Les montures ne sont pas affectées par les effets des Marques, sauf si le contraire est précisé.
 
-Les \shamans{} et les \greatshamans{} avec une Marque différente du Chaos Intégral peuvent choisir une Discipline accessible normalement à cette Marque, en plus des Disciplines qui leur sont habituellement proposées. Les \shamans{} et les \greatshamans{} ne peuvent pas prendre la Marque du Courroux.
+Les \shamans{} et les \greatshamans{} avec une Marque différente du \truechaos{} peuvent choisir une Discipline accessible normalement à cette Marque, en plus des Disciplines qui leur sont habituellement proposées. Les \shamans{} et les \greatshamans{} ne peuvent pas prendre la Marque du \wrath{}.
 
 L'armée ne peut pas inclure de \mammothhunter{}, de \scrapling{}, de \scraplingtrapper{}, de \yeti{}, de \sabretoothtiger{} ou de \scratapult{}.
 
 \vspace*{\fill}\columnbreak
-\pricelistitem{Cœur Sauvage}{25}\mammothhunter{} uniquement.
+\pricelistitem{\wildheart}{25}\mammothhunter{} uniquement.
 
-Le \mammothhunter{} perd la règle \notaleader{} et peut être promu Général de l'armée. Un autre \mammothhunter{} dans l'armée peut être promu Porteur de la Grande Bannière pour 25 pts. Une unité de \yetis{} et une unité de \sabretoothtigers{} peuvent être prises comme Unités de Base. Votre armée ne peut pas inclure de \greatkhan{}, de \khan{}, de \bruiser{}, de \mercenaryveteran{}, de \bombardier{} ou de \thundercannon{}.
+Le \mammothhunter{} perd la règle \notaleader{} et peut être promu Général de l'armée. Un autre \mammothhunter{} dans l'armée peut être promu Porteur de la Grande Bannière pour 25 pts.
 
-\pricelistitem{Chasseur de Têtes}{25}À la fin de toute Phase de Corps à Corps durant laquelle le porteur a tué une ou plusieurs figurines, et dans la mesure où il n'est pas en fuite, lancez 1D6. Sur un résultat de 3+, il Récupère un Point de Vie.
+Une unité de \yetis{} et une unité de \sabretoothtigers{} peuvent être prises comme Unités de Base.
 
-\pricelistitem{Mangeur de Troll}{25}Le Personnage gagne les règles \regeneration{5}, \stupidity{} et \multiplewounds{2}{\monstrousinfantry}.
+Votre armée ne peut pas inclure de \greatkhan{}, de \khan{}, de \bruiser{}, de \mercenaryveteran{}, de \bombardier{} ou de \thundercannon{}.
 
-\pricelistitem{Mâchoire Pourrie}{20}Le Personnage gagne la règle \poisonedattacks{}. Pour la durée d'une seule Phase de Corps à Corps, toutes les figurines de son unité peuvent aussi gagner cette règle. Le joueur doit déclarer au début de la Manche de Corps à Corps s'il utilise cette capacité.
+\pricelistitem{\headhunter}{25}À la fin de toute Phase de Corps à Corps durant laquelle le porteur a tué une ou plusieurs figurines, et dans la mesure où il n'est pas en fuite, lancez 1D6. Sur un résultat de 3+, il Récupère un Point de Vie.
 
-\pricelistitem{Maître des Trésors de Guerre}{20}Ne peut pas être pris par un \wizard{} ou un \mammothhunter{}.
+\pricelistitem{\trolleater}{25}Le Personnage gagne les règles \regeneration{5}, \stupidity{} et \multiplewounds{2}{\monstrousinfantry}.
+
+\pricelistitem{\rottenjaw}{20}Le Personnage gagne la règle \poisonedattacks{}. Pour la durée d'une seule Phase de Corps à Corps, toutes les figurines de son unité peuvent aussi gagner cette règle. Le joueur doit déclarer au début de la Manche de Corps à Corps s'il utilise cette capacité.
+
+\pricelistitem{\hoardmaster}{20}Ne peut pas être pris par un \wizard{} ou un \mammothhunter{}.
 
 Le Personnage gagne la règle \weaponmaster{} et une \platearmour{}, et peut acquérir autant d'armes standard de corps à corps et de tir auxquelles il peut accéder plutôt qu'une seule de chaque catégorie.
 
-\pricelistitem{Pourfendeur de Moelle Épinière}{20}Figurines à pied uniquement.
+\pricelistitem{\spinesplitter}{20}Figurines à pied uniquement.
 
 Le Personnage gagne les règles \devastatingcharge{} et \thunderouscharge{}. Le bonus de Force de \thunderouscharge{} affecte aussi les \impacthits{} et le \stomp{}.
 
@@ -410,11 +477,13 @@ Le Personnage gagne les règles \devastatingcharge{} et \thunderouscharge{}. Le 
 
 \startpricelist
 
-\pricelistitem{Masse de Khagadai}{50}Type : \gw{}. Les attaques portées avec cette arme ont la règle \multiplewounds{1D3}{}.
+\pricelistitem{\khagadaismaul}{50}Type : \gw{}. Les attaques portées avec cette arme ont la règle \multiplewounds{1D3}{}.
 
-\pricelistitem{Transperce-Cœur}{30}Type : \ironfist{}. Les attaques réalisées avec cette arme toucheront toujours sur 3+ ou mieux au Corps à Corps, quels que soient les malus pour toucher, et malgré la règle \parry{}. De plus, ces attaques bénéficient des règles \lethalstrike{} et \armourpiercing{1}.
+\pricelistitem{\heartripper}{30}Type : \ironfist{}. Les attaques portées avec cette arme toucheront toujours sur 3+ ou mieux au Corps à Corps, quels que soient les malus pour toucher, et malgré la règle \parry{}.
 
-\pricelistitem{Gantelet Brise-Hache}{20}Type : \ironfist{}. Si le porteur réussit au moins une touche avec cette arme contre une figurine ennemie possédant une Arme Magique lors d'une Manche de Corps à Corps, jetez 1D6 avant les jets pour blesser. Sur un résultat de 4+, toutes les Armes Magiques de la figurine ennemie sont détruites.
+De plus, ces attaques bénéficient des règles \lethalstrike{} et \armourpiercing{1}.
+
+\pricelistitem{\axebreakergauntlet}{20}Type : \ironfist{}. Si le porteur réussit au moins une touche avec cette arme contre une figurine ennemie possédant une Arme Magique lors d'une Manche de Corps à Corps, jetez 1D6 avant les jets pour blesser. Sur un résultat de 4+, toutes les Armes Magiques de la figurine ennemie sont détruites.
 
 \endpricelist
 
@@ -422,12 +491,11 @@ Le Personnage gagne les règles \devastatingcharge{} et \thunderouscharge{}. Le 
 
 \startpricelist
 
-\pricelistitem{Cape en Cuir de Mammouth}{30}Figurine à pied uniquement.
+\pricelistitem{\mammothhidecloak}{30}Figurine à pied uniquement.
 
-Type : Aucun (Sauvegarde d'Armure 6+). Ne peut être prise que par des figurines à pied.\newline
-Si le porteur est touché par une attaque dont la Force est de 6 ou plus, la Force de cette attaque est réduite à 5.
+Type : Aucun (Sauvegarde d'Armure 6+). Si le porteur est touché par une attaque dont la Force est de 6 ou plus, la Force de cette attaque est réduite à 5.
 
-\pricelistitem{Fourrure de Yéti}{10}Type : Aucun (Sauvegarde d'Armure 6+). Les unités ennemies en contact socle à socle avec le porteur subissent un malus de -1 en Initiative, jusqu'à un minimum de 1.
+\pricelistitem{\yetifurs}{10}Type : Aucun (Sauvegarde d'Armure 6+). Les unités ennemies en contact socle à socle avec le porteur subissent un malus de -1 en Initiative, jusqu'à un minimum de 1.
 
 \endpricelist
 
@@ -435,7 +503,7 @@ Si le porteur est touché par une attaque dont la Force est de 6 ou plus, la For
 
 \startpricelist
 
-\pricelistitem{Œil Aveugle de Nyanggai}{25}Une seule utilisation. Peut être activé au début de la Phase de Magie de l'adversaire, après avoir déterminé les Flux de Magie et fait les tentatives de Canalisation. Durant cette phase, les \wizards{} ennemis ne peuvent cibler l'unité du porteur et toute figurine qu'elle contient qu'avec des sorts de type Aura.
+\pricelistitem{\blindeyeofnyanggai}{25}Une seule utilisation. Peut être activé au début de la Phase de Magie de l'adversaire, après avoir déterminé les Flux de Magie et fait les tentatives de Canalisation. Durant cette phase, les \wizards{} ennemis ne peuvent cibler l'unité du porteur et toute figurine qu'elle contient qu'avec des sorts de type Aura.
 
 \endpricelist
 
@@ -443,7 +511,7 @@ Si le porteur est touché par une attaque dont la Force est de 6 ou plus, la For
 
 \startpricelist
 
-\pricelistitem{Sortilège de l'Aurochs}{15}Le porteur bénéficie de la règle \stoneskin{} (voir l'unité rare \rockaurochs{}).
+\pricelistitem{\aurochscharm}{15}Le porteur bénéficie de la règle \stoneskin{} (voir l'unité rare \rockaurochs{}).
 
 \endpricelist
 
@@ -451,7 +519,7 @@ Si le porteur est touché par une attaque dont la Force est de 6 ou plus, la For
 
 \startpricelist
 
-\pricelistitem{Cœur Démoniaque}{25}Une seule utilisation. Peut être activé au début d'une Phase de Magie de l'adversaire, après avoir déterminé les Flux de Magie et fait les tentatives de Canalisation. Au cours de cette phase, les \wizards{} ennemis dans un rayon de \distance{24} subissent un Fiasco sur l'obtention de n'importe quel double lors du lancement d'un sort. Seul un double \result{6} compte comme un Pouvoir Irrésistible, et il n'est pas possible de subir plusieurs Fiascos pour un seul lancement. Les Objets de Sort ne sont pas affectés.
+\pricelistitem{\daemonheart}{25}Une seule utilisation. Peut être activé au début d'une Phase de Magie de l'adversaire, après avoir déterminé les Flux de Magie et fait les tentatives de Canalisation. Au cours de cette phase, les \wizards{} ennemis dans un rayon de \distance{24} subissent un Fiasco sur l'obtention de n'importe quel double lors du lancement d'un sort. Seul un double \result{6} compte comme un Pouvoir Irrésistible, et il n'est pas possible de subir plusieurs Fiascos pour un seul lancement. Les Objets de Sort ne sont pas affectés.
 
 \endpricelist
 
@@ -459,9 +527,9 @@ Si le porteur est touché par une attaque dont la Force est de 6 ou plus, la For
 
 \startpricelist
 
-\pricelistitem{Étendard en Peau de Dragon}{40}Les figurines de l'unité du porteur peuvent relancer les jets pour toucher, pour blesser et de \armoursave{} ayant donné \result{1} au cours de la première Manche de Corps à Corps, même pour leurs Attaques Spéciales.
+\pricelistitem{\dragonskinbanner}{40}Les figurines de l'unité du porteur peuvent relancer les jets pour toucher, pour blesser et de \armoursave{} ayant donné \result{1} au cours de la première Manche de Corps à Corps, même pour leurs Attaques Spéciales.
 
-\pricelistitem{Crâne de Qenghet}{10}Les figurines de l'unité du porteur causent la \fear{} et réussissent automatiquement les tests de \terror{}.
+\pricelistitem{\skullofqenghet}{10}Les figurines de l'unité du porteur causent la \fear{} et réussissent automatiquement les tests de \terror{}.
 
 \endpricelist
 

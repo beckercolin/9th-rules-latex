@@ -3,8 +3,19 @@
 
 \newcommand{\booktitle}{Royaume d'Équitaine}
 \newcommand{\version}{0.99.9}
-\newcommand{\frenchversion}{2.0}
+\newcommand{\frenchversion}{2.1}
 \newcommand{\booklogo}{pics/logo_big_KoE.png}
+\newcommand{\tocfirstcolumn}{%
+\tocentry{specialrulestitle}{\labels@armyspecialrules}
+
+\tocentry{virtuestitle}{Vertus}
+
+\tocentry{magicalitemstitle}{\labels@magicalitems}
+
+\tocentry{lordtitle}{\labels@armylist}
+
+\tocentry{QRStitle}{\labels@quickrefsheet}
+}
 
 % Army special rules
 
@@ -17,13 +28,13 @@
 \newcommand{\serfs}{Serfs}
 
 
-% Serments
+% Oaths
 
 \newcommand{\oathoffealty}{Serment d'Allégeance}
 \newcommand{\questingoath}{V\oe{}ux de la Quête}
 \newcommand{\grailoath}{Sacrement du Graal}
 
-% Vertus
+% Virtues
 
 \newcommand{\piety}{Vertu de Piété}
 \newcommand{\renown}{Vertu de Renom}
@@ -33,13 +44,28 @@
 \newcommand{\daring}{Vertu de Hardiesse}
 \newcommand{\humility}{Vertu d'Humilité}
 
-% Armoury
+% Magical Items
 
+\newcommand{\maceoftristan}{Masse de Tristan}
+\newcommand{\dragonlance}{Lance-Dragon}
+
+\newcommand{\crusadershelm}{Heaume du Croisé}
+\newcommand{\armourofpercival}{Armure de Perceval}
+
+\newcommand{\blessedscripture}{Écritures Bénies}
+\newcommand{\talismanofroland}{Talisman de Roland}
+
+\newcommand{\stormclarion}{Corne-Tempête}
+
+\newcommand{\wafersofpenitence}{Hosties de Pénitence}
+
+\newcommand{\theoriflamme}{L'Oriflamme}
+\newcommand{\bannerofthelastcharge}{Étendard de la Dernière Charge}
 
 % Army common type special rules
 
-\newcommand{\knightscommonrules}{Règles spéciales des Paladins}
-\newcommand{\peasantcommonrules}{Règles spéciales des Paysans}
+\newcommand{\knightscommonrules}{Règles Spéciales des Paladins}
+\newcommand{\peasantcommonrules}{Règles Spéciales des Paysans}
 
 % Other Rules
 
@@ -165,11 +191,11 @@ Remplacer l'\longbow{} par une \crossbow{}}
 
 \newcommand{\lowbornrule}{%
 La figurine ne peut rejoindre que des unités dont toutes les figurines suivent la règle \insignificant{}. Elle gagne les règles suivantes en fonction de l'unité qu'elle rejoint :
-\begin{customsubitemize}
-\item \brigands{} - \scout{} et \quicktofire{}.
-\item \peasantcrusaders{} - \frenzy{} et \hatred{}.
-\item \yeomanoutriders{} - \fastcavalry{}. 
-\end{customsubitemize}
+\begin{itemize}[label={-}]
+\item \brigands{} : \scout{} et \quicktofire{}.
+\item \peasantcrusaders{} : \frenzy{} et \hatred{}.
+\item \yeomanoutriders{} : \fastcavalry{}. 
+\end{itemize}
 }
 
 \newcommand{\masteratarmsrule}{%
@@ -338,7 +364,7 @@ Cette règle est \oneofakind{} pour les Personnages.
 
 
 
-\startarmynewsectionSP{Vertus}\vspace{0.5cm}
+\toctarget{virtuestitle}{\startarmynewsectionSP{Vertus}}\vspace{0.5cm}
 
 \begin{center}Les Vertus suivent la règle \oneperarmy{}.\end{center}
 
@@ -376,9 +402,11 @@ Cette règle est \oneofakind{} pour les Personnages.
 
 \startpricelist
 
-\pricelistitem{Masse de Tristan}{50/40} Type : \hw{}. Les attaques portées avec cette arme comptent comme ayant une Force supérieure d'un point à l'Endurance de la figurine qu'il attaque, sauf si elle est déjà plus grande sans cette règle. Si un ennemi subit au moins une touche de par cette arme, lancez un dé à la fin du palier d'Initiative actuel pour chaque touche réussie. Si au moins un 4+ est obtenu, toutes les Armes Magiques portées par la figurine ennemie sont détruites.
+\pricelistitem{\maceoftristan}{50/40} Type : \hw{}. Les attaques portées avec cette arme comptent comme ayant une Force supérieure d'un point à l'Endurance de la figurine qu'il attaque, sauf si elle est déjà plus grande sans cette règle.
 
-\pricelistitem{Lance-Dragon}{45/35} Type: \lance{}. Le porteur gagne la règle \breathweapon{Force 3, \flamingattacks{}}. Les attaques effectuées avec cette arme ont la règle \multiplewounds{1D3}{} lors de la Manche de Corps à Corps directement après que le porteur a chargé. Ce bonus ne peut être utilisé que pour attaquer les figurines de l'unité chargée.
+Si un ennemi subit au moins une touche de par cette arme, lancez un dé à la fin du palier d'Initiative actuel pour chaque touche réussie. Si au moins un 4+ est obtenu, toutes les Armes Magiques portées par la figurine ennemie sont détruites.
+
+\pricelistitem{\dragonlance}{45/35} Type: \lance{}. Le porteur gagne la règle \breathweapon{Force 3, \flamingattacks{}}. Les attaques effectuées avec cette arme ont la règle \multiplewounds{1D3}{} lors de la Manche de Corps à Corps directement après que le porteur a chargé. Ce bonus ne peut être utilisé que pour attaquer les figurines de l'unité chargée.
 
 \endpricelist
 
@@ -386,9 +414,9 @@ Cette règle est \oneofakind{} pour les Personnages.
 
 \startpricelist
 
-\pricelistitem{Heaume du Croisé}{45} Type: Aucun (Sauvegarde d'Armure 6+). Le porteur peut relancer tous ses tests de Sauvegarde d'Armure ratés. Les attaques visant le porteur ayant la règle \lethalstrike{} perdent cette règle.
+\pricelistitem{\crusadershelm}{45} Type: Aucun (Sauvegarde d'Armure 6+). Le porteur peut relancer tous ses tests de Sauvegarde d'Armure ratés. Les attaques visant le porteur ayant la règle \lethalstrike{} perdent cette règle.
 
-\pricelistitem{Armure de Perceval}{30} Type: \ha{}. Les règles de \wardsave{} du porteur sont améliorées d'un point pour obtenir 4+ au mieux. Les attaques visant le porteur ayant la règle \holyattacks{} perdent cette règle.
+\pricelistitem{\armourofpercival}{30} Type: \ha{}. Les règles de \wardsave{} du porteur sont améliorées d'un point pour obtenir 4+ au mieux. Les attaques visant le porteur ayant la règle \holyattacks{} perdent cette règle.
 
 \endpricelist
 
@@ -396,9 +424,11 @@ Cette règle est \oneofakind{} pour les Personnages.
 
 \startpricelist
 
-\pricelistitem{Écritures Bénies}{25/15} Les \multiplewounds{}{} subies par le porteur sont divisées par deux, arrondies au supérieur.
+\pricelistitem{\blessedscripture}{25/15} Les \multiplewounds{}{} subies par le porteur sont divisées par deux, arrondies au supérieur.
 
-\pricelistitem{Talisman de Roland}{20} Il n'est pas possible de déclarer la réaction Tenir la Position et Tirer contre une charge de l'unité du porteur. De plus, les règles de \wardsave{} de l'unité du porteur sont améliorées d'un point contre les Attaques à Distance n'ayant pas la règle \magicalattacks{}, jusqu'à obtenir 4+ au mieux.
+\pricelistitem{\talismanofroland}{20} Il n'est pas possible de déclarer la réaction Tenir la Position et Tirer contre une charge de l'unité du porteur.
+
+De plus, les règles de \wardsave{} de l'unité du porteur sont améliorées d'un point contre les Attaques à Distance n'ayant pas la règle \magicalattacks{}, jusqu'à obtenir 4+ au mieux.
 
 \endpricelist
 
@@ -406,7 +436,7 @@ Cette règle est \oneofakind{} pour les Personnages.
 
 \startpricelist
 
-\pricelistitem{Corne-Tempête}{40} Une seule utilisation. Activez cet objet au début de n'importe quel Tour de Joueur. Les unités ennemies ne peuvent pas faire de Mouvement de \fly{} durant ce Tour de Joueur.
+\pricelistitem{\stormclarion}{40} Une seule utilisation. Activez cet objet au début de n'importe quel Tour de Joueur. Les unités ennemies ne peuvent pas faire de Mouvement de \fly{} durant ce Tour de Joueur.
 
 \endpricelist
 
@@ -414,7 +444,7 @@ Cette règle est \oneofakind{} pour les Personnages.
 
 \startpricelist
 
-\pricelistitem{Hosties de Pénitence}{15} Générez 1D3+1 Hosties à la fin du Déploiement, avant la bataille. Lorsqu'il tente une dissipation, après avoir lancé les Dés de Dissipation, le porteur peut décider d'utiliser une et une seule Hostie de Pénitence et ajouter +1 au résultat du jet de dissipation. Ceci fait exception à la règle de limitation des Modificateurs Magiques. Les Hosties de Pénitence utilisées ne peuvent pas être réutilisées.
+\pricelistitem{\wafersofpenitence}{15} Générez 1D3+1 Hosties à la fin du Déploiement, avant la bataille. Lorsqu'il tente une dissipation, après avoir lancé les Dés de Dissipation, le porteur peut décider d'utiliser une et une seule Hostie de Pénitence et ajouter +1 au résultat du jet de dissipation. Ceci fait exception à la règle de limitation des Modificateurs Magiques. Les Hosties de Pénitence utilisées ne peuvent pas être réutilisées.
 
 \endpricelist
 
@@ -422,9 +452,9 @@ Cette règle est \oneofakind{} pour les Personnages.
 
 \startpricelist
 
-\pricelistitem{L'Orifamme}{45} Le porteur gagne la règle \fear{}. Les unités ennemies en contact socle à socle avec le porteur ne peuvent pas bénéficier de la règle \holdyourground{}.
+\pricelistitem{\theoriflamme}{45} Le porteur gagne la règle \fear{}. Les unités ennemies en contact socle à socle avec le porteur ne peuvent pas bénéficier de la règle \holdyourground{}.
 
-\pricelistitem{Étendard de la Dernière Charge}{20} Les montures des figurines de l'unité du porteur gagnent la règle \impacthits{1}.
+\pricelistitem{\bannerofthelastcharge}{20} Les montures des figurines de l'unité du porteur gagnent la règle \impacthits{1}.
 
 \endpricelist
 

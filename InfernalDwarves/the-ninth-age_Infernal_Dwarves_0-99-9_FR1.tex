@@ -2,11 +2,23 @@
 
 \newcommand{\booktitle}{Nains Infernaux}
 \newcommand{\version}{0.99.9}
-\newcommand{\frenchversion}{2.0}
+\newcommand{\frenchversion}{2.1}
 \newcommand{\booklogo}{pics/logo_big_ID.png}
+\newcommand{\tocfirstcolumn}{%
+\tocentry{specialrulestitle}{\labels@armyspecialrules}
+
+\tocentry{armourytitle}{\labels@armoury}
+
+\tocentry{magicalitemstitle}{\labels@magicalitems}
+
+\tocentry{lordtitle}{\labels@armylist}
+
+\tocentry{QRStitle}{\labels@quickrefsheet}
+}
 
 
 % Army special rules
+
 
 \newcommand{\relentless}{Implacable}
 \newcommand{\sturdy}{Robuste}
@@ -19,10 +31,10 @@
 
 % Army common type special rules
 
-\newcommand{\infernaldwarvescommonrules}{Règles spéciales des Nains Infernaux}
-\newcommand{\taurukhcommonrules}{Règles spéciales des Taurukhs}
-\newcommand{\hobgoblinscommonrules}{Règles spéciales des Hobgobelins}
-\newcommand{\kadimcommonrules}{Règles spéciales des Kadims}
+\newcommand{\infernaldwarvescommonrules}{Règles Spéciales des Nains Infernaux}
+\newcommand{\taurukhcommonrules}{Règles Spéciales des Taurukhs}
+\newcommand{\hobgoblinscommonrules}{Règles Spéciales des Hobgobelins}
+\newcommand{\kadimcommonrules}{Règles Spéciales des Kadims}
 
 % Armoury
 
@@ -32,6 +44,23 @@
 \newcommand{\blunderbuss}{Tromblon}
 \newcommand{\walloflead}{Barrage de Plomb}
 
+% Magical Items
+
+\newcommand{\onyxhammer}{Marteau d’Onyx}
+\newcommand{\bladeofburningsteel}{Lame d'Acier en Fusion}
+
+\newcommand{\maskofthefurnace}{Masque du Fourneau}
+
+\newcommand{\ringofdessication}{Anneau de Dessiccation}
+\newcommand{\steelskin}{Peau d’Acier}
+
+\newcommand{\vialofmercury}{Fiole de Mercure}
+\newcommand{\gauntletsofmadzhab}{Gantelets de Madzhab}
+
+\newcommand{\besheluksmechanism}{Mécanisme de Besheluk}
+
+\newcommand{\bannerofthebrazenbull}{Bannière du Taureau d’Airain}
+\newcommand{\bannerofnezibkesh}{Bannière de Nezibkesh}
 
 % Characters rules
 
@@ -81,6 +110,7 @@
 
 \newcommand{\prophet}{Prophète}
 \newcommand{\overlord}{Despote}
+
 \newcommand{\magus}{Magus}
 \newcommand{\vizier}{Vizir}
 \newcommand{\taurukhsubjugator}{Dominateur Taurukh}
@@ -98,10 +128,13 @@
 
 \newcommand{\infernalwarrior}{Guerrier Infernal}
 \newcommand{\infernalwarriors}{Guerriers Infernaux}
+
 \newcommand{\citadelguardQRS}{Cerbère de la Citadelle}
 \newcommand{\citadelguard}{Cerbères de la Citadelle}
+
 \newcommand{\hobgoblin}{Hobgobelin}
 \newcommand{\hobgoblins}{Hobgobelins}
+
 \newcommand{\orcslave}{Esclave Orque}
 \newcommand{\orcslaves}{Esclaves Orques}
 
@@ -109,30 +142,40 @@
 
 \newcommand{\immortal}{Immortel}
 \newcommand{\immortals}{Immortels}
+
 \newcommand{\discipleoflugar}{Disciple de Lugar}
 \newcommand{\disciplesoflugar}{Disciples de Lugar}
+
 \newcommand{\kadimincarnate}{Avatar Kadim}
 \newcommand{\kadimincarnates}{Avatars Kadims}
+
 \newcommand{\taurukhQRS}{Taurukh}
 \newcommand{\taurukh}{Taurukhs}
 \newcommand{\taurukhanointedQRS}{Taurukh Sanctifié}
 \newcommand{\taurukhanointed}{Taurukhs Sanctifiés}
+
 \newcommand{\infernalartillery}{Artillerie Pandémoniaque}
 \newcommand{\infernalartilleryQRS}{Artillerie Pandém.}
 \newcommand{\rocketbattery}{Batterie de Roquettes}
 \newcommand{\volcanocannon}{Canon Magma}
 \newcommand{\titanmortar}{Mortier Titan}
+
 \newcommand{\bounddaemon}{Démon Asservi}
 
 % Rare
 
 \newcommand{\hobgoblinwolfrider}{Chasseur Hobgobelin}
 \newcommand{\hobgoblinwolfriders}{Chasseurs Hobgobelins}
+
 \newcommand{\lightartillery}{Artillerie Légère}
 \newcommand{\hobgoblinboltthrower}{Baliste Hobgobeline}
+
 \newcommand{\gunneryteam}{Équipe d'Artilleurs}
+
 \newcommand{\infernalengine}{Mécanique Infernale}
+
 \newcommand{\kadimtitan}{Titan Kadim}
+
 \newcommand{\armouredgiant}{Géant Cuirassé}
 
 
@@ -448,9 +491,9 @@ Vous pouvez choisir de tirer de la façon suivante durant la Phase de Tir plutô
 
 \startpricelist
 
-\pricelistitem{Marteau d'Onyx}{55/50}Type : \hw{}. Les attaques portées avec cette arme ont +2 en Force et la règle \multiplewounds{1D3}{} contre les figurines avec la règle \flammable{}.
+\pricelistitem{\onyxhammer}{55/50}Type : \hw{}. Les attaques portées avec cette arme ont +2 en Force et la règle \multiplewounds{1D3}{} contre les figurines avec la règle \flammable{}.
 
-\pricelistitem{Lame en Fusion}{25}Type : \hw{}. Les attaques portées avec cette arme ont la règle \armourpiercing{1}.
+\pricelistitem{\bladeofburningsteel}{25}Type : \hw{}. Les attaques portées avec cette arme ont la règle \armourpiercing{1}.
 
 Une seule utilisation : Peut être déclenchée au début de n'importe quelle Manche de Corps à Corps. Les attaques portées avec cette arme suivent la règle \metalshifting{} jusqu'à la fin de la phase.
 
@@ -460,7 +503,7 @@ Une seule utilisation : Peut être déclenchée au début de n'importe quelle Ma
 
 \startpricelist
 
-\pricelistitem{Masque du Fourneau}{30}Type : Aucun (\armoursave{} 6+). Le porteur gagne les règles \breathweapon{Force 3, \flamingattacks{}} et \fireborn{}.
+\pricelistitem{\maskofthefurnace}{30}Type : Aucun (\armoursave{} 6+). Le porteur gagne les règles \breathweapon{Force 3, \flamingattacks{}} et \fireborn{}.
 
 \endpricelist
 
@@ -468,9 +511,9 @@ Une seule utilisation : Peut être déclenchée au début de n'importe quelle Ma
 
 \startpricelist
 
-\pricelistitem{Anneau de Dessiccation}{45}Toutes les unités ennemies en contact socle à socle avec la figurine du porteur gagnent la règle \flammable{}. Si l'armée n'inclut aucun Sorcier dans sa liste, le porteur compte comme un Sorcier en ce qui concerne la règle \shacklesoffire{}.
+\pricelistitem{\ringofdessication}{45}Toutes les unités ennemies en contact socle à socle avec la figurine du porteur gagnent la règle \flammable{}. Si l'armée n'inclut aucun Sorcier dans sa liste, le porteur compte comme un Sorcier en ce qui concerne la règle \shacklesoffire{}.
 
-\pricelistitem{Peau d'Acier}{15}Les attaques dirigées contre le porteur perdent les règles \poisonedattacks{} et \lethalstrike{}.
+\pricelistitem{\steelskin}{15}Les attaques dirigées contre le porteur perdent les règles \poisonedattacks{} et \lethalstrike{}.
 
 \endpricelist
 
@@ -478,9 +521,9 @@ Une seule utilisation : Peut être déclenchée au début de n'importe quelle Ma
 
 \startpricelist
 
-\pricelistitem{Fiole de Mercure}{45}Une seule utilisation. Peut être bue au début de n'importe quelle Manche de Corps à Corps. L'unité du porteur gagne la règle \lightningreflexes{} et +2 en Initiative jusqu'à la fin de la phase. Lorsque les effets de la Fiole disparaissent, la figurine du porteur subit une blessure sans sauvegarde d'aucune sorte.
+\pricelistitem{\vialofmercury}{45}Une seule utilisation. Peut être bue au début de n'importe quelle Manche de Corps à Corps. L'unité du porteur gagne la règle \lightningreflexes{} et +2 en Initiative jusqu'à la fin de la phase. Lorsque les effets de la Fiole disparaissent, la figurine du porteur subit une blessure sans sauvegarde d'aucune sorte.
 
-\pricelistitem{Gantelets de Madzhab}{10}Le porteur gagne +1 en Force. Chacun de ses jets pour toucher ayant donné \result{1} est résolu contre l'unité du porteur. Cela ne peut jamais affecter le porteur lui-même, sauf s'il est monté et ne fait pas partie d'une unité combinée.
+\pricelistitem{\gauntletsofmadzhab}{10}Le porteur gagne +1 en Force. Chacun de ses jets pour toucher ayant donné \result{1} est résolu contre l'unité du porteur. Cela ne peut jamais affecter le porteur lui-même, sauf s'il est monté et ne fait pas partie d'une unité combinée.
 
 \endpricelist
 
@@ -488,7 +531,7 @@ Une seule utilisation : Peut être déclenchée au début de n'importe quelle Ma
 
 \startpricelist
 
-\pricelistitem{Mécanisme de Besheluk}{25}Lorsque le porteur réussit à lancer un sort de type Amélioration qui ne soit pas un Attribut de Discipline sur une unité composée exclusivement de figurines suivant la règle \shacklesoffire{}, celle-ci Récupère un PV précédemment perdu. Aucune unité ne peut Récupérer plus d'un PV par Phase de Magie grâce à cet objet.
+\pricelistitem{\besheluksmechanism}{25}Lorsque le porteur réussit à lancer un sort de type Amélioration qui ne soit pas un Attribut de Discipline sur une unité composée exclusivement de figurines suivant la règle \shacklesoffire{}, celle-ci Récupère un PV précédemment perdu. Aucune unité ne peut Récupérer plus d'un PV par Phase de Magie grâce à cet objet.
 
 \endpricelist
 
@@ -496,11 +539,11 @@ Une seule utilisation : Peut être déclenchée au début de n'importe quelle Ma
 
 \startpricelist
 
-\pricelistitem{Bannière du Taureau d'Airain}{40}\infantry{} uniquement.
+\pricelistitem{\bannerofthebrazenbull}{40}\infantry{} uniquement.
 
 L'unité du porteur gagne la règle \vanguard{}. Les unités suivant la règle \unruly{} à moins de \distance{12} du porteur peuvent relancer leurs tests de Panique ratés.
 
-\pricelistitem{Bannière de Nezibkesh}{25}Toutes les Attaques Spéciales de Corps à Corps dirigées contre l'unité du porteur voient leur Force divisée par deux, en arrondissant au supérieur.
+\pricelistitem{\bannerofnezibkesh}{25}Toutes les Attaques Spéciales de Corps à Corps dirigées contre l'unité du porteur voient leur Force divisée par deux, en arrondissant au supérieur.
 
 \endpricelist
 

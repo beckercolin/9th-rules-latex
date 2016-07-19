@@ -161,10 +161,10 @@
 
 \showunit{
 	notinQRS=yes,
-	QRSname={\rockaurochs},
-	name={\rockaurochs{} (\oneofakind{})},
+	name={\rockaurochs},
 	profile={ < 7 3 - 7 6 6 2 5 5,},
 	type=\monster{},
+	unitsize=SPECIAL-{\textbf{(\oneofakind)}},
 	basesize=100x150,
 	armour={\innatedefence{4}},
 	specialrules={\stoneskin, \frenzy, \impacthits{3D3}, \stubborn, \swiftstride},
@@ -349,7 +349,7 @@
 	costpermodel=40,
 	armour={\innatedefence{5}},
 	weapons={\pw},
-	specialrules={\swiftstride, \fear, \skirmishers, \vanguard, \touchoffrost},
+	specialrules={\swiftstride, \fear, \skirmisher, \vanguard, \touchoffrost},
 	commandgroup={champion=10},
 	unitrules={
 		\unitrule{\touchoffrost}{\touchoffrostrule}
@@ -367,7 +367,7 @@
 	maxmodels=10,
 	costpermodel=6,
 	weapons={\throwingweapons},
-	specialrules={\vanguard, \skirmishers, \scouts, \insignificant, \itsatrap},
+	specialrules={\vanguard, \skirmisher, \scout, \insignificant, \itsatrap},
 	commandgroup={champion=10},
 	additional={%
 		\def\tempunitrules{\unitrule{\itsatrap}{\itsatraprule}}

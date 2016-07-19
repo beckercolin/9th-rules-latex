@@ -6,17 +6,17 @@
 \lordstitle
 
 \showunit{
-	name={\prophet{}},
+	name={\prophet},
 	cost=200,
 	profile={< 3 4 4 4 5 3 2 2 9},
 	type= \infantry{} ,
 	basesize=20x20,
 	unitsize=1,
 	commontype=\infernaldwarvescommonrules{},
-	commonspecialrules={\chosenofashuruk{},\relentless{},\sturdy{}},
+	commonspecialrules={\chosenofashuruk{},\relentless{},\sturdy},
 	magiclevel=3,
-	magicpaths={\alchemy{}, \fire{}, \forge{}, \death{}, \shadows{}},
-	armour={\infernalarmour{}},
+	magicpaths={\alchemy{}, \fire{}, \forge{}, \death{}, \shadows},
+	armour={\infernalarmour},
 	options={	
 		\magicalitemsallowance{}=\upto{}<100,
 		\onechoiceonly{
@@ -216,24 +216,24 @@
 }
 
 \showunit{
-	name={\greatbullofshamut{}},
-	QRSname={\greatbullofshamutQRS{}},
-	unitsize={SPECIAL-{\antiquefont\Largefontsize(\oneofakind{})}},
+	name={\greatbullofshamut},
+	QRSname={\greatbullofshamutQRS},
+	unitsize=SPECIAL-{\textbf{(\oneofakind)}},
 	profile={< 6 5 - 6 6 6 3 4 6},
 	type= \monster{},
 	basesize=60x100,
 	armour={\innatedefence{5}},
 	additional={%
 		\def\tempspecialrules{\volcanicembrace{},\breathweapon{\Strength{} 4, \flamingattacks{}},\magicalattacks{},\fireborn{},\wardsave{5},\impacthits{1},\fly{7}}
-		\vspace*{0.2cm}\specialrules{\tempspecialrules}
+		\vspace*{0.2cm}\parbox{16.5cm}{\specialrules{\tempspecialrules}}
 	},
 }
 
 \showunit{
-	name={\templelamassu{} (\oneofakind{})},
-	QRSname={\templelamassu{}},
+	name={\templelamassu},
 	profile={< 6 3 - 5 5 4 2 2 8},
 	type= \monstrousbeast{},
+	unitsize=SPECIAL-{\textbf{(\oneofakind)}},
 	basesize=50x50,
 	magiclevel=1,
 	magicpaths={\fire{},\death{},\shadows{}},
@@ -504,6 +504,7 @@
 	additional={%
 		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
 		\setlength{\columnseprule}{0.5pt}
+		\setlength{\columnsep}{1cm}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
 		\vspace*{-0.2cm}\begin{multicols}{3}
 		\raggedcolumns
@@ -641,16 +642,15 @@
 }
 
 \showunit{
-	name={\infernalengine{} (\oneofakind{})},
+	name={\infernalengine},
 	cost=225,
-	QRSname={\infernalengine{}},
 	profile={
 		\engine{}<6 - - 6 7 7 2 - -,
 		\enginecrew{} (3)<- 4 3 3 - - 2 1 9,
 	},
 	type=\chariot{},
 	basesize=60x100,
-	unitsize=1,
+	unitsize=SPECIAL-{(\textbf{(\oneofakind)} \labels@Singlemodel},
 	armour=\innatedefence{3},
 	additional={%
 		\def\tempspecialrules{\unbreakable{},\largetarget{},\impacthits{+1},\grindingattacks{1D3} \only{\engine},\fullsteamahead{},\ponderous{}}
@@ -692,7 +692,7 @@
 }
 
 \showunit{
-	name={\kadimtitan{}},
+	name={\kadimtitan},
 	cost=325,
 	profile={< 8 5 3 7 6 6 5 6 8},
 	type= \monster{},
@@ -710,7 +710,7 @@
 			\unitrule{\searingrage}{\searingragerule}
 			\unitrule{\lordofflame}{\lordofflamerule}
 		}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 	},
 }
 
@@ -734,7 +734,7 @@
 			\unitrule{\thump}{\thumprule}
 			\unitrule{\smashname}{\smashrule}
 		}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 		\giantattackstable
 	},
 }
