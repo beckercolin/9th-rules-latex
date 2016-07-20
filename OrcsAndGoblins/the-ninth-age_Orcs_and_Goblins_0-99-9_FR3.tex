@@ -4,7 +4,18 @@
 \newcommand{\booktitle}{Orques et Gobelins}
 \newcommand{\booklogo}{pics/logo_big_OnG.png}
 \newcommand{\version}{0.99.9}
-\newcommand{\frenchversion}{2.2}
+\newcommand{\frenchversion}{2.3}
+\newcommand{\tocfirstcolumn}{%
+\tocentry{specialrulestitle}{\labels@armyspecialrules}
+
+\tocentry{armourytitle}{\labels@armoury}
+
+\tocentry{magicalitemstitle}{\labels@magicalitems}
+
+\tocentry{lordtitle}{\labels@armylist}
+
+\tocentry{QRStitle}{\labels@quickrefsheet}
+}
 
 \newcommand{\frontpageaddstuff}{Les Gobelins \sout{n'}ont \sout{pas} été maltraités lors de la création de cet ouvrage.}
 
@@ -38,6 +49,23 @@
 \newcommand{\powershroom}{Champix de Pouvoir}
 \newcommand{\powershrooms}{Champix de Pouvoir}
 \newcommand{\mammothstabber}{Crève-Mammouth}
+
+% Magical Items
+
+\newcommand{\axeoftheaporcalypse}{Hache de l’Aporcalypse}
+\newcommand{\mazaszappinbow}{Arc Zap de Maza}
+\newcommand{\backstabbingdirk}{Poignard Sournois}
+
+\newcommand{\crownofthecavernking}{Couronne du Roi des Cavernes}
+\newcommand{\platesoftuktek}{Plaques de Tuktek}
+
+\newcommand{\panofprotectionpinchin}{Chapardeur de Défense}
+
+\newcommand{\luckyboarsleg}{Sabot Porte-Bonheur}
+\newcommand{\waaarghpaint}{Peintures Waaargh !}
+
+\newcommand{\mikinokstotem}{Totem de Mikinok}
+\newcommand{\ironhideicon}{Icône de Peau de Fer}
 
 % Other Rules
 
@@ -250,6 +278,7 @@
 
 \newcommand{\wyvernnote}{Les \wyverns{} montées par des \orcchiefs{} ont la règle Unique. Cela n'a aucune incidence sur le nombre de \wyverns{} qui peuvent être montées par des \orcwarlords{}.}
 \newcommand{\mayexchangeallequipmentforcrossbowandha}{Échanger tout l'équipement contre une \crossbow{} et une \ha{}}
+\newcommand{\eadbashersmodelnumbers}{\mincostfor{} \textbf{10} \labels@models{}. \maxunitsize{}\spacebeforecolon{}: \textbf{40} \labels@models{}.\hfill \additionalfigscost{} {\largefontsize\textbf{9} pts\permodel}\hspace*{0.1cm}}
 \newcommand{\takeshadygits}{Jusqu'à 3 \shadygits{}}
 \newcommand{\shadygitlimitation}{Maximum 1 \shadygit{} par tranche de 10 \commongoblins{} dans l'unité.}
 \renewcommand{\pershadygit}{/Vengeur}
@@ -457,6 +486,13 @@ Le Sorcier gagne la règle \pathmaster{}. Toutes les figurines amies avec la cap
 
 
 
+
+
+
+
+
+
+
 \begin{document}
 
 \input{../Layout/AB_titlepage.tex}
@@ -474,7 +510,7 @@ Certaines figurines de l'armée disposent de règles spéciales qui corresponden
 \includegraphics[width=\logosize]{pics/commonorc.png}
 \vspace*{-1cm}\subsubtitle{\commonorc}
 
-\unruly{}, \borntofight{}
+\vspace*{5pt}\unruly{}, \borntofight{}
 \end{center}
 
 \columnbreak
@@ -483,7 +519,7 @@ Certaines figurines de l'armée disposent de règles spéciales qui corresponden
 \includegraphics[width=\logosize]{pics/ironorc.png}
 \vspace*{-1cm}\subsubtitle{\ironorc}
 
-\immunetopsychology{}, \weaponmaster{}, \borntofight{}
+\vspace*{5pt}\immunetopsychology{}, \weaponmaster{}, \borntofight{}
 \end{center}
 
 \columnbreak
@@ -492,10 +528,12 @@ Certaines figurines de l'armée disposent de règles spéciales qui corresponden
 \includegraphics[width=\logosize]{pics/feralorc.png}
 \vspace*{-1cm}\subsubtitle{\feralorc}
 
-\frenzy{}, \unruly{}, \borntofight{}, \wardsave{6}
+\vspace*{5pt}\frenzy{}, \unruly{}, \borntofight{}, \wardsave{6}
 \end{center}
 
 \end{multicols}
+
+\vspace*{-0.2cm}
 
 \begin{multicols}{3}\raggedcolumns
 
@@ -503,7 +541,7 @@ Certaines figurines de l'armée disposent de règles spéciales qui corresponden
 \includegraphics[width=\logosize]{pics/commongoblin.png}
 \vspace*{-1cm}\subsubtitle{\commongoblin}
 
-\unruly{}, \insignificant{}
+\vspace*{5pt}\unruly{}, \insignificant{}
 \end{center}
 
 \columnbreak
@@ -512,7 +550,7 @@ Certaines figurines de l'armée disposent de règles spéciales qui corresponden
 \includegraphics[width=\logosize]{pics/cavegoblin.png}
 \vspace*{-1cm}\subsubtitle{\cavegoblin}
 
-\hatred{} (Livre d'Armée : Forteresses Naines), \unruly{}, \insignificant{}
+\vspace*{5pt}\hatred{} (Livre d'Armée : Forteresses Naines), \unruly{}, \insignificant{}
 \end{center}
 
 \columnbreak
@@ -521,14 +559,14 @@ Certaines figurines de l'armée disposent de règles spéciales qui corresponden
 \includegraphics[width=\logosize]{pics/forestgoblin.png}
 \vspace*{-1cm}\subsubtitle{\forestgoblin}
 
-\strider{\forest}, \unruly{}, \insignificant{}
+\vspace*{5pt}\strider{\forest}, \unruly{}, \insignificant{}
 \end{center}
 
 \end{multicols}
 
 \vspace*{-10pt}\armyspecialruleentry{\unruly}
 
-Les figurines avec cette règle subissent un malus de -1 en Commandement pour les tests de \frenzy{} et pour se réfréner de poursuivre. Si elles sont en formation de Horde, jetez trois dés et ignorez le dé ayant donné le plus grand résultat pour les tests de Panique.
+Les figurines avec cette règle subissent un malus de -1 en Commandement pour les tests de \frenzy{} et pour se réfréner de poursuivre. Si une unité en formation de Horde avec une majorité de figurines avec cette règle doit faire un test de Panique, jetez trois dés et ignorez le dé ayant donné le plus grand résultat.
 
 \armyspecialruleentry{\borntofight}
 
@@ -590,9 +628,15 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine av
 
 
 
+
+
+
+
+
 \newpage
 \startarmyarmoury
 
+\vspace*{-0.5cm}
 \startitemlistonecol
 
 \listitemonecol{\powershroom} Une seule utilisation. Avant de jeter les dés pour lancer un sort non lié à un Objet de Sort, le porteur peut décider d'utiliser un unique \powershroom{}. Toute tentative de dissipation de ce sort subit un malus de 1D3. Si un \result{1} naturel est obtenu, le Sorcier utilisant le \powershroom{} subit une touche avec la règle \toxicattacks{}.
@@ -604,7 +648,12 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine av
 \closearmyarmoury
 
 
-\renewcommand{\startarmymagicalitems}{\vspace{1cm}\largefontsize\bigtitle{\labels@magicalitems}\begin{multicols}{2}\raggedcolumns}
+
+
+
+
+\vspace*{0.5cm}
+\renewcommand{\startarmymagicalitems}{\toctarget{magicalitemstitle}{\largefontsize\bigtitle{\labels@magicalitems}}\begin{multicols}{2}\raggedcolumns}
 
 \startarmymagicalitems
 
@@ -612,13 +661,13 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine av
 
 \startpricelist
 
-\pricelistitem{Hache de l'Aporcalypse}{65/45}Type : \hw{}. Le porteur gagne +1D3 en Force et +1D3 Attaques. Ces bonus sont déterminés et prennent effet au palier d'Initiative auquel le porteur attaque avec cette arme.
+\pricelistitem{\axeoftheaporcalypse}{65/45}Type : \hw{}. Le porteur gagne +1D3 en Force et +1D3 Attaques. Ces bonus sont déterminés et prennent effet au palier d'Initiative auquel le porteur attaque avec cette arme.
 
-\pricelistitem{Arc Zap de Maza}{30} \goblin{} uniquement.
+\pricelistitem{\mazaszappinbow}{30} \goblin{} uniquement.
 
 Type : Arc. \range{24}, Force 3, \lightningattacks{}, \multipleshots{3}. L'unité du porteur gagne la règle \quicktofire{}.
 
-\pricelistitem{Poignard Sournois}{15}Type : \hw{}. Les attaques portées avec cette arme ont la règle \armourpiercing{1}. Si le porteur attaque une unité ennemie de flanc ou de dos, ses attaques avec cette arme gagnent +2 en Force.
+\pricelistitem{\backstabbingdirk}{15}Type : \hw{}. Les attaques portées avec cette arme ont la règle \armourpiercing{1}. Si le porteur attaque une unité ennemie de flanc ou de dos, ses attaques avec cette arme gagnent +2 en Force.
 
 \endpricelist
 
@@ -626,11 +675,11 @@ Type : Arc. \range{24}, Force 3, \lightningattacks{}, \multipleshots{3}. L'unit�
 
 \startpricelist
 
-\pricelistitem{Couronne du Roi des Cavernes}{40}\goblin{} uniquement. Ne peut pas être pris par une \largetarget{}.
+\pricelistitem{\crownofthecavernking}{40}\goblin{} uniquement. Ne peut pas être pris par une \largetarget{}.
 
 Type : Aucun (Sauvegarde d'Armure 6+). Le porteur ne peut rejoindre ou être rejoint que par une unité dont toutes les figurines ont au moins un élément qui partage la même \greenhiderace{} que lui. L'unité du porteur gagne alors la règle \vanguard{} et peut se déplacer après un ralliement, mais elle ne peut alors ni tirer, ni faire de Marche Forcée. De plus, la portée des règles \inspiringpresence{} et \holdyourground{} du porteur est augmentée de \distance{6}.
 
-\pricelistitem{Plaques de Tuktek}{35}Type : \ha{}. Le porteur gagne +1 en Endurance et la figurine du porteur gagne la règle \impacthits{1D3}.
+\pricelistitem{\platesoftuktek}{35}Type : \ha{}. Le porteur gagne +1 en Endurance et la figurine du porteur gagne la règle \impacthits{1D3}.
 
 \endpricelist
 
@@ -638,7 +687,7 @@ Type : Aucun (Sauvegarde d'Armure 6+). Le porteur ne peut rejoindre ou être rej
 
 \startpricelist
 
-\pricelistitem{Chapardeur de Défense}{15}\goblin{} uniquement.
+\pricelistitem{\panofprotectionpinchin}{15}\goblin{} uniquement.
 
 Si le porteur subit une blessure, il peut utiliser la Sauvegarde d'Armure, la \wardsave{}, la \regeneration{} et la \magicresistance{} de la figurine lui ayant infligé cette blessure.
 
@@ -648,11 +697,11 @@ Si le porteur subit une blessure, il peut utiliser la Sauvegarde d'Armure, la \w
 
 \startpricelist
 
-\pricelistitem{Sabot Porte-Bonheur}{20}Figurine montée uniquement.
+\pricelistitem{\luckyboarsleg}{20}Figurine montée uniquement.
 
 Toutes les figurines alliées de type Cavalerie à moins de \distance{18} du porteur peuvent relancer leurs tests de Terrain Dangereux.
 
-\pricelistitem{Peintures Waaargh!}{15}\feralorc{} uniquement.
+\pricelistitem{\waaarghpaint}{15}\feralorc{} uniquement.
 
 Le porteur gagne la règle \frenzy{} et ne peut jamais la perdre. De plus, tous les \feralorcs{} de l'unité du porteur gagnent aussi cette règle tant que ce dernier est dans l'unité. Enfin, l'unité gagne la règle \swiftstride{} pour les mouvements de Poursuite et de Charge Irrésistible.
 
@@ -662,9 +711,9 @@ Le porteur gagne la règle \frenzy{} et ne peut jamais la perdre. De plus, tous 
 
 \startpricelist
 
-\pricelistitem{Totem de Mikinok}{40}Les autres Objets Magiques dans l'unité du porteur ainsi que dans les unités amies ou ennemies en contact avec l'unité du porteur n'ont plus d'effet et redeviennent des objets ordinaires. Cet effet dure tant que les unités restent en contact.
+\pricelistitem{\mikinokstotem}{40}Les autres Objets Magiques dans l'unité du porteur ainsi que dans les unités amies ou ennemies en contact avec l'unité du porteur n'ont plus d'effet et redeviennent des objets ordinaires. Cet effet dure tant que les unités restent en contact.
 
-\pricelistitem{Icône de Peau de Fer}{25}L'unité du porteur gagne une \wardsave{5} contre les Attaques de Tir.
+\pricelistitem{\ironhideicon}{25}L'unité du porteur gagne une \wardsave{5} contre les Attaques de Tir.
 
 \endpricelist
 

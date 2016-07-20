@@ -2,8 +2,25 @@
 
 \newcommand{\booktitle}{Elfes Sylvestres}
 \newcommand{\version}{0.99.9}
-\newcommand{\frenchversion}{2.0}
+\newcommand{\frenchversion}{2.1}
 \newcommand{\booklogo}{pics/logo_big_SE.png}
+\newcommand{\tocfirstcolumn}{%
+\tocentry{widerulestitle}{\labels@armywiderules}
+
+\tocentry{specialrulestitle}{\labels@armyspecialrules}
+
+\tocentry{armourytitle}{\labels@armoury}
+
+\tocentry{kindredstitle}{\kindreds}
+
+\tocentry{aspectsofnaturetitle}{Aspects de la nature}
+
+\tocentry{magicalitemstitle}{\labels@magicalitems}
+
+\tocentry{lordtitle}{\labels@armylist}
+
+\tocentry{QRStitle}{\labels@quickrefsheet}
+}
 
 % Army wide rules
 
@@ -20,8 +37,8 @@
 
 % Army common type special rules
 
-\newcommand{\elvescommonrules}{Règles spéciales des Elfes}
-\newcommand{\sylvancommonrules}{Règles spéciales des Sylves}
+\newcommand{\elvescommonrules}{Règles Spéciales des Elfes}
+\newcommand{\sylvancommonrules}{Règles Spéciales des Sylves}
 
 
 % Armoury
@@ -39,17 +56,49 @@
 \newcommand{\sylvanblades}{Lames Sylvestres}
 \newcommand{\elvencloak}{Cape Elfique}
 
-% Kindreds and Aspects
+% Kindreds
 
 \newcommand{\kindred}{Clan}
 \newcommand{\kindreds}{Clans}
+
+\newcommand{\bladedancerkindred}{Clan des Danselames}
+\newcommand{\forestguardian}{Clan des Gardiens de la Forêt}
+\newcommand{\pathfinderkindred}{Clan des Pisteurs}
+\newcommand{\wildhunter}{Clan des Chasseurs Sauvages}
+\newcommand{\shapeshifter}{Clan des Changeformes}
+
+% Aspects
+
 \newcommand{\aspectofnature}{Aspect de la Nature}
 \newcommand{\aspectsofnature}{Aspects de la Nature}
 
+\newcommand{\entanglingvines}{Entrave de Vignes}
+\newcommand{\toxicspores}{Spores Toxiques}
+\newcommand{\scarredbark}{Écorce Blessée}
+\newcommand{\oakencrown}{Couronne de Chêne}
+\newcommand{\entwinedroots}{Racines Entrelacées}
+
+% Magical Items
+
+\newcommand{\bowofwyscan}{Arc de Wyscan}
+\newcommand{\sacredspearofcadaron}{Lance Sacrée de Cadaron}
+\newcommand{\whirlwindblade}{Épée Cyclone}
+
+\newcommand{\helmofthewildhunt}{Heaume de la Chasse Sauvage}
+
+\newcommand{\fireblightpendant}{Pendentif du Feu Flétrissant}
+
+\newcommand{\mistwalkersmirror}{Miroir de l’Arpenteur des Brumes}
+\newcommand{\sacredseeds}{Graines Sacrées}
+\newcommand{\hailshot}{Pluie de Flèches}
+\newcommand{\drumsofcenyrn}{Tambours de Guerre de Cenyrn}
+
+\newcommand{\amrylsbanner}{Bannière d’Amryl}
+
 % Spells
 
-\newcommand{\whitemagiczero}{Traits de Lumière}
-\newcommand{\wildernessfour}{Calamité des Bois Sauvages}
+\newcommand{\whitemagicsignature}{Traits de Lumière}
+\newcommand{\wildernessspellfour}{Calamité des Bois Sauvages}
 
 % Other rules
 
@@ -156,7 +205,7 @@
 \newcommand{\dancesofcenyrnrule}{%
 Au début de chaque Manche de Corps à Corps, les unités entièrement constituées de figurines suivant cette règle peuvent choisir une des Danses ci-dessous. Aucune figurine ne peut utiliser la même Danse lors de deux Tours de Joueur consécutifs. Toutes les figurines d'une même unité doivent choisir la même Danse. Les effets d'une Danse durent jusqu'à la fin de la manche.
 
-\renewcommand{\arraystretch}{1.5}	
+\renewcommand{\arraystretch}{2}	
 \begin{center}\begin{tabular}{rp{8cm}}
 \hline
 \textbf{\danceofwhirlingblades} & +1 Attaque. \tabularnewline
@@ -251,7 +300,7 @@ Les unités composées en majorité de figurines possédant cette règle gagnent
 \item Ignorez la pénalité pour toucher de Mouvement et Tir, la règle \volleyfire{} est perdue, et appliquez les effets de la Flèche choisie :
 \end{enumerate}
 
-\renewcommand{\arraystretch}{1.5}	
+\renewcommand{\arraystretch}{2}	
 \begin{center}\begin{tabular}{rp{10cm}}
 \hline
 \textbf{\blackarrow} & Force 4 à Courte Portée, \armourpiercing{1} à Longue Portée. \tabularnewline
@@ -285,7 +334,10 @@ Les unités composées en majorité de figurines possédant cette règle gagnent
 
 \newpage
 \begin{multicols}{2}\raggedcolumns
-\startarmynewsection{\kindreds}
+\toctarget{kindredstitle}{%
+\vspace*{-1.5cm}\section*{}\noindent\begin{center}\hugefontsize\textbf{\antiquefont\expandafter\uppercase\expandafter{\kindreds}}\end{center}
+\largefontsize
+}
 
 \spaceaftersection{}
 
@@ -293,23 +345,23 @@ Plusieurs Personnages peuvent appartenir à un même Clan.
 
 \startpricelistNSP
 
-\pricelistitem{Clan des Changeformes}{55/40}Figurine à pied uniquement.
+\pricelistitem{\shapeshifter}{55/40}Figurine à pied uniquement.
 
-La figurine gagne +4 en Mouvement, +2 en Initiative, +1 Attaque et la règle \wardsave{4}. La figurine ne peut jamais rejoindre une unité ni être rejointe par un autre Personnage, et gagne la règle \notaleader{}.
+La figurine gagne +4 en Mouvement, +2 en Initiative, +1 Attaque et la règle \wardsave{4}. Elle ne peut jamais rejoindre une unité ni être rejointe par un autre Personnage, et gagne la règle \notaleader{}.
 
-\pricelistitem{Clan des Gardiens de la Forêt}{40/30}Figurine à pied uniquement.
+\pricelistitem{\forestguardian}{40/30}Figurine à pied uniquement.
 
 La figurine gagne +1 Attaque et la règle \innatedefence{5}. Elle ne peut être équipée que d'armes du type \spear{}, \gw{} ou \sylvanblades{}, magiques ou standard, ou d'une \hw{} standard.
 
-\pricelistitem{Clan des Pisteurs}{35/25}Figurine à pied uniquement.
-
-La figurine gagne +1 en Capacité de Tir et les règles \scout{}, \masterarcher{} et \multipleshots{Attaques sur le profil}.
-
-\pricelistitem{Clan des Chasseurs Sauvages}{35/25}Figurine montée sur \elvenhorse{} ou \greatelk{} uniquement.
+\pricelistitem{\wildhunter}{35/25}Figurine montée sur \elvenhorse{} ou \greatelk{} uniquement.
 
 La figurine du porteur gagne la règle \frenzy{}. Le porteur gagne les règles \devastatingcharge{} et \lighttroops{}. De plus, la figurine gagne la règle \fear{} jusqu'à la fin de la Phase de Corps à Corps après avoir réussi une charge.
 
-\pricelistitem{Clan des Danselames}{25}Figurine à pied uniquement.
+\pricelistitem{\pathfinderkindred}{35/25}Figurine à pied uniquement.
+
+La figurine gagne +1 en Capacité de Tir et les règles \scout{}, \masterarcher{} et \multipleshots{Attaques sur le profil}.
+
+\pricelistitem{\bladedancerkindred}{25}Figurine à pied uniquement.
 
 La figurine gagne les règles \dancesofcenyrn{} (voir l'unité spéciale \bladedancers{}), \immunetopsychology{} et \wardsave{6}. Son unité gagne la règle \swiftstride{}. Elle ne peut rejoindre que des unités de \bladedancers{} et ne peut être rejointe que par des Personnages du même Clan. Enfin, elle ne peut utiliser ni Arme de Tir, ni Armure, magiques ou standard.
 
@@ -319,7 +371,10 @@ La figurine gagne les règles \dancesofcenyrn{} (voir l'unité spéciale \bladed
 \vspace*{\fill}
 \columnbreak
 
-\startarmynewsection{\aspectsofnature}
+\toctarget{aspectsofnaturetitle}{%
+\vspace*{-1.5cm}\section*{}\noindent\begin{center}\hugefontsize\textbf{\antiquefont\expandafter\uppercase\expandafter{\aspectsofnature}}\end{center}
+\largefontsize
+}
 
 \spaceaftersection{}
 
@@ -327,19 +382,19 @@ Les \aspectsofnature{} ont la règle \oneperarmy{}.
 
 \startpricelistNSP
 
-\pricelistitem{Entrave de Vignes}{50/25} En Défi, les adversaires de la figurine doivent relancer leurs jets pour toucher réussis.
+\pricelistitem{\entanglingvines}{50/25} En Défi, les adversaires de la figurine doivent relancer leurs jets pour toucher réussis.
 
-\pricelistitem{Écorce Blessée}{40} Les \dryads{} de l'unité du porteur gagnent la règle \hatred{}.
+\pricelistitem{\scarredbark}{40} Les \dryads{} de l'unité du porteur gagnent la règle \hatred{}.
 
-\pricelistitem{Spores Toxiques}{30} Chaque figurine de l'unité du porteur gagne une Attaque de Tir. \range{12}, Force 3, \lethalstrike{}.
+\pricelistitem{\toxicspores}{30} Chaque figurine de l'unité du porteur gagne une Attaque de Tir. \range{12}, Force 3, \lethalstrike{}.
 
-\pricelistitem{Couronne de Chêne}{5} \only{Général}.
+\pricelistitem{\oakencrown}{5} \only{Général}.
 
 Toutes les unités de \dryads{} et de \thicketbeasts{} de l'armée peuvent prendre un Porte-étendard et un Musicien pour \pts{10} chacun.
 
 Un unique \thicketshepherd{} peut devenir \bsb{} pour \pts{25}. Il peut alors prendre une Bannière Magique, mais s'il prend un \aspectofnature{}, le total des coûts ne peut excéder \pts{50}. S'il ne prend pas d'\aspectofnature{}, le coût de la Bannière Magique n'est pas limité.
 
-\pricelistitem{Racines Entrelacées}{5} Une unité de \thicketbeasts{} peut être améliorée avec un bonus de +1 en Force pour \pts{10}\permodel{} Ce bonus disparaît à la mort du porteur. Le coût additionnel des améliorations compte dans celui de l'unité.
+\pricelistitem{\entwinedroots}{5} Une unité de \thicketbeasts{} peut être améliorée avec un bonus de +1 en Force pour \pts{10}\permodel{} Ce bonus disparaît à la mort du porteur. Le coût additionnel des améliorations compte dans celui de l'unité.
 
 \endpricelistNSP
 \closearmynewsection
@@ -359,13 +414,17 @@ Un unique \thicketshepherd{} peut devenir \bsb{} pour \pts{25}. Il peut alors pr
 
 \startpricelist
 
-\pricelistitem{Épée Cyclone}{60/40}Figurine à pied uniquement.
+\pricelistitem{\whirlwindblade}{60/40}Figurine à pied uniquement.
 
-Type : \gw{}. Le porteur gagne +1 à sa Sauvegarde d'Armure au Corps à Corps jusqu'à obtenir 2+ au mieux. Les Attaques portées avec cette arme bénéficient d'un bonus de +1 en CC et de la règle \multiplewounds{2}{}.
+Type : \gw{}. Le porteur gagne +1 à sa Sauvegarde d'Armure au Corps à Corps jusqu'à obtenir 2+ au mieux.
 
-\pricelistitem{Lance Sacrée de Cadaron}{40/30}Type : \spear{}. Les Attaques portées avec cette arme ont +1 en Force. Si le porteur inflige au moins une blessure non sauvegardée avec cette arme, celui-ci et toutes les figurines ordinaires de son unité gagnent la règle \distracting{} jusqu'à la fin de la Phase de Corps à Corps.
+Les Attaques portées avec cette arme bénéficient d'un bonus de +1 en CC et de la règle \multiplewounds{2}{}.
 
-\pricelistitem{Arc de Wyscan}{35}Type : \longbow{}. Le porteur peut choisir de remplacer son Attaque de Tir normale par une Attaque de Tir Spéciale avec Force 1, \poisonedattacks{} et \multipleshots{2D6}. Elle ne peut pas être combinée avec des \feyarrows{}.
+\pricelistitem{\sacredspearofcadaron}{40/30}Type : \spear{} (donc à pied uniquement). Les Attaques portées avec cette arme ont +1 en Force.
+
+Si le porteur inflige au moins une blessure non sauvegardée avec cette arme, celui-ci et toutes les figurines ordinaires de son unité gagnent la règle \distracting{} jusqu'à la fin de la Phase de Corps à Corps.
+
+\pricelistitem{\bowofwyscan}{35}Type : \longbow{}. Le porteur peut choisir de remplacer son Attaque de Tir normale par une Attaque de Tir Spéciale avec Force 1, \poisonedattacks{} et \multipleshots{2D6}. Elle ne peut pas être combinée avec des \feyarrows{}.
 
 \endpricelist
 
@@ -373,7 +432,7 @@ Type : \gw{}. Le porteur gagne +1 à sa Sauvegarde d'Armure au Corps à Corps ju
 
 \startpricelist
 
-\pricelistitem{Heaume de la Chasse Sauvage}{20}Type : Aucun (Sauvegarde d'Armure 6+). Lorsque la figurine réussit une charge, le porteur gagne +1 en Capacité de Combat et +1 Attaque jusqu'à la fin de la Phase de Corps à Corps suivant cette charge.
+\pricelistitem{\helmofthewildhunt}{20}Type : Aucun (Sauvegarde d'Armure 6+). Lorsque la figurine réussit une charge, le porteur gagne +1 en Capacité de Combat et +1 Attaque jusqu'à la fin de la Phase de Corps à Corps suivant cette charge.
 
 \endpricelist
 
@@ -381,7 +440,7 @@ Type : \gw{}. Le porteur gagne +1 à sa Sauvegarde d'Armure au Corps à Corps ju
 
 \startpricelist
 
-\pricelistitem{Pendentif du Feu Flétrissant}{25}Au Corps à Corps, ni le porteur ni les figurines attaquant le porteur ne reçoivent de bonus de Force de leur arme, qu'elle soit magique ou standard.
+\pricelistitem{\fireblightpendant}{25}Au Corps à Corps, ni le porteur ni les figurines attaquant le porteur ne reçoivent de bonus de Force de leur arme, qu'elle soit magique ou standard.
 
 \endpricelist
 
@@ -389,17 +448,17 @@ Type : \gw{}. Le porteur gagne +1 à sa Sauvegarde d'Armure au Corps à Corps ju
 
 \startpricelist
 
-\pricelistitem{Miroir de l'Arpenteur des Brumes}{35}Figurine à pied uniquement.
-
-Une seule utilisation. Si l'unité du porteur est constituée uniquement de figurines d'Infanterie, qu'elle n'est pas engagée au corps à corps, et qu'elle est complètement à l'intérieur d'une Forêt sans aucune figurine ennemie, l'unité peut se téléporter dans une autre Forêt du champ de bataille à la fin de votre Phase de Mouvement. L'unité doit se retrouver intégralement dans la Forêt ciblée, dans n'importe quelle formation autorisée et en respectant la Règle du Pouce d'Écart. L'unité compte alors comme ayant fait une Marche Forcée.
-
-\pricelistitem{Graines Sacrées}{35}Figurine à pied uniquement.
+\pricelistitem{\sacredseeds}{35}Figurine à pied uniquement.
 
 Une seule utilisation. L'objet peut être activé à la fin de toute Phase de Mouvement alliée. Placez alors une Forêt de \distance{6} de diamètre au plus au contact du porteur, et à plus de \distance{1} de toute unité ennemie et des autres Décors.
 
-\pricelistitem{Pluie de Flèches}{30}Une seule utilisation. Arme de Tir. \range{30}, Force 4, \multipleshots{3D6}. Si le tir est fait à Courte Portée, il gagne aussi la règle \armourpiercing{1}. Les \feyarrows{} ne peuvent pas être utilisées lors de ce tir.
+\pricelistitem{\mistwalkersmirror}{35}Figurine à pied uniquement.
 
-\pricelistitem{Tambours de Guerre de Cenyrn}{25}Clan des Danselames uniquement.
+Une seule utilisation. Si l'unité du porteur est constituée uniquement de figurines d'Infanterie, qu'elle n'est pas engagée au corps à corps, et qu'elle est complètement à l'intérieur d'une Forêt sans aucune figurine ennemie, l'unité peut se téléporter dans une autre Forêt du champ de bataille à la fin de votre Phase de Mouvement. L'unité doit se retrouver intégralement dans la Forêt ciblée, dans n'importe quelle formation autorisée et en respectant la Règle du Pouce d'Écart. L'unité compte alors comme ayant fait une Marche Forcée.
+
+\pricelistitem{\hailshot}{30}Une seule utilisation. Arme de Tir. \range{30}, Force 4, \multipleshots{3D6}. Si le tir est fait à Courte Portée, il gagne aussi la règle \armourpiercing{1}. Les \feyarrows{} ne peuvent pas être utilisées lors de ce tir.
+
+\pricelistitem{\drumsofcenyrn}{25}Clan des Danselames uniquement.
 
 Une seule utilisation. Cet objet peut être activé lorsque le porteur déclare une charge. L'unité ennemie ne peut déclarer que Tenir la Position en réponse à la charge, sauf si elle est déjà en fuite. Elle peut déclarer d'autres réactions normalement si elle est chargée par d'autres unités par la suite.
 
@@ -409,7 +468,7 @@ Une seule utilisation. Cet objet peut être activé lorsque le porteur déclare 
 
 \startpricelist
 
-\pricelistitem{Bannière d'Amryl}{25}L'unité du porteur gagne la règle \fightinextrarank{}.
+\pricelistitem{\amrylsbanner}{25}L'unité du porteur gagne la règle \fightinextrarank{}.
 
 \endpricelist
 
@@ -444,7 +503,7 @@ Une seule utilisation. Cet objet peut être activé lorsque le porteur déclare 
 \end{center}
 
 \medskip
-\renewcommand{\arraystretch}{1.5}	
+\renewcommand{\arraystretch}{2}	
 \begin{center}
 \noindent{\antiquefont\Largefontsize\textbf{\feyarrows}}
 \medskip

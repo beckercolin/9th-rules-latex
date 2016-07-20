@@ -3,8 +3,23 @@
 
 \newcommand{\booktitle}{Dynasties Immortelles}
 \newcommand{\version}{0.99.9}
-\newcommand{\frenchversion}{2.0}
+\newcommand{\frenchversion}{2.1}
 \newcommand{\booklogo}{pics/logo_big_UD.png}
+\newcommand{\tocfirstcolumn}{%
+\tocentry{widerulestitle}{\labels@armywiderules}
+
+\tocentry{specialrulestitle}{\labels@armyspecialrules}
+
+\tocentry{armourytitle}{\labels@armoury}
+
+\tocentry{monarchstitle}{Monarques des morts-vivants}
+
+\tocentry{magicalitemstitle}{\labels@magicalitems}
+
+\tocentry{lordtitle}{\labels@armylist}
+
+\tocentry{QRStitle}{\labels@quickrefsheet}
+}
 
 % Spells
 
@@ -38,16 +53,33 @@
 \newcommand{\commanderoftheterracottaarmy}{Roi de l'Armée de Terre Cuite}
 \newcommand{\lordofthebarrowlegion}{Seigneur de la Légion des Tertres}
 
-
 % Armoury
 
 \newcommand{\aspenbow}{Arc Aspic}
 \newcommand{\greataspenbow}{Grand Arc Aspic}
 \newcommand{\giantaspenbow}{Arc Aspic Géant}
 
+% Magical Items
+
+\newcommand{\vanquishereternal}{L’Éternel Vainqueur}
+\newcommand{\scourgeofkings}{Fléau des Rois}
+
+\newcommand{\crownofthepharaohs}{Couronne des Pharaons}
+\newcommand{\armourofeternities}{Armure des Éternités}
+
+\newcommand{\broochofthesun}{Broche Solaire}
+
+\newcommand{\deathmaskofteput}{Masque de Mort de Teput}
+\newcommand{\sandstormcloak}{Cape des Tempêtes de Sable}
+\newcommand{\chariotofnephetra}{Char Solaire de Nephet-Râ}
+
+\newcommand{\bookofthedead}{Livre des Morts}
+
+\newcommand{\banneroftheentombed}{Bannière des Ensablés}
+
 % Army common type special rules
 
-\newcommand{\undeadcommonrules}{Règles spéciales des Morts-Vivants}
+\newcommand{\undeadcommonrules}{Règles Spéciales des Morts-Vivants}
 
 
 % Other Rules
@@ -317,11 +349,11 @@ Une unité qui subit au moins une perte causée par cette arme doit subir un tes
 
 \startarmywiderules
 
-\armyspecialruleentry{\risen{}}
+\armyspecialruleentry{\risen}
 
 Certains profils d'unité contiennent une catégorie appelée \risen{} qui donne le nombre de Points de Vie Ressuscités grâce à l'attribut \sandattribute{} de la Discipline \sands{}.
 
-\armyspecialruleentry{\rulersofthedead{}}
+\armyspecialruleentry{\rulersofthedead}
 
 Votre armée doit contenir au moins un Sorcier qui utilise la Discipline \sands{} que vous désignez comme étant votre Hiérophante. Il doit être indiqué sur votre liste d'armée. Le Hiérophante et toutes les figurines de son unité gagnent la règle \regeneration{6}.
 
@@ -337,7 +369,7 @@ Votre armée doit contenir au moins un Sorcier qui utilise la Discipline \sands{
 \vspace*{1.5cm}
 \startarmyspecialrules
 
-\armyspecialruleentry{\dusttodust{}}
+\armyspecialruleentry{\dusttodust}
 
 À la fin de n'importe quelle phase durant laquelle le Hiérophante est retiré du jeu en tant que perte, toute unité de l'armée qui possède au moins une figurine avec la règle \dusttodust{} doit faire un test de Commandement. Si le test échoue, l'unité subit un nombre de blessures équivalent à la différence entre le résultat obtenu et la valeur de Commandement du test, sans aucune sauvegarde autorisée. Ces blessures sont réparties comme pour la règle \unstable{}, mais ne peuvent pas être assignées à une figurine n'ayant pas la règle \dusttodust{}. Le montant de blessures est réduit de un si l'unité est à portée de la règle \holdyourground{}.
 
@@ -345,23 +377,23 @@ Votre armée doit contenir au moins un Sorcier qui utilise la Discipline \sands{
 
 Au début de chacun de vos Tours de Joueur sans nouveau Hiérophante, toute unité qui possède au moins une figurine avec la règle \dusttodust{} doit faire un nouveau test de Commandement, et subir des blessures comme décrit ci-dessus.
 
-\armyspecialruleentry{\undeadconstruct{}}
+\armyspecialruleentry{\undeadconstruct}
 
 La figurine gagne les règles \dusttodust{} et \undead{}. Par ailleurs, une unité subit une blessure de moins lors de l'application de ces règles si au moins la moitié des figurines de l'unité possède la règle \undeadconstruct{}.
 
-\armyspecialruleentry{\undyingwill{}}
+\armyspecialruleentry{\undyingwill}
 
 Au début de n'importe quelle Phase de Corps à Corps, le Personnage peut conférer la valeur non modifiée de sa Capacité de Combat à toutes les figurines avec la règle \undead{} de son unité. S'il est monté sur une \largetarget{}, il peut à la place décider de conférer ce bonus à une unité alliée avec la règle \undead{} à moins de \distance{6}, à moins qu'il ne soit lui-même engagé au corps à corps. Dans ce dernier cas, il ne peut conférer ce bonus qu'à une unité \undead{} engagée au corps à corps avec la même unité ennemie. Dans tous les cas, l'effet dure jusqu'à la fin de cette phase.
 
-\armyspecialruleentry{\necromanticaura{}}
+\armyspecialruleentry{\necromanticaura}
 
 Toutes les unités alliées dans un rayon de \distance{6} d'une ou plusieurs figurines avec cette règle réduisent le nombre de blessures qu'elle subissent par les règles \dusttodust{} et \unstable{} de 1. Les figurines avec la règle \necromanticaura{} ne peuvent pas en bénéficier elles-mêmes.
 
-\armyspecialruleentry{\mummyscurse{}}
+\armyspecialruleentry{\mummyscurse}
 
 Quand la figurine est retirée de la partie, la figurine qui lui a causé la blessure fatale subit une touche de Force 6 avec la règle \armourpiercing{6}. Si plusieurs figurines sont impliquées dans cette dernière blessure, déterminez aléatoirement qui est touché.
 
-\armyspecialruleentry{\undergroundambush{}}
+\armyspecialruleentry{\undergroundambush}
 
 L'unité suit la règle \ambush{}. Cependant, au lieu d'entrer sur le champ de bataille à partir d'un bord de table, elle apparait à un endroit appelé le Point Souterrain. Au moment de le déterminer, le propriétaire commence par désigner un point à plus de \distance{3} de toute unité ennemie et à plus de \distance{0,5} de tout Terrain Infranchissable. Faites dévier ce point de \distance{2D6} pour obtenir le point souterrain. L'unité est alors placée avec le front du premier rang ou du rang arrière en contact avec le point souterrain. Si le point se trouve sous une unité ennemie, placez plutôt l'unité embusquée en contact socle à socle avec le front avant de cette unité, en maximisant les figurines en contact comme en cas de charge. L'unité qui vient d'arriver est considérée comme ayant chargé et aucune réaction de charge ne peut être déclarée. S'il n'est pas possible de placer l'unité embusquée, considérez que le jet d'\ambush{} est raté et relancez le dé au prochain tour.
 
@@ -393,8 +425,8 @@ L'unité suit la règle \ambush{}. Cependant, au lieu d'entrer sur le champ de b
 
 
 
-
-\startarmynewsection{\monarchsofundead}
+\newpage
+\toctarget{monarchstitle}{\startarmynewsection{\monarchsofundead}}
 
 \spaceaftersection{}
 
@@ -404,7 +436,7 @@ L'unité suit la règle \ambush{}. Cependant, au lieu d'entrer sur le champ de b
 
 \begin{multicols}{2}\raggedcolumns
 
-\begin{center}\armynewsubsection{\commanderoftheterracottaarmy}\end{center} %M% vérifier les accords
+\begin{center}\armynewsubsection{\commanderoftheterracottaarmy}\end{center}
 
 \begin{itemize}[label={-}, leftmargin=*]
 \item Tous les \skeletons{}, \skeletonarchers{}, \skeletoncavalry{} et \necropolisguards{} \textbf{doivent} être améliorés au coût de \pts{3}\permodel{} pour gagner +1 en Endurance, -1 en Initiative et la règle \undeadconstruct{}.
@@ -427,7 +459,7 @@ L'unité suit la règle \ambush{}. Cependant, au lieu d'entrer sur le champ de b
 \begin{center}\armynewsubsection{\lordofthebarrowlegion}\end{center}
 
 \begin{itemize}[label={-}, leftmargin=*]
-\item Les \skeletons{} et \skeletonarchers{} \textbf{doivent} prendre une \ha{} pour \pts{2}\permodel{}
+\item Les \skeletons{} et \skeletonarchers{} \textbf{doivent} pren\-dre une \ha{} pour \pts{2}\permodel{}
 
 \item Les \skeletons{} peuvent échanger la \spear{} et le \shield{} contre une \halberd{} pour \pts{1}\permodel{}
 
@@ -465,7 +497,7 @@ L'unité suit la règle \ambush{}. Cependant, au lieu d'entrer sur le champ de b
 
 \startpricelist
 
-\pricelistitem{L'Éternel Vainqueur}{55}Figurine à pied uniquement.
+\pricelistitem{\vanquishereternal}{55}Figurine à pied uniquement.
 
  Type : \halberd{}. Les attaques portées avec cette arme possèdent la règle \lethalstrike{}. Le porteur peut utiliser l'arme de deux manières : Frappe Ciblée ou Frappe Faucheuse. Choisissez au début de chaque Manche de Corps à Corps.
  \begin{itemize}[label={-}]
@@ -473,7 +505,7 @@ L'unité suit la règle \ambush{}. Cependant, au lieu d'entrer sur le champ de b
 \item \textbf{Frappe Faucheuse} : Toutes les attaques du porteur sont échangées contre une touche automatique à chaque figurine en contact socle à socle avec le porteur. Toutes les figurines qui peuvent effectuer une attaque de soutien contre le porteur subissent aussi une attaque qui touche sur 4+. Ces attaques suivent les règles normales de l'arme (\halberd{}, \lethalstrike{}).
 \end{itemize}
 
-\pricelistitem{Fléau des Rois}{50/30} Type : \hw{}. Les attaques effectuées avec cette arme possèdent la règle \armourpiercing{1}. Chaque touche réussie avec cette arme occasionne une touche supplémentaire automatique pour un total de deux touches.
+\pricelistitem{\scourgeofkings}{50/30} Type : \hw{}. Les attaques effectuées avec cette arme possèdent la règle \armourpiercing{1}. Chaque touche réussie avec cette arme occasionne une touche supplémentaire automatique pour un total de deux touches.
 
 \endpricelist
 
@@ -481,9 +513,11 @@ L'unité suit la règle \ambush{}. Cependant, au lieu d'entrer sur le champ de b
 
 \startpricelist
 
-\pricelistitem{Couronne des Pharaons}{45} Type : Aucun (Sauvegarde d'Armure 6+). Le porteur peut utiliser la règle \undyingwill{} sur une seule unité alliée à moins de \distance{6}. Si le porteur est engagé au corps à corps, il ne peut transférer sa Capacité de Combat non modifiée qu'à une unité avec la règle \undead{} alliée au corps à corps avec la même unité ennemie. De plus, vous pouvez choisir d'utiliser la règle \undyingwill{} durant la Phase de Tir en transférant sa Capacité de Tir à la place de sa Capacité de Combat. La règle \undyingwill{} ne peut être utilisée que lors d'une seule phase par Tour de Joueur. Si le porteur est monté sur une \largetarget{}, ajoutez \distance{6} à la portée de l'objet.
+\pricelistitem{\crownofthepharaohs}{45} Type : Aucun (Sauvegarde d'Armure 6+). Le porteur peut utiliser la règle \undyingwill{} sur une seule unité alliée à moins de \distance{6}. Si le porteur est engagé au corps à corps, il ne peut transférer sa Capacité de Combat non modifiée qu'à une unité avec la règle \undead{} alliée au corps à corps avec la même unité ennemie.
 
-\pricelistitem{Armure des Éternités}{35}Figurine à pied uniquement.
+De plus, vous pouvez choisir d'utiliser la règle \undyingwill{} durant la Phase de Tir en transférant sa Capacité de Tir à la place de sa Capacité de Combat. La règle \undyingwill{} ne peut être utilisée que lors d'une seule phase par Tour de Joueur. Si le porteur est monté sur une \largetarget{}, ajoutez \distance{6} à la portée de l'objet.
+
+\pricelistitem{\armourofeternities}{35}Figurine à pied uniquement.
 
 Type : \platearmour{}. Le porteur gagne +1 Point de Vie.
 
@@ -493,7 +527,7 @@ Type : \platearmour{}. Le porteur gagne +1 Point de Vie.
 
 \startpricelist
 
-\pricelistitem{Broche Solaire}{15} Au début de chaque Manche de Corps à Corps, choisissez un élément de figurine en contact socle à socle avec le porteur. Il subit un malus de -1 sur sa caractéristique Attaque, jusqu'à un minimum de 1.
+\pricelistitem{\broochofthesun}{15} Au début de chaque Manche de Corps à Corps, choisissez un élément de figurine en contact socle à socle avec le porteur. Il subit un malus de -1 sur sa caractéristique Attaque, jusqu'à un minimum de 1.
 
 \endpricelist
 
@@ -501,11 +535,11 @@ Type : \platearmour{}. Le porteur gagne +1 Point de Vie.
 
 \startpricelist
 
-\pricelistitem{Masque de Mort de Teput}{35} Au début de chaque Manche de Corps à Corps, choisissez la règle \inspiringpresence{} ou \holdyourground{}. Les unités ennemies en contact socle à socle avec le porteur ne peuvent plus bénéficier de la règle choisie pour la durée de cette phase.
+\pricelistitem{\deathmaskofteput}{35} Au début de chaque Manche de Corps à Corps, choisissez la règle \inspiringpresence{} ou \holdyourground{}. Les unités ennemies en contact socle à socle avec le porteur ne peuvent plus bénéficier de la règle choisie pour la durée de cette phase.
 
-\pricelistitem{Cape des Tempêtes de Sable}{30} L'unité du porteur gagne la règle \hardtarget{}.
+\pricelistitem{\sandstormcloak}{30} L'unité du porteur gagne la règle \hardtarget{}.
 
-\pricelistitem{Char Solaire de Nephet-Râ}{25} Figurine sur \chariot{} uniquement.
+\pricelistitem{\chariotofnephetra}{25} Figurine sur \chariot{} uniquement.
 
 Les \impacthits{} causées par le \chariot{} du porteur et les Attaques de ses montures gagnent les règles \flamingattacks{} et \magicalattacks{} et sont résolues avec +1 en Force.
 
@@ -515,7 +549,7 @@ Les \impacthits{} causées par le \chariot{} du porteur et les Attaques de ses m
 
 \startpricelist
 
-\pricelistitem{Livre des Morts}{50/35} La valeur de lancement des sorts de la Discipline \sands{} est réduite de 1 pour le porteur. De plus, l'Attribut de la Discipline \sands{} lancé par le porteur Ressuscite 1 PV supplémentaire sur la ou les unités ciblées qui ne sont ni des Personnages ni des Grandes Cibles.
+\pricelistitem{\bookofthedead}{50/35} La valeur de lancement des sorts de la Discipline \sands{} est réduite de 1 pour le porteur. De plus, l'Attribut de la Discipline \sands{} lancé par le porteur Ressuscite 1 PV supplémentaire sur la ou les unités ciblées qui ne sont ni des Personnages ni des Grandes Cibles.
 
 \endpricelist
 
@@ -523,7 +557,7 @@ Les \impacthits{} causées par le \chariot{} du porteur et les Attaques de ses m
 
 \startpricelist
 
-\pricelistitem{Bannière des Ensablés}{65} Les figurines avec la règle \undergroundambush{} de l'armée peuvent ajouter +1 à leur jet d'\ambush{}. Signalez-le avant de lancer le dé. Si vous utilisez ce bonus, le point souterrain doit se trouver à moins de \distance{24} du porteur et ne dévie que de \distance{1D6}.
+\pricelistitem{\banneroftheentombed}{65} Les figurines avec la règle \undergroundambush{} de l'armée peuvent ajouter +1 à leur jet d'\ambush{}. Signalez-le avant de lancer le dé. Si vous utilisez ce bonus, le point souterrain doit se trouver à moins de \distance{24} du porteur et ne dévie que de \distance{1D6}.
 
 \endpricelist
 

@@ -2,8 +2,19 @@
 
 \newcommand{\booktitle}{Anciens Sauriens}
 \newcommand{\version}{0.99.9}
-\newcommand{\frenchversion}{2.0}
+\newcommand{\frenchversion}{2.1}
 \newcommand{\booklogo}{pics/logo_big_SA.png}
+\newcommand{\tocfirstcolumn}{%
+\tocentry{specialrulestitle}{\labels@armyspecialrules}
+
+\tocentry{armourytitle}{\labels@armoury}
+
+\tocentry{magicalitemstitle}{\labels@magicalitems}
+
+\tocentry{lordtitle}{\labels@armylist}
+
+\tocentry{QRStitle}{\labels@quickrefsheet}
+}
 
 
 % Army special rules
@@ -29,19 +40,29 @@
 \newcommand{\greatbow}{Arc Géant}
 \newcommand{\engineoftheancients}{Machine des Anciens}
 
-% Spells
+% Magical Items
 
-\newcommand{\whitemagicone}{Vol du Phénix}
-\newcommand{\diseasetwo}{Bénédiction Infecte}
-\newcommand{\lightzero}{Regard Embrasé}
-\newcommand{\wildernesszero}{La Bête qui Sommeille}
-\newcommand{\wildernessthree}{Javelot d’Ambre}
+\newcommand{\swordofthedawnages}{Lame de l'Aube des Temps}
+\newcommand{\spearofthestampede}{Lance de la Cavalcade}
+\newcommand{\serpentbow}{Arc Serpent}
 
-% Other rules
+\newcommand{\taurosaurhelm}{Heaume du Taurosaure}
 
-\newcommand{\palanquin}{Palanquin}
+\newcommand{\starfallshard}{Éclat de l’Étoile Tombée}
+
+\newcommand{\eggofthequetzal}{Œuf du Quetzal}
+\newcommand{\jadestaff}{Bâton de Jade}
+
+\newcommand{\ancientplaque}{Plaque Ancestrale}
+\newcommand{\blackcube}{Cube Noir}
+
+\newcommand{\totemofmixoatl}{Totem de Mixoatl}
+
+% Cuatl Lord Disciplines
+
 \newcommand{\cuatllorddisciplines}{Savoirs des Coatls}
 \newcommand{\cuatllorddiscipline}{Savoir des Coatls}
+
 \newcommand{\masterofmagic}{Virtuose de la Magie}
 \newcommand{\wanderingpath}{Discipline Vagabonde}
 \newcommand{\wellspringofpower}{Fontaine de Pouvoir}
@@ -50,6 +71,27 @@
 \newcommand{\shieldedsoul}{Âme Protégée}
 \newcommand{\higherstateofmind}{Conscience Supérieure}
 \newcommand{\scrutinyoftheancients}{Scrutation des Anciens}
+
+% Spells
+
+\newcommand{\whitemagicspellone}{Vol du Phénix}
+\newcommand{\diseasespelltwo}{Bénédiction Infecte}
+\newcommand{\lightsignature}{Regard Embrasé}
+\newcommand{\wildernesssignature}{La Bête qui Sommeille}
+\newcommand{\wildernessspellthree}{Javelot d’Ambre}
+
+% Totems
+
+\newcommand{\totemanimal}{Animal-Totem}
+\newcommand{\totemanimals}{Animaux-Totem}
+\newcommand{\piranha}{Piranha}
+\newcommand{\serpent}{Serpent}
+\newcommand{\jaguar}{Jaguar}
+\newcommand{\crocodile}{Crocodile}
+
+% Other rules
+
+\newcommand{\palanquin}{Palanquin}
 \newcommand{\packleader}{Premier de Couvée}
 \newcommand{\skinkpalanquin}{Palanquin Skink}
 \newcommand{\skinkpalanquins}{Palanquins Skinks}
@@ -57,12 +99,6 @@
 \newcommand{\apexpredator}{Prédateur Ultime}
 \newcommand{\sharphorns}{Cornes Acérées}
 \newcommand{\ancienttaurosaur}{Taurosaure Ancien}
-\newcommand{\totemanimal}{Animal-Totem}
-\newcommand{\totemanimals}{Animaux-Totem}
-\newcommand{\piranha}{Piranha}
-\newcommand{\serpent}{Serpent}
-\newcommand{\jaguar}{Jaguar}
-\newcommand{\crocodile}{Crocodile}
 \newcommand{\venomoustide}{Marée Venimeuse}
 \newcommand{\combinedstrength}{Force Combinée}
 \newcommand{\chameleon}{Caméléon}
@@ -85,39 +121,53 @@
 \newcommand{\saurianwarlord}{Seigneur de Guerre Saurien}
 \newcommand{\saurianwarlordQRS}{Seigneur de G. Saurien}
 \newcommand{\saurianwarlords}{Seigneurs de Guerre Saurien}
+
 \newcommand{\skinkhighpriest}{Haut Prêtre Skink}
 \newcommand{\skinkhighpriests}{Hauts Prêtres Skinks}
+
 \newcommand{\cuatllord}{Seigneur Coatl}
 \newcommand{\cuatllords}{Seigneurs Coatl}
+
 \newcommand{\saurianveteran}{Vétéran Saurien}
 \newcommand{\saurianveterans}{Vétérans Saurien}
+
 \newcommand{\skinkcaptain}{Capitaine Skink}
 \newcommand{\skinkcaptains}{Capitaines Skinks}
+
 \newcommand{\skinkpriest}{Prêtre Skink}
 \newcommand{\skinkpriests}{Prêtres Skinks}
+
 \newcommand{\caimanancient}{Caïman Ancien}
 
 % Core
 
 \newcommand{\saurianwarrior}{Guerrier Saurien}
 \newcommand{\saurianwarriors}{Guerriers Sauriens}
+
 \newcommand{\snakeswarm}{Nuée de Serpents}
 \newcommand{\snakeswarms}{Nuées de Serpents}
+
 \newcommand{\skinkbrave}{Brave Skink}
 \newcommand{\skinkbraves}{Braves Skinks}
+
 \newcommand{\caiman}{Caïman}
 
 % Special
 
 \newcommand{\skinkhunter}{Chasseur Skink}
 \newcommand{\skinkhunters}{Chasseurs Skinks}
+
 \newcommand{\templeguard}{Gardien des Temples}
 \newcommand{\templeguards}{Gardiens des Temples}
+
 \newcommand{\raptorrider}{Chevaucheur de Raptor}
 \newcommand{\raptorriders}{Chevaucheurs de Raptor}
+
 \newcommand{\caimans}{Caïmans}
+
 \newcommand{\skinkskyriders}{Skinks Chevauche-Ciel}
 \newcommand{\skinkskyrider}{Skink Chevauche-Ciel}
+
 \newcommand{\thyroscutus}{Thyroscutus}
 
 
@@ -126,12 +176,16 @@
 
 \newcommand{\weaponbeasts}{Bêtes d'Artillerie}
 \newcommand{\weaponbeast}{Bête d'Artillerie}
+
 \newcommand{\spearback}{Bête-Épieu}
 \newcommand{\spearbacks}{Bêtes-Épieux}
+
 \newcommand{\salamander}{Salamandre}
 \newcommand{\salamanders}{Salamandres}
+
 \newcommand{\taurosaur}{Taurosaure}
 \newcommand{\taurosaurs}{Taurosaures}
+
 \newcommand{\stygiosaur}{Stygiosaure}
 \newcommand{\stygiosaurs}{Stygiosaures}
 
@@ -139,16 +193,22 @@
 % Mounts
 
 \newcommand{\raptor}{Raptor}
+
 \newcommand{\carnosaur}{Carnosaure}
+
 \newcommand{\alphacarnosaur}{Carnosaure Alpha}
+
 \newcommand{\alphapteradon}{Ptéradon Alpha}
-\newcommand{\alpharhamphodon}{Ramphodon Alpha}
 \newcommand{\alphapteradons}{Ptéradons Alpha}
-\newcommand{\alpharhamphodons}{Ramphodons Alpha}
+
+\newcommand{\alpharhamphodon}{Rhamphorhyon Alpha}
+\newcommand{\alpharhamphodons}{Rhamphorhyons Alpha}
+
 \newcommand{\pteradon}{Ptéradon}
-\newcommand{\rhamphodon}{Ramphodon}
 \newcommand{\pteradons}{Ptéradons}
-\newcommand{\rhamphodons}{Ramphodons}
+
+\newcommand{\rhamphodon}{Rhamphorhyon}
+\newcommand{\rhamphodons}{Rhamphorhyons}
 
 
 % Short names and multiprofiles names
@@ -258,13 +318,13 @@ Avant la partie, si vous avez au moins une unité avec un \rhamphodon{} ou un \a
 \newcommand{\altarofthesnakegodrule}{%
 Les unités alliées à moins de \distance{6} d'au moins une figurine avec un \altarofthesnakegod{} gagnent la règle \poisonedattacks{} au Corps à Corps. Si une unité possède déjà la règle \poisonedattacks{}, alors les attaques blessent automatiquement sur 5+ au lieu de 6+.
 
-\boundspell{3}. \diseasetwo{} (Discipline \disease{}).
+\boundspell{3}. \diseasespelltwo{} (Discipline \disease{}).
 }
 
 \newcommand{\sunenginerule}{%
 Les unités alliées à moins de \distance{6} d'au moins une figurine avec une \sunengine{} gagnent +1 en Capacité de Combat.
 
-\boundspell{3}. \lightzero{} (Discipline \light{}).
+\boundspell{3}. \lightsignature{} (Discipline \light{}).
 }
 
 \newcommand{\shootspikesrule}{%
@@ -394,8 +454,8 @@ La figurine gagne la règle \telepathiclink{}. Au début de chaque Tour de Joueu
 
 
 
-
-\renewcommand{\startarmymagicalitems}{\vspace{1.5cm}\largefontsize\bigtitle{\labels@magicalitems}\begin{multicols}{2}\raggedcolumns}
+\vspace{1.5cm}
+\renewcommand{\startarmymagicalitems}{\largefontsize\toctarget{magicalitemstitle}{\bigtitle{\labels@magicalitems}}\begin{multicols}{2}\raggedcolumns}
 
 \startarmymagicalitems
 
@@ -436,7 +496,7 @@ Type : Aucun (Sauvegarde d'Armure 6+). Le porteur gagne +1 en Endurance et la r�
 
 \pricelistitem{Œuf du Quetzal}{35}Le porteur gagne une \breathweapon{\Strength{} 1D3+2, \magicalattacks}.
 
-\pricelistitem{Bâton de Jade}{20}Le porteur gagne un \boundspell{3}. \whitemagicone{} (Discipline \whitemagic{}).
+\pricelistitem{Bâton de Jade}{20}Le porteur gagne un \boundspell{3}. \whitemagicspellone{} (Discipline \whitemagic{}).
 
 \endpricelist
 

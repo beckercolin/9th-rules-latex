@@ -255,26 +255,30 @@
 	type=\infantry{},
 	basesize=50x50,
 	specialrules={\skinkpalanquin},
-	unitrules={
-		\unitrule{\skinkpalanquin}{\skinkpalanquinrule}
-		\unitrule{\plaqueofthesnakegod}{\plaqueofthesnakegodrule}
-	},
 	armour={\mountsprotection{6}},
 	options={
 		\mayswitchbasesize{}=\free{},
 		\plaqueofthesnakegod{}=30,
 	},
+	additional={%
+		\def\tempunitrules{
+			\unitrule{\skinkpalanquin}{\skinkpalanquinrule}
+			\unitrule{\plaqueofthesnakegod}{\plaqueofthesnakegodrule}
+		}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
+	},
 }
 
 \showunit{
 	notinQRS=yes,
-	name={\taurosaur{} (\oneofakind{})},
+	name={\taurosaur},
 	profile={ \taurosaur{}< 6 3 - 5 6 5 2 4 -,
 			  \skinkcrew{} (4)< - 2 3 3 - - 4 1 6,},
 	type=\riddenmonster{},
 	basesize=50x100,
+	unitsize=SPECIAL-{\textbf{(\oneofakind)}},
 	specialrules={\immunetopsychology{},\stubborn{},\impacthits{1D6+1}},
-	weapons={\poisonedjavelin{} \only{\crew{}},\greatbow{} \only{\taurosaur{}}},
+	weapons={\poisonedjavelin{} \only{\crew{}},\greatbow{} \only{\taurosaur}},
 	armour={\innatedefence{3}},
 	options={
 		\sharphorns{}=15,
@@ -411,7 +415,6 @@
 	commontype=\skinkcommonrules{},
 	commonspecialrules={\coldblooded{},\strider{\water}},
 	specialrules={\skirmisher},
-	unitrules={\unitrule{\chameleon}{\chameleonrule}},
 	weapons={\poisonedjavelin},
 	armour={\shield{},\innatedefence{6}},
 	options={
@@ -422,6 +425,10 @@
 		\replacepoisonedjavelinandshieldforblowpipe{}=\free{},
 	},
 	commandgroup={champion=10},
+	additional={%
+		\def\tempunitrules{\unitrule{\chameleon}{\chameleonrule}}
+		\unitrules{\tempunitrules}
+	},
 }
 
 \showunit{
@@ -685,7 +692,7 @@
 		\def\tempspecialrules{\telepathiclink{},\poisonedattacks{} \only{\stygiosaur},\stomp{1D3},\terror{},\largetarget}
 		\vspace*{-0.2cm}\specialrules{\tempspecialrules}
 		
-		\def\tempwizardconclave{\wildernesszero{}, \wildernessthree{} (\Pathof{} \wilderness{})}
+		\def\tempwizardconclave{\wildernesssignature{}, \wildernessspellthree{} (\Pathof{} \wilderness{})}
 		\vspace*{0.3cm}\magicwizardconclave{\tempwizardconclave}
 		
 		\def\tempunitrules{\unitrule{\predatoryroar}{\predatoryroarrule}}

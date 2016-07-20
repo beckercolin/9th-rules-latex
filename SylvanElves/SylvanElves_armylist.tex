@@ -63,7 +63,7 @@
 }
 
 \showunit{
-	name={\treefatherancient{}},
+	name={\treefatherancient},
 	profile={ 
 		\treefatherancientshort{}< 5 4 4 5 6 6 2 3 9,
 		\avatarofnature{}< 5 6 5 7 6 6 3 6 9,
@@ -272,10 +272,10 @@
 }
 
 \showunit{
-	name={\dragon{} (\oneofakind{})},
-	QRSname={\dragon},
+	name={\dragon},
 	profile={< 6 5 1 6 6 6 3 5 9},
 	type=\monster{},
+	unitsize=SPECIAL-{\textbf{(\oneofakind)}},
 	basesize=50x100,
 	armour={\innatedefence{3}},
 	additional={%
@@ -405,7 +405,7 @@
 		\vspace*{-0.2cm}\specialrules{\tempspecialrules}
 	
 		\def\tempunitrules{\unitrule{\dancesofcenyrn}{\dancesofcenyrnrule}}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 	},
 }
 
@@ -588,7 +588,7 @@
 	armour={\mountsprotection{6}},
 	unitequipment={\equipmentdef{\poisonedthorn}{\poisonedthornrule}},
 	commandgroup={champion=60, musician=10, banner=10, bannerallowance=50},
-	wizardconclave={\whitemagiczero{} (\Pathof{} \whitemagic{}), \wildernessfour{} (\Pathof{} \wilderness{})},
+	wizardconclave={\whitemagicsignature{} (\Pathof{} \whitemagic{}), \wildernessspellfour{} (\Pathof{} \wilderness{})},
 }
 
 \showunit{

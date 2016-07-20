@@ -165,14 +165,13 @@
 		\def\tempspecialrules{\multiplewounds{2}{\infantry{}, \cavalry{}, \warbeast{}}, \lethalstrike{}, \notaleader{}, \magicalattacks{}}
 		\def\tempunitrules{\unitrule{\unlivingshield}{\unlivingshieldrule}}
 		
-		\vspace*{-0.2cm}\specialrules{\tempspecialrules}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{-0.1cm}\specialrules{\tempspecialrules}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 	},
 }
 
 \showunit{
 	name={\fellwraith},
-	cost=55,
 	profile={\fellwraith{}< 6 4 - 3 3 2 2 3 5,
 		     \banshee{}< 6 3 - 3 3 2 3 1 5
 	},
@@ -185,9 +184,10 @@
 	additional={%
 		\begin{center}\mustbecomeoneofthefollowingNOC{}\end{center}
 		\setlength{\columnseprule}{0.5pt}
+		\setlength{\columnsep}{1cm}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
 		\begin{multicols}{2}\raggedcolumns
-		\begin{center}\largerfontsize\antiquefont\fellwraith{} (\free{})\end{center}%
+		\begin{center}\largerfontsize\antiquefont\fellwraith{} (\pts{55})\end{center}%
 		
 		\def\tempspecialrules{\armourpiercing{6}}%
 		\specialrules{\tempspecialrules}
@@ -199,9 +199,9 @@
 
 		\def\tempmounts{\skeletalsteed{} \wordwith{} \lighttroops{}=20}%	
 		
-		\vspace*{0.1cm}\mounts{\tempmounts}\options{\tempoptions}	
+		\vspace*{0.2cm}\mounts{\tempmounts}\options{\tempoptions}	
 		\columnbreak
-		\begin{center}\largerfontsize\antiquefont\banshee{} (\pts{30})\end{center}
+		\begin{center}\largerfontsize\antiquefont\banshee{} (\pts{85})\end{center}
 
 		\def\tempspecialrules{\wailofwoe}%
 		\specialrules{\tempspecialrules}%
@@ -254,10 +254,10 @@
 }
 
 \showunit{
-	name={\zombiedragon{} (\oneofakind)},
-	QRSname={\zombiedragon{}},
+	name={\zombiedragon},
 	profile={< 6  4 - 6 6 6 2 5 4,},
 	type=\monster{},
+	unitsize=SPECIAL-{\textbf{(\oneofakind)}},
 	basesize=50x100,
 	commontype=\undeadcommonrules{},
 	commonspecialrules={\undead},
@@ -343,9 +343,12 @@
 		\def\tempunitrules{\unitrule{\unholydominion}{\unholydominionrule}}
 		
 		\vspace*{0.15cm}\specialrules{\tempspecialrules}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 	},
 }
+
+
+
 
 
 
@@ -413,7 +416,7 @@
 	},
 	commandgroup={champion=10, musician=10, banner=10},
 	additional={%
-		\refsymbol{} \strigoivanguardnote{}
+		\vspace*{0.1cm}\refsymbol{} \strigoivanguardnote{}
 	}
 }
 
@@ -541,7 +544,7 @@
 	specialrules={\frenzy{}, \fly{9}},
 	commandgroup={champion=10},
 	options={
-		\skirmishers{} \ifNmodelsorless{4}=\permodel{}<3,
+		\skirmisher{} \ifNmodelsorless{4}=\permodel{}<3,
 	}
 }
 
@@ -573,7 +576,7 @@
 	costpermodel=14,
 	commontype=\undeadcommonrules{},
 	commonspecialrules={\undead{}, \ashestoashes},
-	specialrules={\skirmishers{}, \fly{10}},
+	specialrules={\skirmisher{}, \fly{10}},
 }
 
 \showunit{
@@ -660,7 +663,7 @@
 		\def\tempunitrules{\unitrule{\unholydominion}{\unholydominionrule}}
 		
 		\vspace*{0.15cm}\specialrules{\tempspecialrules}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 	},
 }
 
@@ -686,9 +689,9 @@
 	costpermodel=20,
 	commontype=\undeadcommonrules{},
 	commonspecialrules={\undead{}, \ashestoashes},
-	specialrules={\ethereal{}, \lighttroops{}, \reaper{} \only{\wraithprofile}, \armourpiercing{6} \only{\wraithprofile}, \terror{}, \skirmishers},
+	specialrules={\ethereal{}, \lighttroops{}, \reaper{} \only{\wraithprofile}, \armourpiercing{6} \only{\wraithprofile}, \terror{}, \skirmisher},
 	weapons={\gw},
-	wizardconclave={\deathsignaturespell{} (\Pathof{} \death), \shadowssignaturespell{} (\Pathof{} \shadows)},
+	wizardconclave={\deathsignature{} (\Pathof{} \death), \shadowssignature{} (\Pathof{} \shadows)},
 	options={
 		\flamingattacks{} \only{\wraithprofile}=\permodel{}<2,
 		\ghoststeeds{}=\permodel{}<15,
@@ -721,7 +724,7 @@
 		\textbf{\bloodtie{\brotherhood}}\spacebeforecolon{}:\newline%
 		\vampireknightbloodtiesoption{}=\permodel{}<10,
 		}%
-		\vspace*{0.1cm}\options{\tempoptions}
+		\vspace*{0.2cm}\options{\tempoptions}
 	},
 }
 
@@ -790,7 +793,7 @@
 		}%
 				
 		\vspace*{-0.1cm}\specialrules{\tempspecialrules}
-		\vspace*{0.1cm}\unitrules{\tempunitrule}
+		\vspace*{0.2cm}\unitrules{\tempunitrule}
 		\soulsyphonchart
 	},
 }
@@ -824,7 +827,7 @@
 			\unitrule{\darktome}{\darktomerule}
 			\unitrule{\auraofundeath}{\auraofundeathrule}		
 		}%
-		\vspace*{0.1cm}\specialrules{\tempspecialrules}\newline%
+		\vspace*{0.2cm}\specialrules{\tempspecialrules}\newline%
 		\unitrules{\tempunitrule}
 	},
 }
@@ -842,7 +845,7 @@
 	specialrules={\chillingshriek{}, \regeneration{6}, \fly{8}},
 	additional={%
 		\def\tempunitrule{\unitrule{\chillingshriek}{\chillingshriekrule}}
-		\vspace*{0.1cm}\unitrules{\tempunitrule}
+		\vspace*{0.2cm}\unitrules{\tempunitrule}
 	},
 }
 

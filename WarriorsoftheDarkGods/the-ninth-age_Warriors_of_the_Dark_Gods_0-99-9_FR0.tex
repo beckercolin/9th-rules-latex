@@ -4,6 +4,19 @@
 \newcommand{\version}{0.99.9}
 \newcommand{\frenchversion}{2.0}
 \newcommand{\booklogo}{pics/logo_big_WDG.png}
+\newcommand{\tocfirstcolumn}{%
+\tocentry{specialrulestitle}{\labels@armyspecialrules}
+
+\tocentry{armourytitle}{\labels@armoury}
+
+\tocentry{giftstitle}{Dons des dieux sombres}
+
+\tocentry{magicalitemstitle}{\labels@magicalitems}
+
+\tocentry{lordtitle}{\labels@armylist}
+
+\tocentry{QRStitle}{\labels@quickrefsheet}
+}
 
 
 % Spells
@@ -227,7 +240,8 @@
 \newcommand{\onlyifanotherBCisthegeneral}{seulement si un autre \barbarianchief{} est Général}
 \newcommand{\maytakeoneofthefollowingrules}{Peut prendre l'une des règles suivantes}
 \newcommand{\samemarkasthecharacter}{\textnormal{Prend la} Marque \textnormal{du Personnage}}
-\newcommand{\mayexchangefastcavformountsprotection}{Remplacer la règle \fastcavalry{} par \mountsprotection{5}}
+\newcommand{\mayexchangefastcavformountsprotectionLONG}{Remplacer la règle \fastcavalry{} par \mountsprotection{5}}
+\newcommand{\mayexchangefastcavformountsprotection}{Remplacer la règle \fastcavalry{} par\newline\mountsprotection{5}}
 \newcommand{\mayreplacelancewithdaemonweapon}{Remplacer la \lance{} par\newline une \daemonweapon}
 \newcommand{\steed}{Monture}
 
@@ -275,7 +289,7 @@ Cette amélioration coûte \pts{20} par \wastelandchariot{} pris en choix d'Unit
 \newcommand{\hellishwhiprule}{%
 Arme de Tir. \range{6}, Force de l'utilisateur, \quicktofire{}.
 
-Toute unité qui subit au moins une touche de cette arme voit l'Initiative de ses figurines réduite à 1 pendant la Phase de Corps à Corps et gagne la règle \stupidity{}. Ces effets durent jusqu'au début de la prochaine Phase de Tir des \hellriders{}.
+\vspace*{5pt}Toute unité qui subit au moins une touche de cette arme voit l'Initiative de ses figurines réduite à 1 pendant la Phase de Corps à Corps et gagne la règle \stupidity{}. Ces effets durent jusqu'au début de la prochaine Phase de Tir des \hellriders{}.
 }
 
 \newcommand{\trollbelchrule}{%
@@ -287,7 +301,9 @@ La figurine dispose de la règle \ambush{}. Quand elle arrive sur le champ de ba
 }
 
 \newcommand{\ritesofbindingrule}{%
-Quand la figurine est déployée, son propriétaire doit nommer un Personnage de son armée comme étant son Maître. Tant que ce Maître est en vie, la figurine peut utiliser la Capacité de Combat et le Commandement du Maître plutôt que les siennes. Un Personnage ne peut être le Maître que d'une seule \bloodbeast{} et une \bloodbeast{} ne peut profiter de la règle \inspiringpresence{} du Général.
+Quand la figurine est déployée, son propriétaire doit nommer un Personnage de son armée comme étant son Maître. Tant que ce Maître est en vie, la figurine peut utiliser la Capacité de Combat et le Commandement du Maître plutôt que les siennes.
+
+\vspace*{5pt}Un Personnage ne peut être le Maître que d'une seule \bloodbeast{} et une \bloodbeast{} ne peut profiter de la règle \inspiringpresence{} du Général.
 }
 
 \newcommand{\hellscreamcannonrule}{%
@@ -334,6 +350,7 @@ Quand un Géant attaque au Corps à Corps, au lieu d'attaquer normalement, chois
 
 \newcommand{\giantattackstable}{%
 \setlength{\columnseprule}{0.5pt}
+\setlength{\columnsep}{1cm}
 \renewcommand{\columnseprulecolor}{\color{black!30}}
 \vspace*{-0.2cm}\begin{multicols}{2}
 	\noindent Si l'unité est de type \infantry{}, \warbeast{}, \cavalry{}, \swarm{} ou \warmachine{}  :	
@@ -543,7 +560,7 @@ Votre armée ne peut contenir au plus que deux figurines avec à la fois les rè
 
 
 
-\startarmynewsectionSP{\giftsofthedarkgods}
+\toctarget{giftstitle}{\startarmynewsectionSP{\giftsofthedarkgods}}
 
 \spaceaftersection{}
 
@@ -582,7 +599,7 @@ Si le porteur est un Sorcier, il doit générer ses sorts dans la Discipline \wi
 
 \pricelistitem{\wastehardenedskin}{30} Le porteur gagne la règle \innatedefence{6}, ou \innatedefence{5} si c'est une figurine d'\infantry{}. Ce Don ne peut pas être pris si le porteur monte une \manticore{}.
 
-\pricelistitem{\hellishgrace}{25} \textbf{\lust} et à pied uniquement.
+\pricelistitem{\hellishgrace}{25} \textbf{\dlust} et à pied uniquement.
 
 Si le porteur est une figurine d'\infantry{}, il gagne +2 en Mouvement. Sinon, il gagne la règle \swiftstride{}.
 
@@ -637,7 +654,7 @@ Si le porteur inflige au moins une blessure non sauvegardée avec une Attaque no
 
 \startpricelist
 
-\pricelistitem{\ninetailedstandard}{50} \textbf{\infantry} uniquement.
+\pricelistitem{\ninetailedstandard}{50} \infantry{} uniquement.
 
 Les unités alliées d'Infanterie sans la règle \skirmisher{} à moins de \distance{12} gagnent +1 en Mouvement.
 
@@ -676,8 +693,18 @@ Les Attaques de Corps à Corps de toutes les figurines de l'unité du porteur ga
 \quickrefsheettitle
 
 \input{../Layout/AB_qrs.tex}
+\bigskip
+\begin{center}
+\noindent{\antiquefont\Largefontsize\textbf{Armes de Tir des Guerriers des Dieux Sombres}}
+\medskip
 
-% armes de tir
+\rowcolors{1}{white}{black!10}
+\noindent\begin{tabular}{lcccccc}
+\textbf{Nom} & \textbf{Artillerie} & \textbf{Portée} & \textbf{\labels@S{}} & \textbf{\multipleshots{}} & \textbf{\multiplewounds{}} & \textbf{\armourpiercing{}} \tabularnewline
+\hellscreamcannon{} (1) & \catapult{} (\distance{3}) & \distance{12-60} & 4 [9] & - & [\ordnance{}] & 1 \tabularnewline
+\hellscreamcannon{} (2) & \catapult{} (\distance{3}) & \distance{6-24} & 3 & - & - & 1 \tabularnewline
+\end{tabular}
+\end{center}
 
 \restoregeometry
 

@@ -71,7 +71,7 @@
 				\pestilentpalanquin{}=15,
 			},
 		}
-		\mounts{\tempmounts}
+		\vspace*{0.2cm}\mounts{\tempmounts}
 	},
 }
 
@@ -130,6 +130,7 @@
 	specialrules={\gazeofthegods},			
 	additional={%
 		\vspace*{-0.1cm}\begin{center}\mustbecomeoneofthefollowingNOC{}\end{center}
+		\setlength{\columnsep}{1cm}
 		\setlength{\columnseprule}{0.5pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
 
@@ -294,12 +295,13 @@
 	},
 	additional={%
 		\def\tempunitrules{\unitrule{\inspirebarbarians}{\inspirebarbariansrule}}
-		\unitrules{\tempunitrules}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
 		
 		\begin{center}\maytakeoneofthefollowingrules{}\spacebeforecolon{}:\end{center}
 		\setlength{\columnseprule}{0.5pt}
+		\setlength{\columnsep}{1cm}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
-		\begin{multicols}{2}\raggedcolumns
+		\vspace*{-0.1cm}\begin{multicols}{2}\raggedcolumns
 		
 		\begin{center}\Largefontsize\antiquefont\osklanderjarl{} (\pts{40})
 		
@@ -340,7 +342,7 @@
 	specialrules={\fastcavalry},
 	armour={\mountsprotection{6}},
 	additional={%
-		\def\tempoptions{\mayexchangefastcavformountsprotection{}=10,}
+		\def\tempoptions{\mayexchangefastcavformountsprotectionLONG{}=10,}
 		\vspace*{0.15cm}\options{\tempoptions}
 	},
 }
@@ -613,6 +615,7 @@
 	additional={%
 		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
 		\setlength{\columnseprule}{0.5pt}
+		\setlength{\columnsep}{1cm}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
 		\vspace*{-0.2cm}\begin{multicols}{2}\raggedcolumns
 		
@@ -862,7 +865,7 @@
 	armour={\innatedefence{5}},	
 	additional={%
 		\def\tempunitequipment{\equipmentdef{\hellscreamcannon}{\hellscreamcannonrule}}
-		\vspace*{0.1cm}\unitequipment{\tempunitequipment}
+		\vspace*{0.2cm}\unitequipment{\tempunitequipment}
 	}
 }
 

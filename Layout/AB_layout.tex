@@ -920,9 +920,20 @@
 		}}
 		
 		\expandafter\ifblank\expandafter{\unit@allianceoptions}{}{\noindent\parbox{\columnwidth}{\expandafter\allianceoptions\expandafter{\unit@allianceoptions}}}
-		
-		\expandafter\ifblank\expandafter{\unit@greenhiderace}{}{\noindent\parbox{\columnwidth}{\greenhideraceentry{\unit@greenhiderace}}}
-		
+
+		\expandafter\ifblank\expandafter{\unit@greenhiderace}{}{\noindent\parbox{\columnwidth}{%
+		\expandafter\ifblank\expandafter{\unit@alliancepic}{
+		\greenhideraceentry{\unit@greenhiderace}
+		}{
+		\begin{minipage}[c][][b]{0.045\textwidth}%
+			\includegraphics[width=\textwidth]{pics/\unit@alliancepic.png}%
+		\end{minipage}%
+		\hspace*{0.15cm}\begin{minipage}[c]{0.40\textwidth}%
+			\greenhideraceentry{\unit@greenhiderace}%
+		\end{minipage}\vspace*{-0.1cm}%
+		}
+		}}
+
 		\expandafter\ifblank\expandafter{\unit@equipment}{}{\noindent\parbox{\columnwidth}{\equipment{\unit@equipment}}}
 				
 		\expandafter\ifblank\expandafter{\unit@weapons}{}{\noindent\parbox{\columnwidth}{\weapons{\unit@weapons}}}

@@ -2,8 +2,19 @@
 
 \newcommand{\booktitle}{Marée de Vermine}
 \newcommand{\version}{0.99.9}
-\newcommand{\frenchversion}{2.0}
+\newcommand{\frenchversion}{2.1}
 \newcommand{\booklogo}{pics/logo_big_VS.png}
+\newcommand{\tocfirstcolumn}{%
+\tocentry{specialrulestitle}{\labels@armyspecialrules}
+
+\tocentry{armourytitle}{\labels@armoury}
+
+\tocentry{magicalitemstitle}{\labels@magicalitems}
+
+\tocentry{lordtitle}{\labels@armylist}
+
+\tocentry{QRStitle}{\labels@quickrefsheet}
+}
 
 % Army special rules
 
@@ -17,7 +28,7 @@
 
 % Army common type special rules
 
-\newcommand{\vermincommonrules}{Règles spéciales des Vermines}
+\newcommand{\vermincommonrules}{Règles Spéciales des Vermines}
 
 % Armoury
 
@@ -34,14 +45,31 @@
 \newcommand{\darkshard}{Éclat Sombre}
 \newcommand{\darkshards}{Éclats Sombres}
 
+% Magical Items
+
+\newcommand{\thedoomblade}{Lame du Sombre Destin}
+\newcommand{\eyeofthestorm}{Œil de la Tempête}
+\newcommand{\bladeoftheswarm}{Lame de Multitude}
+
+\newcommand{\putridplate}{Armure Putride}
+\newcommand{\deceiversbuckler}{Rondache de Fourberie}
+
+\newcommand{\armletofpower}{Bracelet de Puissance}
+
+\newcommand{\sceptreofverminvalour}{Sceptre de Couardise}
+\newcommand{\scabbingpotion}{Potion Cicatrisante}
+
+\newcommand{\thelightningrod}{Paratonnerre}
+\newcommand{\iconofruin}{Icône de la Ruine}
+
 % Spells
 
 \newcommand{\ruinsignature}{Éclair Irradiant}
-\newcommand{\changetwo}{Bûcher Carmin}
-\newcommand{\alchemyone}{Glaives d'Argent}
-\newcommand{\diseasetwo}{Bénédiction Infecte}
-\newcommand{\diseasethree}{Excroissance Adipeuse}
-\newcommand{\ruintwo}{Faim Destructrice}
+\newcommand{\changespelltwo}{Bûcher Carmin}
+\newcommand{\alchemyspellone}{Glaives d'Argent}
+\newcommand{\diseasespelltwo}{Bénédiction Infecte}
+\newcommand{\diseasespellthree}{Excroissance Adipeuse}
+\newcommand{\ruinspelltwo}{Faim Destructrice}
 
 % Other rules
 
@@ -158,6 +186,7 @@
 \newcommand{\ifwizard}{Si Sorcier}
 \newcommand{\verminguardveteranstandardbearer}{Le \veteranstandardbearer{} d'une unité de \verminguard{} peut disposer d'une Bannière Magique d'une valeur maximale de \pts{50}.}
 \newcommand{\footpadsnote}{Une unité de \footpads{} avec la règle \skirmisher{} ne peut pas prendre de Musicien ni de Porte-Étendard.}
+\newcommand{\jezailsmodelnumbers}{\mincostfor{} \textbf{3} \labels@models{}. \maxunitsize{}\spacebeforecolon{}: \textbf{6} \labels@models{}.\hfill \additionalfigscost{} {\largefontsize\textbf{20} pts\permodel}\hspace*{0.1cm}}
 \newcommand{\musttakeasingleweapon}{\optionschoice{\textbf{Doit} prendre une et une seule arme :}}
 \newcommand{\musttakeoneartilleryweapon}{\textbf{Doit} choisir une \artilleryweapon{} :}
 
@@ -190,9 +219,9 @@ La figurine gagne +1 en Mouvement et la règle \swiftstride{}.
 \newcommand{\aetherturbinerule}{%
 Le porteur dispose de trois sorts :
 \begin{itemize}[label={-}]
-\item \boundspell{4} : \changetwo{} (Discipline \change{}).
+\item \boundspell{4} : \changespelltwo{} (Discipline \change{}).
 \item \boundspell{4} : \ruinsignature{} (Discipline \ruin{}). 
-\item \boundspell{4} : \alchemyone{} (Discipline \alchemy{}). Ce sort ne peut viser que l'unité du lanceur.
+\item \boundspell{4} : \alchemyspellone{} (Discipline \alchemy{}). Ce sort ne peut viser que l'unité du lanceur.
 \end{itemize}
 }
 
@@ -213,7 +242,7 @@ Vous devez choisir deux améliorations pour la figurine, qui doivent être inscr
 }
 
 \newcommand{\cauldronofblightrule}{%
-Le Sorcier ne génère pas ses sorts aléatoirement mais connaît toujours les trois sorts suivants : \diseasetwo{} (Discipline \disease{}), \diseasethree{} (Discipline \disease{}) et \ruintwo{} (Discipline \ruin{}).
+Le Sorcier ne génère pas ses sorts aléatoirement mais connaît toujours les trois sorts suivants : \diseasespelltwo{} (Discipline \disease{}), \diseasespellthree{} (Discipline \disease{}) et \ruinspelltwo{} (Discipline \ruin{}).
 
 Ces sorts ne peuvent pas être dupliqués dans l'armée.
 }
@@ -281,9 +310,9 @@ Vous devez choisir deux améliorations pour l'unité, qui doivent être inscrite
 \newcommand{\electricdischargerule}{%
 Arme de Tir. \range{18}, Force 1D6*2, \lightningattacks{}, \magicalattacks{}, \multiplewounds{1D3}{}, \reload{}, \multipleshots{3}.
 
-À chaque Phase de Tir alliée, la \dreadmill{} doit tirer sa \electricdischarge{}. Le \rakachittechnician{} peut essayer d'éviter le tir en passant un test de Commandement. La \dreadmill{} peut tirer même si elle est engagée au corps à corps, en fuite ou si elle s'est ralliée durant ce Tour de Joueur. Elle doit toujours choisir pour cible l'unité la plus proche d'elle, alliée ou ennemie. Si plusieurs unités sont à égale distance, vous choisissez laquelle est touchée. L'unité ciblée peut se situer en dehors de l'arc frontal et de la ligne de vue de la \dreadmill{}, et même être engagée au corps à corps. Les trois tirs sont réalisés l'un après l'autre. Déterminer quelle unité est ciblée avant chaque tir.
+\vspace*{5pt}À chaque Phase de Tir alliée, la \dreadmill{} doit tirer sa \electricdischarge{}. Le \rakachittechnician{} peut essayer d'éviter le tir en passant un test de Commandement. La \dreadmill{} peut tirer même si elle est engagée au corps à corps, en fuite ou si elle s'est ralliée durant ce Tour de Joueur. Elle doit toujours choisir pour cible l'unité la plus proche d'elle, alliée ou ennemie. Si plusieurs unités sont à égale distance, vous choisissez laquelle est touchée. L'unité ciblée peut se situer en dehors de l'arc frontal et de la ligne de vue de la \dreadmill{}, et même être engagée au corps à corps. Les trois tirs sont réalisés l'un après l'autre. Déterminer quelle unité est ciblée avant chaque tir.
 
-Les tirs de \electricdischarge{} touchent automatiquement. Un seul dé doit être lancé pour déterminer la Force des trois tirs. Si un \result{6} naturel est obtenu sur ce dé, la \dreadmill{} subit un Incident de Tir, sur la table de la règle \volatile{}. Toutefois, si l'incident survient alors que la \dreadmill{} est engagée au corps à corps, appliquez le résultat \textbf{Défaillance} au lieu de tirer au hasard.
+\vspace*{5pt}Les tirs de \electricdischarge{} touchent automatiquement. Un seul dé doit être lancé pour déterminer la Force des trois tirs. Si un \result{6} naturel est obtenu sur ce dé, la \dreadmill{} subit un Incident de Tir, sur la table de la règle \volatile{}. Toutefois, si l'incident survient alors que la \dreadmill{} est engagée au corps à corps, appliquez le résultat \textbf{Défaillance} au lieu de tirer au hasard.
 }
 
 \newcommand{\toxicretaliationrule}{%
@@ -298,7 +327,8 @@ Les tirs de \electricdischarge{} touchent automatiquement. Un seul dé doit êtr
 }
 
 \newcommand{\lightningcannonrule}{%
-\textbf{\artilleryweapon} de type \textbf{\cannon{} (\distance{1D6})}.
+\textbf{\artilleryweapon} de type\newline
+\textbf{\cannon{} (\distance{1D6})}.
 
 \range{60}, Force 1D6+4, \lightningattacks{}, \magicalattacks{}, \multiplewounds{\ordnance}{}, \armourpiercing{6}.
  La force de l'éclair correspondant au boulet de canon n'est pas divisée par deux après l'impact initial.
@@ -384,7 +414,7 @@ Quand la figurine subit un Incident de Tir, utilisez la table suivante plutôt q
 
 
 \newpage
-\renewcommand{\startarmyarmoury}{\bigtitle{\labels@armoury}\largefontsize}
+\renewcommand{\startarmyarmoury}{\toctarget{armourytitle}{\bigtitle{\labels@armoury}}\largefontsize}
 \startarmyarmoury
 
 \begin{multicols}{2}\raggedcolumns
@@ -395,22 +425,22 @@ Quand la figurine subit un Incident de Tir, utilisez la table suivante plutôt q
 
 \nopricelistitem{\sling} \range{18}, Force 3, \quicktofire{}.
 
-\nopricelistitem{\gasglobes} \range{12}, \magicalattacks{}, \armourpiercing{6}, \volleyfire{}, \quicktofire{}.\vspace{2pt}\newline
+\nopricelistitem{\gasglobes} \range{12}, \magicalattacks{}, \armourpiercing{6}, \volleyfire{}, \quicktofire{}.\vspace*{3pt}\newline
 Les touches faites avec cette arme blessent toujours sur 4+. Si un \result{1} naturel est obtenu sur le jet pour toucher, le porteur subit une touche avec la règle \toxicattacks{}.
 
-\nopricelistitem{\ratlockpistol} \range{12}, Force 5, \magicalattacks{}, \armourpiercing{1}, \quicktofire{}. \vspace{2pt}\newline
+\nopricelistitem{\ratlockpistol} \range{12}, Force 5, \magicalattacks{}, \armourpiercing{1}, \quicktofire{}.\vspace*{3pt}\newline
 Compte comme une \pw{} au corps à corps.
 
-\nopricelistitem{\jezail} \range{36}, Force 6, \magicalattacks{}, \unwieldy{}, \armourpiercing{1}.\vspace{2pt}\newline
+\nopricelistitem{\jezail} \range{36}, Force 6, \magicalattacks{}, \unwieldy{}, \armourpiercing{1}.\vspace*{3pt}\newline
 Ne subit jamais de pénalité pour toucher de Longue Portée. Si un \result{1} naturel est obtenu sur le jet pour toucher, le porteur subit une touche avec la règle \toxicattacks{}.
 
-\nopricelistitem{\rotarygun} \range{24}, Force 4, \magicalattacks{}, \volatile{}, \reload{}, \multipleshots{2D6x2} ou \multipleshots{3D6x2} au choix du joueur.\vspace{2pt}\newline
+\nopricelistitem{\rotarygun} \range{24}, Force 4, \magicalattacks{}, \volatile{}, \reload{}, \multipleshots{2D6x2} ou \multipleshots{3D6x2} au choix du joueur.\vspace*{3pt}\newline
 Cette arme ne subit jamais de pénalité pour toucher due aux \multipleshots{} ou à son mouvement. Si un double est obtenu sur le jet déterminant le nombre de touches, l'arme subit un Incident de Tir.
 
-\nopricelistitem{\globelauncher} \range{18}, \magicalattacks{}, \toxicattacks{}, \volatile{}, \reload{}, \volleyfire{}, \multipleshots{2D6x2}.\vspace{2pt}\newline
+\nopricelistitem{\globelauncher} \range{18}, \magicalattacks{}, \toxicattacks{}, \volatile{}, \reload{}, \volleyfire{}, \multipleshots{2D6x2}.\vspace*{3pt}\newline
 Cette arme ne subit jamais de pénalité pour toucher due aux \multipleshots{} ou à son mouvement. Si un double est obtenu sur le jet déterminant le nombre de touches, l'arme subit un Incident de Tir.
 
-\nopricelistitem{\naphthathrower} \range{12}, Force 5,  \flamingattacks{}, \magicalattacks{}, \multiplewounds{1D3}{}, \volatile{}, \reload{}, \multipleshots{2D6}.\vspace{2pt}\newline
+\nopricelistitem{\naphthathrower} \range{12}, Force 5,  \flamingattacks{}, \magicalattacks{}, \multiplewounds{1D3}{}, \volatile{}, \reload{}, \multipleshots{2D6}.\vspace*{3pt}\newline
 Cette arme ne subit jamais de pénalité pour toucher due aux \multipleshots{}, à son mouvement, à un Couvert ou encore à un tir sur des \skirmishers{}. Si un double est obtenu sur le jet déterminant le nombre de touches, l'arme subit un Incident de Tir.
 
 \endpricelist
@@ -457,13 +487,17 @@ Cette arme ne subit jamais de pénalité pour toucher due aux \multipleshots{}, 
 
 \startpricelist
 
-\pricelistitem{Lame du Sombre Destin}{100}Infanterie uniquement.
+\pricelistitem{\thedoomblade}{100}Infanterie uniquement.
 
-Type : \hw{}. Les attaques faites avec cette arme sont résolues avec une Force de 10 et les règles \divineattacks{} et \multiplewounds{1D6}{}. À la fin de chacun de vos Tours de Jeu, le porteur subit une touche avec la règle \toxicattacks{} qui compte comme une Attaque de Corps à Corps. Le porteur n'est pas forcé d'être le Général, même s'il est le Personnage possédant le plus haut Commandement.
+Type : \hw{}. Les attaques faites avec cette arme sont résolues avec une Force de 10 et les règles \divineattacks{} et \multiplewounds{1D6}{}.
 
-\pricelistitem{Lame de Multitude}{30/25}Type : \hw{}. Si l'unité du porteur a plus de Rangs Complets que chaque unité ennemie engagée contre elle, alors le porteur gagne +3 Attaques. Lorsque le porteur attaque une figurine du livre d'armée des Forteresses Naines, le porteur peut relancer ses jets pour blesser des attaques portées avec cette arme.
+À la fin de chacun de vos Tours de Jeu, le porteur subit une touche avec la règle \toxicattacks{} qui compte comme une Attaque de Corps à Corps. Le porteur n'est pas forcé d'être le Général, même s'il est le Personnage possédant le plus haut Commandement.
 
-\pricelistitem{Œil de la Tempête}{20}Type : \halberd{}. Lorsque le porteur lance le sort \ruinsignature{} (Discipline \ruin{}), ajoutez +2 au nombre de touches.
+\pricelistitem{\bladeoftheswarm}{30/25}Type : \hw{}. Si l'unité du porteur a plus de Rangs Complets que chaque unité ennemie engagée contre elle, alors le porteur gagne +3 Attaques.
+
+Lorsque le porteur attaque une figurine du livre d'armée des Forteresses Naines, le porteur peut relancer ses jets pour blesser des attaques portées avec cette arme.
+
+\pricelistitem{\eyeofthestorm}{20}Type : \halberd{}. Lorsque le porteur lance le sort \ruinsignature{} (Discipline \ruin{}), ajoutez +2 au nombre de touches.
 
 \endpricelist
 
@@ -471,9 +505,11 @@ Type : \hw{}. Les attaques faites avec cette arme sont résolues avec une Force 
 
 \startpricelist
 
-\pricelistitem{Armure Putride}{25}Type: \platearmour{}. À chaque fois que le porteur réussit une Sauvegarde d'Armure contre des Attaques de Corps à Corps pendant la Phase de Corps à Corps, l'unité qui a infligé cette blessure subit une touche avec la règle \toxicattacks{}.
+\pricelistitem{\putridplate}{25}Type: \platearmour{}. À chaque fois que le porteur réussit une Sauvegarde d'Armure contre des Attaques de Corps à Corps pendant la Phase de Corps à Corps, l'unité qui a infligé cette blessure subit une touche avec la règle \toxicattacks{}.
 
-\pricelistitem{Rondache de Fourberie}{25}Type: \shield{}. Lorsque le porteur utilise cet objet, il gagne la règle \distracting{}. De plus, au début de chaque Manche de Corps à Corps, vous pouvez désigner un élément d'une figurine ennemie en contact socle à socle avec le porteur. Pour la durée de cette manche, cet élément de la figurine subit un malus de -1 Attaque, jusqu'à un minimum de 1.
+\pricelistitem{\deceiversbuckler}{25}Type: \shield{}. Lorsque le porteur utilise cet objet, il gagne la règle \distracting{}.
+
+De plus, au début de chaque Manche de Corps à Corps, vous pouvez désigner un élément d'une figurine ennemie en contact socle à socle avec le porteur. Pour la durée de cette manche, cet élément de la figurine subit un malus de -1 Attaque, jusqu'à un minimum de 1.
 
 \endpricelist
 
@@ -481,7 +517,7 @@ Type : \hw{}. Les attaques faites avec cette arme sont résolues avec une Force 
 
 \startpricelist
 
-\pricelistitem{Bracelet de Puissance}{25} Le porteur gagne un \boundspell{3}.\newline
+\pricelistitem{\armletofpower}{25} Le porteur gagne un \boundspell{3}.\newline
 Type : Lanceur. Durée : Dure un Tour.\newline
 La cible double sa Force. Les montures ne sont pas affectées.
 
@@ -491,11 +527,11 @@ La cible double sa Force. Les montures ne sont pas affectées.
 
 \startpricelist
 
-\pricelistitem{Sceptre de Couardise}{35}Infanterie uniquement.
+\pricelistitem{\sceptreofverminvalour}{35}Infanterie uniquement.
 
 Le Personnage perd la règle \firstinrank{} et peut donc être placé dans n'importe quel rang.
 
-\pricelistitem{Potion Cicatrisante}{20/10}Ne peut être pris par une \largetarget{}.
+\pricelistitem{\scabbingpotion}{20/10}Ne peut être pris par une \largetarget{}.
 
 Une seule utilisation. Peut être activé au début de n'importe laquelle de vos phases. Le porteur récupère 1D3 Points de Vie.
 
@@ -505,9 +541,9 @@ Une seule utilisation. Peut être activé au début de n'importe laquelle de vos
 
 \startpricelist
 
-\pricelistitem{Paratonnerre}{50}Une seule utilisation. Vous pouvez l'activer au début d'un Tour de Joueur adverse. Pendant ce Tour de Joueur, toutes les unités alliées gagnent la règle \hardtarget{}. Les attaques de tir qui n'ont pas besoin de jet pour toucher basé sur la CT doivent lancer 1D6, et ne peuvent pas tirer sur un 4+. Aucun mouvement de Vol ne peut être effectué.
+\pricelistitem{\thelightningrod}{50}Une seule utilisation. Vous pouvez l'activer au début d'un Tour de Joueur adverse. Pendant ce Tour de Joueur, toutes les unités alliées gagnent la règle \hardtarget{}. Les attaques de tir qui n'ont pas besoin de jet pour toucher basé sur la CT doivent lancer 1D6, et ne peuvent pas tirer sur un 4+. Aucun mouvement de Vol ne peut être effectué.
 
-\pricelistitem{Icône de la Ruine}{25}Lorsqu'un adversaire tente de dissiper un sort de type Amélioration ou Universel de la Discipline \ruin{} ou \disease{} (sans considérer l'attribut) ciblant l'unité du porteur, il subit un malus de -2 sur son jet.
+\pricelistitem{\iconofruin}{25}Lorsqu'un adversaire tente de dissiper un sort de type Amélioration ou Universel de la Discipline \ruin{} ou \disease{} (sans considérer l'attribut) ciblant l'unité du porteur, il subit un malus de -2 sur son jet.
 
 \endpricelist
 

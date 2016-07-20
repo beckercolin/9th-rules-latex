@@ -28,7 +28,7 @@
 			\armour{\temparmour}
 
 			\def\tempoptions{\ha{}=12,}%
-			\vspace*{0.1cm}\options{\tempoptions}
+			\vspace*{0.2cm}\options{\tempoptions}
 
 			\def\tempmounts{\warboar{}=20,\orcboarchariot{}=30,\wyvern{}=105}%
 			\mounts{\tempmounts}
@@ -43,7 +43,7 @@
 			\armour{\temparmour}
 
 			\def\tempoptions{\platearmour{}=20,}%
-			\vspace*{0.1cm}\options{\tempoptions}
+			\vspace*{0.2cm}\options{\tempoptions}
 
 			\def\tempmounts{\warboar{}=20,\orcboarchariot{}=30,\wyvern{}=105}%
 			\mounts{\tempmounts}
@@ -219,7 +219,7 @@
 			\armour{\temparmour}
 
 			\def\tempoptions{\ha{}=5,}%
-			\vspace*{0.1cm}\options{\tempoptions}
+			\vspace*{0.2cm}\options{\tempoptions}
 
 			\def\tempmounts{\warboar{}=15,\orcboarchariot{}=60,\wyvern{} (\oneofakind)\refsymbol{}=135}%
 			\mounts{\tempmounts}
@@ -234,7 +234,7 @@
 			\armour{\temparmour}
 
 			\def\tempoptions{\platearmour{}=15,}%
-			\vspace*{0.1cm}\options{\tempoptions}
+			\vspace*{0.2cm}\options{\tempoptions}
 
 			\def\tempmounts{\warboar{}=15,\wyvern{} (\oneofakind)\refsymbol{}=140}%
 			\mounts{\tempmounts}
@@ -248,7 +248,7 @@
 
 		\vspace*{\fill}
 		\closeraceforking{}%
-		\refsymbol{} \wyvernnote{}
+		\vspace*{0.1cm}\refsymbol{} \wyvernnote{}
 	},
 }
 
@@ -367,7 +367,7 @@
 			\profilemodification{+1 \labelforinit{} \wordand{} -1 \labels@Ld{}}
 
 			\def\tempoptions{2 \powershrooms{}=20}
-			\options{\tempoptions}
+			\vspace*{0.1cm}\options{\tempoptions}
 
 		\vspace*{\fill}
 		\columnbreak
@@ -426,6 +426,7 @@
 	type=\chariot{},
 	basesize=50x100,
 	greenhiderace={\commongoblin{} \textnormal{\only{\goblin}}},
+	alliancepic={commongoblin},
 	weapons={\shortbow{},\lightlance{}},
 	armour={\la{},\mountsprotection{6}},
 	specialrules={\lighttroops{},\insignificant{},\impacthits{+1}},
@@ -442,6 +443,7 @@
 	type=\chariot{},
 	basesize=50x100,
 	greenhiderace={\commonorc{} \textnormal{\only{\eadbasherrider}}},
+	alliancepic={commonorc},
 	weapons={\lance},
 	armour={\la{},\mountsprotection{5}},
 	specialrules={\thunderouscharge{} \only{\warboar},\impacthits{+1}},
@@ -482,14 +484,16 @@
 
 \showunit{
 	notinQRS=yes,
-	name={\gargantula{} (\oneofakind{})},
+	name={\gargantula},
 	profile={
 		\spider{}< 7 4 - 5 6 8 4 8 -,
 		\forestgoblin{} (8)< - 2 3 3 - - 2 1 6,
 	},
 	type=\riddenmonster{},
+	unitsize=SPECIAL-{\textbf{(\oneofakind)}},
 	basesize=100x150,
 	greenhiderace={\forestgoblin{} \textnormal{\only{\goblins}}},
+	alliancepic={forestgoblin},
 	weapons={\shortbow{},\lightlance{} \only{\goblins}},
 	armour={\innatedefence{4}},
 	options={\spidermothershrineoption{}=40},
@@ -498,7 +502,7 @@
 		\def\tempunitrules{\unitrule{\spidermothershrine}{\spidermothershrinerule}}
 		
 		\specialrules{\tempspecialrules}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 	},
 }
 
@@ -534,7 +538,7 @@
 			\armour{\temparmour}%
 			
 			\def\tempoptions{\mayexchangeallequipmentforcrossbowandha{}=\permodel{}<4,}%
-			\vspace*{0.1cm}\options{\tempoptions}%
+			\vspace*{0.2cm}\options{\tempoptions}%
 
 		\vspace*{\fill}
 		\columnbreak
@@ -549,15 +553,16 @@
 }
 
 \showunit{
-	name={\orceadbashers{} (\oneofakind)},
-	QRSname={\orceadbasher{}},
+	name={\orceadbashers},
 	cost=70,
 	profile={< 4 4 3 4 4 1 2 1 7},
 	type=\infantry{},
 	basesize=25x25,
-	unitsize=10,
-	maxmodels=40,
-	costpermodel=9,
+	unitsize=SPECIAL-{%
+	\textbf{(\oneofakind)}
+	
+	\noindent\vspace{3pt}\hspace*{0.25cm}\eadbashersmodelnumbers
+	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
 	options={%
 		\shield{}=\permodel{}<1,
@@ -615,7 +620,7 @@
 				\shadygits{}\dotfill{}=\pershadygit{}<10,
 				\vspace{5pt}\shadygitlimitation{}
 			}%
-			\vspace*{0.1cm}\options{\tempoptions}
+			\vspace*{0.2cm}\options{\tempoptions}
 
 		\vspace*{\fill}		
 		\columnbreak
@@ -628,7 +633,7 @@
 				\madgits{}=\permadgit{}<20,
 				\vspace{5pt}\madgitlimitation{}
 			}%
-			\options{\tempoptions}
+			\vspace*{0.1cm}\options{\tempoptions}
 
 		\vspace*{\fill}
 		\columnbreak
@@ -660,6 +665,7 @@
 	basesize=20x20,
 	unitsize=SPECIAL-\gitnote{},
 	greenhiderace={\commongoblin},
+	alliancepic={commongoblin},
 	weapons={\pw},
 	armour={\la},
 	specialrules={\lethalstrike{},\sneaky{}},
@@ -667,7 +673,7 @@
 		\def\tempunitrules{%
 			\unitrule{\sneaky}{\sneakyrule}
 		}
-		\unitrules{\tempunitrules}		
+		\vspace*{0.2cm}\unitrules{\tempunitrules}		
 	},
 }
 
@@ -679,12 +685,13 @@
 	basesize=25,
 	unitsize=SPECIAL-\gitnote{},
 	greenhiderace={\cavegoblin},
+	alliancepic={cavegoblin},
 	specialrules={\shambolic{2D6},\runningamok{},\ricochet{1D6},\hardtarget{},\surprise{}},
 	additional={%
 		\def\tempunitrules{%
 			\unitrule{\surprise}{\surpriserule}
 		}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}		
+		\vspace*{0.3cm}\unitrules{\tempunitrules}		
 	},
 }
 
@@ -769,7 +776,7 @@
 			\armour{\temparmour}%
 			
 			\def\tempoptions{\lance{}=\permodel{}<2,}%
-			\vspace*{0.1cm}\options{\tempoptions}%
+			\vspace*{0.2cm}\options{\tempoptions}%
 
 		\vspace*{\fill}
 		\columnbreak
@@ -779,7 +786,7 @@
 			\armour{\temparmour}%
 			
 			\def\tempoptions{\pw{}=\permodel{}<2,}%
-			\vspace*{0.1cm}\options{\tempoptions}%
+			\vspace*{0.2cm}\options{\tempoptions}%
 			
 		\vspace*{\fill}
 		\closeraceforking{}%
@@ -804,6 +811,7 @@
 	maxmodels=35,
 	costpermodel=12,
 	greenhiderace={\ironorc},
+	alliancepic={ironorc},
 	weapons={\gw{},\pw{}},
 	armour={\ha{},\shield{}},
 	specialrules={\bodyguard{\ironorcwarlord{}, \ironorcchief{}}},
@@ -843,7 +851,7 @@
 				\lance{}=\permodel{}<3,
 				\ha{}=\permodel{}<3,
 			}%
-			\vspace*{0.1cm}\options{\tempoptions}%
+			\vspace*{0.2cm}\options{\tempoptions}%
 
 		\vspace*{\fill}
 		\columnbreak
@@ -853,7 +861,7 @@
 			\armour{\temparmour}%
 			
 			\def\tempoptions{\pw{}=\permodel{}<3,}%
-			\vspace*{0.1cm}\options{\tempoptions}%
+			\vspace*{0.2cm}\options{\tempoptions}%
 
 		\vspace*{\fill}
 		\closeraceforking{}%
@@ -873,6 +881,7 @@
 	basesize=50x100,
 	unitsize=1,
 	greenhiderace={\commonorc{} \textnormal{\only{\eadbasherrider}}},
+	alliancepic={commonorc},
 	weapons={\lance},
 	armour={\la{},\mountsprotection{5}},
 	specialrules={\thunderouscharge{} \only{\warboar},\impacthits{+1}},
@@ -896,6 +905,7 @@
 	maxmodels=4,
 	costpermodel=60,
 	greenhiderace={\commongoblin{} \textnormal{\only{\goblin}}},
+	alliancepic={commongoblin},
 	weapons={\shortbow{},\lightlance{}},
 	armour={\la{},\mountsprotection{6}},
 	specialrules={\lighttroops{},\insignificant{},\impacthits{+1}},
@@ -915,6 +925,7 @@
 	maxmodels=10,
 	costpermodel=10,
 	greenhiderace={\cavegoblin{} \textnormal{\only{\rider}}},
+	alliancepic={cavegoblin},
 	armour={\la{},\mountsprotection{6}},
 	additional={%
 		\def\tempspecialrules{\immunetopsychology{},\fly{6},\skirmishers{},\oiitbites{},\rowsofteeth{}}
@@ -922,8 +933,8 @@
 			\unitrule{\oiitbites}{\oiitbitesrule}
 			\unitrule{\rowsofteeth}{\rowsofteethrule}
 		}
-		\vspace*{0.2cm}\specialrules{\tempspecialrules}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{0.3cm}\specialrules{\tempspecialrules}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 	},
 }
 
@@ -944,7 +955,7 @@
 			\unitrule{\theyreeverywhere}{\theyreeverywhererule}
 		}
 		\vspace*{-0.3cm}\specialrules{\tempspecialrules}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 	},
 }
 
@@ -968,6 +979,7 @@
 		
 		\begin{center}\musttakeoneofthefollowingNOC{}\end{center}
 		\setlength{\columnseprule}{0.5pt}
+		\setlength{\columnsep}{1cm}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
 		\begin{multicols}{2}\raggedcolumns
 		
@@ -1032,7 +1044,7 @@
 		}
 		
 		\specialrules{\tempspecialrules}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 	},
 }
 
@@ -1081,7 +1093,7 @@
 		\setlength{\columnseprule}{0pt}
 		
 		\def\tempunitrules{\unitrule{\trollbelch}{\trollbelchrule}}
-		\unitrules{\tempunitrules}
+		\vspace*{0.1cm}\unitrules{\tempunitrules}
 	}
 }
 
@@ -1119,8 +1131,7 @@
 \rareunitstitle
 
 \showunit{
-	name={\skewerer{} (\zerotoXchoice{3})},
-	QRSname={\skewerer{}},
+	name={\skewerer},
 	cost={45},
 	profile={%
 		\machine{}< - - - - 7 3 - - -,
@@ -1128,7 +1139,7 @@
 	},
 	type=\warmachine{},
 	basesize=60,
-	unitsize=1,
+	unitsize=SPECIAL-{\textbf{(\zerotoXchoice{3})} \labels@Singlemodel},
 	specialrules={\insignificant},
 	weapons={\ballista},
 	unitequipment={%
@@ -1153,13 +1164,12 @@
 \newpage
 
 \showunit{
-	name={\greatgreenidol{} (\oneofakind{})},
-	QRSname={\greatgreenidol{}},
+	name={\greatgreenidol},
 	cost={215},
 	profile={< 6 2 - 6 8 6 2 3 8},
 	type=\monster{},
 	basesize=100x100,
-	unitsize=1,
+	unitsize=SPECIAL-{\textbf{(\oneofakind)} \labels@Singlemodel},
 	armour={\innatedefence{5}},
 	options={%
 		\bsb{}=50,
@@ -1188,6 +1198,7 @@
 	basesize=100x150,
 	unitsize=1,
 	greenhiderace={\forestgoblin{} \textnormal{\only{\goblins}}},
+	alliancepic={forestgoblin},
 	weapons={\shortbow{},\lightlance{} \only{\goblins}},
 	armour={\innatedefence{4}},
 	options={\weblauncher{}=30},
@@ -1196,6 +1207,6 @@
 		\def\tempunitequipment{\equipmentdef{\weblauncher{} \textnormal{\only{\spider}}}{\weblauncherrule}}
 		
 		\specialrules{\tempspecialrules}
-		\unitequipment{\tempunitequipment}
+		\vspace*{0.2cm}\unitequipment{\tempunitequipment}
 	},
 }

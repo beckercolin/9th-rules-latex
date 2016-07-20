@@ -6,13 +6,12 @@
 \lordstitle
 
 \showunit{
-	name={\vermindaemon{} (\oneofakind{})},
-	QRSname={\vermindaemon{}},
+	name={\vermindaemon},
 	cost=400,
 	profile={< 8 8 4 6 5 6 9 5 8},
 	type=\monster{},
 	basesize=75x50,
-	unitsize=1,
+	unitsize=SPECIAL-{\textbf{(\oneofakind)} \labels@Singlemodel},
 	magiclevel=1,
 	specialrules={\otherworldly{},\daemonicinstability{},\armourpiercing{6},\swiftstride{}}, 
 	magicpaths={NOPATH},
@@ -150,7 +149,7 @@
 			\unitrule{\professionalcourtesy}{\professionalcourtesyrule}
 			\unitrule{\masterofassassins}{\masterofassassinsrule}
 		}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 	},
 }
 
@@ -246,7 +245,7 @@
 	armour={\mountsprotection{5}},
 	additional={%
 		\def\tempunitrules{\unitrule{\herdingtheswarm}{\herdingtheswarmrule}}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 	},
 }
 
@@ -274,12 +273,12 @@
 }
 
 \showunit{
-	name={\plaguependulum{} (\oneofakind{})},
-	QRSname={\plaguependulum{}},
+	name={\plaguependulum},
 	profile={ \chariot{}< 5 - - 6 5 5 3 - -,
 			  		\plaguebrother{} (4)< - 3 3 3 - - 3 1 5,
 	},
 	type=\chariot{},
+	unitsize=SPECIAL-{\textbf{(\oneofakind)}},
 	basesize=60x100,
 	commontype=\vermincommonrules ,
 	commonspecialrules={\stateoftrance{\plaguebrotherhood}, \resistant{}},
@@ -293,17 +292,17 @@
 		\specialrules{\tempspecialrules}
 		
 		\def\tempunitrules{\unitrule{\cauldronofblight}{\cauldronofblightrule}}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 	},
 }
 
 \showunit{
-	name={\doombell{} (\oneofakind{})},
-	QRSname={\doombell{}},
+	name={\doombell},
 	profile={\chariot{}< 5 - - 5 5 5 - - -,
 			  		\verminhulk{} (1)< - 4 1 5 - - 4 4 6,
 	},
 	type=\chariot{},
+	unitsize=SPECIAL-{\textbf{(\oneofakind)}},
 	basesize=60x100,
 	commontype=\vermincommonrules{},
 	commonspecialrules={\stateoftrance{\ratsatarms{}, \verminguard{}}},
@@ -316,7 +315,7 @@
 			\unitrule{\abovethemasses}{\abovethemassesrule}
 			\unitrule{\soundingthebell}{\soundingthebellrule}
 		}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 	},
 }
 
@@ -437,7 +436,7 @@
 	commonspecialrules={\safetyinnumbers},
 	specialrules={\fightinextrarank{}, \swiftstride{}, \handlers{}},
 	additional={\def\tempunitrules{\unitrule{\handlers}{\handlersrule}}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 	},
 }
 
@@ -465,7 +464,7 @@
 	commonspecialrules={\safetyinnumbers},
 	specialrules={\insignificant{}, \swiftstride{}, \TINY{}},
 	additional={\def\tempunitrules{\unitrule{\TINY}{\tinyrule}}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 	},
 }
 
@@ -492,22 +491,24 @@
 		\vspace*{-0.2cm}\specialrules{\tempspecialrules}
 	
 		\def\tempunitrules{\unitrule{\tagalong}{\tagalongrule}}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 	
 		\noindent\refsymbol{} \meatgrinderweaponteamnote{}
 	},
 }
 
 \showunit{
-	name={\jezails{} (\zerotoXchoice{2})},
-	QRSname={\jezail{}},
+	name={\jezails},
+	QRSname={\jezail},
 	cost=60,
 	profile={< 5 3 3 3 3 2 4 2 5},
 	type=\infantry{},
 	basesize=25x50,
-	unitsize=3,
-	maxmodels=6,
-	costpermodel=20,
+	unitsize=SPECIAL-{%
+	\textbf{(\zerotoXchoice{2})}
+	
+	\noindent\vspace{3pt}\hspace*{0.25cm}\jezailsmodelnumbers
+	},
 	commontype=\vermincommonrules{},
 	commonspecialrules={\safetyinnumbers{}, \callous},
 	armour={\pavise},
@@ -620,7 +621,7 @@
 	armour={\platearmour},
 	additional={%
 		\def\tempunitrules{\unitrule{\thunderhulksRULE}{\thunderhulksRULErule}}
-		\vspace*{0.1cm}\unitrules{\tempunitrules}
+		\vspace*{0.2cm}\unitrules{\tempunitrules}
 	},
 }
 
@@ -641,11 +642,11 @@
 		\def\tempcommonspecialrules{\safetyinnumbers{}, \volatile}
 		\vspace*{0.3cm}\commonspecialrules{\vermincommonrules}{\tempcommonspecialrules}
 	
-		\def\tempspecialrules{\largetarget{}, \immunetopsychology{}, \grindingattacks{1D3}, \randommovement{3D6}, \randomattacks{2D6} \only{\millrats{}}, \impacthits{+1}}
+		\def\tempspecialrules{\largetarget{}, \immunetopsychology{}, \grindingattacks{1D3}, \randommovement{3D6}, \randomattacks{2D6} \only{\millrats}, \impacthits{+1}}
 		\vspace*{0.3cm}\specialrules{\tempspecialrules}
 		
 		\def\tempunitequipment{\equipmentdef{\electricdischarge}{\electricdischargerule}}
-		\vspace*{0.1cm}\unitequipment{\tempunitequipment}
+		\vspace*{0.2cm}\unitequipment{\tempunitequipment}
 	},
 }
 
@@ -677,6 +678,7 @@
 	unitsize=1,
 	additional={%
 		\begin{center}\musttakeoneartilleryweapon{}\end{center}
+		\setlength{\columnsep}{1cm}
 		\setlength{\columnseprule}{0.5pt}
 		\renewcommand{\columnseprulecolor}{\color{black!30}}
 		\vspace*{-0.2cm}\begin{multicols}{2}
@@ -722,6 +724,6 @@
 		\vspace*{0.2cm}\unitequipment{\tempunitequipment}
 		
 		\vspace*{\fill}		
-		\end{multicols}		
+		\end{multicols}
 	},
 }
