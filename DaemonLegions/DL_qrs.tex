@@ -2,7 +2,7 @@
 \renewcommand{\QRSprinttab}[1]{%
 	\global\booltrue{whiterow}%
 	\DTLforeach*[#1]%
-	{profiles}{\rowname=name, \rowtrooptype=trooptype, \rowcategory=category, \rowprofile=profile, \rowmulti=multipleprofile, \rowalliancepic=alliancepic}{%
+	{profiles}{\rowname=name, \rowtrooptype=trooptype, \rowcategory=category, \rowprofile=profile, \rowmulti=multipleprofile, \rowalliancepic=alliancepic, \rowhypertag=hypertag}{%
       		\QRSprintline{\rowname}{\rowcategory}{\rowprofile}{\rowmulti}%
 	}%
 }%

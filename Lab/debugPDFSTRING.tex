@@ -1,18 +1,4 @@
-\documentclass[12pt]{article}
-
-\usepackage[french]{babel}
-\usepackage{fontspec}
-\usepackage{xstring}
-\usepackage{hyperref}
-
-\makeatletter
-\def\delaccent[#1]#2{% #1=liste des substitutions
-    \begingroup
-    \expandarg\exploregroups\def\temp{#2}%
-    \delaccent@i#1\delaccent@i\delaccent@i
-    \expandafter\temp\endgroup}
-\def\delaccent@i#1#2{\ifx\delaccent@i#1\else\StrSubstitute\temp{\noexpand#1}{\noexpand#2}[\temp]\expandafter\delaccent@i\fi}
-\def\delallaccents#1{\delaccent[{À}{A}{É}{E}{È}{E}{Ê}{E}{à}{a}{é}{e}{è}{e}{ê}{e}{ï}{i}{ô}{o}{ù}{u}]{#1}}
+\input{../Layout/AB_Layout.tex}
 
 
 \begin{document}
@@ -35,22 +21,39 @@
 %\pdfstringdef{\PDFteststring}{\noaccentstring}
 %\teststring{} - \PDFteststring{}
 
-%\newcommand{\awaken}[1]{Sombre Réveil (#1)}
-%\newcommand{\zombies}{Zombies}
+\newcommand{\awaken}[1]{Sombre Réveil (#1)}
+\newcommand{\zombies}{Zombies}
 %\edef\teststring{\awaken{\zombies}}
 %\expandafter\delallaccents\expandafter{\teststring}
 
-\newcommand{\substitute}[3]{%
-  \protected@edef\sub@temp{#1}%
-  \saveexpandmode
-  \expandarg\StrSubstitute{\sub@temp}{#2}{#3}[#1]%
-  \restoreexpandmode
-}
+%\newcommand{\substitute}[3]{%
+%  \protected@edef\sub@temp{#1}%
+%  \saveexpandmode
+%  \expandarg\StrSubstitute{\sub@temp}{#2}{#3}[#1]%
+%  \restoreexpandmode
+%}
+%
+%\def\test{t\textbf{hHHHHHHHH}é}
+%\substitute\test{é}{e}
+%\test
+%
+%\pdfstringdef{\rololo}{\test}
+%\rololo
 
-\def\test{t\textbf{hHHHHHHHH}é}
-\substitute\test{é}{e}
-\test
+\newcommand{\macroname}[1]{\string#1}
 
-\pdfstringdef{\rololo}{\test}
-\rololo
+\macroname{\zombies}
+
+\macroname{\awaken}
+
+\newcommand{\toto}{\macroname{\zombies}}
+\toto
+
+\hypertarget{\toto}{TEST}
+
+\newpage
+\vspace*{10cm}
+
+\hyperlink{\textbackslash{}zombies}{ICI}
+
 \end{document}

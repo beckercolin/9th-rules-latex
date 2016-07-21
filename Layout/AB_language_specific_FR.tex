@@ -1,7 +1,14 @@
 
 \newcommand{\translationteam}{\item \og AEnoriel \fg \item \og Anglachel \fg \item \og Astadriel \fg \item \og Batcat \fg \item \og Bigfish \fg \item \og Eru \fg  \item \og Gandarin \fg \item \og Groumbahk \fg \item \og Iluvatar \fg \item \og Mammstein \fg \item \og Shlagrabak \fg \item et beaucoup d'autres ...}
 
+\hypersetup{
+	pdfauthor={Équipe de traduction française de T9A},
+	pdfsubject={Règles pour le jeu Batailles Fantastiques : Le 9e Âge},
+}
+
 %%% Commands %%%
+
+\ifdef{\isitanAB}{
 
 \newcommand{\addtosortedlist}[1]{%
 	\protected@edef\textarg{#1}%
@@ -29,6 +36,8 @@
 	#1~\labels@points}}}%
 }
 
+}{}
+
 % Dark gods
 \newcommand{\dchange}{Changement}
 \newcommand{\dlust}{Luxure}
@@ -36,7 +45,11 @@
 \newcommand{\wrath}{Courroux}
 \newcommand{\truechaos}{Chaos Intégral}
 
+
 % Nothing to edit here
+
+\ifdef{\isitanAB}{
+
 \newcommand{\alliancepts}[1]{
 \ifsubstring{#1}{\free}{%
 		\free{}%
@@ -131,6 +144,8 @@
 	}
 }
 
+}{}
+
 
 %%% Labels %%%
 
@@ -176,7 +191,7 @@
 \newcommand{\labels@armour}{Armure}
 \newcommand{\labels@options}{Options}
 \newcommand{\labels@commandgroup}{État-Major}
-\newcommand{\labels@charactermounts}{Montures de Personnages}
+\newcommand{\labels@charactermounts}{Montures de personnages}
 \newcommand{\labels@mounts}{Montures}
 \newcommand{\labels@mount}{Monture}
 \newcommand{\labels@specialequipment}{Équipement Spécial}
@@ -362,43 +377,7 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 
 %%% Magic %%%
 
-\newnamemacro{\Pathof}{Discipline}
-
-\newcommand{\battle}{Commune}
-\newcommand{\alchemy}{de l'Alchimie}
-\newcommand{\death}{de la Mort}
-\newcommand{\fire}{du Feu}
-\newcommand{\heavens}{des Cieux}
-\newcommand{\light}{de la Lumière}
-\newcommand{\nature}{de la Nature}
-\newcommand{\shadows}{des Ombres}
-\newcommand{\wilderness}{de la Sauvagerie Bestiale}
-\newcommand{\butchery}{de la Boucherie}
-\newcommand{\change}{du Changement}
-\newcommand{\thebiggreengods}{des Grands Dieux Verts}
-\newcommand{\thelittlegreengods}{des Petits Dieux Verts}
-\newcommand{\blackmagic}{de la Magie Noire}
-\newcommand{\disease}{de la Maladie}
-\newcommand{\lust}{de la Luxure}
-\newcommand{\necromancy}{de la Nécromancie}
-\newcommand{\ruin}{de la Ruine}
-\newcommand{\forge}{de la Forge}
-\newcommand{\sands}{des Sables}
-\newcommand{\whitemagic}{de la Magie Blanche}
-\newcommand{\eightpaths}{des Huit Vents}
-
-\newcommand{\anyofthebattlemagic}{dans n'importe laquelle des Disciplines Communes}
-\newcommand{\ONLYanyofthebattlemagic}{Commune de votre choix}
-
-\newcommand{\magiclevel}[1]{\ifnumcomp{#1}{<}{3}{Sorcier Apprenti}{Maître Sorcier} Niveau #1}
-\newcommand{\Level}{Niveau}
-
-\newcommand{\wizard}{Sorcier}
-\newcommand{\wizards}{Sorciers}
-
-\newcommand{\boundspell}[1]{Objet de Sort\ifblank{#1}{}{, Puissance #1}}
-\newcommand{\boundspells}[1]{Objets de Sort\ifblank{#1}{}{, Puissance #1}}
-
+\input{../Layout/Paths_language_specific_FR.tex}
 
 %%% Other rules %%%
 

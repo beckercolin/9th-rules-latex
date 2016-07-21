@@ -29,11 +29,11 @@
 	\DTLifeq*{\rowcategory}{\labels@mounts}{\antiquefont\bfseries \labels@mountsInitial}{}%
 	&%
 	\ifnumequal{\rowmulti}{1}{%no Multiprofile
-		\rowname%
+		\expandafter\hyperlink\expandafter{\rowhypertag}{\rowname}%
 		\expandafter\parselist\expandafter{\rowprofile}{\locallists@profileslist}%
 		\forlistloop{\QRSmonoprofile}{\locallists@profileslist}%
 	}{% Multiprofile
-		\rowname &&&&&&&&&%
+		\expandafter\hyperlink\expandafter{\rowhypertag}{\rowname} &&&&&&&&&%
 		\expandafter\parselist\expandafter{\rowprofile}{\locallists@profileslist}%
 		\forlistloop{\QRSmultiprofile}{\locallists@profileslist}%
 	}%
@@ -54,7 +54,7 @@
 \newcommand{\QRSprinttab}[1]{%
 	\global\booltrue{whiterow}%
 	\DTLforeach*[#1]%
-	{profiles}{\rowname=name, \rowtrooptype=trooptype, \rowcategory=category, \rowprofile=profile, \rowmulti=multipleprofile}{%
+	{profiles}{\rowname=name, \rowtrooptype=trooptype, \rowcategory=category, \rowprofile=profile, \rowmulti=multipleprofile, \rowhypertag=hypertag}{%
       		\QRSprintline{\rowname}{\rowcategory}{\rowprofile}{\rowmulti}%
 	}%
 }%

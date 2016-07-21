@@ -1,0 +1,227 @@
+
+% General
+
+\newcommand{\Pathof}{Discipline}
+
+\newcommand{\battle}{Commune}
+
+\newcommand{\anyofthebattlemagic}{dans n'importe laquelle des Disciplines Communes}
+\newcommand{\ONLYanyofthebattlemagic}{Commune de votre choix}
+
+\newcommand{\magiclevel}[1]{\ifnumcomp{#1}{<}{3}{Sorcier Apprenti}{Maître Sorcier} Niveau #1}
+\newcommand{\Level}{Niveau}
+
+\newcommand{\wizard}{Sorcier}
+\newcommand{\wizards}{Sorciers}
+
+\newcommand{\boundspell}[1]{Objet de Sort\ifblank{#1}{}{, Puissance #1}}
+\newcommand{\boundspells}[1]{Objets de Sort\ifblank{#1}{}{, Puissance #1}}
+
+
+% Battle Magic
+
+\newcommand{\alchemy}{de l'Alchimie}
+\newcommand{\alchemyattribute}{Édit de Fer}
+\newcommand{\alchemysignature}{Métal Fondu}
+\newcommand{\alchemyspellone}{Lames Enchantées}
+\newcommand{\alchemyspelltwo}{Corrosion Galopante}
+\newcommand{\alchemyspellthree}{Manteau de Vif-Argent}
+\newcommand{\alchemyspellfour}{Pieu d'Argent}
+\newcommand{\alchemyspellfive}{Fléau de l'Acier Forgé}
+\newcommand{\alchemyspellsix}{Transmutation en Or}
+
+\newcommand{\death}{de la Mort}
+\newcommand{\deathattribute}{Nuage de Désespoir}
+\newcommand{\deathsignature}{Le Baiser de la Faucheuse}
+\newcommand{\deathspellone}{Malédiction du Mortel}
+\newcommand{\deathspelltwo}{Esprits Dévorants}
+\newcommand{\deathspellthree}{Sangsue Psychique}
+\newcommand{\deathspellfour}{Moisson d’Âmes}
+\newcommand{\deathspellfive}{L’Abîme aussi te Regarde...}
+\newcommand{\deathspellsix}{Maelström d’Âmes}
+
+\newcommand{\fire}{du Feu}
+\newcommand{\fireattribute}{Feu Déchaîné}
+\newcommand{\firesignature}{Boule de Feu}
+\newcommand{\firespellone}{Cascade Ardente}
+\newcommand{\firespelltwo}{Épées Flamboyantes}
+\newcommand{\firespellthree}{Jet de Flammes}
+\newcommand{\firespellfour}{Traits Enflammés}
+\newcommand{\firespellfive}{Remparts Incandescents}
+\newcommand{\firespellsix}{Souffler sur les Braises}
+
+\newcommand{\heavens}{des Cieux}
+\newcommand{\heavensattribute}{Second Sceau}
+\newcommand{\heavenssignature}{Aquilon}
+\newcommand{\heavensspellone}{Bourrasque}
+\newcommand{\heavensspelltwo}{Choc Foudroyant}
+\newcommand{\heavensspellthree}{Conjonction Astrale}
+\newcommand{\heavensspellfour}{Fléau du Ponant}
+\newcommand{\heavensspellfive}{Déluge d'Éclairs}
+\newcommand{\heavensspellsix}{Appel de la Comète}
+
+\newcommand{\light}{de la Lumière}
+\newcommand{\lightattribute}{Lumière Gardienne}
+\newcommand{\lightsignature}{Éclat Brûlant}
+\newcommand{\lightspellone}{Bouclier Protecteur}
+\newcommand{\lightspelltwo}{Étincelle de Courage}
+\newcommand{\lightspellthree}{Vitesse Fulgurante}
+\newcommand{\lightspellfour}{Toile Scintillante}
+\newcommand{\lightspellfive}{Distorsion Temporelle}
+\newcommand{\lightspellsix}{Bannissement Divin}
+
+\newcommand{\nature}{de la Nature}
+\newcommand{\natureattribute}{Souffle de Vie}
+\newcommand{\naturesignature}{Eaux Vivifiantes}
+\newcommand{\naturespellone}{Maître de la Terre}
+\newcommand{\naturespelltwo}{Le Trône de Chêne}
+\newcommand{\naturespellthree}{Esprits des Bois}
+\newcommand{\naturespellfour}{Croissance Estivale}
+\newcommand{\naturespellfive}{Peau Rocailleuse}
+\newcommand{\naturespellsix}{Créatures Souterraines}
+
+\newcommand{\shadows}{des Ombres}
+\newcommand{\shadowsattribute}{Course Parmi les Ombres}
+\newcommand{\shadowssignature}{Miasmes Obscurs}
+\newcommand{\shadowsspellone}{Orbe de Noirceur}
+\newcommand{\shadowsspelltwo}{Parti en Fumée}
+\newcommand{\shadowsspellthree}{Expérience de Mort Imminente}
+\newcommand{\shadowsspellfour}{Chariot des Brumes}
+\newcommand{\shadowsspellfive}{Ombres Dévorantes}
+\newcommand{\shadowsspellsix}{Scalpel Psychique}
+
+\newcommand{\wilderness}{de la Sauvagerie}
+\newcommand{\wildernessattribute}{La Chasse Sauvage}
+\newcommand{\wildernesssignature}{La Bête qui Sommeille}
+\newcommand{\wildernessspellone}{Essaim d’Insectes}
+\newcommand{\wildernessspelltwo}{Rage Intérieure}
+\newcommand{\wildernessspellthree}{Pieu de Rougebois}
+\newcommand{\wildernessspellfour}{Calamité des Bois Sauvages}
+\newcommand{\wildernessspellfive}{Tempête Furieuse}
+\newcommand{\wildernessspellsix}{Métamorphose Monstrueuse}
+
+\newcommand{\eightpaths}{Octuple}
+
+
+
+% Army Specific Magic
+
+\newcommand{\butchery}{de la Boucherie}
+\newcommand{\butcheryattribute}{Sang de Kholag}
+\newcommand{\butcherysignature}{Briseur de Dents}
+\newcommand{\butcheryspellone}{Buveur de Moelle}
+\newcommand{\butcheryspelltwo}{Festin de Tripaille}
+\newcommand{\butcheryspellthree}{Concasseur d’Os}
+\newcommand{\butcheryspellfour}{Lapeur de Cervelle}
+\newcommand{\butcheryspellfive}{Cœur de Troll}
+\newcommand{\butcheryspellsix}{Gosier de Géant}
+
+\newcommand{\change}{du Changement}
+\newcommand{\changeattribute}{Vent du Changement}
+\newcommand{\changesignature}{Feu Azur}
+\newcommand{\changespellone}{Feu Carmin}
+\newcommand{\changespelltwo}{Vague du Changement}
+\newcommand{\changespellthree}{Secrets Volés}
+\newcommand{\changespellfour}{Règne de la Confusion}
+\newcommand{\changespellfive}{Traîtrise}
+\newcommand{\changespellsix}{Portail Éternel}
+
+\newcommand{\thebiggreengods}{des Grands Dieux Verts}
+\newcommand{\thebiggreengodsattribute}{Chopez-les !}
+\newcommand{\thebiggreengodssignature}{L'Heure de la Raclée}
+\newcommand{\thebiggreengodsspellone}{Coup de Boule}
+\newcommand{\thebiggreengodsspelltwo}{Poings Bastonneurs}
+\newcommand{\thebiggreengodsspellthree}{Même Pas Mal !}
+\newcommand{\thebiggreengodsspellfour}{Grande Main Verte}
+\newcommand{\thebiggreengodsspellfive}{Boum !}
+\newcommand{\thebiggreengodsspellsix}{Le Gros Piétineur}
+
+\newcommand{\thelittlegreengods}{des Petits Dieux Verts}
+\newcommand{\thelittlegreengodsattribute}{Fourbe Larcin}
+\newcommand{\thelittlegreengodssignature}{Œil Mauvais}
+\newcommand{\thelittlegreengodsspellone}{Taillades Sournoises}
+\newcommand{\thelittlegreengodsspelltwo}{Bénédiction de la Mère-Araignée}
+\newcommand{\thelittlegreengodsspellthree}{Ça Démange ?}
+\newcommand{\thelittlegreengodsspellfour}{Chut ! Pas un Bruit...}
+\newcommand{\thelittlegreengodsspellfive}{J’vous Arrange Ça}
+\newcommand{\thelittlegreengodsspellsix}{Malédiction de la Lune Verte}
+
+\newcommand{\blackmagic}{de la Magie Noire}
+\newcommand{\blackmagicattribute}{Soif d’Âmes}
+\newcommand{\blackmagicsignature}{Furie de Moraec}
+\newcommand{\blackmagicspellone}{Rafale Glaciale}
+\newcommand{\blackmagicspelltwo}{Tourbillon de Lames}
+\newcommand{\blackmagicspellthree}{Paralysie Létale}
+\newcommand{\blackmagicspellfour}{Marque de la Peur}
+\newcommand{\blackmagicspellfive}{Trait d’Énergie Noire}
+\newcommand{\blackmagicspellsix}{Terreur Noire}
+
+\newcommand{\disease}{de la Maladie}
+\newcommand{\diseaseattribute}{Bénédiction Nécrotique}
+\newcommand{\diseasesignature}{Miasmes de Pestilence}
+\newcommand{\diseasespellone}{Haleine Corruptrice}
+\newcommand{\diseasespelltwo}{Toucher Putréfiant}
+\newcommand{\diseasespellthree}{Excroissance Adipeuse}
+\newcommand{\diseasespellfour}{Purge Parasitaire}
+\newcommand{\diseasespellfive}{Malédiction du Lépreux}
+\newcommand{\diseasespellsix}{Tourbillon Fétide}
+
+\newcommand{\lust}{de la Luxure}
+\newcommand{\lustattribute}{Masochisme}
+\newcommand{\lustsignature}{Flagellation Démoniaque}
+\newcommand{\lustspellone}{Grâce Hypnotique}
+\newcommand{\lustspelltwo}{Valse Irrésistible}
+\newcommand{\lustspellthree}{Hystérie}
+\newcommand{\lustspellfour}{Fantasmagorie}
+\newcommand{\lustspellfive}{Échardes Psychiques}
+\newcommand{\lustspellsix}{Chœur Dissonant}
+
+\newcommand{\necromancy}{de la Nécromancie}
+\newcommand{\necromancyattribute}{Tromper la Faucheuse}
+\newcommand{\necromancysignature}{Adjuration des Morts}
+\newcommand{\necromancyspellone}{Parodie de Vie}
+\newcommand{\necromancyspelltwo}{Convocation Profanatoire}
+\newcommand{\necromancyspellthree}{Sarabande Macabre}
+\newcommand{\necromancyspellfour}{Regard de Setesh}
+\newcommand{\necromancyspellfive}{Dérober la Jeunesse}
+\newcommand{\necromancyspellsix}{Malédiction des Morts}
+
+\newcommand{\ruin}{de la Ruine}
+\newcommand{\ruinattribute}{Masses Infinies}
+\newcommand{\ruinsignature}{Éclair Noir}
+\newcommand{\ruinspellone}{Nourrissons-les...}
+\newcommand{\ruinspelltwo}{Souiller le Sol}
+\newcommand{\ruinspellthree}{La Faim}
+\newcommand{\ruinspellfour}{Appel de la Tempête}
+\newcommand{\ruinspellfive}{Rupture Sismique}
+\newcommand{\ruinspellsix}{Pour Qui Sonne le Glas}
+
+\newcommand{\forge}{de la Forge}
+\newcommand{\forgeattribute}{Fournaise Haineuse}
+\newcommand{\forgesignature}{Bouclier de Sombrefeu}
+\newcommand{\forgespellone}{Rage Incendiaire}
+\newcommand{\forgespelltwo}{Subjugation}
+\newcommand{\forgespellthree}{Souffle de Haine}
+\newcommand{\forgespellfour}{Anathème de Noirceur}
+\newcommand{\forgespellfive}{Cendres Asphyxiantes}
+\newcommand{\forgespellsix}{Flammes de la Forge}
+
+\newcommand{\sands}{des Sables}
+\newcommand{\sandsattribute}{Les Morts sans Repos}
+\newcommand{\sandssignature}{Sirocco}
+\newcommand{\sandsspellone}{Lames Maudites}
+\newcommand{\sandsspelltwo}{Dessiccation Mortelle}
+\newcommand{\sandsspellthree}{Frappes Vengeresses}
+\newcommand{\sandsspellfour}{Jugement Divin}
+\newcommand{\sandsspellfive}{Sables Mouvants}
+\newcommand{\sandsspellsix}{Écho des Gloires Passées}
+
+\newcommand{\whitemagic}{de la Magie Blanche}
+\newcommand{\whitemagicattribute}{Bouclier des Anciens}
+\newcommand{\whitemagicsignature}{Traits de Lumière}
+\newcommand{\whitemagicspellone}{Résurrection du Phœnix}
+\newcommand{\whitemagicspelltwo}{Volonté Inspirante}
+\newcommand{\whitemagicspellthree}{Sentier Secret}
+\newcommand{\whitemagicspellfour}{Bénédiction d’Amhar}
+\newcommand{\whitemagicspellfive}{Fusion d’Artefact}
+\newcommand{\whitemagicspellsix}{Cataclysme}

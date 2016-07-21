@@ -47,7 +47,7 @@
 \usepackage{keyval}             % Used to create maps of commands/labels/objects.
 	\makeatletter                  % Mandatory for the usage of keyval.
 \usepackage{xstring}            % String parsing, cutting, etc.
-\usepackage[hidelinks]{hyperref} % Links in PDF.
+\usepackage[hidelinks, bookmarks=false, pdfdisplaydoctitle=true, pdfstartview=FitH, pdfpagelabels=false]{hyperref} % Links in PDF.
 
 
 %%% Update of the dotfill command to always get dots
@@ -61,6 +61,7 @@
 
 %%% Language specific stuff
 
+\def\isitanAB{Yesofcourse}
 \input{../Layout/AB_language_specific_FR.tex}
 
 %%% Commands to handle strings, better than xstring to handle commands inside the strings %%%
@@ -103,6 +104,9 @@
 
 \def\removespaces#1{\zap@space#1 \@empty}
 
+\newcommand{\MacroName}[1]{\StrGobbleLeft{\string#1}{1}}
+\newcommand{\macroname}[1]{\string#1}
+
 %%% Commands for alphabetical ordering %%%
 
 \newcommand{\sortitem}[2][\relax]{%
@@ -134,6 +138,7 @@
 \newcommand{\profilecategory}{\labels@lords} % Will be updated in relevant categories
 
 \newcommand{\profiledtbfillname}[1]{\DTLnewdbentry{profiles}{name}{#1}}
+\newcommand{\profiledtbfillhypertag}[1]{\DTLnewdbentry{profiles}{hypertag}{#1}}
 \newcommand{\profiledtbfillcategory}[1]{\DTLnewdbentry{profiles}{category}{#1}}
 \newcommand{\profiledtbfilltrooptype}[1]{\DTLnewdbentry{profiles}{trooptype}{#1}}
 \newcommand{\profiledtbfillinvocation}[1]{\DTLnewdbentry{profiles}{invocation}{#1}}
@@ -208,6 +213,7 @@
 \fancyfoot[R]{\textcolor{black!30}{%
 \hyperlink{lordtitle}{\labels@lordsInitial}\hspace*{0.4cm}
 \hyperlink{herotitle}{\labels@heroesInitial}\hspace*{0.4cm}
+\ifdef{\tocmounts}{\hyperlink{mountstitle}{\labels@mountsInitial}\hspace*{0.4cm}}{}
 \hyperlink{coretitle}{\labels@coreunitsInitial}\hspace*{0.4cm}
 \hyperlink{specialtitle}{\labels@specialunitsInitial}\hspace*{0.4cm}
 \hyperlink{raretitle}{\labels@rareunitsInitial}\hspace*{0.4cm}
@@ -815,7 +821,7 @@
 					};
 				}%
 				\node[unittitle,xshift=0.5cm] at (P-|O)%
-					{\Largefontsize\antiquefont\uppercase\expandafter\expandafter\expandafter{\unit@name}};
+					{\hypertarget{\unithypertag}{\Largefontsize\antiquefont\uppercase\expandafter\expandafter\expandafter{\unit@name}}};
 				\node[unitlogo, xshift=8.1cm, yshift=0.1cm] at (P-|O)%
 					{\includegraphics[width=1.2cm]{\logolocalpath}};
 		}
@@ -860,6 +866,7 @@
 
 \newcommand{\showunit}[1]{
 	\defunit{#1}
+	\def\unithypertag{\expandafter\macroname\expandafter{\unit@name}}
 	\begin{unitframe}[\unit@name]{\unit@cost}
 	\mdfsetup{style=defaultoptions}
 	\expandafter\ifblank\expandafter{\unit@unitsize}{}{%
@@ -967,6 +974,8 @@
 	}{%
 		\expandafter\profiledtbfillname\expandafter{\unit@QRSname}%
 	}
+	\edef\temphypertag{\unithypertag}
+	\expandafter\profiledtbfillhypertag\expandafter{\temphypertag}%
 	\expandafter\profiledtbfillcategory\expandafter{\profilecategory}%
 	\expandafter\profiledtbfilltrooptype\expandafter{\unit@type}%
 	\expandafter\ifblank\expandafter{\unit@invocation}{}{\expandafter\profiledtbfillinvocation\expandafter{\unit@invocation}}%
