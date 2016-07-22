@@ -1,0 +1,476 @@
+\input{../Layout/Paths_layout.tex}
+
+\newcommand{\booktitle}{Livre de Magie}
+\newcommand{\version}{0.99.9}
+\newcommand{\frenchversion}{2.0}
+
+\hypersetup{pdftitle={T9A - \booktitle}}
+
+% Document Titles
+
+\newcommand{\whatisFBTNA}{BF : Le 9\ieme Âge, qu'est-ce que c'est ?}
+\newcommand{\howtousethisdoc}{Comment utiliser ce livre ?}
+\newcommand{\magicphasesummary}{Résumé de la Phase de Magie}
+
+% Table Titles
+
+\newcommand{\spellsName}{Nom}
+\newcommand{\spellsCastingValue}{Lancement}
+\newcommand{\spellsType}{Type}
+\newcommand{\spellsDuration}{Durée}
+\newcommand{\spellsEffect}{Effet}
+
+% Paths TOC
+
+\newcommand{\alchemyTOC}{Alchimie}
+\newcommand{\deathTOC}{Mort}
+\newcommand{\fireTOC}{Feu}
+\newcommand{\heavensTOC}{Cieux}
+\newcommand{\lightTOC}{Lumière}
+\newcommand{\natureTOC}{Nature}
+\newcommand{\shadowsTOC}{Ombres}
+\newcommand{\wildernessTOC}{Sauvagerie}
+
+\newcommand{\eightfoldpathTOC}{Octuple}
+
+\newcommand{\whitemagicTOC}{Magie Blanche}
+\newcommand{\blackmagicTOC}{Magie Noire}
+\newcommand{\necromancyTOC}{Nécromancie}
+\newcommand{\sandsTOC}{Sables}
+\newcommand{\forgeTOC}{Forge}
+\newcommand{\biggreengodsTOC}{Grands Dieux Verts}
+\newcommand{\littlegreengodsTOC}{Petits Dieux Verts}
+\newcommand{\butcheryTOC}{Boucherie}
+\newcommand{\ruinTOC}{Ruine}
+\newcommand{\diseaseTOC}{Maladie}
+\newcommand{\lustTOC}{Luxure}
+\newcommand{\changeTOC}{Changement}
+
+
+
+
+
+
+
+\begin{document}
+
+\input{../Layout/Paths_titlepage.tex}
+
+\largefontsize
+
+\basictitle{whatisFBTNA}{\whatisFBTNA}
+
+\spaceaftersection{}
+
+Batailles Fantastiques : Le 9\ieme Âge est un jeu de plateau qui met en scène deux armées s'affrontant, représentées par des figurines adéquates. Plus d'informations sur le jeu ici :
+\begin{center}
+\noindent\url{http://www.the-ninth-age.com/}
+\end{center}
+
+\vspace*{1.5cm}
+\basictitle{howtousethisdoc}{\howtousethisdoc}
+
+\spaceaftersection{}
+
+Dans ce livre, toutes les Disciplines de Magie sont présentées. Elles comprennent les 8 \textbf{Disciplines Communes} et les \textbf{Disciplines Spécifiques} des différentes armées. Pour plus d'informations sur les règles du jeu et en particulier la Phase de Magie, merci de vous référer au Livre de Règles.
+
+\vspace*{10pt}
+Chaque Discipline comprend 8 sorts. Le premier est appelé l’\textbf{Attribut} de la Discipline, qui est indiqué par la mention \og A \fg{} à la place du numéro du sort. C'est un sort particulier qui est automatiquement lancé quand un autre sort de la même Discipline est lancé avec succès. Les sept sorts suivants sont numérotés de 0 à 6. Le sort 0 est le sort \textbf{Primaire} de la Discipline. Un Sorcier peut toujours choisir d'échanger l'un de ses sorts générés aléatoirement par le sort Primaire, et plusieurs Sorciers peuvent connaître ce sort en même temps.
+
+\vspace*{10pt}
+Certains sorts disposent de plusieurs valeurs de lancement. La ou les plus grandes sont pour la  ou les versions \textbf{améliorée(s)} du sort. Le joueur doit choisir la version du sort à lancer, sachant que plus la valeur de lancement est grande, plus le sort sera difficile à lancer, mais aussi plus il sera puissant. Parfois, les versions améliorées voient leur portée et le nombre de cibles augmenter, tandis que pour d'autres sorts, les effets peuvent être modifiés. Les différences entre versions améliorée(s) et basique suivent un code couleur. La partie en noir s'applique à toutes les versions du sort. Les textes en \base{rouge} s'appliquent à la version basique, tandis que les textes en \amel{bleu et entre crochets} s'appliquent à la version améliorée. Dans certains cas, il existe une deuxième amélioration au sort, marquée en \amelbis{vert olive entre accolades}. 
+
+\vspace*{2.5cm}
+\begin{center}
+\includegraphics[width=1cm]{pics/alchemy.png}\hspace{0.2cm}%
+\includegraphics[width=1cm]{pics/heavens.png}\hspace{0.2cm}%
+\includegraphics[width=1cm]{pics/fire.png}\hspace{0.2cm}%
+\includegraphics[width=1cm]{pics/light.png}%
+\end{center}
+
+\begin{center}
+\includegraphics[width=1cm]{pics/death.png}\hspace{0.2cm}%
+\includegraphics[width=1cm]{pics/nature.png}\hspace{0.2cm}%
+\includegraphics[width=1cm]{pics/shadows.png}\hspace{0.2cm}%
+\includegraphics[width=1cm]{pics/wilderness.png}%
+\end{center}
+
+
+
+
+
+
+
+\normalfontsize
+
+\newbattlepath{alchemy}{\alchemyTOC}
+
+\starttable{\colors@alchemy}
+A &
+\alchemyattribute &
+&
+\range{12} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne +1 en Sauvegarde d'Armure. Aucune figurine ne peut obtenir mieux que 3+ en Sauvegarde d'Armure grâce à ce sort avant d'appliquer d'éventuels malus.
+\tabularnewline
+\hline
+0 & \alchemysignature &
+\base{9+}\newline  \amel{17+} &
+\range{24} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit \base{1D6} \amel{2D6} touches avec la règle \metalshifting{}.
+\tabularnewline
+\hline
+1 & \alchemyspellone{} &
+\base{7+} \newline
+\amel{11+} &
+\base{\range{18}} \newline
+\amel{\range{36}} \newline
+\augment{} &
+\lastsoneturn{} &
+Les Attaques de Corps à Corps et de Tir de la cible ont +1 pour toucher et gagnent les règles \magicalattacks{} et \armourpiercing{+1}.
+\tabularnewline
+\hline
+2 & \alchemyspelltwo{} &
+\base{7+} \newline
+\amel{10+} &
+\base{\range{24}} \newline
+\amel{\range{48}} \newline
+\hex{} &
+\permanent{} &
+La cible subit un malus de -1 sur sa Sauvegarde d'Armure.
+\tabularnewline
+\hline
+3 & \alchemyspellthree{} &
+\base{8+} \newline
+\amel{11+} &
+\base{\range{12}} \newline
+\amel{\range{24}} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne les règles \hardtarget{} et \distracting{}.
+
+\vspace*{5pt}De plus, les Attaques de Corps à Corps contre la cible subissent également une pénalité de -1 sur leur règle \armourpiercing{}.
+\tabularnewline
+\hline
+4 & \alchemyspellfour{} &
+\base{8+} \newline
+\amel{11+} &
+\base{\range{18}} \newline
+\amel{\range{36}} \newline
+\hex{} \newline 
+\missile{} \newline 
+\damage{} &
+\instant{} &
+La cible subit une touche avec les règles \multiplewounds{1D3}{} et \metalshifting{}. Les rangs de l'unité ciblée sont pénétrés de la même façon que pour une \boltthrower{}, mais l'attaque subit un malus de -1 pour blesser au lieu de -1 en Force pour chaque rang pénétré. 
+\tabularnewline
+\hline
+5 & \alchemyspellfive{}  &
+\base{9+} \newline
+\amel{12+} &
+\base{\range{24}} \newline
+\amel{\range{48}} \newline
+\hex{} &
+\lastsoneturn{} &
+Les figurines de l'unité ciblée ne peuvent pas recevoir de bonus de Force de leurs Armes de Corps à Corps standard.
+
+\vspace*{5pt}
+Les Armes de Tir standard portées par l'unité ciblée subissent un malus de -1 en Force. Ce sort n'affecte que les équipements standard et leur Force, aucune règle spéciale n'est altérée par ce sort.
+\tabularnewline
+\hline
+6 & \alchemyspellsix{} &
+\base{15+} \newline
+\amel{18+} &
+\base{\range{12}} \newline
+\amel{\range{24}} \newline
+\hex{} \newline
+\direct{} \newline
+\damage{} &
+\instant{} / \newline \lastsoneturn{} &
+Le propriétaire de l'unité ciblée lance un dé pour chaque figurine de l'unité, dans l'ordre de son choix. Ignorez le premier 5+ obtenu. Pour les figurines suivantes, sur 5+, la figurine subit une blessure avec la règle \multiplewounds{10}{} sans aucune sauvegarde autorisée.
+
+\vspace*{5pt}
+Les unités ennemies à moins de \distance{12} de la cible gagnent la règle \stupidity{}.
+\tabularnewline
+\closetable
+
+
+
+\newbattlepath{heavens}{\heavensTOC}
+
+\starttable{\colors@heavens}
+A &
+\heavensattribute{} &
+&
+\specialTYPE{} &
+\lastsoneturn{} &
+L'armée du lanceur gagne un marqueur \og Second Sceau \fg{}. Ce marqueur peut être dépensé pour relancer un unique D6 d'un jet pour toucher, pour blesser ou de Sauvegarde d'Armure.
+\tabularnewline
+\hline
+0 & \heavenssignature{} &
+\base{7+}\newline
+\amel{10+} &
+\base{\range{12}} \newline
+\amel{\range{36}} \newline
+\hex{} &
+\lastsoneturn{} &
+La cible subit un malus de -1 pour toucher et de -1 en Commandement. Les Attaques de Tir ne nécessitant pas l'utilisation de la CT doivent obtenir un 4+ sur 1D6 pour pouvoir être utilisées.
+\tabularnewline
+\hline
+1 & \heavensspellone{} &
+\base{6+} \newline
+\amel{9+} &
+\base{\range{18}} \newline
+\amel{\range{36}} \newline
+\hex{} &
+\lastsoneturn{} &
+L'unité ciblée ne peut pas se déplacer de plus de \distance{10} durant l'Étape des Autres Mouvements. Toutes les unités ennemies à moins de \distance{6} de la cible subissent un malus de -1 en Capacité de Tir.
+\tabularnewline
+\hline
+2 & \heavensspelltwo{} &
+\base{8+}\newline
+\amel{11+} &
+\base{\range{24}} \newline
+\amel{\range{48}} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit 1D6 touches de Force 6 avec la règle \lightningattacks{}.
+\tabularnewline
+\hline
+3 & \heavensspellthree{} &
+\base{9+}\newline
+\amel{12+} &
+\base{\range{12}} \newline
+\amel{\range{24}} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible peut relancer au choix les jets ratés pour toucher, pour blesser ou de Sauvegarde d’Armure. Déclarez votre choix avant de jeter le sort.
+\tabularnewline
+\hline
+4 & \heavensspellfour{} &
+\base{9+}\newline
+\amel{12+} &
+\base{\range{12}} \newline
+\amel{\range{24}} \newline
+\hex{} &
+\lastsoneturn{} &
+La cible doit relancer au choix les jets réussis pour toucher, pour blesser ou de Sauvegarde d'Armure. Déclarez votre choix avant de jeter le sort.
+\tabularnewline
+\hline
+5 & \heavensspellfive{} &
+13+ &
+\range{24} \newline
+\hex{} \newline
+\direct{} \newline
+\damage{} &
+\instant{} &
+Ciblez une unité, puis jetez 1D6. Sur 3+, choisissez une nouvelle cible située à moins de \distance{6} de la première. Continuez ainsi, de cible en cible à \distance{6} d'écart, jusqu'à ce que vous obteniez un \result{1} ou un \result{2}, ou qu'aucune cible ne soit éligible. Aucune unité ne peut être ciblée deux fois.
+
+\vspace*{5pt}
+Chaque cible subit 1D6 touches de Force 6 avec la règle \lightningattacks{}.
+\tabularnewline
+\hline
+6 & \heavensspellsix{} &
+\base{13+}\newline
+\amel{16+} &
+\ground{} &
+\permanent{} &
+Posez un marqueur où vous voulez sur le champ de bataille.
+
+\vspace*{5pt}
+\base{À la fin de chaque Phase de Magie suivante, jetez un dé. Si le résultat est de 4+, la comète arrive.}
+
+\vspace*{5pt}
+\amel{Le lanceur choisit le Tour de Joueur, autre que celui en cours, et hors premier Tour de Jeu, où la comète arrive et l'écrit secrètement. La comète arrivera à la fin de la Phase de Magie de ce tour de joueur.}
+
+\vspace*{5pt}
+À la fin de chaque Phase de Magie pendant laquelle la comète n'est pas arrivée, ajoutez un marqueur au même endroit. Quand la comète s'écrase, toutes les unités situées dans un rayon de \distance{2D6+X} subissent 2D6 touches de Force 4+X, où X est égal au nombre de marqueurs. Enlevez ensuite tous les marqueurs, et le sort prend fin.
+\tabularnewline
+\closetable
+
+
+
+\newbattlepath{fire}{\fireTOC}
+
+\starttable[white]{\colors@fire}
+A &
+\fireattribute{} &
+&
+\range{24} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit 1D3 touches de Force 4 avec la règle \flamingattacks{}.
+\tabularnewline
+\hline
+0 & \firesignature{} &
+\base{5+}\newline
+\amel{10+} \newline
+\amelbis{14+} &
+\base{\range{24}} \newline
+\amel{\range{36}} \newline
+\amelbis{\range{48}} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit \base{1D6} \amel{2D6} \amelbis{3D6} touches de Force 4 avec la règle \flamingattacks{}.
+\tabularnewline
+\hline
+1 & \firespellone{} &
+\base{7+}\newline
+\amel{10+} &
+\base{\range{18}} \newline
+\amel{\range{36}} \newline
+\hex{} &
+\remainsinplay{} &
+A la fin de chaque Phase de Magie, la cible subit 1D6 touches de Force 4 avec la règle \flamingattacks{}.
+\tabularnewline
+\hline
+2 & \firespelltwo{} &
+\base{7+}\newline
+\amel{13+} &
+\base{\range{24}} \newline
+\amel{\range{6}} \newline
+\amel{\aura} \newline
+\augment{} &
+\lastsoneturn{} &
+Les Attaques de Corps à Corps et de Tir de la cible ont +1 pour blesser et gagnent les règles \flamingattacks{} et \magicalattacks{}.
+\tabularnewline
+\hline
+3 & \firespellthree{} &
+\base{9+}\newline
+\amel{12+} &
+\base{\range{18}} \newline
+\amel{\range{36}} \newline
+\ground{} \newline
+\direct{} \newline
+\linetemplate{} &
+\instant{} &
+Chaque figurine sous le gabarit subit une touche de Force 4 avec la règle \flamingattacks{}. Les unités ennemies touchées par le gabarit doivent effectuer un test de Panique.
+\tabularnewline
+\hline
+4 & \firespellfour{} &
+\base{9+}\newline
+\amel{12+} &
+\base{\range{24}} \newline
+\amel{\range{36}} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit 1 touche de Force 4 avec la règle \flamingattacks{} pour chaque rang ou colonne, au choix du lanceur, dans l'unité ciblée.
+\tabularnewline
+\hline
+5 & \firespellfive{} &
+\base{10+}\newline
+\amel{13+} &
+\base{\range{24}} \newline
+\amel{\range{48}} \newline
+\hex{} &
+\remainsinplay{} &
+La cible subit 1D6 touches de Force 4 avec la règle \flamingattacks{}.
+
+\vspace*{5pt}
+À la fin de chaque phase, chaque figurine de l'unité subit une touche de Force 4 avec la règle \flamingattacks{} si l'unité a effectué une ou plusieurs des actions suivantes durant la phase :
+
+Charge (réussie ou non), Charge Irrésistible, Fuite, Marche Forcée, Mouvement Simple, Pivot, Poursuite, Reformation ou Reformation de Combat.
+
+Une même unité ne peut subir ces touches qu'une fois par Phase.
+\tabularnewline
+\hline
+6 & \firespellsix{} &
+\base{11+}\newline
+\amel{14+} &
+\base{\range{24}} \newline
+\amel{\range{48}} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne +1 en Endurance, une Sauvegarde Invulnérable (5+) et la règle \fireborn{}.
+\tabularnewline
+\closetable
+
+
+
+\newbattlepath{light}{\lightTOC}
+
+
+
+\newbattlepath{death}{\deathTOC}
+
+
+
+\newbattlepath{nature}{\natureTOC}
+
+
+
+\newbattlepath{shadows}{\shadowsTOC}
+
+
+
+\newbattlepath{wilderness}{\wildernessTOC}
+
+
+
+\eightfoldpathtitle{eightfoldpath}{\Pathof{} \eightpaths}
+
+
+
+\newspecificpath{butchery}{\butchery}
+
+
+
+\newspecificpath{change}{\change}
+
+
+
+\newspecificpath{biggreengods}{\thebiggreengods}
+
+
+
+\newspecificpath{littlegreengods}{\thelittlegreengods}
+
+
+
+\newspecificpath{forge}{\forge}
+
+
+
+\newspecificpath{lust}{\lust}
+
+
+
+\newspecificpath{whitemagic}{\whitemagic}
+
+
+
+\newspecificpath{blackmagic}{\blackmagic}
+
+
+
+\newspecificpath{disease}{\disease}
+
+
+
+\newspecificpath{necromancy}{\necromancy}
+
+
+
+\newspecificpath{ruin}{\ruin}
+
+
+
+\newspecificpath{sands}{\sands}
+
+
+\newpage
+\basictitle{magicphasesummary}{\magicphasesummary}
+
+\end{document}

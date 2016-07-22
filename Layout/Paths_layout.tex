@@ -49,7 +49,7 @@
 
 \newcommand{\amel}[1]{\textcolor{blue}{[#1]}}
 \newcommand{\base}{\textcolor{red}}
-\newcommand{\amelbis}[1]{\textcolor{olive}{[[#1]]}}
+\newcommand{\amelbis}[1]{\textcolor{olive}{\{#1\}}}
 
 \newcommand{\newrule}{\textcolor{green!50!black}}
 \newcommand{\removedrule}[1]{\textcolor{green!50!black}{\sout{#1}}}
@@ -61,7 +61,6 @@
 \newcommand{\range}[1] {\labels@range~\unit{#1}{\inch}}
 \newcommand{\distance}[1] {\unit{#1}{\inch}}
 \newcommand{\result}[1] {\texttt{'}#1\texttt{'}}
-\newcommand{\plusone}{+1}
 
 \newcommand{\verysmallfontsize}{\fontsize{4}{4.8}\selectfont}
 \newcommand{\smallfontsize}{\fontsize{6}{7.2}\selectfont}
@@ -89,18 +88,31 @@
 
 \renewcommand{\headrulewidth}{0pt}
 \fancyfoot[L]{\textcolor{black!30}{%
-%\hyperlink{lordtitle}{\labels@lordsInitial}\hspace*{0.4cm}
-%\hyperlink{herotitle}{\labels@heroesInitial}\hspace*{0.4cm}
-%\hyperlink{coretitle}{\labels@coreunitsInitial}\hspace*{0.4cm}
-%\hyperlink{specialtitle}{\labels@specialunitsInitial}\hspace*{0.4cm}
-%\hyperlink{raretitle}{\labels@rareunitsInitial}\hspace*{0.4cm}
+\normalfontsize
+\hyperlink{alchemy}{\alchemyInitials}\hspace*{0.3cm}
+\hyperlink{heavens}{\heavensInitials}\hspace*{0.3cm}
+\hyperlink{fire}{\fireInitials}\hspace*{0.3cm}
+\hyperlink{light}{\lightInitials}\hspace*{0.3cm}
+\hyperlink{death}{\deathInitials}\hspace*{0.3cm}
+\hyperlink{nature}{\natureInitials}\hspace*{0.3cm}
+\hyperlink{shadows}{\shadowsInitials}\hspace*{0.3cm}
+\hyperlink{wilderness}{\wildernessInitials}\hspace*{0.3cm}
+\hyperlink{eightfold}{\eightfoldInitials}
 }}
 \fancyfoot[R]{\textcolor{black!30}{%
-%\hyperlink{lordtitle}{\labels@lordsInitial}\hspace*{0.4cm}
-%\hyperlink{herotitle}{\labels@heroesInitial}\hspace*{0.4cm}
-%\hyperlink{coretitle}{\labels@coreunitsInitial}\hspace*{0.4cm}
-%\hyperlink{specialtitle}{\labels@specialunitsInitial}\hspace*{0.4cm}
-%\hyperlink{raretitle}{\labels@rareunitsInitial}\hspace*{0.4cm}
+\normalfontsize
+\hyperlink{butchery}{\butcheryInitials}\hspace*{0.3cm}
+\hyperlink{change}{\changeInitials}\hspace*{0.3cm}
+\hyperlink{biggreengods}{\biggreengodsInitials}\hspace*{0.3cm}
+\hyperlink{littlegreengods}{\littlegreengodsInitials}\hspace*{0.3cm}
+\hyperlink{forge}{\forgeInitials}\hspace*{0.3cm}
+\hyperlink{lust}{\lustInitials}\hspace*{0.3cm}
+\hyperlink{whitemagic}{\whitemagicInitials}\hspace*{0.3cm}
+\hyperlink{blackmagic}{\blackmagicInitials}\hspace*{0.3cm}
+\hyperlink{disease}{\diseaseInitials}\hspace*{0.3cm}
+\hyperlink{necromancy}{\necromancyInitials}\hspace*{0.3cm}
+\hyperlink{ruin}{\ruinInitials}\hspace*{0.3cm}
+\hyperlink{sands}{\sandsInitials}
 }}
 
 
@@ -113,18 +125,18 @@
 \renewcommand{\arraystretch}{3.2}
 
 \arrayrulecolor{black!30}
-\setlength{\arrayrulewidth}{2pt}
+\setlength{\arrayrulewidth}{0.5pt}
 
 \newcommand{\starttable}[2][black]{%
 \vspace{0.3cm}
 \begin{center}
-\begin{tabular}{@{}>{\bf\LARGE}M{0.7cm}>{\raggedright}m{3cm}M{0.8cm}M{1.8cm}M{1.4cm}m{6.5cm}@{}}
+\begin{tabular}{@{}>{\vspace*{-0.2cm}\bf\hugefontsize}M{0.7cm}>{\raggedright}m{3cm}M{1cm}M{1.9cm}M{1.5cm}m{7.5cm}@{}}
 \rowcolor[HTML]{#2} &
-\textcolor{#1}{\textbf{Nom}} &
-\textcolor{#1}{\textbf{Lancement}} &
-\textcolor{#1}{\textbf{Type}} &
-\textcolor{#1}{\textbf{Durée}} &
-\centering\textcolor{#1}{\textbf{Effet}}
+\textcolor{#1}{\textbf{\spellsName}} &
+\textcolor{#1}{\textbf{\spellsCastingValue}} &
+\textcolor{#1}{\textbf{\spellsType}} &
+\textcolor{#1}{\textbf{\spellsDuration}} &
+\centering\textcolor{#1}{\textbf{\spellsEffect}}
 \tabularnewline
 }
 
@@ -154,3 +166,39 @@
 \def\colors@ruin{69431C}
 \def\colors@sand{FFD966}
 
+
+% Titles
+
+\newcommand{\spaceaftersection}{\vspace{0.8cm}}
+
+\newcommand{\basictitle}[2]{%
+\vspace*{-1.5cm}\section*{}\noindent\begin{center}\toctarget{#1}{\hugefontsize\textbf{\antiquefont\expandafter\uppercase\expandafter{#2}}}\end{center}
+}
+
+\newcommand{\newbattlepath}[2]{%
+\newpage%
+\vspace*{-2.0cm}\section*{}\noindent\begin{center}%
+\includegraphics[width=1.5cm]{pics/#1.png}%
+
+\vspace*{0.3cm}
+\toctarget{#1}{\hugefontsize\textbf{\antiquefont\expandafter\uppercase\expandafter{\Pathof} \expandafter\uppercase\expandafter{\battle}\spacebeforecolon{}: \expandafter\uppercase\expandafter{#2}}}%
+\end{center}%
+}
+
+\newcommand{\eightfoldpathtitle}[2]{%
+\newpage%
+\vspace*{-1.5cm}\section*{}\noindent\begin{center}%
+\edef\tempchar{#2}%
+\toctarget{#1}{\hugefontsize\textbf{\antiquefont{\expandafter\uppercase\expandafter{\tempchar}}}}%
+\end{center}%
+}
+
+\newcommand{\newspecificpath}[2]{%
+\newpage%
+\vspace*{-2.0cm}\section*{}\noindent\begin{center}%
+\includegraphics[width=1.5cm]{pics/#1.png}%
+
+\vspace*{0.3cm}
+\toctarget{#1}{\hugefontsize\textbf{\antiquefont{\expandafter\uppercase\expandafter{\Pathof} \expandafter\uppercase\expandafter{#2}}}}%
+\end{center}%
+}

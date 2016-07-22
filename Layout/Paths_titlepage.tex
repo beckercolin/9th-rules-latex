@@ -1,0 +1,124 @@
+\newgeometry{margin=1in}
+
+\begin{titlepage}
+\begin{center}
+
+\ifdef{\booktitle}{}{\newcommand{\booktitle}{Missing title}}
+\ifdef{\version}{}{\newcommand{\version}{Missing version}}
+
+{\antiquefont\fontsize{40}{48}\selectfont\noindent\labels@fantasybattles
+
+\labels@NinthAge}
+
+\vspace*{0.5cm}
+\ifdef{\booklogo}{%
+\includegraphics[height=10cm]{\booklogo}%
+}{%
+\includegraphics[height=10cm]{../Layout/pics/logo_9th.png}%
+}
+
+\vspace*{-1cm}
+{\antiquefont\fontsize{50}{60}\selectfont \booktitle
+\vspace{0.4cm}
+
+\fontsize{14}{16.8}\selectfont Beta v\version{} - \today{}}
+
+\ifdef{\frenchversion}{{\fontsize{14}{16.8}\selectfont \vspace{0.2cm}\noindent\texttt{VF \frenchversion}}}{}
+\vfill
+
+\begin{tabular}{@{}m{2cm}@{\hskip 20pt}m{13cm}@{}}
+\includegraphics[width=2cm]{../Layout/pics/seal_9th.png} &
+{\fontsize{10}{12}\selectfont \textcolor{black!50}{\noindent\labels@frontpagecredits}}
+
+\ifdef{\frontpageaddstuff}{{\fontsize{10}{12}\selectfont \noindent\textcolor{black!50}{\frontpageaddstuff}}}{}
+
+\vspace*{10pt}
+\noindent{\fontsize{10}{12}\selectfont \textcolor{black!50}{\labels@license}}
+\tabularnewline
+\end{tabular}
+
+
+\end{center}
+
+\newpage
+
+\thispagestyle{empty}
+
+{\fontsize{10}{12}\selectfont
+
+\begin{center}\noindent{\Largerfontsize\textbf{\labels@tableofcontents}}\end{center}
+
+\vspace*{0.2cm}
+
+\begin{center}
+\noindent\hyperlink{whatisFBTNA}{\whatisFBTNA}
+
+\vspace*{5pt}
+\noindent\hyperlink{howtousethisdoc}{\howtousethisdoc}
+\end{center}
+
+\begin{multicols}{2}
+
+\tocentry{alchemy}{\alchemyTOC}
+
+\tocentry{heavens}{\heavensTOC}
+
+\tocentry{fire}{\fireTOC}
+
+\tocentry{light}{\lightTOC}
+
+\tocentry{death}{\deathTOC}
+
+\tocentry{nature}{\natureTOC}
+
+\tocentry{shadows}{\shadowsTOC}
+
+\tocentry{wilderness}{\wildernessTOC}
+
+\vspace*{0.5cm}\tocentry{eightfoldpath}{\eightfoldpathTOC}
+
+\vspace*{\fill}\columnbreak
+
+\tocentry{butchery}{\butcheryTOC}
+
+\tocentry{change}{\changeTOC}
+
+\tocentry{biggreengods}{\biggreengodsTOC}
+
+\tocentry{littlegreengods}{\littlegreengodsTOC}
+
+\tocentry{forge}{\forgeTOC}
+
+\tocentry{lust}{\lustTOC}
+
+\tocentry{whitemagic}{\whitemagicTOC}
+
+\tocentry{blackmagic}{\blackmagicTOC}
+
+\tocentry{disease}{\diseaseTOC}
+
+\tocentry{necromancy}{\necromancyTOC}
+
+\tocentry{ruin}{\ruinTOC}
+
+\tocentry{sands}{\sandsTOC}
+
+\vspace*{\fill}\end{multicols}
+
+\begin{center}
+\noindent\hyperlink{magicphasesummary}{\magicphasesummary}
+\end{center}
+
+\ifdef{\labels@introduction}{\vspace{0.7cm}\labels@introduction}{\vphantom{1pt}}
+\vfill
+
+\noindent\newrule{\labels@rulechanges}
+
+\bigskip
+\noindent \labels@latexcredit
+}
+
+
+\end{titlepage}
+
+\restoregeometry
