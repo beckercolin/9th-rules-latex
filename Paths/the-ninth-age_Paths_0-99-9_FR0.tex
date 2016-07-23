@@ -48,6 +48,12 @@
 
 
 
+\newcommand{\characteronly}{Personnage uniquement}
+
+\newcommand{\aspectofhydra}{Aspect de l'Hydre}
+\newcommand{\aspectofmanticore}{Aspect de la Manticore}
+\newcommand{\aspectofdragon}{Aspect du Dragon}
+
 
 
 
@@ -78,7 +84,7 @@ Dans ce livre, toutes les Disciplines de Magie sont présentées. Elles comprenn
 Chaque Discipline comprend 8 sorts. Le premier est appelé l’\textbf{Attribut} de la Discipline, qui est indiqué par la mention \og A \fg{} à la place du numéro du sort. C'est un sort particulier qui est automatiquement lancé quand un autre sort de la même Discipline est lancé avec succès. Les sept sorts suivants sont numérotés de 0 à 6. Le sort 0 est le sort \textbf{Primaire} de la Discipline. Un Sorcier peut toujours choisir d'échanger l'un de ses sorts générés aléatoirement par le sort Primaire, et plusieurs Sorciers peuvent connaître ce sort en même temps.
 
 \vspace*{10pt}
-Certains sorts disposent de plusieurs valeurs de lancement. La ou les plus grandes sont pour la  ou les versions \textbf{améliorée(s)} du sort. Le joueur doit choisir la version du sort à lancer, sachant que plus la valeur de lancement est grande, plus le sort sera difficile à lancer, mais aussi plus il sera puissant. Parfois, les versions améliorées voient leur portée et le nombre de cibles augmenter, tandis que pour d'autres sorts, les effets peuvent être modifiés. Les différences entre versions améliorée(s) et basique suivent un code couleur. La partie en noir s'applique à toutes les versions du sort. Les textes en \base{rouge} s'appliquent à la version basique, tandis que les textes en \amel{bleu et entre crochets} s'appliquent à la version améliorée. Dans certains cas, il existe une deuxième amélioration au sort, marquée en \amelbis{vert olive entre accolades}. 
+Certains sorts disposent de plusieurs valeurs de lancement. La ou les plus grandes sont pour la  ou les versions \textbf{améliorée(s)} du sort. Le joueur doit choisir la version du sort à lancer, sachant que plus la valeur de lancement est grande, plus le sort sera difficile à lancer, mais aussi plus il sera puissant. Parfois, les versions améliorées voient leur portée et le nombre de cibles augmenter, tandis que pour d'autres sorts, les effets peuvent être modifiés. Les différences entre versions améliorée(s) et basique suivent un code couleur. La partie en noir s'applique à toutes les versions du sort. Les textes en \base{rouge} s'appliquent à la version basique, tandis que les textes en \amel{bleu et entre crochets} s'appliquent à la version améliorée. Dans certains cas, il existe une deuxième \augment{} au sort, marquée en \amelbis{vert olive entre accolades}. 
 
 \vspace*{2.5cm}
 \begin{center}
@@ -208,7 +214,7 @@ A &
 &
 \specialTYPE{} &
 \lastsoneturn{} &
-L'armée du lanceur gagne un marqueur \og Second Sceau \fg{}. Ce marqueur peut être dépensé pour relancer un unique D6 d'un jet pour toucher, pour blesser ou de Sauvegarde d'Armure.
+L'armée du lanceur gagne un marqueur \og \heavensattribute{} \fg{}. Ce marqueur peut être dépensé pour relancer un unique D6 d'un jet pour toucher, pour blesser ou de Sauvegarde d'Armure.
 \tabularnewline
 \hline
 0 & \heavenssignature{} &
@@ -339,7 +345,7 @@ A la fin de chaque Phase de Magie, la cible subit 1D6 touches de Force 4 avec la
 \amel{13+} &
 \base{\range{24}} \newline
 \amel{\range{6}} \newline
-\amel{\aura} \newline
+\amel{\aura{}} \newline
 \augment{} &
 \lastsoneturn{} &
 Les Attaques de Corps à Corps et de Tir de la cible ont +1 pour blesser et gagnent les règles \flamingattacks{} et \magicalattacks{}.
@@ -401,45 +407,1194 @@ La cible gagne +1 en Endurance, une Sauvegarde Invulnérable (5+) et la règle \
 
 \newbattlepath{light}{\lightTOC}
 
+\starttable{\colors@light}
+A &
+\lightattribute{} &
+&
+\range{48} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne +1 en Commandement. Aucune figurine ne peut être affectée par ce sort plus d'une fois par Phase de Magie.
+\tabularnewline
+\hline
+0 & \lightsignature{} &
+\base{5+}\newline
+\amel{14+} &
+\base{\range{24}} \newline
+\amel{\range{48}} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit 1D6 touches de Force \base{4} \amel{6} avec la règle \flamingattacks{}.
+
+\vspace*{5pt}
+Si la cible dispose de la règle \otherworldly{} ou \undead{}, elle subit 2D6 touches à la place.
+\tabularnewline
+\hline
+1 & \lightspellone{} &
+\base{7+}\newline
+\amel{10+} &
+\base{\range{24}} \newline
+\amel{\range{6}} \newline
+\amel{\aura{}} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne les règles \hardtarget{} et \distracting{}. Les Attaques de Tir ciblant l'unité ne nécessitant pas l'utilisation de la CT doivent obtenir un 4+ sur 1D6 pour pouvoir être utilisées.
+\tabularnewline
+\hline
+2 & \lightspelltwo{} &
+7+ &
+\range{24} \newline
+\augment{} &
+\instant{} /\newline
+\lastsoneturn{} &
+Si la cible n'est ni engagée dans un combat ni en fuite, elle peut effectuer immédiatement une Reformation. Si elle est engagée au corps à corps, elle peut effectuer une Reformation de Combat.
+
+\vspace*{5pt}
+De plus, la cible apporte un bonus de +2 au Résultat de Combat de son camp.
+\tabularnewline
+\hline
+3 & \lightspellthree{} &
+\base{8+}\newline
+\amel{12+} &
+\base{\range{24}} \newline
+\amel{\range{12}} \newline
+\amel{\aura{}} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne +3 en Capacité de Combat et en Initiative.
+\tabularnewline
+\hline
+4 & \lightspellfour{} &
+\base{9+}\newline
+\amel{12+} &
+\base{\range{24}} \newline
+\amel{\range{48}} \newline
+\hex{} &
+\lastsoneturn{} &
+Au début de chaque phase, jetez un dé. Sur 5+, la cible ne peut pas effectuer les actions suivantes correspondantes à la phase :
+
+\vspace*{5pt}
+\textbf{Phase de Mouvement} : Déclarer une charge.
+
+\textbf{Phase de Magie} : Lancer des sorts.
+
+\textbf{Phase de Tir} : Tirer.
+
+\textbf{Phase de Corps à Corps} : Poursuivre et effectuer une Charge Irrésistible.
+\tabularnewline
+\hline
+5 & \lightspellfive{} &
+\base{10+}\newline
+\amel{15+} &
+\range{12} \newline
+\augment{} \newline
+\amel{\aura} &
+\lastsoneturn{} &
+La cible gagne +1 Attaque, la règle \divineattacks{} et double son Mouvement jusqu'à un maximum de 10.
+\tabularnewline
+\hline
+6 & \lightspellsix{} &
+\base{10+}\newline
+\amel{13+} &
+\range{24} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit 2D6 touches de Force 4 avec la règle \divineattacks{}. Pour chaque autre Sorcier connaissant au moins un sort de la Discipline \light{} à moins de \distance{12} du lanceur, ajoutez +1 \base{pour blesser} \amel{en Force}.
+
+\vspace*{5pt}
+Si la cible dispose de la règle \otherworldly{} ou \undead{}, elle subit 3D6 touches à la place.
+\tabularnewline
+\closetable
+
+
+
 
 
 \newbattlepath{death}{\deathTOC}
+
+\starttable[white]{\colors@death}
+A &
+\deathattribute{} &
+ &
+\range{24} \newline
+\hex{} &
+\lastsoneturn{} &
+La cible subit un malus de -1 en Commandement. Aucune figurine ne peut être affectée par ce sort plus d'une fois par Phase de Magie.
+\tabularnewline
+\hline
+0 & \deathsignature{} &
+\base{8+}\newline
+\amel{11+} &
+\range{18} \newline
+\focused{} \newline
+\hex{} \newline
+\direct{} \newline
+\damage{} &
+\instant{} &
+La cible subit 1 blessure avec la règle \armourpiercing{6}.
+
+\vspace*{5pt}
+\amel{Si la blessure n'est pas sauvegardée, le lanceur Récupère 1 PV}.
+\tabularnewline
+\hline
+1 & \deathspellone{} &
+\base{6+}\newline
+\amel{9+} &
+\range{24} \newline
+\hex{} &
+\lastsoneturn{} &
+La cible subit un malus de -1 en Force \amel{et en Endurance}, jusqu'à un minimum de 1.
+\tabularnewline
+\hline
+2 & \deathspelltwo{} &
+\base{7+}\newline
+\amel{9+} &
+\range{24} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit \base{2D6} \amel{3D6} touches de Force 2 avec la règle \armourpiercing{6}.
+\tabularnewline
+\hline
+3 & \deathspellthree{} &
+\base{7+}\newline
+\amel{10+} &
+\base{\range{12}} \newline
+\amel{\range{24}} \newline
+\focused{} \newline
+\hex{} \newline
+\direct{} \newline
+\damage{} &
+\instant{} &
+Le lanceur et la cible lancent chacun 1D6 et ajoutent leur Commandement actuel au résultat. Si le total du lanceur est plus élevé, la cible subit un nombre de blessures avec la règle \armourpiercing{6} égal à la différence entre leurs totaux respectifs.
+\tabularnewline
+\hline
+4 & \deathspellfour{} &
+\base{8+}\newline
+\amel{12+} &
+\range{24} \newline
+\augment{} &
+\lastsoneturn{} &
+Les Attaques de Corps à Corps de la cible gagnent la règle \divineattacks{}.
+
+\vspace*{5pt}
+\amel{Les jets de Sauvegarde d'Armure réussis contre ces attaques doivent être relancés}.
+\tabularnewline
+\hline
+5 & \deathspellfive{} &
+10+ &
+\range{18} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne les règles \lethalstrike{} et \fear{}.
+\tabularnewline
+\hline
+6 & \deathspellsix{} &
+14+ &
+\vortex{} \newline
+(\range{6}, \template{} \distance{1}) \newline \ground{} &
+\instant{} &
+Les figurines touchées par le gabarit doivent effectuer un test d'Initiative. Chaque figurine échouant subit une blessure avec les règles \multiplewounds{\ordnance}{} et \armourpiercing{6} ne permettant pas la \regeneration{}.
+\tabularnewline
+\closetable
+
+
 
 
 
 \newbattlepath{nature}{\natureTOC}
 
+\starttable[white]{\colors@nature}
+A &
+\natureattribute{} &
+&
+\range{12} \newline
+\focused{} \newline
+\augment{} &
+\instant{} &
+La cible Récupère un PV. Aucune figurine ne peut Récupérer plus d'un PV par Phase de Magie avec ce sort.
+\tabularnewline
+\hline
+0 & \naturesignature{} &
+\base{4+}\newline
+\amel{8+} &
+\base{\castersunit} \newline
+\amel{\range{12}} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne la règle \regeneration{5} \amelbis{\regeneration{4} avec \naturespelltwo{}}. 
+\tabularnewline
+\hline
+1 & \naturespellone{} &
+\base{6+}\newline
+\amel{11+} &
+\range{18} \newline
+\hex{} \newline
+\direct{} \newline
+\damage{} &
+\instant{} &
+La portée de ce sort peut être mesurée à partir du lanceur ou de tout Terrain Infranchissable ou Colline du champ de bataille.
+
+\vspace*{5pt}
+La cible subit \base{1D6} \amel{2D6} touches de Force 4 \amelbis{Force 5 avec \naturespelltwo{}}.
+\tabularnewline
+\hline
+2 & \naturespelltwo{} &
+7+ &
+\caster{} &
+\remainsinplay{} &
+Si le lanceur subit un Fiasco lorsqu'il lance un sort autre que \naturespelltwo{}, il compte comme ayant lancé un Dé de Pouvoir de moins, jusqu'à un minimum de deux.
+
+\vspace*{5pt}
+Lorsque ce sort est en jeu, le lanceur dispose de versions \amelbis{améliorées} des autres sorts.
+\tabularnewline
+\hline
+3 & \naturespellthree{} &
+\base{9+}\newline
+\amel{13+} &
+\range{12} \newline
+\base{\augment} \newline
+\amel{\hex} &
+\lastsoneturn{} &
+La portée de ce sort peut être mesurée à partir du lanceur ou de n'importe quelle Forêt sur le champ de bataille.
+
+\vspace*{5pt}
+Toutes les figurines de l'unité ciblée sont considérées comme étant dans une Forêt.
+\tabularnewline
+\hline
+4 & \naturespellfour{} &
+\base{10+}\newline
+\amel{15+} &
+\base{\range{24}} \newline
+\amel{\range{48}} \newline
+\augment{} &
+\instant{} &
+Ressuscitez 1D3+1 PVs \amelbis{1D6+1 PVs avec \naturespelltwo{}} dans l'unité ciblée. La quantité de PVs Ressuscités est divisée par deux en arrondissant au supérieur pour les unités de figurines de taille Moyenne et Grande.
+\tabularnewline
+\hline
+5 & \naturespellfive{} &
+11+ &
+\range{24} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne +2 en Endurance \amelbis{+4 avec \naturespelltwo{}}.
+\tabularnewline
+\hline
+6 & \naturespellsix{} &
+\base{15+}\newline
+\amel{18+} &
+\base{\range{12}} \newline
+\amel{\range{24}} \newline
+\hex{} \newline
+\direct{} \newline
+\damage{} &
+\instant{} &
+Chaque figurine de l'unité ciblée doit effectuer un test de Force, dans l'ordre du choix du propriétaire. Ignorez le premier test raté. Tout autre figurine ratant son test subit une blessure sans aucune sauvegarde autorisée avec la règle \multiplewounds{10}{}.
+\tabularnewline
+\closetable
+
+
 
 
 \newbattlepath{shadows}{\shadowsTOC}
+
+\starttable[white]{\colors@shadows}
+A &
+\shadowsattribute{} &
+&
+\range{12} \newline
+\focused{} \newline
+\augment{} &
+\instant{} &
+Ce sort ne peut être lancé que sur une unité constituée d'une seule figurine ou sur un Personnage. La cible peut effectuer un Mouvement Magique de \distance{10} avec la règle \fly{}.
+
+\vspace*{5pt}
+Si la cible dispose de la règle \largetarget{}, ce mouvement est limité à \distance{2}.
+\tabularnewline
+\hline
+0 & \shadowssignature{} &
+\base{4+}\newline
+\amel{7+} &
+\range{48} \newline
+\hex{} &
+\lastsoneturn{} &
+La cible subit un malus de \base{1} \amel{-1D3} à une caractéristique parmi M, CC, CT ou I, jusqu'à un minimum de 1. Le lanceur doit préciser laquelle avant de lancer le sort.
+\tabularnewline
+\hline
+1 & \shadowsspellone{} &
+\base{5+}\newline
+\amel{8+} &
+\range{24} \newline
+\ground{} &
+\lastsoneturn{} &
+Placez un gabarit de \distance{3} sur le point ciblé, à plus de \distance{1} de toute unité. La zone couverte par le gabarit compte pour toute figurine comme étant un Terrain Dangereux (1), et offre un Couvert Lourd.
+
+\vspace*{5pt}
+\amel{Cette zone compte également comme un Décor Occultant.}
+\tabularnewline
+\hline
+2 & \shadowsspelltwo{} &
+\base{7+}\newline
+\amel{13+} &
+\base{\range{18}} \newline
+\amel{\range{36}} \newline
+\hex{} &
+\remainsinplay{} &
+La cible perd \base{1} \amel{1D3} en Force, jusqu'à un minimum de 1.
+\tabularnewline
+\hline
+3 & \shadowsspellthree{} &
+\base{9+}\newline
+\amel{15+} &
+\base{\range{18}} \newline
+\amel{\range{36}} \newline
+\hex{} &
+\remainsinplay{} &
+La cible perd \base{1} \amel{1D3} en Endurance, jusqu'à un minimum de 1.
+\tabularnewline
+\hline
+4 & \shadowsspellfour{} &
+\base{11+}\newline
+\amel{14+} &
+\base{\range{12}} \newline
+\amel{\range{24}} \newline
+\augment{} &
+\instant{} &
+La cible peut effectuer un Mouvement Magique de \distance{8} avec la règle \fly{}. À l'issue de ce mouvement, elle peut effectuer une Reformation, ce qui ne l'empêche pas de tirer.
+\tabularnewline
+\hline
+5 & \shadowsspellfive{} &
+12+ &
+\range{24} \newline
+\hex{} \newline
+\direct{} \newline
+\damage{} &
+\instant{} &
+Placez le centre d'un gabarit de \distance{3} sur l'unité ciblée, et à portée du sort, puis faites une Déviation de \distance{1D6}. Toutes les figurines sous le gabarit doivent effectuer un test d'Initiative ou subir une blessure avec les règles \multiplewounds{\ordnance}{} et \armourpiercing{6} ne permettant pas la \regeneration{}.
+\tabularnewline
+\hline
+6 & \shadowsspellsix{} &
+\base{15+}\newline
+\amel{18+} &
+\base{\range{18}} \newline
+\amel{\range{36}} \newline
+\augment{} &
+\lastsoneturn{} &
+Les Attaques au Corps à Corps non spéciales de la cible blessent automatiquement (aucun jet nécessaire) et gagnent la règle \armourpiercing{1}.
+\tabularnewline
+\closetable
+
 
 
 
 \newbattlepath{wilderness}{\wildernessTOC}
 
+\starttable[white]{\colors@wilderness}
+A &
+\wildernessattribute{} &
+&
+\range{12} \newline
+\augment{} &
+\instant{} &
+Ce sort ne peut affecter que les unités composées uniquement, au choix, de :
+\begin{itemize}[label={-}]
+\item \cavalry{}, \warbeast{}, \monstrouscavalry{}, \monstrousbeast{}, \chariot{}, \monster{} et \riddenmonster{}.
+\item toute unité du Livre d'Armée Hardes Bestiales.
+\item l'unité du lanceur.
+\end{itemize}
+
+La cible peut effectuer un Mouvement Magique de \distance{1D3+2}.
+\tabularnewline
+\hline
+0 & \wildernesssignature{} &
+\base{9+} \newline
+\amel{12+} &
+\base{\range{12}} \newline
+\amel{\range{24}} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne +1 en Force et en Endurance.
+\tabularnewline
+\hline
+1 & \wildernessspellone{} &
+\base{5+}\newline
+\amel{8+} &
+\base{\range{24}} \newline
+\amel{\range{48}} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit 5D6 touches de Force 1.
+\tabularnewline
+\hline
+2 & \wildernessspelltwo{} &
+\base{5+} \newline
+\amel{8+} &
+\base{\range{6}} \newline
+\amel{\range{18}} \newline
+\universal{} &
+\lastsoneturn{} &
+La cible gagne la règle \frenzy{}. 
+\tabularnewline
+\hline
+3 & \wildernessspellthree{} &
+\base{8+} \newline
+\amel{14+} &
+\range{24} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit une touche de Force \base{6} \amel{10} avec les règles \multiplewounds{\ordnance}{} et \armourpiercing{6}. Les rangs de l'unité ciblée sont pénétrés de la même façon que par une \boltthrower{}. 
+\tabularnewline
+\hline
+4 & \wildernessspellfour{} &
+\base{9+} \newline
+\amel{12+} &
+\base{\range{36}} \newline
+\amel{\range{72}} \newline
+\hex{} &
+\lastsoneturn{} &
+La cible subit un malus de -1 pour toucher et traite tous les terrains, y compris les Terrains Découverts, comme des Terrains Dangereux (2).
+\tabularnewline
+\hline
+5 & \wildernessspellfive{} &
+10+ &
+\range{24} \newline
+\hex{} &
+\lastsoneturn{} &
+La cible ne peut pas effectuer d'Attaques de Tir et ne peut pas utiliser la règle \fly{}.
+\tabularnewline
+\hline
+6 & \wildernessspellsix{} &
+\base{11+} \newline
+\amel{14+} &
+\base{\range{6}} \newline
+\amel{\range{12}} \newline
+\universal{} \newline
+\focused{} \newline
+\characteronly{} &
+\lastsoneturn{} &
+La cible reçoit de nouvelles règles et un changement de caractéristiques correspondant à un des Aspects listés dans la table ci dessous. Choisissez au lancement du sort.
+
+\tabularnewline
+\closetable
+
+\vspace*{0.5cm}
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+\begin{tabular}{rccccl}
+\hline
+& \labels@WS{} & \labels@S{} & \labels@T{} & \labels@A{} & \labels@specialrules{} \tabularnewline
+\textbf{\aspectofhydra} & \textbf{6} & \textbf{5} & \textbf{5} & \textbf{6} & \regeneration{6} \tabularnewline
+\textbf{\aspectofmanticore} & \textbf{6} & \textbf{5} & \textbf{5} & \textbf{4} & \multiplewounds{1D3}{}, \lethalstrike{} \tabularnewline
+\textbf{\aspectofdragon} & \textbf{6} & \textbf{6} & \textbf{6} & \textbf{3} & \breathweapon{\Strength{} 4, \flamingattacks} \tabularnewline
+\hline
+\end{tabular}
+\end{center}
+\renewcommand{\arraystretch}{3.2}
+
+
 
 
 \eightfoldpathtitle{eightfoldpath}{\Pathof{} \eightpaths}
+
+\spaceaftersection{}
+
+La Discipline \eightpaths{} est accessible à de rares Sorciers. Elle regroupe les sorts Primaires des huit Disciplines Communes, et chacun de ces sorts déclenche l'Attribut de sa Discipline lorsqu'il est lancé avec succès.
+
+\vspace*{1cm}
+\begin{center}
+\begin{tabular}{>{\bf}M{1.75cm}>{\raggedright}m{2.1cm}M{1cm}M{1.9cm}M{1.5cm}m{7cm}}
+\rowcolor{black!30} &
+\textbf{\spellsName} &
+\textbf{\spellsCastingValue} &
+\textbf{\spellsType} &
+\textbf{\spellsDuration} &
+\centering\textbf{\spellsEffect}
+\tabularnewline
+\cellcolor[HTML]{\colors@alchemy} \alchemyTOC{} &
+\alchemyattribute{} &
+\textbf{A} &
+\range{12} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne +1 en Sauvegarde d'Armure. Aucune figurine ne peut obtenir mieux que 3+ en Sauvegarde d'Armure grâce à ce sort avant d'appliquer d'éventuels malus. \tabularnewline
+\cellcolor[HTML]{\colors@alchemy} \includegraphics[width=1cm]{pics/alchemy.png}&
+\alchemysignature &
+\base{9+}\newline
+\amel{17+} &
+\range{24} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit \base{1D6} \amel{2D6} touches avec la règle \metalshifting{}.
+\tabularnewline
+\hline
+\cellcolor[HTML]{\colors@heavens} \heavensTOC{} &
+\heavensattribute{} &
+\textbf{A} &
+\specialTYPE{} &
+\lastsoneturn{} &
+L'armée du lanceur gagne un marqueur \og \heavensattribute{} \fg{}. Ce marqueur peut être dépensé pour relancer un unique D6 d'un jet pour toucher, pour blesser ou de Sauvegarde d'Armure.
+\tabularnewline
+\cellcolor[HTML]{\colors@heavens} \includegraphics[width=1cm]{pics/heavens.png} &
+\heavenssignature{} &
+\base{7+}\newline
+\amel{10+} &
+\base{\range{12}} \newline
+\amel{\range{36}} \newline
+\hex{} &
+\lastsoneturn{} &
+La cible subit un malus de -1 pour toucher et de -1 en Commandement. Les Attaques de Tir ne nécessitant pas l'utilisation de la CT doivent obtenir un 4+ sur 1D6 pour pouvoir être utilisées.
+\tabularnewline
+\hline
+\cellcolor[HTML]{\colors@fire} \textcolor{white}{\fireTOC} &
+\fireattribute{} &
+\textbf{A} &
+\range{24} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit 1D3 touches de Force 4 avec la règle \flamingattacks{}.
+\tabularnewline
+\cellcolor[HTML]{\colors@fire} \includegraphics[width=1cm]{pics/fire.png} &
+\firespellone{} &
+\base{7+}\newline
+\amel{10+} &
+\base{\range{18}} \newline
+\amel{\range{36}} \newline
+\hex{} &
+\remainsinplay{} &
+A la fin de chaque Phase de Magie, la cible subit 1D6 touches de Force 4 avec la règle \flamingattacks{}.
+\tabularnewline
+\hline
+\cellcolor[HTML]{\colors@light} \lightTOC{} &
+\lightattribute{} &
+\textbf{A} &
+\range{48} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne +1 en Commandement. Aucune figurine ne peut être affectée par ce sort plus d'une fois par Phase de Magie.
+\tabularnewline
+\cellcolor[HTML]{\colors@light} \includegraphics[width=1cm]{pics/light.png} &
+\lightsignature{} &
+\base{5+}\newline
+\amel{14+} &
+\base{\range{24}} \newline
+\amel{\range{48}} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit 1D6 touches de Force \base{4} \amel{6} avec la règle \flamingattacks{}.
+
+\vspace*{5pt}
+Si la cible dispose de la règle \otherworldly{} ou \undead{}, elle subit 2D6 touches à la place.
+\tabularnewline
+\end{tabular}
+\end{center}
+
+
+
+\newpage
+
+\vspace*{2cm}
+\begin{center}
+\begin{tabular}{>{\bf}M{1.75cm}>{\raggedright}m{2.1cm}M{1cm}M{1.9cm}M{1.5cm}m{7cm}}
+\rowcolor{black!30} &
+\textbf{\spellsName} &
+\textbf{\spellsCastingValue} &
+\textbf{\spellsType} &
+\textbf{\spellsDuration} &
+\centering\textbf{\spellsEffect}
+\tabularnewline
+\cellcolor[HTML]{\colors@death} \textcolor{white}{\deathTOC} &
+\deathattribute{} &
+ \textbf{A} &
+\range{24} \newline
+\hex{} &
+\lastsoneturn{} &
+La cible subit un malus de -1 en Commandement. Aucune figurine ne peut être affectée par ce sort plus d'une fois par Phase de Magie.
+\tabularnewline
+\cellcolor[HTML]{\colors@death} \includegraphics[width=1cm]{pics/death.png} &
+\deathsignature{} &
+\base{8+}\newline
+\amel{11+} &
+\range{18} \newline
+\focused{} \newline
+\hex{} \newline
+\direct{} \newline
+\damage{} &
+\instant{} &
+La cible subit 1 blessure avec la règle \armourpiercing{6}.
+
+\vspace*{5pt}
+\amel{Si la blessure n'est pas sauvegardée, le lanceur Récupère 1 PV}.
+\tabularnewline
+\hline
+\cellcolor[HTML]{\colors@nature} \textcolor{white}{\natureTOC} &
+\natureattribute{} &
+\textbf{A} &
+\range{12} \newline
+\focused{} \newline
+\augment{} &
+\instant{} &
+La cible Récupère un PV. Aucune figurine ne peut Récupérer plus d'un PV par Phase de Magie avec ce sort.\tabularnewline
+\cellcolor[HTML]{\colors@nature} \includegraphics[width=1cm]{pics/nature.png} &
+\naturesignature{} &
+\base{4+}\newline
+\amel{8+} &
+\base{\castersunit} \newline
+\amel{\range{12}} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne la règle \regeneration{5}. 
+\tabularnewline
+\hline
+\cellcolor[HTML]{\colors@shadows} \textcolor{white}{\shadowsTOC} &
+\shadowsattribute{} &
+\textbf{A} &
+\range{12} \newline
+\focused{} \newline
+\augment{} &
+\instant{} &
+Ce sort ne peut être lancé que sur une unité constituée d'une seule figurine ou sur un Personnage. La cible peut effectuer un Mouvement Magique de \distance{10} avec la règle \fly{}.
+
+\vspace*{5pt}
+Si la cible dispose de la règle \largetarget{}, ce mouvement est limité à \distance{2}.
+\tabularnewline
+\cellcolor[HTML]{\colors@shadows} \includegraphics[width=1cm]{pics/shadows.png} &
+\shadowssignature{} &
+\base{4+}\newline
+\amel{7+} &
+\range{48} \newline
+\hex{} &
+\lastsoneturn{} &
+La cible subit un malus de \base{1} \amel{-1D3} à une caractéristique parmi M, CC, CT ou I, jusqu'à un minimum de 1. Le lanceur doit préciser laquelle avant de lancer le sort.
+\tabularnewline
+\hline
+\cellcolor[HTML]{\colors@wilderness} \textcolor{white}{\wildernessTOC} &
+\wildernessattribute{} &
+\textbf{A} &
+\range{12} \newline
+\augment{} &
+\instant{} &
+Ce sort ne peut affecter que les unités composées uniquement, au choix, de :
+\begin{itemize}[label={-}]
+\item \cavalry{}, \warbeast{}, \monstrouscavalry{}, \monstrousbeast{}, \chariot{}, \monster{} et Monstre Mon\-té.
+\item toute unité du Livre d'Armée Hardes Bestiales.
+\item l'unité du lanceur.
+\end{itemize}
+
+La cible peut effectuer un Mouvement Magique de\newline\distance{1D3+2}.
+\tabularnewline
+\cellcolor[HTML]{\colors@wilderness} \includegraphics[width=1cm]{pics/wilderness.png} &
+\wildernesssignature{} &
+\base{9+} \newline
+\amel{12+} &
+\base{\range{12}} \newline
+\amel{\range{24}} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne +1 en Force et en Endurance.
+\tabularnewline
+\end{tabular}
+\end{center}
+
+
+
 
 
 
 \newspecificpath{butchery}{\butchery}
 
+\starttable[white]{\colors@butchery}
+A &
+\butcheryattribute{} &
+&
+\caster{} &
+\instant{} /\newline \lastsoneturn{} &
+La cible Récupère un PV précédemment perdu et gagne +1 en Endurance. De plus, les attaques avec \poisonedattacks{} dirigées contre la cible perdent cette règle.
+\tabularnewline
+\hline
+0 & \butcherysignature{} &
+\base{7+}\newline \amel{11+} &
+\base{\range{18}} \newline
+\amel{\range{12}} \newline
+\amel{\aura{}} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne +1 en Endurance. 
+\tabularnewline
+\hline
+1 & \butcheryspellone{} &
+\base{6+}\newline
+\amel{9+} &
+\base{\range{12}} \newline
+\amel{\range{24}} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne la règle \stubborn{}.
+\tabularnewline
+\hline
+2 & \butcheryspelltwo{} &
+\base{6+}\newline
+\amel{10+} &
+\base{\range{18}} \newline
+\amel{\range{12}} \newline
+\amel{\aura{}} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne +1 en Force.
+\tabularnewline
+\hline
+3 & \butcheryspellthree{} &
+\base{7+}\newline
+\amel{12+} &
+\base{\range{24}} \newline
+\amel{\range{36}} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit 2D6 touches de Force \base{2} \amel{3} avec la règle \armourpiercing{6}.
+\tabularnewline
+\hline
+4 & \butcheryspellfour{} &
+\base{7+}\newline
+\amel{10+} &
+\base{\range{36}} \newline
+\amel{\range{72}} \newline
+\hex{} &
+\instant{} /\newline
+\lastsoneturn{} &
+La cible doit immédiatement effectuer un test de Panique.
+
+\vspace*{5pt}
+\amel{Toutes les unités gagnent la règle \hatred{} contre la cible.}
+\tabularnewline
+\hline
+5 & \butcheryspellfive{} &
+\base{11+}\newline
+\amel{14+} &
+\base{\range{12}} \newline
+\amel{\range{24}} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne la \regeneration{4}.
+\tabularnewline
+\hline
+6 & \butcheryspellsix{} &
+\base{12+} \newline
+\amel{14+} &
+\base{\range{18}} \newline
+\amel{\range{24}} \newline
+\hex{} \newline
+\direct{} \newline
+\damage{} &
+\instant{} /\newline
+\lastsoneturn{} &
+La cible subit 1D6 touches de Force 5 avec la règle \armourpiercing{6}.
+
+\vspace*{5pt}
+Si au moins une blessure est infligée, la cible ne peut pas faire de Marche Forcée et jette un dé de moins pour ses jets de distance de Charge, Charge Irrésistible, Fuite et Poursuite.
+\tabularnewline
+\closetable
+
+
 
 
 \newspecificpath{change}{\change}
+
+\starttable[white]{\colors@change}
+A &
+\changeattribute{} &
+&
+\universal{} &
+\permanent{} &
+L'armée gagne un marqueur \changeattribute{}. Lorsque l'armée lance un sort de la Discipline \change{} non lié à un \boundspell{}, tout Dé de Pouvoir ayant donné un \result{1} naturel peut être relancé en échange d'un marqueur.
+\tabularnewline
+\hline
+0 & \changesignature{} &
+\base{5+}\newline
+\amel{8+} \newline
+\amelbis{11+} &
+\base{\range{24}} \newline
+\amel{\range{48}} \newline
+\amelbis{\range{48}} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit \base{1D6} \amel{1D6} \amelbis{1D6+1} touches de Force 1D6 \amel{1D6} \amelbis{1D6+1} avec la règle \hellfire{}.
+\tabularnewline
+\hline
+1 & \changespellone{} &
+\base{6+}\newline
+\amel{11+} &
+\base{\caster} \newline
+\amel{\range{24}} \newline
+\amel{\focused} \newline
+\amel{\augment} &
+\lastsoneturn{} &
+La cible gagne une \breathweapon{\Strength{} 1D3+2, \hellfire{}}.
+\tabularnewline
+\hline
+2 & \changespelltwo{} &
+7+ &
+\range{24} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit une touche de Force 1D6+4 avec les règles \multiplewounds{1D3}{}, \hellfire{} et \armourpiercing{6}. Les rangs de l'unité ciblée sont pénétrés de la même façon que par une \boltthrower{}. 
+\tabularnewline
+\hline
+3 & \changespellthree{} &
+7+ &
+\range{18} \newline
+\hex{} \newline
+\direct{} \newline
+\damage{} \newline
+\focused{} &
+\instant{} &
+Le lanceur et la cible lancent chacun 1D6 et ajoutent leur Niveau de Magie au résultat. Si le total du lanceur est plus élevé, la cible subit une touche de Force 3 avec la règle \armourpiercing{6} et perd un Niveau de Magie, si elle en avait.
+\tabularnewline
+\hline
+4 & \changespellfour{} &
+9+ &
+\range{24} \newline
+\hex{} &
+\lastsoneturn{} &
+La cible ne peut plus utiliser les règles \inspiringpresence{} et \holdyourground{}.
+\tabularnewline
+\hline
+5 & \changespellfive{} &
+9+ &
+\range{24} \newline
+\hex{} &
+\lastsoneturn{} &
+Lorsque la cible effectue une Attaque de Corps à Corps ou de Tir, tout jet pour toucher ayant donné \result{1}, après une éventuelle relance, est mis de côté. Pour chaque jet ainsi mis de côté, la cible subit immédiatement une touche avec la même Force et les mêmes règles que l'attaque initiale.
+
+\vspace*{5pt}
+Les Attaques de Tir comptent toujours comme des Attaques de Tir, et les Attaques de Corps à Corps comptent toujours comme des Attaques de Corps à Corps, participant ainsi au Résultat de Combat du camp du lanceur du sort.
+
+\vspace*{5pt}
+Les unités composées d'une seule figurine ne peuvent pas être affectées par ce sort.
+\tabularnewline
+\hline
+6 & \changespellsix{} &
+15+ &
+\range{24} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit 2D6 touches de Force 2D6 avec la règle \hellfire{}. Si un 11 ou un 12 est obtenu pour la Force, considérez la Force comme étant de 10.
+\tabularnewline
+\closetable
+
 
 
 
 \newspecificpath{biggreengods}{\thebiggreengods}
 
+\starttable[white]{\colors@biggreengods}
+A &
+\thebiggreengodsattribute{} &
+&
+\range{24} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible peut relancer ses jets pour blesser ayant donné \result{1} au Corps à Corps. 
+\tabularnewline
+\hline
+0 &
+\thebiggreengodssignature{} &
+10+ &
+\range{18} \newline
+\hex{} &
+\lastsoneturn{} &
+Toutes les unités peuvent relancer leurs jets pour toucher ratés contre la cible au Corps à Corps.
+\tabularnewline
+\hline
+1 & \thebiggreengodsspellone{} &
+\base{6+} \newline
+\amel{13+} &
+\base{\range{24}} \newline
+\amel{\range{18}} \newline
+\amel{\aura{}} \newline
+\hex{} \newline
+\direct{} \newline
+\damage{} \newline
+\focused{} &
+\instant{} &
+Affecte uniquement les Sorciers.
+
+\vspace*{5pt}
+La cible subit une touche de Force 5 avec la règle \armourpiercing{6}.
+\tabularnewline
+\hline
+2 & \thebiggreengodsspelltwo{} &
+\base{6+} \newline
+\amel{11+} &
+\base{\caster} \newline
+\amel{\range{12}} \newline
+\amel{\focused} \newline
+\amel{\augment} \newline
+\amel{\characteronly} &
+\remainsinplay{} &
+La cible gagne +3 en Force, +3 Attaques et la règle \magicalattacks{}. 
+\tabularnewline
+\hline
+3 & \thebiggreengodsspellthree{} &
+\base{8+} \newline
+\amel{11+} &
+\base{\range{12}} \newline
+\amel{\range{24}} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne une \wardsave{5}.
+\tabularnewline
+\hline
+4 & \thebiggreengodsspellfour{} &
+\base{11+} \newline
+\amel{14+} &
+\range{24} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible peut faire un Pivot, en ignorant tout obstacle, puis effectuer un Mouvement Magique de \base{\distance{3D6}} \amel{\distance{5D6}} avec la règle \fly{}. Jetez les dés pour la distance avant de pivoter.
+
+\vspace*{5pt}
+À la fin de ce mouvement, l'unité peut encore faire un Pivot en ignorant les obstacles. L'unité ne peut pas finir positionnée à moins de \distance{1} d'une autre unité ou d'un Terrain Infranchissable. 
+\tabularnewline
+\hline
+5 &
+\thebiggreengodsspellfive{} &
+11+ &
+\range{18} \newline
+\hex{} \newline
+\direct{} \newline
+\damage{} &
+\instant{} &
+La cible subit 2D6 touches de Force 5.
+\tabularnewline
+\hline
+6 & \thebiggreengodsspellsix{} &
+\base{13+} \newline
+\amel{16+} &
+\range{36} \newline
+\hex{} \newline
+\direct{} \newline
+\damage{} &
+\instant{} &
+Placez le centre d'un gabarit de \distance{3} sur l'unité ciblée et à portée du sort, puis faites une Déviation de \distance{1D6}. Toutes les figurines sous le gabarit subissent chacune une touche de Force \base{6} \amel{8} avec la règle \multiplewounds{1D3}{}.
+\tabularnewline
+\closetable
+
+
 
 
 \newspecificpath{littlegreengods}{\thelittlegreengods}
 
+\spaceaftersection{}
+
+Après le déploiement, tout Sorcier connaissant au moins un sort de cette Discipline doit choisir un sort non lié à un \boundspell{} connu par n'importe quel Sorcier sur le champ de bataille. Il gagne l'Attribut de Discipline de ce sort pour ses propres lancements.
+
+\starttable{\colors@littlegreengods}
+A &
+\thelittlegreengodsattribute{} &
+&
+\specialTYPE{} &
+\specialTYPE{} &
+Utilisez l'Attribut de Discipline du sort choisi en début de partie. Remplacez toutes les références à la Discipline de l'Attribut par la Discipline \thelittlegreengods{}. Si le sort choisi appartient à la Discipline \thelittlegreengods{}, l'Attribut n'a pas d'effet.
+\tabularnewline
+\hline
+0 & \thelittlegreengodssignature{} &
+\base{4+} \newline
+\amel{9+} &
+\range{24} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit \base{2D6} \amel{3D6} touches de Force 3.
+\tabularnewline
+\hline
+1 &
+\thelittlegreengodsspellone{} &
+\base{5+}\newline
+\amel{8+} &
+\base{\range{12}} \newline
+\amel{\range{24}} \newline
+\augment{} &
+\lastsoneturn{} &
+Les Attaques de Corps à Corps et de Tir de la cible gagnent la règle \armourpiercing{1}.
+
+\vspace*{5pt}
+Si la cible attaque une unité sur son flanc ou son arrière, la cible peut relancer ses jets pour toucher et pour blesser ratés au Corps à Corps.
+\tabularnewline
+\hline
+2 & \thelittlegreengodsspelltwo{} &
+\base{6+}\newline
+\amel{9+} &
+\base{\range{12}} \newline
+\amel{\range{24}} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne la règle \poisonedattacks{}. Les attaques qui disposaient déjà de cette règle blessent automatiquement sur 5+.
+\tabularnewline
+\hline
+3 & \thelittlegreengodsspellthree{} &
+6+ &
+\range{24} \newline
+\hex{} &
+\lastsoneturn{} &
+La cible subit un malus de -1D3 en Mouvement et en Initiative, jusqu'à un minimum de 1. 
+\tabularnewline
+\hline
+4 &
+\thelittlegreengodsspellfour{} &
+\base{7+} \newline
+\amel{10+} &
+\base{\range{12}} \newline
+\amel{\range{6}} \newline
+\amel{\aura{}} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible gagne les règles \hardtarget{} et \distracting{}. Toute figurine d'une unité chargeant avec succès la cible doit effectuer un test de Terrain Dangereux (1).
+\tabularnewline
+\hline
+5 &
+\thelittlegreengodsspellfive{} &
+9+ &
+\range{24} \newline
+\hex{} &
+\lastsoneturn{} &
+La cible doit relancer ses jets pour toucher, pour blesser et de Sauvegarde de tout type ayant donné \result{6}.
+\tabularnewline
+\hline
+6 & \thelittlegreengodsspellsix{} &
+13+ &
+\vortex{} \newline
+(\range{4}, \template{} \distance{5}) \newline
+\ground{} &
+\instant{} /\newline
+\lastsoneturn{} &
+Toutes les figurines touchées par le gabarit subissent chacune une touche de Force 3 avec la règle \armourpiercing{6}.
+
+\vspace*{5pt}
+Toute unité touchée par le gabarit subit un malus de -1 en Capacité de Combat.
+\tabularnewline
+\closetable
+
+
 
 
 \newspecificpath{forge}{\forge}
+
+\starttable[white]{\colors@forge}
+A &
+\forgeattribute{} &
+&
+\range{18} \newline
+\hex{} &
+\lastsoneturn{} &
+La cible gagne la règle \flammable{}. 
+\tabularnewline
+\hline
+0 &
+\forgesignature{} &
+\base{8+} \newline
+\amel{11+} &
+\range{12} \newline
+\augment{} &
+\remainsinplay{} &
+La cible gagne les règles \flamingattacks{} et \magicalattacks{}, \base{ou} \amel{et} les attaques dirigées contre la cible subissent un malus de -1 pour blesser.\newline
+\base{Choisissez avant de lancer le sort.}
+\tabularnewline
+\hline
+1 &
+\forgespellone{} &
+\base{5+} \newline
+\amel{11+} &
+\range{12} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit \base{1D6} \amel{2D6} touches de Force 6 avec la règle \flamingattacks{}.
+\tabularnewline
+\hline
+2 &
+\forgespelltwo{} &
+7+ &
+\range{24} \newline
+\hex{} &
+\permanent{} &
+La cible subit un malus de -1 en Commandement.
+\tabularnewline
+\hline
+3 &
+\forgespellthree{} &
+7+ &
+\range{12} \newline
+\augment{} &
+\lastsoneturn{} &
+La cible peut relancer ses jets pour toucher au Corps à Corps.
+\tabularnewline
+\hline
+4 &
+\forgespellfour{} &
+9+ &
+\range{18} \newline
+\focused{} \newline
+\hex{} \newline
+\direct{} \newline
+\damage{} &
+\instant{} &
+La cible subit un nombre de touches égal à 2D6 moins son Endurance. Ces touches blessent sur 4+ et ont la règle \armourpiercing{6}.
+\tabularnewline
+\hline
+5 &
+\forgespellfive{} &
+\base{11+} \newline
+\amel{14+} &
+\base{\range{24}} \newline
+\amel{\range{48}} \newline
+\hex{} &
+\lastsoneturn{} &
+La cible subit un malus de -1 pour toucher au Corps à Corps et de -2 pour toucher avec ses Attaques de Tir.
+
+\vspace*{5pt}
+Elle ne peut pas effectuer de Marche Forcée durant l'Étape des Autres Mouvements. Si l'unité veut charger, elle divise par deux, en arrondissant au supérieur, le résultat de son jet de distance de charge.
+
+\vspace*{5pt}
+La portée de tous les sorts connus par la cible est limitée à un maximum de \distance{12}.
+\tabularnewline
+\hline
+6 &
+\forgespellsix{} &
+\base{14+} \newline
+\amel{17+} &
+\range{36} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+Placez le centre d'un gabarit de \distance{3} avec le centre sur la cible et à portée du sort. Faites une Déviation de \distance{1D6}. Toutes les figurines sous le gabarit subissent une touche de Force \base{5} \amel{7} avec les règles \flamingattacks{} et \multiplewounds{\ordnance}{}.
+\tabularnewline
+\closetable
+
 
 
 
