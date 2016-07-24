@@ -490,7 +490,6 @@
 
 \showunit{
 	name={\infernalartillery},
-	QRSname={\infernalartilleryQRS},
 	profile={\machine{}<- - - - 7 3 - - -,
 					\crew{} (3)<3 4 3 3 4 - 2 1 9,
 					[\ogreslave{} (1)]<- 3 - 4 - \plusone{} 2 3 -,
@@ -549,9 +548,9 @@
 		\vspace*{\fill}
 		\end{multicols}
 		\def\tempunitrules{
+			\unitrule{\bounddaemon}{\bounddaemonrule}
 			\unitrule{\ogreslave}{\ogreslaverule}
 			\unitrule{\earthquakeshells}{\earthquakeshellsrule}
-			\unitrule{\bounddaemon}{\bounddaemonrule}
 		}
 		\unitrules{\tempunitrules}
 	},

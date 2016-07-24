@@ -32,6 +32,7 @@
 \usepackage{multicol}			% Allows to divide a part of the page in multiple columns.
 \usepackage{fancyhdr}		% For custom headers and foot texts
 \pagestyle{fancy}
+\usepackage{framed}
 	
 %% Others
 \usepackage{xstring}            % String parsing, cutting, etc.
@@ -172,6 +173,11 @@
 
 \newcommand{\basictitle}[2]{%
 \vspace*{-1.5cm}\section*{}\noindent\begin{center}\toctarget{#1}{\hugefontsize\textbf{\antiquefont\expandafter\uppercase\expandafter{#2}}}\end{center}
+}
+
+\newcommand{\basicsubtitle}[1]{%
+\subsection*{}\noindent{\Largefontsize\antiquefont\textbf{#1}}
+\vspace*{10pt}%
 }
 
 \newcommand{\newbattlepath}[2]{%
