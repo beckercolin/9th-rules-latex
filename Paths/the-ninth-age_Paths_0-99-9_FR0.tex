@@ -203,7 +203,7 @@ Les Armes de Tir standard portées par l'unité ciblée subissent un malus de -1
 \hex{} \newline
 \direct{} \newline
 \damage{} &
-\instant{} / \newline \lastsoneturn{} &
+\instant{} \newline \lastsoneturn{} &
 Le propriétaire de l'unité ciblée lance un dé pour chaque figurine de l'unité, dans l'ordre de son choix. Ignorez le premier 5+ obtenu. Pour les figurines suivantes, sur 5+, la figurine subit une blessure avec la règle \multiplewounds{10}{} sans aucune sauvegarde autorisée.
 
 \vspace*{5pt}
@@ -353,7 +353,7 @@ La cible subit \base{1D6} \amel{2D6} \amelbis{3D6} touches de Force 4 avec la r�
 \amel{\range{36}} \newline
 \hex{} &
 \remainsinplay{} &
-A la fin de chaque Phase de Magie, la cible subit 1D6 touches de Force 4 avec la règle \flamingattacks{}.
+À la fin de chaque Phase de Magie, la cible subit 1D6 touches de Force 4 avec la règle \flamingattacks{}.
 \tabularnewline
 \hline
 2 &
@@ -471,7 +471,7 @@ La cible gagne les règles \hardtarget{} et \distracting{}. Les Attaques de Tir 
 7+ &
 \range{24} \newline
 \augment{} &
-\instant{} /\newline
+\instant{}\newline
 \lastsoneturn{} &
 Si la cible n'est ni engagée dans un combat ni en fuite, elle peut effectuer immédiatement une Reformation. Si elle est engagée au corps à corps, elle peut effectuer une Reformation de Combat.
 
@@ -904,7 +904,7 @@ La cible gagne la règle \frenzy{}.
 \missile{} \newline
 \damage{} &
 \instant{} &
-La cible subit une touche de Force \base{6} \amel{10} avec les règles \multiplewounds{\ordnance}{} et \armourpiercing{6}. Les rangs de l'unité ciblée sont pénétrés de la même façon que par une \boltthrower{}. 
+La cible subit une touche de Force \base{6} \amel{10} avec les règles \multiplewounds{\base{1D3} \amel{\ordnance}}{} et \armourpiercing{6}. Les rangs de l'unité ciblée sont pénétrés de la même façon que par une \boltthrower{}. 
 \tabularnewline
 \hline
 4 &
@@ -948,7 +948,7 @@ La cible reçoit de nouvelles règles et un changement de caractéristiques corr
 \begin{tabular}{rccccl}
 \hline
 & \labels@WS{} & \labels@S{} & \labels@T{} & \labels@A{} & \labels@specialrules{} \tabularnewline
-\textbf{\aspectofhydra} & \textbf{6} & \textbf{5} & \textbf{5} & \textbf{6} & \regeneration{6} \tabularnewline
+\textbf{\aspectofhydra} & \textbf{6} & \textbf{5} & \textbf{5} & \textbf{6} & \regeneration{4} \tabularnewline
 \textbf{\aspectofmanticore} & \textbf{6} & \textbf{5} & \textbf{5} & \textbf{4} & \multiplewounds{1D3}{}, \lethalstrike{} \tabularnewline
 \textbf{\aspectofdragon} & \textbf{6} & \textbf{6} & \textbf{6} & \textbf{3} & \breathweapon{\Strength{} 4, \flamingattacks} \tabularnewline
 \hline
@@ -1023,14 +1023,18 @@ La cible subit un malus de -1 pour toucher et de -1 en Commandement. Les Attaque
 La cible subit 1D3 touches de Force 4 avec la règle \flamingattacks{}.
 \tabularnewline
 \cellcolor[HTML]{\colors@fire} \includegraphics[width=1cm]{pics/fire.png} &
-\firespellone{} &
-\base{7+}\newline
-\amel{10+} &
-\base{\range{18}} \newline
+\firesignature{} &
+\base{5+}\newline
+\amel{10+} \newline
+\amelbis{14+} &
+\base{\range{24}} \newline
 \amel{\range{36}} \newline
-\hex{} &
-\remainsinplay{} &
-A la fin de chaque Phase de Magie, la cible subit 1D6 touches de Force 4 avec la règle \flamingattacks{}.
+\amelbis{\range{48}} \newline
+\hex{} \newline
+\missile{} \newline
+\damage{} &
+\instant{} &
+La cible subit \base{1D6} \amel{2D6} \amelbis{3D6} touches de Force 4 avec la règle \flamingattacks{}.
 \tabularnewline
 \hline
 \cellcolor[HTML]{\colors@light} \lightTOC{} &
@@ -1178,7 +1182,7 @@ A &
 \butcheryattribute{} &
 &
 \caster{} &
-\instant{} /\newline \lastsoneturn{} &
+\instant{}\newline \lastsoneturn{} &
 La cible Récupère un PV précédemment perdu et gagne +1 en Endurance. De plus, les attaques avec \poisonedattacks{} dirigées contre la cible perdent cette règle.
 \tabularnewline
 \hline
@@ -1236,7 +1240,7 @@ La cible subit 2D6 touches de Force \base{2} \amel{3} avec la règle \armourpier
 \base{\range{36}} \newline
 \amel{\range{72}} \newline
 \hex{} &
-\instant{} /\newline
+\instant{}\newline
 \lastsoneturn{} &
 La cible doit immédiatement effectuer un test de Panique.
 
@@ -1264,7 +1268,7 @@ La cible gagne la \regeneration{4}.
 \hex{} \newline
 \direct{} \newline
 \damage{} &
-\instant{} /\newline
+\instant{}\newline
 \lastsoneturn{} &
 La cible subit 1D6 touches de Force 5 avec la règle \armourpiercing{6}.
 
@@ -1567,7 +1571,7 @@ La cible doit relancer ses jets pour toucher, pour blesser et de Sauvegarde de t
 \vortex{} \newline
 (\range{4}, \template{} \distance{5}) \newline
 \ground{} &
-\instant{} /\newline
+\instant{}\newline
 \lastsoneturn{} &
 Toutes les figurines touchées par le gabarit subissent chacune une touche de Force 3 avec la règle \armourpiercing{6}.
 
@@ -1772,7 +1776,8 @@ De plus, la cible doit effectuer un test de Commandement sans aucune relance aut
 13+ &
 \range{12} \newline
 \hex{} &
-\instant{} / \newline \lastsoneturn{} &
+\instant{}\newline
+\lastsoneturn{} &
 La cible subit immédiatement 2D6 touches blessant sur 4+ avec la règle \armourpiercing{6}.
 
 \vspace*{5pt}
@@ -1887,7 +1892,7 @@ Si elle porte un ou plusieurs Objets Magiques, l'un d'entre eux, déterminé au 
 \direct{} \newline
 \damage{} &
 \remainsinplay{} &
-A la fin de chaque Phase de Magie, toutes les figurines de l'unité ciblée subissent une touche de Force \base{3} \amel{4} avec la règle \flamingattacks{}.
+À la fin de chaque Phase de Magie, toutes les figurines de l'unité ciblée subissent une touche de Force \base{3} \amel{4} avec la règle \flamingattacks{}.
 \tabularnewline
 \closetable
 
@@ -2156,7 +2161,7 @@ Une figurine de l'unité invoquée doit être placée au niveau du marqueur, et 
 \range{12} \newline
 \amel{\aura} \newline
 \augment{} &
-\instant{} / \newline
+\instant{} \newline
 \lastsoneturn{} &
 La cible peut immédiatement effectuer un Mouvement Magique de \distance{8} \base{et} \amel{ou} relancer ses jets pour toucher ratés au Corps à Corps.
 

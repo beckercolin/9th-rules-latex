@@ -369,10 +369,10 @@
 	basesize=20x20,
 	commontype=\dwarvencommonrules{},
 	commonspecialrules={\relentless{},\shieldwall{},\sturdy{}},
-	specialrules={\bodyguard{},\shieldskill{}},
+	specialrules={\bodyguard{},\wallofiron{}},
 	armour={\platearmour{},\shield{}},
 	unitrules={
-		\unitrule{\shieldskill{}}{\shieldskillrule{}}
+		\unitrule{\wallofiron{}}{\wallofironrule{}}
 	},
 	commandgroup={champion=10, musician=10, banner=10, bannerallowance=50},
 }
@@ -603,6 +603,7 @@
 
 \showunit{
 	name={\vengeanceseeker},
+	QRSname={\vengeanceseekerQRS},
 	cost={60},
 	profile={< 3 5 3 4 4 3 2 \starsymbol{} 10},
 	type=\infantry{},
