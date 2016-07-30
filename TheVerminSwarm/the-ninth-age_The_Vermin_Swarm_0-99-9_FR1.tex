@@ -1,3 +1,4 @@
+\def\languageisfrench{}
 \input{../Layout/AB_layout.tex}
 
 \newcommand{\booktitle}{Marée de Vermine}
@@ -191,19 +192,19 @@
 \renewcommand{\arraystretch}{2}
 \begin{center}\begin{tabular}{rp{6cm}l}
 \hline
- & \textbf{Bonus} & \textbf{Discipline de Magie} \tabularnewline
-\textbf{ \schemer} & \pathmaster{}, 3 \darkshards{}, +1 en Commandement & Discipline \ruin{} \tabularnewline
-\textbf{\plaguebringer} & \plagueridden{} (voir l'unité de base \plaguebrotherhood{}), +1 en Endurance & Discipline \disease{} \tabularnewline
-\textbf{\deceiver} & \lightningreflexes{}, +1 Attaque & Discipline \shadows{} \tabularnewline
-\textbf{\thunderer} & \ha{}, +1 en Force & Discipline \ruin{} \tabularnewline
-\textbf{\shaper} & \regeneration{4}, +1 en Mouvement & Discipline \disease{} \tabularnewline
+ & \textbf{Bonus} & \textbf{\Pathof{} de Magie} \tabularnewline
+\textbf{ \schemer} & \pathmaster{}, 3 \darkshards{}, +1 en Commandement & \Pathof{} \ruin{} \tabularnewline
+\textbf{\plaguebringer} & \plagueridden{} (voir l'unité de base \plaguebrotherhood{}), +1 en Endurance & \Pathof{} \disease{} \tabularnewline
+\textbf{\deceiver} & \lightningreflexes{}, +1 Attaque & \Pathof{} \shadows{} \tabularnewline
+\textbf{\thunderer} & \ha{}, +1 en Force & \Pathof{} \ruin{} \tabularnewline
+\textbf{\shaper} & \regeneration{4}, +1 en Mouvement & \Pathof{} \disease{} \tabularnewline
 \hline
 \end{tabular}\end{center}
 \renewcommand{\arraystretch}{1.2}
 }
 
 \newcommand{\plaguepatriarchrule}{%
-Le \magister{} gagne +1 en Endurance et les règles \frenzy{}, \hatred{} et \resistant{}. Il doit générer ses sorts dans la Discipline \disease{}.
+Le \magister{} gagne +1 en Endurance et les règles \frenzy{}, \hatred{} et \resistant{}. Il doit générer ses sorts dans la \Pathof{} \disease{}.
 }
 
 \newcommand{\fetthisbroodmasterrule}{%
@@ -213,9 +214,9 @@ La figurine gagne +1 en Mouvement et la règle \swiftstride{}.
 \newcommand{\aetherturbinerule}{%
 Le porteur dispose de trois sorts :
 \begin{itemize}[label={-}]
-\item \boundspell{4} : \changespelltwo{} (Discipline \change{}).
-\item \boundspell{4} : \ruinsignature{} (Discipline \ruin{}). 
-\item \boundspell{4} : \alchemyspellone{} (Discipline \alchemy{}). Ce sort ne peut viser que l'unité du lanceur.
+\item \boundspell{4} : \changespelltwo{} (\Pathof{} \change{}).
+\item \boundspell{4} : \ruinsignature{} (\Pathof{} \ruin{}). 
+\item \boundspell{4} : \alchemyspellone{} (\Pathof{} \alchemy{}). Ce sort ne peut viser que l'unité du lanceur.
 \end{itemize}
 }
 
@@ -236,7 +237,7 @@ Vous devez choisir deux améliorations pour la figurine, qui doivent être inscr
 }
 
 \newcommand{\cauldronofblightrule}{%
-Le Sorcier ne génère pas ses sorts aléatoirement mais connaît toujours les trois sorts suivants : \diseasespelltwo{} (Discipline \disease{}), \diseasespellthree{} (Discipline \disease{}) et \ruinspelltwo{} (Discipline \ruin{}).
+Le Sorcier ne génère pas ses sorts aléatoirement mais connaît toujours les trois sorts suivants : \diseasespelltwo{} (\Pathof{} \disease{}), \diseasespellthree{} (\Pathof{} \disease{}) et \ruinspelltwo{} (\Pathof{} \ruin{}).
 
 Ces sorts ne peuvent pas être dupliqués dans l'armée.
 }
@@ -491,7 +492,7 @@ Type : \hw{}. Les attaques faites avec cette arme sont résolues avec une Force 
 
 Lorsque le porteur attaque une figurine du livre d'armée des Forteresses Naines, le porteur peut relancer ses jets pour blesser des attaques portées avec cette arme.
 
-\pricelistitem{\eyeofthestorm}{20}Type : \halberd{}. Lorsque le porteur lance le sort \ruinsignature{} (Discipline \ruin{}), ajoutez +2 au nombre de touches.
+\pricelistitem{\eyeofthestorm}{20}Type : \halberd{}. Lorsque le porteur lance le sort \ruinsignature{} (\Pathof{} \ruin{}), ajoutez +2 au nombre de touches.
 
 \endpricelist
 
@@ -537,7 +538,7 @@ Une seule utilisation. Peut être activé au début de n'importe laquelle de vos
 
 \pricelistitem{\thelightningrod}{50}Une seule utilisation. Vous pouvez l'activer au début d'un Tour de Joueur adverse. Pendant ce Tour de Joueur, toutes les unités alliées gagnent la règle \hardtarget{}. Les attaques de tir qui n'ont pas besoin de jet pour toucher basé sur la CT doivent lancer 1D6, et ne peuvent pas tirer sur un 4+. Aucun mouvement de Vol ne peut être effectué.
 
-\pricelistitem{\iconofruin}{25}Lorsqu'un adversaire tente de dissiper un sort de type Amélioration ou Universel de la Discipline \ruin{} ou \disease{} (sans considérer l'attribut) ciblant l'unité du porteur, il subit un malus de -2 sur son jet.
+\pricelistitem{\iconofruin}{25}Lorsqu'un adversaire tente de dissiper un sort de type Amélioration ou Universel de la \Pathof{} \ruin{} ou \disease{} (sans considérer l'attribut) ciblant l'unité du porteur, il subit un malus de -2 sur son jet.
 
 \endpricelist
 

@@ -1,3 +1,4 @@
+\def\languageisfrench{}
 \input{../Layout/Paths_layout.tex}
 
 \newcommand{\booktitle}{Livre de Magie}
@@ -78,10 +79,10 @@ Batailles Fantastiques : Le 9\ieme Âge est un jeu de plateau qui met en scène 
 
 \spaceaftersection{}
 
-Dans ce livre, toutes les Disciplines de Magie sont présentées. Elles comprennent les 8 \textbf{Disciplines Communes} et les \textbf{Disciplines Spécifiques} des différentes armées. Pour plus d'informations sur les règles du jeu et en particulier la Phase de Magie, merci de vous référer au Livre de Règles.
+Dans ce livre, toutes les Voies de Magie sont présentées. Elles comprennent les 8 \textbf{Voies Communes} et les \textbf{Voies Spécifiques} des différentes armées. Pour plus d'informations sur les règles du jeu et en particulier la Phase de Magie, merci de vous référer au Livre de Règles.
 
 \vspace*{10pt}
-Chaque Discipline comprend 8 sorts. Le premier est appelé l’\textbf{Attribut} de la Discipline, qui est indiqué par la mention \og A \fg{} à la place du numéro du sort. C'est un sort particulier qui est automatiquement lancé quand un autre sort de la même Discipline est lancé avec succès. Les sept sorts suivants sont numérotés de 0 à 6. Le sort 0 est le sort \textbf{Primaire} de la Discipline. Un Sorcier peut toujours choisir d'échanger l'un de ses sorts générés aléatoirement par le sort Primaire, et plusieurs Sorciers peuvent connaître ce sort en même temps.
+Chaque Voie comprend 8 sorts. Le premier est appelé l’\textbf{Attribut} de la Voie, qui est indiqué par la mention \og A \fg{} à la place du numéro du sort. C'est un sort particulier qui est automatiquement lancé quand un autre sort de la même Voie est lancé avec succès. Les sept sorts suivants sont numérotés de 0 à 6. Le sort 0 est le sort \textbf{Primaire} de la Voie. Un Sorcier peut toujours choisir d'échanger l'un de ses sorts générés aléatoirement par le sort Primaire, et plusieurs Sorciers peuvent connaître ce sort en même temps.
 
 \vspace*{10pt}
 Certains sorts disposent de plusieurs valeurs de lancement. La ou les plus grandes sont pour la  ou les versions \textbf{améliorée(s)} du sort. Le joueur doit choisir la version du sort à lancer, sachant que plus la valeur de lancement est grande, plus le sort sera difficile à lancer, mais aussi plus il sera puissant. Parfois, les versions améliorées voient leur portée et le nombre de cibles augmenter, tandis que pour d'autres sorts, les effets peuvent être modifiés. Les différences entre versions améliorée(s) et basique suivent un code couleur. La partie en noir s'applique à toutes les versions du sort. Les textes en \base{rouge} s'appliquent à la version basique, tandis que les textes en \amel{bleu et entre crochets} s'appliquent à la version améliorée. Dans certains cas, il existe une deuxième \augment{} au sort, marquée en \amelbis{vert olive entre accolades}. 
@@ -140,7 +141,7 @@ La cible subit \base{1D6} \amel{2D6} touches avec la règle \metalshifting{}.
 \amel{\range{36}} \newline
 \augment{} &
 \lastsoneturn{} &
-Les Attaques de Corps à Corps et de Tir de la cible ont +1 pour toucher et gagnent les règles \magicalattacks{} et \armourpiercing{+1}.
+Les Attaques de Tir et de Corps à Corps de la cible ont +1 pour toucher et gagnent les règles \magicalattacks{} et \armourpiercing{+1}.
 \tabularnewline
 \hline
 2 &
@@ -177,7 +178,7 @@ La cible gagne les règles \hardtarget{} et \distracting{}.
 \missile{} \newline 
 \damage{} &
 \instant{} &
-La cible subit une touche avec les règles \multiplewounds{1D3}{} et \metalshifting{}. Les rangs de l'unité ciblée sont pénétrés de la même façon que pour une \boltthrower{}, mais l'attaque subit un malus de -1 pour blesser au lieu de -1 en Force pour chaque rang pénétré. 
+La cible subit une touche avec les règles \multiplewounds{1D3}{} et \metalshifting{}. Les rangs de l'unité ciblée sont pénétrés de la même façon que par une \boltthrower{}, mais l'attaque subit un malus de -1 pour blesser au lieu de -1 en Force pour chaque rang pénétré. 
 \tabularnewline
 \hline
 5 &
@@ -188,10 +189,10 @@ La cible subit une touche avec les règles \multiplewounds{1D3}{} et \metalshift
 \amel{\range{48}} \newline
 \hex{} &
 \lastsoneturn{} &
-Les figurines de l'unité ciblée ne peuvent pas recevoir de bonus de Force de leurs Armes de Corps à Corps standard.
+Les Armes de Tir standard portées par l'unité ciblée subissent un malus de -1 en Force. Ce sort n'affecte que les équipements standard et leur Force, aucune règle spéciale n'est altérée par ce sort.
 
 \vspace*{5pt}
-Les Armes de Tir standard portées par l'unité ciblée subissent un malus de -1 en Force. Ce sort n'affecte que les équipements standard et leur Force, aucune règle spéciale n'est altérée par ce sort.
+Les figurines de l'unité ciblée ne peuvent pas recevoir de bonus de Force de leurs Armes de Corps à Corps standard.
 \tabularnewline
 \hline
 6 &
@@ -365,7 +366,7 @@ La cible subit \base{1D6} \amel{2D6} \amelbis{3D6} touches de Force 4 avec la r�
 \amel{\aura{}} \newline
 \augment{} &
 \lastsoneturn{} &
-Les Attaques de Corps à Corps et de Tir de la cible ont +1 pour blesser et gagnent les règles \flamingattacks{} et \magicalattacks{}.
+Les Attaques de Tir et de Corps à Corps de la cible ont +1 pour blesser et gagnent les règles \flamingattacks{} et \magicalattacks{}.
 \tabularnewline
 \hline
 3 &
@@ -499,7 +500,7 @@ La cible gagne +3 en Capacité de Combat et en Initiative.
 \amel{\range{48}} \newline
 \hex{} &
 \lastsoneturn{} &
-Au début de chaque phase, jetez un dé. Sur 5+, la cible ne peut pas effectuer les actions suivantes correspondantes à la phase :
+Au début de chaque phase, jetez un dé. Sur 5+, la cible ne peut pas effectuer les actions suivantes correspondant à la phase :
 
 \vspace*{5pt}
 \textbf{Phase de Mouvement} : Déclarer une charge.
@@ -531,7 +532,7 @@ La cible gagne +1 Attaque, la règle \divineattacks{} et double son Mouvement ju
 \missile{} \newline
 \damage{} &
 \instant{} &
-La cible subit 2D6 touches de Force 4 avec la règle \divineattacks{}. Pour chaque autre Sorcier connaissant au moins un sort de la Discipline \light{} à moins de \distance{12} du lanceur, ajoutez +1 \base{pour blesser} \amel{en Force}.
+La cible subit 2D6 touches de Force 4 avec la règle \divineattacks{}. Pour chaque autre Sorcier connaissant au moins un sort de la Voie \light{} à moins de \distance{12} du lanceur, ajoutez +1 \base{pour blesser} \amel{en Force}.
 
 \vspace*{5pt}
 Si la cible dispose de la règle \otherworldly{} ou \undead{}, elle subit 3D6 touches à la place.
@@ -603,7 +604,7 @@ La cible subit \base{2D6} \amel{3D6} touches de Force 2 avec la règle \armourpi
 \direct{} \newline
 \damage{} &
 \instant{} &
-Le lanceur et la cible lancent chacun 1D6 et ajoutent leur Commandement actuel au résultat. Si le total du lanceur est plus élevé, la cible subit un nombre de blessures avec la règle \armourpiercing{6} égal à la différence entre leurs totaux respectifs.
+Le lanceur et la cible lancent chacun 1D6 et ajoutent leur Commandement actuel au résultat. Si le total du lanceur est le plus élevé, la cible subit un nombre de blessures avec la règle \armourpiercing{6} égal à la différence entre leurs totaux respectifs.
 \tabularnewline
 \hline
 4 &
@@ -663,7 +664,7 @@ La cible Récupère un PV. Aucune figurine ne peut Récupérer plus d'un PV par 
 \amel{\range{12}} \newline
 \augment{} &
 \lastsoneturn{} &
-La cible gagne la règle \regeneration{5} \amelbis{\regeneration{4} avec \naturespelltwo{}}. 
+La cible gagne la règle \regeneration{5} \amelbis{\regeneration{4} si \naturespelltwo{} est actif}. 
 \tabularnewline
 \hline
 1 &
@@ -678,7 +679,7 @@ La cible gagne la règle \regeneration{5} \amelbis{\regeneration{4} avec \nature
 La portée de ce sort peut être mesurée à partir du lanceur ou de tout Terrain Infranchissable ou Colline du champ de bataille.
 
 \vspace*{5pt}
-La cible subit \base{1D6} \amel{2D6} touches de Force 4 \amelbis{Force 5 avec \naturespelltwo{}}.
+La cible subit \base{1D6} \amel{2D6} touches de Force 4 \amelbis{Force 5 si \naturespelltwo{} est actif}.
 \tabularnewline
 \hline
 2 &
@@ -714,7 +715,7 @@ Toutes les figurines de l'unité ciblée sont considérées comme étant dans un
 \amel{\range{48}} \newline
 \augment{} &
 \instant{} &
-Ressuscitez 1D3+1 PVs \amelbis{1D6+1 PVs avec \naturespelltwo{}} dans l'unité ciblée. La quantité de PVs Ressuscités est divisée par deux en arrondissant au supérieur pour les unités de figurines de taille Moyenne et Grande.
+Ressuscitez 1D3+1 PVs \amelbis{1D6+1 PVs si \naturespelltwo{} est actif} dans l'unité ciblée. La quantité de PVs Ressuscités est divisée par deux en arrondissant au supérieur pour les unités de figurines de taille Moyenne et Grande.
 \tabularnewline
 \hline
 5 &
@@ -723,7 +724,7 @@ Ressuscitez 1D3+1 PVs \amelbis{1D6+1 PVs avec \naturespelltwo{}} dans l'unité c
 \range{24} \newline
 \augment{} &
 \lastsoneturn{} &
-La cible gagne +2 en Endurance \amelbis{+4 avec \naturespelltwo{}}.
+La cible gagne +2 en Endurance \amelbis{+4 si \naturespelltwo{} est actif}.
 \tabularnewline
 \hline
 6 &
@@ -753,7 +754,7 @@ A &
 \focused{} \newline
 \augment{} &
 \instant{} &
-Ce sort ne peut être lancé que sur une unité constituée d'une seule figurine ou sur un Personnage. La cible peut effectuer un Mouvement Magique de \distance{10} avec la règle \fly{}.
+Ce sort ne peut être lancé que sur un Personnage ou sur une unité constituée d'une seule figurine. La cible peut effectuer un Mouvement Magique de \distance{10} avec la règle \fly{}.
 
 \vspace*{5pt}
 Si la cible dispose de la règle \largetarget{}, ce mouvement est limité à \distance{2}.
@@ -924,7 +925,7 @@ La cible subit un malus de -1 pour toucher et traite tous les terrains, y compri
 \range{24} \newline
 \hex{} &
 \lastsoneturn{} &
-La cible ne peut pas effectuer d'Attaques de Tir et ne peut pas utiliser la règle \fly{}.
+La cible ne peut pas utiliser la règle \fly{} ni effectuer d'Attaques de Tir.
 \tabularnewline
 \hline
 6 &
@@ -937,7 +938,7 @@ La cible ne peut pas effectuer d'Attaques de Tir et ne peut pas utiliser la règ
 \focused{} \newline
 \characteronly{} &
 \lastsoneturn{} &
-La cible reçoit de nouvelles règles et un changement de caractéristiques correspondant à un des Aspects listés dans la table ci dessous. Choisissez au lancement du sort.
+La cible reçoit de nouvelles règles et un changement de caractéristiques correspondant à un des Aspects listés dans la table ci dessous. Choisissez avant le lancement du sort.
 
 \tabularnewline
 \closetable
@@ -963,7 +964,7 @@ La cible reçoit de nouvelles règles et un changement de caractéristiques corr
 
 \spaceaftersection{}
 
-La Discipline \eightpaths{} est accessible à de rares Sorciers. Elle regroupe les sorts Primaires des huit Disciplines Communes, et chacun de ces sorts déclenche l'Attribut de sa Discipline lorsqu'il est lancé avec succès.
+La Voie \eightpaths{} est accessible à de rares Sorciers. Elle regroupe les sorts Primaires des huit Voies Communes, et chacun de ces sorts déclenche l'Attribut de sa Voie lorsqu'il est lancé avec succès.
 
 \vspace*{1cm}
 \begin{center}
@@ -1288,7 +1289,7 @@ A &
 &
 \universal{} &
 \permanent{} &
-L'armée gagne un marqueur \changeattribute{}. Lorsque l'armée lance un sort de la Discipline \change{} non lié à un \boundspell{}, tout Dé de Pouvoir ayant donné un \result{1} naturel peut être relancé en échange d'un marqueur.
+L'armée gagne un marqueur \changeattribute{}. Lorsque l'armée lance un sort de la Voie \change{} non lié à un \boundspell{}, tout Dé de Pouvoir ayant donné un \result{1} naturel peut être relancé en échange d'un marqueur.
 \tabularnewline
 \hline
 0 &
@@ -1356,7 +1357,7 @@ La cible ne peut pas bénéficier des règles \inspiringpresence{} et \holdyourg
 \range{24} \newline
 \hex{} &
 \lastsoneturn{} &
-Lorsque la cible effectue une Attaque de Corps à Corps ou de Tir, tout jet pour toucher ayant donné \result{1}, après une éventuelle relance, est mis de côté. Pour chaque jet ainsi mis de côté, la cible subit immédiatement une touche avec la même Force et les mêmes règles que l'attaque initiale.
+Lorsque la cible effectue une Attaque de Tir ou de Corps à Corps, tout jet pour toucher ayant donné \result{1}, après une éventuelle relance, est mis de côté. Pour chaque jet ainsi mis de côté, la cible subit immédiatement une touche avec la même Force et les mêmes règles que l'attaque initiale.
 
 \vspace*{5pt}
 Les Attaques de Tir comptent toujours comme des Attaques de Tir, et les Attaques de Corps à Corps comptent toujours comme des Attaques de Corps à Corps, participant ainsi au Résultat de Combat du camp du lanceur du sort.
@@ -1487,7 +1488,7 @@ Placez le centre d'un gabarit de \distance{3} sur l'unité ciblée et à portée
 
 \spaceaftersection{}
 
-Après le déploiement, tout Sorcier connaissant au moins un sort de cette Discipline doit choisir un sort non lié à un \boundspell{} connu par n'importe quel Sorcier sur le champ de bataille. Il gagne l'Attribut de Discipline de ce sort pour ses propres lancements.
+Après le déploiement, tout Sorcier connaissant au moins un sort de cette Voie doit choisir un sort non lié à un \boundspell{} connu par n'importe quel Sorcier sur le champ de bataille. Il gagne l'Attribut de Voie de ce sort pour ses propres lancements.
 
 \starttable{\colors@littlegreengods}
 A &
@@ -1495,7 +1496,7 @@ A &
 &
 \specialTYPE{} &
 \specialTYPE{} &
-Utilisez l'Attribut de Discipline du sort choisi en début de partie. Remplacez toutes les références à la Discipline de l'Attribut par la Discipline \thelittlegreengods{}. Si le sort choisi appartient à la Discipline \thelittlegreengods{}, l'Attribut n'a pas d'effet.
+Utilisez l'Attribut de Voie du sort choisi en début de partie. Remplacez toutes les références à la Voie de l'Attribut par la Voie \thelittlegreengods{}. Si le sort choisi appartient à la Voie \thelittlegreengods{}, l'Attribut n'a pas d'effet.
 \tabularnewline
 \hline
 0 &
@@ -1518,7 +1519,7 @@ La cible subit \base{2D6} \amel{3D6} touches de Force 3.
 \amel{\range{24}} \newline
 \augment{} &
 \lastsoneturn{} &
-Les Attaques de Corps à Corps et de Tir de la cible gagnent la règle \armourpiercing{1}.
+Les Attaques de Tir et de Corps à Corps de la cible gagnent la règle \armourpiercing{1}.
 
 \vspace*{5pt}
 Si la cible attaque une unité sur son flanc ou son arrière, la cible peut relancer ses jets pour toucher et pour blesser ratés au Corps à Corps.
@@ -1659,7 +1660,7 @@ La cible subit un nombre de touches égal à 2D6 moins son Endurance. Ces touche
 La cible subit un malus de -1 pour toucher au Corps à Corps et de -2 pour toucher avec ses Attaques de Tir.
 
 \vspace*{5pt}
-Elle ne peut pas effectuer de Marche Forcée durant l'Étape des Autres Mouvements. Si l'unité veut charger, elle divise par deux, en arrondissant au supérieur, le résultat de son jet de distance de charge.
+Elle ne peut pas effectuer de Marche Forcée durant l'Étape des Autres Mouvements. Si l'unité veut charger, elle divise par deux le résultat de son jet de distance de charge, en arrondissant au supérieur.
 
 \vspace*{5pt}
 La portée de tous les sorts connus par la cible est limitée à un maximum de \distance{12}.
@@ -1674,7 +1675,7 @@ La portée de tous les sorts connus par la cible est limitée à un maximum de \
 \missile{} \newline
 \damage{} &
 \instant{} &
-Placez le centre d'un gabarit de \distance{3} avec le centre sur la cible et à portée du sort. Faites une Déviation de \distance{1D6}. Toutes les figurines sous le gabarit subissent une touche de Force \base{5} \amel{7} avec les règles \flamingattacks{} et \multiplewounds{\ordnance}{}.
+Placez le centre d'un gabarit de \distance{3} sur la cible et à portée du sort. Faites une Déviation de \distance{1D6}. Toutes les figurines sous le gabarit subissent une touche de Force \base{5} \amel{7} avec les règles \flamingattacks{} et \multiplewounds{\ordnance}{}.
 \tabularnewline
 \closetable
 
@@ -1831,7 +1832,7 @@ La cible subit \base{2D6} \amel{3D6} touches de Force 4.
 La cible Récupère 1 PV.
 
 \vspace*{5pt}
-\amel{Elle et son unité gagnent également +1 en Force}.
+\amel{Elle et son unité gagnent également +1 en Force.}
 \tabularnewline
 \hline
 2 &
@@ -2072,7 +2073,7 @@ La cible gagne la règle \regeneration{5}. Si une figurine affectée dispose dé
 La cible subit 1D6 touches de Force 5.
 
 \vspace*{5pt}
-De plus, elle doit effectuer un test d'Endurance. En cas d'éch\-ec, elle subit à nouveau 1D6 touches, et doit continuer à effectuer des tests d'Endurance, avec les mêmes effets, jusqu'à ce qu'elle réussisse ou succombe.
+De plus, elle doit effectuer un test d'Endurance. En cas d'échec, elle subit à nouveau 1D6 touches, et doit continuer à effectuer des tests d'Endurance, avec les mêmes effets, jusqu'à ce qu'elle réussisse ou succombe.
 \tabularnewline
 \hline
 5 &
@@ -2148,7 +2149,7 @@ La cible peut relancer ses jets pour blesser ratés et gagne la règle \fear{}.
 \amel{\range{24}} \newline
 \ground{} &
 \instant{} &
-Invoque une unité au choix parmi celles précisées dans la règle Éveil (X) du lanceur. Choisissez au lancement du sort. Elle dispose d'un nombre de PVs correspondant à la valeur de sa caractéristique Invocation.
+Invoque une unité au choix parmi celles précisées dans la règle Éveil (X) du lanceur. Choisissez avant le lancement du sort. Elle dispose d'un nombre de PVs correspondant à la valeur de sa caractéristique Invocation.
 
 \vspace*{5pt}
 Une figurine de l'unité invoquée doit être placée au niveau du marqueur, et toutes les figurines doivent être à portée du sort. Toutes les options normalement accessibles à l'unité sont autorisées, sauf l'État-Major.
@@ -2189,7 +2190,7 @@ La cible subit 2D6 touches de Force 4.
 \hex{} \newline
 \direct{} &
 \remainsinplay{} &
-À la fin de chaque Phase de Magie, toutes les figurines de l'unité ciblée subissent une touche qui blesse sur 6+. Ces touches ont les règles \multiplewounds{2}{\monstrousinfantry{}, \monstrouscavalry{}, \monstrousbeast{}, \swarm{}, \monster{}, \riddenmonster} et \armourpiercing{6}.
+À la fin de chaque Phase de Magie, toutes les figurines de l'unité ciblée subissent une touche qui blesse sur 6+. Ces touches suivent les règles \multiplewounds{2}{\monstrousinfantry{}, \monstrouscavalry{}, \monstrousbeast{}, \swarm{}, \monster{}, \riddenmonster} et \armourpiercing{6}.
 
 \vspace*{5pt}
 Ces touches ont un bonus de +1 pour blesser pour chaque Tour de Joueur passé depuis que le sort a été lancé.
@@ -2525,7 +2526,7 @@ Le Niveau de Magie du lanceur est diminué de NDP-2. Il perd un sort pour chaque
 \item Aucun modificateur positif ne peut être ajouté au jet de lancement.
 \item Un échec ne provoque pas de \lostfocus{} pour le lanceur.
 \item Un objet de sort ne bénéficie pas du bonus de lancement d'un Pouvoir Irrésistible.
-\item L'Attribut de la Discipline est lancé normalement.
+\item L'Attribut de la Voie est lancé normalement.
 \end{itemize}
 
 \noindent En cas de Pouvoir Irrésistible :

@@ -1,0 +1,70 @@
+% Base sur la VO 0.11.9
+% Relecture technique: 
+% Relecture syntaxique: 
+
+\part{Caractéristiques}
+
+\section{Profil de caractéristiques}
+
+Chaque figurine possède un \emph{Profil}, qui consiste en 9 caractéristiques différentes : 
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{M{1,5cm}M{3cm}M{10cm}}
+\textbf{M} & Mouvement & La vitesse à laquelle la figurine se déplace, en pouces. \tabularnewline
+\textbf{CC} & Capacité de Combat & La Capacité de Combat d’une figurine détermine ses chances de toucher et d’être touchée au corps à corps. \tabularnewline
+\textbf{CT} & Capacité de Tir & La Capacité de Tir d'une figurine détermine ses chances de toucher un adversaire avec ses armes de Tir. \tabularnewline
+\textbf{F} & Force & Plus la Force d'une figurine est élevée, plus il lui sera facile de blesser ses adversaires. \tabularnewline
+\textbf{E} & Endurance & Une grande Endurance permet à une figurine d'éviter les blessures plus facilement. \tabularnewline
+\textbf{PV} & Points de Vie & Quand le nombre de Points de Vie d'une figurine tombe à 0, elle est éliminée du jeu. \tabularnewline
+\textbf{I} & Initiative & Les figurines avec la plus grande Initiative frappent en premier. \tabularnewline
+\textbf{A} & Attaques & Cette caractéristique indique le nombre de fois qu'une figurine peut attaquer au corps à corps. \tabularnewline
+\textbf{Cd} & Commandement & Le Commandement d'une figurine donne une mesure de sa discipline et de sa capacité à rester au combat dans des situations dangereuses. \tabularnewline
+\end{tabular}
+\caption{\label{table/caractéristiques}Les caractéristiques d'une figurine.}
+\end{table}
+
+
+Toutes les caractéristiques vont de 0 à 10 et ne peuvent jamais dépasser ces valeurs. Quand une caractéristique est égale à 0, cela peut être représenté par un tiret \og - \fg ou par un astérisque \og * \fg.
+
+\begin{itemize}[label={-}]
+\item Une figurine avec une CC de 0 est touchée automatiquement au corps à corps et peut toucher au corps à corps uniquement sur un résultat de '6'.
+\item Une figurine avec une CT de 0 ne peut pas utiliser d'arme de tir.
+\item Une figurine avec une E de 0 est blessée sur du 2+.
+\item Une figurine avec la caractéristique A non modifiée à 0 ne peut pas effectuer d'attaque ordinaire au corps à corps.
+\item Une figurine dont les PV sont réduits à 0 est retirée comme perte.
+\end{itemize}
+
+\section{Test de caractéristique}
+
+Quand une figurine doit faire un test de caractéristique, lancez 1D6 : si le résultat est '6' ou s'il est strictement plus grand que la caractéristique en question de la figurine, le test est raté. Sinon, le test est réussi. Cela veut dire que les figurines avec une caractéristique égale à 0 échoueront automatiquement tout test pour cette caractéristique.
+
+Quand une figurine possédant plusieurs valeurs pour une même caractéristique, comme un cheval et son cavalier, doit passer un test de caractéristique, faites un test unique pour la figurine entière, en utilisant la caractéristique la plus haute. Quand une unité entière fait un test de caractéristique, prenez la valeur la plus grande de l'unité.
+
+\subsection{Caractéristique non modifiée}
+
+Une caractéristique non modifiée est la valeur de la caractéristique qu'a la figurine en ignorant tous les équipements, sorts et règles affectant les caractéristiques. Les changements de caractéristique appliqués lors de la construction de l'armée, comme en améliorant une figurine en \emph{Vétéran}, lui donnant ainsi +1 en Force, sont pris en compte, et sont considérés comme faisant partie de la caractéristique non modifiée de la figurine.
+
+\subsection{Caractéristiques empruntées}
+
+Dans certains cas,  une figurine peut emprunter ou utiliser la caractéristique d'une autre figurine. La valeur de la caractéristique empruntée est modifiée normalement par toute modification venant de l'équipement, de sorts ou de règles spéciales affectant la figurine propriétaire. Les modifications liées à la figurine qui emprunte la caractéristique sont ensuite appliquées, en suivant les règles de priorité des modificateurs du paragraphe \ref{modificateurs}.
+
+\subsection{Tests de Commandement}
+
+Un test de Commandement se fait en lançant 2D6 : si le résultat est strictement plus grand que le Commandement de la figurine, le test est raté. Sinon, le test est réussi. \nouveau{Si une unité dispose de plusieurs valeurs de Commandement quand elle doit faire un test, par exemple si un \emph{Personnage} a rejoint l'unité, vous devez choisir la valeur de Commandement à utiliser.}
+
+Il y a beaucoup d'occasions différentes de tester le Commandement, comme les tests de \emph{Panique} ou les tests de \emph{Moral}. Ces tests peuvent avoir des règles additionnelles et des modificateurs. Ils seront détaillés dans les sections correspondantes, mais tous restent des tests de Commandement.
+
+\subsection{Priorité des modificateurs}
+\label{modificateurs}
+
+Quand des caractéristiques sont modifiées, les modificateurs doivent être appliqués dans un ordre précis :
+\begin{enumerate}
+\item Remplacement de la valeur d'une caractéristique*, comme par la \emph{Présence Charismatique}, ou après un test de \emph{Peur} raté.
+\item Multiplications, comme une division par deux, ou une caractéristique doublée. À moins que le contraire ne soit précisé, arrondissez toujours au supérieur.
+\item Additions et soustractions, comme -1 ou +3.
+\end{enumerate}
+
+* Si la caractéristique remplaçante est modifiée, appliquer les modifications avant de remplacer la caractéristique. 
+
+Si plusieurs modificateurs du même groupe défini ci-dessus doivent être appliqués, faites-le dans l'ordre de cette liste. Rappelez-vous qu'une caractéristique ne peut jamais être modifiée, même temporairement, de façon à dépasser 10 ou tomber en dessous de 0.
+

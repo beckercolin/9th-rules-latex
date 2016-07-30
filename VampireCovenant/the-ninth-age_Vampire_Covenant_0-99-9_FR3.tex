@@ -1,5 +1,4 @@
-
-
+\def\languageisfrench{}
 \input{../Layout/AB_layout.tex}
 
 \newcommand{\booktitle}{Conclaves Vampiriques}
@@ -85,7 +84,7 @@
 \newcommand{\curseoftheblood}{Malédiction du Sang}
 \newcommand{\ghoullord}{Roi des Goules}
 
-\newcommand{\forbiddenpath}{Discipline Interdite}
+\newcommand{\forbiddenpath}{Voie Interdite}
 \newcommand{\arcaneknowledge}{Connaissance des Arcanes}
 
 % Magical Items
@@ -248,7 +247,7 @@ La \cadaverwagon{} perd les règles \swiftstride{} et \cannotmarch{}.
 }
 
 \newcommand{\wakethedeadrule}{%
-À chaque fois qu'un sort d'Amélioration de la Discipline \necromancy{} (cela inclut \necromancyattribute{}) affecte une unité qui contient une \cadaverwagon{}, vous pouvez choisir une unité à moins de \distance{6} de cette unité. Jusqu'à la fin du tour de joueur suivant, toutes les figurines de l'unité choisie bénéficient de la règle \lightningreflexes{}.
+À chaque fois qu'un sort d'Amélioration de la \Pathof{} \necromancy{} (cela inclut \necromancyattribute{}) affecte une unité qui contient une \cadaverwagon{}, vous pouvez choisir une unité à moins de \distance{6} de cette unité. Jusqu'à la fin du tour de joueur suivant, toutes les figurines de l'unité choisie bénéficient de la règle \lightningreflexes{}.
 }
 
 \def\endlesshorderule{%
@@ -260,7 +259,7 @@ Les \wizards{} ennemis dans un rayon de \distance{24} d'une ou plusieurs \cadave
 }
 
 \newcommand{\bringoutyourdeadrule}{%
-Les unités alliées ciblées par un sort \necromancysignature{} (Discipline \necromancy{}) lancé par un \wizard{} se trouvant dans un rayon de \distance{6} d'une ou plusieurs \cadaverwagons{} avec cette option voient leur caractéristique \invocation{} augmentée suivant la taille des figurines :
+Les unités alliées ciblées par un sort \necromancysignature{} (\Pathof{} \necromancy{}) lancé par un \wizard{} se trouvant dans un rayon de \distance{6} d'une ou plusieurs \cadaverwagons{} avec cette option voient leur caractéristique \invocation{} augmentée suivant la taille des figurines :
 \begin{customsubitemize}
 \item Taille Petite : +2 à l'\invocation{},
 \item Taille Moyenne : +1 à l'\invocation{},
@@ -302,7 +301,7 @@ Une \deathlychoir{} avec la règle \wailofwoe{} rejoint l'équipage.%
 }
 
 \newcommand{\darktomerule}{%
-Les \wizards{} amis à moins de \distance{12} d'au moins un \altarofundeath{} équipé d'un \darktome{} ajoutent +2 à leurs tentatives de lancement de sorts de la Discipline \necromancy{}. Tout \wizard{}, allié ou ennemi, subissant un Fiasco à moins de \distance{12} d'un \altarofundeath{} équipé d'un \darktome{} compte comme ayant utilisé deux Dés de Pouvoir supplémentaires pour lancer le sort (maximum 5).
+Les \wizards{} amis à moins de \distance{12} d'au moins un \altarofundeath{} équipé d'un \darktome{} ajoutent +2 à leurs tentatives de lancement de sorts de la \Pathof{} \necromancy{}. Tout \wizard{}, allié ou ennemi, subissant un Fiasco à moins de \distance{12} d'un \altarofundeath{} équipé d'un \darktome{} compte comme ayant utilisé deux Dés de Pouvoir supplémentaires pour lancer le sort (maximum 5).
 }
 
 \newcommand{\auraofundeathrule}{%
@@ -377,7 +376,7 @@ Dans une armée contenant une \shriekinghorror{} montée, les \shriekinghorrors{
 
 \armywideruleentry{\invocation}
 
-Les profils d'unité contiennent une catégorie appelée \invocation{} qui donne le nombre de Points de Vie Ressuscités grâce à l'\necromancysignature{} et la \necromancyspellfour{} de la Discipline \necromancy{}.
+Les profils d'unité contiennent une catégorie appelée \invocation{} qui donne le nombre de Points de Vie Ressuscités grâce à l'\necromancysignature{} et la \necromancyspellfour{} de la \Pathof{} \necromancy{}.
 
 \armywideruleentry{\masterofundeath}
 
@@ -392,7 +391,7 @@ Un Personnage doit être le \textbf{\master{}} de l'armée. Au début de la part
 
 À la fin de n'importe quelle phase durant laquelle le \master{} est retiré du jeu en tant que perte, toute unité de l'armée qui possède au moins une figurine avec la règle \ashestoashes{} doit faire un test de Commandement. Si le test échoue, l'unité subit un nombre de blessures équivalent à la différence entre le résultat obtenu et la valeur de Commandement du test, sans aucune sauvegarde autorisée. Ces blessures sont réparties comme pour la règle \unstable{}, mais ne peuvent pas être assignées à une figurine n'ayant pas la règle \ashestoashes{}. Le montant de blessures est réduit de un si l'unité est à portée de \holdyourground{}.
 
-\vspace*{5pt}À la fin du Tour de Joueur suivant la mort du \master{}, un nouveau \master{} peut être choisi. Pour ce faire, vous devez nommer un autre Personnage éligible, c'est à dire un \wizard{} utilisant la Discipline \necromancy{}. Ce Personnage est le nouveau \master{}.
+\vspace*{5pt}À la fin du Tour de Joueur suivant la mort du \master{}, un nouveau \master{} peut être choisi. Pour ce faire, vous devez nommer un autre Personnage éligible, c'est à dire un \wizard{} utilisant la \Pathof{} \necromancy{}. Ce Personnage est le nouveau \master{}.
 
 \vspace*{5pt}Au début de chacun de vos Tours de Joueur sans nouveau \master{}, toute unité qui possède au moins une figurine avec la règle \ashestoashes{} doit faire un nouveau test de Commandement, et subir des blessures comme décrit ci-dessus.
 
@@ -455,7 +454,7 @@ Certaines troupes du Livre d'Armée sont notées comme étant des \bloodties{}, 
 \centering
 \includegraphics[width=\logosize]{pics/logo_brotherhood.png}
 \end{wrapfigure}
-Le Vampire gagne +2 en Capacité de Combat et porte une \platearmour{}. Il ne peut prendre qu'un seul Niveau de Magie supplémentaire et ne peut utiliser que la Discipline \necromancy{}. Il ne peut jamais refuser de Défi et doit en lancer dès qu'il le peut, à moins qu'une autre figurine ne le fasse en premier.
+Le Vampire gagne +2 en Capacité de Combat et porte une \platearmour{}. Il ne peut prendre qu'un seul Niveau de Magie supplémentaire et ne peut utiliser que la \Pathof{} \necromancy{}. Il ne peut jamais refuser de Défi et doit en lancer dès qu'il le peut, à moins qu'une autre figurine ne le fasse en premier.
 
 \vspace{0.5cm}
 \bloodtie{} : \textbf{\vampireknights}.
@@ -477,7 +476,7 @@ Le vampire peut relancer ses jets ratés pour la règle \vampiric{}. La présenc
 
 \vspace{0.5cm}
 \ancientbloodpower{} : \textbf{\stormcaller}\dotfill\pts{65}\newline%
-Le Vampire possède un \boundspell{4} : \heavensspelltwo{} (Discipline \heavens{}). Toutes les unités dans un rayon de \distance{12} gagnent la règle \hardtarget{}. De plus, une fois par partie, le Vampire peut donner à toutes les figurines ordinaires de son unité et lui-même les règles \lightningattacks{} et \lightningreflexes{}. Cette capacité doit être activée au début d'une Manche de Corps à Corps et dure jusqu'à la fin de cette Manche.
+Le Vampire possède un \boundspell{4} : \heavensspelltwo{} (\Pathof{} \heavens{}). Toutes les unités dans un rayon de \distance{12} gagnent la règle \hardtarget{}. De plus, une fois par partie, le Vampire peut donner à toutes les figurines ordinaires de son unité et lui-même les règles \lightningattacks{} et \lightningreflexes{}. Cette capacité doit être activée au début d'une Manche de Corps à Corps et dure jusqu'à la fin de cette Manche.
 
 \newpage
 \armynewsubsection{\bloodline{} \lamia{}\dotfill\pts{40/25}}
@@ -486,7 +485,7 @@ Le Vampire possède un \boundspell{4} : \heavensspelltwo{} (Discipline \heavens{
 \centering
 \includegraphics[width=\logosize]{pics/logo_lamia.png}
 \end{wrapfigure}
-La Vampire perd une Attaque et obtient la règle \lightningreflexes{}. Si elle ne porte aucune Armure, sans compter la \mountsprotection{} et la \innatedefence{}, elle obtient également la règle \distracting{}. Les Défis lancés par la Vampire doivent être acceptés si possible et les figurines en Défi contre une \lamia{} doivent réussir un test de Commandement avec un malus additionnel de -1. Dans le cas d'un échec, elles doivent relancer leurs jets pour toucher réussis pendant cette Manche de Corps à Corps. La Vampire n'a accès qu'aux Disciplines \light{}, \shadows{} ou \necromancy{}.
+La Vampire perd une Attaque et obtient la règle \lightningreflexes{}. Si elle ne porte aucune Armure, sans compter la \mountsprotection{} et la \innatedefence{}, elle obtient également la règle \distracting{}. Les Défis lancés par la Vampire doivent être acceptés si possible et les figurines en Défi contre une \lamia{} doivent réussir un test de Commandement avec un malus additionnel de -1. Dans le cas d'un échec, elles doivent relancer leurs jets pour toucher réussis pendant cette Manche de Corps à Corps. La Vampire n'a accès qu'aux Voies \light{}, \shadows{} ou \necromancy{}.
 
 \vspace{0.5cm}
 \bloodties{} : \textbf{\courtofthedamned}.
@@ -501,7 +500,7 @@ Toutes les figurines ordinaires de l'unité rejointe par la Vampire obtiennent u
 \centering
 \includegraphics[width=\logosize]{pics/logo_strigoi.png}
 \end{wrapfigure}
-Le Vampire et sa monture obtiennent les règles \regeneration{5} et \hatred{}. Le Vampire gagne +1 Point de Vie, ne peut pas prendre de monture à l'exception d'une \shriekinghorror{} et ne peut porter aucune Armure. Il ne peut acheter qu'un seul Niveau de Magie supplémentaire et doit utiliser la Discipline \wilderness{} ou \necromancy{}.
+Le Vampire et sa monture obtiennent les règles \regeneration{5} et \hatred{}. Le Vampire gagne +1 Point de Vie, ne peut pas prendre de monture à l'exception d'une \shriekinghorror{} et ne peut porter aucune Armure. Il ne peut acheter qu'un seul Niveau de Magie supplémentaire et doit utiliser la \Pathof{} \wilderness{} ou \necromancy{}.
 
 \vspace{0.5cm}
 \bloodties{} : \textbf{\ghouls{}}.
@@ -518,7 +517,7 @@ Figurines à pied uniquement.
 \centering
 \includegraphics[width=\logosize]{pics/logo_nosferatu.png}
 \end{wrapfigure}
-Le Vampire perd une Attaque, subit un malus de -2 en Capacité de Combat et ne peut porter aucune Armure, à l'exception de la \mountsprotection{} et de la \innatedefence{}. Il ne peut pas porter d'Arme standard. Il devient un \magiclevel{2} si c'est un Héros ou un \magiclevel{4} si c'est un Seigneur. Il gagne la règle \awaken{\skeletons{}, \zombies{}} et génère un sort supplémentaire, mais doit échanger un de ses sorts pour l'\necromancysignature{} (Discipline \necromancy{}).
+Le Vampire perd une Attaque, subit un malus de -2 en Capacité de Combat et ne peut porter aucune Armure, à l'exception de la \mountsprotection{} et de la \innatedefence{}. Il ne peut pas porter d'Arme standard. Il devient un \magiclevel{2} si c'est un Héros ou un \magiclevel{4} si c'est un Seigneur. Il gagne la règle \awaken{\skeletons{}, \zombies{}} et génère un sort supplémentaire, mais doit échanger un de ses sorts pour l'\necromancysignature{} (\Pathof{} \necromancy{}).
 
 \vspace{0.5cm}
 \bloodties{} : \textbf{\wraiths}.
@@ -578,7 +577,7 @@ Les \vampirelords{} et les \vampireheroes{} peuvent acheter une unique améliora
 \vspace*{-0.2cm}
 \startpricelist
 
-\pricelistitem{\mesmerizinggaze}{35} Le Vampire possède un \boundspell{4}. \lustspellfour{} (Discipline \lust{}).
+\pricelistitem{\mesmerizinggaze}{35} Le Vampire possède un \boundspell{4}. \lustspellfour{} (\Pathof{} \lust{}).
 
 \pricelistitem{\maskofinnocence}{25} Les unités au contact d'un ou plusieurs Vampires avec ce pouvoir subissent un malus de -1 en Commandement.
 
@@ -607,7 +606,7 @@ Les \vampirelords{} et les \vampireheroes{} peuvent acheter une unique améliora
 
 \pricelistitem{\arcaneknowledge}{30} Les sorts lancés par le Vampire ont une Portée augmentée de \distance{6}. Cet effet est réduit à \distance{3} pour les sorts de type Aura. Les sorts de Vortex, les \boundspells{} et les sorts sans Portée ne sont pas affectés.
 
-\pricelistitem{\forbiddenpath}{20} Le Vampire peut générer ses sorts dans la Discipline \necromancy{} ou dans n'importe laquelle des Disciplines Communes, à l'exception \nature{}.
+\pricelistitem{\forbiddenpath}{20} Le Vampire peut générer ses sorts dans la \Pathof{} \necromancy{} ou dans n'importe laquelle des Voies Communes, à l'exception \nature{}.
 
 \endpricelist
 
@@ -670,9 +669,9 @@ Toute figurine allouant des attaques de Corps à Corps au porteur ne reçoit auc
 
 \startpricelist
 
-\pricelistitem{\staffofgerhardtheblack}{45} Une armée possédant cet objet peut relancer ses jets de Canalisation ratés. De plus, quand le porteur lance le sort \necromancysignature{} (Discipline \necromancy{}), un dé pour déterminer le nombre de Points de Vie Ressuscités peut être relancé pour chaque unité ciblée.
+\pricelistitem{\staffofgerhardtheblack}{45} Une armée possédant cet objet peut relancer ses jets de Canalisation ratés. De plus, quand le porteur lance le sort \necromancysignature{} (\Pathof{} \necromancy{}), un dé pour déterminer le nombre de Points de Vie Ressuscités peut être relancé pour chaque unité ciblée.
 
-\pricelistitem{\unholytome}{35} \boundspell{4}. \necromancyspelltwo{} (Discipline \necromancy{}).
+\pricelistitem{\unholytome}{35} \boundspell{4}. \necromancyspelltwo{} (\Pathof{} \necromancy{}).
 
 \pricelistitem{\eyeofsetesh}{15} Une seule utilisation. À la fin d'une Phase de Magie adverse, vous pouvez mettre un Dé de Dissipation inutilisé de côté. Ce dé pourra être ajouté à votre réserve comme Dé de Pouvoir, juste après avoir déterminé les Flux de Magie.
 

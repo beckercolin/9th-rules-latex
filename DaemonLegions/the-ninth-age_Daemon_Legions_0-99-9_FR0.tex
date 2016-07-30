@@ -1,3 +1,4 @@
+\def\languageisfrench{}
 \input{../Layout/AB_layout.tex}
 
 \renewcommand{\labels@magicalitems}{Objets démoniaques}
@@ -231,15 +232,15 @@
 % Profile rules
 
 \newcommand{\daemonprincemagic}{%
-Si le \daemonprince{} est amélioré en Sorcier, les Disciplines qui lui sont accessibles dépendent de son allégeance. Un Démon du \wrath{} ne peut pas être amélioré en Sorcier.
+Si le \daemonprince{} est amélioré en Sorcier, les Voies qui lui sont accessibles dépendent de son allégeance. Un Démon du \wrath{} ne peut pas être amélioré en Sorcier.
 
 \renewcommand{\arraystretch}{2}
 \begin{center}\begin{tabular}{rl}
 \hline
-\textbf{\truechaos} & Discipline \alchemy{}, \heavens{}, \fire{}, \death{} ou \shadows{}. \tabularnewline
-\textbf{\dchange} & Discipline \alchemy{} ou \change{}. \tabularnewline
-\textbf{\dlust} & Discipline \lust{} ou \shadows{}. \tabularnewline
-\textbf{\pestilence} & Discipline \disease{} ou \death{}. \tabularnewline
+\textbf{\truechaos} & \Pathof{} \alchemy{}, \heavens{}, \fire{}, \death{} ou \shadows{}. \tabularnewline
+\textbf{\dchange} & \Pathof{} \alchemy{} ou \change{}. \tabularnewline
+\textbf{\dlust} & \Pathof{} \lust{} ou \shadows{}. \tabularnewline
+\textbf{\pestilence} & \Pathof{} \disease{} ou \death{}. \tabularnewline
 \hline
 \end{tabular}\end{center}
 \renewcommand{\arraystretch}{1.2}
@@ -452,7 +453,7 @@ Les Personnages Démoniaques peuvent être améliorés par l'\supremeaspect{} pr
 \begin{center}\begin{tabular}{p{2.2cm}p{12cm}}
 \hline
 \textbf{\dchange} & \textbf{\powervortex}\vspace{3pt}\newline
-La Force des touches des sorts de la Discipline \change{} lancés par l'unité du porteur est augmentée de +1. \tabularnewline
+La Force des touches des sorts de la \Pathof{} \change{} lancés par l'unité du porteur est augmentée de +1. \tabularnewline
 \textbf{\wrath} & \textbf{\eternalfury}\vspace{3pt}\newline
 L'unité du porteur gagne la règle \hatred{}. Les montures ne sont pas affectées. \tabularnewline
 \textbf{\dlust} & \textbf{\danceofdeath}\vspace{3pt}\newline
@@ -606,17 +607,17 @@ Le porteur gagne la règle \fly{8}.
 
 \pricelistitem{\tokenofchange}{20}Démons du \textbf{\dchange} uniquement, \oneofakind{}.
 
-\boundspell{3}. \changespelltwo{} (Discipline \change{}).
+\boundspell{3}. \changespelltwo{} (\Pathof{} \change{}).
 
 \pricelistitem{\tokenoflust}{20}Démons de la \textbf{\dlust} uniquement, \oneofakind{}.
 
-\boundspell{3}. \lustspellthree{} (Discipline \lust{}).
+\boundspell{3}. \lustspellthree{} (\Pathof{} \lust{}).
 
 \pricelistitem{\tokenofpestilence}{20}Démons de la \textbf{\pestilence} uniquement, \oneofakind{}.
 
-\boundspell{3}. \diseasespelltwo{} (Discipline \disease{}).
+\boundspell{3}. \diseasespelltwo{} (\Pathof{} \disease{}).
 
-\pricelistitem{\blackorb}{15}Tout Sorcier ennemi qui tente de lancer un sort de la Discipline \light{} subit un malus de -2 sur ses jets.
+\pricelistitem{\blackorb}{15}Tout Sorcier ennemi qui tente de lancer un sort de la \Pathof{} \light{} subit un malus de -2 sur ses jets.
 
 \pricelistitem{\elixirofsouls}{10}Une seule utilisation. Peut être activé au début d'une Étape des Autres Mouvements. Le porteur gagne +2 en Mouvement pour cette phase.
 
@@ -638,7 +639,7 @@ Au début de chaque Phase de Magie alliée, le porteur peut choisir un Sorcier e
 
 \pricelistitem{\scrollsoftheeighthpact}{25}Démons du \textbf{\dchange} uniquement.
 
-Le porteur peut choisir de générer ses sorts depuis n'importe laquelle des Disciplines Communes, sauf la Discipline \light{}. Votre choix doit toujours être indiqué sur votre liste d'armée.
+Le porteur peut choisir de générer ses sorts depuis n'importe laquelle des Voies Communes, sauf la \Pathof{} \light{}. Votre choix doit toujours être indiqué sur votre liste d'armée.
 
 \pricelistitem{\skullofcacophrax}{25/15}Le porteur génère un sort supplémentaire.
 

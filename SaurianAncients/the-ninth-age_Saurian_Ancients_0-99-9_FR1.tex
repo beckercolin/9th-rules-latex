@@ -1,3 +1,4 @@
+\def\languageisfrench{}
 \input{../Layout/AB_layout.tex}
 
 \newcommand{\booktitle}{Anciens Sauriens}
@@ -66,7 +67,7 @@
 \newcommand{\cuatllorddiscipline}{Savoir des Coatls}
 
 \newcommand{\masterofmagic}{Virtuose de la Magie}
-\newcommand{\wanderingpath}{Discipline Vagabonde}
+\newcommand{\wanderingpath}{Voie Vagabonde}
 \newcommand{\wellspringofpower}{Fontaine de Pouvoir}
 \newcommand{\ancientknowledge}{Science Ancestrale}
 \newcommand{\unconquerablewill}{Volonté Inébranlable}
@@ -312,13 +313,13 @@ Avant la partie, si vous avez au moins une unité avec un \rhamphodon{} ou un \a
 \newcommand{\altarofthesnakegodrule}{%
 Les unités alliées à moins de \distance{6} d'au moins une figurine avec un \altarofthesnakegod{} gagnent la règle \poisonedattacks{} au Corps à Corps. Si une unité possède déjà la règle \poisonedattacks{}, alors les attaques blessent automatiquement sur 5+ au lieu de 6+.
 
-\boundspell{3}. \diseasespelltwo{} (Discipline \disease{}).
+\boundspell{3}. \diseasespelltwo{} (\Pathof{} \disease{}).
 }
 
 \newcommand{\sunenginerule}{%
 Les unités alliées à moins de \distance{6} d'au moins une figurine avec une \sunengine{} gagnent +1 en Capacité de Combat.
 
-\boundspell{3}. \lightsignature{} (Discipline \light{}).
+\boundspell{3}. \lightsignature{} (\Pathof{} \light{}).
 }
 
 \newcommand{\shootspikesrule}{%
@@ -358,11 +359,11 @@ Un \cuatllorddiscipline{} ne peut pas être dupliqué. Une armée ne peut pas d�
 
 \pricelistitem{\masterofmagic}{85}Pendant les Phases de Magie de votre Tour de Joueur, lancez un dé additionnel pour la génération des Flux de Magie et ignorez le dé ayant donné le plus petit résultat.
 
-\pricelistitem{\wanderingpath}{80}Le \cuatllord{} ne génère pas ses sorts normalement, mais connaît à la place tous les sorts de la Discipline \eightpaths{}. Il ne peut pas prendre l'Objet Essence de Libre Pensée, ni avoir la règle \pathmaster{}.
+\pricelistitem{\wanderingpath}{80}Le \cuatllord{} ne génère pas ses sorts normalement, mais connaît à la place tous les sorts de la \Pathof{} \eightpaths{}. Il ne peut pas prendre l'Objet Essence de Libre Pensée, ni avoir la règle \pathmaster{}.
 
 \pricelistitem{\wellspringofpower}{50}Le \cuatllord{} gagne un bonus de +1 pour lancer des sorts et ajoute un bonus de +2 additionnel au jet de Canalisation lors des Phases de Magie alliées.
 
-\pricelistitem{\ancientknowledge}{50}Le \cuatllord{} génère un sort supplémentaire et doit choisir la Discipline \whitemagic{}. Lorsqu'il lance un sort \whitemagic{} avec succès, il peut choisir d'oublier ce sort immédiatement, et génère un nouveau sort dans une Discipline à laquelle il a normalement accès, à la fin de la Phase de Magie. Le \cuatllord{} ne peut pas prendre l'Objet Essence de Libre Pensée, ni avoir la règle \pathmaster{}.
+\pricelistitem{\ancientknowledge}{50}Le \cuatllord{} génère un sort supplémentaire et doit choisir la \Pathof{} \whitemagic{}. Lorsqu'il lance un sort \whitemagic{} avec succès, il peut choisir d'oublier ce sort immédiatement, et génère un nouveau sort dans une Voie à laquelle il a normalement accès, à la fin de la Phase de Magie. Le \cuatllord{} ne peut pas prendre l'Objet Essence de Libre Pensée, ni avoir la règle \pathmaster{}.
 
 \pricelistitem{\unconquerablewill}{35}Le \cuatllord{} peut relancer le jet de sa première tentative de dissipation ratée à chaque Phase de Magie.
 
@@ -435,7 +436,7 @@ Un \cuatllord{} peut lancer ses sorts du type Dégâts par l'intermédiaire d'un
 
 La figurine gagne la règle \telepathiclink{}. Au début de chaque Tour de Joueur allié, et avant la bataille, juste après avoir déplacé les unités ayant la règle \vanguard{}, choisissez l'un des effets suivants. Il dure jusqu'au début du prochain Tour de Joueur allié.
 \begin{itemize}[label={-}]
-	\item Choisissez une Discipline de Magie. La valeur de lancement des sorts de cette Discipline est réduite de 1 pour tous les Sorciers alliés.
+	\item Choisissez une Voie de Magie. La valeur de lancement des sorts de cette Voie est réduite de 1 pour tous les Sorciers alliés.
 	\item Pendant votre Phase de Tir, choisissez une unité ennemie non engagée au Corps à Corps et à moins de \distance{9}. Elle subit 1D3 touches avec la règle \metalshifting{}.
 	\item Toutes les unités alliés à moins de \distance{6} gagnent une \wardsave{5} contre les Attaques à Distance. Seul cet effet peut être choisi avant la bataille.
 \end{itemize}
@@ -490,7 +491,7 @@ Type : Aucun (Sauvegarde d'Armure 6+). Le porteur gagne +1 en Endurance et la r�
 
 \pricelistitem{Œuf du Quetzal}{35}Le porteur gagne une \breathweapon{\Strength{} 1D3+2, \magicalattacks}.
 
-\pricelistitem{Bâton de Jade}{20}Le porteur gagne un \boundspell{3}. \whitemagicspellone{} (Discipline \whitemagic{}).
+\pricelistitem{Bâton de Jade}{20}Le porteur gagne un \boundspell{3}. \whitemagicspellone{} (\Pathof{} \whitemagic{}).
 
 \endpricelist
 

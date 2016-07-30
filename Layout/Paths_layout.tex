@@ -2,9 +2,11 @@
 
 \usepackage[a4paper, top=1.6cm, bottom=2cm, left=1.6cm, right=1.6cm]{geometry} % Marge reduction.
 
-%% Language specific package
-\usepackage[french]{babel}
-\frenchbsetup{StandardLists=true} % Necessary to use enumitem with babel/french.
+\ifdefined\languageisfrench
+	%% Language specific package
+	\usepackage[french]{babel}
+	\frenchbsetup{StandardLists=true} % Necessary to use enumitem with babel/french.
+\fi
 
 %% Font and typing packages
 \usepackage{fontspec}
@@ -42,7 +44,9 @@
 
 %%% Language specific stuff
 
-\input{../Layout/AB_language_specific_FR.tex}
+\ifdefined\languageisfrench
+	\input{../Layout/AB_language_specific_FR.tex}
+\fi
 
 
 %%% Technical commands %%%
