@@ -1,7 +1,7 @@
 
 \documentclass[a4paper,10pt]{article}
 
-\usepackage[a4paper, top=1.6cm, bottom=2cm, left=1.6cm, right=1.6cm]{geometry} % Marge reduction.
+\usepackage[a4paper, top=2.5cm, bottom=2.2cm, left=2.2cm, right=2.2cm]{geometry} % Marge reduction.
 
 \ifdefined\languageisfrench
 	%% Language specific package
@@ -14,7 +14,8 @@
 \setmainfont[
 	Ligatures=TeX,
 	ItalicFont={Dancing Script},
-	BoldItalicFont={Dancing Script}
+	BoldItalicFont={Dancing Script},
+	SmallCapsFont={PT Serif}
 	]{PT Serif} % default is Latin Modern
 \newfontfamily\antiquefont[Ligatures=TeX]{Caslon Antique} % fancy font
 \usepackage{microtype}			% Greatly improves general appearance of the text.
@@ -24,7 +25,6 @@
 %% Array utilities
 \usepackage{array}				% Additionnal options for arrays.
 \usepackage{colortbl}			% Additionnal options for coloring arrays.
-\usepackage{transparent}	% Some exported SVG files need it
 \usepackage[table]{xcolor}		% Auto alternate grey-white rows.
 \usepackage[export]{adjustbox}		% Centered pics in tables
 \usepackage{slashbox}		% diagonal slash in a cell
@@ -110,6 +110,8 @@
 %\hyperlink{specialtitle}{\labels@specialunitsInitial}\hspace*{0.4cm}
 %\hyperlink{raretitle}{\labels@rareunitsInitial}\hspace*{0.4cm}
 }}
+\fancyhead[R]{}
+\fancyhead[L]{}
 
 %%% Page formatting
 
@@ -156,7 +158,7 @@
 
 %%% Titles %%%
 
-\titleformat{\part}[block]{\Hugefontsize\filcenter}{\thepart}{1em}{}
+\titleformat{\part}[block]{\Hugefontsize\antiquefont\filcenter}{\thepart}{1em}{}
 \renewcommand{\thepart}{\arabic{part}}
 \renewcommand{\thesection}{\thepart.\arabic{section}}
 \makeatletter\@addtoreset{section}{part}

@@ -1,39 +1,43 @@
-% Base sur la VO 0.11.9
-% Relecture technique: 
-% Relecture syntaxique: 
 
 \part{Logistique du champ de bataille}
 
-\section{Distances}
+\section{Mesurer les distances}
 
-L'unité de mesure dans \emph{Batailles Fantastiques : Le 9\ieme Âge} est le pouce anglais, ou \og pouce technique international \fg , et se note \pouce. Il vaut 2,54 {\centi\meter} exactement. Toutes les distances et portées sont indiquées et mesurées en pouces. Pour déterminer la distance entre deux objets sur le champ de bataille (des unités, décors ou autres éléments), vous devez toujours choisir les points au sol les plus proches des deux objets, même si cela traverse un quelconque obstacle : ignorez-le pour la mesure. Entre deux figurines, les mesures se font donc bout de socle à bout de socle.
+L'unité de mesure dans Batailles Fantastiques : Le 9\ieme Âge est le pouce, noté \distance{}. Il vaut 2,54 {\centi\meter} exactement. Toutes les distances et portées sont indiquées et mesurées en pouces. Pour déterminer la distance entre deux objets sur le champ de bataille, comme des unités, décors ou autres éléments, vous devez toujours mesurer entre les points au sol les plus proches des deux objets, même si cela traverse un quelconque obstacle. Entre deux figurines, les mesures se font donc bout de socle à bout de socle.
 
-Les règles se réfèrent souvent à des objets étant à une certaine portée. Dans ce cas, mesurez la distance entre leurs points les plus proches. Si cette distance est inférieure à la portée donnée, les objets sont considérés comme étant à portée. Notez que cela signifie qu'une figurine est toujours à portée d'elle-même et qu'une figurine ou une unité n'a pas besoin d'être \textbf{entièrement} à portée, simplement une partie de celle-ci.
+Les règles se réfèrent souvent à des objets étant à moins d'une certaine distance. Dans ce cas, mesurez la distance entre leurs points les plus proches de ces objets. Si cette distance est inférieure à la portée donnée, les objets sont considérés comme étant à portée. Notez que cela signifie qu'une figurine est toujours à portée d'elle-même et qu'une figurine ou une unité n'a pas besoin d'être entièrement à portée, une partie de celle-ci suffit.
  
-Les joueurs sont autorisés à mesurer n'importe quelle distance à tout moment.
+\textbf{Les joueurs sont autorisés à mesurer n'importe quelle distance à tout moment.}
 
-\section{Champ de vision}
+\section{Ligne de vue}
 
-\nouveau{Une figurine a une ligne de vue sur sa cible (point ou unité) si vous pouvez tracer une ligne droite depuis l'avant de son socle directement jusqu'à la cible, sans sortir de l'arc frontal de la figurine, et sans être bloqué par un \emph{Décor Occultant} ou par le socle d'une figurine qui a une taille \textbf{plus grande} que la figurine et sa cible \textbf{à la fois}}. Les figurines des rangs arrières ont toujours le même champ de vision que si elles étaient au premier rang dans la même colonne. Une unité est considérée comme ayant une ligne de vue sur une cible si une ou plusieurs figurines de l'unité ont une ligne de vue sur cette cible. \nouveau{Les figurines d'une unité ne bloquent jamais le champ de vision des autres figurines de cette unité}.
+\newfromWHB{Une figurine a une Ligne de Vue sur sa cible (point ou unité) si vous pouvez tracer une ligne droite depuis l'avant de son socle directement jusqu'à la cible, sans sortir de l'arc frontal de la figurine, et sans être bloqué par un Décor Occultant ou par le socle d'une figurine qui a une Taille \textbf{plus grande que la figurine et sa cible à la fois}.} Une figurine d'un rang arrière peut avoir les mêmes Lignes de Vue que la figurine du premier rang de la ou les même(s) colonne(s). On considère qu'une unité a une Ligne de Vue sur une cible si une ou plusieurs figurines de l'unité ont une Ligne de Vue sur cette cible. \newfromWHB{Les figurines d'une unité ne bloquent jamais les Lignes de Vue des autres figurines de cette unité.}
 
-\subsection{Hauteur des figurines}
-\label{hauteur_figs}
+\subsection{Taille des figurines}
+\label{modelheight}
 
-\nouveau{Les figurines peuvent avoir trois tailles.
-\begin{description}%[label={-}]
-\item [Petite :] Figurines ayant comme type de troupe \emph{Bête de guerre}, \emph{Infanterie}, \emph{Machine de guerre} ou \emph{Nuée}.
-\item [Moyenne :] Figurines ayant comme type de troupe \emph{Bête Monstrueuse}, \emph{Cavalerie}, \emph{Cavalerie Monstrueuse}, \emph{Char} ou \emph{Infanterie Monstrueuse}.
-\item [Grande :] Figurines ayant la règle spéciale \emph{Grande Cible} (peu importe leur type de troupe).
-\end{description}
-}
+\newfromWHB{Les figurines peuvent avoir trois Tailles :}
+
+\noindent\textbf{Petite}
+
+\newfromWHB{Toute figurine ayant comme type de troupe \infantry{}, \warbeast{}, \swarm{} ou \warmachine{}.}
+
+\noindent\textbf{Moyenne}
+
+\newfromWHB{Toute figurine ayant comme type de troupe \cavalry{}, \monstrousinfantry{}, \monstrouscavalry{}, \monstrousbeast{} ou \chariot{}.}
+
+\noindent\textbf{Grande}
+
+\newfromWHB{Toute figurine ayant la règle \largetarget{}.}
+
 
 \section{Règle du pouce d'écart}
 
-Les unités doivent toujours laisser un espace d'au moins 1{\pouce} entre elles, et avec les Terrains Infranchissables. Ceci s'applique aux unités alliées comme adverses. \nouveau{Pendant un déplacement, cette distance est réduite à 0,5{\pouce}, mais à la fin du déplacement, l'unité doit toujours respecter la \emph{Règle du Pouce d'Écart}. Si ce n'est pas le cas, revenez en arrière dans le mouvement jusqu'à ce que l'espace de 1{\pouce} soit respecté}.
+Dans des circonstances habituelles, les unités doivent toujours laisser un espace d'au moins \distance{\textbf{1}} entre elles, alliées ou ennemies, et avec les Terrains Infranchissables. \newfromWHB{Pendant un déplacement, cette distance est réduite à \textbf{0,5}\distance{}, mais à la fin du mouvement l'écart d'un pouce doit être respecté.}
 
-Quelques déplacements spéciaux autorisent une entorse à la \emph{Règle du Pouce d'Écart}, comme les charges. \newrule{Si une unité est autorisée à se retrouver à moins de 1{\pouce} d'une autre unité ou d'un \emph{Terrain Infranchissable}, elle peut ignorer la \emph{Règle du Pouce d'Écart} par rapport à cette unité ou ce \emph{Terrain Infranchissable} aussi longtemps qu'elle reste à moins de 1{\pouce}. Elle ne peut cependant jamais entrer en contact socle à socle avec une unité ennemie qu'elle n'a pas chargée}.
+Quelques déplacements spéciaux autorisent une entorse à la Règle du Pouce d'Écart, comme les charges, qui permettent aux unités d'engager des Corps à Corps. D'autres types de déplacement permettent à une unité de se rapprocher à moins d'\distance{1} d'unités alliées ou de Terrains Infranchissables mais seul un mouvement de charge permet le contact avec des unités ennemies. Si une unité est autorisée à ne pas respecter la Règle du Pouce d'Écart temporairement, elle peut l'ignorer par rapport à l'unité ou le Terrain Infranchissable aussi longtemps qu'elle reste à moins de \distance{1}. Elle ne peut cependant jamais entrer en contact socle à socle avec une unité ennemie qu'elle n'a pas chargée. Une fois qu'un espace d'un pouce est à nouveau respecté, la règle recommence automatiquement à s'appliquer.
 
 \section{Bords de table}
 
-Les bords de table correspondent aux limites du champ de bataille. Les figurines peuvent se retrouver temporairement en dehors de cette limite durant un déplacement, du moment que pas plus de la moitié du socle de la figurine n'est en dehors à n'importe quel moment, et tant qu'aucune partie de la figurine ne se retrouve en dehors à la fin du déplacement. Les \emph{Gabarits} et équivalents peuvent être placés partiellement en dehors du champ de bataille, ils comptent toujours comme affectant les figurines avec leur partie dans le champ de bataille.
+Les bords de table correspondent aux limites du jeu. Les figurines peuvent se retrouver temporairement en dehors de cette limite durant un déplacement, du moment que pas plus de la moitié du socle d'une figurine ne dépasse à n'importe quel moment, et tant qu'aucune partie de la figurine ne se retrouve en dehors à la fin du déplacement. Les Gabarits peuvent être placés partiellement en dehors du champ de bataille et affectent toujours les figurines sous la partie du Gabarit toujours sur le champ de bataille.
 

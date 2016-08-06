@@ -1,105 +1,172 @@
-% Base sur la VO 0.11.9
-% Relecture technique: 
-% Relecture syntaxique: 
 
 \part{Préparer une partie}
 
 \section{Construire votre liste d'armée}
-\label{construire_liste}
+\label{building_an_army}
 
+Batailles Fantastiques : Le 9\ieme Âge propose une série de Livres d'Armée qui décrivent les spécificités de chaque armée. Elles ont chacune un ensemble unique de personnages, troupes et règles. Les \textbf{Personnages} sont répartis en Seigneurs et Héros, et les \textbf{Troupes} en unités de Base, unités Spéciales et unités Rares.
 
-Une armée se compose d'une sélection de figurines, qui représentent des unités, décrites dans les livres d'armée. \emph{Le 9\ieme Âge} propose sa propre série de livres d'armée compatibles dans lesquels les joueurs peuvent trouver les règles, options et coûts en points associés à chaque figurine. Elles sont réparties entre des \emph{Personnages}, \emph{Seigneurs} et \emph{Héros}, et des troupes, divisées en \emph{Bases}, \emph{Spéciales} et \emph{Rares}.
+\noindent\hspace*{\fill} \begin{minipage}[t]{0.3\textwidth}
+\begin{center}\includegraphics[width=2.5cm]{../Layout/pics/logo_lord.png}
 
-Les \emph{Seigneurs} sont les individus les plus puissants d'une armée. Les \emph{Héros} sont des individus aux capacités exceptionnelles. Les \emph{Unités de Base} représentent les guerriers les plus communs d'une armée. Les \emph{Unités spéciales} sont des régiments d'élite ou de vétérans. Enfin, les \emph{Unités Rares} sont des troupes ou des machines de guerre peu communes...
+Les Seigneurs sont les individus les plus puissants d'une armée.
+\end{center}
+\end{minipage}\hspace*{1cm}
+\begin{minipage}[t]{0.3\textwidth}
+\begin{center}\includegraphics[width=2.5cm]{../Layout/pics/logo_hero.png}
 
-Les armées qui s'affrontent correspondent généralement à un même total de points, qui donne une idée de la taille de l'affrontement. La première étape de la construction d'une armée est d'écrire un choix d'unités, leurs options et leurs coûts en points sur un document qu'on appelle \textbf{liste d'armée}. La composition d'une liste est sujette à des règles et restrictions, que l'on décrit en détails dans le paragraphe suivant.
+Les Héros sont des individus exceptionnels.
+\end{center}
+\end{minipage}\hspace*{\fill}
 
-\section{Coût en points}
+\noindent\begin{minipage}[t]{0.3\textwidth}
+\begin{center}\includegraphics[width=2.5cm]{../Layout/pics/logo_core.png}
 
-Dans ce jeu, nous utilisons des montants en points pour chaque unité, arme, option, objet magique, etc. Le coût d'une unité est la somme des points que coûtent les figurines et options qu'elle contient. Le total des valeurs en points de toutes les unités d'une armée donne la valeur en points de l'armée.
+Les unités de Base représentent les guerriers les plus communs de l'armée.
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\begin{center}\includegraphics[width=2.5cm]{../Layout/pics/logo_special.png}
 
-\nouveau{\textbf{Demi-point}. Le coût d'une unité doit être entier. Si une amélioration coûte 0,5 point, le coût final de l'unité est arrondi à la valeur supérieure.}
+Les vétérans et régiments d'élite constituent les unités Spéciales.
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\begin{center}\includegraphics[width=2.5cm]{../Layout/pics/logo_rare.png}
 
-\nouveau{\textbf{Seigneur / Héros}. Si le prix d'une option ou d'un objet magique est écrit avec un "/" (par exemple, \emph{Épée de Géant} (60 {pts} / 50 {pts})), la première valeur est le coût pour un \emph{Seigneur}, et la seconde pour un \emph{Héros} ou un \emph{Champion}.}
+Les unités Rares sont des troupes extraordinaires, des monstres peu communs et des machines de guerre inhabituelles.
+\end{center}
+\end{minipage}
+
+\vspace*{10pt}
+La première étape de la construction d'une armée est d'écrire un choix d'unités, leurs options et leurs Coûts en Points sur un document qu'on appelle \og Liste d'Armée \fg{}. La composition d'une liste est sujette à des règles et restrictions, que l'on décrit en détails dans la suite du chapitre.
+
+\subsection{Coût en points}
+
+Chaque unité, arme, amélioration, Objet Magique, etc. vaut un certain montant de points. Le Coût en Points d'une unité est la somme des Coûts en Points de chacune de ses figurines et des options. Le Coût en Points d'une armée est la somme des Coûts en Points de toutes ses unités.
+
+\noindent\textbf{\newfromWHB{Demi-point}}
+
+La valeur en point d'une unité doit être entière. Si une amélioration coûte 0,5 point, le coût final de l'unité est arrondi à la valeur supérieure.
+
+\noindent\textbf{\newfromWHB{Coûts Seigneur / Héros}}
+
+Si le coût d'une option ou d'un objet magique est écrit avec un \og / \fg{}, par exemple 50 / 40 pts, la première valeur est le coût pour un Seigneur tandis que la seconde est pour un Héros ou un Champion.
 
 \section{Restrictions}
 
-Dans \emph{Batailles Fantastiques : Le 9\ieme Âge}, une armée doit suivre des règles simples de composition décrites dans la table \ref{table/restrictions}.
+Une armée de Batailles Fantastiques : Le 9\ieme Âge doit suivre des règles simples de composition détaillées ci-dessous :
+
+\begin{itemize}[label={\textbullet}]
+\item \textbf{Coût en Points de l'armée}\newline
+Le Coût en Point de l'armée, combinant la valeur de toutes les unités, équipements et options, ne doit pas dépasser la limite en points décidée pour la partie. Elle peut cependant être en dessous de cette limite de jusqu'à 20 points.
+
+\item \textbf{Catégories d'unités}\newline
+Les unités sont regroupées en 5 Catégories. Le nombre de points que l'on peut dépenser dans chaque groupe dépend de la Catégorie. De plus, une même entrée du livre d'armée ne peut être prise qu'un certain nombre de fois. Ces informations sont résumées dans la table \ref{table/unitcategories} ci dessous.
 
 \begin{table}[!htbp]
 \centering
 \begin{tabular}{rcc}
 \hline
  & \textbf{Limite de points} & \textbf{Limite de duplication} 			\tabularnewline
-\hline
-\textbf{Base} 				& min. 25 \% 			& \nouveau{max. 4} 	\tabularnewline
-\textbf{Spécial} 			& - 					& max. 3 			\tabularnewline
-\textbf{Rare} 				& max. 25 \% 			& max. 2 			\tabularnewline
-\textbf{Héros} 				& max. \nouveau{50 \%} 	& \nouveau{max. 3} 	\tabularnewline
-\textbf{Seigneurs} 			& max. \nouveau{35 \%} 	& \nouveau{max. 3} 	\tabularnewline
+\textbf{Base} 					& min. 25 \% 			& \newfromWHB{max. 4} 	\tabularnewline
+\textbf{Spécial} 				& - 					& max. 3 			\tabularnewline
+\textbf{Rare} 					& max. 25 \% 			& max. 2 			\tabularnewline
+\textbf{Héros} 					& max. \newfromWHB{50 \%} 	& \newfromWHB{max. 3} 	\tabularnewline
+\textbf{Seigneurs} 			& max. \newfromWHB{35 \%} 	& \newfromWHB{max. 3} 	\tabularnewline
 \textbf{Héros + Seigneurs} & max. 50 \% 			& - 				\tabularnewline
 \hline
 \end{tabular}
-\caption{\label{table/restrictions}Restrictions de composition d'armée.}
+\caption{\label{table/unitcategories}Restrictions de composition d'armée.}
 \end{table}
 
-\subsection*{Notes additionnelles}
+\newfromWHB{Parfois, certaines unités peuvent être déplacées d'une Catégorie à une autre. Par exemple, certaines règles peuvent autoriser un joueur à prendre un Char comme choix de Base plutôt qu'en choix Spécial. Dans de tels cas, il faut respecter à la fois la limite de duplication de son ancienne Catégorie et de sa nouvelle. La limite de points compte, quant à elle, seulement dans la nouvelle catégorie. Dans notre exemple précédent, vous ne pouvez pas inclure plus de 3 Chars dans votre armée, mais ceux-ci compteront dans les 25 \% d'unités de Base nécessaires.}
 
-\begin{itemize}[label={-}]
-\item \textbf{Valeur en points de l'armée} : Le total des valeurs en points de toutes les unités de l'armée, en comptant les options et équipements, ne doit pas dépasser la limite de points décidée pour la bataille. Il peut être en dessous de 20 points au maximum. Les limites en pourcentage des différentes catégories, comme les unités de base, sont toujours calculées par rapport à la limite en points de la bataille, même si le total de l'armée est inférieur.
-\item \textbf{Catégories d'unités} : Chaque unité du jeu appartient à une des 5 catégories. La limite maximum des points qu'on peut dépenser est différent d'une catégorie à une autre. De plus, une même unité ne peut être sélectionnée qu'un nombre limité de fois qui dépend aussi de sa catégorie. Parfois, certaines unités peuvent être déplacées d'une catégorie à une autre. Par exemple, certaines conditions peuvent autoriser un joueur à prendre un Char comme choix d’unité de base au lieu de choix d’unité spéciale. Dans de tels cas, il faut respecter à la fois la limite de duplication de son ancienne catégorie et de sa nouvelle. La limite de points est prise, quant à elle, à partir de la nouvelle catégorie. Dans notre exemple précédent, vous ne pouvez pas inclure plus de 3 Chars, mais ceux-ci compteront dans les 25 \% d'unités de base.
-\item \textbf{Taille d'armée minimale} : \nouveau{Chaque armée doit contenir \textbf{au moins 4 unités}, sans compter les \emph{Personnages}. On ne peut pas comptabiliser qu'une seule unité du type \emph{Machine de Guerre} pour atteindre ce minimum}.
-\item \textbf{Général} : Un \emph{Personnage} de l'armée doit être nommé \emph{Général}. Il faut donc qu'il y ait au moins un \emph{Personnage} dans l'armée capable de porter ce titre. Il ne peut y avoir qu'un seul \emph{Général}.
-\item \textbf{Unique} : \nouveau{Les unités marquées \emph{Unique} ne peuvent être représentées qu'une fois par armée}.
-\item \textbf{Un par armée} : \nouveau{Les unités ou options marqués \emph{Un par armée} ne peuvent être représentés qu'une fois par armée, y compris dans une \emph{Grande Armée}}.
-\item \textbf{\newrule{0 - X Choix}} : \newrule{Certaines unités disposent d'une limite de duplication différente, spécifiée par (0 - X Choix) (Par exemple (0 - 2 Choix)). Cela signifie que ces unités  peuvent être sélectionnées entre 0 et X fois, en ignorant les limites de duplication classiques. La limite maximale de X est divisée par 2 pour des Patrouilles (arrondir à l'entier supérieur) et multipliée par 2 pour des Grandes Armées.}
+\item \textbf{Taille d'armée minimale}\newline
+\newfromWHB{Une armée doit contenir au moins 4 unités sans compter les Personnages. On ne peut comptabiliser qu'une seule unité de type Machine de Guerre pour atteindre ce minimum.}
+\item \textbf{Le Général}\newline
+Un des Personnages de l'armée doit être nommé Général. Il faut donc qu'il y ait au moins un Personnage dans l'armée capable de prendre ce rôle. Une armée ne peut avoir qu'un seul Général.
+\item \textbf{\newfromWHB{\oneofakind{} et \oneperarmy}}\newline
+Les unités, options et objets marqués \oneofakind{} ou \oneperarmy{} ne peuvent être pris qu'une fois par armée. Ceux marqués \oneofakind{} peuvent être pris en deux exemplaires dans une Grande Armée.
+\item \textbf{\newfromWHB{\zerotoXchoice{X}}}\newline
+Certaines unités disposent d'une limite de duplication différente notée \zerotoXchoice{X}, par exemple \zerotoXchoice{2}. Cela signifie que ces unités peuvent être prises entre 0 et X fois, en ignorant les limites de duplication classiques. La limite maximale X est divisée par 2 pour une Patrouille en arrondissant à l'unité supérieure, et multipliée par 2 pour une Grande Armée.
 \end{itemize}
 
+\newpage
 \section{Patrouilles et grandes armées}
 
-Les règles de composition d'armée peuvent être modifiées selon la taille de la partie, en dessous de 1500 points et au-dessus de 4000 points.
+Les règles de composition d'armée peuvent être modifiées selon la limite en points de la partie, si les armées sont plus petites ou grandes que la norme.
 
-Les armées de 1500 points ou moins sont appelées \emph{Patrouilles}. Dans de telles armées, les limites de duplication habituelles sont divisées par deux en arrondissant au supérieur. De plus, la taille d'armée minimale est réduite à 3 unités.
+\begin{multicols}{2}\raggedcolumns
 
-Les armées de 4000 points ou plus sont appelées \emph{Grandes Armées}. Dans de telles armées, les limites de duplication habituelles sont doublées. De plus, les unités marquées \emph{Unique} peuvent exceptionnellement être prises en deux exemplaires, sauf les \emph{Personnages} et les objets magiques.
+\begin{center}\textbf{\newfromWHB{Patrouilles}}\end{center}
 
-La table \ref{table/patrouille_et_grande_armee} résume les limites de duplication dans ces cas.
+Les armées de 1500 points ou moins sont appelées Patrouilles. La taille d'armée minimale est réduite à 3 unités. La table suivante donne les nouvelles limites de duplication :
 
-\begin{table}[!htbp]
-\centering
-\begin{tabular}{rcc}
+\begin{center}
+\begin{tabular}{rl}
 \hline
- 							& \textbf{Patrouille} 	& \textbf{Grande armée} \tabularnewline
-\hline
-\textbf{Base} 				& max. 2	 			& max. 8	 			\tabularnewline
-\textbf{Spécial} 			& max. 2	 			& max. 6	 			\tabularnewline
-\textbf{Rare} 				& max. 1	 			& max. 4	 			\tabularnewline
-\textbf{Héros et Seigneurs} & max. 2	 			& max. 6	 			\tabularnewline
-\textbf{Unique}			    & max. 1	 			& max. 2	 			\tabularnewline
-\textbf{Un par armée}		& max. 1	 			& max. 1	 			\tabularnewline
-\textbf{0 - X Choix} 		& divisée par 2			& doublée				\tabularnewline
+\textbf{Base} 							& max. 2 \tabularnewline
+\textbf{Spécial} 						& max. 2 \tabularnewline
+\textbf{Rare} 							& max. 1 \tabularnewline
+\textbf{Héros et Seigneurs}	& max. 2 \tabularnewline
+\textbf{\oneofakind}			    & max. 1 \tabularnewline
+\textbf{\oneperarmy}				& max. 1 \tabularnewline
+\textbf{\zerotoXchoice{X}} 	& divisée par 2 \tabularnewline
 \hline
 \end{tabular}
-\caption{\label{table/patrouille_et_grande_armee}Limites extrêmes de duplication des armées.}
-\end{table}
+\end{center}
 
+\columnbreak
+
+\begin{center}\textbf{\newfromWHB{Grandes Armées}}\end{center}
+
+Les armées de 4000 points ou plus sont appelées Grandes Armées. Les unités marquées \oneofakind{} peuvent être prises en deux exemplaires. La table suivante donne les nouvelles limites de duplication :
+
+\begin{center}
+\begin{tabular}{rl}
+\hline
+\textbf{Base} 							& max. 8 \tabularnewline
+\textbf{Spécial} 						& max. 6 \tabularnewline
+\textbf{Rare} 							& max. 4 \tabularnewline
+\textbf{Héros et Seigneurs}	& max. 6 \tabularnewline
+\textbf{\oneofakind}			    & max. 2 \tabularnewline
+\textbf{\oneperarmy}				& max. 1 \tabularnewline
+\textbf{\zerotoXchoice{X}} 	& doublée \tabularnewline
+\hline
+\end{tabular}
+\end{center}
+\end{multicols}
+
+\newpage
 \section{Liste d'armée ouverte ?}
 
-Les règles de ce jeu ont été équilibrées avec l'idée de listes d'armée complètement révélées. Par exemple, votre adversaire doit savoir quels objets magiques vous possédez. Nous encourageons les joueurs à partager leur liste d'armée complète avec leur adversaire au début de la partie, en détaillant unités, options, objets magiques, capacités spéciales, coût en points, etc. Les seules choses qui ne doivent pas être montrées à votre adversaire sont celles explicitement citées comme cachées ou secrètes, comme un Assassin caché. Précisons que l'Assassin et son équipement sont quand même mentionnés dans la liste.
+Les règles de ce jeu ont été équilibrées avec l'idée de listes d'armée complètement révélées. Par exemple, votre adversaire doit savoir quels Objets Magiques vos figurines possèdent. Nous encourageons les joueurs à partager leur Liste d'Armée complète avec leur adversaire au début de la partie, en détaillant unités, options, Objets Magiques, capacités spéciales, coûts en points, etc. Les seules choses qui ne doivent pas être montrées à votre adversaire sont celles explicitement citées comme cachées ou secrètes, comme dans quelle unité un Assassin est caché. Précisons que l'Assassin et son équipement sont quand même mentionnés dans la liste.
 
-\subsection*{Listes cachées}
-\label{liste_cachee}
+\subsection[Règles optionnelles pour listes cachées]{\newfromWHB{Règles optionnelles pour listes cachées}}
+\label{hidden_lists}
 
-Rappelez-vous quand même que les règles générales ont été équilibrées pour des listes ouvertes. Il peut cependant arriver que des joueurs préfèrent jouer avec des listes \og cachées \fg . Dans ce cas, nous vous proposons de suivre les règles suivantes. La plus grande partie de votre armée doit rester connue de votre adversaire avant le début de la partie. Seuls quelques aspects sont secrets, ou \og cachés \fg : les Objets magiques, et ce qui suit les règles des Objets magiques, comme les \emph{Dons Démoniaques} et les \emph{Runes Naines}. Le reste doit être présenté dans la partie ouverte de votre liste. De plus, les Objets magiques qui ont un équivalent standard doivent être présentés sur la liste ouverte comme leur équivalent standard. Une Lance magique, par exemple, apparait comme une simple Lance. Quand vous possédez au moins deux unités qui sont identiques dans la liste ouverte, mais qui ont une différence cachée, comme par exemple une Bannière magique, vous devez avoir un moyen visible de les différencier, noté sur votre liste cachée. Par exemple, la bannière rouge est la Bannière magique, tandis que la bleue est ordinaire.
+Certains joueurs peuvent préférer jouer avec des listes dites \og cachées \fg{}. Rappelons que les règles du jeu n'ont pas été équilibrées dans cette optique. Dans ce cas, nous vous proposons de suivre les règles suivantes. La plus grande partie de votre armée doit rester connue de votre adversaire avant le début de la partie. Seuls quelques aspects sont secrets, ou \og cachés \fg{}. Les deux joueurs peuvent donner à leur adversaire une liste simplifiée dans laquelle les détails cachés sont omis.
 
-\subsection*{Révéler les objets magiques}
+Voilà les éléments qui peuvent être cachés : 
 
-Un Objet magique, ou équivalent, doit être révélé à la première utilisation. Un objet est considéré comme utilisé quand il a une chance d'affecter le jeu d'une quelconque façon. Entre autres :
 \begin{itemize}[label={-}]
-\item si cela affecte un jet de dé, même si le résultat obtenu sur le dé ne déclenche pas d'effet ;
-\item si cela altère une attaque, via une Arme magique ou un objet qui ajoute une règle spéciale à l'attaque ;
-\item si cela altère un jet de sauvegarde. L'objet doit alors être révélé avant que les dés ne soient jetés. Remarquez qu'un objet qui change une sauvegarde de la même manière que son équivalent standard le ferait, comme un Bouclier magique, ne doit pas être révélé.
+\item Les Objets Magiques pris dans la liste commune de ce livre.
+\item Les Objets Magiques spécifiques aux Livres d'Armée ainsi que toute option suivant les règles des Objets Magiques, comme les Objets Démoniaques et les Runes Naines.
 \end{itemize}
 
-Un objet qui augmente le Mouvement ne compte comme étant utilisé que quand l'unité se déplace plus qu'elle ne le pourrait sans l'objet, ou quand elle charge. Déclarez alors l'objet avant de lancer le jet de distance de charge, mais après que les réactions ont été déclarées. Pour les \emph{Objets Runiques Nains}, ne révélez que la \emph{Rune} qui est utilisée, pas la combinaison complète.
+Le reste doit être présenté dans la partie ouverte de votre liste. De plus, les Objets Magiques et assimilés qui ont un équivalent standard doivent être présentés sur la liste ouverte comme tels. Une Arme Lourde magique, par exemple, apparait comme une simple Arme Lourde.
+
+Quand vous possédez au moins deux unités qui sont identiques dans la liste ouverte, mais qui ont une différence cachée, comme par exemple une Bannière Magique, vous devez avoir un moyen visible de les différencier, noté sur votre liste complète. Par exemple, la bannière rouge est la Bannière Magique, tandis que la bleue est ordinaire.
+
+\noindent\textbf{Révéler les Objets Magiques}
+
+Un Objet Magique, ou équivalent, doit être révélé à la première utilisation. Un objet est considéré comme utilisé quand il a une chance d'affecter le jeu d'une quelconque façon. Entre autres :
+\begin{itemize}[label={-}]
+\item si cela affecte un jet de dé, même si le résultat obtenu sur le dé ne déclenche pas d'effet ;
+\item si cela altère une attaque, via une Arme Magique ou tout objet dont une règle affecte l'attaque ;
+\item si cela altère un jet de sauvegarde. L'objet doit alors être révélé avant que les dés ne soient jetés. Remarquez qu'un objet qui affecte une sauvegarde de la même manière que son équivalent standard le ferait, comme un Bouclier Magique, ne doit pas forcément être révélé.
+\end{itemize}
+
+Un objet qui augmente la mobilité ne compte comme étant utilisé que quand l'unité se déplace plus qu'elle ne le pourrait sans l'objet, ou quand elle charge. Déclarez alors l'objet avant de lancer le jet de distance de charge, mais après que les réactions ont été déclarées. Pour les Objets Runiques Nains, ne révélez que la Rune qui est utilisée, pas la combinaison complète.
 

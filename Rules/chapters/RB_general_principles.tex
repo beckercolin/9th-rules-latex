@@ -1,100 +1,111 @@
-% Base sur la VO 0.11.9
-% Relecture technique: 
-% Relecture syntaxique: 
 
 \part{Principes généraux}
 
 \section{Jeu au tour par tour}
 
-\emph{Batailles Fantastiques : Le 9\ieme Âge} est un jeu au tour par tour. Une partie ordinaire se joue en 6 tours de jeu. Un tour de jeu se décompose en deux tours de joueur. Un joueur a le premier tour, son tour de joueur, pendant lequel il déplace ses figurines, et attaque avec elles. Après cela, l'autre joueur joue son premier tour de joueur, ce qui permet de finir le premier tour de jeu. Dans le deuxième tour de jeu, le premier joueur joue maintenant son deuxième tour (de joueur), et ainsi de suite, jusqu'à ce que les deux joueurs aient fini leur sixième tour, ce qui termine la partie.
+Batailles Fantastiques : Le 9\ieme Âge est un jeu au tour par tour. Une partie ordinaire se joue en 6 Tours de Jeu. Un Tour de Jeu se décompose en deux Tours de Joueur. Un joueur a le premier Tour de Joueur, pendant lequel il déplace ses figurines, et attaque avec elles. Après cela, l'autre joueur joue son premier Tour de Joueur, ce qui finit le premier Tour de Jeu. Durant le deuxième Tour de Jeu, le premier joueur joue maintenant son deuxième Tour de Joueur, et ainsi de suite, jusqu'à ce que les deux joueurs aient fait six Tours de Joueur, ce qui termine la partie.
 
 \subsection{Tour de joueur}
 
-Chaque tour de joueur se divise en quatre \emph{Phases}, elles-mêmes divisées en \emph{Étapes}. Ces phases sont jouées dans l'ordre donné dans la table \ref{table/phases}.
+Chaque Tour de Joueur se divise en quatre Phases jouées dans l'ordre suivant :
 
-\begin{table}[!htbp]
-\centering
+\hspace*{0.3cm}
 \begin{tabular}{c|l}
-\textbf{1} & Phase de Mouvement \tabularnewline
-\textbf{2} & Phase de Magie \tabularnewline
-\textbf{3} & Phase de Tir \tabularnewline
-\textbf{4} & Phase de Corps à corps \tabularnewline
+1 & Phase de Mouvement \tabularnewline
+2 & Phase de Magie \tabularnewline
+3 & Phase de Tir \tabularnewline
+4 & Phase de Corps à Corps \tabularnewline
 \end{tabular}
-\caption{\label{table/phases}Phases d'un tour de joueur.}
-\end{table}
 
 \subsection{Joueurs actif et réactif}
 
-Le joueur actif est le joueur qui est en train de jouer son tour.
+Le Joueur Actif est le joueur qui est en train de jouer son tour.
 
-Le joueur réactif est le joueur qui n'est pas en train de jouer son tour.
+Le Joueur Réactif est le joueur qui n'est pas en train de jouer son tour.
 
-\subsection{Capacités simultanées}
+\subsection{Effets simultanés}
 
-\nouveau{À chaque fois qu'une ou plusieurs capacités sont activées en même temps, le joueur actif doit déclarer l'usage de ses capacités avant le joueur réactif. Une fois que les deux joueurs ont déclaré l'usage de leurs capacités, les effets des capacités sont résolus, en commençant par le joueur actif}. Chaque joueur est libre de décider l'ordre de ses propres capacités simultanées. Par exemple, si deux joueurs ont une capacité qui peut être activée au début de la phase de magie, le joueur dont c'est la phase de magie doit décider en premier s'il utilise sa capacité ou non. Ensuite, le joueur réactif peut choisir s'il utilise sa propre capacité ou non. Enfin, les effets des deux capacités sont résolus, en commençant par la capacité du joueur actif.
+\newfromWHB{À chaque fois qu'au moins deux effets sont activés en même temps, et que leur ordre importe, commencez par résoudre tous les effets contrôlés par le Joueur Actif. Chaque joueur décide de l'ordre dans lequel ses propres effets sont résolus. Si une décision est nécessaire, par exemple pour activer ou non une capacité, le Joueur Actif doit déclarer ses choix avant le Joueur Réactif. Une fois que les deux joueurs ont déclaré quelles capacités sont activées, et dans quel ordre, les effets sont résolus, en commençant par le Joueur Actif.} Par exemple, si les deux joueurs ont une capacité qui peut être activée au début de la Phase de Magie, le joueur dont c'est la Phase de Magie doit décider en premier s'il utilise sa capacité ou non. Ensuite, le Joueur Réactif peut choisir s'il utilise la sienne. Enfin, les effets des deux capacités sont résolus, en commençant par celle du Joueur Actif.
 
 \section{Les dés}
 
 \subsection{Lancer les dés}
 
-Dans \emph{Batailles Fantastiques : Le 9\ieme Âge}, des dés sont souvent utilisés pour déterminer ce qu'il se passe. Le dé le plus souvent utilisé est un dé à six faces, appelé D6, dont les valeurs vont de \result{1} à \result{6}.
+Dans Batailles Fantastiques : Le 9\ieme Âge, on utilise souvent des dés pour déterminer ce qu'il se passe. Le dé le plus utilisé est un dé à six faces, appelé \og D6 \fg{}, dont les valeurs vont de 1 à 6. Un jet de dé est généralement réussi si le résultat est supérieur ou égal à une certaine valeur, par exemple si le dé donne \result{3} ou plus. Cela est indiqué par un \og 3+ \fg{} (ou 2+, 4+, 6+, etc.). Vous devez quelquefois lancer plusieurs de ces dés en même temps. Cela est représenté par un nombre avant le type de dé, comme \og 3D6 \fg{}, qui signifie qu'il faut lancer 3 dés à six faces et additionner leurs résultats. Dans d'autres cas, un jet de dé peut être modifié par addition ou soustraction d'un chiffre, comme \og 1D6+1 \fg{}. Ajoutez ou soustrayez le chiffre indiqué au résultat du dé. Enfin, certains effets permettent de relancer des dés, comme des jets pour blesser ratés, ou des jets de Sauvegarde Invulnérable ayant donné \result{1}. Relancez simplement le ou les dés en question.
 
-Les effets d'un jet de dé dépendent du fait que le résultat est égal ou supérieur à une certaine valeur (comme un jet de dé qui sera réussi si le dé donne \result{3} ou plus). Cela est indiqué par un \og 3+ \fg{} (ou 4+, 2+, 6+, etc.).
+\textbf{Un dé relancé ne peut jamais être relancé à nouveau}, peu importe la raison ou la capacité, et le second résultat doit toujours être accepté.
 
-Quelquefois, il est demandé de lancer plusieurs de ces dés en même temps. Cela est représenté par un nombre avant le dé lancé, comme \og 3D6 \fg , qui signifie qu'il faut lancer 3 dés à six faces et additionner leurs résultats.
-
-Dans d'autres cas, un jet de dé peut être modifié par addition ou soustraction d'un nombre, comme \og D6+1 \fg . Dans de tels cas, ajoutez ou soustrayez simplement le nombre indiqué au résultat du dé.
-
-Enfin, certaines capacités dans le jeu permettent de relancer des dés, comme des jets de blessure ratés, ou des jets de sauvegarde invulnérable donnant \result{1}. Quand vous tombez sur de telles situations, relancez le ou les dés en question. Un dé relancé ne peut jamais être relancé à nouveau, peu importe la raison ou la capacité, et son résultat doit toujours être accepté.
-
-Le jeu demande parfois de lancer un D3. Il suffit de lancer un D6 et de diviser par deux le résultat, en arrondissant au supérieur, pour un résultat compris entre 1 et 3. Quand on lance un D3, on se réfère toujours au résultat du D6 pour les '1' naturels ou les '6' naturels.
+Il est parfois nécessaire de lancer un D3. Il suffit de lancer un D6 et de diviser par deux le résultat, en arrondissant au supérieur, pour un résultat de 1, 2 ou 3. Quand on parle d'un résultat naturel de \result{1} ou \result{6} à propos d'un jet de D3, on fait toujours référence au résultat du D6 avant la division par deux.
 
 \subsection{Le dé de déviation}
 
-Le dé de déviation est un dé à six faces spécial. Deux de ses faces sont marquées \og Touché ! \fg{} et les quatre autres faces montrent une flèche, pointant ainsi dans une direction aléatoire. Ce dé est généralement utilisé quand un projectile ou l'effet d'un sort doit dévier de sa trajectoire ou doit prendre une direction aléatoire.
-
-Si vous ne possédez pas ce genre de dé, un D6 ordinaire peut faire l'affaire. Un résultat de \result{1} ou \result{6} représente un \og Touché ! \fg . Sinon, le symbole \result{1} pointe une direction aléatoire (voir figure \ref{figure/de_deviation}).
+Le Dé de Déviation est un dé à six faces spécial. Deux de ses faces sont marquées d'un symbole \og Touché ! \fg{} et les quatre autres faces d'une flèche, pointant ainsi dans une direction aléatoire. Ce dé est généralement utilisé quand un projectile ou l'effet d'un sort risque de dévier de sa trajectoire.
 
 \begin{figure}[!htbp]
-\centering
-\includegraphics[width=4cm]{de_deviation.png}
-\caption{Deux façons équivalentes de représenter un dé de déviation.}
-\label{figure/de_deviation}
+\begin{minipage}[c]{0.3\textwidth}
+\includegraphics[width=\textwidth]{pics/deviation_dice.png}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.67\textwidth}
+\subsubsection{Déviation}
+
+Quand vous êtes amenés à faire dévier un objet, par exemple avec \og Faites dévier le gabarit de \distance{1D6} \fg{}, lancez le Dé de Déviation. Si un symbole \og Touché ! \fg{} est obtenu, ne bougez pas l'objet. Si une flèche est obtenue, déplacez le gabarit de la distance indiquée dans la description de la règle parallèlement à la direction de la flèche. Notez qu'il ne s'agit pas de la même chose que de déterminer une direction aléatoire.
+
+\vspace*{10pt}
+\subsubsection{\newfromWHB{Utiliser un dé classique à la place}}
+
+Un dé à six faces ordinaire peut faire l'affaire pour remplacer un Dé de Déviation. Un résultat de \result{1} ou \result{6} représente un \og Touché ! \fg . Sinon, le symbole \result{1} pointe une direction comme une flèche (voir la figure \ref{figure/deviation_dice}).
+
+\caption{Deux façons équivalentes de représenter un Dé de Déviation.}
+\label{figure/deviation_dice}
+\end{minipage}
 \end{figure}
-
-\subsection{Déviation}
-
-Quand vous êtes amenés à faire dévier un objet (par exemple \emph{Faites dévier un gabarit de D6{\pouce}}), lancez le dé de déviation, et d'autres dés pour la distance si nécessaire. Si un symbole \og Touché ! \fg{} est obtenu, ne bougez pas le gabarit. Si une flèche est obtenue, déplacez le gabarit de la distance indiquée par la description de la règle dans la direction de la flèche. Notez que cela n'est pas la même manipulation que déterminer une direction aléatoire.
 
 \subsection{Direction aléatoire}
 
-Dans certains cas, vous devrez déterminer une direction aléatoire. Lancez le dé de déviation, et si un \og Touché ! \fg{} est obtenu, relancez le dé de déviation jusqu'à obtenir une flèche (exceptionnellement, vous pouvez relancer un dé déjà relancé). Certains dés de déviation ont une petite flèche sur le symbole \og Touché ! \fg{} : pas besoin alors de relancer le dé, utilisez la petite flèche pour la direction.
+Dans certains cas, vous devrez déterminer une direction aléatoire. Lancez alors le Dé de Déviation jusqu'à obtenir une flèche et utilisez cette direction. Ignorez tout résultat \og Touché ! \fg{}. Vous pouvez exceptionnellement relancer ce dé plusieurs fois pour obtenir une flèche. Certains Dés de Déviation disposent d'une petite flèche sur le symbole \og Touché ! \fg{}. Il est donc inutile de relancer le dé, utilisez la petite flèche pour la direction.
 
 \section{Gabarits}
 
-Des gabarits sont habituellement utilisés pour déterminer des aires d'effet. Il y a différents types et tailles de gabarits, les plus utilisés étant les gabarits de 3{\pouce} et 5{\pouce}. Ce sont des gabarits en forme de disque, dont les diamètres sont 3{\pouce} et 5{\pouce}. Il existe également des gabarits moins utilisés comme le gabarit rond de 1{\pouce} (appelé gabarit de 1{\pouce}) et le gabarit linéaire (utilisé pour les canons et certains sorts).
+Les Gabarits sont utilisés pour déterminer des zones d'effet. Il y en a de différents types et tailles, les plus employés étant les Gabarits de \distance{3} et \distance{5}. Ces derniers ont une forme de disque, de diamètres respectifs \distance{3} et \distance{5}. Les Gabarits moins communs comprennent le Gabarit rond de \distance{1}, appelé simplement Gabarit de \distance{1}, et le Gabarit Linéaire, utilisé pour les canons et certains sorts.
 
-Pour définir combien de figurines sont touchées par un gabarit, tenez le gabarit en question au-dessus de la cible pour déterminer quelles figurines ont leur socle directement sous le gabarit. Si n'importe quelle partie du socle d'une figurine, aussi petite soit-elle, est recouverte par le gabarit, la figurine compte comme étant sous le gabarit. Un point du gabarit ne peut être en contact qu'avec un socle au plus. Notez que les socles des figurines sont construits dans une base métrique alors que les tailles des gabarits s'expriment en pouces (\pouce). Cela signifie qu'un gabarit de 3{\pouce} touche les socles de 5 figurines alignées ayant des socles de 25 {\milli\meter} (3{\pouce} = 7,62 {\centi\meter}).
+Pour définir combien de figurines sont touchées par un Gabarit (on dit aussi sous un Gabarit), tenez le Gabarit en question au-dessus de la cible et déterminez quelles figurines ont leur socle directement en dessous. Si n'importe quelle partie du socle d'une figurine, aussi petite soit-elle, est recouverte par le Gabarit, la figurine compte comme étant touchée. Un point du Gabarit ne peut toucher qu'un socle au plus. Notez que les dimensions des socles des figurines sont dans une base métrique alors que les tailles des Gabarits s'expriment en pouces. Cela signifie par exemple qu'un Gabarit de \distance{3} peut toucher les socles de 5 figurines alignées ayant des socles de \unit{25}{\milli\meter}, car \distance{3} = 7,62 {\centi\meter}.
 
-\subsection{Touches des Gabarits Circulaires}
+\subsection{Touches des gabarits circulaires}
 
-Les graphiques et le tableau suivant présentent le nombre de figurines qui peuvent être touchées pour chacun des deux Gabarits Circulaires. Voici les dimensions représentées par les couleurs : vert = 20x20 mm, magenta = 25x25 mm, cyan = 40x40 mm et orange = 25x50 mm.
+La figure \ref{figure/templates} et la table \ref{table/templates_hits} présentent le nombre de figurines qui peuvent être touchées pour chacun des deux Gabarits circulaires.
 
-\includegraphics[width=17cm]{gabarits_1.png}
-
-\begin{tabular}{M{2.5cm}|M{2.5cm}M{2.5cm}M{2.5cm}M{2.5cm}}
- & \textbf{Socles 20x20} & \textbf{Socles 25x25} & \textbf{Socles 40x40} & \textbf{Socles 25x50} \\
-\hline
-\textbf{Gabarit de 3"} & 22 & 16 & 9 & 11 \\
-\hline
-\textbf{Gabarit de 5"} & 48 & 34 & 16 & 24 \\
-\end{tabular}
-
-\subsection{Gabarit linéaire}
-
-\newrule{On parle de Gabarit linéaire lorsqu'on trace une ligne droite entre deux points. Toutes les figurines en dessous de cette ligne sont considérées comme étant sous le gabarit. Une méthode simple et conviviale pour déterminer le nombre de touches d'un Gabarit linéaire consiste à multiplier le nombre de rangs traversés par 2, puis soustraire 1 au résultat. Dans l'exemple ci-dessous, 4 rangs sont traversés par la ligne droite. 4 x 2 - 1 = 7, donc 7 figurines sont touchées.}
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=9cm]{gabarits_2.png}
+\vspace*{0.3cm}
+\def\svgwidth{\textwidth}
+\input{pics/Templates.pdf_tex}
+\caption{Placement optimal des Gabarits circulaires. Les socles verts font \unit{20x20}{\milli\meter}, les socles magenta \unit{25x25}{\milli\meter}, les socles cyan \unit{40x40}{\milli\meter} et les socles oranges \unit{25x50}{\milli\meter}.}
+\label{figure/templates}
+\end{figure}
+
+\begin{table}[!htbp]
+\centering
+\vspace*{0.2cm}
+\begin{tabular}{M{2.5cm}M{2.5cm}M{2.5cm}M{2.5cm}M{2.5cm}}
+\hline
+Taille de socle & \unit{20x20}{\milli\meter} & \unit{25x25}{\milli\meter} & \unit{40x40}{\milli\meter} & \unit{25x50}{\milli\meter} \tabularnewline
+Gabarit de \distance{3} & 22 & 16 & 9 & 11 \tabularnewline
+Gabarit de \distance{5} & 48 & 34 & 16 & 24 \tabularnewline
+\hline
+\end{tabular}
+\caption{Nombre maximal de figurines touchées.}
+\label{table/templates_hits}
+\end{table}
+
+
+\subsection{Gabarit linéaire}
+
+Un Gabarit Linéaire est une ligne droite tracée entre deux points. \newfromWHB{Toutes les figurines dont le socle se situe sous la ligne sont touchées.} On peut aussi déterminer le nombre de figurines touchées en additionnant le nombre de rangs et de colonnes traversés et en retirant un. Dans la figure \ref{figure/linetemplate}, 4 rangs et 4 colonnes sont traversés, soit 4 + 4 - 1 = 7 figurines touchées.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=7cm]{pics/linetemplate.png}
+\caption{Touches d'un Gabarit Linéaire.}
+\label{figure/linetemplate}
 \end{figure}

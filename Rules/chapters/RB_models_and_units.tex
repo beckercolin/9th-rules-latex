@@ -1,57 +1,64 @@
-% Base sur la VO 0.11.9
-% Relecture technique: 
-% Relecture syntaxique: 
 
 \part{Figurines, unités et formations}
 
 \section{Figurines}
 
-Les figurines représentent des soldats, monstres et lanceurs de sort. Tous les éléments liés à un même socle sont considérés comme étant une même figurine, comme par exemple un dragon et son cavalier, ou un canon et ses trois servants.
+Les figurines représentent des guerriers, des monstres ou encore des lanceurs de sort. Tous les éléments liés à un même socle sont considérés comme étant une même figurine, comme par exemple un dragon et son cavalier, ou un canon et ses trois servants.
 
 \subsection{Socles et contact socle à socle}
 
-Toutes les figurines sont fixées sur des socles. L'envergure d'une figurine est associée à son socle. Les socles sont normalement rectangulaires, et leurs mesures sont données en millimètres, dans l'ordre face avant puis côté, comme 25x50 {\milli\meter} pour une base de cavalerie ordinaire. Il existe quelques cas rares de socles ronds, par exemple pour les \emph{Machines de Guerre}. Dans ce cas, on donne le diamètre : 60 {\milli\meter} pour le socle de \emph{Machines de Guerre} ordinaires.
+Toutes les figurines sont fixées sur des socles qui peuvent être carrés, rectangulaires ou ronds. L'envergure d'une figurine est associée à son socle. Les dimensions des socles sont données en millimètres, dans l'ordre face avant puis côté, comme par exemple \unit{25x50}{\milli\meter} pour un socle de cavalerie ordinaire. Dans le cas d'un socle rond, on donne une seule dimension, le diamètre : \unit{60}{\milli\meter} par exemple pour le socle d'une Machine de Guerre ordinaire.
 
-On considère que deux figurines sont en contact socle à socle si leurs socles sont en contact physique, contact coin à coin inclus.
+Deux figurines sont considérées comme étant en contact socle à socle si leurs socles se touchent, même coin à coin.
 
 \subsection{Figurines en plusieurs éléments}
 
-Certaines figurines ont plusieurs profils de caractéristiques. C'est le cas pour un chevalier et sa monture. Chaque partie d'une figurine qui possède son propre profil de caractéristiques est appelé un élément de figurine. Par exemple, un Char est une figurine unique composée de 5 éléments : 2 destriers, 2 membres d'équipage et un char. Un soldat à pied classique est une figurine unique composée d'un seul élément. \nouveau{Chaque partie d'une telle figurine a son propre profil et constitue un "élément de figurine"}.
+Certaines figurines, appelées Figurines en Plusieurs Éléments, ont plusieurs Profils de Caractéristiques. Une figurine de cavalerie par exemple, est composée de deux éléments (cavalier et monture), tandis qu'une figurine de Char peut posséder par exemple cinq éléments (deux chevaux, deux membres d'équipage et un chassis). Un soldat classique à pied est une figurine composée d'un seul élément. \newfromWHB{Chaque partie d'une telle figurine a son propre Profil de Caractéristique et constitue un \og élément de figurine \fg{}.}
 
 \section{Unités}
 
-Toute figurine fait partie d'une unité. Les unités peuvent être un groupe de figurines déployées en rangs et colonnes ou une figurine seule. Quand une règle, une capacité, un sort, etc., affecte une unité, toutes les figurines de l'unité sont concernées. Quand elles forment une unité, toutes les figurines doivent être parfaitement alignées, en contact les unes des autres, et face à la même direction. Tous les rangs, à l'exception du dernier, doivent avoir la même largeur. Le dernier rang pouvant être plus court, on l'appelle quand c'est le cas un rang arrière incomplet. \nouveau{Un dernier rang peut être incomplet du moment que chaque figurine est alignée avec celles des autres rangs}. 
+Toute figurine fait partie d'une unité. Une unité peut être un groupe de figurines déployées en rangs et colonnes ou une figurine seule. Quand une règle, une capacité, un sort, etc., affecte une unité, toutes les figurines de l'unité sont concernées. Quand elles forment une unité, toutes les figurines doivent être parfaitement alignées, en contact les unes des autres, et face à la même direction. Tous les rangs, à l'exception du dernier, doivent avoir la même largeur. Le dernier rang pouvant être plus court, on l'appelle quand c'est le cas un rang arrière incomplet. \newfromWHB{Il peut tout à fait il y avoir des vides dans ce rang arrière, du moment que chaque figurine est alignée avec celles de devant.}
 
 \subsection{Figurines ordinaires}
 
-Les figurines génériques dans une unité sont appelées par la suite \emph{Figurines ordinaires}. Les \emph{Personnages} n'en sont pas.
+Les figurines génériques dans une unité sont appelées par la suite Figurines Ordinaires. Seuls les Personnages ne sont pas des figurines ordinaires.
 
 \subsection{Rangs complets}
 
-Un rang complet est un rang qui contient au moins 5 figurines. Certaines unités, comme l'\emph{Infanterie Monstrueuse}, requièrent moins de 5 figurines pour former un rang complet, voir la partie \ref{types_de_troupe} à la page \pageref{types_de_troupe}.
+Un Rang Complet est un rang qui contient au moins 5 figurines. Certaines unités, comme celles d'Infanterie Monstrueuse, requièrent moins de 5 figurines pour former un Rang Complet. Voir la partie \ref{troop_types} à la page \pageref{troop_types} pour plus de détails.
 
 \subsection{Formation en horde}
 \label{horde}
 
-Les unités formées en rang de 10 figurines au moins sont considérées comme étant en formation de \emph{Horde}. Ce nombre est abaissé à 6 figurines pour des \emph{Rangs Monstrueux}.
+Les unités formées en rang de 10 figurines au moins sont considérées comme étant en formation de Horde. Ce nombre est abaissé à 6 figurines dans le cas de Rangs Monstrueux.
 
 \subsection{Empreinte au sol}
 
-L'empreinte au sol d'une unité correspond à la surface occupée par l'ensemble des socles de toutes les figurines de l'unité.
+L'Empreinte au Sol d'une unité correspond à la surface occupée par l'ensemble des socles de toutes les figurines de l'unité.
 
 \subsection{Centre de l'unité}
 \label{centre_unite}
 
-Le centre d'une unité est défini en dessinant un rectangle imaginaire le plus petit possible contenant son empreinte au sol. Le centre de l'unité est le centre de ce rectangle, au croisement des deux diagonales (voir les diagonales en rouge dans la figure \ref{figure/arcs}).
+Le centre d'une unité est défini en dessinant un rectangle imaginaire le plus petit possible contenant son Empreinte au Sol. Le centre de l'unité est le centre de ce rectangle, au croisement des deux diagonales (voir les diagonales en rouge dans la figure \ref{figure/arcs}).
 
 \subsection{Avant, arrière, flancs et arcs de vision}
 
-Une unité possède quatre arcs de vision : l'avant, l'arrière et les deux flancs. Chaque arc est défini en tirant une ligne droite depuis chaque coin du rectangle imaginaire défini dans le paragraphe \ref{centre_unite} ci-dessus, avec un angle de 135{\text{\degree}} par rapport aux côtés de ce rectangle (voir la figure \ref{figure/arcs}). Les unités constituées de socles ronds n'ont pas d'arc de vision, elles ont un champ de vision à 360{\text{\degree}}.
+Une unité possède quatre arcs de vision : frontal, arrière et deux latéraux. Chaque arc est défini en tirant une ligne droite depuis chaque coin du rectangle imaginaire défini dans le paragraphe \ref{centre_unite} ci-dessus, avec un angle de 135{\text{\degree}} par rapport aux côtés de ce rectangle (voir la figure \ref{figure/arcs}). Les unités constituées de socles ronds n'ont pas d'arc de vision, des lignes de vue peuvent être tracées depuis n'importe quel point de leur socle et dans n'importe quelle direction.
 
+\newcommand{\frontarc}{Arc frontal}
+\newcommand{\leftsidearc}{Arc latéral}
+\newcommand{\rightsidearc}{Arc latéral}
+\newcommand{\reararc}{Arc arrière}
+\newcommand{\centreofunit}{\normalfontsize Centre de l'unité}
+\newcommand{\firstangle}{90 \text{\degree}}
+\newcommand{\secondangle}{135 \text{\degree}}
 \begin{figure}[!htbp]
-\centering
-\def\svgwidth{12cm}
-\input{arcs.pdf_tex}
-\caption{Cette unité possède 3 rangs et 5 colonnes. Le socle sur le côté droit est un \emph{Personnage} avec un socle incompatible avec ceux de l'unité qu'il a rejointe. Le dernier rang est incomplet, ne contenant que 3 figurines. L'empreinte au sol de l'unité est la zone verte. Le centre de l'unité est le centre du rectangle dessiné à partir des bords extérieurs de l'empreinte au sol, dont les diagonales sont en rouge. Les arcs avant, arrière et des flancs sont définis par un angle de 135{\text{\degree}} avec les côtés de ce rectangle.}
+\begin{minipage}[c]{0.65\textwidth}
+\def\svgwidth{\textwidth}
+\input{pics/arcs.pdf_tex}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.32\textwidth}
+\caption{Cette unité possède 3 rangs et 5 colonnes. Le socle sur le côté droit est un Personnage avec un socle incompatible avec ceux de l'unité qu'il a rejointe. Le dernier rang est incomplet, ne contenant que 3 figurines. L'Empreinte au Sol de l'unité est la zone verte. Le centre de l'unité est le centre du rectangle dessiné à partir des bords extérieurs de l'Empreinte au Sol, dont les diagonales sont en rouge. Les arcs avant, arrière et des flancs sont définis par un angle de 135{\text{\degree}} avec les côtés de ce rectangle.}
 \label{figure/arcs}
+\end{minipage}
 \end{figure}
