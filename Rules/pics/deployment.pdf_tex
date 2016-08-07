@@ -50,10 +50,10 @@
   \makeatother%
   \begin{picture}(1,0.26315788)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{pics/deployment.pdf}}%
-    \put(0.44224807,0.24144288){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\deploymentfigDiagonal}}}%
+    \put(0.50041927,0.24144288){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\deploymentfigDiagonal}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{pics/deployment.pdf}}%
     \put(0.72011289,0.13365211){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{9}}}}%
-    \put(0.74679697,0.24144288){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\deploymentfigFlankattack}}}%
+    \put(0.82873207,0.24144288){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\deploymentfigFlankattack}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{pics/deployment.pdf}}%
     \put(0.71588207,0.08110209){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{15}}}}%
     \put(0.69971354,0.17876398){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{18}}}}%
@@ -68,8 +68,8 @@
     \put(0.83853389,0.09417835){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{9}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{pics/deployment.pdf}}%
     \put(0.83430315,0.14689156){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{15}}}}%
-    \put(0.12489076,0.24144288){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\deploymentfigClassic}}}%
-    \put(0.79597601,0.2034159){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\deploymentfigAttacker}}}%
-    \put(0.79276663,0.03236321){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\deploymentfigDefender}}}%
+    \put(0.17100351,0.24144288){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\deploymentfigClassic}}}%
+    \put(0.82871771,0.2034159){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\deploymentfigAttacker}}}%
+    \put(0.82871771,0.03236321){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\deploymentfigDefender}}}%
   \end{picture}%
 \endgroup%
