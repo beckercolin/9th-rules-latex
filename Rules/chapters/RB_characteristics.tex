@@ -9,15 +9,15 @@ Chaque figurine possède un Profil, qui est composé de neuf caractéristiques p
 \centering
 \begin{tabular}{M{0.6cm}M{2.8cm}M{12cm}@{}}
 \hline
-\textbf{M} & Mouvement & \textit{La vitesse à laquelle la figurine se déplace, en pouces par tour.} \tabularnewline
-\textbf{CC} & Capacité de Combat & \textit{Détermine les chances de toucher et d'\hspace{0.5pt}éviter d'être touché au Corps à Corps.} \tabularnewline
-\textbf{CT} & Capacité de Tir & \textit{Détermine les chances de toucher avec des armes de Tir.} \tabularnewline
-\textbf{F} & Force & \textit{Plus la Force est élevée, plus il est facile de blesser et de passer à travers l'armure.} \tabularnewline
-\textbf{E} & Endurance & \textit{Une grande Endurance permet d'\hspace{0.5pt}encaisser des coups plus facilement.} \tabularnewline
-\textbf{PV} & Points de Vie & \textit{Quand une figurine perd tous ses Points de Vie, elle est retirée comme perte.} \tabularnewline
-\textbf{I} & Initiative & \textit{Une plus grande Initiative permet de frapper en premier.} \tabularnewline
-\textbf{A} & Attaques & \textit{Le nombre d'\hspace{0.5pt}attaques qu'\hspace{0.7pt}une figurine peut porter au Corps à Corps en une Manche.} \tabularnewline
-\textbf{Cd} & Commandement & \textit{Mesure de la discipline et de la capacité à rester au combat dans des situations dangereuses.} \tabularnewline
+\textbf{M} & Mouvement & \flufffont{La vitesse à laquelle la figurine se déplace, en pouces par tour.} \tabularnewline
+\textbf{CC} & Capacité de Combat & \flufffont{Détermine les chances de toucher et d'éviter d'être touché au Corps à Corps.} \tabularnewline
+\textbf{CT} & Capacité de Tir & \flufffont{Détermine les chances de toucher avec des armes de Tir.} \tabularnewline
+\textbf{F} & Force & \flufffont{Plus la Force est élevée, plus il est facile de blesser et de passer à travers l'armure.} \tabularnewline
+\textbf{E} & Endurance & \flufffont{Une grande Endurance permet d'encaisser les coups plus facilement.} \tabularnewline
+\textbf{PV} & Points de Vie & \flufffont{Quand une figurine perd tous ses Points de Vie, elle est retirée comme perte.} \tabularnewline
+\textbf{I} & Initiative & \flufffont{Une plus grande Initiative permet de frapper en premier.} \tabularnewline
+\textbf{A} & Attaques & \flufffont{Le nombre d'attaques qu'une figurine peut porter au Corps à Corps en une Manche.} \tabularnewline
+\textbf{Cd} & Commandement & \flufffont{Mesure de la discipline et de la capacité à rester au combat dans des situations dangereuses.} \tabularnewline
 \hline
 \end{tabular}
 \caption{\label{table/characteristics}Les Caractéristiques d'une figurine.}
@@ -36,17 +36,17 @@ Quand la valeur d'une Caractéristique est égale à 0, cela peut être représe
 
 \noindent F à 0 : Les attaques de la figurine ne peuvent pas blesser.
 
-\noindent E à 0 : Les jets pour blesser des attaques dirigées contre la figurine réussissent sur 2+.
+\noindent E à 0 : Les jets pour blesser dirigés contre la figurine réussissent sur 2+.
 
 \noindent PV à 0 : La figurine est retirée comme perte.
 
-\noindent A à 0 : Un élément de figurine dont la Caractéristique d'Attaque non modifiée est à 0 ne peut jamais porter d'attaques au Corps à Corps.
+\noindent A à 0 : Un élément de figurine dont la Caractéristique d'Attaques non modifiée est à 0 ne peut jamais porter d'attaques au Corps à Corps.
 
 \section{Test de caractéristique}
 
 Quand une figurine doit passer un Test de Caractéristique, lancez 1D6. Si le résultat est \result{6} ou s'il est strictement plus grand que la Caractéristique testée, le test est raté. Sinon, le test est réussi. Ainsi, les figurines avec une Caractéristique à 0 échoueront automatiquement tout Test lié à cette Caractéristique.
 
-Quand une figurine possédant plusieurs valeurs pour une même Caractéristique, comme un cheval et son cavalier, doit passer un Test de Caractéristique, faites un test unique pour la figurine entière en utilisant la Caractéristique la plus haute. Quand un Test de Caractéristique doit être passé pour toute une unité, prenez la valeur la plus grande de l'unité.
+Quand une figurine doit passer un Test de Caractéristique, et qu'elle possède plusieurs valeurs pour une même Caractéristique, comme un cheval et son cavalier, faites un test unique pour la figurine entière en utilisant la Caractéristique la plus haute. Quand un Test de Caractéristique doit être passé pour toute une unité, prenez la valeur la plus grande de l'unité.
 
 \subsection{Caractéristique non modifiée}
 
@@ -60,7 +60,7 @@ Dans certains cas,  une figurine peut emprunter ou utiliser la Caractéristique 
 
 Un test de Commandement se passe en lançant 2D6 et en comparant le résultat avec la valeur de la Caractéristique de Commandement de la figurine. Si le résultat est strictement plus grand que le Commandement de la figurine, le test est raté. Sinon, le test est réussi. \newfromWHB{Si une unité dispose de plusieurs valeurs de Commandement quand elle doit passer un test, par exemple si un Personnage a rejoint l'unité, le propriétaire peut choisir la valeur à utiliser.}
 
-Il y a beaucoup d'occasions différentes de tester le Commandement, comme les tests de Panique ou de Moral. Ces tests restent des tests de Commandement, peu importe les modificateurs et règles spéciales associées.
+Il y a beaucoup d'occasions différentes de tester le Commandement, comme les tests de Panique ou de Moral. Ces tests restent des tests de Commandement, peu importe les modificateurs et règles spéciales associés.
 
 \subsection[Priorité des modificateurs]{\newfromWHB{Priorité des modificateurs}}
 \label{priority_of_modifiers}

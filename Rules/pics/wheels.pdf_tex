@@ -1,0 +1,90 @@
+%% Creator: Inkscape 0.91_64bit, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'wheels.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1680bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.6)%
+    \put(0.25118859,0.2032921){\color[rgb]{1,0.01176471,0.90980392}\makebox(0,0)[lb]{\smash{\distance{8}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{pics/wheels.pdf}}%
+    \put(0.04446652,0.05088546){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{pics/wheels.pdf}}%
+    \put(0.01950276,0.14278771){\color[rgb]{0,0,0}\rotatebox{-30.00000011}{\makebox(0,0)[lb]{\smash{2}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{pics/wheels.pdf}}%
+    \put(0.08277611,0.25238035){\color[rgb]{0,0,0}\rotatebox{-30.00000011}{\makebox(0,0)[lb]{\smash{3}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{pics/wheels.pdf}}%
+    \put(0.14626598,0.24793603){\color[rgb]{0,0,0}\rotatebox{10.00000016}{\makebox(0,0)[lb]{\smash{4}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{pics/wheels.pdf}}%
+    \put(0.12648615,0.36011337){\color[rgb]{0,0,0}\rotatebox{10.00000016}{\makebox(0,0)[lb]{\smash{5}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{pics/wheels.pdf}}%
+    \put(0.08506203,0.32188583){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{5}}}}%
+    \put(0.28104765,0.46490656){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{5}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{pics/wheels.pdf}}%
+    \put(0.50653629,0.03507309){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{pics/wheels.pdf}}%
+    \put(0.5065363,0.28816646){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{pics/wheels.pdf}}%
+    \put(0.38372745,0.57298417){\color[rgb]{0,0,0}\rotatebox{-100.00000016}{\makebox(0,0)[lb]{\smash{3}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{pics/wheels.pdf}}%
+    \put(0.41025411,0.27282531){\color[rgb]{1,0.01176471,0.90980392}\makebox(0,0)[lb]{\smash{\distance{12}}}}%
+    \put(0.56063982,0.56288446){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{9}}}}%
+    \put(0.85005505,0.44086989){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{6}}}}%
+    \put(0.90993013,0.29248574){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{4}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{pics/wheels.pdf}}%
+    \put(0.79632876,0.04228717){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{pics/wheels.pdf}}%
+    \put(0.78876317,0.57223934){\color[rgb]{0,0,0}\rotatebox{-160.00000016}{\makebox(0,0)[lb]{\smash{2}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{pics/wheels.pdf}}%
+    \put(0.91574669,0.44799732){\color[rgb]{0,0,0}\rotatebox{169.99999984}{\makebox(0,0)[lb]{\smash{3}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{pics/wheels.pdf}}%
+    \put(0.7325869,0.33611095){\color[rgb]{1,0.01176471,0.90980392}\makebox(0,0)[lb]{\smash{\distance{12}}}}%
+    \put(0.87866321,0.21023772){\color[rgb]{1,0.01176471,0.90980392}\makebox(0,0)[lb]{\smash{\distance{10}}}}%
+    \put(0.29725217,0.56013537){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\wheelsA}}}%
+    \put(0.6570931,0.56013537){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\wheelsB}}}%
+    \put(0.95426601,0.56013537){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\wheelsC}}}%
+  \end{picture}%
+\endgroup%
