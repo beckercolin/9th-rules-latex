@@ -1,0 +1,84 @@
+%% Creator: Inkscape 0.91_64bit, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'hard_cover.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1560bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.33333333)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{pics/hard_cover.pdf}}%
+    \put(0.7794661,0.07044141){\color[rgb]{0,0,0}\rotatebox{22.95032566}{\makebox(0,0)[b]{\smash{\figureSCFire}}}}%
+    \put(0.77865184,0.0399736){\color[rgb]{0,0,0}\rotatebox{22.95032566}{\makebox(0,0)[b]{\smash{\figureSCFire}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{pics/hard_cover.pdf}}%
+    \put(0.86890731,0.31755706){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCWithinlightofsight}}}%
+    \put(0.90539588,0.01624801){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCC}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{pics/hard_cover.pdf}}%
+    \put(0.73032478,0.17690255){\color[rgb]{0,0,0}\makebox(0,0){\begin{minipage}{0.08\unitlength}\begin{center}\figureHCImpassableTerrain\end{center}\end{minipage}}}%
+    \put(0.79302471,0.22638576){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCLessthanhalfoffootprintobscured}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{pics/hard_cover.pdf}}%
+    \put(0.38298229,0.07044137){\color[rgb]{0,0,0}\rotatebox{22.95032566}{\makebox(0,0)[b]{\smash{\figureSCFire}}}}%
+    \put(0.38216806,0.03997358){\color[rgb]{0,0,0}\rotatebox{22.95032566}{\makebox(0,0)[b]{\smash{\figureSCFire}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{pics/hard_cover.pdf}}%
+    \put(0.51,0.31755706){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCWithinlightofsight}}}%
+    \put(0.55,0.01624801){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCB}}}%
+    \put(0.32858078,0.16762224){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{pics/hard_cover.pdf}}%
+    \put(0.36593732,0.17690257){\color[rgb]{0,0,0}\makebox(0,0){\begin{minipage}{0.08\unitlength}\begin{center}\figureHCImpassableTerrain\end{center}\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{pics/hard_cover.pdf}}%
+    \put(0.0116182,0.16762222){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{pics/hard_cover.pdf}}%
+    \put(0.03555197,0.07044133){\color[rgb]{0,0,0}\rotatebox{22.95032566}{\makebox(0,0)[b]{\smash{\figureSCFire}}}}%
+    \put(0.03473771,0.03915927){\color[rgb]{0,0,0}\rotatebox{22.95032566}{\makebox(0,0)[b]{\smash{\figureSCFire}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{pics/hard_cover.pdf}}%
+    \put(0.08707171,0.10579876){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCNotinlightofsight}}}%
+    \put(0.22404585,0.01624801){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCA}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{pics/hard_cover.pdf}}%
+    \put(0.04897475,0.17690255){\color[rgb]{0,0,0}\makebox(0,0){\begin{minipage}{0.08\unitlength}\begin{center}\figureHCImpassableTerrain\end{center}\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{pics/hard_cover.pdf}}%
+    \put(0.29916933,0.31758332){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCMorethanhalfoffootprintobscured}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{pics/hard_cover.pdf}}%
+  \end{picture}%
+\endgroup%
