@@ -1,151 +1,162 @@
-% Base sur la VO 0.11.9
-% Relecture technique: 
-% Relecture syntaxique: 
 
 \part{Attaques et blessures}
-\label{attaque_et_blessure}
+\label{attacks_and_damage}
 
-Les attaques peuvent être de différents types, décrits ci-dessous.
+Les attaques sont réparties en Attaques de Corps à Corps et Attaques à Distance.
 
-\subsubsection*{Attaques au corps à corps}
+\noindent\textbf{Attaques de Corps à Corps}
 
-Toutes les attaques faites sur des ennemis en contact socle à socle avec l'unité attaquante, lors de la \emph{Phase de Corps à Corps}, ou si elles devaient être faites comme lors de cette phase, sont considérées comme des attaques au corps à corps.
+Toutes les attaques portées d'une entité à une autre au contact socle à socle et lors de la Phase de Corps à Corps, ou comme lors d'une Phase de Corps à Corps, sont considérées comme des Attaques de Corps à Corps.
 
-\subsubsection*{Attaques à distance}
+\noindent\textbf{\newfromWHB{Attaques à Distance}}
 
-\nouveau{Toutes les attaques qui ne sont pas des attaques au corps à corps sont nommées des attaques à distance.}
+Toutes les attaques qui ne sont pas des Attaques de Corps à Corps sont des Attaques à Distance.
 
-Toutes les attaques à distance réalisées lors de la \emph{Phase de Tir} ou lors d'une réaction à une charge sont des attaques de tir.
+Toutes les Attaques à Distance réalisées lors de la Phase de Tir ou lors d'une réaction à une charge sont des \textbf{Attaques de Tir}.
 
-\subsubsection*{Attaques spéciales}
+\noindent\textbf{\newfromWHB{Attaques Spéciales}}
 
-\nouveau{Certaines figurines sont autorisées à faire des attaques spéciales pendant la \emph{Phase de Corps à Corps} ou la \emph{Phase de Tir}. Les attaques spéciales ne peuvent jamais profiter des bonus conférés par les armes ou des règles spéciales qui affecteraient normalement les attaques de corps à corps ou de tir.}
+Certaines figurines sont autorisées à faire des \textbf{Attaques Spéciales} pendant la Phase de Corps à Corps, de Mouvement ou de Tir. Les Attaques Spéciales ne profitent a priori pas des bonus conférés par les armes ou les règles spéciales qui affecteraient normalement les attaques de la même catégorie. C'est d'ailleurs explicitement précisé pour certaines Attaques Spéciales, comme le \stomp{}, les \grindingattacks{}, l'\crushattack{}, les \impacthits{} ou encore l'\breathweapon{}.
 
-\section{Étapes d'une attaque}
+\section{Séquence d'une attaque}
 
-Lorsqu'une attaque touche une unité, suivez ces points dans l'ordre :
-\begin{enumerate} 
-\item L'attaquant répartit les touches.
-\item L'attaquant lance le ou les dés pour blesser. En cas de succès, passez à l'étape suivante. 
-\item Le défenseur lance le ou les dés pour les sauvegardes d'armure. En cas d'échec, passez à l'étape suivante.
-\item Le défenseur lance le ou les dés pour les sauvegardes spéciales. En cas d'échec, passez à l'étape suivante.
-\item Le défenseur retire les PVs ou les pertes.
-\item Le défenseur fait des tests de \emph{Panique} si nécessaire.
-\end{enumerate}
+Lorsqu'une attaque touche une figurine, suivez la séquence suivante :
 
-Réalisez chaque étape pour toutes les attaques qui sont effectuées en simultané avant de poursuivre à l'étape suivante. Les attaques de tir provenant d'une même unité en sont un exemple ou encore toutes les attaques au corps à corps à un même palier d'Initiative.
+\hspace*{0.3cm}
+\begin{tabular}{c|m{14cm}}
+1 & L'attaquant Répartit les touches. \tabularnewline
+2 & L'attaquant lance le ou les dés pour blesser. En cas de succès, passez à l'étape suivante. \tabularnewline 
+3 & Le défenseur lance le ou les dés pour les Sauvegardes d'Armure. En cas d'échec, passez à l'étape suivante. \tabularnewline
+4 & Le défenseur lance le ou les dés pour les sauvegardes spéciales. En cas d'échec, passez à l'étape suivante. \tabularnewline
+5 & Le défenseur retire les PVs ou les pertes. \tabularnewline
+6 & Le défenseur passe des tests de Panique si nécessaire. \tabularnewline
+\end{tabular}
 
-\section{Répartition des touches}
+Réalisez chaque étape pour toutes les attaques qui ont été portées en même temps avant de passer à l'étape suivante. Les Attaques de Tir provenant d'une même unité ou toutes les Attaques de Corps à Corps d'un même palier d'Initiative en sont des exemples.
 
-\nouveau{Les attaques qui ciblent une unité dans son ensemble, comme la plupart des attaques à distance et des attaques spéciales au corps à corps, sont considérées comme touchant uniquement les figurines ordinaires. Les touches provoquées par des gabarits sur des unités de figurines ordinaires (y compris avec un champion) sont réparties sur les figurines ordinaires à cette étape (cela signifie qu'un gabarit ne peut pas toucher une figurine ordinaire spécifique). Cette répartition peut être modifiée lorsqu'un \emph{Personnage} a rejoint une unité (voir la section \ref{personnages} à la page \pageref{personnages}).}
+\newpage
+\section{Répartir les touches}
 
-Les attaques au corps à corps normales ne sont pas réparties, mais allouées avant que les jets pour toucher ne soient lancés. Dans ce cas, passez l'étape 1 du paragraphe ci-dessus. 
+\newfromWHB{Les attaques qui ciblent une unité dans son ensemble, comme la plupart des Attaques à Distance et des Attaques Spéciales de Corps à Corps, sont considérées comme touchant uniquement les figurines ordinaires.} Les touches provoquées par des Gabarits sur des figurines ordinaires, y-compris les Champions, sont réparties sur les figurines ordinaires à cette étape : cela signifie qu'un Gabarit ne peut pas toucher une figurine ordinaire spécifique. Cette répartition peut être modifiée lorsqu'un Personnage a rejoint une unité (voir la section \ref{characters}, page \pageref{characters}).
 
-Si des figurines ordinaires d'une même unité n'ont pas toutes les mêmes Caractéristiques ou règles (comme des Endurances ou des Sauvegardes d'armure différentes), utiliser la valeur que possède la majorité des figurines de l’unité (l'attaquant choisit en cas d'égalité) pour tous les jets (pour toucher, pour blesser, pour les sauvegardes).
+Les Attaques normales de Corps à Corps ne sont pas réparties mais Allouées avant que les jets pour toucher ne soient lancés. Ignorez donc ce paragraphe pour ces attaques. 
+
+\newfromWHB{Dans le cas où une réserve de PVs, qui consiste la plupart du temps en des figurines ordinaires non Champion de la même unité, est composée de figurines avec des Caractéristiques ou des règles différentes, comme une Endurance ou des sauvegardes différentes, utilisez la valeur ou les règles que possède la majorité des figurines de l'unité. En cas de répartition équitable, l'attaquant choisit. Appliquez-les à tous les jets de dés : toucher, blesser, et sauvegarde.}
 
 \section{Jets pour blesser}
 
-Si l'attaque a une valeur en Force, l'attaque doit blesser la cible avec succès pour avoir une chance de lui infliger des blessures. Comparez la Force de l'attaque à l'Endurance de la cible. Une attaque avec une Force de 0 ne peut pas blesser. Sinon, un résultat de \result{6} sur le dé est toujours un succès, tandis qu'un \result{1} est toujours un échec. Le joueur qui a infligé les touches lance également les dés pour blesser pour chaque attaque qui a touché la cible. Si l'attaque n'a pas de valeur en Force, suivez les règles données par cette attaque spéciale. 
+Si l'attaque a une valeur en Force, elle doit blesser la cible pour avoir une chance de lui infliger des blessures. Comparez la Force de l'attaque à l'Endurance de la cible. Une attaque avec une Force de 0 ne peut pas blesser. Le joueur qui a infligé les touches lance un dé pour blesser pour chaque attaque qui a touché la cible. Un résultat non modifié de \result{6} est toujours un succès tandis qu'un \result{1} est toujours un échec. Sinon, suivez le paragraphe suivant. Si l'attaque n'a pas de valeur en Force, suivez les règles données pour cette attaque particulière. 
 
-Lancez un D6 pour chaque touche. Pour déterminer quel score est nécessaire pour blesser la cible, croisez la colonne de la Force (F) correspondante avec la ligne de l'Endurance (E) de la cible sur le tableau \ref{table/blesser}.
+\subsection{La table pour blesser}
+
+Lancez 1D6 pour chaque touche. Pour déterminer quel résultat est nécessaire pour blesser la cible, croisez la colonne de la Force (F) correspondante à l'attaque avec la ligne de l'Endurance (E) de la cible sur la table \ref{table/to_wound}.
 
 \begin{table}[!htbp]
 \centering
 \begin{tabular}{c|cccccccccc}
-\backslashbox{E}{F} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+\backslashbox{\textbf{E}}{\textbf{F}} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} \tabularnewline
 \hline
-1 & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ \\
-2 & \ora 5+ & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ \\
-3 & \red 6+ & \ora 5+ & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ \\
-4 & \red 6+ & \red 6+ & \ora 5+ & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ \\
-5 & \red 6+ & \red 6+ & \red 6+ & \ora 5+ & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ \\
-6 & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \ora 5+ & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ & \gre 2+ \\
-7 & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \ora 5+ & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ \\
-8 & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \ora 5+ & \yel 4+ & \lem 3+ & \gre 2+ \\
-9 & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \ora 5+ & \yel 4+ & \lem 3+ \\
-10 & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \ora 5+ & \yel 4+ \\
+\textbf{1} & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ \tabularnewline
+\textbf{2} & \ora 5+ & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ \tabularnewline
+\textbf{3} & \red 6+ & \ora 5+ & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ \tabularnewline
+\textbf{4} & \red 6+ & \red 6+ & \ora 5+ & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ \tabularnewline
+\textbf{5} & \red 6+ & \red 6+ & \red 6+ & \ora 5+ & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ \tabularnewline
+\textbf{6} & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \ora 5+ & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ & \gre 2+ \tabularnewline
+\textbf{7} & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \ora 5+ & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ \tabularnewline
+\textbf{8} & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \ora 5+ & \yel 4+ & \lem 3+ & \gre 2+ \tabularnewline
+\textbf{9} & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \ora 5+ & \yel 4+ & \lem 3+ \tabularnewline
+\textbf{10} & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \ora 5+ & \yel 4+ \tabularnewline
 \end{tabular}
-\caption{\label{table/blesser}Résultat à obtenir pour blesser.}
+\caption{\label{table/to_wound}Résultat à obtenir pour blesser.}
 \end{table}
 
-\section{Sauvegarde d'armure et modificateurs}
+\section{Sauvegarde d'armure et malus}
 
-Si une ou plusieurs blessures ont été infligées, le joueur contrôlant l'unité attaquée doit réaliser des jets de sauvegardes d'armure pour tenter de se protéger de ces blessures. Pour ce faire, il doit lancer un D6 pour chaque jet pour blesser réussi et doit comparer le résultat à la valeur de sauvegarde d'armure de ses figurines (voir le paragraphe \ref{equipement_armure} à la page \pageref{equipement_armure}).
+Si au moins une blessure a été infligée, le propriétaire de l'unité attaquée peut tenter de se protéger de ces blessures avec une Sauvegarde d'Armure. Pour ce faire, il doit lancer 1D6 pour chaque jet pour blesser réussi et doit comparer le résultat à la valeur de Sauvegarde d'Armure de la figurine (voir le paragraphe \ref{armour_type}, page \pageref{armour_type}). C'est un jet de Sauvegarde d'Armure.
 
-Si la Force de l'attaque est supérieure ou égale à 4, cette attaque altère la sauvegarde d'armure, avec un malus de -1 pour chaque point de Force au-delà de 3, jusqu'à -6, comme illustré dans le tableau \ref{table/armure}.
+Si la Force de l'attaque est supérieure ou égale à 4, cette attaque applique un malus sur le jet de Sauvegarde d'Armure de -1 pour chaque point de Force au-delà de 3, comme illustré dans la table \ref{table/armour}.
 
 \begin{table}[!htbp]
 \centering
-\begin{tabular}{m{1.4cm}|cccccccccc}
-Force & 1 & 2 & 3 &  4 &  5 &  6 &  7 &  8 &  9 &  10 \\
+\begin{tabular}{c@{\hspace{0.5cm}}cccccccccc}
 \hline
-Malus & 0 & 0 & 0 & \red -1 & \red -2 & \red -3 & \red -4 & \red -5 & \red -6 & \red -6 \\
+\textbf{Force} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} \tabularnewline
+\textbf{Malus} & 0 & 0 & 0 & \red -1 & \red -2 & \red -3 & \red -4 & \red -5 & \red -6 & \red -6 \tabularnewline
+\hline
 \end{tabular}
-\caption{\label{table/armure}Modification de la sauvegarde d'armure par la Force.}
+\caption{Malus sur le jet de sauvegarde d'armure par la Force.}
+\label{table/armour}
 \end{table}
 
-Certaines règles spéciales et capacités peuvent également modifier la sauvegarde d'armure, comme \emph{Perforant} par exemple. 
+Certaines règles spéciales et capacités peuvent également modifier le jet de Sauvegarde d'Armure, comme la règle \armourpiercing{}. 
 
 \section{Régénération et sauvegarde invulnérable}
 
-Si une blessure n'a pas été empêchée par un jet de sauvegarde d'armure réussi, les figurines attaquées peuvent avoir une dernière chance d'annuler la blessure, en réalisant un jet de \emph{Régénération} ou de \emph{Sauvegarde Invulnérable}, si elles en possèdent. La \emph{Régénération} et les \emph{Sauvegardes Invulnérables} fonctionnent de la même manière que les sauvegardes d'armure, sauf qu'elles ne peuvent pas être modifiées ni combinées. Ces règles spéciales sont toujours données avec le jet minimal à réaliser sur un D6 pour réussir la sauvegarde. Ce chiffre figure généralement entre parenthèses. Par exemple, une \emph{Sauvegarde invulnérable (4+)} signifie que la blessure est annulée sur un résultat de \result{4} ou plus sur un D6. Lancez un nombre de dés égal au nombre de blessures qui n'ont pas été sauvegardées par la sauvegarde d'armure. Si une figurine a plus d'une \emph{Régénération} ou \emph{Sauvegarde Invulnérable}, choisissez laquelle utiliser avant de jeter les dés. Une seule \emph{Régénération} \textbf{ou} une seule \emph{Sauvegarde Invulnérable} peut être utilisée contre une attaque. La \emph{Sauvegarde Invulnérable} et la \emph{Régénération} fonctionnent de la même manière. Toutefois, certains sorts et règles spéciales peuvent affecter l'une de ces sauvegardes spéciales sans affecter l'autre.
+Si une blessure n'a pas été annulée par un jet de Sauvegarde d'Armure réussi, la figurine attaquée peut avoir une dernière chance d'éviter la blessure en réalisant un jet de \regeneration{} ou de \wardsave{}, si elle possède une de ces deux règles. La \regeneration{} et la \wardsave{} fonctionnent de la même manière que la Sauvegarde d'Armure, sauf qu'elles ne peuvent pas être modifiées ni combinées. Ces règles sont toujours données avec une valeur qui correspond au résultat minimal à obtenir sur 1D6 pour réussir la sauvegarde. Ce chiffre figure généralement entre parenthèses. Par exemple, une \wardsave{4} signifie que la blessure est annulée sur un résultat de \result{4} ou plus sur 1D6.
 
+Faites autant de jet de sauvegarde que de blessures qui n'ont pas été évitées par la Sauvegarde d'Armure.
+
+Si une figurine a plusieurs instances des règles \regeneration{} et \wardsave{}, choisissez laquelle utiliser avant de jeter les dés. Une seule \regeneration{} \textbf{ou} \wardsave{} peut être utilisée contre une attaque.
+
+La \regeneration{} et la \wardsave{} fonctionnent de la même manière, mais certains sorts ou règles spéciales affectent différemment ces deux types de sauvegarde.
+
+\newpage
 \section{Retirer les points de vie}
 
-Si la figurine attaquée a raté toutes ses sauvegardes, retirez un Point de Vie par jet raté. 
+Retirez un Point de Vie pour chaque blessure pour laquelle la figurine attaquée a raté toutes ses sauvegardes.
 
-\subsubsection*{Figurines non ordinaires}
+\noindent\textbf{Figurines non ordinaires}
 
-Si l'attaque a été répartie ou allouée à une figurine non ordinaire, la figurine attaquée perd un PV pour chaque sauvegarde ratée. Si elle tombe à 0 PV, elle meurt. Retirez-la comme perte. Sinon, gardez en mémoire les figurines qui ont été blessées et qui n'ont pas perdu tous leurs PVs. Vous pouvez par exemple placer des marqueurs de blessures près des figurines. Ces PVs perdus sont à prendre en compte lors de prochaines attaques. Toutes les blessures excédentaires sont perdues. 
+Si une attaque a été répartie ou allouée à une figurine non ordinaire, elle perd un Point de Vie pour chaque sauvegarde ratée. Si elle tombe à 0 PV, elle meurt. Retirez-la comme perte. Sinon, gardez en mémoire les figurines qui ont été blessées et qui n'ont pas perdu tous leurs PVs. Vous pouvez par exemple placer des marqueurs de blessures près des figurines. Ces PVs perdus sont à prendre en compte lors de prochaines attaques. Quand une figurine est tuée, toutes les blessures excédentaires sont perdues. 
 
-\subsubsection*{Champions d'unités}
-Même si les Champions d'unités sont des figurines ordinaires, chaque Champion a sa propre réserve de PV et suit les règles des Figurines non ordinaires ci-dessus. Si suffisamment de blessures sont subies par les figurines ordinaires pour anéantir l'ensemble de l'unité, les blessures subies restantes sont attribuées au champion (même s'il se bat dans un Défi).
+\noindent\textbf{Champions}
 
-\subsubsection*{Figurines ordinaires}
+Même si les Champions sont des figurines ordinaires, chaque Champion a sa propre réserve de PVs et suit les règles des figurines non ordinaires ci-dessus. Si suffisamment de blessures sont subies par les figurines ordinaires pour anéantir l'ensemble de l'unité, les blessures excédentaires sont allouées au Champion, même s'il se bat dans un Défi.
 
-Les figurines ordinaires d'une même unité partagent une réserve de PVs commune. Si une attaque a été allouée à une figurine ordinaire, retirez un PV pour chaque sauvegarde non réussie de la réserve commune de PVs. Si les figurines ordinaires ont 1 PV chacune, retirez une figurine par PV perdu.
+\noindent\textbf{Figurines ordinaires}
 
-Si les figurines ordinaires disposent de plus d'un PV, retirez tous les PVs sur une même figurine, si possible, avant d'en retirer sur une autre. Gardez ensuite en mémoire les figurines blessées dont les PVs ne sont pas tombés à zéro. Ces PVs perdus sont à prendre en compte pour les prochaines attaques. Prenons un exemple : une unité de 10 Trolls, avec 3PVs chacun, se voit infliger 7 blessures non sauvegardées. Retirez deux figurines, soit 6 PVs, et mettez un marqueur indiquant qu'un autre Troll a perdu un PV. Plus tard, cette unité perd 2 PVs. C'est suffisant pour tuer un Troll, puisqu'un PV a été perdu précédemment. 
+Les figurines ordinaires d'une même unité (sauf le Champion) partagent une réserve de PVs commune. Si une attaque a été allouée à une figurine ordinaire, retirez un PV de la réserve commune pour chaque sauvegarde ratée. Si les figurines ordinaires ont 1 PV chacune, retirez une figurine par PV perdu.
 
-Si l'unité est détruite, toutes les blessures excédentaires sont perdues.
+Si les figurines ordinaires disposent de plus d'un PV, retirez tous les PVs sur une même figurine, si possible, avant d'en retirer sur une autre. Gardez ensuite en mémoire les figurines blessées dont les PVs ne sont pas tombés à zéro. Ces PVs perdus sont à prendre en compte pour les prochaines attaques. Prenons un exemple : une unité de 10 Trolls, avec 3 PVs chacun, reçoit 7 blessures non sauvegardées. Retirez deux figurines, soit 6 PVs, et mettez un marqueur indiquant qu'un autre Troll a perdu un PV. Plus tard, cette unité perd 2 PVs. C'est suffisant pour tuer un Troll, puisqu'un PV a été perdu précédemment. 
 
-Si une unité est composée de figurines ordinaires de différents \emph{Types de Troupes}, chaque type de figurine ordinaire a sa propre réserve de PVs. 
-Parfois, une ou plusieurs figurines ordinaires bénéficient de règles spéciales supplémentaires, par exemple des caractéristiques qui peuvent augmenter, bien souvent grâce à des objets magiques ou des sorts, ou qui peuvent être équipées différemment. De telles différences sont ignorées lorsque vous retirez les pertes. Ces dernières sont retirées comme d'habitude depuis le dernier rang, même si une figurine dans ce rang possède des règles spéciales ou équipements différents. En effet, rappelons que seule une différence de \emph{Type de Troupe} permet aux figurines ordinaires de disposer de réserves de PVs différentes. 
+Si l'unité est détruite, toutes les blessures excédentaires sont allouée au Champion. S'il n'y a pas de Champion, elles sont perdues.
 
+Si une unité est composée de figurines ordinaires étant de Types de Troupe différents, chaque type de figurine ordinaire a sa propre réserve de PVs. Parfois, une ou plusieurs figurines ordinaires bénéficient de règles spéciales supplémentaires, par exemple de Caractéristiques augmentées, de nouvelles capacités, etc., venant habituellement de sorts ou d'Objets Magiques. De telles différences sont ignorées lorsque vous retirez les pertes. Ces dernières sont retirées normalement depuis le dernier rang, même si une figurine dans ce rang possède des règles ou équipements différents. En effet, seule une différence de Type de Troupe implique une séparation des réserves de PVs. 
+
+\newpage
 \section{Retirer les pertes}
 
-Le retrait des pertes d'une unité se fait de manière différente si l'unité est engagée au corps à corps ou non. 
+\noindent\textbf{Retirer les figurines ordinaires}
 
-\subsubsection*{Unités non engagées au corps à corps}
+Les pertes en figurines ordinaires sont retirées depuis le rang arrière. Si l'unité ne possède qu'un seul rang, retirez les figurines de chaque côté aussi équitablement que possible. Notez que cette consigne s'applique à chaque groupe d'attaques simultanées, il n'y a pas de \og mémoire \fg{} du côté par lequel les précédentes figurines ont été retirées.
 
-Les figurines ordinaires sont retirées du dernier rang. Si l'unité n'a qu'un seul rang, retirez les figurines de chaque côté de l'unité, le plus équitablement possible. Si une figurine non ordinaire se trouve à une place où devrait être retirée une perte, retirez la figurine ordinaire la plus proche à la place, et déplacez la ou les figurine(s) non ordinaire(s) afin de combler cet espace vide. Notez que le retrait équitable de chaque côté d'un rang unique s'applique seulement à chaque lot d'attaques simultanées, il n'y a pas d'historique des pertes prélevées.
+Si une figurine non ordinaire se trouve à l'endroit où une perte devrait normalement être retirée, enlevez plutôt la prochaine figurine ordinaire, et déplacez la ou les figurines non ordinaire pour prendre sa place.
 
-Une figurine non ordinaire est directement retirée depuis sa place dans l'unité. Une figurine ordinaire la remplace ensuite. Lorsque vous faites cela, la ou les figurines remplaçantes suivent les mêmes règles que pour les retraits des pertes, c'est-à-dire une figurine du dernier rang. Pour une unité déployée sur un seul rang, ôter une figurine ordinaire de chaque côté, de la manière la plus équitable possible.
+\noindent\textbf{Retirer les figurines non ordinaires}
 
-\subsubsection*{Unités engagées au corps à corps}
+Les figurines non ordinaires sont retirées directement depuis leur position quand elles sont perdues. Les figurines ordinaires sont ensuite déplacer pour combler les vides. Prenez les figurines nécessaires de la même manière que vous retireriez des pertes, c'est à dire du rang arrière, et équitablement de chaque côté en cas de rang unique.
 
-Les figurines ordinaires sont retirées depuis le rang arrière, et de façon à ce que le nombre de figurines toujours engagées au corps à corps soit maximal.
-Si l'unité n'a plus qu'un rang, \nouveau{retirez les figurines de chaque côté de l'unité, de manière à conserver en priorité le maximum d'unités en contact, puis en seconde priorité le nombre de figurines engagées}. Si possible, retirez les figurines de chaque côté de l'unité, le plus équitablement possible, tout en préservant les priorités énoncées précédemment. Si une figurine non ordinaire se trouve à une place où devrait être retirée une perte, retirez la figurine ordinaire la plus proche possible à la place, et déplacez la ou les figurine(s) non ordinaire(s) afin de combler le vide. Notez que le retrait équitable de chaque côté d'un rang unique s'applique seulement à chaque lot d'attaques simultanées, il n'y a pas d'historique des pertes prélevées.
+\noindent\textbf{Unités engagées au Corps à Corps}
 
-Une figurine non ordinaire est directement retirée depuis sa place dans l'unité. Une figurine ordinaire la remplace ensuite. Lorsque vous faites cela, la ou les figurines remplaçantes suivent les mêmes règles que pour les retraits des pertes, c'est à dire une figurine du dernier rang, et en maximisant le nombre d'unités et de figurines engagées au corps à corps.
+Si l'unité est composée d'un rang unique, \newfromWHB{retirez les pertes de chaque côté, de manière à ce qu'en première priorité le nombre d'unités au contact soit maximisé, et qu'en seconde priorité le nombre de figurines en contact socle à socle soit maximisé.}
 
 \section{Test de panique}
 
-Un test de \emph{Panique} est un test de Commandement à faire immédiatement lorsque l'une des situations suivantes se produit :
+Les tests de Panique sont des tests de Commandement qui doivent être passés immédiatement après qu'une des situations suivantes se produit :
 \begin{itemize}[label={-}]
-\item Une unité alliée est détruite à 6{\pouce} ou moins. Cela comprend celles qui fuient hors de table.
-\item Une unité alliée a fui un corps à corps à 6{\pouce} ou moins.
+\item Une unité alliée est détruite à moins de \distance{6}. Cela comprend celles qui fuient hors de table.
+\item Une unité alliée rate un test de Moral et fuit à moins de \distance{6}.
 \item Une unité alliée a fui au travers de l'unité.
-\item L'unité subit, lors d'une même phase, 25\% ou plus de pertes en figurines par rapport au début de cette même phase (\emph{Lourdes Pertes}).
-\item Une règle, une capacité ou un sort force l'unité à réaliser un test de \emph{Panique}.
+\item L'unité subit, lors d'une même phase, 25\% ou plus de pertes en figurines par rapport au début de cette même phase. Cette règle s'appelle \textbf{Lourdes Pertes}.
 \end{itemize}
 
-Les unités qui ratent un test de \emph{Panique} doivent fuir, généralement à l'opposé de la figurine ennemie la plus proche. \S'il n'y a pas d'unités ennemies sur la table, la direction est aléatoire.
+Une unité qui rate un test de Panique doit fuir à l'opposé de l'unité ennemie la plus proche, dans l'axe passant par les centres des deux unités. S'il n'y a pas d'unités ennemies sur la table, la direction est aléatoire.
 
-\nouveau{Si le test de \emph{Panique} a été déclenché par un des cas énumérés ci-dessous, l'unité en fuite doit fuir dos à l'unité qui a provoqué le test de \emph{Panique}. Utilisez le centre de l'unité adverse et le centre de l'unité en fuite pour déterminer l'axe de la fuite}
+Si le test de Panique a été engendré par l'un des cas suivants, l'unité fuit plutôt directement à l'opposé de l'unité ennemie à l'origine du test de Panique :
 \begin{itemize}[label={-}]
-\item Un sort jeté par un sorcier ennemi.
-\item Une règle spéciale d'une figurine ennemie (comme la \emph{Terreur}).
-\item L'unité subit des \emph{Lourdes Pertes}, venant d'une même unité adverse.
+\item \newfromWHB{Un sort jeté par une figurine ennemie.}
+\item \newfromWHB{Une règle d'une figurine ennemie (comme la \terror{}).}
+\item L'unité subit de Lourdes Pertes, et les blessures permettant de passer le cap de 25\% de pertes ont été infligées par une unité ennemie.
 \end{itemize}
-Les unités engagées au corps à corps ou déjà en fuite sont immunisées à la \emph{Panique}. Une unité qui a déjà réussi un test de \emph{Panique} n'a pas à en passer d'autre pour le restant de la phase.
+
+Une unité engagée au Corps à Corps, déjà en fuite ou qui a déjà passé un test de Panique lors de cette phase n'a pas à passer de test de Panique.

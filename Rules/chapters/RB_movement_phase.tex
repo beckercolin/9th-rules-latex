@@ -22,8 +22,15 @@ La Phase de Mouvement est divisée en six étapes :
 
 Si vous voulez que l'une de vos unités engage une unité ennemie au Corps à Corps, vous devez d'abord lui faire déclarer une charge. Déclarez lesquelles de vos unités vont charger ce tour-ci, et leur cible, une par une. À chaque fois que le Joueur Actif déclare une charge, le Joueur Réactif doit déclarer une Réaction pour l'unité chargée.
 
-Une charge ne peut être déclarée que si la cible est dans le champ de vision de l'unité qui charge, et que la charge est effectivement possible, c'est à dire qu'elle est à une distance inférieure à la distance maximale de charge, et qu'il y a assez de place pour amener l'unité chargeant au contact de l'unité chargée. Ne prenez pas en compte une éventuelle fuite en réaction à la charge, même si elle est obligatoire, pour vérifier si une charge est possible ou non. Prenez par contre en compte les charges déjà déclarées. Une unité ayant déclaré une charge va potentiellement bouger et ne plus gêner une autre charge.
+Une charge ne peut être déclarée que si :
+\begin{itemize}[label={-}]
+\item la cible est dans le champ de vision de l'unité qui charge,
+\item la charge est effectivement possible, c'est à dire que la cible est à une distance inférieure à la distance maximale de charge,
+\item il y a assez de place pour amener l'unité chargeant au contact de l'unité chargée.
+\end{itemize}
+Ne prenez pas en compte une éventuelle fuite en réaction à la charge, même si elle est obligatoire, pour vérifier si une charge est possible ou non. Prenez par contre en compte les charges déjà déclarées. Une unité ayant déclaré une charge va potentiellement bouger et ne plus gêner une autre charge.
 
+\newpage
 \subsection{Réactions aux charges}
 
 Quand une charge vient d'être déclarée contre une unité, cette dernière doit immédiatement déclarer une réaction à la charge parmi les trois possibles : \og Tenir la Position \fg{}, \og Tenir la Position et Tirer \fg{}, et \og Fuir \fg{}.
@@ -34,7 +41,7 @@ L'unité ne fait rien. Les unités déjà engagées dans un Corps à Corps ne pe
 
 \noindent\textbf{Tenir la Position et Tirer}
 
-Cette réaction n'est possible qu'à condition que l'unité chargée dispose d'Armes de Tir, que l'unité ennemie la chargeant soit dans l'Arc Frontal de l'unité chargée, et enfin que l'unité ennemie soit éloignée d'au moins sa valeur de Mouvement (la valeur la plus basse parmi les figurines qui chargent s'il y en a plusieurs). L'unité chargée effectue immédiatement une Attaque de Tir, comme elle le ferait durant la Phase de Tir\newfromWHB{, et ce même si l'ennemi est au delà de la portée maximale des armes utilisées}. N'oubliez pas de prendre en compte les modificateurs pour toucher appropriés, comme Longue Portée ou Tenir la Position et Tirer. Une unité ne peut déclarer cette réaction qu'une seule fois par tour, même si elle est chargée à plusieurs reprises.
+Cette réaction n'est possible qu'à condition que l'unité chargée dispose d'Armes de Tir, que l'unité ennemie la chargeant soit dans l'Arc Frontal de l'unité chargée, et enfin que l'unité ennemie soit éloignée d'au moins sa valeur de Mouvement (la valeur la plus basse parmi les figurines qui chargent s'il y en a plusieurs). L'unité chargée effectue immédiatement une Attaque de Tir, avant que l'unité ennemie ne se déplace, comme elle le ferait durant la Phase de Tir\newfromWHB{, et ce même si l'ennemi est au delà de la portée maximale des armes utilisées}. N'oubliez pas de prendre en compte les modificateurs pour toucher appropriés, comme Longue Portée ou Tenir la Position et Tirer. Une unité ne peut déclarer cette réaction qu'une seule fois par tour, même si elle est chargée à plusieurs reprises.
 
 \noindent\textbf{Fuir}
 
@@ -54,6 +61,7 @@ Une fois que toutes les charges et leurs réactions ont été déclarées, les u
 
 La portée de charge d'une unité est normalement sa valeur de Mouvement à laquelle on additionne 2D6. Si le résultat est \textbf{égal ou supérieur} à la distance entre l'unité et sa cible, on dit que la portée de charge est suffisante. L'unité peut alors faire son mouvement de charge, si elle en a la place. Si la portée de charge obtenue est strictement inférieure à la distance entre les unités, ou s'il n'y a pas assez de place pour faire le mouvement de charge, la charge est ratée. L'unité en charge doit alors faire un mouvement de charge ratée (voir plus bas).
 
+\newpage
 \noindent\textbf{Mouvement de charge}
 
 Un mouvement de charge suit les règles suivantes :
@@ -83,7 +91,7 @@ Du moment que toutes les conditions ci-dessus sont remplies du mieux possible, l
 
 \noindent\textbf{Charger une unité en fuite}
 
-Quand vous chargez une unité en fuite, suivez les mêmes règles que pour un mouvement de charge ordinaire, sauf que vous pouvez entrer au contact de n'importe quel côté de l'unité chargée et qu'aucun alignement ni maximisation ne doivent être faits. Si l'unité en charge entre en contact avec l'unité en fuite, cette dernière est retirée comme perte. L'unité en charge peut alors passer un test de Commandement. S'il est réussi, \newfromWHB{l'unité peut effectuer un Pivot Post-Combat}.
+Quand vous chargez une unité en fuite, suivez les mêmes règles que pour un mouvement de charge ordinaire, sauf que vous pouvez entrer au contact de n'importe quel côté de l'unité chargée et qu'aucun alignement ni maximisation ne doivent être faits. Si l'unité en charge entre en contact avec une unité en fuite, cette dernière est retirée comme perte. L'unité en charge peut alors passer un test de Commandement. S'il est réussi, \newfromWHB{l'unité peut effectuer un Pivot Post-Combat}.
 
 \noindent\textbf{Charges multiples}
 
@@ -106,6 +114,7 @@ Si une unité obtient une portée de charge insuffisante, ou si la charge est un
 \newcommand{\chargefrontageC}{c)}
 \newcommand{\majorityoffrontageingreenunitsfrontarc}{\normalfontsize{La majorité de l'avant est dans l'arc frontal de l'unité verte}}
 
+\vspace*{1cm}
 \begin{figure}[!htbp]
 \centering
 \def\svgwidth{\textwidth}
@@ -175,7 +184,7 @@ b) Comme l'unité violette pourrait charger de manière à ce que l'unité verte
 \newpage
 \section{Mouvements obligatoires}
 
-Pendant cette étape de la Phase de Mouvement, toutes les unités qui ne choisissent pas si elles vont bouger ou non, comme les unités en fuite, les unités avec la règle \randommovement{}, ou encore les unités ayant raté un test de \stupidity{}, doivent bouger. Commencez par faire les Tests de Ralliement pour toutes les unités alliées en fuite. Effectuez les déplacements appropriés suivant la réussite ou non de ces tests. Enfin, déplacez les autres unités qui bougent pendant cette étape dans l'ordre de votre choix.
+Pendant cette étape de la Phase de Mouvement, toutes les unités qui ne choisissent pas si elles vont bouger ou non doivent bouger. Les unités en fuite, avec la règle \randommovement{}, ou encore celles ayant raté un test de \stupidity{} en font partie. Commencez par faire les Tests de Ralliement pour toutes les unités alliées en fuite. Effectuez les déplacements appropriés suivant la réussite ou non de ces tests. Enfin, déplacez les autres unités qui bougent pendant cette étape dans l'ordre de votre choix.
 
 \noindent\textbf{Test de ralliement}
 
@@ -198,7 +207,7 @@ Les unités qui n'ont pas encore bougé durant cette phase ont l'occasion de le 
 \begin{tabular}{c|m{12cm}}
 1 & Début de l'étape. Les Renforts arrivent.\tabularnewline
 2 & Choisissez une unité à déplacer, et un type de mouvement parmi Mouvement Simple, Marche Forcée et Reformation, puis bougez-la.\tabularnewline
-3 & Repassez au point 2 s'il reste des unités qui n'ont pas encore bougé de la phase et que vous voulez déplacer.\tabularnewline
+3 & Repassez au point 2 s'il reste des unités qui n'ont pas encore bougé durant la phase et que vous voulez les déplacer.\tabularnewline
 4 & Si toutes les unités qui pouvaient bouger et que vous vouliez déplacer l'ont fait, l'étape est terminée.\tabularnewline
 \end{tabular}
 
@@ -214,9 +223,9 @@ Pendant un Mouvement Simple, une unité peut avancer, reculer ou faire des pas d
 
 \subsection{Marche forcée}
 
-Pendant une Marche Forcée, une unité ne peut qu'avancer, et sur une distance maximale de deux fois sa caractéristique de Mouvement, en pouces. Elle peut faire autant de Roues que vous le souhaitez.\newfromWHB{Aucune figurine d'une unité effectuant une Marche Forcée ne peut se déplacer au delà du double de sa valeur de Mouvement, en comparant la position initiale et la position finale.}
+Pendant une Marche Forcée, une unité ne peut qu'avancer, et sur une distance maximale de deux fois sa caractéristique de Mouvement, en pouces. Elle peut faire autant de Roues que vous le souhaitez. \newfromWHB{Aucune figurine d'une unité effectuant une Marche Forcée ne peut se déplacer au delà du double de sa valeur de Mouvement, en comparant la position initiale et la position finale.}
 
-Si des unités ennemies se trouvent à moins de \distance{8} de l'unité voulant effectuer une Marche Forcée, avant de la bouger, cette dernière doit passer un test de Marche Forcée. Il s'agit d'un test de Commandement. S'il est réussi, l'unité peut faire une Marche Forcée normalement. Sinon, l'unité doit fait une Marche Forcée avec une pénalité de mouvement : la distance maximale est sa caractéristique de Mouvement au lieu du double. Une unité qui a effectué une Marche Forcée ne peut pas tirer lors de la Phase de Tir qui suit. Une unité composée d'une figurine seule peut faire autant de pivots que vous le souhaitez durant sa Marche Forcée.
+Si des unités ennemies se trouvent à moins de \distance{8} de l'unité voulant effectuer une Marche Forcée, cette dernière doit passer un test de Marche Forcée avant de bouger. Il s'agit d'un test de Commandement. S'il est réussi, l'unité peut faire une Marche Forcée normalement. Sinon, l'unité doit fait une Marche Forcée avec une pénalité de mouvement : la distance maximale est sa caractéristique de Mouvement au lieu du double. Une unité qui a effectué une Marche Forcée ne peut pas tirer lors de la Phase de Tir qui suit. Une unité composée d'une figurine seule peut faire autant de pivots que vous le souhaitez durant sa Marche Forcée.
 
 \subsection{Reformation}
 
@@ -225,7 +234,7 @@ Repérez le centre de l'unité, puis retirez l'unité du champ de bataille. Vous
 \newpage
 \section{Pivots et roues}
 
-Un Pivot est pratiqué principalement par les figurines seules. Pour effectuer un Pivot, repérez le centre de l'unité, et \newfromWHB{retirez l'unité du champ de bataille. Replacez là ensuite dans la même formation, orientée dans la direction de votre choix, et en maintenant son centre à l'emplacement repéré. Suivez normalement la Règle du Pouce d'Écart.}
+Un Pivot est pratiqué principalement par les figurines seules. Pour effectuer un Pivot, repérez le centre de l'unité et \newfromWHB{retirez-la du champ de bataille. Replacez-la ensuite dans la même formation, orientée dans la direction de votre choix, et en maintenant son centre à l'emplacement repéré. Suivez normalement la Règle du Pouce d'Écart.}
 
 Quand une unité effectue une Roue, elle fait une rotation autour d'un de ses coins avant, vers l'avant. La distance parcourue par l'unité correspond à celle parcourue par la figurine du coin avant opposé. On considère que toutes les figurines de l'unité ont parcouru cette distance.
 
@@ -238,7 +247,7 @@ Quand une unité effectue une Roue, elle fait une rotation autour d'un de ses co
 \def\svgwidth{\textwidth}
 \input{pics/wheels.pdf_tex}
 \caption{Exemples de Roues.\vspace*{10pt}\newline
-Les unités de cet exemple ont toutes un Mouvement de 5.\vspace*{10pt}\newline
+Les unités de cet exemple ont chacune un Mouvement de 5.\vspace*{10pt}\newline
 a) L'unité verte fait deux Roues pendant une Marche Forcée. Elle compte comme ayant bougé de \distance{10}, puisque la mesure de distance est prise au niveau du coin opposé au coin qui sert de point de rotation.\vspace*{10pt}\newline
 b) L'unité turquoise fait une seule Roue pendant une Marche Forcée. Cependant, ce mouvement est non réglementaire, car même si la figurine du coin opposé n'a bougé que de \distance{9}, certaines figurines de l'unité se sont déplacées de plus de \distance{10}.\vspace*{10pt}\newline
 c) L'unité jaune fait une seule Roue pendant une Marche Forcée. Elle compte comme ayant bougé de \distance{10}, puisque la mesure de distance est prise au niveau du coin opposé au coin qui sert de point de rotation. Remarquez qu'aucune figurine n'a bougé de plus de \distance{10} entre leur position initiale et leur position finale.}
