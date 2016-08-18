@@ -10,9 +10,9 @@
 
 \tocentry{specialrulestitle}{\labels@armyspecialrules}
 
-\tocentry{bloodlinestitle}{Dynasties vampiriques}
+\tocentry{bloodlinestitle}{Lignées vampiriques}
 
-\tocentry{bloodlinepowerstitle}{Pouvoirs dynastiques}
+\tocentry{bloodlinepowerstitle}{Héritages du sang}
 
 \tocentry{magicalitemstitle}{\labels@magicalitems}
 
@@ -47,10 +47,10 @@
 
 % Vampiric Bloodlines
 
-\newcommand{\bloodline}{Dynastie}
-\newcommand{\bloodlines}{Dynasties}
-\newcommand{\bloodtie}[1]{Unité Dynastique\ifblank{#1}{}{ (#1)}}
-\newcommand{\bloodties}[1]{Unités Dynastiques\ifblank{#1}{}{ (#1)}}
+\newcommand{\bloodline}{Lignée Vampirique}
+\newcommand{\bloodlines}{Lignées Vampiriques}
+\newcommand{\bloodtie}[1]{Liens du Sang\ifblank{#1}{}{ (#1)}}
+\newcommand{\bloodties}[1]{Liens du Sang\ifblank{#1}{}{ (#1)}}
 \newcommand{\brotherhood}{Confrérie du Dragon}
 \newcommand{\strigois}{Stryges}
 \newcommand{\strigoi}{Stryge}
@@ -61,16 +61,16 @@
 
 % Bloodline Powers
 
-\newcommand{\bloodpower}{Pouvoir Dynastique}
-\newcommand{\bloodpowers}{Pouvoirs Dynastiques}
-\newcommand{\ancientbloodpower}{Pouvoir Dynastique Ancien}
-\newcommand{\ancientbloodpowers}{Pouvoirs Dynastiques Anciens}
+\newcommand{\bloodpower}{Héritage du Sang}
+\newcommand{\bloodpowers}{Héritages du Sang}
+\newcommand{\ancientbloodpower}{Héritage Ancestral du Sang}
+\newcommand{\ancientbloodpowers}{Héritages Ancestraux du Sang}
 
 \newcommand{\crimsonrage}{Rage Écarlate}
 \newcommand{\stormcaller}{Appel de la Tempête}
 \newcommand{\commandment}{Autorité}
 \newcommand{\bestialbulk}{Forme Bestiale}
-\newcommand{\bloodmagic}{Occultisme du Sang}
+\newcommand{\bloodmagic}{Magie du Sang}
 
 \newcommand{\eternalduelist}{Fine Lame}
 \newcommand{\perfectwarrior}{Combattant Ultime}
@@ -119,9 +119,9 @@
 \newcommand{\undeadconstruct}{Construction Mort-Vivante}
 \newcommand{\autonomous}{Autonome}
 \newcommand{\darktome}{Sombre Recueil}
-\newcommand{\auraofundeath}{Aura Nécrotique}
-\newcommand{\extendedchassis}{Chassis Renforcé}
-\newcommand{\soulsyphon}{Syphon d'Âmes}
+\newcommand{\auraofundeath}{Aura de Non-Vie}
+\newcommand{\extendedchassis}{Châssis Renforcé}
+\newcommand{\soulsyphon}{Siphon d'Âmes}
 \newcommand{\chillingshriek}{Hurlement Glaçant}
 \newcommand{\greatmonstrousrevenant}{Revenant Immense}
 \newcommand{\colossalzombiedragon}{Gigantesque Dragon Zombie}
@@ -170,7 +170,7 @@
 \newcommand{\varkolak}{Varkolak}
 \newcommand{\phantomhost}{Horde d'Ectoplasmes}
 \newcommand{\vampirespawn}{Engeance Vampi\-ri\-que}
-\newcommand{\courtofthedamned}{Cortège de Damnées}
+\newcommand{\courtofthedamned}{Cortège des Damnés}
 
 % Rare
 
@@ -223,7 +223,7 @@
 \newcommand{\asinglebloodpower}{Un seul \bloodpower}
 \newcommand{\asingleancientbloodpower}{Un seul \ancientbloodpower}
 \newcommand{\bloodlinenote}{%
-Ne peut être pris que si l'armée représente une Dynastie.
+Ne peut être pris que si l'armée représente une Lignée Vampirique.
 }
 \newcommand{\strigoivanguardnote}{%
 Les Vampires \strigois{} ayant rejoint cette unité gagnent la règle \vanguard{}.
@@ -434,15 +434,15 @@ Toutes les unités amies dans un rayon de \distance{6} d'une ou plusieurs figuri
 
 
 \newpage
-\toctarget{bloodlinestitle}{\startarmynewsection{Dynasties Vampiriques}}
+\toctarget{bloodlinestitle}{\startarmynewsection{Lignées Vampiriques}}
 
 \spaceaftersection{}
 
-Une armée des Conclaves Vampiriques peut choisir de représenter une unique Dynastie Vampirique. Dans ce cas, tous les \vampirelords{} et \vampireheroes{} de l'armée doivent prendre l'amélioration correspondant à la Dynastie. À moins que le contraire ne soit précisé, toutes les règles associées à un Vampire ne s'appliquent qu'à l'élément de figurine prenant l'amélioration et pas aux montures.
+Une armée des Conclaves Vampiriques peut choisir de représenter une unique Lignée Vampirique. Dans ce cas, tous les \vampirelords{} et \vampireheroes{} de l'armée doivent prendre l'amélioration correspondant à la Lignée. À moins que le contraire ne soit précisé, toutes les règles associées à un Vampire ne s'appliquent qu'à l'élément de figurine prenant l'amélioration et pas aux montures.
 
-\armynewsubsection{Pouvoir Dynastique Ancien}
+\armynewsubsection{\ancientbloodpower}
 
-Les \vampirelords{} appartenant à une \bloodline{} peuvent accéder au \ancientbloodpower{} de leur \bloodline{} plutôt que de prendre un \bloodpower{}. Chaque \ancientbloodpower{} est \oneofakind{}.
+Les \vampirelords{} appartenant à une \bloodline{} peuvent accéder à l'\ancientbloodpower{} de leur \bloodline{} plutôt que de prendre un \bloodpower{}. Chaque \ancientbloodpower{} est \oneofakind{}.
 
 \armynewsubsection{\bloodties{X}}
 
@@ -536,11 +536,11 @@ Le Vampire compte toujours comme ayant utilisé un Dé de Pouvoir de moins en ca
 
 
 \newpage
-\toctarget{bloodlinepowerstitle}{\startarmynewsection{Pouvoirs Dynastiques}}
+\toctarget{bloodlinepowerstitle}{\startarmynewsection{\bloodpowers}}
 
 \spaceaftersection{}
 
-Les \vampirelords{} et les \vampireheroes{} peuvent acheter une unique amélioration appelée Pouvoir Dynastique Vampirique. Dans le cas d'une armée Indépendante, c'est à dire sans Dynastie, tous les Pouvoirs Dynastiques sont de type \oneofakind{}. Si votre armée représente une Dynastie, seuls les Pouvoirs de cette Dynastie peuvent être pris par vos Vampires, mais ils peuvent être dupliqués.
+Les \vampirelords{} et les \vampireheroes{} peuvent acheter une unique amélioration appelée \bloodpower{} Vampirique. Dans le cas d'une armée Indépendante, c'est à dire sans Lignée, tous les \bloodpowers{} sont de type \oneofakind{}. Si votre armée représente une Lignée, seuls les Pouvoirs de cette Lignée peuvent être pris par vos Vampires, mais ils peuvent être dupliqués.
 
 \begin{multicols}{2}\raggedcolumns
 

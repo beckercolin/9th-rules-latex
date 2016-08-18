@@ -2,136 +2,207 @@
 \part{Types de troupe}
 \label{troop_types}
 
-Toutes les figurines et unités ont un Type de Troupe. Le Type de Troupe d'une unité est celui de la majorité de ses figurines ordinaires, ou de l'ensemble de ses figurines s'il n'y a pas de figurines ordinaires. L'adversaire du propriétaire choisit en cas d'égalité. Chaque Type de Troupe est associé à un certain nombre de règles décrites ci-dessous.
+Toutes les figurines et unités sont définies par un Type de Troupe. Le Type de Troupe d'une unité est celui de la majorité de ses figurines ordinaires, ou la majorité de l'ensemble de ses figurines s'il n'y a pas de figurines ordinaires. L'adversaire du propriétaire choisit en cas d'égalité. Chaque Type de Troupe est associé à un certain nombre de règles décrites ci-dessous.
 
-{\setlength{\parindent}{0cm}
-\textbf{\infantry}
-\vspace*{3pt}
-Pas de règles additionnelles.
+\renewcommand{\arraystretch}{1.2}
+\newcommand{\trooptypestarttable}{\noindent\begin{tabular}{p{4.8cm}p{10.8cm}}}
 
-\textbf{\cavalry}
-\vspace*{3pt}
-Règles de Type de Troupe : \combinedprofile{}, \cavalrysupport{}.
-Règles Spéciales : \swiftstride{}.
+\trooptypestarttable
+\textbf{\infantry} & \tabularnewline
+Pas de règles additionnelles. & \tabularnewline
+\end{tabular}
 
-\textbf{\warbeast}
-\vspace*{3pt}
-Règles Spéciales : \swiftstride{}.
-}
+\trooptypestarttable
+\textbf{\warbeast} & \tabularnewline
+Règles Spéciales : & \swiftstride{}. \tabularnewline
+\end{tabular}
 
+\trooptypestarttable
+\textbf{\cavalry} & \tabularnewline
+Règles de Type de Troupe : & \combinedprofile{}, \cavalrysupport{}. \tabularnewline
+Règles Spéciales : & \swiftstride{}. \tabularnewline
+\end{tabular}
+
+\trooptypestarttable
+\textbf{\monstrousinfantry} & \tabularnewline
+Règles de Type de Troupe : & \monstrousranks{}, \monstroussupport{}. \tabularnewline
+Règles Spéciales : & \stomp{1}. \tabularnewline
+\end{tabular}
+
+\trooptypestarttable
+\textbf{\monstrousbeast} & \tabularnewline
+Règles de Type de Troupe : & \monstrousranks{}, \monstroussupport{}. \tabularnewline
+Règles Spéciales : & \swiftstride{}, \stomp{1}. \tabularnewline
+\end{tabular}
+
+\trooptypestarttable
+\textbf{\monstrouscavalry} & \tabularnewline
+Règles de Type de Troupe : & \combinedprofile{}, \monstrousranks{}, \cavalrysupport{}, \monstroussupport{}. \tabularnewline
+Règles Spéciales : & \swiftstride{}. \tabularnewline
+\end{tabular}
+
+\trooptypestarttable
+\textbf{\chariot} & \tabularnewline
+Règles de Type de Troupe : & \combinedprofile{}, \newfromWHB{\monstrousranks{}}, \cavalrysupport{}. \tabularnewline
+Règles Spéciales : & \swiftstride{}, \cannotmarch{}, \impacthits{1D6}. \tabularnewline
+\end{tabular}
+
+\trooptypestarttable
+\textbf{\monster} & \tabularnewline
+Règles de Type de Troupe : & \newfromWHB{\monsterranks{}}. \tabularnewline
+Règles Spéciales : & \newfromWHB{\largetarget}, \stomp{1D6}, \newfromWHB{\terror}. \tabularnewline
+\end{tabular}
+
+\trooptypestarttable
+\textbf{\newfromWHB{\riddenmonster}} & \tabularnewline
+Règles de Type de Troupe : & \newfromWHB{Profil de \riddenmonster{}}, \newfromWHB{\monsterranks{}}. \tabularnewline
+Règles Spéciales : & \newfromWHB{\largetarget}, \stomp{1D6}, \newfromWHB{\terror}. \tabularnewline
+\end{tabular}
+
+\trooptypestarttable
+\textbf{\swarm} & \tabularnewline
+Règles Spéciales : & \unbreakable{}, \unstable{}, \skirmisher{}. \tabularnewline
+\end{tabular}
+
+\trooptypestarttable
+\textbf{\warmachine} & \tabularnewline
+Règles de Type de Troupe : & Profil de \warmachine{}. \tabularnewline
+Règles Spéciales : & \moveorfire{}, \cannotmarch{}, \reload{}. \tabularnewline
+\end{tabular}
+\renewcommand{\arraystretch}{1.5}
 
 \section{Figurines à pied ou montées}
 
-%Certains sorts et règles peuvent affecter les figurines montées et les figurines à pied différemment. À tous points de vue, les \emph{Bêtes de Guerre}, les \emph{Bêtes Monstrueuses}, l'\emph{Infanterie}, l'\emph{Infanterie Monstrueuse}, les \emph{Machines de Guerre}, les \emph{Monstres} et les \emph{Nuées} sont considérés comme des figurines \textbf{à pied}, à moins d'être des montures (comme un palanquin), auquel cas elles sont considérées comme des figurines montées. La \emph{Cavalerie}, la \emph{Cavalerie Monstrueuse}, les \emph{Chars} et les \emph{Monstres Montés} sont considérés comme des figurines \textbf{montées}.
+Certains sorts et règles peuvent affecter différemment les figurines montées et les figurines à pied. À tous points de vue, l'\infantry{}, les \warbeasts{}, l'\monstrousinfantry{}, les \monstrousbeasts{}, les \monsters{}, les \swarms{} et les \warmachines{} sont considérés comme des figurines \textbf{à pied}, à moins d'être des montures (comme un Palanquin), auquel cas ce sont des figurines montées. La \cavalry{}, la \monstrouscavalry{}, les \riddenmonsters{} et les \chariots{} sont considérés comme des figurines \textbf{montées}.
 
 \subsection{Montures de personnage}
 
-%Certains personnages ont la possibilité de choisir une monture de la section "monture" d'un Livre d'armée. Quand une figurine est montée, son \emph{Type de Troupe} change :
-%\begin{itemize}[label={-}]
-%\item Une figurine montée sur une \emph{Bête de Guerre} devient de la \emph{Cavalerie}.
-%\item Une figurine montée sur une \emph{Bête Monstrueuse} devient de la \emph{Cavalerie Monstrueuse}.
-%\item \nouveau{Une figurine montée sur un \emph{Monstre} devient un \emph{Monstre Monté}}.
-%\item \nouveau{Une figurine montée sur n'importe quel autre \emph{Type de Troupe} devient le \emph{Type de Troupe} de sa monture} (mais compte comme une figurine montée et non à pied). Dans ce cas, la figurine gagne les règles de \emph{Profil Combiné} et \emph{Soutien de cavalerie}.
-%\end{itemize}
-%L'ensemble de la figurine (Personnage, monture et, éventuellement, cavaliers ou membres d'équipage supplémentaires) suit les règles des Personnages. Les cavaliers ou membres d'équipage appartenant à la monture choisie ne comptent pas comme des "montures" (ce qui signifie qu'ils peuvent utiliser leurs armes ou armures, par exemple). Ces cavaliers ou membres d'équipage ont leur propre équipement qu'ils peuvent utiliser. Cependant, la figurine combinée n'a qu'une seule sauvegarde d'armure. Il faut choisir d'utiliser l'armure des cavaliers ou membres d'équipages (en comptant la \emph{Protection de Monture} et l'éventuel Caparaçon) ou l'armure du Personnage (en comptant la \emph{Protection de Monture} et l'éventuel Caparaçon).
-%
-%\section{Règles spéciales des types de troupe}
-%
-%\subsubsection*{\nouveau{Rangs de monstre}}
-%
-%\nouveau{L'unité a besoin d'une seule figurine pour former un \emph{Rang Complet}}.
-%
-%\subsubsection*{Rangs monstrueux}
-%
-%L'unité a seulement besoin d'un minimum de trois figurines dans un rang pour qu'il soit considéré comme un \emph{Rang Complet} et d'un minimum de six figurines par rang pour être considérée comme une formation de \emph{Horde}.
-%
-%\subsubsection*{Soutien de cavalerie}
-%
-%Les montures et l'attelage ne peuvent pas faire d'attaque de \emph{Soutien}.
-%
-%\subsubsection*{Soutien monstrueux}
-%
-%Les figurines avec cette règle spéciale peuvent faire jusqu'à trois attaques de \emph{Soutien} au lieu d'une seule. Notez que les montures ne peuvent toujours pas faire d'attaques de \emph{Soutien}.
-%
-%\subsubsection*{Profil combiné}
-%
-%Les figurines ayant cette règle spéciale ont des profils différents pour chacun de leurs éléments. Les figurines de \emph{Cavalerie} ont généralement un profil pour la monture et un profil pour le cavalier. Les figurines de \emph{Char} ont généralement un profil pour le véhicule, un profil pour les membres d'équipage et un profil pour les montures. Certains chars n'ont qu'un seul profil pour le véhicule et les montures.
-%
-%Quand ils attaquent, chaque élément de la figurine utilise ses propres caractéristiques. Chaque élément de la figurine peut faire une attaque de tir dans la même phase, mais ils doivent tous choisir la même cible. Un membre de l'équipage d'un \emph{Char} peut choisir de tirer avec une arme de tir du \emph{Char} à la place de sa propre arme de tir.
-%
-%Dans toutes les autres situations, la figurine au profil combiné est considérée comme une seule figurine avec les caractéristiques suivantes.
-%
-%\begin{itemize}[label={-}]
-%\item \textbf{Mouvement}. Utiliser le Mouvement de la monture ou de l'attelage.
-%\item \textbf{Capacité de Combat}. Utiliser la CC du ou des cavalier(s), en utilisant la CC la plus haute s'il y a plusieurs cavaliers.
-%\item \textbf{Endurance}. Utiliser la plus haute caractéristique \nouveau{d'Endurance} disponible parmi tous les éléments de la figurine.
-%\item \textbf{Points de Vie}. Utiliser la plus haute caractéristique de PV disponibles parmi tous les éléments de la figurine.
-%\item \textbf{Commandement}. Utiliser le Cd du ou des cavalier(s), en utilisant le Cd le plus haut s'il y a plusieurs cavaliers.
-%\item \textbf{Sauvegarde}. Utiliser la meilleure sauvegarde, sauvegarde invulnérable et régénération disponible parmi un des éléments de la figurine. La sauvegarde d'armure d'un cavalier peut être améliorée par la \emph{Protection de la monture} et un \emph{Caparaçon}.
-%\end{itemize}
-%
-%Les autres caractéristiques sont ignorées sauf pour passer un test de Caractéristique. Dans un tel cas, utiliser la plus haute caractéristique disponible parmi tous les éléments de la figurine.
-%
-%\subsubsection*{\nouveau{Profil de monstre monté}}
-%\label{profil_monstre_monte}
-%
-%Les figurines ayant cette règle spéciale ont des profils différents : un profil pour la monture et un profil pour le (ou les) cavalier(s). Quand elles sont attaquées, les attaques sont obligatoirement résolues contre le \emph{Monstre}.
-%
-%Quand ils attaquent ou tirent, chaque élément de la figurine utilise ses propres caractéristiques. Chaque élément de la figurine peut faire une attaque de tir dans la même phase, mais ils doivent tous choisir la même cible. Le cavalier d'un \emph{Monstre} peut choisir de tirer avec une arme de tir portée par le \emph{Monstre} à la place de sa propre arme de tir.
-%
-%Dans toutes les autres situations, la figurine au profil combiné est considérée comme une seule figurine avec les caractéristiques suivantes. 
-%
-%
-%\begin{itemize}[label={-}]
-%\item \textbf{Mouvement}. Utiliser le Mouvement du \emph{Monstre}.
-%\item \textbf{Capacité de Combat}. Utiliser la CC du \emph{Monstre}.
-%\item \textbf{Endurance}. Utiliser l'Endurance du \emph{Monstre}.
-%\item \textbf{Points de Vie}. Utiliser les PV du \emph{Monstre}. Quand le \emph{Monstre} tombe à 0 PV, retirez tous les éléments de la figurine comme pertes.
-%\item \textbf{Initiative}. Utiliser l'Initiative du \emph{Monstre} pour tous les tests d'Initiative.
-%\item \textbf{Commandement}. Utiliser le Cd du ou des cavalier(s), en utilisant le Cd le plus haut s'il y a plusieurs cavaliers.
-%\item \textbf{Sauvegarde}. Utiliser les sauvegardes du \emph{Monstre}. Ainsi, toute armure portée par le cavalier, sa propre \emph{Sauvegarde Invulnérable} ou \emph{Régénération} n'ont pas d'effet, à moins que le contraire ne soit précisé. Les \emph{Monstres Montés} peuvent uniquement avoir une armure de type \emph{Protection Innée}. Toute autre sorte d'armure est ignorée.
-%\end{itemize}
-%
-%Les autres caractéristiques sont ignorées sauf pour passer un test de Caractéristique, hormis un test d'Initiative. Dans un tel cas, utiliser la plus haute caractéristique disponible parmi tous les éléments de la figurine.
-%
-%\subsubsection*{\nouveau{Profil de machine de guerre}}
-%
-%Les \emph{Machines de Guerre} ont des profils différents pour la machine et ses servants. Utilisez les PVs de la \emph{Machine de Guerre}. Utilisez  l'Endurance de la machine contre toute attaque à distance et les caractéristiques des servants pour toutes les autres situations. \nouveau{Les \emph{Machines de Guerre} ratent automatiquement tout test de caractéristique sauf les tests de Commandement} et ne peuvent pas faire de \emph{Marche Forcée}, déclarer des charges, poursuivre une unité en fuite ou choisir de fuir en réaction à une charge. Si une \emph{Machine de Guerre} rate un test de \emph{Panique}, elle ne fuit pas, mais ne peut pas tirer lors de sa prochaine phase de tir. Si elle rate un test de \emph{Moral}, elle est simplement détruite. Si une \emph{Machine de Guerre} tombe à 0 PV, la figurine et tous ses éléments sont retirés du champ de bataille comme perte. Les \emph{Personnages} ne peuvent jamais rejoindre des \emph{Machines de Guerre}.
-%
-%Quand une unité charge une \emph{Machine de Guerre}, suivez les règles normales de charge, excepté le fait que l'unité qui charge peut être amenée en contact n'importe où, les \emph{Machines de Guerre} ayant des socles ronds et n'ayant ainsi ni front, flancs ou arrière. Ignorez l'orientation de la \emph{Machine de Guerre} ainsi que la maximisation du nombre de figurines au contact socle à socle. L'unité qui charge doit cependant avoir son front en contact avec le socle de la \emph{Machine de Guerre}. \nouveau{Les \emph{Machines de Guerre} et les unités engagées au corps à corps contre elles ne peuvent pas effectuer de \emph{Reformation de Combat}}. Au corps à corps, n'allouez pas les attaques de façon habituelle. Le joueur attaquant la \emph{Machine de Guerre} choisit jusqu'à six figurines qui ne sont pas en contact avec d'autres ennemis. Il doit en choisir 6 ou autant que possible. Les \emph{Bêtes Monstrueuses}, la \emph{Cavalerie Monstrueuse}, les \emph{Chars} et l'\emph{Infanterie Monstrueuse} comptent pour 3 figurines chacun, et les \emph{Monstres}, montés ou non, comptent comme 6 figurines chacun. Seules ces figurines peuvent attaquer la \emph{Machine de Guerre} comme si elles étaient en contact socle à socle, et la \emph{Machine de Guerre} ne peut riposter que sur les figurines sélectionnées. Les pertes dans l'unité attaquante sont retirées normalement à l'arrière de l'unité. Si des figurines ordinaires parmi celles choisies pour l'assaut meurent avant d'avoir pu frapper, elles peuvent être remplacées. Les tests de \emph{Moral} sont faits normalement, à l'exception du fait qu'une \emph{Machine de Guerre} est détruite immédiatement si elle rate un test de \emph{Moral}.
-%
-%\newpage
-%\section*{Résumé des différents types de troupes}
-%
-%\renewcommand{\arraystretch}{1.48}
-%\begin{table}[!htbp]
-%\centering
-%\begin{tabular}{M{2.5cm}|M{2cm}M{2cm}M{3cm}M{2.3cm}M{2cm}}
-% & \textbf{Rang complet (horde)} & \textbf{Soutien} & \textbf{Règles spéciales} & \textbf{Mouvement} & \textbf{Taille} \\
-%\hline
-%\textbf{Infanterie} & 5 (10) & 1 & - & - & Petite \\
-%\hline
-%\textbf{Bête de Guerre} & 5 (10) & 1 & - & \emph{Rapide} & Petite \\
-%\hline
-%\textbf{Cavalerie} & 5 (10) & 1 (cavalier seulement) & \emph{Profil Combiné} & \emph{Rapide} & Moyenne \\
-%\hline
-%\textbf{Infanterie Monstrueuse} & 3 (6) & 3 & \emph{Piétinement (1)} & - & Moyenne \\
-%\hline
-%\textbf{Bête Monstrueuse} & 3 (6) & 3 & \emph{Piétinement (1)} & \emph{Rapide} & Moyenne \\
-%\hline
-%\textbf{Cavalerie Monstrueuse} & 3 (6) & 3 (cavalier seulement) & \emph{Piétinement (1)} \newline \emph{Profil Combiné} & \emph{Rapide} & Moyenne \\
-%\hline
-%\textbf{Char} & 3 (6) & 1 \newline (1 membre d'équipage seulement) & \emph{Profil Combiné} \newline \emph{Touches d'Impact (1D6)} & \emph{Pas de Marche Forcée} \newline \emph{Rapide} & Moyenne \\
-%\hline
-%\textbf{Monstre} & 1 & - & \emph{Piétinement (1D6)} \newline \emph{Terreur} & - & \emph{Grande Cible} \\
-%\hline
-%\textbf{Monstre Monté} & 1 & - & \emph{Piétinement (1D6)} \newline \emph{Profil de Monstre Monté} \newline \emph{Terreur} & - & \emph{Grande Cible} \\
-%\hline
-%\textbf{Nuée} & * (10) & 1 & \emph{Indémoralisable} \newline \emph{Instable} \newline \emph{Tirailleurs} & - & Petite \\
-%\hline
-%\textbf{Machine de Guerre} & Pas de rangs & - & \emph{Mouvement ou Tir} \newline \emph{Profil de Machine de Guerre} \newline \emph{Rechargez !} & \emph{Pas de Marche Forcée} & Petite \\
-%\hline
-%\end{tabular}
-%* Les Nuées ne peuvent pas avoir de rang complet vu qu'elles ont la règle \emph{Tirailleurs}
-%\end{table}
-%\renewcommand{\arraystretch}{1.5}
+Beaucoup de Personnages ont la possibilité de choisir une monture dans une liste fournie dans leur Livre d'Armée. Quand une figurine est montée, son Type de Troupe change :
+\begin{itemize}[label={-}]
+\item Une figurine montée sur une \textbf{\warbeast} devient de la \textbf{\cavalry}.
+\item Une figurine montée sur une \textbf{\monstrousbeast} devient de la \textbf{\monstrouscavalry}.
+\item \newfromWHB{Une figurine montée sur un \textbf{\monster} devient un \textbf{\riddenmonster}.}
+\item \newfromWHB{Une figurine montée sur n'importe quel autre Type de Troupe prend le Type de Troupe de sa monture.} Elle compte alors comme une figurine montée et gagne les règles Profil Combiné et \cavalrysupport{}.
+\end{itemize}
+
+Tous les éléments de la figurine combinée suivent les règles des Personnages : Personnage, monture, et éventuellement cavaliers ou membres d'équipage supplémentaires. Les cavaliers ou membres d'équipage appartenant à la monture choisie ne comptent pas comme des \og montures \fg{}, ce qui signifie qu'ils peuvent par exemple utiliser leurs armes ou armures. Ils ont leur propre équipement qu'eux seuls peuvent utiliser. Cependant, la figurine combinée n'a qu'une seule Sauvegarde d'Armure. Il faut choisir d'utiliser l'Armure d'un des cavaliers ou membres d'équipage ou l'Armure du Personnage. Quel que soit le choix, cela inclut le \barding{} et la \mountsprotection{}.
+
+\section{Règles des types de troupe}
+
+\noindent\textbf{\newfromWHB{\monsterranks}}
+
+L'unité n'a besoin que d'une seule figurine pour former un Rang Complet.
+
+\noindent\textbf{\monstrousranks}
+
+L'unité a seulement besoin d'un minimum de trois figurines pour former un Rang Complet et de six figurines par rang pour obtenir une formation de Horde.
+
+\noindent\textbf{\cavalrysupport}
+
+Les montures ne peuvent pas porter d'Attaque de Soutien.
+
+\noindent\textbf{\monstroussupport}
+
+La figurine peut porter jusqu'à trois Attaques de Soutien au lieu d'une seule.
+
+\newpage
+\noindent\textbf{\combinedprofile}
+
+La figurine a des profils différents pour chacun de ses éléments. Une figurine de \cavalry{} a généralement un profil pour la monture et un profil pour le cavalier. Une figurine de \chariot{} a généralement un profil pour le châssis, un profil pour les membres d'équipage et un profil pour les montures. Certains Chars n'ont qu'un seul profil pour le châssis et les montures.
+
+\textbf{Quand il attaque ou tire}, chaque élément de la figurine utilise ses propres Caractéristiques. Chaque élément peut faire une Attaque de Tir dans la même phase, mais ils doivent tous tirer sur la même cible. Un membre de l'équipage d'un \chariot{} peut choisir de tirer avec une arme transportée par le \chariot{} à la place de son arme personnelle.
+
+\textbf{Dans toutes les autres situations}, la figurine est considérée comme une seule figurine avec un unique ensemble de Caractéristiques défini ci-dessous. Ignorez les Caractéristiques des autres profils, sauf pour les tests de Caractéristique, pour lesquels on doit utiliser la plus haute valeur parmi tous les profils de la figurine.
+
+\renewcommand{\arraystretch}{2.5}
+\begin{center}
+\begin{tabular}{>{\bfseries\raggedleft}p{3cm}p{12cm}}
+\hline
+Mouvement & Utilisez le Mouvement de la monture ou de l'attelage. \tabularnewline
+Capacité de Combat & Utilisez la CC du cavalier ou la plus haute CC parmi les cavaliers ou membres d'équipage s'il y en a plusieurs. \tabularnewline
+Endurance & \newfromWHB{Utilisez la plus haute Endurance parmi tous les profils.} \tabularnewline
+Points de Vie & Utilisez la plus haute valeur de PV parmi tous les profils. Quand la figurine tombe à 0 PV, retirez la figurine entière comme perte. \tabularnewline
+Commandement & Utilisez le Cd du cavalier ou le plus haut Cd parmi les cavaliers ou membres d'équipage s'il y en a plusieurs. \tabularnewline
+Sauvegardes & Utilisez la meilleure Sauvegarde d'Armure, \regeneration{} et \wardsave{} disponible parmi celles des éléments de la figurine. La Sauvegarde d'Armure d'un cavalier peut être améliorée par un \barding{} et la règle \mountsprotection{}. \tabularnewline
+\hline
+\end{tabular}\end{center}
+\renewcommand{\arraystretch}{1.5}
+
+\newpage
+\noindent\textbf{\newfromWHB{Profil de Monstre Monté}}
+
+La figurine a un profil pour le Monstre et un profil pour le ou les cavaliers ou membres d'équipage. Les attaques qu'elle subit sont toujours résolues contre le Monstre.
+
+\textbf{Quand il attaque ou tire}, chaque élément de la figurine utilise ses propres Caractéristiques. Chaque élément peut faire une Attaque de Tir dans la même phase, mais ils doivent tous tirer sur la même cible. Un membre d'équipage ou un cavalier peut choisir de tirer avec une arme transportée par le Monstre à la place de son arme personnelle.
+
+\textbf{Dans toutes les autres situations}, la figurine est considérée comme une seule figurine avec un unique ensemble de Caractéristiques défini ci-dessous. Ignorez les Caractéristiques des autres profils, sauf pour les tests de Caractéristique, pour lesquels on doit utiliser la plus haute valeur parmi tous les profils de la figurine.
+
+\renewcommand{\arraystretch}{2.5}
+\begin{center}
+\begin{tabular}{>{\bfseries\raggedleft}p{3cm}p{12cm}}
+\hline
+Mouvement & Utilisez le Mouvement du Monstre. \tabularnewline
+Capacité de Combat & Utilisez la CC du Monstre. \tabularnewline
+Endurance & Utilisez l'Endurance du Monstre. \tabularnewline
+Points de Vie & Utilisez les PVs du Monstre. Quand le Monstre tombe à 0 PV, retirez la figurine entière comme perte. \tabularnewline
+Initiative & En cas de test d'Initiative, utilisez toujours l'Initiative du Monstre. \tabularnewline
+Commandement & Utilisez le Cd du cavalier ou le plus haut Cd parmi les cavaliers ou membres d'équipage s'il y en a plusieurs. \tabularnewline
+Sauvegardes & Utilisez les sauvegardes du Monstre uniquement. Toute pièce d'Armure ou \regeneration{} et \wardsave{} du cavalier n'a aucun effet, à moins que le contraire ne soit précisé. Les Monstres Montés ne peuvent bénéficier que du type d'armure \innatedefence{}. \tabularnewline
+\hline
+\end{tabular}\end{center}
+\renewcommand{\arraystretch}{1.5}
+
+\newpage
+\noindent\textbf{Profil de Machine de Guerre}
+
+Une Machine de Guerre est considérée comme une figurine unique avec un seul ensemble de Caractéristiques défini ci-dessous :
+
+\renewcommand{\arraystretch}{2.5}
+\begin{center}
+\begin{tabular}{>{\bfseries\raggedleft}p{4.5cm}p{10.5cm}}
+\hline
+Endurance & Utilisez l'Endurance de la Machine contre les Attaques à Distance et celle des servants contre les Attaques de Corps à Corps. \tabularnewline
+Points de Vie & Utilisez les PVs de la Machine. \tabularnewline
+Autres Caractéristiques et sauvegardes & Utilisez les Caractéristiques, l'Armure et les autres sauvegardes des servants. \tabularnewline
+\hline
+\end{tabular}\end{center}
+\renewcommand{\arraystretch}{1.5}
+
+Les Machines de Guerre ont des profils différents pour la machine et ses servants. Utilisez les PVs de la Machine dans tous les cas. Prenez l'Endurance de la Machine contre les Attaques à Distance et les Caractéristiques des servants pour toutes les autres situations. \newfromWHB{Les Machines de Guerre ratent automatiquement tout test de Caractéristique à l'exception des tests de Commandement} et ne peuvent pas effectuer de Marche Forcée, déclarer des charges, poursuivre ou choisir de fuir en réaction à une charge. Si une Machine de Guerre rate un test de Panique, elle ne fuit pas, mais ne peut pas tirer lors de sa prochaine Phase de Tir. Si la figurine tombe à 0 PV, retirez la figurine entière comme perte. Les Personnages ne peuvent jamais rejoindre une unité de Machine de Guerre.
+
+Quand une unité charge une Machine de Guerre, suivez les règles normales des mouvements de charge, sauf que l'unité qui charge peut être amenée en contact n'importe où : les Machines de Guerre ont des socles ronds et n'ont ainsi ni front, ni flancs, ni arrière. Ignorez l'orientation de la Machine de Guerre ainsi que la maximisation du nombre de figurines au contact socle à socle. L'unité qui charge doit tout de même avoir son front en contact avec le socle de la Machine de Guerre. \newfromWHB{Les Machines de Guerre et les unités engagées au Corps à Corps contre elles ne peuvent pas effectuer de Reformation de Combat.} Au Corps à Corps, n'allouez pas les attaques de façon habituelle. Le joueur attaquant la Machine choisit au début de chaque Manche de Corps à Corps jusqu'à six figurines qui ne sont pas en contact avec d'autres ennemis. Il doit en choisir 6 ou autant que possible. Les Chars, l'Infanterie Monstrueuse, les Bêtes Monstrueuses et la Cavalerie Monstrueuse comptent pour 3 figurines chacun, et les Monstres et Monstres Montés comptent comme 6 figurines chacun. Seules les figurines choisies peuvent attaquer la Machine de Guerre, comme si elles étaient en contact socle à socle, et la Machine de Guerre ne peut riposter que sur ces figurines. Les pertes dans l'unité attaquante sont retirées normalement à l'arrière de l'unité. Si des figurines ordinaires parmi celles choisies pour l'assaut meurent avant d'avoir pu frapper, elles peuvent être remplacées. Les tests de Moral sont faits normalement, à l'exception du fait qu'une Machine de Guerre qui rate un test de Moral est détruite immédiatement.
+
+\newpage
+\section*{Résumé des types de troupe}
+
+\renewcommand{\arraystretch}{2.5}
+\begin{center}
+\begin{tabular}{@{}>{\bfseries}M{2.5cm}|M{2cm}M{2.4cm}M{2.4cm}M{3cm}M{2cm}@{}}
+ & \textbf{Type de Profil} & \textbf{Rang Complet (Horde)} & \textbf{Soutien} & \textbf{Règles Spéciales} & \textbf{Taille**} \tabularnewline
+ \hline
+\infantry{} & - & 5 (10) & 1 & - & Petite \tabularnewline
+
+\warbeast{} & - & 5 (10) & 1 & \swiftstride{} & Petite \tabularnewline
+
+\cavalry{} & \combinedprofile{} & 5 (10) & 1 (cavalier uniquement) & \swiftstride{} & Moyenne \tabularnewline
+
+\monstrousinfantry{} & - & 3 (6) & jusqu'à 3 & \stomp{1} & Moyenne \tabularnewline
+
+\monstrousbeast{} & - & 3 (6) & jusqu'à 3 & \swiftstride{}\newline \stomp{1} & Moyenne \tabularnewline
+
+\monstrouscavalry{} & \combinedprofile{} & 3 (6) & jusqu'à 3 (cavalier uniquement) & \swiftstride{}\newline \stomp{1} & Moyenne \tabularnewline
+
+\chariot{} & \combinedprofile{} & 3 (6) & 1 (1 membre d'équipage uniquement) & \swiftstride{} \newline \cannotmarch{} \newline \impacthits{1D6} & Moyenne \tabularnewline
+
+\monster{} & - & 1 & - & \newfromWHB{\largetarget} \newline \stomp{1D6} \newline \newfromWHB{\terror} & Grande \tabularnewline
+
+\riddenmonster{} & Profil de Monstre Monté & 1 & - & \newfromWHB{\largetarget} \newline \stomp{1D6} \newline \newfromWHB{\terror} & Grande \tabularnewline
+
+\swarm{} & - & * (10) & 1 & \unbreakable{} \newline \unstable{} \newline \skirmisher{} & Petite \tabularnewline
+
+\warmachine{} & Profil de Machine de Guerre & Pas de rangs & - & \moveorfire{} \newline \cannotmarch{} \newline \reload{} & Petite \tabularnewline
+\end{tabular}
+\end{center}
+\noindent * Les Nuées ne peuvent pas avoir de Rang Complet puisqu'elles ont la règle \skirmisher{}.\newline
+\noindent ** Une figurine avec la règle \largetarget{} est de Grande Taille.
+\renewcommand{\arraystretch}{1.5}
