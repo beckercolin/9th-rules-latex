@@ -1,0 +1,174 @@
+\select@language {french}
+\contentsline {part}{1\hspace {1em}Introduction}{2}{part.1}
+\contentsline {section}{\numberline {1.1}Qu'est-ce que BF : Le 9\up {e}\relax {} Âge ?}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Note des traducteurs}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}L'échelle du jeu}{4}{section.1.3}
+\contentsline {part}{2\hspace {1em}Figurines, unités et formations}{5}{part.2}
+\contentsline {section}{\numberline {2.1}Figurines}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Socles et contact socle à socle}{5}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Figurines en plusieurs éléments}{5}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Unités}{5}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Figurines ordinaires}{5}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Rangs Complets}{6}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Formation de Horde}{6}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Empreinte au Sol}{6}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Centre de l'unité}{6}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}Avant, arrière, flancs et arcs de vision}{6}{subsection.2.2.6}
+\contentsline {part}{3\hspace {1em}Principes généraux}{7}{part.3}
+\contentsline {section}{\numberline {3.1}Jeu au tour par tour}{7}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Tour de Joueur}{7}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Joueur Actif et Joueur Réactif}{7}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Effets simultanés}{7}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Les dés}{8}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Lancer les dés}{8}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Le dé de déviation}{8}{subsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.2.1}Déviation}{8}{subsubsection.3.2.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2.2}\leavevmode {\color {blue}Utiliser un dé classique à la place}}{8}{subsubsection.3.2.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Direction aléatoire}{8}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Gabarits}{9}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Touches des Gabarits circulaires}{9}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Gabarit de Ligne}{10}{subsection.3.3.2}
+\contentsline {part}{4\hspace {1em}Logistique du champ de bataille}{11}{part.4}
+\contentsline {section}{\numberline {4.1}Mesurer les distances}{11}{section.4.1}
+\contentsline {section}{\numberline {4.2}Ligne de Vue}{11}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Taille des figurines}{11}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Règle du Pouce d'Écart}{12}{section.4.3}
+\contentsline {section}{\numberline {4.4}Bords de table}{12}{section.4.4}
+\contentsline {part}{5\hspace {1em}Caractéristiques}{13}{part.5}
+\contentsline {section}{\numberline {5.1}Profil de Caractéristiques}{13}{section.5.1}
+\contentsline {section}{\numberline {5.2}Test de Caractéristique}{14}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Caractéristique non modifiée}{14}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Caractéristique Empruntée}{14}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Test de Commandement}{14}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Priorité des modificateurs}{14}{subsection.5.2.4}
+\contentsline {part}{6\hspace {1em}Préparer une partie}{16}{part.6}
+\contentsline {section}{\numberline {6.1}Construire votre Liste d'Armée}{16}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Coût en points}{16}{subsection.6.1.1}
+\contentsline {section}{\numberline {6.2}Restrictions}{17}{section.6.2}
+\contentsline {section}{\numberline {6.3}Patrouilles et Grandes Armées}{18}{section.6.3}
+\contentsline {section}{\numberline {6.4}Liste d'Armée ouverte ?}{19}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Règles optionnelles pour listes cachées}{19}{subsection.6.4.1}
+\contentsline {part}{7\hspace {1em}Séquence Pré-Partie}{20}{part.7}
+\contentsline {subsection}{\numberline {7.0.1}Taille de la partie}{20}{subsection.7.0.1}
+\contentsline {subsection}{\numberline {7.0.2}Dévoiler les listes}{20}{subsection.7.0.2}
+\contentsline {subsection}{\numberline {7.0.3}Installer le champ de bataille}{21}{subsection.7.0.3}
+\contentsline {subsection}{\numberline {7.0.4}Type de déploiement}{22}{subsection.7.0.4}
+\contentsline {subsection}{\numberline {7.0.5}Objectifs Secondaires}{23}{subsection.7.0.5}
+\contentsline {subsection}{\numberline {7.0.6}Zones de déploiement}{23}{subsection.7.0.6}
+\contentsline {subsection}{\numberline {7.0.7}Générer les sorts}{24}{subsection.7.0.7}
+\contentsline {part}{8\hspace {1em}Phase de Déploiement}{25}{part.8}
+\contentsline {subsection}{\numberline {8.0.1}Séquence de la Phase de Déploiement}{25}{subsection.8.0.1}
+\contentsline {subsection}{\numberline {8.0.2}Qui commence à se déployer ?}{25}{subsection.8.0.2}
+\contentsline {subsection}{\numberline {8.0.3}Cœur du déploiement}{25}{subsection.8.0.3}
+\contentsline {subsection}{\numberline {8.0.4}Déploiement des unités restantes}{25}{subsection.8.0.4}
+\contentsline {subsection}{\numberline {8.0.5}Autres règles et aptitudes}{25}{subsection.8.0.5}
+\contentsline {subsection}{\numberline {8.0.6}Qui joue en premier ?}{26}{subsection.8.0.6}
+\contentsline {part}{9\hspace {1em}Phase de Mouvement}{27}{part.9}
+\contentsline {section}{\numberline {9.1}Séquence de la Phase de Mouvement}{27}{section.9.1}
+\contentsline {section}{\numberline {9.2}Déclaration des charges}{27}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Réactions aux charges}{28}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}Déplacement des unités en charge}{28}{subsection.9.2.2}
+\contentsline {section}{\numberline {9.3}Mouvements Obligatoires}{33}{section.9.3}
+\contentsline {subsection}{\numberline {9.3.1}Unités en fuite}{33}{subsection.9.3.1}
+\contentsline {section}{\numberline {9.4}Autres Mouvements}{33}{section.9.4}
+\contentsline {subsection}{\numberline {9.4.1}Mouvement Simple}{34}{subsection.9.4.1}
+\contentsline {subsection}{\numberline {9.4.2}Marche Forcée}{34}{subsection.9.4.2}
+\contentsline {subsection}{\numberline {9.4.3}Reformation}{34}{subsection.9.4.3}
+\contentsline {section}{\numberline {9.5}Pivots et Roues}{35}{section.9.5}
+\contentsline {part}{10\hspace {1em}Phase de Magie}{36}{part.10}
+\contentsline {section}{\numberline {10.1}Sorciers}{36}{section.10.1}
+\contentsline {section}{\numberline {10.2}Sorts}{36}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Sorts améliorés}{37}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}Types de sorts}{37}{subsection.10.2.2}
+\contentsline {subsection}{\numberline {10.2.3}Durée des sorts}{39}{subsection.10.2.3}
+\contentsline {section}{\numberline {10.3}Séquence de la Phase de Magie}{40}{section.10.3}
+\contentsline {subsection}{\numberline {10.3.1}Flux Magiques et Canalisation}{40}{subsection.10.3.1}
+\contentsline {subsection}{\numberline {10.3.2}Dissipation d'un sort restant en jeu}{40}{subsection.10.3.2}
+\contentsline {section}{\numberline {10.4}Séquence de lancement d'un sort}{40}{section.10.4}
+\contentsline {subsection}{\numberline {10.4.1}Modificateurs magiques}{41}{subsection.10.4.1}
+\contentsline {subsection}{\numberline {10.4.2}Perte de Concentration}{42}{subsection.10.4.2}
+\contentsline {subsection}{\numberline {10.4.3}Pas Assez de Puissance}{42}{subsection.10.4.3}
+\contentsline {subsection}{\numberline {10.4.4}Pouvoir Irrésistible}{42}{subsection.10.4.4}
+\contentsline {section}{\numberline {10.5}Fiasco}{43}{section.10.5}
+\contentsline {section}{\numberline {10.6}Attributs de Voie}{43}{section.10.6}
+\contentsline {section}{\numberline {10.7}Objet de Sort}{44}{section.10.7}
+\contentsline {section}{\numberline {10.8}Effets magiques particuliers}{45}{section.10.8}
+\contentsline {subsection}{\numberline {10.8.1}Mouvement Magique}{45}{subsection.10.8.1}
+\contentsline {subsection}{\numberline {10.8.2}Récupérer et Ressusciter des PVs}{45}{subsection.10.8.2}
+\contentsline {subsection}{\numberline {10.8.3}Unités invoquées}{45}{subsection.10.8.3}
+\contentsline {part}{11\hspace {1em}Phase de Tir}{46}{part.11}
+\contentsline {section}{\numberline {11.1}Séquence de la Phase de Tir}{46}{section.11.1}
+\contentsline {subsection}{\numberline {11.1.1}Tirer avec une unité}{46}{subsection.11.1.1}
+\contentsline {section}{\numberline {11.2}Jets pour toucher de tir}{47}{section.11.2}
+\contentsline {subsection}{\numberline {11.2.1}Modificateurs du jet pour toucher}{47}{subsection.11.2.1}
+\contentsline {part}{12\hspace {1em}Phase de Corps à Corps}{51}{part.12}
+\contentsline {section}{\numberline {12.1}Séquence de la Phase de Corps à Corps}{51}{section.12.1}
+\contentsline {subsection}{\numberline {12.1.1}Plus engagés}{51}{subsection.12.1.1}
+\contentsline {section}{\numberline {12.2}Étapes d'une Manche de Corps à Corps}{52}{section.12.2}
+\contentsline {subsection}{\numberline {12.2.1}Qui peut frapper}{53}{subsection.12.2.1}
+\contentsline {subsection}{\numberline {12.2.2}Allouer les attaques}{54}{subsection.12.2.2}
+\contentsline {subsection}{\numberline {12.2.3}Jets pour toucher}{54}{subsection.12.2.3}
+\contentsline {subsection}{\numberline {12.2.4}Table des jets pour toucher au Corps à Corps}{55}{subsection.12.2.4}
+\contentsline {subsection}{\numberline {12.2.5}Éloigné du Combat}{56}{subsection.12.2.5}
+\contentsline {section}{\numberline {12.3}Gagner une Manche de Corps à Corps}{57}{section.12.3}
+\contentsline {section}{\numberline {12.4}Test de Moral}{58}{section.12.4}
+\contentsline {section}{\numberline {12.5}Poursuites et Charges Irrésistibles}{59}{section.12.5}
+\contentsline {subsection}{\numberline {12.5.1}Jet de distance de fuite et de poursuite}{59}{subsection.12.5.1}
+\contentsline {subsection}{\numberline {12.5.2}Distance et déplacements de fuite}{59}{subsection.12.5.2}
+\contentsline {subsection}{\numberline {12.5.3}Distance et déplacement de poursuite}{60}{subsection.12.5.3}
+\contentsline {section}{\numberline {12.6}Reformation de Combat}{62}{section.12.6}
+\contentsline {part}{13\hspace {1em}Attaques et blessures}{63}{part.13}
+\contentsline {section}{\numberline {13.1}Séquence d'une attaque}{63}{section.13.1}
+\contentsline {section}{\numberline {13.2}Répartir les touches}{64}{section.13.2}
+\contentsline {section}{\numberline {13.3}Jets pour blesser}{64}{section.13.3}
+\contentsline {subsection}{\numberline {13.3.1}La table pour blesser}{64}{subsection.13.3.1}
+\contentsline {section}{\numberline {13.4}Sauvegarde d'Armure et malus}{65}{section.13.4}
+\contentsline {section}{\numberline {13.5}Régénération et Sauvegarde Invulnérable}{65}{section.13.5}
+\contentsline {section}{\numberline {13.6}Retirer les Points de Vie}{66}{section.13.6}
+\contentsline {section}{\numberline {13.7}Retirer les pertes}{67}{section.13.7}
+\contentsline {section}{\numberline {13.8}Test de Panique}{67}{section.13.8}
+\contentsline {part}{14\hspace {1em}Types de Troupe}{68}{part.14}
+\contentsline {section}{\numberline {14.1}Figurines à pied ou montées}{69}{section.14.1}
+\contentsline {subsection}{\numberline {14.1.1}Montures de Personnage}{69}{subsection.14.1.1}
+\contentsline {section}{\numberline {14.2}Règles des Types de Troupe}{69}{section.14.2}
+\contentsline {part}{15\hspace {1em}Équipement Standard}{74}{part.15}
+\contentsline {section}{\numberline {15.1}Armes de Corps à Corps}{74}{section.15.1}
+\contentsline {section}{\numberline {15.2}Armes de Tir}{75}{section.15.2}
+\contentsline {section}{\numberline {15.3}Armes d'Artillerie}{76}{section.15.3}
+\contentsline {subsection}{\numberline {15.3.1}Table des Incidents de Tir}{78}{subsection.15.3.1}
+\contentsline {section}{\numberline {15.4}Types d'Armure}{79}{section.15.4}
+\contentsline {part}{16\hspace {1em}Personnages}{80}{part.16}
+\contentsline {section}{\numberline {16.1}Personnages isolés}{80}{section.16.1}
+\contentsline {section}{\numberline {16.2}Rejoindre une unité}{80}{section.16.2}
+\contentsline {subsection}{\numberline {16.2.1}\leavevmode {\color {blue}Au Premier Rang}}{82}{subsection.16.2.1}
+\contentsline {subsection}{\numberline {16.2.2}Faites Place}{83}{subsection.16.2.2}
+\contentsline {section}{\numberline {16.3}Le Général}{84}{section.16.3}
+\contentsline {subsection}{\numberline {16.3.1}Choisir le Général}{84}{subsection.16.3.1}
+\contentsline {subsection}{\numberline {16.3.2}Présence Charismatique}{84}{subsection.16.3.2}
+\contentsline {section}{\numberline {16.4}Le Porteur de la Grande Bannière}{84}{section.16.4}
+\contentsline {subsection}{\numberline {16.4.1}Choisir le Porteur de la Grande Bannière}{84}{subsection.16.4.1}
+\contentsline {subsection}{\numberline {16.4.2}Tenez les Rangs}{84}{subsection.16.4.2}
+\contentsline {subsection}{\numberline {16.4.3}Bannière Magique}{84}{subsection.16.4.3}
+\contentsline {subsection}{\numberline {16.4.4}Leur Bannière est à Terre}{84}{subsection.16.4.4}
+\contentsline {section}{\numberline {16.5}Défis}{85}{section.16.5}
+\contentsline {subsection}{\numberline {16.5.1}Lancer un Défi}{85}{subsection.16.5.1}
+\contentsline {subsection}{\numberline {16.5.2}Relever ou refuser un Défi}{85}{subsection.16.5.2}
+\contentsline {subsection}{\numberline {16.5.3}Relever un Défi}{85}{subsection.16.5.3}
+\contentsline {subsection}{\numberline {16.5.4}Carnage}{85}{subsection.16.5.4}
+\contentsline {part}{17\hspace {1em}État-Major}{86}{part.17}
+\contentsline {section}{\numberline {17.1}Musicien}{86}{section.17.1}
+\contentsline {section}{\numberline {17.2}Porte-Étendard}{87}{section.17.2}
+\contentsline {section}{\numberline {17.3}Porte-Étendard Vétéran}{87}{section.17.3}
+\contentsline {section}{\numberline {17.4}Champion}{87}{section.17.4}
+\contentsline {part}{18\hspace {1em}Terrains et Décors}{88}{part.18}
+\contentsline {section}{\numberline {18.1}Types de Terrain}{88}{section.18.1}
+\contentsline {section}{\numberline {18.2}Liste des Terrains particuliers}{89}{section.18.2}
+\contentsline {subsection}{\numberline {18.2.1}Terrain Découvert}{89}{subsection.18.2.1}
+\contentsline {subsection}{\numberline {18.2.2}Terrain Infranchissable}{89}{subsection.18.2.2}
+\contentsline {subsection}{\numberline {18.2.3}Champ}{89}{subsection.18.2.3}
+\contentsline {subsection}{\numberline {18.2.4}Colline}{89}{subsection.18.2.4}
+\contentsline {subsection}{\numberline {18.2.5}Forêt}{90}{subsection.18.2.5}
+\contentsline {subsection}{\numberline {18.2.6}Ruines}{90}{subsection.18.2.6}
+\contentsline {subsection}{\numberline {18.2.7}Eaux Peu Profondes}{90}{subsection.18.2.7}
+\contentsline {subsection}{\numberline {18.2.8}Mur}{90}{subsection.18.2.8}
+\contentsline {subsection}{\numberline {18.2.9}Bâtiment}{91}{subsection.18.2.9}
