@@ -1,0 +1,70 @@
+%% Creator: Inkscape 0.91_64bit, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'skirmishers.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{2607.87402344bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.86956517)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{pics/skirmishers.pdf}}%
+    \put(0.34508012,0.19921814){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figSkirmiCharge}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{pics/skirmishers.pdf}}%
+    \put(0.12047929,0.46758212){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figSkirmiDist}}}%
+    \put(0.05560983,0.50632452){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figSkirmiDist}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{pics/skirmishers.pdf}}%
+    \put(0.17391304,0.79076085){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figSkirmiCharge}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{pics/skirmishers.pdf}}%
+    \put(0.669384,0.58990274){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figSkirmiStandAndShoot}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{pics/skirmishers.pdf}}%
+    \put(0.26000195,0.09741606){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figSkirmiHold}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{pics/skirmishers.pdf}}%
+    \put(0.41916477,0.80734172){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figSkirmiA}}}%
+    \put(0.9191648,0.80734172){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figSkirmiB}}}%
+    \put(0.4191648,0.36440691){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figSkirmiC}}}%
+    \put(0.91916473,0.36440691){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figSkirmiD}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{pics/skirmishers.pdf}}%
+  \end{picture}%
+\endgroup%

@@ -1,420 +1,517 @@
-% Base sur la VO 0.99.0
-% Relecture technique: 
-% Relecture syntaxique: 
 
-\part{Règles spéciales}
+\part{Règles Spéciales}
 
-Les règles spéciales sont des règles additionnelles liées à des figurines, des armes ou des sorts. Vous trouverez en détail la façon dont ces règles doivent être appliquées après la liste des règles spéciales ci-dessous.
+Les règles spéciales sont des effets ou capacités liés à des éléments de figurine, des figurines entières, des armes ou des sorts. Vous trouverez en détail la façon dont ces règles doivent être appliquées après la liste des règles spéciales ci-dessous.
 
-% TODO: ajouter ici des liens vers les regles.
+\vspace*{20pt}
+\hypertarget{specialrulestable}{%
+\begin{framed}
+\vspace*{-10pt}
+\setlength\columnseprule{0.5pt}
+\begin{multicols}{3}\raggedcolumns
+\noindent\hyperlink{requirestwohands}{\requirestwohands}\newline
+\hyperlink{randomattacks}{\randomattacks{}}\newline
+\hyperlink{grindingattacks}{\grindingattacks{}}\newline
+\hyperlink{divineattacks}{\divineattacks}\newline
+\hyperlink{crushattack}{\crushattack}\newline
+\hyperlink{poisonedattacks}{\poisonedattacks}\newline
+\hyperlink{flamingattacks}{\flamingattacks}\newline
+\hyperlink{lightningattacks}{\lightningattacks}\newline
+\hyperlink{magicalattacks}{\magicalattacks}\newline
+\hyperlink{sweepingattack}{\sweepingattack}\newline
+\hyperlink{breathweapon}{\breathweapon{}}\newline
+\hyperlink{toxicattacks}{\toxicattacks}\newline
+\hyperlink{vanguard}{\vanguard}\newline
+\hyperlink{multiplewounds}{\multiplewounds{}{}}\newline
+\hyperlink{hidden}{\hidden}\newline
+\hyperlink{hardtarget}{\hardtarget}\newline
+\hyperlink{channel}{\channel}\newline
+\hyperlink{fastcavalry}{\fastcavalry}\newline
+\hyperlink{devastatingcharge}{\devastatingcharge}\newline
+\hyperlink{thunderouscharge}{\thunderouscharge}\newline
+\hyperlink{fightinextrarank}{\fightinextrarank}\newline
+\hyperlink{wizardconclave}{\wizardconclave{}}\newline
+\hyperlink{lethalstrike}{\lethalstrike}\newline
+\hyperlink{swiftstride}{\swiftstride}\newline
+\hyperlink{distracting}{\distracting}\newline
+\hyperlink{otherworldly}{\otherworldly}\newline
+\hyperlink{scout}{\scout}\newline
+\hyperlink{ambush}{\ambush}\newline
+\hyperlink{unwieldy}{\unwieldy}\newline
+\hyperlink{ethereal}{\ethereal}\newline
+\hyperlink{hellfire}{\hellfire}\newline
+\hyperlink{frenzy}{\frenzy}\newline
+\hyperlink{metalshifting}{\metalshifting}\newline
+\hyperlink{bodyguard}{\bodyguard{}}\newline
+\hyperlink{largetarget}{\largetarget}\newline
+\hyperlink{strider}{\strider{}}\newline
+\hyperlink{hatred}{\hatred}\newline
+\hyperlink{immunetopsychology}{\immunetopsychology}\newline
+\hyperlink{unbreakable}{\unbreakable}\newline
+\hyperlink{flammable}{\flammable}\newline
+\hyperlink{engineer}{\engineer}\newline
+\hyperlink{insignificant}{\insignificant}\newline
+\hyperlink{daemonicinstability}{\daemonicinstability}\newline
+\hyperlink{unstable}{\unstable}\newline
+\hyperlink{weaponmaster}{\weaponmaster}\newline
+\hyperlink{pathmaster}{\pathmaster{}}\newline
+\hyperlink{undead}{\undead}\newline
+\hyperlink{randommovement}{\randommovement{}}\newline
+\hyperlink{moveorfire}{\moveorfire}\newline
+\hyperlink{fireborn}{\fireborn}\newline
+\hyperlink{cannotmarch}{\cannotmarch}\newline
+\hyperlink{notaleader}{\notaleader}\newline
+\hyperlink{armourpiercing}{\armourpiercing{}}\newline
+\hyperlink{fear}{\fear}\newline
+\hyperlink{stomp}{\stomp{}}\newline
+\hyperlink{warplatform}{\warplatform}\newline
+\hyperlink{reload}{\reload}\newline
+\hyperlink{lightningreflexes}{\lightningreflexes}\newline
+\hyperlink{regeneration}{\regeneration{}}\newline
+\hyperlink{magicresistance}{\magicresistance{}}\newline
+\hyperlink{wardsave}{\wardsave{}}\newline
+\hyperlink{stupidity}{\stupidity}\newline
+\hyperlink{stubborn}{\stubborn}\newline
+\hyperlink{terror}{\terror}\newline
+\hyperlink{volleyfire}{\volleyfire}\newline
+\hyperlink{quicktofire}{\quicktofire}\newline
+\hyperlink{multipleshots}{\multipleshots{}}\newline
+\hyperlink{skirmisher}{\skirmisher}\newline
+\hyperlink{impacthits}{\impacthits{}}\newline
+\hyperlink{lighttroops}{\lighttroops}\newline
+\hyperlink{fly}{\fly{}}
+\end{multicols}
+\setlength\columnseprule{0pt}
+\vspace*{-10pt}
+\end{framed}
+}
 
-\subsubsection*{Attaques spéciales}
+\paragraph{\newfromWHB{Attaques Spéciales}}
 
-Quelques figurines possèdent des capacités inhabituelles appelées des \emph{Attaques Spéciales}, comme les \emph{Touches d'Impact} ou les \emph{Attaques de Souffle}. Ces \emph{Attaques Spéciales} n'utilisent pas l'arme de la figurine et ne bénéficient pas des règles spéciales qui modifient les attaques de corps à corps et de tir classiques (y compris des règles spéciales qui modifient des Caractéristiques). Cependant, les \emph{Attaques Spéciales} peuvent profiter d'autres types de règles (qui ne sont pas des règles spéciales) ou bénéficier d'augmentation de caractéristiques (grâce à des sorts, des objets magiques...). Par exemple, une arme lourde ou une \emph{Charge Tonitruante} ne peut pas augmenter la force des attaques de \emph{Piétinement}, mais une Potion de Force ou le sort "La Bête qui Sommeille" le peut.
+Les Attaques Spéciales, comme le \stomp{} ou l'\breathweapon{}, ne sont pas faites avec l'arme de la figurine. Elles ne bénéficient pas des règles spéciales qui modifient les Attaques de Corps à Corps et les Attaques de Tir normales (même les règles spéciales qui modifient les Caractéristiques). Cependant, les Attaques Spéciales peuvent profiter d'autres sources de règles et de changements de Caractéristiques, comme les sorts et les Objets Magiques, tant que ce ne sont pas des règles spéciales. Par exemple, une \gw{} ou la règle spéciale \thunderouscharge{} n'augmentent pas la Force des attaques de \stomp{}, mais une Potion de Force ou le sort \og \wildernesssignature{} \fg{} (qui augmente la Force) le font.
 
-Ces attaques spéciales sont:
-%TODO: mettre les paragraphes en lien
-\begin{itemize}
-\item Attaque au passage
-\item Attaque de broyage (X)
-\item Attaque de souffle (X)
-\item Attaque écrasante
-\item Piétinement (X)
-\item Touches d'impact (X) 
-\end{itemize} 
+\vspace*{20pt}
+\begin{framed}
+\vspace*{-10pt}
+\setlength\columnseprule{0.5pt}
+\begin{multicols}{3}\raggedcolumns
+\noindent\hyperlink{grindingattacks}{\grindingattacks{}}\newline
+\hyperlink{crushattack}{\crushattack}\newline
+\hyperlink{sweepingattack}{\sweepingattack}\newline
+\hyperlink{breathweapon}{\breathweapon{}}\newline
+\hyperlink{stomp}{\stomp{}}\newline
+\hyperlink{impacthits}{\impacthits{}}
+\end{multicols}
+\setlength\columnseprule{0pt}
+\vspace*{-10pt}
+\end{framed}
 
-\section{Liste des règles spéciales} 
+\newpage
+\section{Liste des Règles Spéciales} 
 
-\subsubsection*{Arme à deux mains}
+\newspecialrule{requirestwohands}{\requirestwohands}
 
-Une figurine équipée d’une arme ayant cette règle spéciale ne peut pas utiliser simultanément de bouclier.
+Une figurine qui se sert de cette arme ne peut pas utiliser de \shield{} en même temps.
 
+\newspecialrule{randomattacks}{\randomattacks{X}}
 
-\subsubsection*{Attaques aléatoires (X)}
+L'élément de figurine possède un nombre aléatoire d'Attaques qui correspond à la valeur entre parenthèses. Des modificateurs peuvent y être ajoutés. Par exemple, une figurine avec \randomattacks{1D3+2} peut avoir entre 3 et 5 Attaques. L'élément de figurine peut exceptionnellement dépasser la limite de 10 Attaques normalement imposée par la Caractéristique Attaques.
 
-Chaque fois qu'une figurine avec cette règle spéciale doit attaquer au corps à corps, son nombre d'attaques est déterminé par le nombre entre parenthèses (X), avant d'appliquer tout modificateur. Par exemple, une figurine avec \emph{Attaques Aléatoires (1D3+2)} a un nombre aléatoire d'attaques entre 3 et 5. Ces attaques ignorent la règle qui stipule qu'une caractéristique ne peut pas dépasser 10.
+\newspecialrule{grindingattacks}{\newfromWHB{\grindingattacks{X}} - Attaque Spéciale}
 
-\subsubsection*{Attaque au passage - Attaque Spéciale}
+L'élément de figurine doit porter une Attaque Spéciale de Corps à Corps à sa propre Initiative contre une unique unité ennemie en contact socle à socle. L'attaque inflige un nombre de touches égal à la valeur indiquée entre parenthèses. Les touches sont automatiques et sont faites à la Force de l'élément de figurine. Les \grindingattacks{} sont des Attaques Spéciales, donc elles ne bénéficient jamais des équipements et règles spéciales de la figurine. Si une figurine dispose d'\grindingattacks{} et de \impacthits{}, elle ne peut utiliser qu'une des deux règles au choix lors d'une même Manche de Corps à Corps.
 
-Attaque Spéciale \newrule{à distance}. Cette attaque peut être utilisée par les unités composées de figurines ayant cette règle. À la fin de la phase des Autres Mouvements, désignez une unité ennemie \newrule{non engagée au corps à corps} au dessus de laquelle l'unité a fait un mouvement simple ou une marche forcée pendant cette phase \newrule{(même si les socles n'ont été survolés que partiellement)}. Cette attaque peut aussi être utilisée à la fin d'une phase de magie durant laquelle l'unité a effectué un mouvement magique. L'unité entière effectue une attaque contre l'ennemi choisi. Cette attaque touche automatiquement et est résolue suivant la description dans le profil de l'unité.
+\newspecialrule{divineattacks}{\newfromWHB{\divineattacks}}
 
-\subsubsection*{\nouveau{Attaques de broyage (X)} - Attaque Spéciale}
+Les Sauvegardes Invulnérables réussies contre des attaques avec cette règle, ou contre des Attaques de Corps à Corps provenant d'une figurine ayant cette règle, doivent être relancées.
 
-Une figurine avec cette règle spéciale \newrule{doit} faire une \emph{Attaque Spéciale} au corps à corps à sa propre Initiative contre une unique unité ennemie en contact socle à socle avec elle. L'attaque inflige un nombre de touches automatiques égal à la valeur indiquée entre parenthèses (X), avec une Force égale à la Force de la figurine. Les \emph{Attaques de Broyage} sont des attaques spéciales et ne bénéficient jamais de l'équipement ou des règles spéciales de la figurine. Si une figurine possède à la fois des \emph{Attaques de Broyage} et des \emph{Touches d'Impact}, elle ne peut utiliser que l'une des deux dans une même \emph{Phase de Corps à Corps}. Vous pouvez choisir.
+\newspecialrule{crushattack}{\newfromWHB{\crushattack} - Attaque Spéciale}
 
-\subsubsection*{Attaque de souffle (X) - Attaque Spéciale}
+L'élément de figurine peut échanger toutes ses Attaques normales de Corps à Corps contre une unique Attaque Spéciale. Elle ne peut pas être portée comme Attaque de Soutien. Elle est résolue à Initiative 0 avec une Force de 10 et la règle \multiplewounds{\ordnance}{}. Une \crushattack{} est une Attaque Spéciale, donc elle ne bénéficie jamais des équipements et règles spéciales de la figurine. Elle est cependant allouée comme si c'était une Attaque normale de Corps à Corps. La figurine peut utiliser d'autres Attaques Spéciales comme le \stomp{} ou des \impacthits{}.
 
-Les \emph{Attaques de Souffle} peuvent être utilisées une fois par partie, soit comme une \emph{Attaque Spéciale} de tir, soit comme une \emph{Attaque Spéciale} de corps à corps. Si une figurine possède plusieurs \emph{Attaques de souffle}, elle ne peut en utiliser qu'une par phase de jeu.
-\begin{itemize}[label={-}]
-\item Comme une attaque spéciale de tir, normalement pendant la phase de tir: choisissez une cible en utilisant les règles normales pour les attaques de tir. \nouveau{Cette attaque a une portée de 6{\pouce}} et peut être utilisée même si la figurine a fait une \emph{Marche Forcée} ou pour Tenir la position et tirer suite à une charge.
-\item Comme une attaque spéciale de corps à corps, normalement pendant la phase de corps à corps, elle est faite à l'Initiative de la figurine, ou de l'élément de la figurine qui effectue l'attaque. Déclarez que vous utilisez une \emph{Attaque de Souffle} quand vous allouez les attaques et désignez une unité en contact socle à socle à attaquer.
+\newspecialrule{poisonedattacks}{\poisonedattacks}
+
+Une attaque avec cette règle, ou une attaque provenant d'une figurine avec cette règle (Attaques de Tir et de Corps à Corps), blesse automatiquement, sans aucun jet pour blesser nécessaire, si le jet pour toucher est réussi et a donné un résultat non modifié de \result{6}. Une Attaque de Tir nécessitant un 7+ (ou plus) pour toucher ne peut pas bénéficier des \poisonedattacks{}. Si une attaque peut occasionner plusieurs touches (arme à Gabarit, \boltthrower{}), seule une touche au choix de l'attaquant blesse automatiquement. Les autres touches doivent blesser avec un jet normal.
+
+\newspecialrule{flamingattacks}{\flamingattacks}
+
+S'applique aux attaques avec cette règle et aux attaques provenant d'une figurine avec cette règle (Attaques de Tir et de Corps à Corps). Il n'y a habituellement pas d'effet particulier, mais il existe des interactions avec d'autres règles comme \flammable{} ou \regeneration{}.
+
+\newspecialrule{lightningattacks}{\newfromWHB{\lightningattacks}}
+
+Une unité avec la règle \fly{} qui subit au moins une touche d'une attaque avec cette règle ou d'une attaque provenant d'une figurine ayant cette règle subit 1D6 touches additionnelles de Force 4 à la fin de la phase.
+
+\newspecialrule{magicalattacks}{\magicalattacks}
+
+S'applique aux attaques avec cette règle et aux attaques provenant d'une figurine avec cette règle. Il n'y a habituellement pas d'effet particulier, mais il existe des interactions avec d'autres règles comme \ethereal{}. \newfromWHB{Une figurine avec cette règle l'applique à toutes ses attaques, Attaques Spéciales y-compris, comme le \stomp{}, les \impacthits{} ou l'\breathweapon{}, à moins que le contraire ne soit précisé.} Toutes les touches provenant de Sorts, de Fiascos ou d'Objets Magiques disposent de la règle \magicalattacks{}.
+
+\newspecialrule{sweepingattack}{\newfromWHB{\sweepingattack{}} - Attaque Spéciale}
+
+Attaque Spéciale à Distance. Cette attaque peut être utilisée par les unités composées de figurines ayant cette règle. À la fin de l'étape des Autres Mouvements, désignez une unité ennemie non engagée au Corps à Corps à travers laquelle l'unité a fait un Mouvement Simple ou une Marche Forcée pendant cette phase (même si les socles ne se sont que partiellement superposés). Cette attaque peut aussi être utilisée à la fin d'une Phase de Magie durant laquelle l'unité a effectué un Mouvement Magique. Chaque figurine de l'unité effectue une attaque contre l'unité ennemie choisie. Cette attaque touche automatiquement et est résolue suivant la description dans le profil de l'unité.
+
+\newspecialrule{breathweapon}{\breathweapon{X} - Attaque Spéciale}
+
+L'élément de figurine peut utiliser cette attaque une fois par partie. Si une figurine dispose de plusieurs instances de cette règle, elle ne peut en utiliser qu'une seule par phase. Cette attaque peut être faite soit comme une Attaque Spéciale de Tir, soit comme une Attaque Spéciale de Corps à Corps.
+\begin{itemize}[label={\textbullet}]
+\item Comme une Attaque Spéciale de Tir, normalement pendant la Phase de Tir. Choisissez une cible en utilisant les règles normales des Attaques de Tir. \newfromWHB{L'attaque a une portée de \distance{6}.} Elle peut être utilisée même si la figurine a effectué une Marche Forcée pendant ce tour, \newfromWHB{et peut servir à Tenir la Position et Tirer en réponse à une charge}.
+\item Comme une Attaque Spéciale de Corps à Corps, normalement pendant la Phase de Corps à Corps. L'attaque est portée à l'Initiative de l'élément de figurine. Déclarez que vous utilisez l'\breathweapon{} quand vous allouez les attaques et désignez une unité en contact socle à socle à attaquer.
 \end{itemize}
 
-\nouveau{L'\emph{Attaque de Souffle}, que ce soit au corps à corps ou au tir, inflige 2D6 touches automatiques à sa cible}. La Force et les règles spéciales éventuelles de ces touches sont données entre parenthèses, comme dans \emph{Attaque de Souffle (\emph{Force 4}, Attaques Enflammées)}. Les \emph{Attaques de Souffle} sont des attaques spéciales et ne bénéficient jamais de l'équipement ou des règles spéciales de la figurine qui effectue l'attaque.
+\newfromWHB{L'\breathweapon{}, que ce soit comme Attaque de Tir ou de Corps à Corps, inflige 2D6 touches automatiques à sa cible.} La Force et les règles spéciales éventuelles de ces touches sont données entre parenthèses, comme dans \og \breathweapon{\Strength{} 4, \flamingattacks{}} \fg{}.
 
-\subsubsection*{\nouveau{Attaques divines}}
+\newspecialrule{toxicattacks}{\newfromWHB{\toxicattacks}}
 
-Les \emph{Sauvegardes Invulnérables} réussies contre des attaques ayant cette règle spéciale, ou contre des attaques au corps à corps provenant d'une figurine ayant cette règle spéciale, doivent être relancées.
+Une attaque avec cette règle, ou une Attaque de Corps à Corps provenant d'une figurine avec cette règle, a toujours Force 3 et la règle \armourpiercing{6}.
 
-\subsubsection*{\nouveau{Attaque écrasante} - Attaque Spéciale}
+\newpage
+\newspecialrule{vanguard}{\vanguard}
 
-Une figurine qui possède cette règle peut échanger toutes ses attaques normales de corps à corps pour effectuer une unique \emph{Attaque Spéciale}. Elle ne peut pas être effectuée en tant qu'attaque de \emph{Soutien}, est résolue à Initiative 0, avec une Force de 10 et \emph{Blessures Multiples (Artillerie)}. \newrule{L'équipement ou les règles spéciales d'une figurine ne peuvent pas améliorer son \emph{Attaque écrasante}.} La figurine peut toujours effectuer ses autres \emph{Attaques Spéciales}, comme le \emph{Piétinement} ou les \emph{Touches d'Impact}. \newrule{Même si c'est une \emph{Attaque Spéciale}, cette attaque est allouée comme si elle était une attaque normale de corps à corps.}
+Après le Déploiement (\scouts{} compris), les unités composées uniquement de figurines avec cette règle peuvent effectuer un mouvement de \distance{12}. Il est fait comme pendant l'étape des Autres Mouvements, avec les mêmes restrictions et possibilités d'action, comme la Roue, la Reformation, rejoindre et quitter des unités, etc. La distance de déplacement est de \distance{12} plutôt que de la valeur de la Caractéristique de Mouvement de l'unité et la Marche Forcée n'est pas autorisée. Une unité ne peut pas se retrouver à moins de \distance{12} d'un ennemi à l'issue de ce mouvement. \newfromWHB{Cette limite est réduite à \distance{6} si l'ennemi en question a utilisé la règle \vanguard{} ou \scout{}.} Une unité qui a fait un déplacement d'\vanguard{} ne peut pas déclarer de charge lors du premier Tour de Joueur (donc si leur camp a joué en premier). \newfromWHB{Si les deux joueurs désirent faire des déplacements d'\vanguard{}, ils alternent les déplacements, une unité après l'autre, en commençant par le joueur qui a finit de se déployer en premier.} Au lieu de déplacer une unité avec la règle \vanguard{}, un joueur peut déclarer qu'il arrête tout déplacement d'\vanguard{}.
 
-\subsubsection*{Attaques empoisonnées}
+\newspecialrule{multiplewounds}{\multiplewounds{X}{\newfromWHB{Y}}}
 
-Lorsqu'une attaque provenant d'une figurine ayant cette règle spéciale obtient un '6' non modifié pour toucher \nouveau{(au tir comme un corps à corps)} \newrule{et si cette touche est réussie}, elle blesse automatiquement, sans qu'aucun jet pour blesser ne soit requis. Les attaques de tirs nécessitant un jet de 7+, ou plus, pour toucher ne peuvent jamais bénéficier de la règle \emph{Attaques Empoisonnées}. \newrule{Si l'attaque peut se dupliquer en plusieurs touches (comme pour un tir de baliste ou avec une arme à gabarit), une seule touche (au choix de l'attaquant) blesse automatiquement, toutes les autres doivent faire des jets pour blesser normalement.}
+Les blessures non sauvegardées causées par des attaques avec cette règle ou des Attaques de Corps à Corps provenant de figurines ayant cette règle sont multipliées par la valeur entre parenthèses (X). Si la valeur donnée est un dé, comme dans \og \multiplewounds{1D3}{} \fg{}, lancez un dé pour chaque blessure concernée. Le nombre de blessures une fois multiplié ne peut jamais être plus grand que la Caractéristique de PVs de la cible, sans prendre en compte les blessures déjà subies précédemment dans la bataille. Par exemple, si une attaque avec \multiplewounds{1D6}{} blesse un Troll (3 PVs), et qu'un \result{5} est obtenu pour le nombre de blessures, alors ce nombre est réduit à 3 blessures.
 
-\subsubsection*{Attaques enflammées}
+\newfromWHB{Si la valeur précisée entre parenthèses est \textbf{\ordnance}, le nombre de blessures est de 1D3+1, sauf contre une cible avec la règle \fly{}, pour laquelle il passe à 1D3+2.}
 
-Cette règle s'applique aux attaques avec cette règle spéciale et aux attaques venant de figurines ayant cette règle spéciale, qu'elles soient de corps à corps ou de tir. Ces attaques n'ont dans un cas ordinaire aucun effet. Toutefois, elles interagissent avec d'autres règles spéciales, comme \emph{Inflammable} ou \emph{Régénération}.
+\newfromWHB{Parfois, cette règle est liée à certains Types de Troupe ou règles spéciales. Dans ce cas, ce sera précisé entre parenthèses (Y), comme dans \og \multiplewounds{2}{\infantry}. Dans ce cas, la règle \multiplewounds{}{} ne s'applique que lorsque les attaques sont dirigées contre le Type de Troupe donné, ou contre un propriétaire de la règle spéciale donnée.}
 
-\subsubsection*{\nouveau{Attaques foudroyantes}}
+\newspecialrule{hidden}{\newfromWHB{\hidden}}
 
-Les unités ayant la règle spéciale \emph{Vol} qui subissent au moins une touche avec cette règle spéciale pendant une phase reçoivent 1D6 touches de Force 4 supplémentaires à la fin de cette phase.
+Vous pouvez choisir de déployer la figurine \og Cachée \fg{}. Notez alors en secret dans quelle unité alliée elle se cache au lieu de la déployer normalement. L'unité doit déjà être déployée, avoir le même Type de Troupe que la figurine avec la règle \hidden{} et être en mesure de l'accueillir dans des conditions normales. Cela ne peut pas être une unité uniquement constituée de Personnages.
 
-\subsubsection*{Attaques magiques}
+Une figurine cachée ne peut pas être blessée ou affectée par quoi que ce soit, ni avoir une influence sur le jeu : pas d'attaque, d'utilisation d'un Objet Magique, cela ne peut pas empêcher l'unité d'utiliser sa règle \vanguard{}, etc. La figurine peut être révélée au début ou à la fin de n'importe quelle Tour de Joueur, à moins que son unité ne soit en fuite, ou au début d'une Manche de Corps à Corps à laquelle l'unité participe. Placez la figurine dans l'unité comme si elle venait de la rejoindre, aussi en avant que possible pour respecter la règle \frontrank{}, sauf qu'aucune autre figurine avec la règle \frontrank{} ne peut être déplacée. Une fois révélée, la figurine retrouve son fonctionnement normal, et la règle n'a plus d'effets. Si la figurine n'est jamais révélée, par exemple dans le cas où son unité est détruite, elle compte comme ayant été tuée.
 
-Les attaques ayant cette règle spéciale ou les attaques faites par des figurines ayant cette règle spéciale n'ont dans un cas ordinaire aucun effet. Toutefois, elles interagissent avec d'autres règles spéciales, comme \emph{Éthéré}. \nouveau{Les figurines ayant cette règle spéciale l'appliquent à toutes leurs attaques, incluant les attaques spéciales comme le \emph{Piétinement}, les \emph{Touches d'Impact} et les \emph{Attaques de Souffle}}, à moins que le contraire ne soit précisé. Tous les dégâts des sorts, des fiascos et des objets magiques sont des \emph{Attaques Magiques}.
+\newspecialrule{hardtarget}{\newfromWHB{\hardtarget}}
 
-\subsubsection*{\nouveau{Attaques toxiques}}
+Les Attaques de Tir ciblant une unité dont la majorité des figurines disposent de cette règle subissent une pénalité de -1 sur leurs jets pour toucher.
 
-Les attaques ayant cette règle spéciale ou les attaques de corps à corps venant de figurines ayant cette règle spéciale ont toujours Force 3 et \emph{Perforant (6)}.
+\newspecialrule{channel}{\channel}
 
-\subsubsection*{Avant-garde}
+\newfromWHB{Chaque élément de figurine avec cette règle ajoute +1 au jet de \channel{} de son camp. Tous les Sorciers disposent de cette règle.}
 
-Après le déploiement et après les \emph{Éclaireurs}, les unités composées entièrement de figurines ayant cette règle spéciale peuvent effectuer un mouvement de 12{\pouce}. Ce mouvement est effectué comme dans l'étape des \emph{Autres Mouvements}, avec les mêmes restrictions et actions possibles, comme faire une roue, une \emph{Reformation}, rejoindre des unités, quitter des unités, etc. La distance de 12{\pouce} est utilisée à la place de la valeur de Mouvement de la figurine et aucune \emph{Marche Forcée} n'est autorisée. Les unités faisant un mouvement d'\emph{Avant-Garde} ne peuvent pas s'approcher à moins de 12{\pouce} des unités ennemies. \newrule{Cette limite est réduite à 6{\pouce} pour une unité ennemie possédant la règle \emph{Avant-Garde} ou \emph{Éclaireur}}. Une unité faisant un mouvement d'\emph{Avant-Garde} ne peut pas déclarer de charge au premier tour si son camp commence. \nouveau{Si les deux joueurs ont des unités d'\emph{Avant-Garde}, alternez le déplacement des unités une par une, en commençant par le joueur qui a terminé son déploiement en} \newrule{dernier. Au lieu de déplacer une unité, un joueur peut déclarer ne plus déplacer d'unités ayant la règle \emph{Avant-Garde}.}
+\newspecialrule{fastcavalry}{\fastcavalry}
 
-\subsubsection*{Blessures multiples (X, Y)}
+La figurine gagne les règles \vanguard{} et \newfromWHB{\lighttroops}. Une unité constituée uniquement de figurines avec cette règle qui \newfromWHB{fuit volontairement en réaction à une charge} et se rallie au Tour de Joueur allié consécutif peut se déplacer et tirer pendant ce Tour de Joueur. L'unité fraîchement ralliée ne peut pas charger et compte comme ayant bougé pour le Tir. Cette règle n'est pas applicable si l'unité a raté son test de Ralliement au Tour de Joueur consécutif à la fuite, ou si la fuite était involontaire comme après un test de Panique raté.
 
-Les blessures non sauvegardées causées par des attaques ayant cette règle spéciale ou des attaques de corps à corps venant de figurines avec cette règle spéciale sont multipliées par la valeur donnée entre parenthèses (X). Si la valeur est un dé, par exemple \emph{Blessures Multiples (1D3)}, lancez un dé pour chaque blessure non sauvegardée. Le nombre de blessures, une fois multiplié, ne peut jamais être plus grand que la caractéristique de PV de la cible, sans prendre en compte les blessures déjà subies précédemment dans la bataille. Par exemple, si une attaque ayant la règle \emph{Blessures Multiples (1D6)} blesse un troll, qui a 3 PVs, et obtient un \result{5} pour le nombre de blessures, elles sont réduites à 3 blessures.
+\newspecialrule{devastatingcharge}{\devastatingcharge}
 
-\nouveau{Si (\emph{Artillerie}) est indiqué entre parenthèses, le nombre de blessures est de 1D3 + 1. Contre les cibles ayant la règle spéciale \emph{Vol}, il est augmenté à 1D3 + 2}.
+L'élément de figurine gagne +1 Attaque lors de la première Manche de Corps à Corps après que la figurine a chargé avec succès.
 
-\nouveau{Parfois cette règle est liée à certains types de troupe ou à des règles spéciales. Si c'est le cas, ils seront précisés entre parenthèses (Y). Par exemple, \emph{Blessures Multiples (2, Infanterie)}. Quand c'est le cas, n'utilisez la règle de \emph{Blessures Multiples} que contre les types de troupe indiqués ou contre celles possédant cette règle spéciale.}
+\newspecialrule{thunderouscharge}{\newfromWHB{\thunderouscharge}}
 
-\subsubsection*{\nouveau{Caché}}
+L'élément de figurine gagne +1 en Force pour ses Attaques normales de Corps à Corps lors de la première Manche de Corps à Corps après que la figurine a chargé avec succès. Ce bonus ne peut être utilisé que pour des attaques dirigées contre l'unité ennemie chargée.
 
-Une figurine \emph{Cachée} peut être déployée \og cachée \fg . Si vous choisissez de faire ainsi, notez en secret dans quelle unité (non \emph{Personnage}) cette figurine est cachée au lieu de déployer la figurine. Cette unité doit déjà avoir été déployée et doit être du même type de troupe que la figurine \emph{Cachée}. De plus, la figurine doit avoir le droit de rejoindre cette unité en temps normal.
+\newspecialrule{fightinextrarank}{\fightinextrarank}
 
-Tant qu'elle est \emph{Cachée}, une figurine ne peut ni être touchée ou affectée par quoi que ce soit, ni affecter le jeu en quoi que ce soit (par exemple attaquer, utiliser ou bénéficier d'objets magiques, ou empêcher des unités de faire leur mouvement d'\emph{Avant-garde}). À moins que l'unité qui la dissimule ne soit en fuite, la figurine peut être révélée au début de n'importe quel tour de joueur, ou au début de n'importe quelle manche de combat à laquelle l'unité participe. Placez alors la figurine à l'intérieur de l'unité comme si elle l'avait rejointe, en suivant la règle \emph{Au Premier Rang}, à l'exception près qu'elle ne peut remplacer d'autres figurines avec la règle \emph{Au Premier Rang}. Une fois révélée, la figurine agit normalement. Cette règle n'a plus d'incidence sur la partie. Si la figurine n'est jamais révélée pendant la partie, par exemple si son unité est détruite, elle compte comme détruite.
+La figurine peut porter des Attaques de Soutien depuis un rang supplémentaire. Cela permettra normalement aux figurines avec cette règle de porter des attaques depuis les trois premiers rangs. Cette règle est cumulable, permettant à un rang supplémentaire d'attaquer pour chaque instance la règle.
 
-\subsubsection*{\nouveau{Camouflé}}
+\newspecialrule{wizardconclave}{\newfromWHB{\wizardconclave{} (Sorts)}}
 
-Les attaques de tir dirigées contre une unité dont la majorité des figurines a cette règle spéciale subissent un malus de -1 pour toucher.
+Le Champion de l'unité gagne +1 PV en plus des augmentations de Caractéristiques normalement associées aux Champions. Il devient un Sorcier Apprenti de Niveau 1. Il connait des sorts prédéterminés qui sont précisés entre parenthèses. Par exemple, le Champion d'une unité avec \og \wizardconclave{} (\changesignature{}, \changespellone{} (\Pathof{} \change{})) \fg{} sera un Sorcier Apprenti de Niveau 1 avec deux sorts de la \Pathof{} \change{} : \changesignature{} et \changespellone{}.
 
-\subsubsection*{Canalisation}
+\newspecialrule{lethalstrike}{\newfromWHB{\lethalstrike}}
 
-\nouveau{Chaque élément de figurine qui possède cette règle spéciale ajoute +1 au résultat du jet de \emph{Canalisation}. Tous les \emph{Sorciers} ont cette règle spéciale}.
+Si une attaque avec cette règle, ou provenant d'un élément de figurine ayant cette règle, obtient un \result{6} non modifié sur le jet pour blesser, alors elle gagne la règle \armourpiercing{6} et ignore les Sauvegardes de \regeneration{}.
 
-\subsubsection*{Cavalerie légère}
+\newspecialrule{swiftstride}{\swiftstride}
 
-Les figurines avec la règle spéciale \emph{Cavalerie Légère} ont également les règles spéciales \emph{Avant-Garde} et \emph{Troupes Légères}. Si une unité constituée uniquement de figurines ayant la règle \emph{Cavalerie Légère} \nouveau{déclare une fuite de façon volontaire en réaction à une charge (elle n'était donc pas déjà en fuite, et n'a pas raté de test de \emph{Terreur}), et réussit à se rallier au tour du joueur suivant, alors l'unité peut bouger normalement, comme si elle ne venait pas de se rallier}, mais elle ne peut pas charger. Elle peut aussi tirer mais compte toujours comme ayant bougé.
+Une unité entièrement composée de figurines avec cette règle lance 1D6 supplémentaire et ignore le dé ayant donné le résultat le plus bas pour ses jets de distance de Charge, Charge Irrésistible, Fuite ou Poursuite. En général, cela fait lancer trois dés pour n'en conserver que deux.
 
-\subsubsection*{Charge dévastatrice}
+\newspecialrule{distracting}{\newfromWHB{\distracting}}
 
-Les figurines avec cette règle spéciale ont +1 Attaque lors du tour de joueur où elles réussissent une charge. Si une figurine en plusieurs éléments possède cette règle, alors celle-ci ne s'applique qu'aux éléments qui en disposent.
+Les Attaques de Corps à Corps allouées à la figurine subissent une pénalité de -1 pour toucher. Cette pénalité ne peut pas être combinée avec un autre modificateur négatif sur le jet pour toucher.
 
-\subsubsection*{\nouveau{Charge tonitruante}}
+\newspecialrule{otherworldly}{\newfromWHB{\otherworldly}}
 
-Dans la première manche de corps à corps dans lequel elles ont chargé, les figurines avec cette règle spéciale ont +1 en Force. Ce bonus de Force ne peut être utilisé que pour les Attaques visant directement les ennemis qui viennent d'être chargés. Si une figurine en plusieurs éléments possède cette règle, alors celle-ci ne s'applique qu'aux éléments qui en disposent.
+La figurine gagne les règles \magicalattacks{}, \immunetopsychology{} et \wardsave{5}. Une unité avec cette règle ne peut être rejointe que par des Personnages ayant cette règle, et un Personnage avec la règle \otherworldly{} ne peut rejoindre qu'une unité ayant cette règle.
 
-\subsubsection*{Combat avec un rang supplémentaire}
+\newspecialrule{scout}{\scout}
 
-Les figurines avec cette règle spéciale peuvent effectuer des attaques de \emph{Soutien} avec un rang de plus. Ainsi, dans une formation normale, des figurines au troisième rang avec cette règle spéciale peuvent faire des attaques de \emph{Soutien}. Cette règle peut être cumulée plusieurs fois, permettant à un rang supplémentaire de faire des attaques de \emph{Soutien} pour chaque répétition.
+\newfromWHB{Avant de commencer le déploiement d'une armée qui contient des unités avec la règle \scout{}, vous devez annoncer lesquelles de ces unités utiliseront cette règle, en commençant par le joueur qui a choisi les zones de déploiement.} Déployez l'armée normalement sauf les unités annoncées. Ces dernières sont déployées une fois que toutes les autres, dans les deux camps, ont été déployées. Elles peuvent êtres placées dans votre zone de déploiement en suivant les règles normales, ou n'importe où ailleurs \newfromWHB{à condition qu'elles soient au moins à \distance{18} de toute unité ennemie. Cette limite est réduite à \distance{12} si l'unité avec la règle \scout{} est entièrement déployée dans une Forêt, des Ruines, un Bâtiment, un Champ ou des \water{}.} Une unité avec la règle \scout{} déployée hors de la zone de déploiement de son propriétaire ne peut pas déclarer de charge au premier Tour de Joueur si son camp a commencé la partie. Si les deux joueurs désirent utiliser la règle \scout{}, ils alternent les déploiements, une unité après l'autre, \newfromWHB{en commençant par le joueur qui a finit de se déployer en premier}.
 
-\subsubsection*{\nouveau{Conclave de sorciers (sorts)}}
+\newspecialrule{ambush}{\ambush}
 
-Les \emph{Champions} d'une unité ayant la règle \emph{Conclave de Sorciers} reçoivent +1 PV, en plus des augmentations de caractéristique associées aux \emph{Champions}. De plus, ce sont des \emph{Sorciers apprentis} de niveau 1. Le \emph{Champion} connaît des sorts prédéterminés, qui sont définis entre parenthèses. Par exemple, un champion d'un \emph{Conclave de Sorciers (niveau 1 : Feu d'Azur, Bûcher Carmin)} sera un \emph{Sorcier apprenti} de niveau 1 avec deux sorts prédéterminés, Feu d'Azur et Bûcher Carmin.
+\newfromWHB{Avant de commencer le déploiement d'une armée qui contient des unités avec la règle \ambush{}, mais après avoir choisi les zones de déploiement, vous devez annoncer lesquelles de ces unités utiliseront cette règle, en commençant par le joueur qui a choisi les zones de déploiement.} Déployez l'armée normalement sauf les unités annoncées. À partir du deuxième Tour de Jeu, lancez un dé pour chaque unité en \ambush{} au début de chacune de vos étapes des Autres Mouvements. Une fois tous les dés lancés, chaque unité pour laquelle un 3+ a été obtenu peut entrer sur le champ de bataille depuis n'importe quel bord de table. Positionnez l'unité avec l'intégralité de son rang arrière en contact avec un bord de table. Elle est ensuite libre de se déplacer pendant l'étape des Autres Mouvements mais ne peut pas effectuer de Marche Forcée, et aucune figurine ne doit finir à plus de deux fois la valeur de sa Caractéristique de Mouvement du bord de table. Si un 3+ n'a jamais été obtenu pour une unité en \ambush{} à la fin de la partie, elle n'a pas pu atteindre le champ de bataille et compte comme ayant été détruite. \newfromWHB{Un Personnage en \ambush{} peut être déployé directement dans une unité en \ambush{} s'il peut la rejoindre dans des conditions normales. Déclarez-le alors au moment de déterminer quelles unités de l'armée sont en \ambush{}. Dans ce cas, lancez un seul dé pour l'Unité Combinée.} Jusqu'à son arrivée sur le champ de bataille, une unité en \ambush{} ne peut effectuer aucune action et tous ses objets, règles et capacités sont inutilisables.
 
-\subsubsection*{Coup fatal}
+\newspecialrule{unwieldy}{\newfromWHB{\unwieldy}}
 
-Si une attaque ayant cette règle spéciale, ou une attaque de corps à corps provenant d'une figurine ayant cette règle spéciale obtient \nouveau{un résultat non modifié de \result{6} pour blesser, cette blessure suit la règle \emph{Perforant (6)} et aucune \emph{Régénération} ne peut être utilisée contre elle}. Si une figurine en plusieurs éléments possède cette règle, alors celle-ci ne s'applique qu'aux éléments qui en disposent.
+Les Armes de Tir avec cette règle, et les Attaques de Tir provenant d'un élément de figurine ayant cette règle, subissent une pénalité additionnelle de -1 pour toucher, pour un total de -2, quand elle se déplace et tire. Si les règles \unwieldy{} et \quicktofire{} sont combinées, la figurine peut ignorer la pénalité normale pour Bouger et Tirer mais pas la pénalité de cette règle.
 
-\subsubsection*{\nouveau{Distrayant}}
+\newspecialrule{ethereal}{\ethereal}
 
-Les attaques de corps à corps dirigées vers une figurine qui possède cette règle spéciale subissent un malus de -1 pour toucher. Ce modificateur ne peut pas être combiné avec un autre malus pour toucher au corps à corps, comme un autre -1 pour toucher.
+La figurine gagne la règle \magicalattacks{} ainsi qu'un \newfromWHB{\wardsave{2}} qui ne peut pas être utilisée contre des \magicalattacks{}. Un Personnage sans la règle \ethereal{} ne peut pas rejoindre une unité qui contient des figurines ordinaires avec cette règle. La figurine traite tous les Décors comme du Terrain Découvert pour son mouvement, mais ne peut pas finir un déplacement à l'intérieur ou à moins d'\distance{1} d'un Terrain Infranchissable. Si une figurine en plusieurs éléments dispose de cette règle, les montures ne bénéficient pas de la \wardsave{} et peuvent être rejointes normalement, à moins que le cavalier lui-même ait la règle \ethereal{}.
 
-\subsubsection*{\nouveau{D'Outre-Monde}}
+\newspecialrule{hellfire}{\newfromWHB{\hellfire}}
 
-Les figurines avec cette règle spéciale font des \emph{Attaques Magiques}, sont \emph{Immunisées à la Psychologie} et ont une \emph{Sauvegarde Invulnérable (5+)}. Les \emph{Personnages} ayant la règle spéciale \emph{D'Outre-Monde} sont les seuls à pouvoir rejoindre une unité \emph{D'Outre-Monde} et ne peuvent rejoindre que des unités \emph{D'Outre-Monde}.
+Toute unité subissant une ou plusieurs blessures non sauvegardées provenant d'un élément de figurine ou d'une attaque avec cette règle pendant une phase subit 1D3 touches additionnelles de Force 3 à la fin de la phase.
 
-\subsubsection*{Éclaireurs}
+\newspecialrule{frenzy}{\frenzy}
 
-\nouveau{Avant de déployer une armée qui inclut des unités ayant la règle spéciale \emph{Éclaireurs}, vous devez décider quelles seront les unités déployées en \emph{Éclaireurs} (en commençant par le joueur qui a choisi sa zone de déploiement). Déployez ensuite votre armée normalement à l'exception des unités déployées en \emph{Éclaireurs}. Les \emph{Éclaireurs} sont déployés une fois que toutes les autres unités ont été déployées}. Vous pouvez alors soit les déployer dans votre zone de déploiement, en suivant les règles normales, soit les déployer en dehors de votre zone de déploiement, mais à \nouveau{plus de 18{\pouce} de toute unité ennemie}. \newrule{Cette limite est abaissée à 12{\pouce} si l'unité d'\emph{Éclaireurs} est entièrement déployée dans une Forêt, une Ruine, un Bâtiment, un Champ ou une Eau peu profonde.} Les \emph{Éclaireurs} déployés en dehors de leur zone de déploiement ne peuvent pas déclarer de charge lors du premier tour si leur camp a eu le premier tour. Si les deux joueurs ont des \emph{Éclaireurs}, alternez le déploiement de ces unités, une par une, en commençant par celui qui a fini de se déployer en premier.
+L'élément de figurine gagne +1 Attaque et la règle \immunetopsychology{}. A votre tour, une fois que toutes les charges ont été déclarées, chacune de vos unités dont au moins une figurine ou élément de figurine dispose de la règle \frenzy{} doit passer un test de \frenzy{} (test de Commandement) si elle n'a pas déclaré de charge. Si le test est raté, l'unité doit déclarer une charge contre l'unité ennemie la plus proche qui peut être chargée, s'il y en a une. Les Personnages ne sont pas forcés de charger hors de leur unité. Une unité dont au moins une figurine ou élément de figurine dispose de la règle \frenzy{} doit toujours poursuivre et effectuer une Charge Irrésistible dès que possible. Un élément de figurine avec la \frenzy{} dont le camp perd une Manche de Corps à Corps perd immédiatement cette règle.
 
-\subsubsection*{Embuscade}
+\newspecialrule{metalshifting}{\metalshifting}
 
-\nouveau{Avant de déployer une armée qui inclut des unités ayant la règle spéciale \emph{Embuscade} (mais après avoir déterminé les zones de déploiement), vous devez décider quelles seront les unités déployées en \emph{Embuscade} (en commençant par le joueur qui a choisi sa zone de déploiement). Déployez ensuite votre armée normalement à l'exception des unités embusquées, qui ne doivent pas être déployées.} À partir du deuxième tour, lancez un dé au début de chacune de vos étapes \emph{Autres Mouvements} pour chaque unité en \emph{Embuscade}. Sur un résultat de 3+, l'unité embusquée entre sur le champ de bataille par n'importe quel bord de table. Placez l'unité avec son rang arrière au contact du bord de table. L'unité peut bouger librement pendant l'étape des \emph{Autres Mouvements}, excepté qu'elle ne peut pas effectuer de \emph{Marche Forcée} et doit finir son déplacement à une distance inférieure au double de sa valeur de mouvement (en pouces) du bord de table. Si une unité embusquée n'obtient jamais le résultat de 3+ nécessaire pour entrer sur le champ de bataille avant la fin de la partie, elle est comptée dans les pertes. \nouveau{Un personnage en \emph{Embuscade} peut être déployé avec une unité en  \emph{Embuscade} qu'il peut normalement rejoindre (précisez-le quand vous déclarez quelles unités sont en \emph{Embuscade}). Dans ce cas, effectuer un seul jet de dé pour les deux.} Jusqu'à son arrivée sur le champ de bataille, une unité en \emph{Embuscade} ne peut ni être la cible d'effet, ni faire d'action. Aucun objet magique, règle ou capacité ne peut être utilisé tant que l'unité n'est pas sur le champ de bataille.
+Les attaques avec cette règle, et les Attaques de Corps à Corps portées par des éléments de figurine ayant cette règle, ne demandent pas des jets pour blesser normaux. Le résultat de leurs jets pour blesser doit être supérieur ou égal à la Sauvegarde d'Armure de la cible. \newfromWHB{Un \result{6} non modifié est toujours une réussite} et un \result{1} non modifié est toujours un échec. Ces attaques ont les règles \flamingattacks{} et \armourpiercing{6}.
 
-\subsubsection*{\nouveau{Encombrant}}
+\newspecialrule{bodyguard}{\newfromWHB{\bodyguard{X}}}
 
-Un tir provenant d'une arme avec cette règle spéciale souffre d'un malus additionnel de -1 (pour un total de -2) pour tirer après avoir bougé. Si la règle \emph{Tir rapide} s'applique aussi à ce tir, ignorez uniquement le -1 pour toucher normal dû au mouvement, pas celui lié à la règle \emph{Encombrant}.
+Un Personnage qui rejoint une unité qui contient au moins une figurine avec cette règle gagne la règle \stubborn{}. Quand un nom ou un type de Personnage est précisé entre parenthèses, la règle ne fonctionne que pour les Personnages qui remplissent cette condition.
 
-\subsubsection*{Éthéré}
+\newspecialrule{largetarget}{\largetarget}
 
-Les figurines avec cette règle spéciale font des \emph{Attaques Magiques} et ont une \nouveau{\emph{Sauvegarde Invulnérable (2+)}} qui ne peut pas être utilisée contre des \emph{Attaques Magiques}. Les \emph{Personnages} ne peuvent pas rejoindre des unités qui contiennent des figurines ordinaires \emph{Éthérées}, à moins qu'ils ne le soient eux-mêmes. De plus, les figurines avec cette règle spéciale traitent tous les terrains et décors comme du \emph{Terrain Découvert} pour tout mouvement, mais ne peuvent finir leur mouvement sur ou à moins de 1{\pouce} d'un \emph{Terrain Infranchissable}.
+\newfromWHB{La figurine est de Grande Taille. Elle ne peut jamais être rejointe ou rejoindre une unité, à moins que ce soit une \warplatform{}.} La portée de ses éventuelles règles \inspiringpresence{} et \holdyourground{} est augmentée de \distance{6}.
 
-Si une figurine en plusieurs éléments possède cette règle, les montures ne bénéficient que des \emph{Attaques Magiques} et du mouvement facilité en traitant tout terrain comme du \emph{Terrain Découvert}. Elles ne bénéficient donc pas de la \emph{Sauvegarde Invulnérable} et ne peuvent rejoindre d'unité \emph{Éthérée} à moins que le cavalier le soit lui-même.
+\newspecialrule{strider}{\strider{}}
 
-\subsubsection*{\nouveau{Flammes de l'Enfer}}
+La figurine réussit automatiquement tout test de Terrain Dangereux provoqué par les Décors. Les Décors ne peuvent pas l'empêcher d'effectuer une Marche Forcée \newfromWHB{ou lui faire perdre des Bonus de Rangs ou la règle Indomptable}. Parfois, cette règle ne fonctionne que pour certains types de Décors, qui sont alors précisés entre parenthèses.
 
-Toute unité subissant une ou plusieurs blessures non sauvegardées provenant d'une figurine ou d'une attaque avec cette règle spéciale pendant une phase subit 1D3 touches additionnelles de Force 3.
+\newspecialrule{hatred}{\hatred}
 
-\subsubsection*{Frénésie}
+L'élément de figurine peut relancer ses jets pour toucher ratés durant la première Manche de chaque Corps à Corps. Parfois cette règle ne fonctionne que contre un certain type d'ennemi, qui est alors précisé entre parenthèses. Par exemple, \og \hatred{} (Livre d'Armée : Empire de Sonnstahl) \fg{} signifie que la \hatred{} ne s'applique que contre des figurines provenant du Livre d'Armée de l'Empire de Sonnstahl.
 
-Les figurines avec la règle spéciale \emph{Frénésie} ont +1 Attaque et sont \emph{Immunisés à la Psychologie}. Après que toutes les charges aient été déclarées, chaque unité contenant au moins une figurine ou élément de figurine ayant la \emph{Frénésie} et n'ayant pas déclaré de charge doit faire un test de Commandement. S'il est raté, l'unité doit déclarer une charge contre l'unité ennemie la plus proche pouvant être chargée, s'il y en a une. Un \emph{Personnage} ne peut cependant jamais être forcé à charger en dehors d'une unité. De plus, les unités contenant des \emph{Frénétiques} doivent toujours poursuivre ou faire une \emph{Charge Irrésistible} quand elles en ont l'occasion. Si un élément de figurine \emph{Frénétique} perd un corps à corps, il perd immédiatement la \emph{Frénésie}. Si une figurine en plusieurs éléments possède cette règle, alors celle-ci ne s'applique qu'aux éléments qui en disposent.
+\newspecialrule{immunetopsychology}{\immunetopsychology}
 
-\subsubsection*{Fusion du métal}
+Si au moins la moitié des figurines d'une unité disposent de cette règle, l'unité réussit automatiquement ses tests de Panique et ne peut pas déclarer de fuite en réaction à une charge. Les figurines avec la règle \immunetopsychology{} sont immunisées aux effets de la règle \fear{}.
 
-Les attaques ayant cette règle spéciale ou les attaques de corps à corps faites par des figurines ayant cette règle spéciale ne demandent pas des jets pour blesser normaux. Le résultat de leurs jets pour blesser doit être supérieur ou égal à la sauvegarde d'armure de la cible. \nouveau{Un \result{6} non modifié est toujours une réussite} et un \result{1} non modifié est toujours un échec. Ces attaques ont les règles spéciales \emph{Perforant (6)} et \emph{Attaques Enflammées}. Si une figurine en plusieurs éléments possède cette règle, alors celle-ci ne s'applique qu'aux éléments qui en disposent.
+\newspecialrule{unbreakable}{\unbreakable}
 
-\subsubsection*{\nouveau{Garde du corps (X)}}
+L'unité gagne la règle \immunetopsychology{} et réussit automatiquement ses tests de Moral. Un Personnage avec cette règle ne peut rejoindre qu'une unité ayant cette règle, et une unité avec la règle \unbreakable{} ne peut être rejointe que par des Personnages ayant cette règle.
 
-Un \emph{Personnage} qui rejoint une unité qui contient au moins la moitié de figurines avec cette règle spéciale gagne la règle spéciale \emph{Tenace}. Quelquefois, ce bonus n'est autorisé qu'avec certains \emph{Personnages}. Quand c'est le cas, les \emph{Personnages} en question seront indiqués entre parenthèses (X).
+\newspecialrule{flammable}{\flammable}
 
-\subsubsection*{Grande cible}
+\newfromWHB{Les jets pour blesser ratés} des attaques avec la règle \flamingattacks{} dirigées contre la figurine \newfromWHB{doivent être relancés}.
 
-\nouveau{Une \emph{Grande Cible} ne peut jamais être rejointe ou rejoindre une unité, à moins que cette \emph{Grande Cible} soit une \emph{Plateforme de Guerre}}. Une \emph{Grande Cible} augmente la portée des règles \emph{Tenez les Rangs} et \emph{Présence Charismatique} de 6{\pouce}. Notez que la règle \emph{Grande Cible} affecte également la taille de la figurine.
+\newspecialrule{engineer}{\newfromWHB{\engineer}}
 
-\subsubsection*{Guide}
-
-Les figurines ayant cette règle spéciale réussissent automatiquement les tests de terrain dangereux causés par les terrains et décors. Elle ne peuvent pas être empêchées d'effectuer une marche forcée à cause d'un terrain ou décor. De plus, \nouveau{elles ne perdent jamais leur règle \emph{Indomptable} ou leurs bonus de rangs à cause des terrains et décors}. Quelquefois, cette règle spéciale est uniquement associée à un terrain ou décor spécifique, indiqué entre parenthèse. Quand c'est le cas, la règle \emph{Guide} s'applique uniquement pour le type de décor ou terrain spécifié.
-
-\subsubsection*{Haine}
-
-Les figurines ayant cette règle spéciale peuvent relancer les jets pour toucher ratés durant la première manche d'un corps à corps. Quelquefois, la \emph{Haine} ne s'applique que contre certains ennemis, qui sont alors indiqués entre parenthèses. Par exemple, \emph{Haine (Livre d'armée : L'Empire de Sonnstahl)} veut dire que la haine s'applique quand on attaque des figurines provenant du livre d'armée de L'Empire de Sonnstahl. Si une figurine en plusieurs éléments possède cette règle, alors celle-ci ne s'applique qu'aux éléments qui en disposent.
-
-\subsubsection*{Immunisé à la psychologie}
-
-Si la moitié au moins des figurines d'une unité est \emph{Immunisée à la Psychologie}, l'unité réussit automatiquement tout test de \emph{Panique}, et ne peut pas déclarer de réaction de fuite à une charge, à moins qu'elle soit déjà en fuite. Les figurines \emph{Immunisées à la Psychologie} sont immunisées aux effets de la \emph{Peur}.
-
-\subsubsection*{Indémoralisable}
-
-Les unités \emph{Indémoralisables} réussissent automatiquement tout test de \emph{Moral}. De plus, les figurines ayant cette règle spéciale sont aussi \emph{Immunisées à la Psychologie}. Les \emph{Personnages} \emph{Indémoralisables} ne peuvent rejoindre que des unités \emph{Indémoralisables}. Les unités \emph{Indémoralisables} ne peuvent être rejointes que par des \emph{Personnages} \emph{Indémoralisables}.
-
-\subsubsection*{Inflammable}
-
-Les attaques ayant la règle spéciale \emph{Attaques Enflammées} \nouveau{doivent relancer leurs jets pour blesser ratés} contre les figurines étant \emph{Inflammables}. Les unités en garnison dans un bâtiment sont toujours \emph{Inflammables}.
-
-\subsubsection*{\nouveau{Ingénieur}}
-
-Une figurine avec cette règle spéciale permet à une \emph{Machine de Guerre} dans un rayon de 3{\pouce} d'utiliser la CT de l'\emph{Ingénieur} à la place de la sienne et de relancer n'importe quel résultat obtenu sur le tableau des incidents de tir. S'il y a plusieurs \emph{Machines de Guerre} à portée de 3{\pouce}, déclarez quelle machine recevra l'aide de l'ingénieur avant de la faire tirer. De plus, si une \emph{Machine de Guerre} possède une arme d'artillerie parmi un des types ci-dessous, l'\emph{Ingénieur} apporte un bonus additionnel et la machine pourra relancer :
-\begin{itemize} [label={-}]
-\item \emph{Catapulte}, le dé de déviation.
-\item \emph{Canon à flamme}, le D6 pour la distance de mouvement du gabarit, à moins que le résultat ne soit \result{6}.
+Une Machine de Guerre à moins de \distance{3} de la figurine peut utiliser la Capacité de Tir de cette dernière à la place de la sienne et peut relancer ses jets d'Incidents de Tir. Si plusieurs Machines de Guerre se trouvent à moins de \distance{3} de l'\engineer{}, désignez laquelle recevra les bonus pour ce Tour de Joueur avant de faire feu. Si la Machine de Guerre dispose d'une des Armes d'Artillerie listées ci-dessous, elle profite d'un bonus supplémentaire :
+\begin{itemize}[label={\textbullet}]
+\item \catapult{} : le Dé de Déviation peut être relancé.
+\item \flamethrower{} : le dé déterminant la distance de déplacement du Gabarit peut être relancé à moins que son résultat ne soit un \result{6}.
 \end{itemize}
-Une figurine engagée dans un corps à corps ne peut pas utiliser ces règles.
+Cette règle ne peut pas être utilisée si l'\engineer{} est Engagé au Corps à Corps.
 
-\subsubsection*{\nouveau{Insignifiant}}
+\newspecialrule{insignificant}{\newfromWHB{\insignificant}}
 
-Les unités composées entièrement de figurines ayant cette règle spéciale ne causent pas de tests de \emph{Panique} aux unités n'étant pas \emph{Insignifiantes}. Seuls des \emph{Personnages} \emph{Insignifiants} peuvent rejoindre des unités avec des figurines ordinaires \emph{Insignifiantes}.
+Les unités composées entièrement de figurines avec cette règle ne provoquent pas de tests de Panique chez les unités sans cette règle. Seuls les Personnages avec la règle \insignificant{} peuvent rejoindre des unités avec cette règle.
 
-\subsubsection*{Instable}
+\newspecialrule{daemonicinstability}{\daemonicinstability}
 
-Les unités \emph{Instables} réussissent automatiquement tout test de \emph{Moral}. Quand une unité avec cette règle spéciale perd un combat, elle subit autant de blessures que le résultat du combat qu'elle a perdu, sans aucune sauvegarde autorisée.
+L'unité ne peut pas fuir d'un Corps à Corps. À la place, le joueur lance 2D6 comme pour un test de Moral classique, ajoute la différence de Résultat de Combat, puis retranche la valeur de Commandement de l'unité. Formule simplifiée: \textbf{2D6 + RC - Cd}. Ce test est raté si le total est positif, et l'unité subit alors un nombre de blessures égal à ce total. Ces blessures sont distribuées comme pour la règle \unstable{}, sans sauvegarde d'aucune sorte possible. Si une unité possède à la fois les règles \daemonicinstability{} et \unstable{}, ignorez la règle \unstable{}.
 
-Le nombre de blessures subies est réduit dans certaines situations. Appliquez les modificateurs suivants dans cet ordre:
+\newpage
+\newspecialrule{unstable}{\unstable}
+
+L'unité réussit automatiquement ses tests de Moral. Si elle perd un combat, elle subit une blessure sans sauvegarde d'aucune sorte possible pour chaque point de différence entre les Résultats de Combat.
+
+Ce nombre de blessures peut être réduits dans certaines situations. Appliquez les modificateurs dans l'ordre suivant :
 \begin{enumerate}
-\item \nouveau{Si l'unité est \emph{Tenace}, divisez par 2 le nombre de blessures subies (en arrondissant au supérieur).}
-\item \nouveau{Si l'unité est \emph{Indomptable}, réduisez le nombre de blessures subies à 12 s'il est supérieur.}
-\item \nouveau{Si l'unité bénéficie de la règle \emph{Tenez vos rangs!} (c'est-à-dire qu'elle est proche du \emph{Porteur de la Grande Bannière}), déduisez le \emph{Bonus de rangs} de l'unité au nombre de blessures subies. Les unités n'ayant pas de \emph{Bonus de rangs} déduisent 1 au nombre de blessures subies à la place.}
+\item \newfromWHB{Si l'unité est \textbf{\stubborn}, divisez par deux le nombre de blessures subies, en arrondissant au supérieur.}
+\item \newfromWHB{Si l'unité est \textbf{Indomptable}, et si le nombre de blessures subies est supérieur à 12, réduisez-le à 12.}
+\item \newfromWHB{Si l'unité est à portée de la règle \textbf{\holdyourground} (c'est-à-dire qu'elle est proche du Porteur de la Grande Bannière), déduisez le Bonus de Rangs de l'unité au nombre de blessures subies. Les unités n'ayant pas de Bonus de Rangs déduisent 1 au nombre de blessures subies à la place.}
 \end{enumerate}
-Appliquez tout autre modificateur (objet magique, règle spéciale, sort, etc) après ces trois étapes.
+Appliquez tout autre modificateur (objet, règle spéciale, sort, etc.) après ces trois étapes.
 
 Les blessures sont distribuées dans cet ordre :
 \begin{enumerate}
-\item Figurines ordinaires.
-\item \emph{Champion}.
-\item Autres \emph{Personnages}, distribuées par le joueur à qui appartient l'unité.
+\item Figurines ordinaires à l'exception des Champions.
+\item Champion.
+\item Personnages (distribuées par le propriétaire et aussi équitablement que possible).
 \end{enumerate}
 
-\subsubsection*{Instabilité Démoniaque}
+\newspecialrule{weaponmaster}{\newfromWHB{\weaponmaster}}
 
-Les unités possédant cette règle ne fuient jamais au combat. À la place, le joueur doit lancer 2D6 comme pour un test de moral normal, ajouter la différence de \emph{Résultat de Combat}, puis retrancher la valeur de Commandement de l'unité. Formule simplifiée: $\textbf{2D6 + RC - Cd}$. Ce test est raté si le total est un nombre positif: l'unité subit alors un nombre de blessures égal à ce nombre. Ces blessures sont distribuées comme pour la règle \emph{Instable}, sans aucune sauvegarde autorisée. Si une unité possède les règles \emph{Instable} et \emph{Instabilité Démoniaque}, ignorez \emph{Instable} et utilisez ces règles à la place.
+Au début de chaque Manche de Corps à Corps, l'élément de figurine peut choisir avec quelle arme il va combattre. Cela lui permet notamment de choisir son \hw{} même si il dispose d'autres armes. Si il possède une Arme Magique, il doit par contre l'utiliser.
 
-\subsubsection*{\nouveau{Maîtres d'armes}}
+\newspecialrule{pathmaster}{\pathmaster{}}
 
-Au début de chaque manche de corps à corps, une figurine étant \emph{Maître d'Armes} peut choisir avec quelle arme elle va combattre. Cela permet notamment de choisir son Arme de base même si elle a d'autres armes. Si la figurine possède une Arme magique, elle doit par contre l'utiliser. Si une figurine en plusieurs éléments possède cette règle, alors celle-ci ne s'applique qu'aux éléments qui en disposent.
+Le Sorcier ne génère par ses sorts au hasard comme dans la procédure normale. Il peut à la place \newfromWHB{choisir librement ses sorts} dans la Voie précisée entre parenthèses. Il ne peut cependant toujours pas dupliquer les sorts non primaires.
 
-\subsubsection*{Maître de la Discipline (X)}
+\newspecialrule{undead}{\undead}
 
-Les \emph{Sorciers} ayant cette règle spéciale ne déterminent pas leurs sorts aléatoirement comme d'habitude, mais peuvent à la place \nouveau{choisir librement leurs sorts} dans la \emph{Discipline} indiquée entre parenthèses (X). Ils ne peuvent toujours pas dupliquer de sort autre que le sort \emph{Primaire}.
+L'unité gagne les règles \immunetopsychology{} et \unstable{}. Elle ne peut pas effectuer de Marche Forcée à moins de commencer son mouvement \newfromWHB{à portée de la règle \inspiringpresence{} du Général}. La seule réaction à une charge qu'elle peut avoir est de Tenir la Position.
 
-\subsubsection*{Mort-vivant}
+\newpage
+\newspecialrule{randommovement}{\randommovement{X}}
 
-Les unités ayant cette règle spéciale sont \emph{Instables} et \emph{Immunisées à la Psychologie}. Elles ne peuvent pas effectuer de \emph{Marche Forcée} à moins de commencer leur mouvement \nouveau{à portée de la \emph{Présence Charismatique} du \emph{Général}}. La seule réaction de charge qu'une unité avec la règle \emph{Mort-Vivant} peut déclarer est \emph{Tenir la Position}.
+L'unité ne peut pas déclarer de charge et ne peut pas se déplacer pendant l'étape des Autres Mouvements. Elle doit par contre bouger pendant l'étape des Mouvements Obligatoires. Elle perd la règle \swiftstride{} si elle l'avait, et se déplace toujours de la distance indiquée entre parenthèses pour une Charge, une Charge Irrésistible, une Fuite ou une Poursuite.
 
-\subsubsection*{Mouvement aléatoire (X)}
+\newfromWHB{L'unité se déplace pendant l'étape des Mouvements Obligatoires en suivant les règles de Poursuite, avec les exceptions suivantes. Elle peut choisir librement la direction vers laquelle se tourner avant de lancer les dés de la distance de Poursuite. Elle ne peut pas sortir du champ de bataille par un bord de table.} Enfin, elle ne doit passer des tests de Terrain Dangereux que si son mouvement la fait charger une unité ennemie. Elle passe des tests normalement quand elle fuie, poursuit un ennemi en fuite ou effectue une Charge Irrésistible.
 
-Les unités avec cette règle spéciale ne peuvent pas déclarer de charge ou bouger pendant l'étape des \emph{Autres Mouvements}. À la place, elles bougent lors de l'étape des \emph{Mouvements Obligatoires} en utilisant les règles suivantes. Les figurines ayant cette règle spéciale chargent, fuient, poursuivent et font des \emph{Charges Irrésistibles} sur la distance indiquée entre parenthèses (X). Elles ne peuvent jamais bénéficier de la règle \emph{Rapide}.
+Si l'unité est en Garnison dans un Bâtiment, elle doit le quitter à l'étape des Mouvements Obligatoires. Placez-la à \distance{1} du Bâtiment, ou aussi près que possible, puis déplacez-la avec les règles habituelles du \randommovement{}. Elle ne peut cependant pas charger au même tour. Si elle se trouve dans une situation où elle devrait charger, arrêtez-la simplement à \distance{1} de l'unité ennemie à la place.
 
-\nouveau{Durant l'étape des \emph{Mouvement Obligatoires}, les unités avec cette règle spéciale bougent en utilisant toutes les règles de \emph{Poursuite}, excepté qu'elles peuvent choisir librement vers quelle direction s'orienter avant de jeter les dés pour la distance de poursuite, et ne peuvent pas sortir du champ de bataille}. \nouveau{De plus, elles ne font des tests de \emph{Terrain Dangereux} que lorsqu'elles chargent un ennemi (elles continuent de tester normalement lors d'un mouvement de \emph{Fuite}, de \emph{Poursuite} ou de \emph{Charge Irrésistible}).}
+Un Personnage avec la règle \randommovement{} ne peut rejoindre que des unités ayant cette règle, en se déplaçant à leur contact pendant l'étape des Mouvements Obligatoires. Une unité avec cette règle ne peut de même être rejointe que par des Personnages ayant cette règle. Si une unité dispose de plusieurs valeurs de \randommovement{}, utilisez la valeur de moyenne la plus basse.
 
-Si une unité avec cette règle spéciale est en garnison dans un bâtiment, elle doit le quitter en se plaçant à 1{\pouce} du bâtiment (ou aussi proche que possible), durant l'étape des \emph{Mouvements Obligatoires}, puis être déplacée suivant les règles normales de \emph{Mouvement Aléatoire}. Elle ne peut cependant pas charger à ce même tour, et s'arrête à 1{\pouce} de tout ennemi à la place. Les \emph{Personnages} avec \emph{Mouvement Aléatoire} ne peuvent rejoindre que des unités avec la même règle spéciale. Pour ce faire, ils doivent se déplacer jusqu'à être en contact avec cette unité pendant l'étape des \emph{Mouvements Obligatoires}. Les unités ayant cette règle spéciale ne peuvent être rejointes que par des \emph{Personnages} ayant un \emph{Mouvement Aléatoire} aussi. Si une unité a plusieurs valeurs de \emph{Mouvement Aléatoire}, utilisez la plus basse disponible.
+\newspecialrule{moveorfire}{\moveorfire}
 
-\subsubsection*{Mouvement ou tir}
+Les Armes de Tir avec cette règle, et les éléments de figurine ayant cette règle, ne peuvent pas tirer si la figurine s'est déplacée pendant le Tour de Joueur actuel.
 
-Les armes de tir et les figurines ayant cette règle spéciale ne peuvent pas tirer si elles ont effectué un mouvement à ce tour de joueur. Si une figurine en plusieurs éléments possède cette règle, alors celle-ci ne s'applique qu'aux éléments qui en disposent.
+\newspecialrule{fireborn}{\newfromWHB{\fireborn}}
 
-\subsubsection*{\nouveau{Né du feu}}
+L'élément de figurine dispose d'une \wardsave{2} contre les \flamingattacks{}.
 
-Les figurines ayant cette règle spéciale ont une \emph{Sauvegarde Invulnérable (2+)} contre les \emph{Attaques Enflammées}. Si une figurine en plusieurs éléments possède cette règle, alors celle-ci ne s'applique qu'aux éléments qui en disposent.
+\newspecialrule{cannotmarch}{\cannotmarch}
 
-\subsubsection*{Pas de marche forcée}
+Une unité comprenant au moins une figurine avec cette règle ne peut pas effectuer de Marche Forcée.
 
-Les unités comprenant au moins une figurine avec cette règle ne peuvent pas effectuer de \emph{Marche Forcée}.
+\newspecialrule{notaleader}{\newfromWHB{\notaleader}}
 
+La figurine ne peut en aucun cas être le Général de l'armée.
 
-\subsubsection*{\nouveau{Pas un meneur}}
+\newspecialrule{armourpiercing}{\armourpiercing{X}}
 
-Les figurines ayant cette règle spéciale ne peuvent jamais être le \emph{Général} de l'armée.
+Les attaques avec cette règle, et les Attaques de Corps à Corps portées par des éléments de figurine ayant cette règle, infligent \newfromWHB{une pénalité de -X à la Sauvegarde d'Armure de l'ennemi} contre ces attaques, en plus du modificateur normal lié à la Force, X étant le chiffre entre parenthèses. Si une attaque dispose de plusieurs instances de cette règle, n'utilisez que la plus grande valeur.
 
-\subsubsection*{Perforant (X)}
+\newfromWHB{Si la valeur X entre parenthèses est précédée d'un signe \result{+}, ajoutez cette valeur à celle de la plus efficace des instances de la règle \armourpiercing{} plutôt que de la remplacer. Si l'attaque ne disposait pas d'autres instances de la règle, utilisez cette valeur directement.}
 
-Les attaques de corps à corps faites par des figurines avec cette règle spéciale imposent un malus de \nouveau{–X à la sauvegarde d'armure} de l'ennemi en plus du malus venant de la Force de l'attaque, X étant le nombre entre parenthèses (X). Quand une arme, un sort ou une attaque spéciale possède cette règle, la règle s'applique uniquement aux attaques causées par cette arme, ce sort ou cette attaque spéciale. Si une figurine a plusieurs fois la règle spéciale \emph{Perforant} avec plusieurs valeurs, n'additionnez pas les valeurs ensemble, utilisez simplement la valeur la plus haute disponible. Si une figurine en plusieurs éléments possède cette règle, alors celle-ci ne s'applique qu'aux éléments qui en disposent.
+\newspecialrule{fear}{\fear}
 
-\nouveau{Si la valeur entre parenthèses est précédée d'un signe $+$, ajoutez cette valeur à toute règle \emph{Perforant} déjà possédée par la figurine. Si la figurine ne possède pas encore cette règle, appliquer directement la valeur indiquée.}
+\newfromWHB{Toute unité en contact socle à socle avec au moins une figurine ennemie disposant de cette règle subit un malus de -1 en Commandement.} Une figurine qui possède la règle \immunetopsychology{} ou \fear{} est immunisée aux effets de la \fear{}. Au début de chaque Manche de Corps à Corps, toute unité en contact socle à socle avec au moins une figurine ennemie disposant de la règle \fear{} doit passer un test de Commandement. Si ce test est raté, la Capacité de Combat des figurines de cette unité est réduite à 1 pour le reste de la Manche de Corps à Corps.
 
-\subsubsection*{Peur}
+\newspecialrule{stomp}{\stomp{} \newfromWHB{(X)} - Attaque Spéciale}
 
-\nouveau{Toutes les unités ennemies en contact socle à socle avec une ou plusieurs figurines causant la \emph{Peur} souffrent d'un modificateur de -1 à leur Commandement. Les figurines étant \emph{Immunisées à la Psychologie} ou causant elles-mêmes la \emph{Peur} sont immunisées aux effets de la \emph{Peur}}. Au début de chaque manche de corps à corps, les unités en contact socle à socle avec une ou plusieurs figurines ennemies causant la \emph{Peur} doivent effectuer un test de Commandement. Si le test échoue, les figurines dans l'unité voient leur Capacité de Combat réduite à 1 pour le reste de la \emph{Phase de Corps à Corps}.
+La figurine doit porter une Attaque Spéciale de Corps à Corps pendant la Phase de Corps à Corps, à Initiative 0, contre une seule unité ennemie au contact socle à socle, et ce uniquement si l'unité cible est de Type de Troupe \infantry{}, \warbeast{}, \swarm{} ou \newfromWHB{\warmachine}. Cette attaque inflige un nombre de touches égal à la valeur indiquée entre parenthèses (X). Elles touchent automatiquement et ont une Force égale à celle de la figurine. Une touche de \stomp{} ne peut être allouée qu'à une figurine du type cité plus haut ; ignorez simplement les figurines d'un Type de Troupe différent lors de la distribution des touches.
 
-\subsubsection*{Piétinement \nouveau{(X)}}
+Pour les figurines en plusieurs éléments, les cavaliers ne peuvent jamais porter d'attaque de \stomp{}. Une attaque de \stomp{} ne peut être alloué à une figurine que si elle peut normalement être Piétinée. Le \stomp{} est une Attaque Spéciale, donc il ne bénéficie jamais des équipements et règles spéciales de la figurine.
 
-Une figurine avec cette règle spéciale doit faire une \emph{Attaque Spéciale} de corps à corps, à Initiative 0, contre une seule unité ennemie au contact socle à socle, et ce uniquement si l'unité cible est de type \emph{Infanterie}, \emph{Bête de guerre}, \emph{Nuée} ou \nouveau{\emph{Machine de guerre}}. Cette attaque inflige un nombre de touches automatiques égal à la valeur indiquée entre parenthèses (X). Elles sont faites avec une Force égale à celle de la figurine. \newrule{Une attaque de \emph{Piétinement} ne peut jamais être allouée à une figurine n'étant pas du type cité plus haut. Les \emph{Piétinements}, étant des attaques spéciales, ne bénéficient jamais de l'équipement et des règles spéciales de la figurine. \nouveau{Si une figurine en plusieurs éléments possède cette règle, alors celle-ci ne peut être utilisée que par la monture.}}
+\newspecialrule{warplatform}{\newfromWHB{\warplatform}}
 
-\subsubsection*{\nouveau{Plateforme de guerre}}
+La figurine peut rejoindre une unité comme si elle était un Personnage, même si elle n'est pas un Personnage, et même si elle possède la règle \largetarget{}. Elle suit les règles des Personnages pour la distribution des touches. Quand elle rejoint et se déplace avec une unité d'au moins 5 figurines (sans compter la \warplatform{}), elle peut effectuer une Marche Forcée même si son Type de Troupe le lui interdit normalement, par exemple si c'est un \chariot{}. Elle doit toujours être placée au centre du premier rang de l'unité qu'elle rejoint, repoussant éventuellement en arrière des figurines avec la règle \frontrank{}, et doit garder cette position à tous moments. Si la \warplatform{} ne peut pas être placée au centre du premier rang, par exemple à cause de Socles Incompatibles, ou si le premier rang est trop étroit, alors elle ne peut pas rejoindre l'unité. Ainsi, elle ne peut jamais rejoindre une unité dont les Socles sont Incompatibles, et il ne peut y avoir qu'une seule \warplatform{} par unité. La figurine perd la règle \swiftstride{} si elle ne disposait.
 
-Les figurines ayant cette règle spéciale peuvent rejoindre les unités comme si elles étaient des \emph{Personnages}, même si elles ne sont pas des \emph{Personnages} et même si elles sont des \emph{Grandes Cibles}. Ces figurines suivent les règles des \emph{Personnages} en ce qui concerne la répartition des touches. Quand elles rejoignent une unité avec 5 figurines ou plus (sans compter la \emph{Plateforme de Guerre}), elles peuvent participer à une \emph{Marche Forcée} même si leur type de troupe leur interdit normalement, pour des \emph{Chars} par exemple. Quand elles rejoignent une unité, elles doivent toujours être placées au centre du premier rang, éventuellement en repoussant derrière des figurines ayant la règle \emph{Au Premier Rang} \newrule{et doivent toujours garder cette position centrale}. Si la figurine ne peut pas être placée au centre du premier rang, à cause de socles non compatibles ou si l'unité est trop étroite, la \emph{Plateforme de Guerre} ne peut pas rejoindre l'unité. Cela signifie que la \emph{Plateforme de Guerre} ne peut jamais rejoindre une unité avec des socles incompatibles et qu'il ne peut y avoir qu'une seule \emph{Plateforme de Guerre} par unité. Les figurines possédant cette règle spéciale perdent la règle spéciale \emph{Rapide}.
+\newspecialrule{reload}{\newfromWHB{\reload}}
 
-\subsubsection*{Rapide}
+Les Armes de Tir avec cette règle, et les Attaques de Tir portées par des éléments de figurine ayant cette règle, ne peuvent jamais être utilisées en réaction à une charge pour Tenir la Position et Tirer.
 
-Quand une unité composée entièrement de figurines ayant cette règle spéciale doit lancer les dés pour la distance de charge, fuite ou poursuite, elle lance un dé de plus, atteignant normalement 3D6, et défausse le dé avec le résultat le plus bas.
+\newspecialrule{lightningreflexes}{\newfromWHB{\lightningreflexes}}
 
-\subsubsection*{\nouveau{Rechargez!}}
+L'élément de figurine gagne un bonus de +1 pour toucher au Corps à Corps. Ce bonus change si l'élément de figurine devait frapper à Initiative 0, par exemple s'il manie une \gw{}. Dans ce cas, il frappe à sa propre Initiative à la place.
 
-Une arme de tir ou figurine avec la règle \emph{Rechargez!} ne peut jamais choisir de réagir à une charge par \emph{Tenir sa Position et Tirer}. Si une figurine en plusieurs éléments possède cette règle, alors celle-ci ne s'applique qu'aux éléments qui en disposent.
+\newspecialrule{regeneration}{\regeneration{X}}
 
-\subsubsection*{\nouveau{Réflexes foudroyants}}
+La \regeneration{} est une sauvegarde spéciale qui est effectuée après un jet raté de Sauvegarde d'Armure. La valeur de cette sauvegarde est indiquée entre parenthèses. Une sauvegarde de \regeneration{} ne peut pas être effectuée après une \wardsave{}. Si une figurine possède les deux, choisissez laquelle utiliser. La \regeneration{} ne peut pas être utilisée contre des \flamingattacks{} \newfromWHB{ou des attaques avec la règle \lethalstrike{} pour lesquelles un \result{6} a été obtenu pour blesser}.
 
-Les figurines avec des \emph{Réflexes Foudroyants} ont un bonus de +1 pour toucher lors de leurs attaques de corps à corps. Cela ne s'applique pas si les figurines attaquent à Initiative 0, par exemple avec des Armes lourdes ou sous l'effet de certains sorts. Dans un tel cas, elles frappent à leur propre Initiative, au lieu d'être reléguées à une Initiative 0. Si une figurine en plusieurs éléments possède cette règle, alors celle-ci ne s'applique qu'aux éléments qui en disposent.
+\newspecialrule{magicresistance}{\magicresistance{X}}
 
-\subsubsection*{Régénération (X)}
+Toutes les figurines d'une unité qui contient au moins une figurine avec une \magicresistance{} ajoutent la valeur entre parenthèses (X) à leurs jets de \wardsave{} (en utilisant les mêmes règles que pour ajouter des Sauvegardes d'Armure) mais uniquement contre des blessures causées par des effets de sorts. La \magicresistance{}, comme la plupart des règles spéciales, ne se cumule pas.
 
-La \emph{Régénération} est une sauvegarde spéciale, qui est effectuée après les jets ratés de sauvegarde d'armure. La valeur de la sauvegarde est indiquée entre parenthèses (X). Les sauvegardes de \emph{Régénération} ne peuvent pas être effectuées après une \emph{Sauvegarde Invulnérable}. Si une figurine possède les deux, choisissez laquelle utiliser. La \emph{Régénération} ne peut pas être utilisée contre des \emph{Attaques Enflammées} \nouveau{ou des \emph{Coups Fatals} ayant obtenu un \result{6} pour blesser.}
+\newspecialrule{wardsave}{\wardsave{X}}
 
-\subsubsection*{Résistance à la Magie (X)}
+La \wardsave{} est une sauvegarde spéciale qui est effectuée après un jet raté de Sauvegarde d'Armure. La valeur de cette sauvegarde est indiquée entre parenthèses. Une \wardsave{} ne peut pas être effectuée après une sauvegarde de \regeneration{}. Si une figurine possède les deux, choisissez laquelle utiliser.
 
-Toutes les figurines d'une unité avec au moins une figurine ayant la règle \emph{Résistance à la Magie} ajoutent la valeur entre parenthèses (X) à leurs jets de \emph{Sauvegarde Invulnérable}, en utilisant les mêmes règles que les sauvegardes d'armure, mais uniquement contre des blessures causées par des effets de sorts. Rappelez-vous que la \emph{Résistance à la Magie}, comme la plupart des règles spéciales, ne se cumule pas.
+\newspecialrule{stupidity}{\stupidity}
 
-\subsubsection*{Sauvegarde invulnérable (X)}
+Au début de votre Tour de Joueur, chacune de vos unités dont au moins une figurine ou élément de figurine possède la règle \stupidity{} doit passer un test de Commandement si elle n'est pas en fuite ou engagée au Corps à Corps. Si le test est raté, l'unité doit avancer de \distance{1D6} tout droit à l'étape des Mouvements Obligatoires, en s'arrêtant à \distance{1} des Terrains Infranchissables et des autres unités. Elle ne peut alors effectuer aucune action volontaire pendant ce Tour de Joueur, comme charger, bouger, tirer, lancer des sorts, etc. Si la figurine n'a pas de front, par exemple si son socle est rond, elle se déplace dans une direction aléatoire. Toutes les figurines ayant la règle \stupidity{} ont également la règle \immunetopsychology{}.
 
-Les \emph{Sauvegardes Invulnérables} sont des sauvegardes spéciales, tentées après les sauvegardes d'armure ratées. La valeur de la sauvegarde est indiquée entre parenthèses (X). Les \emph{Sauvegardes Invulnérables} ne peuvent pas être faites en plus de sauvegardes de \emph{Régénération}. Si une figurine possède les deux, choisissez laquelle utiliser.
+\newspecialrule{stubborn}{\stubborn}
 
-\subsubsection*{Stupide}
+Une unité dont au moins une figurine dispose de cette règle ignore toute pénalité à son Commandement liée au Résultat de Combat quand elle passe un test de Moral ou un test de Commandement pour faire une Reformation de Combat.
 
-Au début de votre tour, chacune de vos unités avec au moins une figurine ou élément de figurine \emph{Stupide} doit passer un test de Commandement si elle n'est pas en fuite ou engagée au corps à corps. Si le test est raté, l'unité doit bouger de 1D6{\pouce} tout droit, en s'arrêtant à 1{\pouce} des \emph{Terrains Infranchissables} et des autres unités, à l'étape des \emph{Mouvements Obligatoires}. Elle ne peut alors effectuer aucune autre action volontaire à ce tour de joueur, comme charger, bouger, tirer, lancer des sorts, etc. Si la figurine n'a pas de front, par exemple si son socle est rond, elle se déplace dans une direction aléatoire. Toutes les figurines ayant la règle spéciale \emph{Stupide} sont également \emph{Immunisées à la Psychologie}.
+\newspecialrule{terror}{\terror}
 
-\subsubsection*{Tenace}
+Quand une unité avec au moins une figurine avec cette règle déclare une charge, la cible doit faire un test de Panique. Si le test est raté, la cible de la charge doit fuir en réaction à la charge, si elle y est normalement autorisée. De plus, toutes les figurines avec la règle \terror{} ont aussi la règle \fear{} et sont immunisées aux effets de la \fear{} et de la \terror{}.
 
-Une unité qui contient au moins une figurine \emph{Tenace} ignore toutes les pénalités dues au \emph{Résultat de Combat} sur son Commandement quand elle effectue des tests de \emph{Moral} ou des tests de \emph{Reformation de Combat}.
+\newspecialrule{volleyfire}{\newfromWHB{\volleyfire}}
 
-\subsubsection*{Terreur}
+Les Armes de Tir avec cette règle, et les Attaques de Tir provenant d'éléments de figurine ayant cette règle, ignorent les figurines sur la trajectoire du tir pour déterminer s'il y a un Couvert. Elles n'ignorent cependant pas les Décors et doivent avoir une Ligne de Vue sur leur cible. De plus, si l'unité n'a pas bougé pendant ce Tour de Joueur, et si le tir n'est pas fait en réaction à une charge, toutes les figurines dont l'Arme de Tir a la règle \volleyfire{} peuvent tirer, même si elles ne font pas partie des deux premiers rangs qui sont habituellement les seuls autorisés à tirer.
 
-Quand une unité avec au moins une figurine causant la \emph{Terreur} déclare une charge, la cible doit faire un test de \emph{Panique}. Si le test est raté, la cible de la charge doit déclarer une réaction de fuite, si elle est autorisée à le faire. De plus, toutes les figurines causant la \emph{Terreur} causent aussi la \emph{Peur}, et sont immunisées à la \emph{Peur} et la \emph{Terreur}.
+\newspecialrule{quicktofire}{\quicktofire}
 
-\subsubsection*{Tir de volée}
+Les Armes de Tir avec cette règle, et les Attaques de Tir provenant d'éléments de figurine ayant cette règle, ne subissent pas de pénalité de -1 pour toucher pour Bouger et Tirer, et sont utilisables dans le cadre d'un tir de réaction à une charge (Tenir la Position et Tirer) quelle que soit la distance à laquelle se trouve l'unité qui charge (et donc même si elle est normalement trop proche).
 
-\nouveau{Un tir avec cette règle spéciale ignore les figurines faisant obstacle en terme de couvert quand elle tire. Il n'ignore pas les décors, et il doit toujours y avoir une ligne de vision sur la cible.}
+\newspecialrule{multipleshots}{\multipleshots{X}}
 
-\nouveau{De plus, quand elles n'effectuent pas un tir de réaction à une charge, et si l'unité n'a pas bougé lors de sa dernière phase de mouvement, toutes les figurines avec la règle \emph{Tir de Volée} peuvent tirer, même si elles sont plus loin que les deux premiers rangs normalement autorisés à tirer}. Si une figurine en plusieurs éléments possède cette règle, alors celle-ci ne s'applique qu'aux éléments qui en disposent.
+Les Armes de Tir avec cette règle, et les éléments de figurine ayant cette règle, peuvent tirer plusieurs fois plutôt qu'une seule pendant une Phase de Tir. Le nombre de tirs possible est précisé entre parenthèses. Cependant, si cette règle est utilisée, une pénalité de -1 pour toucher s'ajoute pour tous les tirs. Toutes les figurines ordinaires d'une unité doivent utiliser cette règle si au moins l'une d'entre elles l'utilise, si possible.
 
-\subsubsection*{Tirs multiples (X)}
+\newspecialrule{skirmisher}{\skirmisher}
 
-Les armes de tir et les figurines ayant cette règle spéciale peuvent choisir de tirer plusieurs fois à la place d'une seule fois, à chaque phase de tir. Le nombre de tirs possibles est précisé entre parenthèses (X). Utiliser cette règle spéciale inflige un malus de -1 pour toucher pour tous les tirs effectués. Si une figurine ordinaire dans une unité utilise la règle \emph{Tirs Multiples}, les autres figurines ordinaires doivent faire de même. Si une figurine en plusieurs éléments possède cette règle, alors celle-ci ne s'applique qu'aux éléments qui en disposent.
+La figurine gagne la règle \newfromWHB{\lighttroops}. Un Tir sur des \skirmishers{} subit une pénalité de -1 pour toucher.
 
-\subsubsection*{Tir rapide}
+Les \skirmishers{} ne sont pas placées au contact socle à socle les uns des autres dans une unité, mais \newfromWHB{espacés de 0,5\distance{}}. En dehors de cet écart entre les figurines, l'unité suit les règles normales et a donc une face avant, deux flancs et une face arrière. \newfromWHB{Une unité de \skirmishers{} ne peut être rejointe que par des Personnages partageant leur Type de Troupe.} Un Personnage qui les rejoint gagne la règle \skirmisher{} tant qu'il reste avec l'unité. L'unité cesse d'avoir la règle \skirmisher{} quand toutes les figurines possédant la règle sont éliminées et contracte immédiatement sa formation pour retrouver une formation compacte normale. Le Personnage est toujours considéré comme ayant un Socle Incompatible pour son placement dans l'unité à moins qu'il n'ait exactement la même taille de socle que les figurines de l'unité qu'il a rejointe.
 
-Les tirs provenant de sources avec cette règle spéciale n'ont pas le malus de -1 pour tirer après un mouvement et peuvent toujours permettre la réaction à une charge \emph{Tenir la Position et Tirer}, quelque soit la distance à laquelle se situe l'unité chargeant. Si une figurine en plusieurs éléments possède cette règle, alors celle-ci ne s'applique qu'aux éléments qui en disposent.
+Quand une unité de \skirmishers{} déclare une charge ou une autre réaction à une charge que la Fuite, elle contracte immédiatement sa formation pour retrouver une formation compacte normale. \newfromWHB{Pour faire ceci, la figurine la plus proche de l'unité chargée ou en charge doit rester immobile.} La figure \ref{figure/skirmishers} illustre ces propos. Si plusieurs figurines sont tout aussi proches, le Joueur Actif décide quelle figurine restera immobile. Les \skirmishers{} retrouvent leur formation étendue si ils ne sont pas engagés au Corps à Corps au début de la Phase de Mouvement de n'importe quel joueur. Gardez alors le centre du premier rang immobile. Si l'unité ne peut pas récupérer sa formation étendue par manque de place, gardez la formation compacte jusqu'au premier moment venu où il y a assez de place.
 
-\subsubsection*{Tirailleurs}
-
-Les figurines de \emph{Tirailleurs} ont également la règle spéciale \nouveau{\emph{Troupes Légères}}. Tirer sur des \emph{Tirailleurs} se fait avec un malus supplémentaire de -1 pour toucher.
-
-Les \emph{Tirailleurs} ne sont pas placés en contact socle à socle les uns avec les autres, mais les figurines sont espacées \nouveau{de 0,5{\pouce}}. À part cet intervalle entre les figurines, ils suivent les règles normales de formation d'unités : ils ont un front, des flancs, etc. \nouveau{Une unité de \emph{Tirailleurs} ne peut être rejointe que par des Personnages qui ont le même type de troupes que l'unité.} Quand il rejoint une unité de \emph{Tirailleurs}, un Personnage devient \emph{Tirailleur} aussi longtemps qu'il reste dans l'unité et, à moins qu'il n'ait exactement la même taille de socle que les autres figurines de l'unité, il est toujours considéré comme ayant un \emph{Socle Incompatible}. Notez que lorsque toutes les figurines d'une unité possédant la règle \emph{Tirailleurs} sont tuées, l'unité perd la règle immédiatement: contractez l'unité pour lui donner une formation normale.
-
-Si une unité de \emph{Tirailleurs} déclare une charge ou une réaction à une charge autre que la fuite, elle est immédiatement rassemblée pour aboutir à une formation classique (voir figure \ref{figure/tirailleurs}). \nouveau{Lors de cette contraction, la figurine la plus proche de l'unité chargée ou en charge ne doit pas bouger}. Si plusieurs figurines sont éligibles (parce qu'elles sont à la même distance), le joueur actif choisit la figurine qui est considérée comme la plus proche. Les \emph{Tirailleurs} regagnent leur formation étendue s'ils ne sont plus engagés au corps à corps au début d'une \emph{Phase de Mouvement} (de tout joueur). Gardez alors le centre du premier rang immobile. S'il n'y a pas assez d'espace pour que l'unité regagne sa formation étendue, gardez l'unité en formation serrée jusqu'au premier instant où il y a assez de place.
+\newcommand{\figSkirmiA}{a)}
+\newcommand{\figSkirmiB}{b)}
+\newcommand{\figSkirmiC}{c)}
+\newcommand{\figSkirmiD}{d)}
+\newcommand{\figSkirmiDist}{\smallfontsize 0,5\distance{}}
+\newcommand{\figSkirmiCharge}{\textit{Charge !}}
+\newcommand{\figSkirmiStandAndShoot}{\textit{Tenez la Position et Tirez !}}
+\newcommand{\figSkirmiHold}{\textit{Tenez la Position !}}
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=15.5cm]{tirailleurs.png}
-\caption{L'unité verte est une unité de \emph{Tirailleurs}, rejointe par un \emph{Personnage} avec un socle incompatible. \\
-a) L'unité bleue lui déclare une charge. \\
-b) L'unité verte déclare qu'elle va \emph{Tenir sa Position et Tirer}. Elle est immédiatement contractée. Elle fait deux victimes au tir dans l'unité bleue. \\
-c) L'unité rose déclare maintenant une charge. Remarquez qu'elle est désormais dans l'arc latéral de l'unité verte. \\
-d) L'unité verte déclare qu'elle va \emph{Tenir sa Position}. Les unités sont déplacées au contact.}
-\label{figure/tirailleurs}
+\def\svgwidth{\textwidth}
+\input{pics/skirmishers.pdf_tex}
+\caption{Comportement des \skirmishers{} par rapport à la charge.\vspace*{10pt}\newline
+L'unité verte est une unité de \skirmishers{} rejointe par un Personnage avec un Socle Incompatible.\vspace*{10pt}\newline
+a) L'unité bleue lui déclare une charge.\newline
+b) L'unité verte déclare qu'elle va Tenir la Position et Tirer. Elle est immédiatement contractée. Elle fait deux victimes au tir dans l'unité bleue.\newline
+c) L'unité rose déclare maintenant une charge. Remarquez qu'elle est désormais dans l'arc latéral de l'unité verte. L'unité verte déclare qu'elle va Tenir la Position.\newline
+d) Les unités sont déplacées au contact.}
+\label{figure/skirmishers}
 \end{figure}
 
-\subsubsection*{Touches d'impact (X) - Attaques Spéciales}
+\newspecialrule{impacthits}{\impacthits{X} - Attaque Spéciale}
 
-Les \emph{Touches d'Impact} sont des \emph{Attaques Spéciales} de corps à corps qui ne doivent être utilisées que lors d'une phase de corps à corps suivant une phase
-où la figurine a réussi une charge. Elles sont résolues à \nouveau{Initiative 10} contre une unique unité en contact socle à socle. Cette attaque inflige un nombre de touches automatiques égal à la valeur indiquée entre parenthèses (X), avec une Force égale celle de la figurine \nouveau{et un bonus de +1 à la Force pour chaque rang complet après le premier, à condition que l'unité soit uniquement constituée de figurines avec la règle spéciale \emph{Touches d'Impact}.} Les \emph{Touches d'Impact}, étant des attaques spéciales, ne peuvent jamais bénéficier d'un équipement ou d'une règle spéciale de la figurine influençant les attaques normales. \nouveau{Si une figurine possède à la fois des \emph{Attaques de Broyage} et des \emph{Touches d'Impact}, elle ne peut utiliser que l'une des deux au choix dans une même \emph{Phase de Corps à Corps} (vous êtes libres de choisir celle que vous souhaitez utiliser).}
+Les \impacthits{} sont des Attaques Spéciales de Corps à Corps qui ne peuvent être utilisées que lors de la première Manche de Corps à Corps qui suit une charge réussite de la figurine. Elle doit les utiliser. Les \impacthits{} sont résolues à Initiative 10 et infligent un nombre de touches égal à la valeur précisée entre parenthèses à une unique unité ennemie en contact socle à socle, qui doit être l'unité chargée. Les touches sont automatiques et ont une Force égale à la Force de la figurine. \newfromWHB{Elles profitent d'un bonus de +1 en Force pour chaque Rang Complet après le premier dans l'unité qui inflige les \impacthits{} à condition que ces rangs soient entièrement composés de figurines avec la règle \impacthits{}.} Les \impacthits{} sont des Attaques Spéciales, donc elles ne bénéficient jamais des équipements et règles spéciales de la figurine. \newfromWHB{Si une figurine dispose d'\grindingattacks{} et de \impacthits{}, elle ne peut utiliser qu'une des deux règles au choix lors d'une même Manche de Corps à Corps.}
 
-\nouveau{Si la valeur entre parenthèses est précédée d'un signe $+$, ajoutez cette valeur à toute règle \emph{Touches d'Impact} déjà possédée par la figurine. Si la figurine ne possède pas encore cette règle, appliquer directement la valeur indiquée.}
+\newfromWHB{Si la valeur entre parenthèses est précédée d'un signe \result{+}, ajoutez cette valeur à une autre instance de la règle \impacthits{} possédée par la figurine, si elle en possède une. Sinon, utilisez simplement cette valeur sans prendre en compte le signe \result{+}.}
 
-Seul le char d'une figurine de \emph{Char} peut utiliser sa règle \emph{Touches d'Impact} (donc ni l'équipage, ni les montures ne peuvent le faire). Pour les autres figurines au profil combiné, seule la monture peut utiliser sa règle \emph{Touches d'Impact}.
+Pour les \chariots{}, seul le châssis peut utiliser cette Attaque Spéciale. Pour les autres figurines en plusieurs éléments, seules les montures peuvent l'utiliser.
 
-\subsubsection*{\nouveau{Troupes Légères}}
+\newpage
+\newspecialrule{lighttroops}{\newfromWHB{\lighttroops}}
 
-Les unités composées entièrement de figurines ayant cette règle spéciale sont autorisées à faire un nombre illimité de \emph{Reformations} lors de leur mouvement à l'étape des \emph{Autres Mouvements}, et peuvent quand même faire un Mouvement (\emph{Mouvement Simple} ou \emph{Marche Forcée}) et tirer. Aucune figurine ne peut cependant parcourir une distance supérieure à sa caractéristique de Mouvement, ou le double s'il s'agit d'une \emph{Marche Forcée}, entre sa position initiale et sa position finale, en contournant tous les obstacles et en respectant la \emph{Règle du Pouce d'Écart}. Si la figurine effectue une action pendant son mouvement, comme attaquer un ennemi avec la règle \emph{Attaque au Passage}, alors la distance parcourue doit prendre en compte le passage par l'endroit où l'action est faite. Les figurines avec la règle \emph{Troupes Légères} peuvent tirer même si elles ont fait une \emph{Marche Forcée} ou se sont reformées. \nouveau{Si la moitié au moins d'une unité possède la règle spéciale \emph{Troupes Légères}, elle compte toujours comme n'ayant aucun \emph{Rang Complet}}.
+Une unité entièrement composée de figurines avec cette règle peut effectuer un nombre illimité de Reformations quand elle se déplace pendant l'étape des Autres Mouvements, et ce en Mouvement Simple ou en Marche Forcée. Elle peut tirer même si elle s'est reformée ou a effectué une Marche Forcée. Aucune figurine ne peut avoir parcouru plus de distance que sa valeur de Mouvement entre sa position initiale et sa position finale, en ayant contourné les obstacles et respecté la Règle du Pouce d'Écart (ou deux fois sa valeur de Mouvement si elle a fait une Marche Forcée). Si la figurine a effectué une action pendant son déplacement, comme une \sweepingattack{}, la distance parcourue est mesurée en prenant en compte le passage par le point de l'action. \newfromWHB{Si au moins la moitié des figurines de l'unité possède la règle \lighttroops{}, l'unité compte comme n'ayant aucun Rangs Complets.}
 
-\subsubsection*{Vol (X)}
+\newspecialrule{fly}{\fly{X}}
 
-Les unités composées entièrement de figurines ayant cette règle spéciale peuvent effectuer des mouvements de \emph{Vol} pendant les étapes des \emph{Autres Mouvements} ou des \emph{Déplacements des Unités en Charge}. Quand une unité fait un mouvement de \emph{Vol}, \nouveau{elle utilise la valeur donnée entre parenthèses (X) à la place de sa valeur de Mouvement. Tout modificateur affectant le mouvement au sol d'une unité affecte aussi son mouvement de \emph{Vol}}. Les unités utilisant leur mouvement de \emph{Vol} ignorent tout décor ou unités qu'elles survolent entre leur position initiale et leur position finale, et doivent respecter la règle du pouce d'écart à la fin de leur mouvement, à moins d'avoir chargé. Elles sont cependant toujours affectées par les effets de décors et terrains depuis lesquels elles décollent ou dans lesquels elles atterrissent. Un mouvement de \emph{Vol} peut être utilisé pour faire une \emph{Marche Forcée}. \nouveau{Les figurines ayant la règle \emph{Vol} ont toujours les règles spéciales \emph{Rapide} et \emph{Troupes Légères}}.
+\newfromWHB{La figurine gagne les règles \swiftstride{} et \lighttroops{}.} Une unité composée entièrement de figurines avec cette règle peut effectuer un Mouvement de \fly{} quand elle fait un Mouvement de Charge ou pendant l'étape des Autres Mouvements. Quand elle fait un Mouvement de \fly{}, \newfromWHB{remplacez la valeur de la Caractéristique de Mouvement de la figurine par la valeur donnée entre parenthèses. Tous les modificateurs de mouvement habituels s'appliquent aussi à cette valeur.} Un Mouvement de \fly{} peut être combiné à une Marche Forcée. Une unité qui effectue un Mouvement de \fly{} ignore les Décors et les unités pendant son déplacement, de sa position initiale à sa position finale, mais doit respecter la Règle du Pouce d'Écart à la fin du mouvement (à moins qu'elle charge, car dans ce cas les exceptions habituelles à cette règle s'appliquent toujours). Elle est toujours affectée par les effets des Décors depuis lesquels elle décolle et dans lesquels elle atterrit.
 
-\section{Appliquer les règles spéciales}
+\newpage
+\section{Appliquer les Règles Spéciales}
 
-\subsection{Règles spéciales et figurines en plusieurs éléments}
+\subsection{Règles Spéciales et Figurines en Plusieurs Éléments}
 
-\subsubsection*{Quels éléments de la figurine ont la règle spéciale?}
+\paragraph{Quels éléments de la figurine ont la règle spéciale?}
 
-Quand une figurine en plusieurs éléments possède une règle spéciale dans son profil, sans autre précision, on suppose que la règle spéciale s'applique à tous ses éléments.
+Quand une règle spéciale est marquée sur le profil d'une figurine en plusieurs éléments, tous ses éléments possèdent la règle à moins que le contraire ne soit précisé.
 
-Si un \emph{Personnage} et sa monture optionnelle sont définis avec des profils différents, les règles spéciales listées sous le profil du \emph{Personnage} ne sont pas transférées à sa monture (comme si le profil indiquait "cavalier uniquement"). La même chose s'applique aux montures sélectionnées dans la catégorie Monture des livres d'armée: leurs règles spéciales ne sont pas automatiquement transférées à leur cavalier.
+Si un Personnage et sa monture optionnelle apparaissent sur des profils différents, les règles listées dans le profil du Personnage ne sont pas transférées à sa monture, comme si toutes les règles étaient indiquées comme \og Cavalier uniquement \fg{}. Cela s'applique aussi dans l'autre sens aux montures prises dans la partie Montures d'un Livre d'Armée : leurs règles ne sont pas transférées à leurs cavaliers.
 
-\subsubsection*{Quels éléments de la figurine sont affectées par la règle spéciale?}
+\paragraph{Quels éléments de la figurine sont affectées par la règle spéciale?}
 
 Les règles spéciales ont un ou plusieurs effets, qui sont appliqués à des éléments de figurines ou à des figurines entières. Si une règle spéciale a plusieurs effets, ceux-ci peuvent s'appliquer à différents niveaux.
 
-\begin{itemize}
-\item \textbf{Changements de caractéristiques}
-\newline Les effets modifiant les caractéristiques ne s'appliquent qu'aux éléments de figurine qui ont la règle spéciale.
-\item \textbf{Attaques spéciales}
-\newline Les effets donnant des attaques spéciales (telles que les \emph{Piétinements}, les \emph{Attaques de broyage}, les \emph{Touches d'impact}, les \emph{Attaques de souffle}...) ne s'appliquent qu'aux éléments de figurine qui ont la règle spéciale.
-\item \textbf{Modificateurs d'attaques}
-\newline Les effets modifiant les attaques (tels que \emph{Coup fatal}, \emph{Perforant}, \emph{Haine}...) ne s'appliquent qu'aux éléments de figurine qui ont la règle spéciale. Ces effets ne fonctionnent également que pour les attaques de corps à corps effectuées par l'élément de figurine (et donc pas pour les attaques de tir ou pour attaques spéciales), à moins que le contraire ne soit précisé (comme c'est le cas pour les \emph{Attaques magiques} et les \emph{Attaques empoisonnées}).
-\item \textbf{Défense}
-\newline Les effets défensifs (tels que les Sauvegardes d'armure, les Sauvegardes invulnérables, la \emph{Régénération}, \emph{Né du feu}, \emph{Distrayant}...) s'appliquent toujours à la figurine entière.
-\newline Les Monstres Montés sont une exception à cette règle: les effets défensifs propres au cavalier sont ignorés pour la figurine.
-\item \textbf{Autres}
-\newline Tous les autres effets s'appliquent toujours à tous les éléments de la figurine.
+\begin{itemize}[label={\textbullet}]
+\item \textbf{Changements de Caractéristiques}\newline
+Les effets modifiant les valeurs des Caractéristiques ne s'appliquent qu'à l'élément de figurine qui possède la règle spéciale.
+\item \textbf{Attaques Spéciales}\newline
+Les effets donnant des Attaques Spéciales (telles que les \grindingattacks{}, l'\breathweapon{}, le \stomp{}, les \impacthits{}, ...) ne fonctionnent que pour l'élément de figurine qui possède la règle spéciale.
+\item \textbf{Modificateurs d'attaques}\newline
+Les effets modifiant les attaques (tels que le \lethalstrike{}, la \hatred{}, \armourpiercing{}, ...) ne s'appliquent qu'à l'élément de figurine qui possède la règle spéciale. Ils ne fonctionnent que pour les Attaques de Corps à Corps portées par l'élément de figurine (et donc pas pour les Attaques de Tir ou les Attaques Spéciales), à moins que le contraire ne soit précisé (comme c'est le cas pour les \poisonedattacks{} et les \magicalattacks{}).
+\item \textbf{Défense}\newline
+Les effets défensifs tels que la Sauvegarde d'Armure, \distracting{}, \fireborn{}, la \regeneration{}, la \wardsave{}, etc. s'appliquent toujours à la figurine entière.\newline
+Les \riddenmonsters{} sont une exception à cette règle : les effets défensifs propres au cavalier sont ignorés pour la figurine entière.
+\item \textbf{Autres}\newline
+Tous les autres effets fonctionnent pour la figurine entière et s'appliquent à tous ses éléments.
 \end{itemize}
 
-\subsection{Effets et unités}
+\subsection{Effets et Unités}
 
-Certains effets ne peuvent s'appliquer qu'à une unité entière, comme par exemple les effets sur le mouvement (le \emph{Vol}, la \emph{Cavalerie légère}...), sur le déploiement (\emph{Éclaireurs}, \emph{Avant-garde}...), sur les tests de moral (\emph{Instable}, \emph{Indémoralisable}...), ou les effets qui autorisent ou forcent une unité à faire une action particulière (la \emph{Frénésie}...).
+Certains effets ne fonctionnent qu'au niveau d'une unité. On peut citer les effets de mouvement (\fastcavalry{}, \fly{}), les effets de déploiement (\vanguard{}, \scout{}), les effets liés aux tests de Moral (\unbreakable{}, \unstable{}) ou encore les effets qui autorisent ou forcent une unité à effectuer une action particulière (\frenzy{}).
 
-Certaines de ces règles précisent combien de figurines la possédant doivent être présentes dans l'unité pour que la règle s'applique. Les figurines en plusieurs éléments comptent alors pour 1 si au moins un élément de la figurine possède la règle.
+Certaines règles spéciales précisent combien de figurines la possédant doivent être présentes dans l'unité pour que la règle s'applique. Les figurines en plusieurs éléments comptent alors pour 1 si au moins un élément de la figurine possède la règle.
 
-Par exemple, considérons un \emph{Personnage} monté sur une \emph{Bête monstrueuse} qui a la \emph{Frénésie}. Par défaut, la \emph{Frénésie} n'est pas transférée au cavalier, donc il ne reçoit pas de bonus d'attaque. En revanche, lorsqu'il s'agit de faire un test de \emph{Frénésie}, ou pour poursuivre ou faire une charge irrésistible, la figurine entière est considérée comme étant \emph{Frénétique}.
+Par exemple, considérons un Personnage monté sur une \monstrousbeast{} qui possède la règle \frenzy{}. Par défaut, la \frenzy{} n'est pas transférée au cavalier, donc il ne reçoit pas d'attaque supplémentaire. En revanche, lorsqu'il s'agit de passer un test de \frenzy{}, ou pour poursuivre ou effectuer une Charge Irrésistible, la figurine entière est considérée comme ayant la règle \frenzy{}.
 
-\subsection{Armes et règles spéciales}
+\subsection{Armes et Règles Spéciales}
 
-Si une arme a une règle qui modifie les attaques, seules les attaques portées avec cette arme bénéficient de cette règle. Ainsi, une Arquebuse qui possède la règle \emph{Perforant} fera des attaques de tir \emph{Perforantes}. En revanche, la figurine ne bénéficiera pas de cette règle lorsqu'elle attaquera au corps à corps, ni lorsqu'elle fera une attaque de tir avec une autre arme.
+Si une arme a une règle spéciale qui modifie les attaques, seules les attaques portées avec cette arme bénéficient de cette règle. Ainsi, une \handgun{} qui possède la règle \armourpiercing{} fera des Attaques de Tir qui auront la règle \armourpiercing{}. En revanche, la figurine ne bénéficiera pas de cette règle lorsqu'elle attaquera au Corps à Corps ou lorsqu'elle tirera avec une autre arme.
 
-\subsection{Règles spéciales dupliquées}
+\subsection{Règles Spéciales dupliquées}
 
-Quelquefois, une figurine possède plusieurs instances de la même règle spéciale, par exemple quand elle gagne une règle spéciale qu'elle avait déjà ou qu'elle gagne une règle spéciale via plusieurs sources. À moins que le contraire ne soit spécifié, dans ce cas, les effets de la même règle spéciale ne sont pas cumulatifs et les différentes instances n'ajoutent pas d'effet supplémentaire. Si la règle spéciale dupliquée possède différentes valeurs entre parenthèses (X), choisissez simplement la meilleure valeur. Si X correspond au résultat d'un lancer de dé, il se peut qu'on ne sache pas clairement quel X sera la meilleure valeur. Dans ce cas, choisissez quelle règle appliquer avant de lancer les dés.
+Quelquefois, une figurine possède plusieurs instances de la même règle spéciale, par exemple quand elle gagne une règle qu'elle avait déjà ou quand elle gagne une règle via plusieurs sources. À moins que le contraire ne soit spécifié, dans ce cas, les effets de la même règle spéciale ne sont pas cumulatifs et les différentes instances n'ajoutent pas d'effet supplémentaire. Si la règle dupliquée possède différentes valeurs entre parenthèses (X), choisissez simplement la meilleure valeur. Si X correspond au résultat d'un lancer de dé, il se peut qu'on ne sache pas clairement quelle est la meilleure valeur. Dans ce cas, choisissez quelle règle appliquer avant de lancer les dés.
 
-Par exemple, une unité qui possède \emph{Résistance Magique (2)} et \emph{Résistance Magique (3)} n'utilise que \emph{Résistance Magique (3)}. Par contre, certaines règles sont explicitement cumulatives, comme \emph{Combat avec un Rang Supplémentaire}. Une unité qui possède déjà une instance de cette règle et en gagne une autre sera donc capable de combattre avec deux rangs supplémentaires. 
+Par exemple, on considérera qu'une unité qui possède les règles \magicresistance{2} et \magicresistance{3} n'utilise que \magicresistance{3}. Par contre, certaines règles sont explicitement cumulatives, comme \fightinextrarank{}. Une unité qui possède déjà une instance de cette règle et en gagne une autre sera donc capable de combattre avec deux rangs supplémentaires. 

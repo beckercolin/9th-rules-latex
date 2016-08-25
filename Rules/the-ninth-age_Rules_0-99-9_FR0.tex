@@ -1,9 +1,12 @@
 \def\languageisfrench{}
+%\def\disablenewfromWHB{} % Comment or uncomment if you want the blue coloring of the text or not.
 \input{../Layout/RB_layout.tex}
 
 \newcommand{\booktitle}{Livre de Règles}
 \newcommand{\version}{0.99.9}
 \newcommand{\frenchversion}{2.0}
+\newcommand{\specialrulesfooter}{Règles Spéciales}
+\newcommand{\tableofcontentsfooter}{Table des Matières}
 \hypersetup{pdftitle={T9A - \booktitle}}
 
 \begin{document}
@@ -13,76 +16,74 @@
 \newpage
 
 \setlength\columnseprule{0.5pt}
-\tableofcontents
+\hypertarget{toc}{\tableofcontents}
 \thispagestyle{empty}
 \setlength\columnseprule{0pt}
 
-\setlength{\parskip}{10pt}
-
-\newpage
+\clearpage
 \input{chapters/RB_introduction.tex}
 
-\newpage
+\clearpage
 \input{chapters/RB_models_and_units.tex}
 
-\newpage
+\clearpage
 \input{chapters/RB_general_principles.tex}
 
-\newpage
+\clearpage
 \input{chapters/RB_battlefield_logistics.tex}
 
-\newpage
+\clearpage
 \input{chapters/RB_characteristics.tex}
 
-\newpage
+\clearpage
 \input{chapters/RB_setting_up_a_game.tex}
 
-\newpage
+\clearpage
 \input{chapters/RB_pre_game_sequence.tex}
 
-\newpage
+\clearpage
 \input{chapters/RB_deployment_phase.tex}
 
-\newpage
+\clearpage
 \input{chapters/RB_movement_phase.tex}
 
-\newpage
+\clearpage
 \input{chapters/RB_magic_phase.tex}
 
-\newpage
+\clearpage
 \input{chapters/RB_shooting_phase.tex}
 
-\newpage
+\clearpage
 \input{chapters/RB_close_combat_phase.tex}
 
-\newpage
+\clearpage
 \input{chapters/RB_attacks_and_damage.tex}
 
-\newpage
+\clearpage
 \input{chapters/RB_troop_types.tex}
 
-\newpage
+\clearpage
 \input{chapters/RB_mundane_equipment.tex}
 
-\newpage
+\clearpage
 \input{chapters/RB_characters.tex}
 
-\newpage
+\clearpage
 \input{chapters/RB_command_group.tex}
 
-\newpage
+\clearpage
 \input{chapters/RB_terrain.tex}
 
-\newpage
+\clearpage
 \input{chapters/RB_scoring_and_victory_conditions.tex}
 
-%\newpage
-%\input{chapters/RB_special_rules.tex}
-%
-%\newpage
+\clearpage
+\input{chapters/RB_special_rules.tex}
+
+%\clearpage
 %\input{chapters/RB_magical_items.tex}
 %
-%\newpage
+%\clearpage
 %\input{chapters/RB_summaries.tex}
 
 \end{document}
