@@ -1,337 +1,365 @@
 
-\part{Objets magiques}
+% Magical Weapons
 
-\section{Catégories d'objets magiques}
+\newcommand{\giantsword}{Épée de Géant}
+\newcommand{\bladeofstrife}{Lame de Conflit}
+\newcommand{\ogresword}{Épée Ogre}
+\newcommand{\skullsplitter}{Trancheuse de Crâne}
+\newcommand{\obsidiansword}{Épée d'Obsidienne}
+\newcommand{\fencersswords}{Épées d'Escrimeur}
+\newcommand{\kingslayer}{Tueuse de Rois}
+\newcommand{\axeofbattle}{Hache de Bataille}
+\newcommand{\beastbanehalberd}{Hallebarde Fléau-des-Bêtes}
+\newcommand{\swordofhaste}{Épée de Célérité}
+\newcommand{\herossword}{Épée des Héros}
+\newcommand{\fleshrender}{L'Arracheur de Chair}
+\newcommand{\blessedsword}{Épée Sacrée}
+\newcommand{\swordofstrength}{Épée de Force}
+\newcommand{\swordofskill}{Lame d'Habileté}
+\newcommand{\flaminglance}{Lance Enflammée}
+\newcommand{\screamingswords}{Épées Hurlantes}
+\newcommand{\razorblade}{Épée Tranchante}
 
-Les Objets magiques sont répartis en 6 catégories :
-\begin{itemize}[label={-}, itemsep=0.2cm]
-\item \textbf{Armes magiques.}
-\item \textbf{Armures magiques.}
-\item \textbf{Talismans.}
-\item \textbf{Objets enchantés.}
-\item \textbf{Objets cabalistiques.}
-\item \textbf{Bannières magiques.}
+% Magical Armour
+
+\newcommand{\forceshield}{Bouclier à Champ de Force}
+\newcommand{\armourofdestiny}{Armure du Destin}
+\newcommand{\bluffershelm}{Heaume de Tromperie}
+\newcommand{\mithrilmail}{Cotte de Maille en Mithril}
+\newcommand{\glitteringcuirass}{Cuirasse Étincelante}
+\newcommand{\armouroffortune}{Armure de Bonne Fortune}
+\newcommand{\bronzebreastplate}{Plastron de Bronze}
+\newcommand{\dragonmantle}{Cape en Cuir de Dragon}
+\newcommand{\gamblersarmour}{Armure du Parieur}
+\newcommand{\dragonscalehelm}{Heaume en Écailles de Dragon}
+\newcommand{\hardenedshield}{Bouclier Renforcé}
+\newcommand{\luckyshield}{Bouclier de Chance}
+
+% Talismans
+
+\newcommand{\talismanofsupremeshielding}{Talisman de Protection Suprême}
+\newcommand{\sproutofrebirth}{Graine de Renaissance}
+\newcommand{\obsidiannullstone}{Pierre d'Annulation d'Obsidienne}
+\newcommand{\duskstone}{Pierre du Crépuscule}
+\newcommand{\obsidianrock}{Gemme d'Obsidienne}
+\newcommand{\talismanofgreatershielding}{Talisman de Protection Majeure}
+\newcommand{\gemstoneamulet}{Amulette de Pierres Précieuses}
+\newcommand{\obsidianpebble}{Éclat d'Obsidienne}
+\newcommand{\luckycharm}{Charme de Chance}
+\newcommand{\dragonfiregem}{Gemme de Feu de Dragon}
+\newcommand{\talismanofshielding}{Talisman de Protection}
+
+% Enchanted Items
+
+\newcommand{\flyingcarpet}{Tapis Volant}
+\newcommand{\wizardshood}{Capuche de Magicien}
+\newcommand{\crownofscorn}{Couronne de Moquerie}
+\newcommand{\crystalball}{Boule de Cristal}
+\newcommand{\sceptreofdominion}{Sceptre de Domination}
+\newcommand{\gemoffortune}{Gemme de Chance}
+\newcommand{\ringoffire}{Anneau de Feu}
+\newcommand{\potionofstrength}{Potion de Force}
+\newcommand{\charmofcursediron}{Icône de Fer Maudit}
+\newcommand{\divineicon}{Statuette Divine}
+\newcommand{\potionofswiftness}{Potion de Rapidité}
+
+% Arcane Items
+
+\newcommand{\backlashscroll}{Parchemin de Retour de Flamme}
+\newcommand{\bookofarcanepower}{Grimoire de Puissance Cabalistique}
+\newcommand{\essenceofafreemind}{Essence de Libre Pensée}
+\newcommand{\dispelscroll}{Parchemin de Dissipation}
+\newcommand{\tomeofarcanelore}{Grimoire de Connaissance Mystique}
+\newcommand{\groundingrod}{Baguette Tellurique}
+\newcommand{\sceptreofpower}{Sceptre de Pouvoir}
+\newcommand{\bindingscroll}{Parchemin d'Entrave}
+\newcommand{\shieldingscroll}{Parchemin de Protection}
+\newcommand{\wandofstability}{Baguette de Stabilité}
+
+% Magical Standards
+
+\newcommand{\rendingbanner}{Bannière de Rasoirs}
+\newcommand{\stalkersstandard}{Étendard du Pisteur}
+\newcommand{\aethericon}{Icône d'Æther}
+\newcommand{\holyicon}{Icône Divine}
+\newcommand{\bannerofdiscipline}{Bannière de Discipline}
+\newcommand{\bannerofspeed}{Bannière de Vitesse}
+\newcommand{\flamingstandard}{Bannière de Feu}
+\newcommand{\warstandard}{Étendard de Guerre}
+\newcommand{\iconoftherelentlesscompany}{Icône de la Compagnie Implacable}
+\newcommand{\gleamingicon}{Icône Étincelante}
+\newcommand{\bannerofcourage}{Bannière de Courage}
+
+
+
+\part{Objets Magiques}
+
+\section{Catégories d'Objets Magiques}
+
+Les Objets Magiques sont répartis en 6 catégories :
+\begin{itemize}[label={\textbullet}]
+\item Armes Magiques
+\item Armures Magiques
+\item Talismans
+\item Objets Enchantés
+\item Objets Cabalistiques
+\item Bannières Magiques
 \end{itemize}
 
-De plus, chaque type d'Objet magique possède les règles spécifiques suivantes.
+De plus, chaque type d'Objet Magique possède les règles spécifiques suivantes.
 
-\subsubsection*{Armes magiques}
+\paragraph{Armes Magiques}
 
-Une figurine qui possède une Arme magique (comprenant les Armes de base magiques) \textbf{doit} l'utiliser, même si elle possède plusieurs autres armes. Une Arme de base magique ne peut pas être utilisée pour la règle \emph{Parade}. Si une Arme magique est détruite, elle devient son équivalent ordinaire.
+Une figurine équipée d'une Arme Magique (même une \hw{} Magique) doit l'utiliser, même si elle possède plusieurs autres armes. Une \hw{} Magique ne peut pas être utilisée pour la règle Parade. Si une Arme Magique est détruite, elle devient son équivalent standard (si elle en a un).
 
-\subsubsection*{Armures magiques}
+\paragraph{Armures Magiques}
 
-Si une figurine possède une Armure du même type que son Armure magique, l'Armure magique la remplace. Par exemple, si une figurine possède une Armure lourde et qu'elle achète une Armure légère magique, l'Armure lourde standard est perdue. Un Bouclier magique ne peut pas être utilisé avec une Arme à une main pour la règle \emph{Parade}.
+La plupart des Armures Magiques ont un type qui correspond à leur équivalent standard. Elles suivent les règles associées à cet équivalent standard en plus des règles précisées dans leur description. Si une Armure Magique est détruite, elle devient son équivalent standard (si elle en a un). Si une figurine possède une armure standard du même type que son Armure Magique, cette dernière la remplace. Par exemple, si une figurine possède une \ha{} et qu'elle achète une \la{} Magique, l'\ha{} standard est perdue. Un Bouclier Magique ne peut pas être utilisé avec une \hw{} pour la règle Parade.
 
-Les \emph{Sorciers} ne peuvent pas prendre d'Armure magique, à moins qu'ils ne possèdent déjà une Armure standard, ou l'option pour en avoir. Ils ont tout de même accès à la \emph{Protection innée}, à l'\emph{Armure naturelle} et aux montures et leur Caparaçon. \newrule{Ignorez les armures des autres cavaliers ou membres d'équipage montés sur la même monture que le sorcier.}
+Les Sorciers ne peuvent pas prendre d'Armure Magique, à moins qu'ils ne possèdent déjà ou aient la possibilité d'acheter une armure standard autre qu'un \barding{}, une \innatedefence{} ou une \mountsprotection{}. Ignorez les armures des autres cavaliers ou membres d'équipage montés sur la même monture que le Sorcier.
 
-\subsubsection*{Talismans et objets enchantés}
+\paragraph{Talismans et Objets Enchantés}
 
 Pas de règles additionnelles.
 
-\subsubsection*{Objets cabalistiques}
+\paragraph{Objets Cabalistiques}
 
-Les Objets cabalistiques ne peuvent être choisis que par des \emph{Sorciers}.
+Les Objets Cabalistiques ne peuvent être pris que par des Sorciers.
 
-\subsubsection*{Bannières magiques}
+\paragraph{Bannières Magiques}
 
-Seuls les Porte-étendards peuvent avoir accès aux Bannières magiques, a priori le \emph{Porte-étendard} d'une unité, le \emph{Porte-étendard Vétéran} d'une unité et le \emph{Porteur de la Grande Bannière}.
+Seuls les Porte-Étendards ont accès aux Bannières Magiques : a priori le Porte-Étendard d'une unité ou le Porteur de la Grande Bannière.
 
-\subsection{Types d'objets magiques}
-Tous les Objets magiques sont d'un type, leur équivalent ordinaire, et suivent donc toutes les règles et restrictions de ces objets standards en plus de leurs règles propres. Ainsi, une Lance de cavalerie magique donne un bonus de +2 en Force lors d'une charge et elle ne peut être portée que par une figurine montée, une Bête de Guerre ou une Bête Monstrueuse, comme une Lance de cavalerie standard. 
+\subsection{Types d'Objets Magiques}
+
+Chaque Objet Magique a un type qui correspond à celui de leur équivalent standard. Il suit donc toutes ses règles et restrictions. Ainsi, une \lance{} Magique donne un bonus de +2 en Force en charge et ne peut être portée que par une figurine montée, une Bête de Guerre ou une Bête Monstrueuse, comme une \lance{} standard. Si un Objet Magique est détruit, il devient son équivalent standard (si il en a un).
 
 \subsection{Restrictions}
 
-Tous les Objets magiques sont \emph{Uniques}, donc aucun Objet magique ne peut être possédé en double au sein d'une même armée. Aucune figurine ne peut porter plus d'un Objet magique d'une même catégorie, les catégories étant : \emph{Armes magiques}, \emph{Armures magiques}, \emph{Talismans}, \emph{Objets enchantés}, \emph{Objets cabalistiques} et \emph{Bannières magiques}. De plus, chaque type d'Objet magique peut obéir à des restrictions supplémentaires.
+\begin{itemize}[label={\textbullet}]
+\item Tous les Objets Magiques ont la règle \oneperarmy{} : ils ne peuvent pas être dupliqués.
+\item Une figurine ne peut pas posséder deux Objets Magiques de la même catégorie.
+\item Un Objet Magique peut avoir des restrictions supplémentaires précisées dans sa description.
+\end{itemize}
 
-\subsection{Coût en points}
+\subsection{Coût en Points}
 
-Le coût en points des Objets magiques est donné après leur nom. \nouveau{Certains Objets magiques ont deux coûts en points (par exemple, \emph{Épée de Géant} (60 {pts} / 50 {pts})). La première valeur est le coût pour un \emph{Seigneur}, et la seconde pour un \emph{Héros} ou un Champion d'unité}.
+La plupart des Objets Magiques ont un Coût en Points précisé après leur nom. \newfromWHB{Certains Objets Magiques ont deux coûts en points : par exemple, \textbf{\giantsword} ... \pts{60/50}. La première valeur est le coût pour un Seigneur et la seconde pour un Héros ou un Champion.}
 
 \subsection{Qui est affecté ?}
 
-Les Objets magiques font souvent référence à leur \emph{Porteur} dans leurs règles. Ces règles s'appliquent alors à la figurine pour laquelle l'objet a été sélectionné, \textbf{sans jamais inclure la monture}. D'autres Objets magiques font référence à la \emph{Figurine}, ou \nouveau{la \emph{Figurine} du porteur. Cela signifie que l'objet fonctionne pour l'intégralité de la figurine, y compris la monture. Remarquez que cette règle prend le pas sur les restrictions du \emph{Profil de Monstre Monté} à la page \pageref{profil_monstre_monte}}. Enfin une troisième catégorie d'objet comprend dans ses règles le mot-clé \emph{Unité}. Ces objets affectent toutes les figurines de l'unité, y compris les montures et le porteur.
+Les Objets Magiques font souvent référence à leur \og Porteur \fg{} dans leurs règles. Ce terme correspond à l'élément de figurine pour lequel l'objet a été acheté, \textbf{sans jamais inclure la monture}. D'autres Objets magiques font référence à la \og Figurine \fg{} ou \newfromWHB{la \og Figurine du Porteur \fg{}. Ces termes correspondent à l'intégralité de la figurine, monture comprise. Remarquez que cela prend le pas sur les restrictions du Profil de Monstre Monté (page \pageref{ridden_monster_profile}).} Enfin, une troisième catégorie d'objets comprend dans ses règles le mot-clé \og Unité du Porteur \fg{}. Ces objets affectent toutes les figurines de l'unité, montures et porteur compris.
 
 \subsection{Usage Unique}
 
-Les \newrule{effets} qui portent la mention \emph{Usage Unique} ne peuvent être utilisés qu'une fois \textbf{dans toute la partie}.
+Les effets ne peuvent être utilisés qu'une seule fois par partie.
 
+\section{Liste des Objets Magiques Communs}
 
-\subsection{Objets magiques communs}
-
-Les Objets magiques listés dans les paragraphes suivants sont considérés comme des Objets magiques communs et sont disponibles pour toutes les figurines ou unités qui ont la possibilité d'avoir accès aux Objets magiques. Il existe aussi souvent des Objets magiques spécifiques à chaque armée.
-
-\newpage
-
-\subsection{Armes magiques}
-
-\begin{multicols}{2}
-\begin{itemize}[label={-}]
-\item \textbf{Épée de Géant} \dotfill 60 {pts} / 50 {pts} \\
-\textit{Arme de base}. Les attaques effectuées avec cette arme ont un bonus de +3 en Force.
-
-\item \textbf{Lame de Conflit} \dotfill 45 {pts} \\
-\textit{Arme de base}. Le porteur possède +3 Attaques \newrule{quand il attaque avec cette arme}.
-
-\item \textbf{Trancheuse de Crânes} \dotfill 40 {pts} \\
-\textit{Arme de tir}. Portée \unit{24}{\pouce}, Force 4, \emph{Perforant (1)}, \emph{Tirs multiples (4)}, Touche toujours sur 4+.
-
-\item \textbf{Épée Ogre} \dotfill 40 {pts} \\
-\textit{Arme de base}. Les attaques effectuées avec cette arme ont un bonus de +2 en Force.
-
-\item \textbf{Épée d'Obsidienne} \dotfill 35 {pts} \\
-\textit{Arme de base}. Les attaques effectuées avec cette arme ont la règle spéciale \emph{Perforant (6)}.
-
-\item \textbf{Épées d'Escrimeur} \dotfill 35 {pts} \\
-\textit{Paire d'armes}. Le porteur a une Capacité de Combat de 10 \newrule{quand il attaque avec cette paire d'armes}. Figurine à pied uniquement.
-
-\item \textbf{Tueuse de Rois} \dotfill 30 {pts} \\
-\textit{Arme de base}. Le porteur possède +1 en Force et +1 Attaque \newrule{quand il attaque avec cette arme} pour chaque \emph{Personnage} ennemi en contact socle à socle avec l'unité du porteur (le bonus est calculé et prend effet au niveau d'Initiative où sont effectuées les attaques de cette arme).
-
-\item \textbf{Hache de Bataille} \dotfill 25 {pts} \\
-\textit{Arme de base}. Le porteur possède +2 Attaques \newrule{quand il attaque avec cette arme}.
-
-\item \textbf{Hallebarde Fléau-des-bêtes} \dotfill 25 {pts} \\
-\textit{Hallebarde}. Les attaques effectuées avec cette arme sont de Force 5 (quels que soient les éventuels modificateurs) et ont la règle spéciale \emph{Blessures multiples (2)} contre les \emph{Bêtes monstrueuses}, la \emph{Cavalerie monstrueuse}, les \emph{Chars}, l'\emph{Infanterie monstrueuse}, les \emph{Monstres} et les \emph{Monstres montés}.
-
-\item \textbf{Épée de Célérité} \dotfill 25 {pts} \\
-\textit{Arme de base}. Le porteur a Initiative 10 \newrule{quand il attaque avec cette arme}. Les attaques effectuées avec cette arme ne peuvent jamais blesser plus difficilement que sur 4+ (un 5+ ou 6+ est ramené à 4+).
-
-\item \textbf{Épée des Héros} \dotfill \newrule{30} {pts} / \newrule{20} {pts} \\
-\textit{Arme de base}. Les attaques effectuées avec cette arme ont un bonus de +1 en Force. Le porteur gagne aussi +1 Attaque \newrule{quand il attaque avec cette arme}. Quand il utilise cette arme, le porteur ne peut pas avoir plus de 4 Attaques, ni une Force supérieure à 5 (les éventuels modificateurs ne peuvent plus s'appliquer). Personnage uniquement.
-
-\item \textbf{L'Arracheur de Chair} \dotfill 20 {pts} \\
-\textit{Arme lourde}. Les attaques effectuées avec cette arme ont la règle spéciale \emph{Perforant (1)}.
-
-\item \textbf{Épée Sacrée} \dotfill 20 {pts} \\
-\textit{Arme de base}. Les attaques effectuées avec cette arme possèdent la règle spéciale \emph{Attaques Divines} et ont \emph{Relance des jets pour blesser ratés}.
-
-\item \textbf{Épée de Force} \dotfill 15 {pts} \\
-\textit{Arme de base}. Les attaques effectuées avec cette arme ont un bonus de +1 en Force.
-
-\item \textbf{Lame d'Habileté} \dotfill 15 {pts} \\
-\textit{Arme de base}. Les attaques effectuées avec cette arme ont un bonus de +1 pour toucher.
-
-\item \textbf{Lance Enflammée} \dotfill 10 {pts} \\
-\textit{Lance de cavalerie}. Les attaques effectuées avec cette arme ont la règle spéciale \emph{Attaques Enflammées}.
-
-\item \textbf{Épées Hurlantes} \dotfill 10 {pts} \\
-\textit{Paire d'armes}. Le porteur provoque la \emph{Peur}.
-
-\item \textbf{Épée Tranchante} \dotfill 5 {pts} \\
-\textit{Arme de base}. Les attaques effectuées avec cette arme ont la règle spéciale \emph{Perforant (1)}.
-
-\end{itemize}
-\end{multicols}
+Les Objets Magiques listés dans les paragraphes suivants sont considérés comme des Objets Magiques Communs et sont disponibles à l'achat pour toutes les figurines ou unités qui ont accès aux Objets Magiques. Il existe aussi souvent des Objets Magiques spécifiques à chaque armée.
 
 \newpage
+\subsection{Armes Magiques}
 
-\subsection{Armures magiques}
+\startpricelist
 
-\begin{multicols}{2}
-\begin{itemize}[label={-}]
-\item \textbf{Bouclier à Champ de Force} \dotfill 70 {pts} \\
-\emph{Bouclier}. La figurine du porteur possède une \emph{Sauvegarde Invulnérable (5+)} contre les attaques à distance.
+\pricelistitem{\giantsword}{60/50}Type : \hw{}.  Les attaques portées avec cette arme ont +3 en Force.
 
-\item \textbf{Armure du Destin} \dotfill 50 {pts} \\
-\emph{Armure lourde}. Le porteur possède une \emph{Sauvegarde Invulnérable (4+)}.
+\pricelistitem{\bladeofstrife}{45}Type : \hw{}. Le porteur gagne +3 Attaques quand il combat avec cette arme.
 
-\item \textbf{Heaume de Tromperie} \dotfill 35 {pts} \\
-\emph{Aucun type}. Sauvegarde d'Armure de 6+. Les jets pour blesser réussis contre le porteur doivent être relancés. Ne peut pas être pris par une \emph{Grande Cible}.
+\pricelistitem{\ogresword}{40}Type : \hw{}. Les attaques portées avec cette arme ont +2 en Force.
 
-\item \textbf{Cotte de Maille en Mithril} \dotfill 35 {pts} / 25 {pts} \\
-\emph{Armure lourde}. Figurine à pied uniquement. Sauvegarde d'Armure de 2+. Cette Sauvegarde d'Armure ne peut pas être améliorée.
+\pricelistitem{\skullsplitter}{40}Type : Arme de Tir. \range{24}, \Strength{} 4, \armourpiercing{1}, \multipleshots{4}, touche toujours sur 4+.
 
-\item \textbf{Cuirasse Étincelante} \dotfill 30 {pts} \\
-\emph{Armure lourde}. Le porteur gagne la règle spéciale \emph{Distrayant}.
+\pricelistitem{\fencersswords}{35}Figurine à pied uniquement.
 
-\item \textbf{Armure de Bonne Fortune} \dotfill 25 {pts} \\
-\emph{Armure lourde}. Le porteur possède une \emph{Sauvegarde Invulnérable (5+)}.
+Type : \pw{}. Le porteur obtient une Capacité de Combat de 10 quand il combat avec cette arme.
 
-\item \textbf{Plastron de Bronze} \dotfill 25 {pts} \\
-\emph{Armure lourde}. \emph{Usage unique}. À n'importe quel moment où la figurine du porteur reçoit une touche, l'objet peut être activé. Pour le restant de la phase, la figurine du porteur possède une Sauvegarde d'Armure de 1+. Si la figurine du porteur a la règle spéciale \emph{Grande Cible}, elle gagne une Sauvegarde d'Armure de 2+ à la place.
+\pricelistitem{\obsidiansword}{35}Type : \hw{}. Les attaques portées avec cette arme ont la règle \armourpiercing{6}.
 
-\item \textbf{Cape en Cuir de Dragon} \dotfill 25 {pts} \\
-Le porteur a la règle spéciale \emph{Protection innée (5+)}. Figurine à pied uniquement.
+\pricelistitem{\kingslayer}{30}Type : \hw{}. Le porteur gagne +1 en Force et +1 Attaque quand il combat avec cette arme pour chaque Personnage ennemi en contact socle à socle avec l'unité du porteur. Ce bonus est calculé et prend effet au palier d'Initiative auquel sont faites les attaques.
 
-\item \textbf{Armure du Parieur} \dotfill 15 {pts} \\
-\emph{Armure lourde}. Le porteur possède une \emph{Sauvegarde Invulnérable (6+)}.
+\pricelistitem{\herossword}{30/20}Personnage uniquement.
 
-\item \textbf{Heaume en Écailles de Dragon} \dotfill 10 {pts} \\
-\emph{Aucun type}. Sauvegarde d'Armure de 6+. Le porteur possède la règle spéciale \emph{Né du feu}.
+Type : \hw{}. Les Attaques portées avec cette arme ont +1 en Force. Le porteur gagne +1 Attaque quand il combat avec cette arme. Quand il attaque avec cette arme, le porteur ne peut excéder 4 Attaques et une Force de 5, quels que soient les modificateurs.
 
-\item \textbf{Bouclier Renforcé} \dotfill 5 {pts} \\
-\emph{Bouclier}. Ajoutez +1 en Sauvegarde d'Armure du porteur en plus du bonus de Bouclier, pour un total de +2, si le porteur utilise ce bouclier.
+\pricelistitem{\swordofhaste}{25}Type : \hw{}. Le porteur frappe à Initiative 10 quand il combat avec cette arme. Les attaques portées avec cette arme blessent toujours sur 4+ (ou mieux).
 
-\item \textbf{Bouclier de Chance} \dotfill 5 {pts} \\
-\emph{Bouclier}. Ignorez la première touche subie par la figurine du porteur s'il utilise ce bouclier (si le porteur est touché par plusieurs attaques simultanément, il choisit quelle attaque ignorer).
+\columnbreak
 
-\end{itemize}
-\end{multicols}
+\pricelistitem{\axeofbattle}{25}Type : \hw{}. Le porteur gagne +2 Attaques quand il combat avec cette arme.
+
+\pricelistitem{\beastbanehalberd}{25}Type : \halberd{}. Les attaques portées avec cette arme ont toujours Force 5 (quels que soient les modificateurs) et la règle \multiplewounds{2}{\chariots{}, \monstrousinfantry{}, \monstrousbeasts{}, \monstrouscavalry{}, \monsters{}, \riddenmonsters{}}.
+
+\pricelistitem{\fleshrender}{20}Type : \gw{}. Les attaques portées avec cette arme ont la règle \armourpiercing{1}.
+
+\pricelistitem{\blessedsword}{20}Type : \hw{}. Les attaques portées avec cette arme ont la règle \divineattacks{}, et leurs jets pour blesser ratés peuvent être relancés.
+
+\pricelistitem{\swordofstrength}{15}Type : \hw{}. Les attaques portées avec cette arme ont +1 en Force.
+
+\pricelistitem{\swordofskill}{15}Type : \hw{}. Les attaques portées avec cette arme ont un bonus de +1 pour toucher.
+
+\pricelistitem{\screamingswords}{10}Type : \pw{}. Le porteur gagne la règle \fear{}.
+
+\pricelistitem{\flaminglance}{10}Type : \lance{}. Les attaques portées avec cette arme ont la règle \flamingattacks{}.
+
+\pricelistitem{\razorblade}{5}Type : \hw{}. Les attaques portées avec cette arme ont la règle \armourpiercing{1}.
+
+\endpricelist
 
 \newpage
+\subsection{Armures Magiques}
 
+\startpricelist
+
+\pricelistitem{\forceshield}{70}Type : \shield{}. La figurine du morteur gagne une \wardsave{5} contre les Attaques à Distance.
+
+\pricelistitem{\armourofdestiny}{50}Type : \ha{}. Le porteur gagne une \wardsave{4}.
+
+\pricelistitem{\bluffershelm}{35}Ne peut pas être pris par une figurine avec la règle \largetarget{}.
+
+Type : Aucun (Sauvegarde d'Armure 6+). Les jets pour blesser réussis contre le porteur doivent être relancés.
+
+\pricelistitem{\mithrilmail}{35/25}Type : \ha{} (Sauvegarde D'armure 2+). Cette Sauvegarde d'Armure ne peut être en aucun cas améliorée.
+
+\pricelistitem{\glitteringcuirass}{30}Type : \ha{}. Le porteur gagne la règle \distracting{}.
+
+\pricelistitem{\armouroffortune}{25}Type : \ha{}. Le porteur gagne une \wardsave{5}.
+
+\pricelistitem{\dragonmantle}{25}Type : Aucun. Le porteur gagne la règle \innatedefence{5}.
+
+\columnbreak
+
+\pricelistitem{\bronzebreastplate}{25}Type : \ha{}. Usage Unique. Vous pouvez activer l'objet lorsque la figurine du porteur subit une touche. Pour la durée de la Phase, la figurine du porteur gagne alors une Sauvegarde d'Armure de 1+. Si la figurine du porteur est une \largetarget{}, cette Sauvegarde d'Armure est limitée à 2+.
+
+\pricelistitem{\gamblersarmour}{15}Type : \ha{}. Le porteur gagne une \wardsave{6}.
+
+\pricelistitem{\dragonscalehelm}{10}Type : Aucun (Sauvegarde d'Armure 6+). Le porteur gagne la règle \fireborn{}.
+
+\pricelistitem{\luckyshield}{5}Type : \shield{}. Usage Unique. Ignorez la première touche subie par la figurine du porteur. Si plusieurs attaques se disputent le statut de première touche, le porteur peut choisir la touche à ignorer.
+
+\pricelistitem{\hardenedshield}{5}Type : \shield{}. Ajoutez un bonus additionnel de +1 à la Sauvegarde d'Armure du porteur quand il utilise ce bouclier, pour un total de +2.
+
+\endpricelist
+
+\newpage
 \subsection{Talismans}
 
-\begin{multicols}{2}
-\begin{itemize}[label={-}]
-\item \textbf{Talisman de Protection Suprême} \\ .\dotfill 50 {pts} \\
-Le porteur possède une \emph{Sauvegarde Invulnérable (4+)}.
+\startpricelist
 
-\item \textbf{Graine de Renaissance} \dotfill 50 {pts} \\
-Le porteur a la règle spéciale \emph{Régénération (4+)}.
+\pricelistitem{\sproutofrebirth}{50}Le porteur gagne une \regeneration{4}.
 
-\item \textbf{Pierre d'Annulation d'Obsidienne} \\ .\dotfill 45 {pts} \\
-Le porteur a la règle spéciale \emph{Résistance à la magie (3)}.
+\pricelistitem{\talismanofsupremeshielding}{50}Le porteur gagne une \wardsave{4}.
 
-\item \textbf{Pierre du Crépuscule} \dotfill 30 {pts} \\
-Le porteur peut relancer ses jets de sauvegarde d'armure ratés.
+\pricelistitem{\obsidiannullstone}{45}Le porteur gagne la règle \magicresistance{3}.
 
-\item \textbf{Gemme d'Obsidienne} \dotfill 30 {pts} \\
-Le porteur a la règle spéciale \emph{Résistance à la magie (2)}.
+\pricelistitem{\duskstone}{30}Le porteur peut relancer ses jets de Sauvegarde d'Armure ratés.
 
-\item \textbf{Talisman de Protection Majeure} \dotfill 25 {pts} \\
-Le porteur possède une \emph{Sauvegarde Invulnérable (5+)}.
+\pricelistitem{\obsidianrock}{30}Le porteur gagne la règle \magicresistance{2}.
 
-\bigskip\medskip
-\item \textbf{Amulette de Pierres Précieuses} \dotfill 15 {pts} \\
-\emph{Usage Unique}. Peut être activé quand la figurine du porteur rate une Sauvegarde d'Armure, quand elle ne peut pas l'utiliser, ou subit une blessure et n'a pas de Sauvegarde d'Armure. Le porteur possède une \emph{Sauvegarde Invulnérable (4+)} contre cette blessure.
+\pricelistitem{\talismanofgreatershielding}{25}Le porteur gagne une \wardsave{5}.
 
-\item \textbf{Éclat d'Obsidienne} \dotfill 10 {pts} \\
-Le porteur a la règle spéciale \emph{Résistance à la magie (1)}.
+\pricelistitem{\gemstoneamulet}{15}Usage Unique. Peut être activé lorsque la figurine du porteur rate un jet de Sauvegarde d'Armure ou n'a pas l'occasion d'utiliser sa Sauvegarde d'Armure suite à une blessure. La figurine du porteur gagne alors une \wardsave{4} contre cette blessure.
 
-\item \textbf{Talisman de Protection} \dotfill 5 {pts} \\
-Le porteur possède une \emph{Sauvegarde Invulnérable (6+)}.
+\pricelistitem{\obsidianpebble}{10}Le porteur gagne la règle \magicresistance{1}.
 
-\item \textbf{Charme de Chance} \dotfill 5 {pts} \\
-\emph{Usage Unique}. Peut être activé quand la figurine du porteur rate une Sauvegarde d'Armure. Le porteur peut relancer cette Sauvegarde d'Armure.
+\pricelistitem{\luckycharm}{5}Usage Unique. Peut être activé quand la figurine du porteur rate un jet de Sauvegarde d'Armure. Ce jet peut alors être relancé.
 
-\item \textbf{Gemme de Feu de Dragon} \dotfill 5 {pts} \\
-Le porteur possède la règle spéciale \emph{Né du feu}.
+\pricelistitem{\dragonfiregem}{5}Le porteur gagne la règle \fireborn{}.
 
-\end{itemize}
-\end{multicols}
+\pricelistitem{\talismanofshielding}{5}Le porteur gagne une \wardsave{6}.
+
+\endpricelist
 
 \newpage
+\subsection{Objets Enchantés}
 
-\subsection{Objets enchantés}
+\startpricelist
 
-\begin{multicols}{2}
-\begin{itemize}[label={-}]
-\item \textbf{Tapis Volant} \dotfill 40 {pts} / 30 {pts} \\
-Le porteur possède la règle spéciale \emph{Vol (6)}. Figurine à pied uniquement.
+\pricelistitem{\wizardshood}{40}Le porteur gagne la règle \stupidity{}. Si le porteur ne possédait pas de Niveau de Magie, il devient un Sorcier Apprenti de Niveau 2. Au lieu de choisir une Voie de Magie normalement, le porteur utilise une Voie de Magie Commune déterminée aléatoirement au début de la partie.
 
-\item \textbf{Capuche de Magicien} \dotfill 40 {pts} \\
-Le porteur possède la règle spéciale \emph{Stupide}. Si le porteur n'avait pas de niveau de magie, il devient un \emph{Sorcier} de niveau 2. Au lieu de choisir sa \emph{Discipline Magique} normalement, le porteur tire au sort une des 8 \emph{Disciplines} de base au début de la partie.
+\pricelistitem{\flyingcarpet}{40/30}Figurine à pied uniquement.
 
-\item \textbf{Couronne de Moquerie} \dotfill 35 {pts} \\
-\emph{Usage Unique}. Au lieu de tenter un jet de dissipation, vous pouvez utiliser cet objet. Le sort est automatiquement dissipé. Cet objet ne peut être sélectionné que dans une armée ne contenant aucun \emph{Sorcier}.
+Le porteur gagne la règle \fly{6}.
 
-\item \textbf{Boule de Cristal} \dotfill 35 {pts} \\
-Le porteur possède la règle spéciale \emph{Réflexes Foudroyants}.
+\pricelistitem{\crystalball}{35}Le porteur gagne la règle \lightningreflexes{}.
 
-\item \textbf{Sceptre de Domination} \dotfill 30 {pts} \\
-\emph{Usage Unique}. Peut être activé au début de n'importe quelle \emph{Phase de Corps à Corps}. Pour la durée de la phase, le porteur possède la règle spéciale \emph{Tenace}.
+\pricelistitem{\crownofscorn}{35}Usage Unique. Vous pouvez utiliser cet objet au lieu de faire une tentative de dissipation. Le sort est alors automatiquement dissipé. Vous ne pouvez prendre cet objet que si votre armée ne comprend aucun Sorcier.
 
-\item \textbf{Anneau de Feu} \dotfill 25 {pts} \\
-\emph{Objet de sort}. Niveau de pouvoir 3. Contient le sort \emph{Boule de feu} (Discipline Magique du Feu).
+\pricelistitem{\sceptreofdominion}{30}Usage Unique. Peut être activé au début de n'importe quelle Manche de Corps à Corps. Le porteur gagne la règle \stubborn{} pour la durée de la phase.
 
-\item \textbf{Gemme de Chance} \dotfill 25 {pts} \\
-Les attaques à distance contre l'unité du porteur doivent relancer tout \result{6} naturel obtenu lors du jet pour blesser. Cet objet ne fonctionne pas sur une \emph{Grande cible}.
+\pricelistitem{\ringoffire}{25}\boundspell{3} : \firesignature{} (\Pathof{} \fire{}).
 
-\item \textbf{Potion de Force} \dotfill 20 {pts} \\
-\emph{Usage Unique}. Peut être activé au début de n'importe quelle phase ou round de combat. Pour la durée du tour du joueur, le porteur possède +2 en Force.
+\columnbreak
 
-\item \textbf{Icône de Fer Maudit} \dotfill 20 {pts} \\
-Le porteur et son unité possèdent une \emph{Sauvegarde Invulnérable (5+)} contre les blessures causées par des \emph{Armes d'Artillerie}.
+\pricelistitem{\gemoffortune}{25}Les jets pour blesser réussis d'Attaques à Distance dirigées contre l'unité du porteur ayant donné \result{6} doivent être relancés, à moins que la touche n'ait été distribuée sur une \largetarget{}.
 
-\item \textbf{Statuette Divine} \dotfill 15 {pts} \\
-La figurine du porteur possède la règle spéciale \emph{Attaques Divines}.
+\pricelistitem{\charmofcursediron}{20}L'unité du porteur gagne une \wardsave{5} contre les blessures causées par des Armes d'Artillerie.
 
-\item \textbf{Potion de Rapidité} \dotfill 5 {pts} \\
-\emph{Usage Unique}. Peut être activé au début de n'importe quelle phase ou round de combat. Pour la durée du tour du joueur, le porteur possède +3 en Initiative.
+\pricelistitem{\potionofstrength}{20}Usage Unique. Peut être activé au début de n'importe quelle Phase ou Manche de Corps à Corps. Le porteur gagne +2 en Force pour la durée du Tour de Joueur.
 
-\end{itemize}
-\end{multicols}
+\pricelistitem{\divineicon}{15}La figurine du porteur gagne la règle \divineattacks{}.
+
+\pricelistitem{\potionofswiftness}{5}Usage Unique. Peut être activé au début de n'importe quelle Phase ou Manche de Corps à Corps. Le porteur gagne +3 en Initiative pour la durée du Tour de Joueur.
+
+\endpricelist
 
 \newpage
+\subsection{Objets Cabalistiques}
 
-\subsection{Objets cabalistiques}
+\startpricelist
 
-\begin{multicols}{2}
-\begin{itemize}[label={-}]
-\item \textbf{Parchemin de Retour de Flamme} \\ .\dotfill 55 {pts} \\
-\emph{Usage Unique}. Au lieu de tenter un jet de dissipation, vous pouvez utiliser ce parchemin. Après que les effets du sort et de l'\emph{Attribut de la Discipline} ont été appliqués, et à moins que le sort ait été lancé avec un \emph{Pouvoir irrésistible}, le lanceur du sort doit faire un jet sur la table des \emph{Fiascos}. Cet objet n'a aucun effet contre les \emph{Objets de sort} et les sorts lancés avec un seul dé de pouvoir.
+\pricelistitem{\backlashscroll}{55}Usage Unique. Vous pouvez utiliser ce parchemin au lieu de faire une tentative de dissipation. Une fois que le sort et l'Attribut de Voie ont été résolu, le lanceur doit faire un jet sur la Table des Fiascos. Cet objet n'a pas d'effet sur les \boundspells{}, les sorts lancés avec un Dé de Pouvoir et les sorts lancés avec un \overwhelmingpower{}.
 
-\item \textbf{Grimoire de Puissance Cabalistique} \\ .\dotfill 50 {pts} / 35 {pts} \\
-Le porteur reçoit un bonus de +1 pour lancer et dissiper les sorts.
+\pricelistitem{\bookofarcanepower}{50/35}Le porteur gagne un modificateur de +1 pour lancer et dissiper les sorts.
 
-\item \textbf{Essence de Libre Pensée} \dotfill 40 {pts} / 30 {pts} \\
-Le porteur peut inscrire 2 \emph{Disciplines Magiques} sur sa liste d'armée au lieu d'une seule parmi celles dont il a accès. Il peut choisir celle qu'il utilisera, au début de la partie, avant la génération des sorts.
+\pricelistitem{\essenceofafreemind}{40/30}Le Sorcier peut inscrire deux Voies de Magie sur la Liste d'Armée plutôt qu'une. Cela doit rester des Voies qui lui sont normalement accessibles. Choisissez entre ces deux Voies au moment de générer les sorts.
 
-\item \textbf{Parchemin de Dissipation} \dotfill 35 {pts} \\
-\emph{Usage Unique}. Au lieu de tenter un jet de dissipation, vous pouvez utiliser ce parchemin. Le sort est automatiquement dissipé.
+\pricelistitem{\dispelscroll}{35}Usage Unique. Vous pouvez utiliser ce parchemin au lieu de faire une tentative de dissipation. Le sort est automatiquement dissipé.
 
-\item \textbf{Grimoire de Connaissance Mystique} \\ .\dotfill 25 {pts} / 15 {pts} \\
-Le porteur génère un sort supplémentaire.
+\pricelistitem{\groundingrod}{25/15}Usage Unique. Le porteur peut utiliser cet objet pour relancer son jet sur la Table des Fiascos.
 
-\item \textbf{Baguette Tellurique} \dotfill 25 {pts} / 15 {pts} \\
-\emph{Usage Unique}. Le porteur peut choisir d'utiliser cet objet pour relancer un jet sur la table des \emph{Fiascos}.
+\pricelistitem{\tomeofarcanelore}{25/15}Le porteur génère un sort supplémentaire.
 
-\item \textbf{Parchemin d'Entrave} \dotfill 20 {pts} \\
-\emph{Usage Unique}. Au lieu de tenter un jet de dissipation, vous pouvez utiliser ce parchemin. Le \emph{Sorcier} lançant le sort ne peut pas lancer ce sort au prochain tour de jeu.
+\pricelistitem{\bindingscroll}{20}Usage Unique. Vous pouvez utiliser ce parchemin au lieu de faire une tentative de dissipation. Le lanceur ne peut plus lancer ce même sort au prochain Tour de Jeu.
 
-\item \textbf{Sceptre de Pouvoir} \dotfill 20 {pts} / 15 {pts} \\
-\emph{Usage Unique}. Le porteur peut relancer un unique dé de pouvoir lors du lancement d'un sort.
+\pricelistitem{\sceptreofpower}{20/15}Usage Unique. Le porteur peut relancer un unique Dé de Pouvoir d'un jet de lancement de sort.
 
-\item \textbf{Parchemin de Protection} \dotfill 15 {pts} \\
-\emph{Usage Unique}. Au lieu de tenter un jet de dissipation, vous pouvez utiliser ce parchemin. Toutes les figurines ciblées par ce sort ont une \emph{Sauvegarde Invulnérable (4+)} contre ce sort.
+\pricelistitem{\wandofstability}{15}Usage Unique. Le porteur peut ajouter un modificateur de +1D6 à un de ses jets de dissipation (ce n'est pas un Dé de Dissipation) et ignorez la règle Pas Assez de Puissance. C'est une exception à la règle des Modificateurs Magiques.
 
-\item \textbf{Baguette de Stabilité} \dotfill 15 {pts} \\
-\emph{Usage Unique}. Le porteur peut augmenter un seul de ses jets de dissipation d'un modificateur de +1D6 (ce n'est pas un dé de dissipation) et ignorer la règle \emph{Pas assez de puissance !} (c'est une exception à la limitation des Modificateurs magiques).
+\pricelistitem{\shieldingscroll}{15}Usage Unique. Vous pouvez utiliser ce parchemin au lieu de faire une tentative de dissipation. Toutes les figurines affectées par le sort gagnent une \wardsave{4} contre les effets de ce sort.
 
-\end{itemize}
-\end{multicols}
+\endpricelist
 
 \newpage
+\subsection{Bannières Magiques}
 
-\subsection{Bannières magiques}
+\startpricelist
 
-\begin{multicols}{2}
-\begin{itemize}[label={-}]
-\item \textbf{Bannière de Rasoirs} \dotfill 45 {pts} \\
-L'unité du porteur possède la règle spéciale \emph{Perforant (1)}.
+\pricelistitem{\rendingbanner}{45}L'unité du porteur gagne la règle \armourpiercing{1}.
 
-\item \textbf{Bannière du Pisteur} \dotfill 40 {pts} \\
-L'unité du porteur possède les règles spéciales \emph{Guide} et \emph{Rapide}.
+\pricelistitem{\stalkersstandard}{40}L'unité du porteur gagne les règles \swiftstride{} et \strider{}.
 
-\item \textbf{Icône d'éther} \dotfill 30 {pts} \\
-L'unité du porteur peut dissiper des sorts comme si elle était un \emph{Maître sorcier}.
+\pricelistitem{\aethericon}{30}L(unité du porteur peut faire des tentatives de dissipation comment si elle était un Maître Sorcier.
 
-\item \textbf{Icône Divine} \dotfill 30 {pts} \\
-L'unité du porteur possède la règle spéciale \emph{Attaques Divines}, mais doit relancer ses propres jets de \emph{Sauvegarde Invulnérable} réussis.
+\pricelistitem{\holyicon}{30}L'unité du porteur gagne la règle \divineattacks{} mais doit aussi relancer ses propres jets de \wardsave{} réussis.
 
-\item \textbf{Bannière de Discipline} \dotfill 25 {pts} \\
-L'unité du porteur possède +1 en Commandement.
+\pricelistitem{\bannerofdiscipline}{25}L'unité du porteur gagne +1 en Commandement.
 
-\item \textbf{Bannière de Vitesse} \dotfill 25 {pts} \\
-L'unité du porteur gagne +1 en Mouvement.
+\pricelistitem{\bannerofspeed}{25}L'unité du porteur gagne +1 en Mouvement.
 
-\item \textbf{Bannière de Feu} \dotfill 20 {pts} \\
-Au début \newrule{de la phase de corps à corps de chaque joueur, et avant que l'unité du porteur ne tire}, le pouvoir de la bannière peut être activé. Dans ce cas, chaque attaque non spéciale de corps à corps ou de tir de l'unité du porteur gagne la règle spéciale \emph{Attaques Enflammées}.
+\pricelistitem{\flamingstandard}{20}Au début de chaque Manche de Corps à Corps, ou avant de tirer avec l'unité du porteur, la bannière peut être activée. Dans ce cas, toutes les Attaques de Tir et de Corps à Corps non spéciales de l'unité gagnent la règle \flamingattacks{} jusqu'à la fin de la phase.
 
-\item \textbf{Bannière de Guerre} \dotfill 15 {pts} \\
-L'unité du porteur ajoute +1 au \emph{Résultat de combat} dans tout corps à corps où elle est impliquée.
+\columnbreak
 
-\medskip
-\item \textbf{Icône de la Compagnie Implacable} \\ .\dotfill 15 {pts} \\
-\emph{Usage Unique}. Vous pouvez activer cette bannière pendant n'importe lequel de vos tours, au début de l'étape des \emph{Autres Mouvements}. L'unité du porteur peut tripler son mouvement en \emph{Marche Forcée} au lieu de le doubler pour ce tour (jusqu'à un maximum de \unit{15}{\pouce}). Cette bannière ne peut pas être utilisée au tour 1 si l'unité a utilisé sa règle spéciale \emph{Avant-garde} ou \emph{Éclaireurs}. Figurines d'\emph{Infanterie} uniquement.
+\pricelistitem{\warstandard}{15}L'unité du porteur ajoute un bonus de Résultat de Combat de +1 dans n'importe quel Corps à Corps dans lequel elle est impliquée.
 
-\item \textbf{Icône Étincelante} \dotfill 5 {pts} \\
-\emph{Usage Unique}. Doit être activée la première fois que l'unité du porteur rate un test de Commandement. L'unité peut alors choisir de relancer ce test raté. L'Icône Étincelante est perdue si le test de Commandement est relancé grâce à une autre capacité, comme celle de la Grande Bannière.
+\pricelistitem{\iconoftherelentlesscompany}{15}Figurines d'Infanterie uniquement.
 
-\item \textbf{Bannière de Courage} \dotfill 5 {pts} \\
-L'unité du porteur réussit automatiquement les tests de \emph{Terreur} et est immunisée aux effets de la règle spéciale \emph{Peur}.
+Usage Unique. Vous pouvez l'activer au début de n'importe laquelle de vos étapes des Autres Mouvements. L'unité du porteur peut alors tripler son Mouvement en Marche Forcée plutôt que de le doubler pour ce tour. Le déplacement ne peut alors pas dépasser \distance{15}. Cet effet ne peut pas être activé au premier Tour de Jeu si l'unité a utilisé la règle \vanguard{} ou \scout{}.
 
-\end{itemize}
-\end{multicols}
+\pricelistitem{\bannerofcourage}{5}L'unité du porteur réussit automatiquement ses tests de \terror{} et est immunisée aux effets de la règle \fear{}.
+
+\pricelistitem{\gleamingicon}{5}Usage Unique. Peut être activé la première fois que l'unité du porteur rate un test de Commandement. L'unité peut alors relancer les dés pour ce test raté.
+
+\endpricelist

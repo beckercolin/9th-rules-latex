@@ -88,6 +88,10 @@
 
 \ifdef{\disablenewfromWHB}{\renewcommand{\newfromWHB}{}}{}
 
+\newcommand{\pts}[1]{#1~\labels@points}
+
+\newcommand{\predotfill}{\penalty0\hbox{}\nobreak}
+
 %%% Fonts and sizes %%%
 
 \newcommand{\verysmallfontsize}{\fontsize{4}{4.8}\selectfont}
@@ -126,21 +130,10 @@
 
 \setlength{\columnsep}{1cm}
 
-\newcommand{\startpricelist}{\begin{samepage}\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=10pt]}
-\def\endpricelist{\end{description}\end{samepage}}
-\newcommand{\pricelistitem}[2]{\item \option{\textbf{#1}}{#2}\newline}
+\newcommand{\startpricelist}{\begin{multicols}{2}\raggedcolumns\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=10pt]}
+\def\endpricelist{\end{description}\end{multicols}}
+\newcommand{\pricelistitem}[2]{\item \textbf{#1}\predotfill\dotfill\nobreak\pts{#2}\newline}
 \newcommand{\nopricelistitem}[1]{\item \textbf{#1}\newline}
-
-\newcommand{\startpricelistNSP}{\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=10pt]}
-\def\endpricelistNSP{\end{description}}
-
-\newcommand{\startitemlist}{\begin{multicols}{2}\raggedcolumns\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=10pt]}
-\def\enditemlist{\end{description}\end{multicols}}
-\newcommand{\listitem}[1]{\item[#1\spacebeforecolon{}:]}
-
-\newcommand{\startitemlistonecol}{\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=10pt]}
-\def\enditemlistonecol{\end{description}}
-\newcommand{\listitemonecol}[1]{\item \textbf{#1\spacebeforecolon{}:}\newline}
 
 %%% Table parameters %%%
 
