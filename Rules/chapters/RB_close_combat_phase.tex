@@ -1,5 +1,5 @@
 
-\part{Phase de Corps à Corps}
+\hypertarget{closecombatphase}{\part{Phase de Corps à Corps}}
 
 Pendant la Phase de Corps à Corps, toutes les figurines engagées au Corps à Corps peuvent et doivent attaquer.
 
@@ -20,7 +20,7 @@ Un combat est défini comme un groupe d'unités de camps différents connectées
 
 Une unité est considérée comme \textbf{engagée au Corps à Corps} si au moins une figurine de l'unité est en contact socle à socle avec une unité ennemie. Si une unité est engagée au Corps à Corps, toutes ses figurines comptent comme engagées au Corps à Corps. Les unités qui sont engagées au Corps à Corps ne peuvent pas bouger, sauf mention contraire, comme lors des Reformations de Combat ou en cas de fuite.
 
-\subsection{Plus engagés}
+\hypertarget{nolongerengaged}{\subsection{Plus engagés}}
 
 Une unité qui était engagée dans un combat auparavant, mais dont tous les adversaires ont bougé ou ont été retirés comme perte entre la Phase de Mouvement précédente et cette Phase de Corps à Corps, et dont le contact socle à socle n'a pas pu être maintenu en décalant légèrement les figurines avec les instructions de la règle Éloigné du Combat (paragraphe \ref{dropping_out_of_combat}, page \pageref{dropping_out_of_combat}), doit suivre la règle Plus d'Ennemis (paragraphe \ref{break_test}, page \pageref{break_test}). \newfromWHB{Avant que tout Corps à Corps ne soit résolu, cette unité peut faire un Pivot Post-Combat ou une Reformation Post-Combat. Si elle venait de charger, elle peut aussi effectuer une Charge Irrésistible. Ces actions ne sont autorisées que si l'unité n'a pas bougé, pas même grâce à un Mouvement Magique, depuis que l'unité ennemie a été retirée du combat.}
 
@@ -75,6 +75,7 @@ Les figurines déployées en formation de Horde (paragraphe \ref{horde}, page \p
 Parfois, des rangs incomplets ou des Personnages avec un socle incompatible peuvent créer des espaces vides au milieu d'unités engagées au Corps à Corps. Si deux unités sont en contact socle à socle, les figurines qui composent ces unités sont autorisées à attaquer à travers les vides. Cela ne permet toutefois pas d'attaquer à travers d'autres unités ou un Terrain Infranchissable. Ces figurines sont considérées comme étant en contact socle à socle malgré les vides. La figure \ref{figure/empty_gaps} illustre ce paragraphe.
 
 \begin{figure}[!htbp]
+\hyperlink{whocanstrikefigure}{
 \begin{minipage}{0.53\textwidth}
 \def\svgwidth{\textwidth}
 \input{pics/empty_gaps.pdf_tex}
@@ -83,7 +84,7 @@ Parfois, des rangs incomplets ou des Personnages avec un socle incompatible peuv
 Toutes les figurines dont les couleurs sont dans une nuance plus sombre peuvent attaquer. Remarquez que l'unité en rose est en formation de Horde, et peut donc porter des Attaques de Soutien depuis son troisième rang. Notez aussi que l'unité verte n'est pas engagée via son front, et ne peut donc pas effectuer d'Attaques de Soutien sur le flanc ou l'arrière.\vspace*{10pt}\newline
 Les figurines dont les bordures sont en gras comptent comme étant en contact socle à socle avec leurs ennemis, même au-dessus des vides. Les figurines dont les couleurs sont dans une nuance plus claire ne peuvent pas faire d'Attaques de Soutien.}
 \label{figure/empty_gaps}
-\end{minipage}
+\end{minipage}}
 \end{figure}
 
 \clearpage
@@ -224,7 +225,7 @@ Attaque de l'Arrière & \textbf{+2} ou \newfromWHB{\textbf{+3}} \tabularnewline
 \label{table/combat_score}
 \end{table}
 
-\section{Test de Moral}
+\hypertarget{breaktest}{\section{Test de Moral}}
 \label{break_test}
 
 Chaque unité du camp qui a perdu la Manche de Corps à Corps doit passer un test de Moral. L'ordre des tests est choisi par le propriétaire des unités. Un test de Moral est un test de Commandement avec un malus correspondant à la différence entre les deux Résultats de Combat. Par exemple, si les Résultats de Combat sont de 7 contre 4, les unités du camp perdant doivent passer un test de Moral avec un malus de -3. Si le test est raté, l'unité fuit. Si le test est réussi, l'unité reste engagée au Corps à Corps.
@@ -248,7 +249,7 @@ Si cette situation survient dans un combat multiple, les blessures infligées à
 
 Avant de déplacer les unités qui ont raté leur test de Moral, les unités ennemies au contact socle à socle avec elles peuvent choisir de poursuivre une des unités en fuite. Pour pouvoir poursuivre, une unité ne doit pas être engagée avec une unité ennemie qui ne va pas fuir, et doit être au contact de celle qu'elle veut poursuivre. Une unité peut décider de ne pas poursuivre des ennemis en fuite, à condition de réussir un test de Commandement. Si le test de Commandement est raté, l'unité devra poursuivre une des unités ennemies en fuite. Si le test de Commandement est réussi, l'unité peut faire au choix un \newfromWHB{Pivot Post-Combat} ou une Reformation Post-Combat. 
 
-\paragraph{\newfromWHB{Pivot Post-Combat}}
+\hypertarget{postcombatpivots}{\paragraph{\newfromWHB{Pivot Post-Combat}}}
 
 \newfromWHB{L'unité pivote sur son centre et peut réorganiser ses figurines avec la règle Au Premier Rang, lesquelles doivent bien sûr rester dans des positions réglementaires.} Ce mouvement est effectué après les mouvements de fuite et de poursuite des autres unités du combat.
 
@@ -299,6 +300,7 @@ Si une unité qui poursuit rencontre un bord de table, elle quitte le champ de b
 \newcommand{\figPursFrontofgreenunitclearofblueunit}{Front dégagé de l'unité bleue}
 
 \begin{figure}[!htbp]
+\hypertarget{pursuitsfigure}{
 \begin{minipage}{0.53\textwidth}
 \def\svgwidth{\textwidth}
 \input{pics/pursuit.pdf_tex}
@@ -310,11 +312,11 @@ b) La rotation de l'unité verte fait finir son front sur une unité ennemie, en
 c) La rotation de l'unité verte fait finir son front sur une unité alliée, en vert clair. Dans ce cas, la rotation doit être arrêtée à \distance{1} de l'unité alliée.\vspace*{10pt}\newline
 d) La rotation de l'unité verte fait finir une partie de ses figurines sur une autre unité, en bleu, alliée ou ennemie. Cependant, son front est dégagé, donc elle peut faire son mouvement de poursuite droit devant.}
 \label{figure/pursuit}
-\end{minipage}
+\end{minipage}}
 \end{figure}
 
 \clearpage
-\section{Reformation de Combat}
+\hypertarget{combatreform}{\section{Reformation de Combat}}
 
 Après que toutes les fuites et poursuites ont été résolues, les unités restant dans des Corps à Corps peuvent tenter de faire une Reformation de Combat. Les unités engagées sur plus d'un côté, par exemple de front et de flanc, ne peuvent jamais effectuer de Reformation de Combat. Les unités du perdant de la manche doivent réussir au préalable un test de Commandement pour pouvoir faire une Reformation de Combat, avec le même malus que le test de Moral (c'est-à-dire la différence de Résultat de Combat, à moins que l'unité ne soit Indomptable).
 

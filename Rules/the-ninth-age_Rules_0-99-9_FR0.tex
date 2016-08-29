@@ -6,6 +6,7 @@
 \newcommand{\version}{0.99.9}
 \newcommand{\frenchversion}{2.0}
 \newcommand{\specialrulesfooter}{Règles Spéciales}
+\newcommand{\summariesfooter}{Résumés}
 \newcommand{\tableofcontentsfooter}{Table des Matières}
 \hypersetup{pdftitle={T9A - \booktitle}}
 
@@ -13,12 +14,8 @@
 
 \input{../Layout/RB_titlepage.tex}
 
-\newpage
-
-\setlength\columnseprule{0.5pt}
-\hypertarget{toc}{\tableofcontents}
-\thispagestyle{empty}
-\setlength\columnseprule{0pt}
+\clearpage
+\input{chapters/RB_TOC.tex}
 
 \clearpage
 \input{chapters/RB_introduction.tex}
@@ -83,7 +80,7 @@
 \clearpage
 \input{chapters/RB_magical_items.tex}
 
-%\clearpage
-%\input{chapters/RB_summaries.tex}
+\clearpage
+\input{chapters/RB_summaries.tex}
 
 \end{document}

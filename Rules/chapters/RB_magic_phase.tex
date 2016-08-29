@@ -1,5 +1,5 @@
 
-\part{Phase de Magie}
+\hypertarget{magicphase}{\part{Phase de Magie}}
 
 Lors de la Phase de Magie, vos Sorciers peuvent lancer des sorts et votre adversaire peut tenter de les dissiper.
 
@@ -136,7 +136,7 @@ Le sort n'a pas de durée : les effets sont résolus une fois, puis le sort pren
 
 \newfromWHB{Les effets durent jusqu'à la fin de la partie ou jusqu'à ce qu'une condition décrite par le sort soit atteinte. Ces effets ne peuvent être supprimés par aucun autre moyen que cette condition. Si une unité affectée se divise en plusieurs unités, par exemple si un Personnage quitte l'unité, chacune des parties continue d'être affectée par le sort.} Les Personnages qui rejoignent une unité déjà affectée par le sort ne sont pas concernés.
 
-\paragraph{\remainsinplay}
+\hypertarget{remainsinplay}{\paragraph{\remainsinplay}}
 
 Les effets durent jusqu'à ce que le sort soit dissipé ou que le lanceur soit tué. Le sort peut être dissipé lors de chaque Phase de Magie suivant le lancement (voir le paragraphe \ref{dispel_remains_in_play_spells}, page \pageref{dispel_remains_in_play_spells}). \newfromWHB{Si une unité affectée se divise en plusieurs unités, par exemple si un Personnage quitte l'unité, chacune des parties continue d'être affectée par le sort. Dans ce cas, une dissipation réussie permet de faire disparaître le sort sur toutes les unités affectées. Les Personnages qui rejoignent une unité déjà affectée par le sort ne sont pas concernés.} Tant que le sort est actif, il ne peut pas être relancé par le même lanceur. \newfromWHB{Si le lanceur est tué, le sort est automatiquement dissipé et ses effets disparaissent à la première occasion où il aurait pu être normalement dissipé (voir la partie \ref{magic_phase_sequence}).}
 
@@ -155,7 +155,7 @@ La Phase de Magie est divisée en cinq étapes :
 5 & Fin de la phase. Les capacités prenant effet à la fin de la phase sont déclenchées. \tabularnewline
 \end{tabular}
 
-\subsection{Flux Magiques et Canalisation}
+\hypertarget{magicflux}{\subsection{Flux Magiques et Canalisation}}
 
 Pendant la Phase de Magie, les sorts sont lancés et dissipés avec des Dés de Magie, appelés différemment selon leur propriétaire. Le Joueur Actif dispose de Dés de Pouvoir tandis que le Joueur Réactif défend avec des Dés de Dissipation. Chaque joueur garde ses dés dans une réserve et peut piocher dedans pour lancer ou dissiper des sorts. Une réserve ne peut jamais contenir plus de \textbf{12} Dés de Magie, même temporairement\newfromWHB{, et aucun joueur ne peut utiliser plus de \textbf{12} Dés de Magie en une phase. De plus, ils ne peuvent ajouter qu'un maximum de \textbf{2} Dés de Magie à ceux générés par les Flux Magiques en une phase.}
 
@@ -171,7 +171,7 @@ Au début de la Phase de Magie, le Joueur Actif lance 2D6 pour le jet des Flux M
 Le Joueur Réactif ne sait pas si le Joueur Actif a l'intention de dissiper un sort de type \remainsinplay{} et doit prendre sa décision en premier. Il doit choisir s'il prend le risque de dépenser des Dés de Dissipation pour un sort que le Joueur Actif pourrait dissiper de lui-même, ou garder ses dés alors que le Joueur Actif pourrait décider de ne rien faire et mettre fin à la Phase de Magie, laissant en jeu le sort de type \remainsinplay{}.
 
 \newpage
-\section{Séquence de lancement d'un sort}
+\hypertarget{spellcastingsequence}{\section{Séquence de lancement d'un sort}}
 \label{spell_casting_sequence}
 
 Chacun des Sorciers non en fuite du Joueur Actif, ou chaque figurine avec un \boundspell{}, peut tenter de jeter chacun de ses sorts une fois par Phase de Magie.
@@ -295,16 +295,19 @@ Le Niveau de Puissance correspond à la valeur de lancement du sort. Si le sort 
 \newpage
 \section{Effets magiques particuliers}
 
-\subsection{Mouvement Magique}
+\hypertarget{magicalmove}{\subsection{Mouvement Magique}}
+\label{magicalmove}
 
 Tout mouvement réalisé pendant la Phase de Magie est un Mouvement Magique. Ce mouvement est effectué comme lors de l'étape des Autres Mouvements et suit les même restrictions. Les unités en fuite ou au Corps à Corps ne peuvent donc pas se déplacer. Toute action habituellement autorisée pendant cette étape peut être faite, comme une Roue, une Reformation, quitter ou rejoindre une unité, à l'exception d'une Marche Forcée. Un Mouvement Magique a toujours une distance limite précisée : par exemple, \og la cible peut faire un Mouvement Magique de \distance{12} \fg{}. Cette valeur est utilisée à la place de la valeur de Mouvement de la cible. Rappelons qu'il n'est pas possible de faire une Marche Forcée. Une unité ne peut faire qu'un seul Mouvement Magique par Phase de Magie.
 
-\subsection{Récupérer et Ressusciter des PVs}
+\hypertarget{recoverandraisewounds}{\subsection{Récupérer et Ressusciter des PVs}}
+\label{recoverandraisewounds}
 
 Certains sorts ou capacités permettent de récupérer des Points de Vie perdus pendant la bataille. La quantité de Points de Vie récupérés est notée dans la capacité  : \og Récupérer X PVs \fg{}. Si une unité contient plusieurs figurines, chaque figurine doit récupérer tous ses PVs perdus avant qu'une autre figurine ne puisse en récupérer à son tour. Les Personnages à l'intérieur des unités ne peuvent jamais récupérer de PVs grâce à une capacité qui fait récupérer des PVs à leur unité. Ils ne récupèrent des PVs que lorsqu'ils sont la seule cible du sort ou de la capacité. Récupérer des PVs ne peut jamais ramener à la vie des figurines retirées comme perte, ni permettre à une figurine de dépasser ses PVs initiaux. Tout PV récupéré en excès est perdu.
 
 Ressusciter des PVs utilise les mêmes règles que Récupérer des PVs, à l'exception que cela peut ramener à la vie des figurines retirées comme perte. D'abord, les figurines de l'unité, sauf les Personnages, récupèrent tous leurs PVs perdus, puis les figurines sont ramenées à la vie dans l'ordre suivant : Champion, Porte-Étendard, Musicien et enfin les figurines ordinaires. \newfromWHB{Un Porte-Étendard capturé ne peut pas être ressuscité.} Un effet avec la règle Une seule Utilisation déjà utilisé, ou un équipement détruit ne peut être récupéré de cette manière. Chaque figurine relevée doit récupérer la totalité de ses PVs avant qu'une autre figurine ne soit relevée. Cela ne peut pas permettre à une unité de dépasser ses effectifs initiaux. Tout PV ressuscité en excès est perdu.
 
-\subsection{Unités invoquées}
+\hypertarget{summonedunits}{\subsection{Unités invoquées}}
+\label{summonedunits}
 
 Les unités invoquées sont des unités créées pendant la partie. Toutes les figurines d'une unité nouvellement invoquée doivent être déployées à portée du sort ou de la capacité. Si l'unité est invoquée grâce à un sort de type \ground{}, au moins une des figurines doit être déployée sur le point ciblé et toutes les autres figurines doivent être déployées à portée du sort. De plus, les figurines invoquées doivent être placées au moins à \distance{1} des autres unités et des Terrains Infranchissables. Si l'unité ne peut pas être déployée en entier, alors aucune figurine ne doit être déployée. Une fois invoquées, ces unités comptent comme des unités ordinaires, dans le camp du lanceur du sort ou de la capacité. Elles ne donnent aucun Point de Victoire à l'adversaire quand elles sont détruites.

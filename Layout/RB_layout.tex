@@ -109,7 +109,7 @@
 
 \renewcommand{\headrulewidth}{0pt}
 \fancyfoot[R]{\normalfontsize\textcolor{black!30}{%
-\hyperlink{specialrulestable}{\specialrulesfooter}
+\hyperlink{specialrulestable}{\specialrulesfooter} \hspace{1cm} \hyperlink{summaries}{\summariesfooter}
 }}
 \fancyfoot[L]{\normalfontsize\textcolor{black!30}{%
 \hyperlink{toc}{\tableofcontentsfooter}
@@ -166,14 +166,16 @@
 
 %%% TOC %%%
 
+\renewcommand{\cfttoctitlefont}{\hspace*{\fill}\Hugefontsize\antiquefont\centering}
+\renewcommand{\cftaftertoctitle}{\hspace*{\fill}}
 \setlength{\cftsecnumwidth}{2em} % Set length of number width in ToC for sections
 \setlength{\cftbeforepartskip}{1em} % small blank before parts in ToC
 \setlength{\cftbeforesecskip}{0em} % no blank before sections in ToC
-\renewcommand{\cftpartfont}{\footnotesize\bfseries} % parts text: right aligned and bold
-\renewcommand{\cftpartpagefont}{\footnotesize\bfseries} % parts page number: bold
+\renewcommand{\cftpartfont}{\largefontsize\bfseries} % parts text: right aligned and bold
+\renewcommand{\cftpartpagefont}{\largefontsize\bfseries} % parts page number: bold
 %\renewcommand{\cftpartleader}{} % no dots between text and page numbers
-\renewcommand{\cftsecfont}{\scriptsize} % sections text: right aligned and smaller
-\renewcommand{\cftsecpagefont}{\scriptsize} % sections page numbers: smaller
+\renewcommand{\cftsecfont}{\normalfontsize} % sections text: right aligned and smaller
+\renewcommand{\cftsecpagefont}{\normalfontsize} % sections page numbers: smaller
 %\renewcommand{\cftsecleader}{} % no dots between text and page numbers
 \renewcommand\numberline[1]{} % remove section numbers: just leave text + page number
 \cftsetindents{section}{1em}{0em} % reduce margins
@@ -181,5 +183,5 @@
 \makeatletter\cftsetrmarg{\@pnumwidth} % align the titles that are on 2 lines on the page numbers
 \setcounter{tocdepth}{1} % only display parts and sections, not below
 
-\renewcommand*{\multicolumntoc}{3} % table of contents on 3 columns
+\renewcommand*{\multicolumntoc}{2} % table of contents on 3 columns
 
