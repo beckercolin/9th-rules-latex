@@ -58,9 +58,9 @@
 	magiclevel=3,
 	magicpaths={\blackmagic{}, \anyofthebattlemagic{}\refsymbol{}},
 	options={
-		\magiclevel{4}=30,
-		\cultofyema{}=30,
 		\magicalitemsallowance{}=\upto{}<100,
+		\cultofyema{}=30,
+		\magiclevel{4}=30,
 	},
 	mounts={
 		\elvenhorse{}=20,
@@ -93,8 +93,8 @@
 	commonspecialrules={\killerinstinct{},\lightningreflexes{}},
 	armour={\la},
 	options={
-		\bsb{}=25,	
 		\magicalitemsallowance{}=\upto{}<50,
+		\bsb{}=25,	
 		\onechoiceonly{
 			\cultofnabh{}=10,
 			\cultofyema{}=10,
@@ -144,8 +144,8 @@
 		\specialrules{\tempspecialrules}
 
 		\def\tempoptions{%
-			\bsb{}=25,			
 			\magicalitemsallowance{}=\upto{}<50,
+			\bsb{}=25,			
 			\la{}=4,
 			\executionersblade{}=15,
 			\hspace*{0.3cm}\seeexecutionerspecialunit{}=,		
@@ -163,8 +163,8 @@
 		\specialrules{\tempspecialrules}
 
 		\def\tempoptions{%
-			\bsb{}=25,			
 			\magicalitemsallowance{}=\upto{}<50,
+			\bsb{}=25,			
 			\shield{}=3,
 			\la{}=4,
 			\gladiatorweapons{}=15,
@@ -194,9 +194,9 @@
 	magiclevel=1,
 	magicpaths={\blackmagic{}, \anyofthebattlemagic{}\refsymbol{}},
 	options={
-		\magiclevel{2}=25,
-		\cultofyema{}=20,
 		\magicalitemsallowance{}=\upto{}<50,
+		\cultofyema{}=20,
+		\magiclevel{2}=25,
 	},
 	mounts={
 		\elvenhorse{}=15,
@@ -215,10 +215,9 @@
 	unitsize=1,
 	commontype=\elvencommonrules{},
 	commonspecialrules={\killerinstinct{},\lightningreflexes{}},
-	unitrules={\unitrule{\professionalcourtesy}{\professionalcourtesyrule}},	
 	options={
-		\cultofnabh{}=15,
 		\magicalitemsallowance{} \notmagicalarmour{}=\upto{}<50,
+		\cultofnabh{}=15,
 		\pw{}=6,
 	},
 	additional={
@@ -278,8 +277,8 @@
 	basesize=25x50,
 	armour={\mountsprotection{6}},
 	options={%
-		\mountsprotection{5}=10,
 		\lighttroops{}\refsymbol{}=25,
+		\mountsprotection{5}=10,
 	},
 	additional={\refsymbol{} \elvenhorsenote{}},
 }
@@ -332,7 +331,7 @@
 	commontype=\elvencommonrules{},
 	commonspecialrules={\killerinstinct{} \only{\crew},\lightningreflexes{} \only{\crew}},
 	specialrules={\stupidity{},\impacthits{+1}},
-	weapons={\lance{},\repeatercrossbow{} \only{\crew}},
+	weapons={\lance{} \only{\crew},\repeatercrossbow{} \only{\crew}},
 	armour={\ha{}, \mountsprotection{5}},
 }
 
@@ -420,8 +419,8 @@
 	commonspecialrules={\killerinstinct{},\lightningreflexes{}},
 	armour={\la{}, \shield{}},
 	options={
-		\spear{}=\permodel{}<1,
 		\ha{}=\permodel{}<2,
+		\spear{}=\permodel{}<1,
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
 }
@@ -460,9 +459,9 @@
 	commonspecialrules={\killerinstinct{},\lightningreflexes{}},
 	armour={\la{}, \innatedefence{5}},
 	options={
-		\pw{}=\permodel{}<1,
-		\repeaterhandbow{}=\permodel{}<1,
 		\vanguard{}\refsymbol{}=\permodel{}<1,
+		\repeaterhandbow{}=\permodel{}<1,
+		\pw{}=\permodel{}<1,
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir},
 	additional={%
@@ -648,7 +647,7 @@
 	commontype=\elvencommonrules{},
 	commonspecialrules={\killerinstinct{} \only{\crew},\lightningreflexes{} \only{\crew}},
 	specialrules={\stupidity{},\impacthits{+1}},
-	weapons={\lance{},\repeatercrossbow{} \only{\crew}},
+	weapons={\lance{} \only{\crew},\repeatercrossbow{} \only{\crew}},
 	armour={\ha{}, \mountsprotection{5}},
 }
 
@@ -729,12 +728,12 @@
 	specialrules={\scout{},\skirmisher},
 	weapons={\repeatercrossbow},
 	options={%
+		\poisonedattacks{} (\closecombatonly{})=\permodel{}<1,
 		\la{}=\permodel{}<1,
 		\weapononechoice{
 			\pw{}=\permodel{}<1,
 			\gw{}=\permodel{}<2,
 		},
-		\poisonedattacks{} (\closecombatonly{})=\permodel{}<1,
 	},
 	commandgroup={champion=10},
 }
@@ -812,7 +811,7 @@
 	commontype=\elvencommonrules{},
 	commonspecialrules={\killerinstinct{} \only{\crew},\lightningreflexes{} \only{\crew}},
 	specialrules={\impacthits{+1}},
-	weapons={\lightlance{},\repeatercrossbow{} \only{\crew}},
+	weapons={\lightlance{} \only{\crew},\repeatercrossbow{} \only{\crew}},
 	armour={\la{}, \mountsprotection{5}},
 	additional={%
 		\setlength{\columnseprule}{0.5pt}
@@ -853,3 +852,4 @@
 	unitequipment={\equipmentdef{\elvenboltthrower}{\elvenboltthrowerrule}},
 	unitrules={\unitrule{\repeatingshots}{\repeatingshotsrule}},
 }
+
