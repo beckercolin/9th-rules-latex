@@ -91,7 +91,7 @@ Une blessure avec la règle \armourpiercing{6} pour chaque test raté.
 1 & Début de la Phase de Magie. Lancez les dés pour les \hyperlink{magicflux}{\textbf{Flux de Magie}} et la \hyperlink{magicflux}{\textbf{\channel}}. \tabularnewline
 2 & Les sorts de type \hyperlink{remainsinplay}{\textbf{\remainsinplay}} peuvent être dissipés. \tabularnewline
 3 & Le Joueur Actif peut \hyperlink{spellcastingsequence}{\textbf{tenter de lancer un sort}}. \tabularnewline
-4 & Répétez les étapes 2 et 3 jusqu'à ce qu'aucun joueur ne tente quoique ce soit. \tabularnewline
+4 & Répétez les étapes 2 et 3 jusqu'à ce qu'aucun joueur ne tente quoi que ce soit. \tabularnewline
 5 & Fin de la Phase de Magie. Les capacités prenant effet à la fin de la phase sont déclenchées. \tabularnewline
 \end{tabular}
 
@@ -100,7 +100,7 @@ Une blessure avec la règle \armourpiercing{6} pour chaque test raté.
 
 \begin{tabular}{c|m{7.4cm}}
 1 & Le Joueur Actif indique quel Sorcier tente de lancer quel sort. Il doit préciser s'il opte pour une version améliorée du sort, ainsi que la cible du sort et de celle de l'attribut si nécessaire. Il indique enfin le nombre de Dés de Pouvoir utilisés, entre 1 et 5. \tabularnewline
-2 & Le Joueur Actif lance le nombre de Dés de Pouvoir annoncé, en les retirant de sa réserve. Additionnez les résultats des dés avec les modificateurs de lancer, tels qu'un Pouvoir Irrésistible, pour obtenir le total de lancement. \tabularnewline
+2 & Le Joueur Actif lance le nombre de Dés de Pouvoir annoncé, en les retirant de sa réserve. Additionnez les résultats des dés avec les modificateurs magiques (tels qu'un Pouvoir Irrésistible) pour obtenir le total de lancement. \tabularnewline
 3 & La tentative de lancement réussit si le total de lancement est \textbf{supérieur ou égal} à la valeur de lancement. Sinon, le lancement de sort échoue et le lanceur subit une \lostfocus{}. \tabularnewline
 \end{tabular}
 
@@ -108,8 +108,8 @@ Une blessure avec la règle \armourpiercing{6} pour chaque test raté.
 \paragraph{Tentative de Dissipation}
 
 \begin{tabular}{c|m{7.4cm}}
-1 & Le Joueur Réactif indique, s'il le souhaite, un Sorcier n'étant pas en fuite pour tenter la dissipation, et annonce combien de Dés de Dissipation il va utiliser. Il doit utiliser au moins un dé, et jusqu'à la totalité de sa réserve. Il est possible de tenter une dissipation même sans avoir de Sorcier. \tabularnewline
-2 & Le Joueur Réactif lance le nombre de Dés de Dissipation annoncé, en les retirant de sa réserve. Additionnez les résultats des dés avec les modificateurs de dissipation, tels qu'un Pouvoir Irrésistible, pour obtenir le total de dissipation. \tabularnewline
+1 & Le Joueur Réactif peut désigner un Sorcier n'étant pas en fuite pour tenter la dissipation et annonce combien de Dés de Dissipation il va utiliser. Il doit utiliser au moins un dé et jusqu'à la totalité de sa réserve. Il est possible de tenter une dissipation même sans avoir de Sorcier. \tabularnewline
+2 & Le Joueur Réactif lance le nombre de Dés de Dissipation annoncé, en les retirant de sa réserve. Additionnez les résultats des dés avec les modificateurs magiques (tels qu'un Pouvoir Irrésistible) pour obtenir le total de dissipation. \tabularnewline
 3 & La tentative de dissipation réussit si le total de dissipation est \textbf{supérieur ou égal} au total de lancement. Le sort est alors dissipé et le lancement échoue. Sinon, la tentative de dissipation échoue et le Sorcier à l'origine de cette tentative subit une \lostfocus{}. \tabularnewline
 \end{tabular}
 
@@ -124,7 +124,7 @@ Une blessure avec la règle \armourpiercing{6} pour chaque test raté.
 \noindent Maître Sorcier, Niveau 3 à 4 : +2
 
 \vspace*{3pt}
-\noindent \overwhelmingpower{} : +1D3 +NDU.
+\noindent \overwhelmingpower{} : + 1D3 + NDU.
 
 \vspace*{3pt}
 \noindent La somme des modificateurs hors \overwhelmingpower{} ne peut pas dépasser +3.
@@ -321,9 +321,9 @@ Couvert Lourd & -2 \tabularnewline
 
 \begin{tabular}{c|p{7.4cm}}
 1 & L'Attaquant \hyperlink{distributehits}{Répartit les touches}. \tabularnewline
-2 & L'Attaquant lance les jets pour blesser. Passez à l'étape suivante si réussis. \tabularnewline
-3 & Le Défenseur tente ses Sauvegardes d'Armure. Passez à l'étape suivante si ratés. \tabularnewline
-4 & Le Défenseur tente ses sauvegardes spéciales. Passez à l'étape suivante si ratés. \tabularnewline
+2 & L'Attaquant lance les jets pour blesser. Passez à l'étape suivante pour les jets réussis. \tabularnewline
+3 & Le Défenseur tente ses Sauvegardes d'Armure. Passez à l'étape suivante pour les jets ratés. \tabularnewline
+4 & Le Défenseur tente ses sauvegardes spéciales. Passez à l'étape suivante pour les jets ratés. \tabularnewline
 5 & Le Défenseur retire les PVs et les pertes. \tabularnewline
 6 & Le Défenseur passe éventuellement un \hyperlink{panictest}{Test de Panique}. \tabularnewline
 \end{tabular}
@@ -457,7 +457,7 @@ Attaque de l'Arrière & \textbf{+2} ou \textbf{+3} \tabularnewline
 \textbf{Décor} & \textbf{Mouvement} & \textbf{Couvert} & \textbf{Autres} \tabularnewline
 \hyperlink{fields}{Champ} &
 TD (1) pour CCCM et figurines avec \flamingattacks{}. &
-- &
+Offre un Couvert Léger si au moins de la moitié de l'Empreinte au Sol est dans le Champ. Ne s'applique pas à une \largetarget{}. &
 Donne \flammable{}. \tabularnewline
 \hyperlink{hills}{Colline} &
 - &

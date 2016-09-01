@@ -1,0 +1,46 @@
+\newgeometry{margin=1in}
+
+\begin{titlepage}
+\begin{center}
+
+\ifdef{\booktitle}{}{\newcommand{\booktitle}{Missing title}}
+\ifdef{\version}{}{\newcommand{\version}{Missing version}}
+
+{\antiquefont\fontsize{40}{48}\selectfont\noindent\labels@fantasybattles
+
+\labels@NinthAge}
+
+\vspace*{0.5cm}
+\ifdef{\booklogo}{%
+\includegraphics[height=10cm]{\booklogo}%
+}{%
+\includegraphics[height=10cm]{../Layout/pics/logo_9th.png}%
+}
+
+\vspace*{-1cm}
+{\antiquefont\fontsize{50}{60}\selectfont \booktitle
+\vspace{0.4cm}
+
+\fontsize{14}{16.8}\selectfont Beta v\version{} - \FAQversion{} - \today{}}
+
+\ifdef{\frenchversion}{{\fontsize{14}{16.8}\selectfont \vspace{0.2cm}\noindent\texttt{VF \frenchversion}}}{}
+\vfill
+
+\begin{tabular}{@{}m{2cm}@{\hskip 20pt}m{13cm}@{}}
+\includegraphics[width=2cm]{../Layout/pics/seal_9th.png} &
+{\fontsize{10}{12}\selectfont \textcolor{black!50}{\noindent\labels@frontpagecredits}}
+
+\ifdef{\frontpageaddstuff}{{\fontsize{10}{12}\selectfont \noindent\textcolor{black!50}{\frontpageaddstuff}}}{}
+
+\vspace*{10pt}
+\noindent{\fontsize{10}{12}\selectfont \textcolor{black!50}{\labels@license}}
+\tabularnewline
+\end{tabular}
+
+
+\end{center}
+
+
+\end{titlepage}
+
+\restoregeometry

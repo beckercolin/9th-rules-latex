@@ -25,6 +25,7 @@ Un Personnage qui rejoint une unité est considéré comme faisant partie intég
 Si toutes les figurines ordinaires d'une unité combinée sont tuées, laissant au moins un Personnage sans troupes, les Personnages survivants forment toujours une unité, qui est considérée comme étant la même unité qu'auparavant pour tous les effets en cours (comme les sorts de type \lastsoneturn{}) et pour la Panique. En effet, l'unité n'est pas considérée comme détruite, mais il se peut les Personnages aient à passer un test en raison de Lourdes Pertes.
 
 \paragraph{Quitter une unité Combinée}
+\label{leaving_a_combined_unit}
 
 Un Personnage peut quitter une unité combinée au cours de l'étape des Autres Mouvements si l'unité est en mesure de se déplacer, c'est-à-dire si elle n'est pas engagée au Corps à Corps, ne s'est pas déjà déplacée au cours de cette étape, n'est pas en train de fuir, etc. Si vous désirez effectuer une Marche Forcée et qu'une unité ennemie est à moins de \distance{8}, passez un test de Marche Forcée pour l'ensemble de l'unité avant de bouger une figurine. Une unité quittée par un ou plusieurs Personnages n'est pas considérée comme ayant elle-même bougé (pour tirer, par exemple). Lorsqu'il quitte son unité, un Personnage peut se déplacer à travers elle et sortir par n'importe quel bord de l'unité. Il peut faire un mouvement de Vol s'il dispose de cette règle. Le Personnage compte comme faisant partie intégrante de l'unité jusqu'à ce qu'il l'ait physiquement quittée. Cela signifie qu'il est affecté par des éventuelles altérations du Mouvement touchant l'unité au cours de sa sortie. Si le Personnage ne possède pas assez de mouvement pour être placé à plus d'\distance{1} de l'unité, il ne peut pas la quitter. Un Personnage ne peut pas quitter et rejoindre la même unité durant la même phase de jeu.
 
@@ -33,6 +34,7 @@ Un Personnage peut quitter une unité combinée au cours de l'étape des Autres 
 Un Personnage peut aussi quitter une unité combinée en chargeant hors de celle-ci. Pour ceci, déclarez une charge avec le Personnage pendant l'étape de Déclaration des Charges, comme vous le feriez pour n'importe quelle unité. Si une telle manœuvre est réalisée, l'unité elle-même ainsi que d'éventuels autres Personnages dans l'unité ne peuvent pas déclarer de charge dans le même Tour de Joueur. \newfromWHB{Les tirs résultant d'une réaction à une charge de Personnage sortant d'une unité combinée sont tous alloués au Personnage.} Lorsqu'un Personnage charge hors d'une unité, il utilise sa propre valeur de Mouvement, peut utiliser un mouvement de Vol s'il dispose de la règle associée, et est affecté par des éventuelles altérations du Mouvement touchant l'unité pour son mouvement de charge. Si la charge est réussie, sortez le Personnage de l'unité et chargez normalement. Il ignore les figurines de l'unité qu'il quitte pour ce mouvement de charge. Si la charge est ratée, le Personnage réalise un déplacement de charge ratée qui le fait sortir de l'unité. Si ce mouvement est trop court pour positionner le Personnage à plus d'\distance{1} de son unité d'origine, il ne bouge pas, et l'unité est considérée comme ayant raté une charge.
 
 \paragraph{Distribuer les touches sur une Unité Combinée}
+\label{distributing_hits_at_combined_units}
 
 Quand une attaque touche une unité combinée, il y a deux possibilités pour distribuer les touches :
 
@@ -112,6 +114,7 @@ Quand le Personnage $ P_{4} $ rejoint l'unité, le Musicien (\textit{Mu}) doit �
 \end{figure}
 
 \hypertarget{makeway}{\subsection{Faites Place}}
+\label{make_way}
 
 \newfromWHB{À la troisième étape d'une Manche de Corps à Corps (voir le paragraphe \ref{combat_round_sequence}, page \pageref{combat_round_sequence}), tout Personnage placé au premier rang et qui n'est pas en contact socle à socle avec une figurine ennemie peut être déplacé de manière à entrer en contact avec une figurine ennemie au contact de l'avant de l'unité du Personnage. Pour ceci, échangez les positions de ce Personnage avec une ou des figurines non-Personnage de son unité. Une figurine avec un Socle Incompatible ne peut jamais utiliser cette règle.}
 
@@ -120,6 +123,7 @@ Quand le Personnage $ P_{4} $ rejoint l'unité, le Musicien (\textit{Mu}) doit �
 \label{thegeneral}
 
 \subsection{Choisir le Général}
+\label{choosing_the_general}
 
 Toutes les armées doivent être dirigées par un Général. Le Général est le Personnage avec le plus haut Commandement de votre armée, sauf Porteur de la Grande Bannière et Personnages avec la règle \notaleader{}. Si plusieurs Personnages se disputent le plus haut Commandement, vous êtes libre de choisir lequel est votre Général\newfromWHB{, mais cela doit être mentionné dans votre Liste d'Armée}. Le Général de l'armée possède la règle \inspiringpresence{}.
 
@@ -159,6 +163,7 @@ Si un Défi a été lancé, le joueur adverse peut choisir l'un de ses propres P
 Si un Défi n'est pas relevé, on le dit refusé. Dans ce cas, le joueur qui a lancé le Défi désigne l'un des Personnages de son adversaire qui aurait pu accepter le Défi, s'il y en a un. Les Champions ne peuvent pas être désignés. \newfromWHB{Le Commandement de ce Personnage est réduit à 0 et ni lui, ni son unité ne peuvent utiliser sa règle \stubborn{} (s'il en disposait) jusqu'à la fin du Tour de Joueur au cours duquel le combat se termine, ou jusqu'à ce que ce qu'il relève ou lance un Défi. Il ne peut par ailleurs porter aucune Attaque de Corps à Corps pendant cette Manche de Corps à Corps. Si c'est le Porteur de la Grande Bannière, il perd la règle \holdyourground{} et n'ajoute pas +1 au Résultat de Combat de son camp pour cette manche.}
 
 \subsection{Relever un Défi}
+\label{fighting_a_challenge}
 
 Si un Défi est relevé, la figurine à l'origine du Défi et celle qui l'a relevé \newfromWHB{sont considérées comme étant au contact socle à socle, même si leurs socles ne se touchent pas physiquement}. Elles doivent allouer toutes leurs attaques contre leur vis-à-vis. Cela comprend les Attaques Spéciales réalisées normalement contre les unités, telles que le \stomp{}, l'\breathweapon{}, les \impacthits{} et les \grindingattacks{}, qui sont dirigées intégralement contre l'autre combattant. Dans le cas du \stomp{}, ce dernier doit être d'un Type de Troupe vulnérable au \stomp{}, sinon l'attaque est perdue. Aucune autre figurine ne peut allouer d'attaques contre les deux combattants. Aucune attaque ou touche ne peut être distribuée sur eux. Si un des combattants attaque sur plusieurs paliers d'Initiative (comme par exemple un cavalier et sa monture, ou une figurine qui possède la règle \stomp{}) et élimine son adversaire avant d'avoir pu porter toutes ses attaques, \newfromWHB{les attaques restantes peuvent être dirigées sur la figurine tuée, comme si elle était encore vivante et en contact socle à socle, de façon à obtenir des points de Carnage}.
 

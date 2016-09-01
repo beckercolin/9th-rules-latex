@@ -1,0 +1,387 @@
+\def\languageisfrench{}
+\input{../Layout/FAQ_layout.tex}
+
+% Care to use the latest .tex files for up-to-date references
+\externaldocument{../Rules/the-ninth-age_Rules_0-99-9_FR0}
+\externaldocument{../Paths/the-ninth-age_Paths_0-99-9_FR0}
+
+\newcommand{\booktitle}{FAQ}
+\newcommand{\version}{0.99.9}
+\newcommand{\FAQversion}{Révision 5}
+\newcommand{\frenchversion}{1.0}
+\hypersetup{pdftitle={T9A - \booktitle}}
+
+\begin{document}
+
+\input{../Layout/FAQ_titlepage.tex}
+
+\clearpage
+\section{Comment utiliser ce document ?}
+
+Nous nous efforçons de vous fournir des documents de la meilleure qualité possible, mais des erreurs d'inadvertance ou des conséquences inattendues d'interactions entre les règles finissent toujours par apparaître. Cette Foire Aux Questions a été créée pour répondre à certaines questions parmi les plus posées ou les plus compliquées.
+
+\section{Livre de Règles}
+
+\questiontitle{Règle du Pouce d'Écart}{\pageref{unit_spacing}}
+
+\QandA{%
+À quelle distance des autres unités et des Terrains Infranchissables peuvent s'approcher les figurines qui se déplacent mais ne chargent pas ?
+}{%
+Les unités ne peuvent pas s'approcher à moins de 0,5\distance{} des autres unités ou des Terrains Infranchissables pendant un déplacement, et doivent finir leur mouvement à plus de \distance{1} de ceux-ci. Si une unité se trouve à moins de \distance{1} d'un obstacle avant de commencer à se déplacer (ce qui peut arriver après des mouvements de charge), elle ignore la Règle du Pouce d'Écart jusqu'à ce qu'elle soit à nouveau à plus de \distance{1}. Vous ne décalez jamais les unités dan ce cas.
+}
+
+\questiontitle{Utilisation des Caractéristiques non modifiées}{\pageref{unmodified_characteristics}}
+
+\QandA{%
+Quelles types de changement de Caractéristiques comptent pour les Caractéristiques non modifiées ?
+}{%
+Les améliorations faites lors de la construction de la Liste d'Armée qui ne sont pas des équipements (Objets Magiques, Armes, Armures, etc...) ne comptent pas comme des modificateurs et sont inclues dans les Caractéristiques non modifiées. Typiquement, les améliorations en \og vétérans \fg{} ou équivalent sont pris en compte pour obtenir les Caractéristiques non modifiées.
+}
+
+\questiontitle{Mouvement de charge}{\pageref{move_chargers}}
+
+\QandA{%
+Peut-on entrer en contact socle à socle avec plus d'une unité ennemie lors d'un Mouvement de charge ?
+}{%
+Oui, mais \textbf{uniquement} si il n'y a aucun autre moyen pour l'unité de réussir sa charge. L'unité en charge doit arriver au contact de la cible initiale avant d'entrer en contact avec une autre unité ennemie, ou entrer en contact avec les deux simultanément. Toute unité qui est chargée de cette manière doit déclarer une Réaction à la charge.
+}
+
+\questiontitle{Aligner les unités}{\pageref{aligning_units}}
+
+\QandA{%
+Un mouvement d'Alignement peut-il se faire à l'opposé de l'ennemi pour faire de la place pour l'unité ennemie en charge ?
+}{%
+Non. Un mouvement d'Alignement doit toujours se faire vers l'ennemi.
+}
+
+\questiontitle{Chemin bloqué}{\pageref{blocked_path}}
+
+\QandA{%
+Est-ce qu'un mouvement de Chemin bloqué peut mener une unité au contact de plusieurs ennemis ?
+}{%
+Oui. L'unité peut entrer au contact de plus d'une unité si un mouvement droit devant provoque cette situation. Ces unités seront alors chargées et feront toutes une Reformation de Combat pour les aligner à l'unité qui charge.
+}
+
+\questiontitle{Types de sorts}{\pageref{spell_types}}
+
+\QandA{%
+Un sort donnant la règle \frenzy{} la donne-t-il au cavalier et à sa monture ?
+}{%
+Oui. À moins que le contraire ne soit précisé, comme les sorts de type \focused{}, tous les effets des sorts sont appliqués à tous les éléments des figurines qu'ils ciblent.
+}
+
+\questiontitle{Distance et déplacement des unités en poursuite}{\pageref{pursuit_distance_and_pursuing_units}}
+
+\QandA{%
+Lorsqu'une unité en poursuite impacte une unité ennemie, à quel moment dois-je déterminer dans quel arc se trouve mon unité ?
+}{%
+Déterminez de quel coté de la cible la charge se fera avant le pivot initial. Ceci s'applique également pour les figurines avec la règle \randommovement{}.
+}
+
+\questiontitle{Personnage monté}{\pageref{character_mounts}}
+
+\QandA{%
+Un Personnage monté sur un \monster{} peut-il utiliser sa propre Sauvegarde d'Armure ?
+}{%
+Non. Les \riddenmonsters{} ne peuvent utiliser que la Sauvegarde d'Armure de la monture.
+}
+
+\questiontitle{Armes de Corps à Corps}{\pageref{close_combat_weapons}}
+
+\QandA{%
+Est-ce que les règles des Armes de Corps à Corps s'appliquent aux Armes spécifiques de Corps à Corps des Livres d'Armée ?
+}{%
+Oui. Cela signifie que les règles données pour toutes les Armes de Corps à Corps, du Livre de Règles et des Livres d'Armée, ne s'appliquent que lorsque l'arme en question est maniée. Elles ne s'appliquent pas aux Attaques Spéciales comme le \stomp{} ou quand une autre arme est utilisée. Notez que les bonus de Sauvegarde d'Armure offerts par des Armes de Corps à Corps fonctionnent aussi contre les Attaques à Distance.
+}
+
+\questiontitle{Catapulte (\distance{X})}{\pageref{catapult}}
+
+\QandA{%
+Quelle est la cible d'une Arme d'Artillerie de type \catapult{} ?
+}{%
+Toute unité qui se trouve au moins partiellement sous la position initiale du Gabarit est considéré comme étant ciblée par l'attaque. C'est principalement pertinent pour une unité qui possède plusieurs Attaques de Tir, dont une \catapult{} : toutes les figurines de l'unité doivent choisir la même cible, donc le Gabarit doit être au moins partiellement positionné au dessus de la cible.
+}
+
+\questiontitle{Distribuer les touches sur une Unité Combinée}{\pageref{distributing_hits_at_combined_units}}
+
+\QandA{%
+Un Champion compte-t-il comme une figurine ordinaire pour la répartition des touches sur un Personnage ?
+}{%
+Oui, ce qui signifie qu'un Champion et 4 figurines ordinaires classiques sont suffisantes pour protéger un Personnage.
+}
+
+\questiontitle{\frontrank{}}{\pageref{front_rank}}
+
+\QandA{%
+Certains Personnages peuvent perdre la règle \frontrank{}. Où puis-je le placer dans une unité ?
+}{%
+Les figurines qui perdent la règle \frontrank{} ignorent seulement le besoin d'être placées aussi à l'avant de l'unité que possible. Elles peuvent être placées n'importe où dans l'unité tant que les règles habituelles sur la formation des unités (un seul rang incomplet, pas de trous dans la formation, etc.) sont respectées. Les figurines avec la règle \frontrank{} ont la priorité pour le positionnement à l'avant de l'unité. Les autres règles concernant le fait d'avoir rejoint une unité, telles que bouger au sein d'une unité lors d'un Mouvement Simple, d'une Marche Forcée, d'une Reformation ou d'une Roue, ou encore comment retirer les pertes, la compatibilité des socles, etc., s'appliquent toujours.
+}
+
+\questiontitle{Faites Place}{\pageref{make_way}}
+\QandA{%
+Si une unité est chargée de flanc de telle sorte que l'avant de celle-ci est coin à coin avec l'ennemi, un Personnage peut-il utiliser la règle Faites Place ?
+}{%
+Non.
+}
+
+\questiontitle{Relever un Défi}{\pageref{fighting_a_challenge}}
+
+\QandA{%
+Si une figurine en Défi est retiré comme perte avant que son adversaire n'ai eu la possibilité d'attaquer, par exemple si cette figurine était un Champion dans une unité qui a été annihilée, l'adversaire peut-il quand même attaquer pour avoir le bonus de Carnage ?
+}{%
+Oui, tant que cette figurine a été retirée comme perte pendant la Phase de Corps à Corps.
+}
+
+\questiontitle{Champion}{\pageref{champion}}
+
+\QandA{%
+Peut-on Répartir des touches sur un Champion ?
+}{%
+Non, on ne peut pas répartir de touches sur un Champion. Notez bien la différence entre \og Répartir des touches \fg{} et \og Allouer des attaques \fg{}. Les touches sur les figurines ordinaires d'une unité avec un Champion sont réparties sur les figurines ordinaires non-Champion. Cela inclut les touches de Gabarit. Les Champions ne sont pas des Personnages, ils ne suivent donc pas les règles de répartition des touches sur les Personnages dans des unités. Les seules manières de tuer un Champion sont : un sort de type \focused{}, une attaque qui touche toutes les figurines d'une unité (comme le sort \naturespellsix{}) ou l'allocation d'attaques au Corps à Corps.
+}
+
+\questiontitle{Choisir le Général de l’armée}{\pageref{choosing_the_general}}
+
+\QandA{%
+Lorsque l'on choisit le Général de l’armée, on doit sélectionner la figurine avec le plus haut Commandement. Cela inclut-il les modificateurs ?
+}{%
+Oui, les modificateurs provenant des équipements ou des améliorations des figurines sont pris en compte pour choisir le Général. Toutefois, comme le Général est déterminé lors de la création de l'armée, les modificateurs qui sont appliqués uniquement dès le début de la bataille ne peuvent pas être utilisé. Cela inclut la modification du Commandement par des sorts et par le fait de rejoindre une unité qui transporte une Bannière de Discipline.
+}
+
+\questiontitle{Bâtiment}{\pageref{buildings}}
+
+\QandA{%
+Puis-je choisir de ne sélectionner aucune figurine pour les Assaillants ou les Défenseurs d'un combat dans un Bâtiment ?
+}{%
+Non. Vous devez choisir autant de figurines que possible selon le type de l'unité.
+}
+
+\questiontitle{\channel}{\pageref{channel_special_rule}}
+
+\QandA{%
+Est-ce que plusieurs instances de la règle \channel{} sur une même figurine s'additionne ?
+}{%
+Plusieurs instances de la règle sur un même élément de figurine n'ont pas d'effet additionnels par rapport à une seule instance. Cependant, deux éléments de figurine sur le même socle, tout deux avec la règle \channel{} (par exemple un Sorcier sur une monture qui est aussi un Sorcier), ajouteront deux +1 aux jets de \channel{} pour un total de +2.
+}
+
+\questiontitle{\daemonicinstability}{\pageref{daemonicinstability}}
+
+\QandA{%
+Comment l'\daemonicinstability{} interagit-elle avec les règles Indomptable et \stubborn{} ?
+}{%
+Une unité avec la règle \daemonicinstability{} qui possède aussi la règle \stubborn{} ou est Indomptable ne subira aucun modificateur négatif pour son test d'\daemonicinstability{} à cause du Résultat de Combat.
+}
+
+\questiontitle{\magicresistance{}}{\pageref{magicresistance}}
+
+\QandA{%
+Contre quels effets de sort fonctionne la \magicresistance{} ?
+}{%
+Seulement contre les dégâts générés directement par les sorts. Ça ne fonctionne pas contre les dégâts indirects des sorts, comme les règles données aux figurines qui causeront des dégâts plus tard. Par exemple, la \magicresistance{} ne donne aucun avantage contre les effets suivants :
+\begin{itemize}[label={-}]
+\item Les Attaques modifiées par les sorts (par exemple une figurine gagnant la règle \poisonedattacks{}).
+\item Les Attaques Spéciales données à une figurine (par exemple, une figurine gagnant une \breathweapon{}).
+\item Les tests de Terrain Dangereux entraînés par les sorts.
+\end{itemize}
+}
+
+\questiontitle{\warplatform}{\pageref{warplatform}}
+
+\QandA{%
+Une \warplatform{} peut-elle rejoindre une unité avec un nombre impair de figurines au premier rang ?
+}{%
+Oui. Dans un tel cas il y a deux positions légales de placement au centre de l'unité, que vous pouvez choisir librement.
+}
+
+\questiontitle{Appliquer les règles spéciales}{\pageref{applying_special_rules}}
+
+\QandA{%
+Quelles règles spéciales modifiant les attaques s'appliquent aux Attaques de Tir, et lesquelles ne peuvent être utilisées qu'avec des Attaques de Corps à Corps ?
+}{%
+Il y a deux moyens d'appliquer les règles spéciales aux attaques. Si la règle est donnée spécifiquement à une arme, un sort ou une attaque (comme une \breathweapon{} ou des \impacthits{}), elle ne fonctionne qu'avec cette arme/sort/attaque. Si une figurine possède une règle spéciale, chaque règle spéciale possède ses propres règles d'applications. Par défaut elles ne s'appliquent qu'au Corps à Corps.
+
+Cela signifie par exemple que la règle \poisonedattacks{} donnée par le sort \diseasespelltwo{} affectera les Attaques de Tir et de Corps à Corps, alors que la règle \lethalstrike{} donné par le sort \deathspellfive{} n'affectera que les Attaques de Corps à Corps. Notez que les effets qui ne sont pas des règles spéciales, tels que le \og +1 pour blesser \fg{} donné par le sort \firespelltwo{} affectent les Attaques de Tir et de Corps à Corps.
+}
+
+\questiontitle{Relever un Défi}{\pageref{fighting_a_challenge}}
+
+\QandA{%
+Des touches provenant d'une source extérieur au combat peuvent-elles être répartie sur une figurine étant en Défi ?
+}{%
+Oui. Seules les Attaques de Corps à Corps ne peuvent pas être réparties sur des figurines en Défi. Les Attaques provenant d'une source extérieur au combat (tir de Catapulte dévié, sorts qui permet de cibler une unité engagée au corps à corps, etc.) peuvent être réparties sur une figurine en Défi.
+}
+
+\questiontitle{Quitter une Unité Combinée}{\pageref{leaving_a_combined_unit}}
+
+\QandA{%
+Si un Personnage quitte une unité combinée en effectuant une Marche Forcée, et a passé le test de Marche Forcée, l'unité qu'il a quitté doit-elle aussi faire une Marche Forcée ? Doit-elle passer un nouveau test de Marche Forcée si elle souhaite en faire une aussi ?
+}{%
+Avant de passer un test de Marche Forcée, déclarez quelles figurines sont concernées par ce test. Cela peut être un Personnage, plusieurs Personnages, ou toute l'unité (Personnages et figurines ordinaires). Si le test a été passé pour des Personnages uniquement, et que tous ces Personnages quittent l'unité, les figurines restantes de l'unité sont libre d'effectuer d'autres actions, et doivent passer un nouveau test de Marche Forcée si elles souhaitent en faire une. Si certains Personnages ayant passé un test de Marche Forcée restent finalement dans l'unité, l'unité entière doit effectuer une Marche Forcée, et doit passer un test de Marche Forcée si elle ne l'a pas déjà fait.
+}
+
+\questiontitle{Distance et déplacement des unités en poursuite}{\pageref{pursuit_distance_and_pursuing_units}}
+
+\QandA{%
+Lorsqu'une unité en poursuite atteint une unité ennemie, elle doit déclarer une charge contre celle-ci. Que se passe-t-il lorsque cette charge est impossible à mener à bien ?
+}{%
+Aucune charge n'est déclarée.
+}
+
+\questiontitle{Capuche de Magicien}{\pageref{enchanted_items}}
+
+\QandA{%
+Que se passe-t-il si l'Objet Enchanté \og Capuche de Magicien \fg{} est détruit ?
+}{%
+Le porteur de l'objet perd la règle \stupidity{} et n'est plus un Sorcier, donc il ne peut plus lancer ni dissiper de sort, et n'a plus la règle \channel{}. Si il portait un Objet Magique que seul un Sorcier peut utiliser, comme un Parchemin de Dissipation (car seuls les Sorciers peuvent dissiper), il ne peut plus s'en servir.
+}
+
+\questiontitle{Bâtiment}{\pageref{buildings}}
+
+\QandA{%
+Comment cela se passe-t-il pour les figurines montées lors d'un Combat Multiple impliquant un Bâtiment ?
+}{%
+Seules les figurines choisies comme étant les Assaillants sont restreintes dans l'utilisation de \lance{}, \lightlance{} et \impacthits{}. La \mountsprotection{} et le \barding{} ne peuvent pas être utilisées contre les attaques provenant des Défenseurs du Bâtiment.
+}
+
+\questiontitle{Équipement Standard}{\pageref{mundane_equipment}}
+
+\QandA{%
+Qu'est-ce qui est compte comme arme et armure \og standard \fg{} ?
+}{%
+Toutes les armes et armures qui ne sont pas des Objets Magiques sont considérés comme standard.
+}
+
+\questiontitle{Priorité des Modificateurs}{\pageref{priority_of_modifiers}}
+
+\QandA{%
+Dans quel ordre les modificateurs de choses qui \textbf{ne} sont \textbf{pas} des Caractéristiques s'appliquent-ils ?
+}{%
+Ils s'appliquent en utilisant le même ordre de priorité que les modificateurs de Caractéristiques (p. \pageref{priority_of_modifiers}).
+
+Par exemple, les Globes de Gaz Nocif de la Marée de Vermine blesse toujours sur 4+. Si cette attaque subit un modificateur de -1 pour blesser, elle blesse sur 5+ puisque la soustraction prend effet après que la valeur est fixée à une certaine valeur.
+}
+
+\questiontitle{Fiasco}{\pageref{miscast}}
+
+\QandA{%
+Lorsqu'un résultat de \result{8} ou \result{9} (\sorcerousbacklash{}) est obtenu, combien de touches subit une figurine composée de plusieurs Sorciers (par exemple un Sorcier monté sur une monture qui est également un Sorcier) ?
+}{%
+Une touche par élément de figurine qui est un Sorcier.
+}
+
+\questiontitle{\catapult{}}{\pageref{catapult}}
+
+\QandA{%
+Lorsque l'on tire avec une Arme d'Artillerie de type \catapult{} et que l'on obtient un \og Touché ! \fg{}, peut-on ne pas lancer le dé donnant la distance dont le Gabarit aurait dévié ?
+}{%
+Non. Le dé pour la distance de déviation du Gabarit doit toujours être lancé, car il sert à déterminer si la Catapulte subit un Incident de Tir.
+}
+
+
+
+\clearpage
+\section{Livre de Magie}
+
+\setcounter{Qcounter}{0}
+
+\questiontitle{\Pathof{} \whitemagic{} : \whitemagicattribute}{\pageref{white_magic}}
+
+\QandA{%
+Que deviennent les marqueurs Bouclier quand un Personnage rejoint ou quitte une unité ?
+}{%
+Voici les différentes possibilités :
+\begin{itemize}[label={-}]
+\item Un Personnage \textbf{avec} un marqueur Bouclier rejoint une unité \textbf{avec} un marqueur Bouclier : Retirez un marqueur Bouclier. Le Personnage et l'unité peuvent utiliser le marqueur Bouclier restant.
+\item Un Personnage \textbf{sans} marqueur Bouclier rejoint une unité \textbf{avec} un marqueur Bouclier : Le Personnage et l'unité peuvent utiliser le marqueur Bouclier.
+\item Un Personnage \textbf{avec} un marqueur Bouclier rejoint une unité \textbf{sans} marqueur Bouclier : Le Personnage et l'unité peuvent utiliser le marqueur Bouclier.
+\item Un Personnage quitte une unité \textbf{avec} un marqueur Bouclier : \textbf{Choisissez qui garde le marqueur} entre l'unité et le Personnage. L'autre n'a plus de marqueur.
+\end{itemize}
+}
+
+
+
+\clearpage
+\section{Livres d'Armée}
+
+\subsection{Anciens Sauriens}
+\setcounter{Qcounter}{0}
+
+\questiontitle{Sarbacane}{\pageref{blowpipe}}
+
+\QandA{%
+Est-ce qu'une Sarbacane gagne +1 pour toucher sur une unité qui contient un Personnage avec la règle \largetarget{} (certaines \warplatforms{} ont \largetargets{}) ?
+}{%
+Non. Toutes les figurines de l'unité doivent avoir la règle \largetarget{} pour que la Sarbacane bénéficie de +1 pour toucher.
+}
+
+
+\subsection{Conclaves Vampiriques}
+\setcounter{Qcounter}{0}
+
+%Anneau d’Éternité (p6)
+%Q1 : Qu'est-ce que ça signifie d'être immunisé aux règles \lethalstrike{} et \multiplewounds{}{} ?
+%R1 : Ça signifie que les attaques dirigées contre le porteur de l'Anneau d’Éternité perdent les règles \lethalstrike{} et \multiplewounds{}{}.
+
+
+\subsection{Dynasties Immortelles}
+\setcounter{Qcounter}{0}
+
+%Grand Arc Aspic (p2)
+%Q1 : Une figurine avec un Grand Arc Aspic peut-elle choisir d'utiliser une \hw{} normale au corps à corps ?
+%R1 : Non.
+
+
+\subsection{Elfes Sinistres}
+\setcounter{Qcounter}{0}
+
+%Dague de Moraec (p3)
+%Q1 : À quel moment la Dague de Moraec peut être utilisée ?
+%R1 : Elle doit être utilisée avant de lancer un sort. La Dague de Moraec ne peut pas être utilisée pour réduire la valeur de lancement d'un sort après avoir lancé les Dés de Pouvoir pour ce sort.
+
+
+\subsection{Guerriers des Dieux Sombres}
+\setcounter{Qcounter}{0}
+
+%Marques des Dieux Sombres (p1)
+%Q1 : Comment les Marques des Dieux Sombres intéragissent avec les Personnages rejoignant les unités ?
+%R1 : Un Personnage peut rejoindre n'importe quelle unité, tant que celle-ci ne contient pas de figurine avec une Marque différente de celle du Personnage. La Marque du Chaos Intégral est une exception à cette règle, et n'empêche jamais un Personnage de rejoindre cette unité, quelque soit la Marque du Personnage. De même, un Personnage avec la Marque du Chaos Intégral peut rejoindre n'importe quelle unité, quelque soit sa Marque.
+
+
+\subsection{Harde Bestiale}
+\setcounter{Qcounter}{0}
+
+%Icône du Pillard (p3)
+%Q1 : Une unité composé de plus d'un \razortusk{} peut utiliser l'\vanguard{} lorsqu'elle se situe dans un rayon de \distance{12} de l'Icône du Pillard ?
+%R1 : Oui. Seuls les \chariots{} sont limités à une figurine par unité pour utiliser l'Icône du Pillard.
+%
+%Q2 : Une figurine sur \chariot{} peut-elle prendre Peau Écorchée d’Aaghor ?
+%R2 : Non. Le \chariot{} a une \mountsprotection{} qui est considérée comme une Armure.
+
+
+\subsection{Khans Ogres}
+\setcounter{Qcounter}{0}
+
+%Coeur Démoniaque (p3)
+%Q1 : Est-ce que le Coeur Démoniaque cause aux Sorciers ennemis un Fiasco lorsqu'un double arrive quelque soit le résultat final ?
+%R1 : Oui. Cet objet cause un Fiasco si n'importe quel double est tiré, que le sort soit un succès ou un échec, dissipé (en utilisant des Dés de Dissipation ou un Parchemin de Dissipation) ou non.
+
+
+\subsection{Royaume d'Équitaine}
+\setcounter{Qcounter}{0}
+
+%Serment d’Allégeance (p2)
+%Q1 : Des unités avec des figurines ayant la règle \insignificant{} et des figurines sans la règle \insignificant{} relancent-elles les tests de Commandement lorsqu'elles sont à \distance{6} d'une figurine avec Humilité ?
+%R1 : Non. Toutes les figurines de l'unité doit avoir la règle \insignificant{} pour pouvoir relancer leurs tests de Commandement.
+%
+%Voeux de la Quête (p2)
+%Q2 : Les Personnages avec les Voeux de la Quête ne peuvent pas "utiliser" d'autres armes que des \gw{}. Qu'est-ce que ça veut dire ?
+%R2 : Que t'es trop con pour jouer au 9e age, va jouer a AoS et meurt.
+%Les Personnages avec les Voeux de la Quête ne peuvent se servir des armes qu'ils portent qui ne sont pas des \gw{}, en aucun cas.
+%
+%Archers Paysans {p9}
+%Q3 : Les Archers Paysans peuvent-ils prendre une \crossbows{} dans une armée contenant des Frères Pénitents ? (ndlr : cette question se pose à cause des noms VO, qui ne pose aucun problème en VF)
+%R3 : Non. L'amélioration requière "Croisés", se référant à l'amélioration de l'unité Aspirants Paladins.
+
+
+\end{document}

@@ -187,6 +187,7 @@ Une figurine cachée ne peut pas être blessée ou affectée par quoi que ce soi
 Les Attaques de Tir ciblant une unité dont la majorité des figurines disposent de cette règle subissent une pénalité de -1 sur leurs jets pour toucher.
 
 \newspecialrule{channel}{\channel}
+\label{channel_special_rule}
 
 \newfromWHB{Chaque élément de figurine avec cette règle ajoute +1 au jet de \channel{} de son camp. Tous les Sorciers disposent de cette règle.}
 
@@ -296,6 +297,7 @@ Cette règle ne peut pas être utilisée si l'\engineer{} est Engagé au Corps �
 Les unités composées entièrement de figurines avec cette règle ne provoquent pas de tests de Panique chez les unités sans cette règle. Seuls les Personnages avec la règle \insignificant{} peuvent rejoindre des unités avec cette règle.
 
 \newspecialrule{daemonicinstability}{\daemonicinstability}
+\label{daemonicinstability}
 
 L'unité ne peut pas fuir d'un Corps à Corps. À la place, le joueur lance 2D6 comme pour un test de Moral classique, ajoute la différence de Résultat de Combat, puis retranche la valeur de Commandement de l'unité. Une formule simplifiée s'écrit \textbf{2D6 + RC - Cd}. Si le total est strictement supérieur à 0, le test est raté et l'unité subit un nombre de blessures égal à ce total. Ces blessures sont distribuées comme pour la règle \unstable{}, sans sauvegarde d'aucune sorte possible. Si une unité possède à la fois les règles \daemonicinstability{} et \unstable{}, ignorez la règle \unstable{}.
 
@@ -375,6 +377,7 @@ La figurine doit porter une Attaque Spéciale de Corps à Corps pendant la Phase
 Pour les figurines en plusieurs éléments, les cavaliers ne peuvent jamais porter d'attaque de \stomp{}. Une attaque de \stomp{} ne peut être allouée à une figurine que si elle peut normalement être Piétinée. Le \stomp{} est une Attaque Spéciale, donc il ne bénéficie jamais des équipements et règles spéciales de la figurine.
 
 \newspecialrule{warplatform}{\newfromWHB{\warplatform}}
+\label{warplatform}
 
 La figurine peut rejoindre une unité comme si elle était un Personnage, même si elle n'est pas un Personnage, et même si elle possède la règle \largetarget{}. Elle suit les règles des Personnages pour la distribution des touches. Quand elle rejoint une unité d'au moins 5 figurines (sans compter la \warplatform{}) et se déplace avec elle, elle peut effectuer une Marche Forcée même si son Type de Troupe le lui interdit normalement, par exemple si c'est un \chariot{}. Elle doit toujours être placée au centre du premier rang de l'unité qu'elle rejoint, repoussant éventuellement en arrière des figurines avec la règle \frontrank{}, et doit garder cette position à tous moments. Si la \warplatform{} ne peut pas être placée au centre du premier rang, par exemple à cause de Socles Incompatibles, ou si le premier rang est trop étroit, alors elle ne peut pas rejoindre l'unité. Ainsi, elle ne peut jamais rejoindre une unité dont les Socles sont Incompatibles et il ne peut y avoir qu'une seule \warplatform{} par unité. La figurine perd la règle \swiftstride{} si elle en disposait.
 
@@ -391,6 +394,7 @@ L'élément de figurine gagne un bonus de +1 pour toucher au Corps à Corps. Ce 
 La \regeneration{} est une sauvegarde spéciale qui est effectuée après un jet raté de Sauvegarde d'Armure. La valeur de cette sauvegarde est indiquée entre parenthèses. Une sauvegarde de \regeneration{} ne peut pas être effectuée après une \wardsave{}. Si une figurine possède les deux, choisissez laquelle utiliser. La \regeneration{} ne peut pas être utilisée contre des \flamingattacks{}, \newfromWHB{ni des attaques avec la règle \lethalstrike{} pour lesquelles un \result{6} a été obtenu pour blesser}.
 
 \newspecialrule{magicresistance}{\magicresistance{X}}
+\label{magicresistance}
 
 Toutes les figurines d'une unité qui contient au moins une figurine avec une \magicresistance{} ajoutent la valeur entre parenthèses (X) à leurs jets de \wardsave{} (en utilisant les mêmes règles que pour ajouter des Sauvegardes d'Armure) mais uniquement contre des blessures causées par des effets de sorts. La \magicresistance{}, comme la plupart des règles spéciales, ne se cumule pas.
 
@@ -472,6 +476,7 @@ Une unité entièrement composée de figurines avec cette règle peut effectuer 
 
 \newpage
 \section{Appliquer les Règles Spéciales}
+\label{applying_special_rules}
 
 \subsection{Règles Spéciales et Figurines en Plusieurs Éléments}
 
@@ -509,7 +514,7 @@ Par exemple, considérons un Personnage monté sur une \monstrousbeast{} qui pos
 
 \subsection{Armes et Règles Spéciales}
 
-Si une arme a une règle spéciale qui modifie les attaques, seules les attaques portées avec cette arme bénéficient de cette règle. Ainsi, une \handgun{} qui possède la règle \armourpiercing{} fera des Attaques de Tir qui auront la règle \armourpiercing{}. En revanche, la figurine ne bénéficiera pas de cette règle lorsqu'elle attaquera au Corps à Corps ou lorsqu'elle tirera avec une autre arme.
+Si une arme a une règle spéciale qui modifie les attaques, seules les attaques portées avec cette arme bénéficient de cette règle. Ainsi, une \handgun{} qui possède la règle \armourpiercing{} fera des Attaques de Tir qui auront la règle \armourpiercing{}. En revanche, la figurine ne bénéficiera pas de cette règle lorsqu'elle attaquera au Corps à Corps ou si elle tire avec une autre arme.
 
 \subsection{Règles Spéciales dupliquées}
 
