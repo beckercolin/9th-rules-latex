@@ -103,9 +103,9 @@
 	armour={\platearmour{}},
 	options={
 		\maytakerunicitems{}=\upto{}<125,			
+		\battleruneschoice{4}=\perrune{}<5,
 		\shield{}=3,
 		\gw{}=8,
-		\battleruneschoice{4}=\perrune{}<5,
 	},
 	unitrules={
 		\unitrule{\runecraftmastery{}}{\runecraftmasteryrule{}}
@@ -164,11 +164,11 @@
 	armour={\platearmour{}},
 	options={
 		\maytakerunicitems{}=\upto{}<75,
-		\holdstone{}=25,
 		\onechoiceonly{
 			\bsb{}=25,
 			\clanleader{}=30,
 		},
+		\holdstone{}=25,
 		\shield{}=8,
 		\shootingweapononechoice{
 			\pistol{}=4,
@@ -221,9 +221,9 @@
 	armour={\platearmour{}},
 	options={
 		\maytakerunicitems{}=\upto{}<75,			
+		\battleruneschoice{2}=\perrune{}<5,
 		\shield{}=2,
 		\gw{}=6,
-		\battleruneschoice{2}=\perrune{}<5,
 	},
 	unitrules={
 		\unitrule{\runecraft{}}{\runecraftrule{}}
@@ -332,11 +332,11 @@
 	weapons={\crossbow{}},
 	armour={\ha{}},
 	options={
+		\shield{}=\permodel{}<1,
 		\mayswapcrossbowfor{
 			\handgun{}=\free,
 			\guildcraftedhandgun{} (\oneofakind{})=\permodel{}<2,
 		},
-		\shield{}=\permodel{}<1,
 		\gw{}=\permodel{}<3,
 	},
 	unitequipment={

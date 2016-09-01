@@ -244,11 +244,11 @@ La figurine gagne une attaque supplémentaire par figurine ennemie en contact so
 }
 
 \newcommand{\monsterseekerrule}{%
-La figurine gagne la règle \multiplewounds{2}{\monstrousbeasts{}, \monstrouscavalry{}, \monstrousinfantry{}, \monster{} et \riddenmonster{}}.
+La figurine gagne la règle \multiplewounds{2}{\monstrousinfantry{}, \monstrousbeasts{}, \monstrouscavalry{}, \monster{} et \riddenmonster{}}.
 }
 
 \newcommand{\runecraftmasteryrule}{%
-L'\runicmaster{} et son unité disposent de la règle \armourpiercing{1}. Il peut dissiper comme un Maître Sorcier et utiliser ses Runes de Bataille comme des Objets de Sort, avec au choix :
+Le \runicmaster{} et son unité disposent de la règle \armourpiercing{1}. Il peut dissiper comme un Maître Sorcier et utiliser ses Runes de Bataille comme des Objets de Sort, avec au choix :
 \begin{itemize}[label={-}]
 \item Niveau de Puissance 4, \range{6}.
 \item Niveau de Puissance 5, \range{12}.
@@ -337,7 +337,7 @@ Toutes\newline les touches de la \catapult{} gagnent +1 en Force et les règles 
 Peut tirer de deux manières :
 \begin{customsubitemize}
 \item Comme une \textbf{\artilleryweapon} de type \textbf{\cannon{} (\distance{1D6})}.\newline
-\range{60}, \Strength{} 10, \multiplewounds{\ordnance}{}.
+\range{60}, \Strength{} 10, \multiplewounds{\ordnance}{}, \armourpiercing{2}.
 \item Comme une \textbf{\artilleryweapon} de type \textbf{\volleygun}.\newline
 \range{12}, \Strength{} 4, \armourpiercing{3}, \multipleshots{2D6}.
 \end{customsubitemize}
@@ -483,7 +483,7 @@ Une fois le déploiement terminé mais avant de placer les Éclaireurs, la figur
 
 \armyspecialruleentry{\holdstone}
 
-Au début de n'importe quelle Manche de Corps à Corps, la figurine peut déclarer qu'elle l'utilise sa \holdstone{}. A partir de ce moment, l'unité du porteur considère ses flancs et son arrière comme étant de front en ce qui concerne les Attaques de Soutien et les règles \parry{} et \shieldwall{}. Elle peut néanmoins toujours être Désorganisée. Tant que la \holdstone{} est active, le porteur doit toujours lancer et relever des défis, à moins qu'une autre figurine amie ne le fasse avant. L'unité ne peut pas poursuivre directement après le combat où la \holdstone{} a été utilisée.
+Au début de n'importe quelle Manche de Corps à Corps, la figurine peut déclarer qu'elle l'utilise sa \holdstone{}. A partir de ce moment, l'unité du porteur considère ses flancs et son arrière comme étant de front en ce qui concerne les Attaques de Soutien et les règles \parry{} et \shieldwall{}. Elle peut néanmoins toujours être Désorganisée. Tant que la \holdstone{} est active, le porteur doit toujours lancer et relever des défis, à moins qu'une autre figurine ne le fasse avant. L'unité ne peut pas poursuivre directement après le combat où la \holdstone{} a été utilisée.
 
 Les effets de la \holdstone{} disparaissent immédiatement une fois le combat terminé ou à la fin de la phase durant laquelle son porteur est tué.
 
@@ -491,7 +491,7 @@ Tant que le porteur est en vie, la Pierre peut être activée à nouveau lors de
 
 \armyspecialruleentry{\thebiggertheyare}
 
-Les Attaques de Corps à Corps de la figurine blessent toujours sur 4+ ou mieux. Elle gagne également la règle \swiftstride{} lorsqu'elle fait le jet d'une charge vers une unité contenant au moins une figurine d'un des types suivant : Bête Monstrueuse, Cavalerie Monstrueuse, Infanterie Monstrueuse, Monstre ou Monstre Monté.
+Les Attaques de Corps à Corps de la figurine blessent toujours sur 4+ ou mieux. Elle gagne également la règle \swiftstride{} lorsqu'elle fait le jet d'une charge vers une unité contenant au moins une figurine d'un des types suivant : Infanterie Monstrueuse, Bête Monstrueuse, Cavalerie Monstrueuse, Monstre ou Monstre Monté.
 
 \armyspecialruleentry{\comewithme}
 
@@ -618,7 +618,7 @@ Les attaques portées avec l'arme ont Force 10 quand la cible possède une Endur
 
 \pricelistitem{\runeofcraftsmanship}{20/15}\oneofakind{}.
 
-L'arme devient une \gw{}.
+L'arme devient une \gw{} magique.
 
 \pricelistitem{\runeoffury}{15}Le porteur gagne +1 Attaque par Rune de Fureur enchâssée.
 
@@ -660,7 +660,7 @@ Un maximum de 3 Runes de cet ensemble peuvent être sélectionnées et comptent 
 
 \pricelistitem{\runeofretribution}{35}\oneperarmy{}.
 
-Usage Unique. Peut être activée au début de n'importe quelle Phase de Mouvement. Les unités amies à moins de \distance{6} du porteur gagnent la règle \devastatingcharge{} jusqu'à la fin du Tour de Joueur.
+Usage Unique. Peut être activée au début de n'importe quelle Phase de Mouvement. Les unités alliées à moins de \distance{6} du porteur gagnent la règle \devastatingcharge{} jusqu'à la fin du Tour de Joueur.
 
 \pricelistitem{\runeofdragonsbreath}{35}Le porteur gagne la règle \breathweapon{Force 4, \flamingattacks{} et \magicalattacks{}}.
 
