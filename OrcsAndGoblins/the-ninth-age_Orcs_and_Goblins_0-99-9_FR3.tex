@@ -278,12 +278,10 @@
 \newcommand{\wyvernnote}{Les \wyverns{} montées par des \orcchiefs{} ont la règle Unique. Cela n'a aucune incidence sur le nombre de \wyverns{} qui peuvent être montées par des \orcwarlords{}.}
 \newcommand{\mayexchangeallequipmentforcrossbowandha}{Échanger tout l'équipement contre une \crossbow{} et une \ha{}}
 \newcommand{\eadbashersmodelnumbers}{\mincostfor{} \textbf{10} \labels@models{}. \maxunitsize{}\spacebeforecolon{}: \textbf{40} \labels@models{}.\hfill \additionalfigscost{} {\largefontsize\textbf{9} pts\permodel}\hspace*{0.1cm}}
-\newcommand{\takeshadygits}{Jusqu'à 3 \shadygits{}}
-\newcommand{\shadygitlimitation}{Maximum 1 \shadygit{} par tranche de 10 \commongoblins{} dans l'unité.}
+\newcommand{\shadygitlimitation}{Maximum 1 \shadygit{} par tranche de 10 \commongoblins{} dans l'unité. Jusqu'à 3 \shadygits{}.}
 \renewcommand{\pershadygit}{/Vengeur}
-\newcommand{\madgitlimitation}{Maximum 1 \madgit{} par tranche de 15 \cavegoblins{} dans l'unité.}
+\newcommand{\madgitlimitation}{Maximum 1 \madgit{} par tranche de 15 \cavegoblins{} dans l'unité. Jusqu'à 3 \madgits{}.}
 \newcommand{\exchangeallweaponsforshieldandshortbow}{Échanger les armes contre un Arc Court et un Bouclier}
-\newcommand{\takemadgits}{Jusqu'à 3 \madgits{}}
 \renewcommand{\permadgit}{/Fou}
 \newcommand{\takenets}{\nets}
 \newcommand{\nomorethantwentymodels}{(20 figurines max.)}
@@ -320,7 +318,7 @@ Les \madgits{} ne sont pas déployés normalement mais cachés dans leur unité.
 \vspace{5pt}Ils peuvent être relâchés de deux façons :
 \begin{itemize}[label={-}]
 \item N'importe quel nombre de \madgits{} peut être relâché quand leur unité déclare comme réaction à une charge Tenir la Position ou Tenir la Position et Tirer.
-\item Tous les \madgits{} doivent être relâchés si l'unité les cachant n'est ni en fuite ni engagée au Corps à Corps au début de la Phase de Tir du propriétaire et qu'elle est à moins de \distance{8} d'une unité ennemie.
+\item Tous les \madgits{} doivent être relâchés si l'unité les cachant n'est ni en fuite ni engagée au Corps à Corps au début de la Phase de Tir du propriétaire et qu'elle est à \distance{8} ou moins d'une unité ennemie.
 \end{itemize}
 
 \vspace{5pt}Occupez-vous des \madgits{} l'un après l'autre. Placez le \madgit{} en contact socle à socle avec son unité (il ne lui inflige aucune touche pour ce contact), et choisissez une direction. Déplacez-le de \distance{2D6} dans cette direction. Le \madgit{} suit ensuite ses propres règles pour son déplacement lors des tours suivants.
@@ -455,7 +453,7 @@ Les unités touchées souffrent d'un malus de -1D3 à l'Initiative. Les Terrains
 }
 
 \newcommand{\smashemflatrule}{%
-Si l'\greatgreenidol{} est engagée au Corps à Corps, toutes les unités amies à moins de \distance{8} peuvent gagner la règle \devastatingcharge{} ou un bonus de +1 pour blesser. Chaque unité choisit quel bonus utiliser au début de chaque Round de Corps à Corps.
+Si l'\greatgreenidol{} est engagée au Corps à Corps, toutes les unités alliées à moins de \distance{8} peuvent gagner la règle \devastatingcharge{} ou un bonus de +1 pour blesser. Chaque unité choisit quel bonus utiliser au début de chaque Round de Corps à Corps.
 }
 
 \newcommand{\iconofthewaaarghrule}{%
@@ -640,7 +638,7 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine av
 
 \listitemonecol{\powershroom} Une seule utilisation. Avant de jeter les dés pour lancer un sort non lié à un Objet de Sort, le porteur peut décider d'utiliser un unique \powershroom{}. Toute tentative de dissipation de ce sort subit un malus de 1D3. Si un \result{1} naturel est obtenu, le Sorcier utilisant le \powershroom{} subit une touche avec la règle \toxicattacks{}.
 
-\listitemonecol{\mammothstabber} Si l'unité possède au moins un Rang Complet, elle gagne 1D3 \impacthits{} de Force 5 avec la règle \multiplewounds{\ordnance}{\largetarget}.
+\listitemonecol{\mammothstabber} Si l'unité possède au moins un Rang Complet, elle gagne 1D3 \impacthits{} de Force 5 avec la règle \multiplewounds{\ordnance}{\largetarget}. Ces \impacthits{} sont infligées par l'unité dans son ensemble et non pas par des figurines individuelles. Elles ne gagnent pas de bonus de Force en cas de Rangs additionnels.
 
 \enditemlistonecol
 
@@ -650,8 +648,6 @@ Toutes les touches sont infligées avec la Force non modifiée de la figurine av
 
 
 
-
-\vspace*{0.5cm}
 \renewcommand{\startarmymagicalitems}{\toctarget{magicalitemstitle}{\largefontsize\bigtitle{\labels@magicalitems}}\begin{multicols}{2}\raggedcolumns}
 
 \startarmymagicalitems
@@ -710,7 +706,7 @@ Le porteur gagne la règle \frenzy{} et ne peut jamais la perdre. De plus, tous 
 
 \startpricelist
 
-\pricelistitem{\mikinokstotem}{40}Les autres Objets Magiques dans l'unité du porteur ainsi que dans les unités amies ou ennemies en contact avec l'unité du porteur n'ont plus d'effet et redeviennent des objets ordinaires. Cet effet dure tant que les unités restent en contact.
+\pricelistitem{\mikinokstotem}{40}Les autres Objets Magiques dans l'unité du porteur ainsi que dans les unités amies ou ennemies en contact avec l'unité du porteur n'ont plus d'effet et redeviennent des objets ordinaires. L'effet sur les Objets Magiques des autres unités dure tant que les unités restent en contact.
 
 \pricelistitem{\ironhideicon}{25}L'unité du porteur gagne une \wardsave{5} contre les Attaques de Tir.
 

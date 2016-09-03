@@ -203,8 +203,8 @@
 	basesize=25x25,
 	unitsize=1,
 	options={
-		\bsb{}=25,
 		\magicalitemsallowance{}=\upto{}<50,
+		\bsb{}=25,
 		\waaargh{} \only{\general}=10,
 		\shield{}=5,
 		\pw{}=5,
@@ -292,11 +292,12 @@
 	type=\infantry{},
 	basesize=20x20,
 	unitsize=1,
-	armour={\la{},\shield},
+	armour={\la{}},
 	options={
-		\bsb{}=25,
 		\magicalitemsallowance{}=\upto{}<50,
+		\bsb{}=25,
 		\greentide{} \only{\general}=\free{},
+		\shield{}=\free{},
 		\shortbow{}=2,
 		\combatweapononechoice{
 			\pw{}=3,
@@ -428,7 +429,7 @@
 	basesize=50x100,
 	greenhiderace={\commongoblin{} \textnormal{\only{\goblin}}},
 	alliancepic={commongoblin},
-	weapons={\shortbow{},\lightlance{}},
+	weapons={\shortbow{} \only{\goblin},\lightlance{} \only{\goblin}},
 	armour={\la{},\mountsprotection{6}},
 	specialrules={\lighttroops{},\insignificant{},\impacthits{+1}},
 }
@@ -445,7 +446,7 @@
 	basesize=50x100,
 	greenhiderace={\commonorc{} \textnormal{\only{\eadbasherrider}}},
 	alliancepic={commonorc},
-	weapons={\lance},
+	weapons={\lance \only{\eadbasherrider}},
 	armour={\la{},\mountsprotection{5}},
 	specialrules={\thunderouscharge{} \only{\warboar},\impacthits{+1}},
 }
@@ -490,12 +491,12 @@
 		\spider{}< 7 4 - 5 6 8 4 8 -,
 		\forestgoblin{} (8)< - 2 3 3 - - 2 1 6,
 	},
-	type=\riddenmonster{},
+	type=\monster{},
 	unitsize=SPECIAL-{\textbf{(\oneofakind)}},
 	basesize=100x150,
 	greenhiderace={\forestgoblin{} \textnormal{\only{\goblins}}},
 	alliancepic={forestgoblin},
-	weapons={\shortbow{},\lightlance{} \only{\goblins}},
+	weapons={\shortbow{} \only{\goblins},\lightlance{} \only{\goblins}},
 	armour={\innatedefence{4}},
 	options={\spidermothershrineoption{}=40},
 	additional={%
@@ -603,8 +604,8 @@
 	costpermodel=3,
 	options={
 		\onechoiceonly{
-			\shortbow{}=\free{},
 			\shield{}=\permodel{}<0.5,
+			\shortbow{}=\free{},
 			\spear{} \&{} \shield{}=\permodel{}<0.5,
 		},
 	},
@@ -661,7 +662,6 @@
 \showunit{
 	name={\shadygit},
 	profile={< 4 4 3 3 3 1 3 2 6},
-	cost=10,
 	type=\infantry{},
 	basesize=20x20,
 	unitsize=SPECIAL-\gitnote{},
@@ -681,7 +681,6 @@
 \showunit{
 	name={\madgit},
 	profile={< \starsymbol{} - - 5 3 1 3 1 5},
-	cost={20},
 	type=\infantry{},
 	basesize=25,
 	unitsize=SPECIAL-\gitnote{},
@@ -714,9 +713,9 @@
 	options={
 		\musttakeoneormoreofthefollowing{
 			\shield{}=\permodel{}<1,
-			\lightlance{}=\permodel{}<1,
 			\shortbow{}=\permodel{}<1,
 			\throwingweapons{} \only{\forestgoblin}=\permodel{}<1,
+			\lightlance{}=\permodel{}<1,
 		},
 	},
 	commandgroup={champion=10, musician=10, banner=10},
@@ -763,7 +762,7 @@
 	unitsize=5,
 	maxmodels=15,
 	costpermodel=13,
-	weapons={\lightlance},
+	weapons={\lightlance{} \only{\rider}},
 	specialrules={\thunderouscharge{} \only{\warboar}},
 	options={
 		\shield{}=\permodel{}<3,
@@ -835,7 +834,7 @@
 	unitsize=5,
 	maxmodels=15,
 	costpermodel=15,
-	weapons={\lightlance},
+	weapons={\lightlance \only{\rider}},
 	specialrules={\thunderouscharge{} \only{\warboar}},
 	options={
 		\shield{}=\permodel{}<3,
@@ -883,7 +882,7 @@
 	unitsize=1,
 	greenhiderace={\commonorc{} \textnormal{\only{\eadbasherrider}}},
 	alliancepic={commonorc},
-	weapons={\lance},
+	weapons={\lance \only{\eadbasherrider}},
 	armour={\la{},\mountsprotection{5}},
 	specialrules={\thunderouscharge{} \only{\warboar},\impacthits{+1}},
 	options={
@@ -907,7 +906,7 @@
 	costpermodel=60,
 	greenhiderace={\commongoblin{} \textnormal{\only{\goblin}}},
 	alliancepic={commongoblin},
-	weapons={\shortbow{},\lightlance{}},
+	weapons={\shortbow{} \only{\goblin},\lightlance{} \only{\goblin}},
 	armour={\la{},\mountsprotection{6}},
 	specialrules={\lighttroops{},\insignificant{},\impacthits{+1}},
 }
@@ -917,8 +916,8 @@
 	QRSname={\gnasherdasher},
 	cost={60},
 	profile={
-		\rider{}< - 2 3 3 3 1 3 1 5,
 		\gnasher{}< 5 4 - 5 3 1 4 2 5,
+		\rider{}< - 2 3 3 3 1 3 1 5,
 	},
 	type=\cavalry{},
 	basesize=20x20,
@@ -1165,6 +1164,30 @@
 \newpage
 
 \showunit{
+	name={\gargantula},
+	cost={225},
+	profile={
+		\spider{}< 7 4 - 5 6 8 4 8 -,
+		\forestgoblin{} (8)< - 2 3 3 - - 2 1 6,
+	},
+	type=\riddenmonster{},
+	basesize=100x150,
+	unitsize=1,
+	greenhiderace={\forestgoblin{} \textnormal{\only{\goblins}}},
+	alliancepic={forestgoblin},
+	weapons={\shortbow{},\lightlance{} \only{\goblins}},
+	armour={\innatedefence{4}},
+	options={\weblauncher{}=30},
+	additional={%
+		\def\tempspecialrules{\venomousfangs{},\immunetopsychology{},\poisonedattacks{} \only{\spider},\strider{},\stubborn{},\swiftstride{}}
+		\def\tempunitequipment{\equipmentdef{\weblauncher{} \textnormal{\only{\spider}}}{\weblauncherrule}}
+		
+		\specialrules{\tempspecialrules}
+		\vspace*{0.2cm}\unitequipment{\tempunitequipment}
+	},
+}
+
+\showunit{
 	name={\greatgreenidol},
 	cost={215},
 	profile={< 6 2 - 6 8 6 2 3 8},
@@ -1188,26 +1211,3 @@
 	},
 }
 
-\showunit{
-	name={\gargantula},
-	cost={225},
-	profile={
-		\spider{}< 7 4 - 5 6 8 4 8 -,
-		\forestgoblin{} (8)< - 2 3 3 - - 2 1 6,
-	},
-	type=\riddenmonster{},
-	basesize=100x150,
-	unitsize=1,
-	greenhiderace={\forestgoblin{} \textnormal{\only{\goblins}}},
-	alliancepic={forestgoblin},
-	weapons={\shortbow{},\lightlance{} \only{\goblins}},
-	armour={\innatedefence{4}},
-	options={\weblauncher{}=30},
-	additional={%
-		\def\tempspecialrules{\venomousfangs{},\immunetopsychology{},\poisonedattacks{} \only{\spider},\strider{},\stubborn{},\swiftstride{}}
-		\def\tempunitequipment{\equipmentdef{\weblauncher{} \textnormal{\only{\spider}}}{\weblauncherrule}}
-		
-		\specialrules{\tempspecialrules}
-		\vspace*{0.2cm}\unitequipment{\tempunitequipment}
-	},
-}

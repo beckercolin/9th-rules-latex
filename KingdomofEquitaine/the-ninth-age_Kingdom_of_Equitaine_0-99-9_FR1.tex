@@ -180,8 +180,7 @@ une unité peut être améliorée en\newline
 \newcommand{\morningstar}{Morgenstern}
 \newcommand{\countsaspw}{Compte comme une \pw{}.}
 \newcommand{\mayreplaceshieldwith}{\optionschoice{Remplacer le Bouclier par :}}
-\newcommand{\specialcrossbowoption}{Si l'armée comprend des \crusaders{},\newline
-Remplacer l'\longbow{} par une \crossbow{}}
+\newcommand{\specialcrossbowoption}{Si l'armée comprend des \knightsaspirant{} améliorés en \crusaders{}, Remplacer l'\longbow{} par une \crossbow{}}
 \newcommand{\specialcrossbownote}{L'option \braziers{} n'est alors pas disponible.}
 
 % Profile rules
@@ -266,7 +265,7 @@ Toutes les figurines alliées avec la règle \insignificant{} à moins de \dista
 % Montures
 
 \newcommand{\royalpegasusrule}{%
-La figurine gagne +1 Attaque et sa taille de socle passe à \unit{50x50}{\milli\meter}. 
+Le \royalpegasus{} gagne +1 Attaque et sa taille de socle passe à \unit{50x50}{\milli\meter}. 
 }
 
 
@@ -325,7 +324,7 @@ La figurine peut toujours utiliser une \lance{} en charge, même si elle porte u
 
 \armyspecialruleentry{\beloved}
 
-La figurine perd la règle \firstinrank{} si elle rejoint une unité dont au moins un Rang complet est composé de figurines avec la règle \lanceformation{}. Elle ne peut pas être sélectionnée par l'adversaire pour être la figurine qui refuse un Défi.
+Si elle rejoint une unité dont au moins un Rang complet est composé de figurines avec la règle \lanceformation{}, la figurine ne peut pas être sélectionnée par l'adversaire pour être la figurine qui refuse un Défi et elle peut être placée à n'importe quelle position dans l'unité. Elle n'a pas à être le plus à l'avant possible. Les figurines avec la règle \frontrank{} ont la priorité pour être le plus à l'avant possible de l'unité.
 
 \armyspecialruleentry{\serfs}
 
@@ -333,7 +332,7 @@ Si au moins la moitié des figurines d'une unité possède cette règle, et si c
 
 \armyspecialruleentry{\oathoffealty}
 
-La figurine gagne la règle \inspiringpresence{}. Cependant, sa portée n'est que de \distance{6} et seules les figurines avec la règle \serfs{} peuvent en bénéficier.
+La figurine gagne la règle \inspiringpresence{}. Cependant, sa portée n'est que de \distance{6} et seules les unités dont la majorité des figurines dispose de la règle \serfs{} peuvent en bénéficier.
 
 \setlength{\columnseprule}{0.5pt}
 \renewcommand{\columnseprulecolor}{\color{black!30}}
@@ -343,7 +342,7 @@ La figurine gagne la règle \inspiringpresence{}. Cependant, sa portée n'est qu
 Les éléments de la figurine ignorent les effets de la règle \fear{} de l'adversaire et peuvent utiliser un \shield{} et une \gw{} en même temps.
 
 \vspace*{5pt}
-Les Personnages avec cette règle doivent être équipés d'une \gw{} et ne peuvent utiliser aucun autre type d'arme. Quand ils utilisent une \gw{}, ils gagnent la règle \multiplewounds{2}{\largetarget}.
+Les Personnages avec cette règle doivent être équipés d'une \gw{}, ne peuvent utiliser aucun autre type d'arme ni profiter d'une quelconque manière des bénéfices d'une autre arme. Quand ils utilisent une \gw{}, ils gagnent la règle \multiplewounds{2}{\largetarget}.
 
 \columnbreak
 \armyspecialruleentry{\grailoath}
@@ -383,7 +382,7 @@ Cette règle est \oneofakind{} pour les Personnages.
 
 \pricelistitem{\daring}{25} L'unité du porteur ajoute 1D3 à ses jets de distance de charge.
 
-\pricelistitem{\humility}{20} La figurine gagne la règle \insignificant{}, la portée de sa règle \inspiringpresence{} augmente jusqu'à \distance{12} et elle gagne la règle \holdyourground{}, même si elle n'est pas Porteur de la Grande Bannière. Seules les figurines avec la règle \insignificant{} peuvent profiter de cette règle \holdyourground{}. Cette Vertu peut être dupliquée.
+\pricelistitem{\humility}{20} La figurine gagne la règle \insignificant{}, la portée de sa règle \inspiringpresence{} augmente jusqu'à \distance{12} et elle gagne la règle \holdyourground{}, même si elle n'est pas Porteur de la Grande Bannière. Seules les unités dont la majorité des figurines dispose de la règle \insignificant{} peuvent profiter de cette règle \holdyourground{}. Cette Vertu peut être dupliquée.
 
 \endpricelistNSP
 \end{multicols}
@@ -421,15 +420,18 @@ Si un ennemi subit au moins une touche de par cette arme, lancez un dé à la fi
 
 \armytalismans
 
-\startpricelist
+\startpricelistNSP
 
 \pricelistitem{\blessedscripture}{25/15} Les \multiplewounds{}{} subies par le porteur sont divisées par deux, arrondies au supérieur.
 
+\columnbreak
+
+\vspace*{0.9cm}
 \pricelistitem{\talismanofroland}{20} Il n'est pas possible de déclarer la réaction Tenir la Position et Tirer contre une charge de l'unité du porteur.
 
 De plus, les règles de \wardsave{} de l'unité du porteur sont améliorées d'un point contre les Attaques à Distance n'ayant pas la règle \magicalattacks{}, jusqu'à obtenir 4+ au mieux.
 
-\endpricelist
+\endpricelistNSP
 
 \armyenchanteditems
 

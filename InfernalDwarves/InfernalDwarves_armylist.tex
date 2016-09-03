@@ -109,16 +109,16 @@
 	commonspecialrules={\chosenofashuruk{},\relentless{},\sturdy{}},
 	armour={\infernalarmour{}},
 	options={
+		\magicalitemsallowance{}=\upto{}<75,
 		\onechoiceonly{
 			\bsb{}=25,
 			\chosenoflugar{} (\oneofakind{})=30,	
 		},
-		\magicalitemsallowance{}=\upto{}<75,
 		\shield{}=2,
 		\pistol{}=5,
 		\weapononechoice{
-			\gw{}=10,
 			\flintlockaxe{}=10,
+			\gw{}=10,
 			\infernalweapon{}=15,
 		},
 	},		
@@ -142,8 +142,8 @@
 	commonspecialrules={\chosenofashuruk{},\thunderouscharge{}},
 	armour={\ha{}, \innatedefence{6}},
 	options={
-		\bsb{}=25,	
 		\magicalitemsallowance{}=\upto{}<50,
+		\bsb{}=25,	
 		\shield{}=10,
 		\infernalarmour{}=20,
 		\weapononechoice{
@@ -691,7 +691,7 @@
 
 \showunit{
 	name={\kadimtitan},
-	cost=325,
+	cost=350,
 	profile={< 8 5 3 7 6 6 5 6 8},
 	type= \monster{},
 	basesize=100x150,
@@ -701,7 +701,7 @@
 		\def\tempspecialrules{\shacklesoffire{},\volcanicembrace{},\fireborn{},\otherworldly{},\daemonicinstability{}}
 		\vspace*{0.2cm}\commonspecialrules{\kadimcommonrules{}}{\tempspecialrules}
 
-		\def\tempspecialrules{\frenzy{},\wardsave{4},\searingrage{},\lordofflame{}}
+		\def\tempspecialrules{\frenzy{},\searingrage{},\lordofflame{}}
 		\vspace{0.2cm}\specialrules{\tempspecialrules}
 		
 		\def\tempunitrules{

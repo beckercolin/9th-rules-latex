@@ -14,11 +14,10 @@
 	unitsize=1,
 	commontype=\ogrecommonrules{},
 	commonspecialrules={\sonsoftheavalanche},
-	specialrules={\fear},
 	armour={\ha},
 	options={
-		\bignamechoice{}=\unlimited{},
 		\magicalitemsallowance{}=\upto{}<100,
+		\bignamechoice{}=\unlimited{},
 		\shootingweapononechoice{
 			\braceofogrepistols{}=5,
 			\ogrecrossbow{}=5,
@@ -42,14 +41,14 @@
 	magiclevel=3,
 	magicpaths={\alchemy, \heavens, \fire, \death, \wilderness, \butchery},
 	options={
+		\magicalitemsallowance{}=\upto{}<100,
 		\bignamechoice{}=\unlimited{},
 		\magiclevel{4}=30,
-		\magicalitemsallowance{}=\upto{}<100,
+		\greaterfireblessing{}\refsymbol{}=35,
 		\combatweapononechoice{
 			\ironfist{}=8,
 			\gw{}=12,
 		},
-		\greaterfireblessing{}\refsymbol{}=35,
 		\refsymbol{} \onlyifpathoffireoralchemyischosen{}=,
 	},
 	unitrules={
@@ -74,9 +73,9 @@
 	commonspecialrules={\sonsoftheavalanche},
 	armour={\ha},
 	options={
+		\magicalitemsallowance{}=\upto{}<50,
 		\bsb{}=25,
 		\bignamechoice{}=\unlimited{},
-		\magicalitemsallowance{}=\upto{}<50,
 		\shootingweapononechoice{
 			\braceofogrepistols{}=5,
 			\ogrecrossbow{}=5,
@@ -100,14 +99,14 @@
 	magiclevel=1,
 	magicpaths={\fire, \wilderness, \butchery},
 	options={
+		\magicalitemsallowance{}=\upto{}<50,
 		\bignamechoice{}=\unlimited{},
 		\magiclevel{2}=25,
-		\magicalitemsallowance{}=\upto{}<50,
+		\fireblessing{}\refsymbol{}=25,
 		\weapononechoice{
 			\ironfist{}=4,
 			\gw{}=6,
 		},
-		\fireblessing{}\refsymbol{}=25,
 		\refsymbol{} \onlyifpathoffireischosen{}=,
 	},
 	unitrules={
@@ -128,8 +127,8 @@
 	armour={\la},
 	weapons={\huntingspear},
 	options={
-		\bignamechoice{}=\unlimited{},
 		\magicalitemsallowance{}=\upto{}<50,
+		\bignamechoice{}=\unlimited{},
 		\scout{} \onfootonly{}=10,
 		\mayreplacehuntingspearwithogrecrossbow{}=\free{},
 		\weapononechoice{
@@ -193,7 +192,6 @@
 	weapons={\pw},
 	armour={\la},
 	options={
-		\ha{}=\permodel{}<3,
 		\ironfist{}=\permodel{}<6,
 	},
 	commandgroup={champion=10, musician=10, banner=10, veteranstandardbearer=yessir}
@@ -232,8 +230,8 @@
 	options={
 		\la{}=\permodel{}<1,
 		\mayreplacethrowingweaponswith{
-			\shortbow{}=\free{},
 			\shield{}=\permodel{}<1,
+			\shortbow{}=\free{},
 			\spear{}=\permodel{}<1,
 		}
 	},
@@ -300,8 +298,8 @@
 	armour={\ha},
 	options={
 		\weapononechoice{
-			\pw{}=\permodel{}<3,
 			\braceofogrepistols{}=\permodel{}<5,
+			\pw{}=\permodel{}<3,
 			\gw{}=\permodel{}<7,
 			\halberd{}=\permodel{}<7,
 			\ironfist{}=\permodel{}<10,			
@@ -397,6 +395,8 @@
 	unitsize=1,
 	specialrules={\fear{},\ambush{},\hatred{},\unbreakable{},\regeneration{5}},
 }
+
+
 
 
 
