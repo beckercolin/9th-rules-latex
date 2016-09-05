@@ -16,6 +16,10 @@
 	armour={\la},
 	options={
 		\magicalitemsallowance{}=\upto{}<100,
+		\optionschoice{\ifgeneral{} \onechoiceonlyNOC{} :}{
+			\commanderoftheterracottaarmy{}=\free{},
+			\lordofthebarrowlegion{}=\free{},
+		},
 		\shield{}=3,
 		\ha{}=12,
 		\greataspenbow{}=10,
@@ -25,10 +29,6 @@
 			\halberd{}=10,
 			\gw{}=15,
 			\lance{}=15,
-		},
-		\optionschoice{\ifgeneral{} \onechoiceonlyNOC{} :}{
-			\commanderoftheterracottaarmy{}=\free{},
-			\lordofthebarrowlegion{}=\free{},
 		},
 	},
 	mounts={\skeletalhorse{}=20,\skeletonchariot{}=35,\royalsphinx{}=185},
@@ -48,9 +48,9 @@
 	magiclevel=3,
 	magicpaths={\light{},\death{},\sands},
 	options={
+		\magicalitemsallowance{}=\upto{}<100,
 		\magiclevel{4}=30,
 		\soulconduit{}=50,
-		\magicalitemsallowance{}=\upto{}<100,
 		},
 	mounts={\skeletalhorse{}=20,\arkofages{}=170},
 	unitrules={
@@ -108,8 +108,8 @@
 	magiclevel=1,
 	magicpaths={\light{},\death{},\sands},
 	options={
-		\magiclevel{2}=25,
 		\magicalitemsallowance{}=\upto{}<50,
+		\magiclevel{2}=25,
 	},
 	mounts={\skeletalhorse{}=15,\arkofages{}=180},
 }
@@ -126,8 +126,8 @@
 	commonspecialrules={\undead{},\dusttodust{}},
 	armour={\la},
 	options={
-		\bsb{}=25,
 		\magicalitemsallowance{}=\upto{}<50,
+		\bsb{}=25,
 		\shield{}=3,
 		\ha{}=12,
 		\aspenbow{}=3,
@@ -165,8 +165,8 @@
 	specialrules={\flammable{},\masterofstone{},\masonsmenagerie{}},
 	armour={\la{}},
 	options={
-		\mastermason{}=25,
 		\magicalitemsallowance{}=\upto{}<50,
+		\mastermason{}=25,
 		\weapononechoice{
 			\pw{}=3,
 			\lance{}=6,
@@ -638,8 +638,8 @@
 	armour={\la{},\innatedefence{5}},
 	options={
 		\weapononechoice{
-			\giantaspenbow{}=10,
 			\scalesofdestiny{}=5,
+			\giantaspenbow{}=10,
 			\gw{}=10,
 			\pw{}=10,
 		},

@@ -17,6 +17,7 @@
 	allianceoptions={introsentence=\mayreplacedaemonoftruechaoswith{}, change=20, lust=\free{}, pestilence=\free{}, wrath=\free{}},
 	specialrules={\otherworldly{},\daemonicinstability{},\stubborn{},\daemonofadarkgod},
 	options={
+    	\magicalitemsallowance{}=\upto{}<25,
 		\maytakeuptotwogifts{}=\unlimited{},
  		\magiclevelchoice{
 			\magiclevel{1}=40,
@@ -24,7 +25,6 @@
 			\magiclevel{3}=130,
 			\magiclevel{4}=160,
 		},
-    	\magicalitemsallowance{}=\upto{}<25,
  		\platearmour{}=60,	
 	},
 	additional={%
@@ -46,8 +46,8 @@
 	specialrules={\inspiregreatness{},\gazeofthegods},
 	armour={\platearmour},
 	options={
-	    \maytakeasinglegift{}=\unlimited{},
 		\magicalitemsallowance{}=\upto{}<100,	
+	    \maytakeasinglegift{}=\unlimited{},
 		\shield{}=5,
 		\weapononechoice{
 			\flail{}=10,
@@ -65,10 +65,10 @@
 				\hspace*{-0.3cm}\daemonicsteed{}=40,
 				\hspace*{-0.3cm}\manticore{}=120,
 				\hspace*{-0.3cm}\wastelanddragon{}=270,
-				\columnbreak\discofchange{}=60,
+				\columnbreak\pestilentpalanquin{}=15,
 				\crusher{}=40,
 				\steedoflust{}=40,
-				\pestilentpalanquin{}=15,
+				\discofchange{}=60,
 			},
 		}
 		\vspace*{0.2cm}\mounts{\tempmounts}
@@ -90,21 +90,21 @@
 	magiclevel=3,
 	magicpaths={\pathdependingonthemodelsmark},
 	options={
+		\magicalitemsallowance{}=\upto{}<100,
 	    \maytakeasinglegift{}=\unlimited{},
 		\magiclevel{4}=30,
-		\magicalitemsallowance{}=\upto{}<100,
 	},
 	additional={%
 		\def\tempmounts{
 			\optionschoiceTWOCOL{}{
-				\wastelandsteed{}=30,
+				\wastelandsteed{}=35,
 				\hspace*{-0.3cm}\wastelandchariot{}=40,
 				\hspace*{-0.3cm}\daemonicsteed{}=60,
 				\hspace*{-0.3cm}\manticore{}=120,
 				\hspace*{-0.3cm}\wastelanddragon{}=320,
-				\columnbreak\discofchange{}=50,
+				\columnbreak\pestilentpalanquin{}=15,
 				\steedoflust{}=30,
-				\pestilentpalanquin{}=15,
+				\discofchange{}=50,
 			},
 		}
 		\mounts{\tempmounts}
@@ -118,7 +118,6 @@
 
 
 \heroestitle
-
 
 \showunit{
 	name={\sorcerer},
@@ -167,9 +166,9 @@
 		}
 		
 		\def\tempoptions{
+			\magicalitemsallowance{}=\upto{}<50,			
 	 	   \maytakeasinglegift{}=\unlimited{},
 			\magiclevel{2}=25,
-			\magicalitemsallowance{}=\upto{}<50,			
 		}
 		
 		\vspace*{0.2cm}
@@ -191,8 +190,8 @@
 			\daemonicsteed{}=60,
 		}
 		\def\tempoptions{
-	 	   \maytakeasinglegift{}=\unlimited{},
 			\magicalitemsallowance{}=\upto{}<50,		
+	 	   \maytakeasinglegift{}=\unlimited{},
 			\weapononechoice{
 				\flail{}=5,
 				\gw{}=10,
@@ -233,9 +232,9 @@
 	armour={\platearmour},
 	specialrules={\inspiregreatness{}, \gazeofthegods},	
 	options={
+		\magicalitemsallowance{}=\upto{}<50,
 		\bsb{}=25,
 	    \maytakeasinglegift{}=\unlimited{},
-		\magicalitemsallowance{}=\upto{}<50,
 		\shield{}=5,
 		\weapononechoice{
 			\flail{}=5,
@@ -252,10 +251,10 @@
 				\hspace*{-0.3cm}\wastelandchariot{}=50,
 				\hspace*{-0.3cm}\daemonicsteed{}=60,
 				\hspace*{-0.3cm}\manticore{}=155,
-				\discofchange{}=50,
+				\pestilentpalanquin{}=30,
 				\crusher{}=35,
 				\steedoflust{}=35,
-				\pestilentpalanquin{}=30,
+				\discofchange{}=50,
 			},
 		}
 		\vspace*{0.2cm}\mounts{\tempmounts}
@@ -275,10 +274,10 @@
 	armour={\la},
 	specialrules={\inspirebarbarians},
 	options={
+		\magicalitemsallowance{}=\upto{}<50,
 		\bsb{}\refsymbol{}=25,
 		\hspace*{0.3cm}\refsymbol{} \onlyifanotherBCisthegeneral{}=,
-		\maytakeasinglegift{}=\unlimited{},
-		\magicalitemsallowance{}=\upto{}<50,
+		\maytakeasinglegiftbarbarian{}=\unlimited{},
 		\shield{}=4,
 		\ha{}=5,
 		\throwingweapons{}=3,
@@ -380,8 +379,8 @@
 	weapons={\halberd{} \only{\crew}},
 	armour={\mountsprotection{6}},
 	options={
-		\barding{}=20,
 		\wastelandraider{} \only{\general}=\permodel{}<20,
+		\barding{}=20,
 	},
 	unitrules={\unitrule{\wastelandraider}{\wastelandraiderrule}},
 }
@@ -735,7 +734,7 @@
 	weapons={\lightlance{},\hellishwhip},
 	commandgroup={champion=10, banner=10, musician=10},
 	additional={%
-		\def\tempspecialrules{\poisonedattacks{} \only{\steed},\fastcavalry{},\lightningreflexes{} \only{\rider}}
+		\def\tempspecialrules{\poisonedattacks{} \only{\steed},\fastcavalry{},\lightningreflexes{} \only{\rider}, \magicalattacks{} \only{\steed}}
 		\specialrules{\tempspecialrules}
 		
 		\def\tempunitequipment{\equipmentdef{\hellishwhip}{\hellishwhiprule}}
@@ -842,7 +841,7 @@
 	basesize=50x75,
 	alliance={\markofwrath},
 	alliancepic={wrath},
-	specialrules={\magicalattacks{} \only{\rider},\chosenofthegods{} \only{\rider},\fear},
+	specialrules={\magicalattacks{} \only{\crusher},\chosenofthegods{} \only{\rider},\fear},
 	armour={\platearmour{},\shield{},\mountsprotection{6}},
 	options={
 		\weapononechoice{

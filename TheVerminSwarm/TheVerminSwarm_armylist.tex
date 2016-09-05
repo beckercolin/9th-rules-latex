@@ -17,12 +17,12 @@
 	magicpaths={NOPATH},
 	armour={\innatedefence{5}},
 	options={
-		\notaleader{}=\free{},
 		\magiclevelchoice{
 			\magiclevel{2}=25,
 			\magiclevel{3}=90,
 			\magiclevel{4}=120,
 		},
+		\notaleader{}=\free{},
 	},
 	additional={%
 		\begin{center}\mustbecomeoneofthefollowingNOC{}\end{center}
@@ -41,15 +41,15 @@
 	commonspecialrules={\safetyinnumbers{},\honourless{},\callous{}},
 	armour={\la},
 	options={
-		\darkshardbrew{}=30,
 		\magicalitemsallowance{}=\upto{}<100,
+		\darkshardbrew{}=30,
 		\shield{}=5,
 		\ha{}=8,
 		\weapononechoice{
 			\ratlockpistol{}=10,
-			\gw{}=10,
-			\halberd{}=10,
 			\pw{} \wordand{} \tailweapon{}=10,
+			\halberd{}=10,
+			\gw{}=10,
 		},
 	},
 	mounts={
@@ -72,9 +72,9 @@
 	magicpaths={\ruin{},\shadows{}},
 	unitrules={\unitrule{\plaguepatriarch}{\plaguepatriarchrule}},
 	options={
+		\magicalitemsallowance{}=\upto{}<100,
 		\magiclevel{4}=30,
 		2 \darkshards{}=20,
-		\magicalitemsallowance{}=\upto{}<100,
 		\plaguepatriarch{}\refsymbol{}=20,
 		\refsymbol{} \cannotbetakenwithadoombell{}=,
 	},
@@ -100,19 +100,19 @@
 	commonspecialrules={\safetyinnumbers{},\honourless{},\callous{}},
 	armour={\la},
 	options={
+		\magicalitemsallowance{}=\upto{}<50,
 		\onechoiceonly{
 			\bsb{}=25,
 			\darkshardbrew{}=25,
 		},
 		\fetthisbroodmaster{}=5,
-		\magicalitemsallowance{}=\upto{}<50,
 		\shield{}=2,
 		\ha{}=5,
 		\weapononechoice{
-			\gw{}=4,
-			\halberd{}=4,
-			\pw{} \wordand{} \tailweapon{}=4,
 			\ratlockpistol{}=6,
+			\pw{} \wordand{} \tailweapon{}=4,
+			\halberd{}=4,
+			\gw{}=4,
 		},
 	},
 	mounts={
@@ -121,6 +121,51 @@
 	},
 	unitrules={
 		\unitrule{\fetthisbroodmaster}{\fetthisbroodmasterrule}
+	},
+}
+
+\showunit{
+	name={\apprenticemagister},
+	cost=65,
+	profile={< 5 3 3 3 3 2 4 1 5},
+	type=\infantry{},
+	basesize=20x20,
+	unitsize=1,
+	commontype=\vermincommonrules{},
+	commonspecialrules={\safetyinnumbers{},\honourless{}},
+	magiclevel=1,
+	magicpaths={\ruin{},\shadows{}},
+	options={
+		\magicalitemsallowance{}=\upto{}<50,
+		\magiclevel{2}=25,
+		2 \darkshards{}=20,
+	},
+}
+
+\showunit{
+	name={\rakachitmachinist},
+	cost=65,
+	profile={< 5 4 4 4 4 2 5 2 6},
+	type=\infantry{},
+	basesize=20x20,
+	unitsize=1,
+	commontype=\vermincommonrules{},
+	commonspecialrules={\safetyinnumbers{},\honourless{},\callous{}},
+	specialrules={\channel{},\magicalattacks{},\aetherturbine{}},
+	armour={\la},
+	options={
+		\magicalitemsallowance{}=\upto{}<50,
+		\ha{}=5,
+		\weapononechoice{
+			\gasglobes{}=5,
+			\ratlockpistol{}=6,
+			\jezail{}=20,
+			\halberd{}=4,
+		},
+	},
+	additional={%
+		\def\tempunitrules{\unitrule{\aetherturbine}{\aetherturbinerule}}
+		\vspace*{-0.2cm}\unitrules{\tempunitrules}
 	},
 }
 
@@ -137,11 +182,11 @@
 	weapons={\pw{},\throwingweapons{}},
 	options={
 		\magicalitemsallowance{}=\upto{}<50,
-		\mayexchangethrowingweaponsforasling{}=\free{},
-		\tailweapon{}=10,
 		\lethalstrike{}=10,
 		\scout{} \wordand{} \ambush{}=15,
 		\multiplewounds{1D3}{}\refsymbol{}=25,
+		\mayexchangethrowingweaponsforasling{}=\free{},
+		\tailweapon{}=10,
 		\refsymbol{} \siccaraassassinnote{}=,
 		},
 	additional={%
@@ -150,51 +195,6 @@
 			\unitrule{\masterofassassins}{\masterofassassinsrule}
 		}
 		\vspace*{0.2cm}\unitrules{\tempunitrules}
-	},
-}
-
-\showunit{
-	name={\apprenticemagister},
-	cost=65,
-	profile={< 5 3 3 3 3 2 4 1 5},
-	type=\infantry{},
-	basesize=20x20,
-	unitsize=1,
-	commontype=\vermincommonrules{},
-	commonspecialrules={\safetyinnumbers{},\honourless{}},
-	magiclevel=1,
-	magicpaths={\ruin{},\shadows{}},
-	options={
-		\magiclevel{2}=25,
-		\magicalitemsallowance{}=\upto{}<50,
-		2 \darkshards{}=20,
-	},
-}
-
-\showunit{
-	name={\rakachitmachinist},
-	cost=65,
-	profile={< 5 4 4 4 4 2 5 3 6},
-	type=\infantry{},
-	basesize=20x20,
-	unitsize=1,
-	commontype=\vermincommonrules{},
-	commonspecialrules={\safetyinnumbers{},\honourless{},\callous{}},
-	specialrules={\channel{},\magicalattacks{},\aetherturbine{}},
-	armour={\la},
-	options={
-		\magicalitemsallowance{}=\upto{}<50,
-		\ha{}=5,
-		\weapononechoice{
-			\halberd{}=4,
-			\gasglobes{}=5,
-			\ratlockpistol{}=6,
-			\jezail{}=20,
-		},
-	},
-	additional={%
-		\def\tempunitrules{\unitrule{\aetherturbine}{\aetherturbinerule}}
-		\vspace*{-0.2cm}\unitrules{\tempunitrules}
 	},
 }
 
@@ -224,7 +224,7 @@
 		},
 	},
 	mounts={
-		\plaguependulum{}=150,
+		\plaguependulum{}=215,
 	},
 }
 
@@ -480,10 +480,10 @@
 	armour={\ha},
 	options={
 		\musttakeasingleweapon{
-			\meatgrinder{}\refsymbol{}=\free{},
 			\rotarygun{}=\free{},
 			\globelauncher{}=\free{},
 			\naphthathrower{}=\free{},
+			\meatgrinder{}\refsymbol{}=\free{},
 		},
 	},
 	additional={%
@@ -612,7 +612,7 @@
 	type=\monstrousinfantry{},
 	basesize=50x50,
 	unitsize=2,
-	maxmodels=4,
+	maxmodels=6,
 	costpermodel=50,
 	commontype=\vermincommonrules{},
 	commonspecialrules={\safetyinnumbers{}, \callous},

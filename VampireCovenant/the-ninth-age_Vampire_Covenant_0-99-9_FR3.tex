@@ -10,9 +10,9 @@
 
 \tocentry{specialrulestitle}{\labels@armyspecialrules}
 
-\tocentry{bloodlinestitle}{Lignées vampiriques}
+\tocentry{bloodlinestitle}{Lignées Vampiriques}
 
-\tocentry{bloodlinepowerstitle}{Héritages du sang}
+\tocentry{bloodlinepowerstitle}{Héritages du Sang}
 
 \tocentry{magicalitemstitle}{\labels@magicalitems}
 
@@ -239,7 +239,7 @@ Les figurines ennemies qui pourraient allouer des attaques de Corps à Corps à 
 }
 
 \newcommand{\stormofwingsrule}{%
-Les unités ennemies au contact d'une ou plusieurs figurines d'\batswarm{} subissent -1 en Capacité de Combat (jusqu'à un minimum de 1).
+Les unités ennemies au contact d'au moins une figurine d'\batswarm{} subissent -1 en Capacité de Combat (jusqu'à un minimum de 1).
 }
 
 \newcommand{\cartrule}{%
@@ -255,11 +255,11 @@ La \cadaverwagon{} gagne la règle \warplatform{}, mais ne peut rejoindre que de
 }
 
 \newcommand{\bonepyrerule}{%
-Les \wizards{} ennemis dans un rayon de \distance{24} d'une ou plusieurs \cadaverwagons{} avec cette option souffrent d'un malus de -1 à leurs tentatives pour lancer les sorts.
+Les \wizards{} ennemis dans un rayon de \distance{24} d'au moins un \cadaverwagon{} avec cette option souffrent d'un malus de -1 à leurs tentatives pour lancer les sorts.
 }
 
 \newcommand{\bringoutyourdeadrule}{%
-Les unités alliées ciblées par un sort \necromancysignature{} (\Pathof{} \necromancy{}) lancé par un \wizard{} se trouvant dans un rayon de \distance{6} d'une ou plusieurs \cadaverwagons{} avec cette option voient leur caractéristique \invocation{} augmentée suivant la taille des figurines :
+Les unités alliées ciblées par un sort \necromancysignature{} (\Pathof{} \necromancy{}) lancé par un \wizard{} se trouvant dans un rayon de \distance{6} d'au moins un \cadaverwagon{} avec cette option voient leur caractéristique \invocation{} augmentée suivant la taille des figurines :
 \begin{customsubitemize}
 \item Taille Petite : +2 à l'\invocation{},
 \item Taille Moyenne : +1 à l'\invocation{},
@@ -268,7 +268,7 @@ Les figurines ayant la règle \ethereal{} ou \vampiric{} ne sont pas affectées.
 }
 
 \newcommand{\unholydominionrule}{%
-Les figurines ordinaires d'Infanterie appartenant à des unités alliées situées dans un rayon de \distance{6} d'une ou plusieurs figurines avec une \unholydominion{} gagnent +1 en Capacité de Combat. Les unités ennemies à moins de \distance{6} d'une ou plusieurs figurines avec une \unholydominion{} subissent -2 en Initiative, jusqu'à un minimum de 1.
+Les figurines ordinaires d'Infanterie appartenant à des unités alliées situées dans un rayon de \distance{6} d'au moins une figurine avec une \unholydominion{} gagnent +1 en Capacité de Combat. Les unités ennemies à moins de \distance{6} d'au moins une figurine avec une \unholydominion{} subissent -2 en Initiative, jusqu'à un minimum de 1.
 }
 
 \newcommand{\vampireknightbloodtiesoption}{%
@@ -301,7 +301,7 @@ Une \deathlychoir{} avec la règle \wailofwoe{} rejoint l'équipage.%
 }
 
 \newcommand{\darktomerule}{%
-Les \wizards{} amis à moins de \distance{12} d'au moins un \altarofundeath{} équipé d'un \darktome{} ajoutent +2 à leurs tentatives de lancement de sorts de la \Pathof{} \necromancy{}. Tout \wizard{}, allié ou ennemi, subissant un Fiasco à moins de \distance{12} d'un \altarofundeath{} équipé d'un \darktome{} compte comme ayant utilisé deux Dés de Pouvoir supplémentaires pour lancer le sort (maximum 5).
+Les \wizards{} amis dans un rayon de \distance{12} d'au moins un \altarofundeath{} équipé d'un \darktome{} ajoutent +2 à leurs tentatives de lancement de sorts de la \Pathof{} \necromancy{}. Tout \wizard{}, allié ou ennemi, subissant un Fiasco à moins de \distance{12} d'un \altarofundeath{} équipé d'un \darktome{} compte comme ayant utilisé deux Dés de Pouvoir supplémentaires pour lancer le sort (maximum 5).
 }
 
 \newcommand{\auraofundeathrule}{%
@@ -317,7 +317,7 @@ La taille de socle de la figurine change en \unit{50x150}{\milli\meter} et ses \
 }
 
 \newcommand{\soulsyphonrule}{%
-Les effets dépendent du nombre de blessures infligées par la figurine. À la fin de chaque Phase de Corps à Corps, comptez le nombre total de blessures causées depuis le début de la partie par le \darkcoach{} pour déterminer le niveau de \soulsyphon{}. Les améliorations s'accumulent jusqu'au niveau actuel.
+Les effets dépendent du nombre de blessures non sauvegardées infligées par la figurine. À la fin de chaque Phase de Corps à Corps, comptez le nombre total de blessures causées depuis le début de la partie par le \darkcoach{} pour déterminer le niveau de \soulsyphon{}. Les améliorations s'accumulent jusqu'au niveau actuel.
 }
 
 \newcommand{\soulsyphonchart}{%
@@ -376,7 +376,7 @@ Dans une armée contenant une \shriekinghorror{} montée, les \shriekinghorrors{
 
 \armywideruleentry{\invocation}
 
-Les profils d'unité contiennent une catégorie appelée \invocation{} qui donne le nombre de Points de Vie Ressuscités grâce à l'\necromancysignature{} et la \necromancyspellfour{} de la \Pathof{} \necromancy{}.
+Les profils d'unité contiennent une catégorie appelée \invocation{} qui donne le nombre de Points de Vie Ressuscités grâce à aux sorts \necromancysignature{} et \necromancyspellfour{} de la \Pathof{} \necromancy{}.
 
 \armywideruleentry{\masterofundeath}
 
@@ -407,7 +407,7 @@ L'élément de figurine dispose des Attaques Spéciale de Tir et de Corps à Cor
 
 \armyspecialruleentry{\awaken{X}}
 
-La figurine peut Ressusciter des PVs au-delà de l'effectif de départ de toutes les unités mentionnées entre parenthèses, en suivant les modalités de la règle \raisewounds{}. L'effectif de départ est le nombre de figurines choisi sur la liste d'armée. La taille des unités ne peut cependant pas être augmentée au delà du double de l'effectif de départ.
+La figurine peut Ressusciter des Points de Vie au-delà de l'effectif de départ de toutes les unités mentionnées entre parenthèses, en suivant les modalités de la règle \raisewounds{}. L'effectif de départ est le nombre de figurines choisi sur la liste d'armée (ou la taille de l'unité lors de sa création). La taille des unités ne peut cependant pas être augmentée au delà du double de l'effectif de départ.
 
 \newpage
 \armyspecialruleentry{\reaper}
@@ -416,13 +416,13 @@ Une unité composée uniquement de figurines possédant cette règle peut ignore
 
 \armyspecialruleentry{\vampiric{X}}
 
-Une unité composée uniquement de figurines avec cette règle peut effectuer des Marches Forcées même lorsqu'elle se trouve hors de portée de la règle \inspiringpresence{} du Général. Elle doit toujours effectuer un test de Commandement si elle se trouve dans un rayon de \distance{8} d'une unité ennemie.
+Une unité composée uniquement de figurines avec cette règle peut effectuer des Marches Forcées même lorsqu'elle se trouve hors de portée de la règle \inspiringpresence{} du Général. Elle doit toujours effectuer un test de Commandement si elle se trouve à moins de \distance{8} d'une unité ennemie.
 
-\vspace*{5pt}À la fin de chaque Phase de Corps à Corps, les unités avec cette règle peuvent faire des jets pour la règle \vampiric{}. Lancez 1D6 pour chaque Personnage \vampiric{} qui a infligé au moins une blessure non sauvegardée durant cette Phase de Corps à Corps, et 1D6 si au moins une figurine ordinaire \vampiric{} de l'unité l'a fait. Un jet \vampiric{} est réussi si le résultat du dé est de X ou plus, où X est le nombre entre parenthèses. Un résultat de \result{1} est toujours un échec, tandis qu'un \result{6} est toujours un succès. Les figurines avec la règle \largetarget{} ont un malus de -2 sur le résultat des dés de leur jet \vampiric{}, jusqu'à un minimum de 1. Un Personnage qui réussit un jet \vampiric{} Récupère un Point de Vie. Une unité qui a réussi un jet \vampiric{} provenant de ses figurines ordinaires Ressuscite un unique PV dans l'unité.
+\vspace*{5pt}À la fin de chaque Phase de Corps à Corps, les unités avec cette règle peuvent faire des jets pour la règle \vampiric{}. Lancez 1D6 pour chaque Personnage \vampiric{} qui a infligé au moins une blessure non sauvegardée durant cette Phase de Corps à Corps, et 1D6 si au moins une figurine ordinaire \vampiric{} de l'unité l'a fait. Un jet \vampiric{} est réussi si le résultat du dé est de X ou plus, où X est le nombre entre parenthèses. Un résultat de \result{1} est toujours un échec, tandis qu'un \result{6} est toujours un succès. Les figurines avec la règle \largetarget{} ont un malus de -2 sur le résultat des dés de leur jet \vampiric{}. Un Personnage qui réussit un jet \vampiric{} Récupère un Point de Vie. Une unité qui a réussi un jet \vampiric{} provenant de ses figurines ordinaires Ressuscite un unique Point de Vie dans l'unité.
 
 \armyspecialruleentry{\necromanticaura}
 
-Toutes les unités amies dans un rayon de \distance{6} d'une ou plusieurs figurines avec cette règle réduisent le nombre de blessures qu'elle subissent par les règles \ashestoashes{} et \unstable{} de 1. Les figurines avec la règle \necromanticaura{} ne peuvent pas en bénéficier elles-mêmes.
+Toutes les unités alliées à moins de \distance{6} d'une ou plusieurs figurines avec cette règle réduisent le nombre de blessures qu'elle subissent par les règles \ashestoashes{} et \unstable{} de 1. Les figurines avec la règle \necromanticaura{} ne peuvent pas en bénéficier elles-mêmes.
 
 
 \closearmyspecialrules
@@ -469,7 +469,7 @@ Chaque blessure non sauvegardée infligée par des attaques normales du Vampire,
 \centering
 \includegraphics[width=\logosize]{pics/logo_vonkarnstein.png}
 \end{wrapfigure}
-Le vampire peut relancer ses jets ratés pour la règle \vampiric{}. La présence d'un ou plusieurs Vampires \vonkarnstein{} dans un corps à corps octroie un bonus de +1 au Résultat de Combat de leur camp. Une unité avec la règle \undead{} rejointe par un Vampire \vonkarnstein{} peut effectuer une Marche Forcée comme si elle avait la règle \vampiric{}. La portée des éventuelles règles \inspiringpresence{} et \holdyourground{} du Vampire est augmentée de \distance{6}. 
+Le vampire peut relancer ses jets ratés pour la règle \vampiric{}. La présence d'au moins un Vampires \vonkarnstein{} dans un corps à corps octroie un bonus de +1 au Résultat de Combat de leur camp. Une unité avec la règle \undead{} rejointe par un Vampire \vonkarnstein{} peut effectuer une Marche Forcée comme si elle avait la règle \vampiric{}. La portée des éventuelles règles \inspiringpresence{} et \holdyourground{} du Vampire est augmentée de \distance{6}. 
 
 \vspace{0.5cm}
 \bloodties{} : \textbf{\darkcoach}.
@@ -485,7 +485,7 @@ Le Vampire possède un \boundspell{4} : \heavensspelltwo{} (\Pathof{} \heavens{}
 \centering
 \includegraphics[width=\logosize]{pics/logo_lamia.png}
 \end{wrapfigure}
-La Vampire perd une Attaque et obtient la règle \lightningreflexes{}. Si elle ne porte aucune Armure, sans compter la \mountsprotection{} et la \innatedefence{}, elle obtient également la règle \distracting{}. Les Défis lancés par la Vampire doivent être acceptés si possible et les figurines en Défi contre une \lamia{} doivent réussir un test de Commandement avec un malus additionnel de -1. Dans le cas d'un échec, elles doivent relancer leurs jets pour toucher réussis pendant cette Manche de Corps à Corps. La Vampire n'a accès qu'aux Voies \light{}, \shadows{} ou \necromancy{}.
+La Vampire perd une Attaque et obtient la règle \lightningreflexes{}. Si elle ne porte aucune Armure, sans compter la \mountsprotection{} et la \innatedefence{}, elle obtient également la règle \distracting{}. Les Défis lancés par la Vampire doivent être acceptés si possible et les figurines en Défi contre une \lamia{} doivent réussir un test de Commandement avec un malus additionnel de -1. En cas d'échec, elles doivent relancer leurs jets pour toucher réussis pendant cette Manche de Corps à Corps. La Vampire n'a accès qu'aux Voies \light{}, \shadows{} ou \necromancy{}.
 
 \vspace{0.5cm}
 \bloodties{} : \textbf{\courtofthedamned}.
@@ -500,7 +500,7 @@ Toutes les figurines ordinaires de l'unité rejointe par la Vampire obtiennent u
 \centering
 \includegraphics[width=\logosize]{pics/logo_strigoi.png}
 \end{wrapfigure}
-Le Vampire et sa monture obtiennent les règles \regeneration{5} et \hatred{}. Le Vampire gagne +1 Point de Vie, ne peut pas prendre de monture à l'exception d'une \shriekinghorror{} et ne peut porter aucune Armure. Il ne peut acheter qu'un seul Niveau de Magie supplémentaire et doit utiliser la \Pathof{} \wilderness{} ou \necromancy{}.
+Le Vampire et sa monture obtiennent les règles \regeneration{5} et \hatred{}. Le Vampire gagne +1 Point de Vie, ne peut pas prendre de monture à l'exception d'une \shriekinghorror{} et ne peut porter aucune Armure (sans compter la \mountsprotection{}). Il ne peut acheter qu'un seul Niveau de Magie supplémentaire et doit utiliser la \Pathof{} \wilderness{} ou \necromancy{}.
 
 \vspace{0.5cm}
 \bloodties{} : \textbf{\ghouls{}}.
@@ -553,7 +553,7 @@ Les \vampirelords{} et les \vampireheroes{} peuvent acheter une unique améliora
 
 \pricelistitem{\perfectwarrior}{35} Le Vampire gagne les règles \weaponmaster{} et \lethalstrike{}. Il est équipé d'un \shield{}, d'une \gw{}, d'une \halberd{}, d'une \lance{} et d'une \pw{}.
 
-\pricelistitem{\eternalduelist}{30} Lorsqu'il combat en défi, le Vampire peut relancer ses jets pour toucher et pour blesser ratés.
+\pricelistitem{\eternalduelist}{30} Lorsqu'il combat en défi, le Vampire peut relancer ses jets ratés pour toucher et pour blesser.
 
 \endpricelist
 
@@ -649,7 +649,7 @@ Type: \hw{}. Le Vampire maniant cette lame gagne la règle \vampiric{3}. L'élé
 
 \pricelistitem{\eternalring}{60/50} Vampires uniquement.
 
-Le porteur possède une \wardsave{2} contre la première blessure subie de la partie, après les Sauvegardes d'Armure. Il est immunisé aux effets des règles \lethalstrike{} et \multiplewounds{}{}.
+Le porteur possède une \wardsave{2} contre la première blessure subie de la partie, après les Sauvegardes d'Armure. Les attaques dirigées contre le porteur perdent les règles \lethalstrike{} et \multiplewounds{}{} si elles les avaient.
 
 \pricelistitem{\mantleofnight}{40} Infanterie ou Cavalerie uniquement.
 
@@ -671,7 +671,7 @@ Toute figurine allouant des attaques de Corps à Corps au porteur ne reçoit auc
 
 \pricelistitem{\staffofgerhardtheblack}{45} Une armée possédant cet objet peut relancer ses jets de Canalisation ratés. De plus, quand le porteur lance le sort \necromancysignature{} (\Pathof{} \necromancy{}), un dé pour déterminer le nombre de Points de Vie Ressuscités peut être relancé pour chaque unité ciblée.
 
-\pricelistitem{\unholytome}{35} \boundspell{4}. \necromancyspelltwo{} (\Pathof{} \necromancy{}).
+\pricelistitem{\unholytome}{35} \boundspell{4}. \necromancyspellthree{} (\Pathof{} \necromancy{}).
 
 \pricelistitem{\eyeofsetesh}{15} Une seule utilisation. À la fin d'une Phase de Magie adverse, vous pouvez mettre un Dé de Dissipation inutilisé de côté. Ce dé pourra être ajouté à votre réserve comme Dé de Pouvoir, juste après avoir déterminé les Flux de Magie.
 

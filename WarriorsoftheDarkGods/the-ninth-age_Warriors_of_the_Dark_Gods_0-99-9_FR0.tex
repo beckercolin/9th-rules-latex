@@ -10,7 +10,7 @@
 
 \tocentry{armourytitle}{\labels@armoury}
 
-\tocentry{giftstitle}{Dons des dieux sombres}
+\tocentry{giftstitle}{Dons des Dieux Sombres}
 
 \tocentry{magicalitemstitle}{\labels@magicalitems}
 
@@ -231,6 +231,7 @@
 \newcommand{\maytakeasinglegift}{Un seul Don des Dieux Sombres}
 \newcommand{\pathdependingonthemodelsmark}{de son choix parmi celles accessibles à sa Marque}
 \newcommand{\onlyifanotherBCisthegeneral}{seulement si un autre \barbarianchief{} est Général}
+\newcommand{\maytakeasinglegiftbarbarian}{Un seul Don des Dieux Sombres (si Général)}
 \newcommand{\maytakeoneofthefollowingrules}{Peut prendre l'une des règles suivantes}
 \newcommand{\samemarkasthecharacter}{\textnormal{Prend la} Marque \textnormal{du Personnage}}
 \newcommand{\mayexchangefastcavformountsprotectionLONG}{Remplacer la règle \fastcavalry{} par \mountsprotection{5}}
@@ -248,7 +249,7 @@ La figurine gagne accès à des Voies de Magie et à des bonus selon son allége
 \hline
 & \textbf{Bonus} & \textbf{Magie} \tabularnewline
 \textbf{\truechaos} & +1 en Commandement. & Alchimie, Cieux, Feu, Mort ou Ombres. \tabularnewline
-\textbf{\dchange} & Peut choisir de gagner l'une des règles suivantes au début de chaque Manche de Corps à Corps et avant de tirer : \divineattacks{}, \flamingattacks{} ou \hellfire{}. Affecte les Attaques de Corps à Corps et de Tir, mais pas les Attaques Spéciales comme le \stomp{} ou les \impacthits{}. Si Sorcier, ajoute un bonus de +1 aux résultats de ses jets de lancement de sort. & Alchimie ou Changement. \tabularnewline
+\textbf{\dchange} & Peut choisir de gagner l'une des règles suivantes au début de chaque Manche de Corps à Corps et avant de tirer : \divineattacks{}, \flamingattacks{} ou \hellfire{}. Affecte les Attaques de Corps à Corps et de Tir, mais pas les Attaques Spéciales comme le \stomp{} ou les \impacthits{}. Si Sorcier, il peut choisir de relancer tous ses dés lors de la génération des sorts. & Alchimie ou Changement. \tabularnewline
 \textbf{\wrath} & +1 en Force à chaque première Manche de Corps à Corps. & Ne peut pas être Sorcier. \tabularnewline
 \textbf{\dlust} & Gagne la règle \armourpiercing{+1}. & Luxure ou Ombres. \tabularnewline
 \textbf{\pestilence} & Gagne les règles \poisonedattacks{} et \regeneration{5}. Les \toxicattacks{} subissent un malus de -1 pour blesser la figurine. & Maladie ou Mort. \tabularnewline
@@ -320,7 +321,7 @@ Toute unité sans la règle \largetarget{} à moins de \distance{6} gagne la rè
 \begin{center}\begin{tabular}{p{2cm}p{12cm}}
 \hline
 \textbf{\truechaos} & \boundspell{5}. \heavensspellone{} (\Pathof{} \heavens{}). \tabularnewline
-\textbf{\dchange} & \boundspell{5}. \changespellthree{} (\Pathof{} \change{}). \tabularnewline
+\textbf{\dchange} & \boundspell{5}. \changespelltwo{} (\Pathof{} \change{}). \tabularnewline
 \textbf{\wrath} & Toute unité alliée à moins de \distance{6} dont la majorité des figurines a la \markoftruechaos{} ou du \wrath{} gagne la règle \magicresistance{2}. \tabularnewline
 \textbf{\dlust} & \boundspell{5}. \lustspellthree{} (\Pathof{} \lust{}). \tabularnewline
 \textbf{\pestilence} & \boundspell{5}. \diseasesignature{} (\Pathof{} \disease{}). \tabularnewline
@@ -417,7 +418,7 @@ Choisissez une figurine en contact socle à socle avec le Géant dans l'unité s
 
 \armyspecialruleentry{\marksofthedarkgods}
 
-Il existe cinq \marksofthedarkgods{} qui ont chacune un effet différent, expliqué ci-dessous. Les figurines avec la \markoftruechaos{} peuvent rejoindre les unités sans Marque ou avec n'importe quelle Marque. Les figurines avec une des quatre autres Marques ne peuvent pas rejoindre d'unités qui contiennent au moins une figurine qui n'a pas la même Marque qu'elles ou qui n'est pas marquée. Les Sorciers ne peuvent pas rejoindre d'unités qui contiennent des figurines avec la \markofwrath{}, et les figurines avec la \markofwrath{} ne peuvent pas rejoindre d'unités contenant des Sorciers.
+Il existe cinq \marksofthedarkgods{} qui ont chacune un effet différent, expliqué ci-dessous. Un Personnage avec une Marque peut rejoindre n'importe quelle unité tant qu'elle ne contient pas de figurines avec une Marque différente. La Marque du \truechaos{} fait cependant exception : elle ne peut jamais empêcher un Personnage de rejoindre une unité, quelle que soit sa Marque. De même, un Personnage avec la Marque du \truechaos{} peut rejoindre n'importe quelle unité, quelles que soient les Marques que possèdent les figurines qui la composent. Les Sorciers ne peuvent pas rejoindre d'unités qui contiennent des figurines avec la \markofwrath{}, et les figurines avec la \markofwrath{} ne peuvent pas rejoindre d'unités contenant des Sorciers.
 
 \spacebetweenmarks{}
 
@@ -584,7 +585,7 @@ Le porteur augmente la valeur de sa \wardsave{} d'un point, jusqu'à obtenir 4+ 
 La figurine gagne la règle \breathweapon{\toxicattacks}. De plus, à chaque Manche de Corps à Corps, chaque figurine ennemie en contact socle à socle avec le porteur subit une touche de Force 1 avec la règle \armourpiercing{6} au palier d'Initiative 10.
 
 \columnbreak
-\pricelistitem{\wildlingblood}{40} Le porteur gagne la règle \inspiringpresence{}, qu'il soit le Général ou non. Cependant, seules les unités de type Bête de Guerre, Bête Monstrueuse, Infanterie Monstrueuse ou Monstre peuvent bénéficier de cette règle si le porteur n'est pas le Général.
+\pricelistitem{\wildlingblood}{40} Le porteur gagne la règle \inspiringpresence{}, qu'il soit le Général ou non. Cependant, seules les unités de type Bête de Guerre, Infanterie Monstrueuse, Bête Monstrueuse ou Monstre peuvent bénéficier de cette règle si le porteur n'est pas le Général.
 
 Si le porteur est votre Général une unique unité de \wastelandtrolls{} de 6 figurines maximum peut être prise en choix d'Unité de Base.
 

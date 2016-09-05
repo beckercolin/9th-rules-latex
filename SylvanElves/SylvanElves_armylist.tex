@@ -15,8 +15,8 @@
 	commontype=\elvescommonrules{},
 	commonspecialrules={\forestwalker{},\lightningreflexes},
 	options={
-		\asinglekindred{}=\unlimited{},
 		\magicalitemsallowance{}=\upto{}<100,
+		\asinglekindred{}=\unlimited{},
 		\la{}=\free{},
 		\shield{}=5,
 		\elvencloak{}=8,
@@ -50,9 +50,9 @@
 	magiclevel=3,
 	magicpaths={\blackmagic{},\whitemagic{},\anyofthebattlemagic{}},
 	options={
+		\magicalitemsallowance{}=\upto{}<100,
 		\magiclevel{4}=30,
 		\treesinging{}=15,
-		\magicalitemsallowance{}=\upto{}<100,
 	},
 	mounts={
 		\elvenhorse{}=20,
@@ -85,16 +85,16 @@
 		\begin{center}{\largerfontsize\antiquefont\treefatherancient{} (\pts{215})}\end{center}
 		
 		\def\tempoptions{%
+			\ifwizard{}{,} \arcaneitem{}=\upto{}<50,
 			\asingleaspectofnature{}=\unlimited{},
-			\treesinging{}=15,
-			\impalingroots{}=20,
 			\magiclevelchoice{
 				\magiclevel{1}=40,
 				\magiclevel{2}=65,
 				\magiclevel{3}=130,
 				\magiclevel{4}=160,
 			},
-			\ifwizard{}{,} \arcaneitem{}=\upto{}<50,
+			\treesinging{}=15,
+			\impalingroots{}=20,
 		}
 		\options{\tempoptions}
 
@@ -132,9 +132,9 @@
 	commontype=\elvescommonrules{},
 	commonspecialrules={\forestwalker{},\lightningreflexes},
 	options={
+		\magicalitemsallowance{}=\upto{}<50,
 		\bsb{}=25,
 		\asinglekindred{}=\unlimited{},
-		\magicalitemsallowance{}=\upto{}<50,
 		\la{}=\free{},
 		\shield{}=3,
 		\elvencloak{}=5,
@@ -167,9 +167,9 @@
 	magiclevel=1,
 	magicpaths={\blackmagic{},\whitemagic{},\anyofthebattlemagic{}},
 	options={
+		\magicalitemsallowance{}=\upto{}<50,
 		\magiclevel{2}=25,
 		\treesinging{}=15,
-		\magicalitemsallowance{}=\upto{}<50,
 	},
 	mounts={
 		\elvenhorse{}=15,
@@ -354,8 +354,8 @@
 	options={
 		\mayexchangelongbowforshield{}=\free{},
 		\onechoiceonly{
-			\exchangefastcavalryforelvencloak{}=\permodel{}<2,
 			\ambush{}=\permodel{}<2,
+			\exchangefastcavalryforelvencloak{}=\permodel{}<2,
 		},
 	},
 	commandgroup={champion=10, musician=10, banner=10},
@@ -477,9 +477,9 @@
 	weapons={\longbow{},\sylvanlance},
 	armour={\mountsprotection{6}},
 	options={
+		\skirmisher{} \ifNmodelsorless{3}=\permodel{}<5,
 		\mayexchangelongbowforshield{}=\permodel{}<2,
 		\la{}=\permodel{}<4,
-		\skirmisher{} \ifNmodelsorless{3}=\permodel{}<5,
 	},
 	commandgroup={champion=10, musician=10, banner=10, bannerallowance=25}
 }

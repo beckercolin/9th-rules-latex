@@ -237,7 +237,7 @@
 % Profile rules
 
 \newcommand{\palanquinrule}{%
-Lorsqu'un \cuatllord{} se trouve dans une unité d'au moins 5 figurines avec la règle \bodyguard{}, il perd la règle \firstinrank{}. Il peut être Général même s'il est aussi \bsb{} et ne peut pas être désigné par un ennemi comme étant la figurine qui refuse un Défi.
+Lorsqu'un \cuatllord{} se trouve dans une unité d'au moins 5 figurines avec la règle \bodyguard{}, il peut être placé n'importe où dans l'unité et n'a pas à être à l'avant. Les figurines avec la règle \frontrank{} ont la priorité pour être le plus avant l'avant possible de l'unité. Il peut être Général même s'il est aussi \bsb{} et ne peut pas être désigné par un ennemi comme étant la figurine qui refuse un Défi.
 }
 
 \newcommand{\packleaderrule}{%
@@ -249,7 +249,7 @@ Lorsqu'il charge une \largetarget{} ou une figurine seule avec la règle \fly{},
 }
 
 \newcommand{\skinkpalanquinrule}{%
-La figurine perd la règle \firstinrank{} dans une unité de \saurianwarriors{} ou de \skinkbraves{} qui n'abrite pas de \caimans{}.
+La figurine perd la règle \frontrank{} dans une unité de \saurianwarriors{} ou de \skinkbraves{} qui n'abrite pas de \caimans{}.
 }
 
 \newcommand{\plaqueofthesnakegodrule}{%
@@ -285,7 +285,7 @@ Toutes les attaques portées contre une unité ennemie en contact avec la figuri
 }
 
 \newcommand{\combinedstrengthrule}{%
-Vous pouvez ajouter des \caimans{} aux unités de \skinkbraves{}. Ces \caimans{} sont des figurines ordinaires d'un type différent (\monstrousinfantry{}). L'\textbf{unité} est considérée comme étant du type \infantry{} tant qu'il y a plus de \skinks{} que de \caimans{}, et du type \monstrousinfantry{} sinon (voir les règles des Types de Troupe). Les \caimans{} sont considérés comme ayant des Socles Compatibles (voir la règle \firstinrank{}), sauf qu'ils peuvent être placés n'importe où dans l'unité et non pas le plus en avant possible. Les \caimans{} et les \skinkbraves{} ne partagent pas une réserve de Points de Vie commune, malgré le fait que ce ne soient que des figurines ordinaires. Ils ont chacun leur propre réserve de Points de Vie, et les blessures ne peuvent être transférées d'une réserve à l'autre. Toute blessure excédentaire est perdue.
+Vous pouvez ajouter des \caimans{} aux unités de \skinkbraves{}. Ces \caimans{} sont des figurines ordinaires d'un type différent (\monstrousinfantry{}). L'\textbf{unité} est considérée comme étant du type \infantry{} tant qu'il y a plus de \skinks{} que de \caimans{}, et du type \monstrousinfantry{} sinon (voir les règles des Types de Troupe). Les \caimans{} sont considérés comme ayant des Socles Compatibles (voir la règle \frontrank{}), sauf qu'ils peuvent être placés n'importe où dans l'unité et non pas le plus en avant possible. Les \caimans{} et les \skinkbraves{} ne partagent pas une réserve de Points de Vie commune, malgré le fait que ce ne soient que des figurines ordinaires. Ils ont chacun leur propre réserve de Points de Vie, et les blessures ne peuvent être transférées d'une réserve à l'autre. Toute blessure excédentaire est perdue.
 \begin{itemize}[label={-}]
 	 \item \textbf{Distribution des Touches}. Quand des touches sont infligées à l'unité, commencez par distribuer normalement les touches entre les Personnages et les figurines ordinaires. Lancez ensuite un dé pour chaque touche distribuée sur une figurine ordinaire. Sur \textbf{1-4} un \skinkbrave{} est touché, sur \textbf{5-6} c'est un \caiman{}.
 	 \item \textbf{\stomp{}}. Les touches infligées à l'unité ne peuvent pas être distribuées aux figurines n'étant pas de type \infantry{}. Ignorez simplement ces figurines quand vous distribuez les touches.
@@ -357,13 +357,13 @@ Un \cuatllorddiscipline{} ne peut pas être dupliqué. Une armée ne peut pas d�
 \begin{multicols}{2}\raggedcolumns
 \startpricelistNSP
 
-\pricelistitem{\masterofmagic}{85}Pendant les Phases de Magie de votre Tour de Joueur, lancez un dé additionnel pour la génération des Flux de Magie et ignorez le dé ayant donné le plus petit résultat.
+\pricelistitem{\masterofmagic}{85}Pendant les Phases de Magie de votre Tour de Joueur, lancez 1D6 additionnel pour la génération des Flux de Magie et ignorez le dé ayant donné le plus petit résultat.
 
 \pricelistitem{\wanderingpath}{80}Le \cuatllord{} ne génère pas ses sorts normalement, mais connaît à la place tous les sorts de la \Pathof{} \eightpaths{}. Il ne peut pas prendre l'Objet Essence de Libre Pensée, ni avoir la règle \pathmaster{}.
 
 \pricelistitem{\wellspringofpower}{50}Le \cuatllord{} gagne un bonus de +1 pour lancer des sorts et ajoute un bonus de +2 additionnel au jet de Canalisation lors des Phases de Magie alliées.
 
-\pricelistitem{\ancientknowledge}{50}Le \cuatllord{} génère un sort supplémentaire et doit choisir la \Pathof{} \whitemagic{}. Lorsqu'il lance un sort \whitemagic{} avec succès, il peut choisir d'oublier ce sort immédiatement, et génère un nouveau sort dans une Voie à laquelle il a normalement accès, à la fin de la Phase de Magie. Le \cuatllord{} ne peut pas prendre l'Objet Essence de Libre Pensée, ni avoir la règle \pathmaster{}.
+\pricelistitem{\ancientknowledge}{50}Le \cuatllord{} génère un sort supplémentaire et doit choisir la \Pathof{} \whitemagic{}. Lorsqu'il lance un sort \whitemagic{} avec succès, il peut choisir d'oublier ce sort immédiatement, et génère un nouveau sort dans une Voie à laquelle il a normalement accès, à la fin de la Phase de Magie. S'il possède la règle \pathmaster{}, il ne peut pas l'utiliser pour choisir ses nouveaux sorts : il doit les générer aléatoirement. Le \cuatllord{} ne peut pas prendre l'Objet Essence de Libre Pensée.
 
 \pricelistitem{\unconquerablewill}{35}Le \cuatllord{} peut relancer le jet de sa première tentative de dissipation ratée à chaque Phase de Magie.
 
@@ -419,7 +419,7 @@ Un \cuatllord{} peut lancer ses sorts du type Dégâts par l'intermédiaire d'un
 
 \startitemlistonecol
 
-\listitemonecol{\blowpipe} Arme de Tir. \range{12}, Force 3, \poisonedattacks{}, \multipleshots{2}, +1 pour toucher les figurines ayant la règle \largetarget{}.
+\listitemonecol{\blowpipe} Arme de Tir. \range{12}, Force 3, \poisonedattacks{}, \multipleshots{2}, +1 pour toucher les unités constituées entièrement de figurines avec la règle \largetarget{}.
 
 \listitemonecol{\javelin} Arme de Tir. \range{12}, Force de l'utilisateur, \quicktofire{}.
 

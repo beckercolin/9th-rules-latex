@@ -72,9 +72,9 @@
 	magicpaths={\whitemagic{},\anyofthebattlemagic},
 	unitrules={\unitrule{\palanquin}{\palanquinrule}},
 	options={
+		\magicalitemsallowance{}=\upto{}<100,
 		\bsb{}=50,
 		\cuatllorddisciplines{}=\upto{}<100,
-		\magicalitemsallowance{}=\upto{}<100,
 	},
 }
 
@@ -98,8 +98,8 @@
 	commonspecialrules={\coldblooded{},\bornpredator},
 	armour={\innatedefence{5}},
 	options={
-		\bsb{}=25,
 		\magicalitemsallowance{}=\upto{}<50,
+		\bsb{}=25,
 		\shield{}=5,
 		\la{}=15,
 		\ha{} \onfootonly{}=20,
@@ -129,8 +129,8 @@
 	weapons={\blowpipe},
 	armour={\innatedefence{6},\la},
 	options={
-		\bsb{}=25,
 		\magicalitemsallowance{}=\upto{}<50,
+		\bsb{}=25,
 		\shield{}=2,
 		\replaceblowpipewithpoisonedjavelin{}=\free{},
 		\combatweapononechoice{
@@ -159,8 +159,8 @@
 	magicpaths={\heavens{},\wilderness},
 	armour={\innatedefence{6}},
 	options={
-		\magiclevel{2}=25,
 		\magicalitemsallowance{}=\upto{}<50,
+		\magiclevel{2}=25,
 	},
 	mounts={
 		\taurosaur{}=200,
@@ -364,11 +364,11 @@
 		\def\tempoptions{
 			\caimansoption{}=\permodel{}<50,
 			\poisonedattacks{} (\closecombatonly{})=\permodel{}<1,
+			\replacejavelinandshieldforshortbow{}=\free{},
 			\onechoiceonly{
 				\skirmisheroption{}=\permodel{}<2,
 				\replacejavelinforpoisonedjavelin{}=\permodel{}<2,
 			},
-			\replacejavelinandshieldforshortbow{}=\free{},
 		}
 		\vspace*{0.2cm}
 		\begin{center}\begin{minipage}{10cm}\options{\tempoptions}\end{minipage}\end{center}
