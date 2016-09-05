@@ -147,7 +147,7 @@ S'applique aux attaques avec cette règle et aux attaques provenant d'une figuri
 
 \newspecialrule{sweepingattack}{\newfromWHB{\sweepingattack{}} (Attaque Spéciale)}
 
-Attaque Spéciale à Distance. Cette attaque peut être utilisée par les unités composées de figurines ayant cette règle. À la fin de l'étape des Autres Mouvements, désignez une unité ennemie non engagée au Corps à Corps à travers ou au-dessus de laquelle l'unité a fait un Mouvement Simple ou une Marche Forcée pendant cette phase (même si les socles ne se sont que partiellement superposés). Cette attaque peut aussi être utilisée à la fin d'une Phase de Magie durant laquelle l'unité a effectué un Mouvement Magique. Chaque figurine de l'unité effectue une attaque contre l'unité ennemie choisie. Cette attaque touche automatiquement et est résolue suivant la description dans le profil de l'unité.
+Attaque Spéciale à Distance. Cette attaque peut être utilisée par les unités composées de figurines ayant cette règle. À la fin de l'étape des Autres Mouvements, désignez une unité ennemie non engagée au Corps à Corps à travers ou au-dessus de laquelle l'unité a fait un Mouvement Simple ou une Marche Forcée pendant cette phase (même si les socles ne se sont que partiellement superposés). Cette attaque peut aussi être utilisée à la fin d'une Phase de Magie durant laquelle l'unité a effectué un Mouvement Magique. Chaque figurine de l'unité effectue une attaque contre l'unité ennemie choisie. Cette attaque touche automatiquement et est résolue suivant la description dans le profil de l'unité. Quand une figurine porte une \sweepingattack{}, la distance dont elle s'est déplacée est comptée en deux temps : de sa position initiale à l'endroit où elle a effectué l'attaque, puis de cet endroit à sa position finale.
 
 \newspecialrule{breathweapon}{\breathweapon{X} (Attaque Spéciale)}
 
@@ -233,7 +233,7 @@ La figurine gagne les règles \magicalattacks{}, \immunetopsychology{} et \wards
 
 \newspecialrule{ambush}{\ambush}
 
-\newfromWHB{Avant de commencer le déploiement d'une armée qui contient des unités avec la règle \ambush{}, mais après avoir choisi les zones de déploiement, vous devez annoncer lesquelles de ces unités utiliseront cette règle, en commençant par le joueur qui a choisi les zones de déploiement.} Déployez l'armée normalement sauf les unités annoncées. À partir du deuxième Tour de Jeu, lancez un dé pour chaque unité en \ambush{} au début de chacune de vos étapes des Autres Mouvements. Une fois tous les dés lancés, chaque unité pour laquelle un 3+ a été obtenu peut entrer sur le champ de bataille depuis n'importe quel bord de table. Positionnez l'unité avec l'intégralité de son rang arrière en contact avec un bord de table. Elle est ensuite libre de se déplacer pendant l'étape des Autres Mouvements mais ne peut pas effectuer de Marche Forcée, et aucune figurine ne doit finir à plus de deux fois la valeur de sa Caractéristique de Mouvement du bord de table. Si un 3+ n'a jamais été obtenu pour une unité en \ambush{} à la fin de la partie, elle n'a pas pu atteindre le champ de bataille et compte comme ayant été détruite. \newfromWHB{Un Personnage en \ambush{} peut être déployé directement dans une unité en \ambush{} s'il peut la rejoindre dans des conditions normales. Déclarez-le alors au moment de déterminer quelles unités de l'armée sont en \ambush{}. Dans ce cas, lancez un seul dé pour l'Unité Combinée.} Jusqu'à son arrivée sur le champ de bataille, une unité en \ambush{} ne peut effectuer aucune action et tous ses objets, règles et capacités sont inutilisables.
+\newfromWHB{Avant de commencer le déploiement d'une armée qui contient des unités avec la règle \ambush{}, mais après avoir choisi les zones de déploiement, vous devez annoncer lesquelles de ces unités utiliseront cette règle, en commençant par le joueur qui a choisi les zones de déploiement.} Déployez l'armée normalement sauf les unités annoncées. À partir du deuxième Tour de Jeu, lancez un dé pour chaque unité en \ambush{} au début de chacune de vos étapes des Autres Mouvements. Une fois tous les dés lancés, chaque unité pour laquelle un 3+ a été obtenu peut entrer sur le champ de bataille depuis n'importe quel bord de table. Positionnez l'unité avec l'intégralité de son rang arrière en contact avec un bord de table. Elle est ensuite libre de se déplacer pendant l'étape des Autres Mouvements mais ne peut pas effectuer de Marche Forcée, et aucune figurine ne doit finir à plus de deux fois la valeur de sa Caractéristique de Mouvement du bord de table. Si une unité en \ambush{} n'a pas pu entrer sur le champ de bataille, en ratant ses jets sur 3+, à la fin de la partie, elle comme ayant été détruite. \newfromWHB{Un Personnage en \ambush{} peut être déployé directement dans une unité en \ambush{} s'il peut la rejoindre dans des conditions normales. Déclarez-le alors au moment de déterminer quelles unités de l'armée sont en \ambush{}. Dans ce cas, lancez un seul dé pour l'Unité Combinée.} Jusqu'à son arrivée sur le champ de bataille, une unité en \ambush{} ne peut effectuer aucune action et tous ses objets, règles et capacités sont inutilisables.
 
 \newspecialrule{unwieldy}{\newfromWHB{\unwieldy}}
 
@@ -241,7 +241,7 @@ Les Armes de Tir avec cette règle, et les Attaques de Tir provenant d'un élém
 
 \newspecialrule{ethereal}{\ethereal}
 
-La figurine gagne la règle \magicalattacks{} ainsi qu'un \newfromWHB{\wardsave{2}} qui ne peut pas être utilisée contre des \magicalattacks{}. Un Personnage sans la règle \ethereal{} ne peut pas rejoindre une unité qui contient des figurines ordinaires avec cette règle. La figurine traite tous les Décors comme du Terrain Découvert pour son mouvement, mais ne peut pas finir un déplacement à l'intérieur ou à moins d'\distance{1} d'un Terrain Infranchissable. Si une figurine en plusieurs éléments dispose de cette règle, les montures ne bénéficient pas de la \wardsave{} et peuvent être rejointes normalement, à moins que le cavalier lui-même ait la règle \ethereal{}.
+La figurine gagne la règle \magicalattacks{} ainsi qu'un \newfromWHB{\wardsave{5}, qui est améliorée en \wardsave{3} contre les attaques \textbf{sans} la règle \magicalattacks{}}. Un Personnage sans la règle \ethereal{} ne peut pas rejoindre une unité qui contient des figurines ordinaires avec cette règle. La figurine traite tous les Décors comme du Terrain Découvert pour son mouvement, mais ne peut pas finir un déplacement à l'intérieur ou à moins d'\distance{1} d'un Terrain Infranchissable. Si une figurine en plusieurs éléments dispose de cette règle, les montures ne bénéficient pas de la \wardsave{} et peuvent être rejointes normalement, à moins que le cavalier lui-même ait la règle \ethereal{}.
 
 \newspecialrule{hellfire}{\newfromWHB{\hellfire}}
 
@@ -294,12 +294,12 @@ Cette règle ne peut pas être utilisée si l'\engineer{} est Engagé au Corps �
 
 \newspecialrule{insignificant}{\newfromWHB{\insignificant}}
 
-Les unités composées entièrement de figurines avec cette règle ne provoquent pas de tests de Panique chez les unités sans cette règle. Seuls les Personnages avec la règle \insignificant{} peuvent rejoindre des unités avec cette règle.
+Les unités composées entièrement de figurines avec cette règle ne provoquent pas de tests de Panique chez les unités alliées sans cette règle. Seuls les Personnages avec la règle \insignificant{} peuvent rejoindre des unités avec cette règle.
 
 \newspecialrule{daemonicinstability}{\daemonicinstability}
 \label{daemonicinstability}
 
-L'unité ne peut pas fuir d'un Corps à Corps. À la place, le joueur lance 2D6 comme pour un test de Moral classique, ajoute la différence de Résultat de Combat, puis retranche la valeur de Commandement de l'unité. Une formule simplifiée s'écrit \textbf{2D6 + RC - Cd}. Si le total est strictement supérieur à 0, le test est raté et l'unité subit un nombre de blessures égal à ce total. Ces blessures sont distribuées comme pour la règle \unstable{}, sans sauvegarde d'aucune sorte possible. Si une unité possède à la fois les règles \daemonicinstability{} et \unstable{}, ignorez la règle \unstable{}.
+Quand l'unité rate un test de Moral, elle ne fuit pas du Corps à Corps. À la place, elle subit un nombre de blessures égal à la valeur qu'il manquait pour réussir le test. Une formule simplifiée s'écrit \textbf{2D6 + RC - Cd}, en ignorant le minimum de 0 pour la Caractéristique de Commandement. Ces blessures sont réparties comme pour la règle \unstable{}, sans sauvegarde d'aucune sorte possible. Un Personnage avec cette règle ne peut rejoindre qu'une unité ayant cette règle, et une unité avec la règle \daemonicinstability{} ne peut être rejointe que par des Personnages ayant cette règle. Si une unité possède à la fois les règles \daemonicinstability{} et \unstable{}, ignorez la règle \unstable{}.
 
 \newpage
 \newspecialrule{unstable}{\unstable}
@@ -327,7 +327,7 @@ Au début de chaque Manche de Corps à Corps, l'élément de figurine peut chois
 
 \newspecialrule{pathmaster}{\pathmaster{}}
 
-Le Sorcier ne génère par ses sorts au hasard comme dans la procédure normale. Il peut à la place \newfromWHB{choisir librement ses sorts} dans la Voie précisée entre parenthèses. Il ne peut cependant toujours pas dupliquer les sorts non primaires.
+Le Sorcier ne génère par ses sorts au hasard comme dans la procédure normale. Il peut à la place \newfromWHB{choisir librement ses sorts} dans sa Voie (si une Voie est précisée entre parenthèses, il doit l'utiliser). Il ne peut cependant toujours pas dupliquer les sorts non primaires.
 
 \newspecialrule{undead}{\undead}
 
@@ -379,7 +379,7 @@ Pour les figurines en plusieurs éléments, les cavaliers ne peuvent jamais port
 \newspecialrule{warplatform}{\newfromWHB{\warplatform}}
 \label{warplatform}
 
-La figurine peut rejoindre une unité comme si elle était un Personnage, même si elle n'est pas un Personnage, et même si elle possède la règle \largetarget{}. Elle suit les règles des Personnages pour la distribution des touches. Quand elle rejoint une unité d'au moins 5 figurines (sans compter la \warplatform{}) et se déplace avec elle, elle peut effectuer une Marche Forcée même si son Type de Troupe le lui interdit normalement, par exemple si c'est un \chariot{}. Elle doit toujours être placée au centre du premier rang de l'unité qu'elle rejoint, repoussant éventuellement en arrière des figurines avec la règle \frontrank{}, et doit garder cette position à tous moments. Si la \warplatform{} ne peut pas être placée au centre du premier rang, par exemple à cause de Socles Incompatibles, ou si le premier rang est trop étroit, alors elle ne peut pas rejoindre l'unité. Ainsi, elle ne peut jamais rejoindre une unité dont les Socles sont Incompatibles et il ne peut y avoir qu'une seule \warplatform{} par unité. La figurine perd la règle \swiftstride{} si elle en disposait.
+La figurine peut rejoindre une unité comme si elle était un Personnage, même si elle n'est pas un Personnage, et même si elle possède la règle \largetarget{}. Elle suit les règles des Personnages pour la distribution des touches. Quand elle rejoint une unité d'au moins 5 figurines (sans compter la \warplatform{}) et se déplace avec elle, elle peut effectuer une Marche Forcée même si son Type de Troupe le lui interdit normalement, par exemple si c'est un \chariot{}. Elle doit toujours être placée au centre du premier rang de l'unité qu'elle rejoint, repoussant éventuellement en arrière des figurines avec la règle \frontrank{}, et doit garder cette position à tous moments. Si deux positions sont également centrées, par exemple dans une unité avec un nombre impair de figurines au premier rang, la \warplatform{} peut être placée indifféremment aux deux endroits. Si elle ne peut pas être placée au centre du premier rang, par exemple à cause de Socles Incompatibles, ou si le premier rang est trop étroit, alors elle ne peut pas rejoindre l'unité. Ainsi, elle ne peut jamais rejoindre une unité dont les Socles sont Incompatibles et il ne peut y avoir qu'une seule \warplatform{} par unité. La figurine perd la règle \swiftstride{} si elle en disposait.
 
 \newspecialrule{reload}{\newfromWHB{\reload}}
 
@@ -389,6 +389,7 @@ Les Armes de Tir avec cette règle, ainsi que les Attaques de Tir portées par d
 
 L'élément de figurine gagne un bonus de +1 pour toucher au Corps à Corps. Ce bonus s'annule si l'élément de figurine devait frapper à Initiative 0, par exemple s'il manie une \gw{}. Dans ce cas, il frappe à sa propre Initiative à la place.
 
+\newpage
 \newspecialrule{regeneration}{\regeneration{X}}
 
 La \regeneration{} est une sauvegarde spéciale qui est effectuée après un jet raté de Sauvegarde d'Armure. La valeur de cette sauvegarde est indiquée entre parenthèses. Une sauvegarde de \regeneration{} ne peut pas être effectuée après une \wardsave{}. Si une figurine possède les deux, choisissez laquelle utiliser. La \regeneration{} ne peut pas être utilisée contre des \flamingattacks{}, \newfromWHB{ni des attaques avec la règle \lethalstrike{} pour lesquelles un \result{6} a été obtenu pour blesser}.
@@ -396,7 +397,7 @@ La \regeneration{} est une sauvegarde spéciale qui est effectuée après un jet
 \newspecialrule{magicresistance}{\magicresistance{X}}
 \label{magicresistance}
 
-Toutes les figurines d'une unité qui contient au moins une figurine avec une \magicresistance{} ajoutent la valeur entre parenthèses (X) à leurs jets de \wardsave{} (en utilisant les mêmes règles que pour ajouter des Sauvegardes d'Armure) mais uniquement contre des blessures causées par des effets de sorts. La \magicresistance{}, comme la plupart des règles spéciales, ne se cumule pas.
+Toutes les figurines d'une unité qui contient au moins une figurine avec une \magicresistance{} ajoutent la valeur entre parenthèses (X) à leurs jets de \wardsave{} (en utilisant les mêmes règles que pour ajouter des Sauvegardes d'Armure) mais uniquement contre des blessures causées directement par des effets de sorts. La \magicresistance{}, comme la plupart des règles spéciales, ne se cumule pas. Remarquez qu'elle ne fournit pas de \wardsave{} contre les blessures indirectes des sorts, comme des règles conférées à des figurines qui occasionnent des blessures plus tard.
 
 \newspecialrule{wardsave}{\wardsave{X}}
 
@@ -414,6 +415,7 @@ Une unité dont au moins une figurine dispose de cette règle ignore toute péna
 
 Quand une unité avec au moins une figurine avec cette règle déclare une charge, la cible doit faire un test de Panique. Si le test est raté, la cible de la charge doit fuir en réaction à la charge, si elle y est normalement autorisée. De plus, toutes les figurines avec la règle \terror{} ont aussi la règle \fear{} et sont immunisées aux effets de la \fear{} et de la \terror{}.
 
+\newpage
 \newspecialrule{volleyfire}{\newfromWHB{\volleyfire}}
 
 Les Armes de Tir avec cette règle, et les Attaques de Tir provenant d'éléments de figurine ayant cette règle, ignorent les figurines sur la trajectoire du tir pour déterminer s'il y a un Couvert. Elles n'ignorent cependant pas les Décors et doivent avoir une Ligne de Vue sur leur cible. De plus, si l'unité n'a pas bougé pendant ce Tour de Joueur, et si le tir n'est pas fait en réaction à une charge, toutes les figurines dont l'Arme de Tir a la règle \volleyfire{} peuvent tirer, même si elles ne font pas partie des deux premiers rangs qui sont habituellement les seuls autorisés à tirer.
@@ -457,6 +459,7 @@ d) Les unités sont déplacées au contact.}
 \label{figure/skirmishers}
 \end{figure}
 
+\newpage
 \newspecialrule{impacthits}{\impacthits{X} (Attaque Spéciale)}
 
 Les \impacthits{} sont des Attaques Spéciales de Corps à Corps qui ne peuvent être utilisées que lors de la première Manche de Corps à Corps qui suit une charge réussie de la figurine. Elle doit les utiliser. Les \impacthits{} sont résolues à Initiative 10 et infligent un nombre de touches égal à la valeur précisée entre parenthèses à une unique unité ennemie en contact socle à socle, qui doit être l'unité chargée. Les touches sont automatiques et ont une Force égale à la Force de la figurine. \newfromWHB{Elles profitent d'un bonus de +1 en Force pour chaque Rang Complet après le premier dans l'unité qui inflige les \impacthits{} à condition que ces rangs soient entièrement composés de figurines avec la règle \impacthits{}.} Les \impacthits{} sont des Attaques Spéciales, donc elles ne bénéficient jamais des équipements et règles spéciales de la figurine. \newfromWHB{Si une figurine dispose d'\grindingattacks{} et de \impacthits{}, elle ne peut utiliser qu'une des deux règles au choix lors d'une même Manche de Corps à Corps.}
@@ -465,7 +468,6 @@ Les \impacthits{} sont des Attaques Spéciales de Corps à Corps qui ne peuvent 
 
 Pour les \chariots{}, seul le châssis peut utiliser cette Attaque Spéciale. Pour les autres figurines en plusieurs éléments, seules les montures peuvent l'utiliser.
 
-\newpage
 \newspecialrule{lighttroops}{\newfromWHB{\lighttroops}}
 
 Une unité entièrement composée de figurines avec cette règle peut effectuer un nombre illimité de Reformations quand elle se déplace pendant l'étape des Autres Mouvements, et ce en Mouvement Simple comme en Marche Forcée. Elle peut tirer même si elle s'est reformée ou a effectué une Marche Forcée. Aucune figurine ne peut avoir parcouru plus de distance que sa valeur de Mouvement entre sa position initiale et sa position finale, en ayant contourné les obstacles et respecté la Règle du Pouce d'Écart (ou deux fois sa valeur de Mouvement si elle a fait une Marche Forcée). Si la figurine a effectué une action pendant son déplacement, comme une \sweepingattack{}, la distance parcourue est mesurée en prenant en compte le passage par le point de l'action. \newfromWHB{Si au moins la moitié des figurines de l'unité possède la règle \lighttroops{}, l'unité compte comme n'ayant aucun Rang Complet.}

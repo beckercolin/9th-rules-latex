@@ -23,7 +23,7 @@ Si le niveau d'un Sorcier augmente ou diminue, quelle qu'en soit la raison, son 
 
 \section{Sorts}
 
-Les sorts peuvent être lancés pendant la Phase de Magie. Les sorts connus par un Sorcier sont normalement déterminés au hasard avant le début de la partie, en utilisant les règles du paragraphe \ref{generating_spells} (page \pageref{generating_spells}). La plupart des sorts font partie d'une Voie Magique. Chacun de vos Sorciers doit choisir une Voie Magique parmi celles auxquelles il a accès et générer ses sorts depuis cette Voie. La Voie choisie doit être inscrite dans la Liste d'Armée. Tous les sorts sont définis par les cinq critères suivants.
+Les sorts peuvent être lancés pendant la Phase de Magie. Les sorts connus par un Sorcier sont normalement déterminés au hasard avant le début de la partie, en utilisant les règles du paragraphe \ref{generating_spells} (page \pageref{generating_spells}). La plupart des sorts font partie d'une Voie Magique. Chacun de vos Sorciers doit choisir une Voie Magique parmi celles auxquelles il a accès et générer ses sorts depuis cette Voie. La Voie choisie doit être inscrite dans la Liste d'Armée. Tous les sorts sont définis par les cinq critères suivants :
 
 \paragraph{Nom} 
 
@@ -43,12 +43,12 @@ La Durée d'un sort indique le temps pendant lequel ses effets restent actifs.
 
 \paragraph{Effet}
 
-L'Effet d'un sort décrit ce qui arrive à la cible si le sort est lancé avec succès. \newfromWHB{L'Effet d'un sort n'est jamais affecté par les règles spéciales, les Objets Magiques, d'autres effets de sorts ou tout type de règles donnant des avantages au lanceur, sauf indication contraire.}
+L'Effet d'un sort décrit ce qui arrive à la cible si le sort est lancé avec succès. \newfromWHB{L'Effet d'un sort n'est jamais affecté par les règles spéciales, les Objets Magiques, d'autres effets de sorts ou tout type de règle donnant des avantages au lanceur, sauf indication contraire.}
 
 \subsection{Sorts améliorés}
 \label{boosted_spells}
 
-Certains sorts ont plus d'une Valeur de lancement. La ou les valeurs plus élevées correspondent à des versions améliorées du sort. Une version améliorée d'un sort peut en changer les effets, ou en modifier les restrictions, comme la portée ou les cibles. Avant de jeter les dés pour tenter de lancer un sort, déclarez si vous souhaitez utiliser une version améliorée du sort, et laquelle. Sans déclaration de votre part, on considère toujours que le sort n'est pas amélioré.
+Certains sorts ont plus d'une Valeur de lancement. La ou les valeurs plus élevées correspondent à des versions améliorées du sort. Une version améliorée d'un sort peut en changer les effets, ou en modifier les restrictions, comme sa portée ou ses cibles. Avant de jeter les dés pour tenter de lancer un sort, déclarez si vous souhaitez utiliser une version améliorée du sort, et laquelle. Sans déclaration de votre part, on considère toujours que le sort n'est pas amélioré.
 
 \subsection{Types de sorts}
 \label{spell_types}
@@ -57,7 +57,7 @@ Le Type du sort détermine les restrictions sur la ou les cibles du sort. À moi
 
 \paragraph{\augment}
 
-\newfromWHB{Ne peut cibler que des unités alliées, ou des figurines alliées si de type \focused{}.}
+\newfromWHB{Ne peut cibler que des unités alliées, ou une figurine alliée si de type \focused{}.}
 
 \paragraph{\aura}
 
@@ -85,7 +85,7 @@ Ne peut cibler que la figurine qui lance le sort.
 
 \paragraph{\hex}
 
-\newfromWHB{Ne peut cibler que des unités ennemies, ou des figurines ennemies si de type \focused{}.}
+\newfromWHB{Ne peut cibler que des unités ennemies, ou une figurine ennemie si de type \focused{}.}
 
 \paragraph{\ground}
 
@@ -101,7 +101,7 @@ Les sorts ont normalement une Portée maximale indiquée par \og \range{X} \fg{}
 
 \paragraph{\missile}
 
-Le lanceur doit avoir une Ligne de Vue sur la cible. Ni le lanceur ni son unité ne peuvent être engagés au Corps à Corps pour pouvoir lancer ce sort.
+Le lanceur doit avoir une Ligne de Vue sur la cible. Ni le lanceur, ni son unité ne peuvent être engagés au Corps à Corps pour pouvoir lancer ce sort.
 
 \paragraph{\castersunit}
 
@@ -109,13 +109,13 @@ Ne peut cibler que l'unité dans laquelle se trouve le lanceur.
 
 \paragraph{\universal}
 
-Peut cibler des unités alliées ou ennemies, et des figurines alliées ou ennemies si de type \focused{}.
+Peut cibler des unités alliées ou ennemies, et une figurine alliée ou ennemie si de type \focused{}.
 
 \paragraph{\vortex{} (\range{X}, \template{} \distance{Y})}
 
 Placez un Gabarit de taille \distance{Y} en contact avec le socle du lanceur, avec son centre dans l'arc frontal du lanceur, et lancez 1D6.
 \begin{itemize}[label={-}]
-\item \textbf{1 à 5} : \newfromWHB{Multipliez le résultat du dé par la valeur X de la Portée du \vortex{}.} Le résultat est la distance sur laquelle le Gabarit, dans la direction de la cible\newfromWHB{, qui est toujours un point sur le champ de bataille, puisque tous les sorts de \vortex{} sont aussi de type \ground{}}.
+\item \textbf{1 à 5} : \newfromWHB{Multipliez le résultat du dé par la valeur X de la Portée du \vortex{}.} Le résultat est la distance sur laquelle le Gabarit, dans la direction partant de sa position initiale vers la cible\newfromWHB{, qui est toujours un point sur le champ de bataille, puisque tous les sorts de \vortex{} sont aussi de type \ground{}}.
 \item \textbf{6} : Centrez le gabarit sur le lanceur et déplacez-le de \distance{1D6} dans une direction aléatoire.
 \end{itemize}
 
@@ -160,7 +160,7 @@ La Phase de Magie est divisée en cinq étapes :
 
 Pendant la Phase de Magie, les sorts sont lancés et dissipés avec des Dés de Magie, appelés différemment selon leur propriétaire. Le Joueur Actif dispose de Dés de Pouvoir tandis que le Joueur Réactif défend avec des Dés de Dissipation. Chaque joueur garde ses dés dans une réserve et peut piocher dedans pour lancer ou dissiper des sorts. Une réserve ne peut jamais contenir plus de \textbf{12} Dés de Magie, même temporairement\newfromWHB{, et aucun joueur ne peut utiliser plus de \textbf{12} Dés de Magie en une phase. De plus, ils ne peuvent ajouter qu'un maximum de \textbf{2} Dés de Magie à ceux générés par les Flux Magiques en une phase.}
 
-Au début de la Phase de Magie, le Joueur Actif lance 2D6 pour le jet des Flux Magiques. Le nombre de Dés de Pouvoir disponibles est égal à la somme des résultats des deux dés, tandis que le nombre de Dés de Dissipation est égal au résultat le plus élevé parmi les deux dés. Les deux joueurs peuvent alors faire une unique tentative de \channel{}. \newfromWHB{Pour tenter une \channel{}, lancez 1D6. Ajoutez +1 au résultat de ce jet pour chaque figurine non en fuite possédant la règle \channel{} dans votre armée. Tous les Sorciers ont la règle \channel{}. Si le total est de \textbf{7} ou plus, vous pouvez ajouter un Dé de Magie à votre réserve.}
+Au début de la Phase de Magie, le Joueur Actif lance 2D6 pour le jet des Flux Magiques. Le nombre de Dés de Pouvoir disponibles est égal à la somme des résultats des deux dés, tandis que le nombre de Dés de Dissipation est égal au résultat le plus élevé parmi les deux dés. Les deux joueurs peuvent alors faire une unique tentative de \channel{}. \newfromWHB{Pour tenter une \channel{}, lancez 1D6. Ajoutez +1 au résultat de ce jet pour chaque élément de figurine non en fuite possédant la règle \channel{} dans votre armée. Tous les Sorciers ont la règle \channel{}. Si le total est de \textbf{7} ou plus, vous pouvez ajouter un Dé de Magie à votre réserve.}
 
 \subsection{Dissipation d'un sort restant en jeu}
 \label{dispel_remains_in_play_spells}
@@ -203,12 +203,11 @@ Si le sort n'a pas été dissipé, il est lancé avec succès. Appliquez les eff
 \subsection{Modificateurs magiques}
 \label{magic_modifiers}
 
-Lors d'une tentative de lancement ou de dissipation, ajoutez le bonus donné par le Niveau de Magie du Sorcier et tout autre modificateur, par exemple celui d'un \overwhelmingpower{}, pour obtenir le total de lancement ou de dissipation. \newfromWHB{Les modificateurs cumulés ne peuvent ni dépasser un total de +3 ni descendre en dessous de -3.} Il y a quelques exceptions à cette règle, notamment lors d'un \overwhelmingpower{}. Dans ce cas, ajoutez d'abord les modificateurs normaux jusqu'à un maximum de +3, puis ajoutez les modificateurs exceptionnels qui, eux, peuvent dépasser +3.
+Lors d'une tentative de lancement ou de dissipation, ajoutez le bonus donné par le Niveau de Magie du Sorcier et tout autre modificateur, par exemple celui d'un \overwhelmingpower{}, pour obtenir le total de lancement ou de dissipation. \newfromWHB{Les modificateurs cumulés ne peuvent ni dépasser un total de +3, ni descendre en dessous de -3.} Il y a quelques exceptions à cette règle, notamment lors d'un \overwhelmingpower{}. Dans ce cas, ajoutez d'abord les modificateurs normaux jusqu'à un maximum de +3, puis ajoutez les modificateurs exceptionnels qui, eux, peuvent dépasser +3.
 
-\newpage
 \subsection{\lostfocus}
 
-\newfromWHB{Un Sorcier qui subit une \lostfocus{} ne peut ajouter aucun bonus, ce qui inclut ceux liés au Niveau de Magie ou à un \overwhelmingpower{}, à des jets de lancement ou de dissipation pour le reste de la phase. Il subit quand même les effets négatifs d'un \overwhelmingpower{}, même s'il ne profite pas du bonus sur son jet.}
+\newfromWHB{Un Sorcier qui subit une \lostfocus{} ne peut ajouter aucun bonus, ni Niveau de Magie ni \overwhelmingpower{}, à des jets de lancement ou de dissipation pour le reste de la phase. Il subit quand même les effets négatifs d'un \overwhelmingpower{}, même s'il ne profite pas du bonus sur son jet.}
 
 \subsection{Pas Assez de Puissance}
 
@@ -217,7 +216,7 @@ Quand vous tentez de lancer ou de dissiper un sort \newfromWHB{avec un seul Dé 
 
 \subsection{\overwhelmingpower}
 
-\newfromWHB{Quand vous lancez ou dissipez un sort, et qu'au moins deux dés donnent des \result{6} naturels, la tentative bénéficie d'un \overwhelmingpower{}. Le nombre de Dés de magie Utilisés pour la tentative est noté NDU. Ajoutez alors immédiatement 1D3 + NDU à votre total de lancer ou de dissipation. C'est une exception à la règle des Modificateurs Magiques, le cumul des modificateurs pouvant alors dépasser +3. Si un sort est lancé avec un \overwhelmingpower{} et qu'il n'est pas dissipé, le lanceur subit un \miscast{}.}
+\newfromWHB{Quand vous lancez ou dissipez un sort, et qu'au moins deux dés donnent des \result{6} naturels, la tentative bénéficie d'un \overwhelmingpower{}. Le Nombre de Dés de magie Utilisés pour la tentative est noté NDU. Ajoutez alors immédiatement 1D3 + NDU à votre total de lancer ou de dissipation. C'est une exception à la règle des Modificateurs Magiques, le cumul des modificateurs pouvant alors dépasser +3. Si un sort est lancé avec un \overwhelmingpower{} et qu'il n'est pas dissipé, le lanceur subit un \miscast{}.}
 
 \newpage
 \section{\miscast}
@@ -235,7 +234,7 @@ Quand vous tentez de lancer ou de dissiper un sort \newfromWHB{avec un seul Dé 
 \textbf{2 à 4} & \textbf{\breachintheveil}
 
 \vspace*{5pt}
-Centrez le Gabarit de \distance{5} sur le lanceur. Toute figurine touchée par le Gabarit subit une touche.
+Centrez le Gabarit de \distance{5} sur le lanceur. Toute figurine touchée par le Gabarit subit une touche. Le lanceur doit subir une touche.
 
 \vspace*{5pt}
 \newfromWHB{Si \textbf{4} Dés de Pouvoir ont été utilisés, lancez un dé. Sur un résultat de 1 à 3, retirez le lanceur de la partie.}
@@ -253,11 +252,11 @@ Centrez le Gabarit de \distance{3} sur le lanceur. Toute figurine touchée par l
 \textbf{8 à 9} & \textbf{\sorcerousbacklash}
 
 \vspace*{5pt}
-Le lanceur et tout Sorcier allié subissent une touche. \tabularnewline
+Tous les Sorciers alliés subissent une touche. Une figurine en plusieurs éléments comprenant plusieurs Sorciers subit une touche par élément de figurine étant Sorcier. \tabularnewline
 \textbf{10 à 12} & \textbf{\newfromWHB{\amnesia}}
 
 \vspace*{5pt}
-\newfromWHB{Le Niveau de Magie du lanceur est diminué de NDU-2}. Il perd un sort pour chaque Niveau de Magie perdu, en commençant par le sort ayant causé le \miscast{} et en tirant les autres au hasard.\tabularnewline
+\newfromWHB{Le Niveau de Magie du lanceur est diminué de NDU-2}. Rappel : un Sorcier perd un sort pour chaque Niveau de Magie perdu. Commencez par le sort ayant causé le \miscast{} puis tirez les autres au hasard.\tabularnewline
 \hline
 \end{tabular}
 \caption{Table des \miscasts{}.}
@@ -267,7 +266,7 @@ Le lanceur et tout Sorcier allié subissent une touche. \tabularnewline
 
 \section{Attributs de Voie}
 
-Les Attributs de Voie sont des sorts particuliers qui ne peuvent pas être lancés indépendamment. Ils sont lancés automatiquement, du moment qu'il y a une cible possible, après qu'un sort de la même Voie a été lancé avec succès et que ses effets ont été résolus. Les Attributs ne peuvent pas être dissipés.
+Les Attributs de Voie sont des sorts particuliers qui ne peuvent pas être lancés indépendamment. Ils sont lancés automatiquement, en suivant les restrictions des types de sort et du moment qu'il y a une cible possible, après qu'un sort de la même Voie a été lancé avec succès et que ses effets ont été résolus. Les Attributs ne peuvent pas être dissipés.
 
 \newpage
 \section{\boundspell{}}
@@ -307,9 +306,9 @@ Tout mouvement réalisé pendant la Phase de Magie est un Mouvement Magique. Ce 
 
 Certains sorts ou capacités permettent de récupérer des Points de Vie perdus pendant la bataille. La quantité de Points de Vie récupérés est notée dans la capacité  : \og Récupérer X PVs \fg{}. Si une unité contient plusieurs figurines, chaque figurine doit récupérer tous ses PVs perdus avant qu'une autre figurine ne puisse en récupérer à son tour. Les Personnages à l'intérieur des unités ne peuvent jamais récupérer de PVs grâce à une capacité qui fait récupérer des PVs à leur unité. Ils ne récupèrent des PVs que lorsqu'ils sont la seule cible du sort ou de la capacité. Récupérer des PVs ne peut jamais ramener à la vie des figurines retirées comme perte, ni permettre à une figurine de dépasser ses PVs initiaux. Tout PV récupéré en excès est perdu.
 
-Ressusciter des PVs utilise les mêmes règles que Récupérer des PVs, à l'exception que cela peut ramener à la vie des figurines retirées comme perte. D'abord, les figurines de l'unité, sauf les Personnages, récupèrent tous leurs PVs perdus, puis les figurines sont ramenées à la vie dans l'ordre suivant : Champion, Porte-Étendard, Musicien et enfin les figurines ordinaires. \newfromWHB{Un Porte-Étendard capturé ne peut pas être ressuscité.} Un effet avec la règle Une seule Utilisation déjà utilisé, ou un équipement détruit ne peut être récupéré de cette manière. Chaque figurine relevée doit récupérer la totalité de ses PVs avant qu'une autre figurine ne soit relevée. Cela ne peut pas permettre à une unité de dépasser ses effectifs initiaux. Tout PV ressuscité en excès est perdu.
+Ressusciter des PVs utilise les mêmes règles que Récupérer des PVs, à l'exception que cela peut ramener à la vie des figurines retirées comme perte. D'abord, les figurines de l'unité, sauf les Personnages, récupèrent tous leurs PVs perdus, puis les figurines sont ramenées à la vie dans l'ordre suivant : Champion, Porte-Étendard, Musicien et enfin les figurines ordinaires. \newfromWHB{Un Porte-Étendard capturé ne peut pas être ressuscité.} Un effet avec la règle Une seule Utilisation déjà utilisé, ou un équipement détruit ne peut être récupéré de cette manière. Chaque figurine relevée doit récupérer la totalité de ses PVs avant qu'une autre figurine ne soit relevée. Cela ne peut pas permettre à une unité de dépasser ses effectifs initiaux. Tout PV ressuscité en excès est perdu. Les figurines relevées qui ne peuvent pas être placées dans une position réglementaire sont perdues.
 
 \hypertarget{summonedunits}{\subsection{Unités invoquées}}
 \label{summonedunits}
 
-Les unités invoquées sont des unités créées pendant la partie. Toutes les figurines d'une unité nouvellement invoquée doivent être déployées à portée du sort ou de la capacité. Si l'unité est invoquée grâce à un sort de type \ground{}, au moins une des figurines doit être déployée sur le point ciblé et toutes les autres figurines doivent être déployées à portée du sort. De plus, les figurines invoquées doivent être placées au moins à \distance{1} des autres unités et des Terrains Infranchissables. Si l'unité ne peut pas être déployée en entier, alors aucune figurine ne doit être déployée. Une fois invoquées, ces unités comptent comme des unités ordinaires, dans le camp du lanceur du sort ou de la capacité. Elles ne donnent aucun Point de Victoire à l'adversaire quand elles sont détruites.
+Les unités invoquées sont des unités créées pendant la partie. Toutes les figurines d'une unité nouvellement invoquée doivent être déployées à portée du sort ou de la capacité. Si l'unité est invoquée grâce à un sort de type \ground{}, au moins une des figurines doit être déployée sur le point ciblé et toutes les autres figurines doivent être déployées à portée du sort. De plus, les figurines invoquées doivent être placées au moins à \distance{1} des autres unités et des Terrains Infranchissables. Si l'unité ne peut pas être déployée en entier, alors aucune figurine ne doit être déployée. Une fois invoquées, ces unités comptent comme des unités ordinaires, dans le camp du lanceur du sort ou de la capacité. Elles n'apportent aucun Point de Victoire à l'adversaire quand elles sont détruites.

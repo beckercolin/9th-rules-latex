@@ -56,10 +56,11 @@
     \put(0,0){\includegraphics[width=\unitlength,page=3]{pics/allocation.pdf}}%
     \put(0.6253958,0.36496775){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figAHCharTwo}}}%
     \put(0.70874756,0.27776675){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figAHCharThree}}}%
-    \put(0.79214241,0.36496775){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figAHChamp}}}%
     \put(0.45858872,0.36496775){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figAHMus}}}%
     \put(0.45887588,0.27776675){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figAHStand}}}%
     \put(0.54196059,0.27776675){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figAHMus}}}%
     \put(0.70899163,0.36496775){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figAHStand}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{pics/allocation.pdf}}%
+    \put(0.79214241,0.36496775){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figAHChamp}}}%
   \end{picture}%
 \endgroup%
