@@ -1,6 +1,6 @@
 %% Creator: Inkscape 0.91_64bit, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'Templates.pdf' (pdf, eps, ps)
+%% Accompanies image file 'deployment_one.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{1837.45996094bp}%
+    \setlength{\unitlength}{210.56379183bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,22 +48,9 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.58023952)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{pics/Templates.pdf}}%
-    \put(0.12382669,0.47722493){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{5}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{pics/Templates.pdf}}%
-    \put(0.35520845,0.17787273){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{3}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{pics/Templates.pdf}}%
-    \put(0.8878632,0.46463655){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{3}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=4]{pics/Templates.pdf}}%
-    \put(0.3559476,0.47061607){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{3}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=5]{pics/Templates.pdf}}%
-    \put(0.61530008,0.46163853){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{5}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=6]{pics/Templates.pdf}}%
-    \put(0.61704161,0.16674066){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{5}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=7]{pics/Templates.pdf}}%
-    \put(0.88612172,0.18452654){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{3}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=8]{pics/Templates.pdf}}%
-    \put(0.12592888,0.17751114){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{5}}}}%
+  \begin{picture}(1,0.67690786)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{pics/deployment_one.pdf}}%
+    \put(0.1956898,0.24358192){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{12}}}}%
+    \put(0.1956898,0.40512807){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{12}}}}%
   \end{picture}%
 \endgroup%

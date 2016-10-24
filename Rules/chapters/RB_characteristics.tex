@@ -61,12 +61,12 @@ Dans certains cas,  une figurine peut emprunter ou utiliser la Caractéristique 
 
 \subsection{Test de Commandement}
 
-Un test de Commandement se passe en lançant 2D6 et en comparant le résultat avec la valeur de la Caractéristique de Commandement de la figurine. Si le résultat est strictement plus grand que le Commandement de la figurine, le test est raté. Sinon, le test est réussi. \newfromWHB{Si une unité dispose de plusieurs valeurs de Commandement quand elle doit passer un test, par exemple si un Personnage a rejoint l'unité, le propriétaire peut choisir la valeur à utiliser.}
+Un test de Commandement se passe en lançant 2D6 et en comparant le résultat avec la valeur de la Caractéristique de Commandement de la figurine. Si le résultat est strictement plus grand que le Commandement de la figurine, le test est raté. Sinon, le test est réussi. Si une unité dispose de plusieurs valeurs de Commandement quand elle doit passer un test, par exemple si un Personnage a rejoint l'unité, le propriétaire peut choisir la valeur à utiliser.
 
 Il y a beaucoup d'occasions différentes de tester le Commandement, comme les tests de Panique ou de Moral. Ces tests restent des tests de Commandement, peu importe les modificateurs et règles spéciales associés.
 
 \newpage
-\subsection[Priorité des modificateurs]{\newfromWHB{Priorité des modificateurs}}
+\subsection{Priorité des modificateurs}
 \label{priority_of_modifiers}
 
 Quand une Caractéristique ou une autre valeur est modifiée, les modificateurs s'appliquent dans un ordre précis :
@@ -77,5 +77,15 @@ Quand une Caractéristique ou une autre valeur est modifiée, les modificateurs 
 \end{enumerate}
 \noindent * Si la Caractéristique à emprunter est modifiée, appliquer ces modifications avant d'emprunter la Caractéristique. 
 
-Si plusieurs modificateurs de la même étape doivent être appliqués, commencez par appliquer les modificateurs sans précision de valeur minimale ou maximale, puis ceux avec de telles précisions, comme \og -1 en Initiative jusqu'à un minimum de 1 \fg{}. Ensuite, appliquez les modificateurs dans l'ordre chronologique. Rappelez-vous qu'une Caractéristique ne peut jamais être modifiée, même temporairement, de façon à dépasser 10 ou tomber en dessous de 0. Cet ordre de priorité s'applique pour tous les modificateurs et pas seulement les modificateurs de Caractéristique.
+Si plusieurs modificateurs de la même étape doivent être appliqués, suivez l'ordre suivant :
+\begin{enumerate}
+\item Modificateurs qui augmentent une valeur avec un seuil maximal. Par exemple, \og +1 au Commandement, jusqu'à un maximum de 7 \fg{}.
+\item Autres modificateurs qui augmentent une valeur.
+\item Modificateurs qui diminuent une valeur avec un seuil minimal.
+\item Autre modificateurs qui diminuent une valeur.
+\end{enumerate}
+
+Si les consignes ci-dessus ne suffisent pas à déterminer l'ordre d'application de modificateurs, appliquez-les dans l'ordre chronologique. Rappelez-vous qu'une Caractéristique ne peut jamais être modifiée, même temporairement, de façon à dépasser 10 ou tomber en dessous de 0.
+
+Cet ordre de priorité s'applique pour tous les modificateurs et pas seulement les modificateurs de Caractéristique.
 

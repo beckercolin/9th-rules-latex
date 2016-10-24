@@ -13,9 +13,10 @@
 \usepackage{fontspec}
 \setmainfont[
 	Ligatures=TeX,
-	SmallCapsFont={PT Serif}
-	]{PT Serif} % default is Latin Modern
-\newfontfamily\antiquefont[Ligatures=TeX]{Caslon Antique} % fancy font
+	SmallCapsFont={Cambria}
+	]{Cambria} % default is Latin Modern
+\newfontfamily\antiquefont[Ligatures=TeX]{Caslon Antique} % fancy font deprecated
+\newfontfamily\titlefont[Ligatures=TeX]{Georgia} % font for front page title
 \usepackage{microtype}			% Greatly improves general appearance of the text.
 \usepackage{SIunits}			% Unit appearance.
 \usepackage{ulem}				% To cross words out. Use \sout{}.
@@ -72,7 +73,7 @@
 
 %%% Technical commands %%%
 
-\newcommand{\newfromWHB}{\textcolor{blue}}
+\newcommand{\newfromWHB}{\textcolor{blue}} % deprecated
 \newcommand{\newrule}{\textcolor{green!50!black}}
 \newcommand{\removedrule}[1]{\textcolor{green!50!black}{\sout{#1}}}
 \newcommand{\starsymbol}{$\star$}
@@ -86,7 +87,7 @@
 \newcommand{\result}[1] {\texttt{'}#1\texttt{'}}
 \newcommand{\plusone}{+1}
 
-\ifdef{\disablenewfromWHB}{\renewcommand{\newfromWHB}{}}{}
+\ifdef{\disablenewfromWHB}{\renewcommand{\newfromWHB}{}}{} % deprecated
 
 \newcommand{\pts}[1]{#1~\labels@points}
 
@@ -151,7 +152,7 @@
 
 %%% Titles %%%
 
-\titleformat{\part}[block]{\Hugefontsize\antiquefont\filcenter}{\thepart}{1em}{}
+\titleformat{\part}[block]{\Hugefontsize\filcenter}{\thepart}{1em}{}
 \renewcommand{\thepart}{\arabic{part}}
 \renewcommand{\thesection}{\thepart.\arabic{section}}
 \makeatletter\@addtoreset{section}{part}
@@ -166,7 +167,7 @@
 
 %%% TOC %%%
 
-\renewcommand{\cfttoctitlefont}{\hspace*{\fill}\Hugefontsize\antiquefont\centering}
+\renewcommand{\cfttoctitlefont}{\hspace*{\fill}\Hugefontsize\centering}
 \renewcommand{\cftaftertoctitle}{\hspace*{\fill}}
 \setlength{\cftsecnumwidth}{2em} % Set length of number width in ToC for sections
 \setlength{\cftbeforepartskip}{1em} % small blank before parts in ToC
