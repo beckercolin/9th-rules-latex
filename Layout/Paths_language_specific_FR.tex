@@ -3,16 +3,16 @@
 
 \newcommand{\Pathof}{Voie}
 
-\newcommand{\battle}{Commune}
-
-\newcommand{\anyofthebattlemagic}{dans n'importe laquelle des Voies Communes}
-\newcommand{\ONLYanyofthebattlemagic}{Commune de votre choix}
-
-\newcommand{\magiclevel}[1]{\ifnumcomp{#1}{<}{3}{Apprenti Magicien}{Maître Magicien} Niveau #1}
-\newcommand{\Level}{Niveau}
-
 \newcommand{\wizard}{Magicien}
 \newcommand{\wizards}{Magiciens}
+
+\newcommand{\wizardapprentice}{Apprenti Magicien}
+\newcommand{\wizardapprentices}{Apprentis Magiciens}
+\newcommand{\wizardmaster}{Maître Magicien}
+\newcommand{\wizardmasters}{Maîtres Magiciens}
+
+\newcommand{\magiclevel}[1]{\ifnumcomp{#1}{<}{3}{\wizardapprentice}{\wizardmaster} Niveau #1}
+\newcommand{\Level}{Niveau}
 
 \newcommand{\learnedspell}{Sort Appris}
 \newcommand{\learnedspells}{Sorts Appris}
@@ -34,11 +34,10 @@
 \newcommand{\miscasts}{Fiascos}
 \newcommand{\overwhelmingpower}{Pouvoir Irrésistible}
 
-\newcommand{\breachintheveil}{Brèche dans le Voile}
-\newcommand{\catastrophicdetonation}{Explosion Catastrophique}
 \newcommand{\witchfire}{Feu de Sorcières}
-\newcommand{\sorcerousbacklash}{Contrecoup Magique}
 \newcommand{\amnesia}{Amnésie}
+\newcommand{\catastrophicdetonation}{Explosion Catastrophique}
+\newcommand{\breachintheveil}{Brèche dans le Voile}
 
 % Spell Types
 
@@ -49,9 +48,7 @@
 \newcommand{\damage}{Dégâts}
 \newcommand{\direct}{Direct}
 \newcommand{\focused}{Focalisé}
-\newcommand{\vortex}{Vortex}
 \newcommand{\ground}{Marqueur}
-\newcommand{\linetemplate}{Gabarit de Ligne}
 \newcommand{\specialTYPE}{Spécial}
 \newcommand{\aura}{Aura}
 \newcommand{\castersunit}{Unité du Lanceur}
