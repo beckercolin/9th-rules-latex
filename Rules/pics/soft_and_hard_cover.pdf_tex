@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{448bp}%
+    \setlength{\unitlength}{496.06299213bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -49,17 +49,12 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,1.28571429)%
+    \put(0.17353319,0.66522217){\color[rgb]{0,0,0}\makebox(0,0)[b]{\begin{minipage}{0.3\unitlength}\begin{center}\figureSHCLessthanhalffromsoftcover{}\end{center}\end{minipage}}}%
+    \put(0.33193042,1.22402207){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figureSHCMorethanhalftotal}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{pics/soft_and_hard_cover.pdf}}%
-    \put(0.296838,0.57486392){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figureSHCHill}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{pics/soft_and_hard_cover.pdf}}%
-    \put(0.59676044,0.05752548){\color[rgb]{0,0,0}\rotatebox{22.95032566}{\makebox(0,0)[b]{\smash{\figureSCFire}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{pics/soft_and_hard_cover.pdf}}%
-    \put(0.29439784,0.79270853){\color[rgb]{0,0,0}\makebox(0,0){\begin{minipage}{0.30\unitlength}\begin{center}\figureSHCLessthanhalffromhardcover\end{center}\end{minipage}}}%
-    \put(0.83857901,0.92230382){\color[rgb]{0,0,0}\makebox(0,0){\begin{minipage}{0.30\unitlength}\begin{center}\figureSHCLessthanhalffromsoftcover\end{center}\end{minipage}}}%
-    \put(0.35861247,1.23033948){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figureSHCMorethanhalftotal}}}%
-    \put(0.68477451,0.05638792){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSHCHeightTwo}}}%
-    \put(0.10,0.97600223){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSHCHeightTwo}}}%
-    \put(0.78509652,0.76796466){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSHCHeightOne}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=4]{pics/soft_and_hard_cover.pdf}}%
+    \put(0.56037047,0.14123565){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSHCSizeLarge}}}%
+    \put(0.11117578,0.27667653){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figureSHCSizeStandard}}}%
+    \put(0.14787059,1.11185793){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figureSHCSizeLarge}}}%
+    \put(0.88084674,1.10578039){\color[rgb]{0,0,0}\makebox(0,0)[b]{\begin{minipage}{0.2\unitlength}\begin{center}\figureSHCLessthanhalffromhardcover{}\end{center}\end{minipage}}}%
   \end{picture}%
 \endgroup%

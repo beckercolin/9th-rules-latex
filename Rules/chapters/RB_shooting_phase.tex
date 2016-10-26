@@ -21,7 +21,7 @@ Chaque unité équipée d'Armes de Tir peut tirer une fois par Phase de Tir. Les
 
 Quand une unité veut tirer, commencez par désigner une cible sur laquelle l'unité a une Ligne de Vue. Il est interdit de tirer sur une unité engagée au Corps à Corps. Toutes les figurines d'une même unité doivent tirer sur la même cible. \textbf{Seules les figurines du premier et du deuxième rang peuvent tirer}. Si elles possèdent plusieurs Armes de Tir différentes, annoncez quelle arme est utilisée. Les figurines ordinaires doivent toutes utiliser la même, tandis que les Champions et Personnages peuvent choisir séparément. Chaque figurine de l'unité est libre de décider de ne pas tirer.
 
-Vérifiez la Ligne de Vue de chaque figurine. Souvenez-vous que la Ligne de Vue est toujours tracée depuis l'avant. Les figurines qui n'ont pas de Ligne de Vue sur la cible ne peuvent pas tirer. Mesurez la portée pour chaque figurine qui tire. La portée est mesurée depuis la position réelle de chaque figurine jusqu'au point le plus proche de l'unité ciblée, même si ce point n'est pas en Ligne de Vue. Les figurines hors de portée ne peuvent pas tirer. Une fois que vous avez déterminé les figurines pouvant tirer, lancez les jets pour toucher pour chacune d'elles.
+Vérifiez la Ligne de Vue de chaque figurine qui tire. Souvenez-vous que la Ligne de Vue est toujours tracée depuis l'avant. Les figurines qui n'ont pas de Ligne de Vue sur au moins une figurine de la cible ne peuvent pas tirer. Mesurez la portée pour chaque figurine qui tire jusqu'à l'unité ciblée. La portée est mesurée depuis la position réelle de chaque figurine jusqu'au point le plus proche de l'unité ciblée, même si ce point n'est pas en Ligne de Vue. Les figurines hors de portée ne peuvent pas tirer. Une fois que vous avez déterminé les figurines pouvant tirer, lancez les jets pour toucher pour chacune d'elles.
 
 \newpage
 \section{Jets pour toucher au tir}
@@ -96,7 +96,7 @@ Le Couvert est déterminé individuellement, pour chaque tireur. Il existe deux 
 Une figurine tirant sur une cible derrière un Couvert Léger subit un malus de -1 pour toucher. Le Couvert Léger s'applique si au moins la moitié de l'Empreinte au Sol de la cible est cachée par un ou plusieurs des éléments suivants (voir figure \ref{figure/soft_cover}) :
 \begin{itemize}[label={-}]
 \item Décor offrant un Couvert Léger.
-\item \newfromWHB{Figurines de n'importe quelle taille. Si vous tirez avec ou sur des figurines de Grande Taille (voir le paragraphe \ref{modelheight}, page \pageref{modelheight}), ignorez les figurines de Petite Taille pour déterminer le Couvert.}
+\item Figurines de n'importe quelle taille. Si vous tirez avec ou sur des figurines de Taille Gigantesque (voir le paragraphe \ref{modelheight}, page \pageref{modelheight}), ignorez les figurines de Taille Standard pour déterminer le Couvert.
 \end{itemize}
 
 \paragraph{Cible derrière un Couvert Lourd (-2)}
@@ -112,8 +112,6 @@ Une figurine tirant sur une cible derrière un Couvert Lourd subit un malus de -
 Si un tireur subit à la fois des malus de Couvert Léger et de Couvert Lourd, ne comptez que le Couvert Lourd. Si l'Empreinte au Sol de la cible est cachée à la fois par des éléments pouvant offrir un Couvert Léger et un Couvert Lourd, mais pas assez pour obtenir l'un ou l'autre des Couverts, le tireur subit la pénalité de Couvert Léger si au moins la moitié de l'Empreinte au Sol de l'unité visée est cachée par l'ensemble des éléments. Par exemple, si la cible est cachée à 30 \% par des éléments offrant un Couvert Léger et à 30 \% par des éléments offrant un Couvert Lourd, le tireur subit la pénalité de Couvert Léger (voir figure \ref{figure/soft_and_hard_cover}).
 
 \newcommand{\figureSCNotinlightofsight}{\normalfontsize{\textit{Pas de Ligne de Vue}}}
-\newcommand{\figureSCForest}{Forêt}
-\newcommand{\figureSCFire}{\smallfontsize{\textit{Feu !}}}
 \newcommand{\figureSCA}{a)}
 \newcommand{\figureSCB}{b)}
 \newcommand{\figureSCC}{c)}
@@ -135,7 +133,6 @@ c) Ces figurines peuvent tirer, mais souffrent de la pénalité de Couvert Lége
 \label{figure/soft_cover}
 \end{figure}
 
-\newcommand{\figureHCImpassableTerrain}{\normalfontsize{Terrain Infranchissable}}
 
 \begin{figure}[!htbp]
 \centering
@@ -148,18 +145,18 @@ c) Ces figurines peuvent tirer, et il n'y a pas de Couvert car moins de la moiti
 \label{figure/hard_cover}
 \end{figure}
 
-\newcommand{\figureSHCHill}{Colline}
-\newcommand{\figureSHCHeightOne}{Taille 1}
-\newcommand{\figureSHCHeightTwo}{Taille 2}
+
+\newcommand{\figureSHCSizeLarge}{\normalfontsize{Grande Taille}}
+\newcommand{\figureSHCSizeStandard}{\normalfontsize{Taille Standard}}
 \newcommand{\figureSHCLessthanhalffromhardcover}{\normalfontsize{\textit{Moins de 50 \% en Couvert Lourd}}}
 \newcommand{\figureSHCLessthanhalffromsoftcover}{\normalfontsize{\textit{Moins de 50 \% en Couvert Léger}}}
 \newcommand{\figureSHCMorethanhalftotal}{\normalfontsize{\textit{Plus de 50 \% en tout}}}
 
 \begin{figure}[!htbp]
-\begin{minipage}[t]{0.45\textwidth}
+\begin{minipage}[t]{0.55\textwidth}
 \def\svgwidth{\textwidth}
 \input{pics/soft_and_hard_cover.pdf_tex}
-\end{minipage}\hfill\begin{minipage}[b]{0.52\textwidth}
+\end{minipage}\hfill\begin{minipage}[b]{0.42\textwidth}
 \caption{Cas de mélange de Couvert Léger et Lourd.\vspace*{10pt}\newline
 Dans cet exemple, moins de la moitié de l'Empreinte au Sol de la cible est cachée par un Couvert Léger ou un Couvert Lourd. Toutefois, la combinaison des deux en cache plus de la moitié, donc la cible compte comme étant derrière un Couvert Léger.}
 \label{figure/soft_and_hard_cover}
@@ -171,13 +168,13 @@ Dans cet exemple, moins de la moitié de l'Empreinte au Sol de la cible est cach
 
 La figure \ref{figure/line_of_sight_and_cover} résume les cas les plus communs de ligne de vue et de couvert entre un tireur et sa cible quand une figurine se trouve sur la trajectoire.
 
-\newcommand{\figureLoSCSoftcover}{\Largefontsize{Couvert Léger}}
-\newcommand{\figureLoSCHardcover}{\Largefontsize{Couvert Lourd}}
+\newcommand{\figureLoSCSoftcover}{\Largefontsize{Couvert Léger (-1)}}
+\newcommand{\figureLoSCHardcover}{\Largefontsize{Couvert Lourd (-2)}}
 \newcommand{\figureLoSCNocover}{\Largefontsize{Pas de Couvert}}
 \newcommand{\figureLoSCNolineofsight}{\Largefontsize{Pas de Ligne de Vue}}
-\newcommand{\figureLoSCSmall}{Petit}
-\newcommand{\figureLoSCMedium}{Moyen}
-\newcommand{\figureLoSCLarge}{Grand}
+\newcommand{\figureLoSCSmall}{Standard}
+\newcommand{\figureLoSCMedium}{Grande}
+\newcommand{\figureLoSCLarge}{Gigantesque}
 
 \begin{figure}[!htbp]
 \centering

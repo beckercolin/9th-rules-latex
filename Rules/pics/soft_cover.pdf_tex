@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{2184bp}%
+    \setlength{\unitlength}{2366.92913386bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,31 +48,20 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.21978022)%
+  \begin{picture}(1,0.20958084)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{pics/soft_cover.pdf}}%
-    \put(0.57139746,0.07949958){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figureSCForest}}}%
-    \put(0.41759803,0.04582376){\color[rgb]{0,0,0}\rotatebox{22.95032566}{\makebox(0,0)[b]{\smash{\figureSCFire}}}}%
-    \put(0.41719889,0.02352075){\color[rgb]{0,0,0}\rotatebox{22.95032566}{\makebox(0,0)[b]{\smash{\figureSCFire}}}}%
+    \put(0.34628841,0.18965637){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCB}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{pics/soft_cover.pdf}}%
-    \put(0.32,0.20450986){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCWithinlightofsight}}}%
+    \put(0.00705791,0.18965637){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCA}}}%
+    \put(0.68217755,0.18965637){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCC}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{pics/soft_cover.pdf}}%
-    \put(0.45,0.16669324){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figureSCLessthanhalfoffootprintobscured}}}%
-    \put(0.62538848,0.01593457){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCB}}}%
+    \put(0.03,0.18){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCNotinlightofsight}}}%
+    \put(0.37,0.18){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCWithinlightofsight}}}%
+    \put(0.61,0.185){\color[rgb]{0,0,0}\makebox(0,0)[b]
+{\begin{minipage}{0.105\unitlength}\begin{center}\figureSCLessthanhalfoffootprintobscured{}\end{center}\end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{pics/soft_cover.pdf}}%
-    \put(0.20124714,0.08914241){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figureSCForest}}}%
-    \put(0.02499511,0.05468542){\color[rgb]{0,0,0}\rotatebox{22.95032566}{\makebox(0,0)[b]{\smash{\figureSCFire}}}}%
-    \put(0.02523603,0.03205028){\color[rgb]{0,0,0}\rotatebox{22.95032566}{\makebox(0,0)[b]{\smash{\figureSCFire}}}}%
+    \put(0.71,0.18){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCWithinlightofsight}}}%
+    \put(0.95,0.185){\color[rgb]{0,0,0}\makebox(0,0)[b]{\begin{minipage}{0.10\unitlength}\begin{center}\figureSCMorethanhalfoffootprintobscured{}\end{center}\end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{pics/soft_cover.pdf}}%
-    \put(0.01,0.20450986){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCNotinlightofsight}}}%
-    \put(0.20074594,0.01593455){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCA}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=6]{pics/soft_cover.pdf}}%
-    \put(0.88924489,0.0834755){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figureSCForest}}}%
-    \put(0.8030102,0.02551945){\color[rgb]{0,0,0}\rotatebox{22.95032566}{\makebox(0,0)[b]{\smash{\figureSCFire}}}}%
-    \put(0.78445146,0.16669324){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figureSCMorethanhalfoffootprintobscured}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=7]{pics/soft_cover.pdf}}%
-    \put(0.96730975,0.01593457){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCC}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=8]{pics/soft_cover.pdf}}%
-    \put(0.80271943,0.04815468){\color[rgb]{0,0,0}\rotatebox{22.95032566}{\makebox(0,0)[b]{\smash{\figureSCFire}}}}%
-    \put(0.70,0.20450986){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCWithinlightofsight}}}%
   \end{picture}%
 \endgroup%
