@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{481.88974609bp}%
+    \setlength{\unitlength}{765.35433071bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,28 +48,26 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,1.47058821)%
+  \begin{picture}(1,0.40740741)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{pics/front_rank.pdf}}%
-    \put(0.20600391,1.2486442){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRCharOne}}}%
-    \put(0.69123734,1.14111683){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRMus}}}%
-    \put(0.57368349,1.25841378){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRChamp}}}%
-    \put(0.80928972,1.25841378){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRStand}}}%
-    \put(0.39720877,1.2045265){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRCharTwo}}}%
-    \put(0.69129814,1.25841378){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRCharThree}}}%
+    \put(0.0531606,0.25387911){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRCharOne}}}%
+    \put(0.3586958,0.18906423){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRMus}}}%
+    \put(0.28464979,0.26313831){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRChamp}}}%
+    \put(0.43298679,0.26313831){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRStand}}}%
+    \put(0.17353608,0.22610127){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRCharTwo}}}%
+    \put(0.35871621,0.26313825){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRCharThree}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{pics/front_rank.pdf}}%
-    \put(0.49956232,1.37078819){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRFront}}}%
+    \put(0.57144894,0.25459999){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRCharOne}}}%
+    \put(0.95106331,0.18978517){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRMus}}}%
+    \put(0.80293623,0.26385926){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRChamp}}}%
+    \put(0.951226,0.26385926){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRStand}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{pics/front_rank.pdf}}%
-    \put(0.2060039,0.51667033){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRCharOne}}}%
-    \put(0.80888441,0.40914302){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRMus}}}%
-    \put(0.57368348,0.52643991){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRChamp}}}%
-    \put(0.80928972,0.52643991){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRStand}}}%
+    \put(0.69182316,0.22682218){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRCharTwo}}}%
+    \put(0.87700457,0.26385919){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRCharThree}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{pics/front_rank.pdf}}%
-    \put(0.39720878,0.47255263){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRCharTwo}}}%
-    \put(0.69129813,0.52643991){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRCharThree}}}%
+    \put(0.83976271,0.1527481){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRCharFour}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{pics/front_rank.pdf}}%
-    \put(0.4995623,0.63881437){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRFront}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=6]{pics/front_rank.pdf}}%
-    \put(0.63204492,0.35490556){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figFRCharFour}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=7]{pics/front_rank.pdf}}%
+    \put(0.01670203,0.34638128){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figFRA}}}%
+    \put(0.53623581,0.34638128){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figFRB}}}%
   \end{picture}%
 \endgroup%

@@ -300,7 +300,9 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 
 %%% Special rules %%%
 
+\newcommand{\accurate}{Précis}
 \newcommand{\ambush}{Embuscade}
+\newcommand{\areaattack}[1]{Attaque de Zone\ifblank{#1}{}{ (#1)}}
 \newcommand{\armourpiercing}[1]{Perforant\ifblank{#1}{}{ (#1)}}
 \newcommand{\bodyguard}[1]{Garde du Corps\ifblank{#1}{}{ (#1)}}
 \newcommand{\breathweapon}[1]{Attaque de Souffle\ifblank{#1}{}{ (#1)}}
@@ -324,11 +326,13 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 \newcommand{\hardtarget}{Camouflé}
 \newcommand{\hatred}{Haine}
 \newcommand{\hellfire}{Feu Démoniaque}
-\newcommand{\hidden}{Caché}
+\newcommand{\hidden}{Caché} % deprecated
+\newcommand{\holdyourground}{Tenez les Rangs}
 \newcommand{\holyattacks}{Attaques Divines} % deprecated, still has to be filled. same as Divine Attacks.
 \newcommand{\immunetopsychology}{Immunisé à la Psychologie}
 \newcommand{\impacthits}[1]{Touches d'Impact\ifblank{#1}{}{ (#1)}}
 \newcommand{\insignificant}{Insignifiant}
+\newcommand{\inspiringpresence}{Présence Charismatique}
 \newcommand{\largetarget}{\toweringpresence} % deprecated
 \newcommand{\lethalstrike}{Coup Fatal}
 \newcommand{\lightningattacks}{Attaques Foudroyantes}
@@ -343,6 +347,7 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 \newcommand{\notaleader}{Pas un Meneur}
 \newcommand{\otherworldly}{D'Outre-Monde}
 \newcommand{\pathmaster}[1]{Maître de la Voie\ifblank{#1}{}{ (#1)}}
+\newcommand{\penetrating}{Attaque Pénétrante}
 \newcommand{\poisonedattacks}{Attaques Empoisonnées}
 \newcommand{\quicktofire}{Tir Rapide}
 \newcommand{\randommovement}[1]{Mouvement Aléatoire\ifblank{#1}{}{ (#1)}}
@@ -395,10 +400,9 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 \newcommand{\armoursave}{Sauvegarde d'Armure}
 \newcommand{\frontrank}{Au Premier Rang}
 \newcommand{\hardcover}{Couvert Lourd}
-\newcommand{\holdyourground}{Tenez les Rangs}
-\newcommand{\inspiringpresence}{Présence Charismatique}
 \newcommand{\lightcover}{Couvert Léger}
-\newcommand{\ordnance}{Artillerie}
+\newcommand{\ordnance}{\clippedwings} % deprecated
+\newcommand{\clippedwings}{Ailes Mutilées}
 \newcommand{\parry}{Parade}
 \newcommand{\raisewounds}{Ressusciter des Figurines}
 \newcommand{\recoverwounds}{Récupérer des PVs}
@@ -444,9 +448,10 @@ Que ce jeu vous apporte d'innombrables heures de plaisir partagé !
 \newcommand{\cannons}{Canons}
 \newcommand{\catapult}{Catapulte}
 \newcommand{\catapults}{Catapultes}
-\newcommand{\volleygun}{Batterie de Tir}
+\newcommand{\volleygun}[1]{Batterie de Tir\ifblank{#1}{}{~(#1)}}
 \newcommand{\boltthrower}{Baliste}
 \newcommand{\flamethrower}{Lance-Flammes}
+\newcommand{\flamethrowers}{Lance-Flammes}
 \newcommand{\artilleryweapon}{Arme d'Artillerie}
 
 
