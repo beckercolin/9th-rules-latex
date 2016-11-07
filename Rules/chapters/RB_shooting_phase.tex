@@ -23,11 +23,12 @@ Quand une unité veut tirer, commencez par désigner une cible sur laquelle l'un
 
 Vérifiez la Ligne de Vue de chaque figurine qui tire. Souvenez-vous que la Ligne de Vue est toujours tracée depuis l'avant. Les figurines qui n'ont pas de Ligne de Vue sur au moins une figurine de la cible ne peuvent pas tirer. Mesurez la portée pour chaque figurine qui tire jusqu'à l'unité ciblée. La portée est mesurée depuis la position réelle de chaque figurine jusqu'au point le plus proche de l'unité ciblée, même si ce point n'est pas en Ligne de Vue. Les figurines hors de portée ne peuvent pas tirer. Une fois que vous avez déterminé les figurines pouvant tirer, lancez les jets pour toucher pour chacune d'elles.
 
-\newpage
+
 \section{Jets pour toucher au tir}
 
 Quand vous lancez le jet pour toucher des Attaques de Tir, utilisez la Capacité de Tir (CT) de la figurine. Si la figurine a plusieurs profils, comme par exemple un cavalier et sa monture, utilisez la CT de l'élément qui tire. Le propriétaire de la figurine lance 1D6. Un résultat non modifié de \result{1} sur le dé est toujours un échec. Il ajoute ensuite sa Capacité de Tir : si le total est de \textbf{7} ou plus, l'attaque touche. Si au moins un tir a touché, suivez la procédure décrite dans le chapitre \ref{attacks_and_damage} à la page \pageref{attacks_and_damage}.
 
+\newpage
 \subsection{Modificateurs du jet pour toucher}
 \label{to_hit_modifiers}
 
@@ -35,16 +36,19 @@ Quand vous lancez le jet pour toucher des Attaques de Tir, utilisez la Capacité
 
 Les attaques de tir peuvent subir un ou plusieurs modificateurs sur leurs jets pour toucher. Additionnez simplement les modificateurs à la Capacité de Tir du tireur. La table ci-dessous décrit les modificateurs usuels, mais les sorts et capacités peuvent ajouter d'autres modificateurs. 
 
-La table ci-contre résume le résultat à obtenir sur le jet pour toucher selon la CT et les modificateurs.
-
+\vspace*{10pt}
 \begin{center}
-\begin{tabular}{rl}
+\begin{tabular}{p{4cm}l}
 \hline
-Bouger et Tirer & -1 \tabularnewline
-Longue Portée & -1 \tabularnewline
-Tenir la Position et Tirer & -1 \tabularnewline
-Couvert Léger & -1 \tabularnewline
-Couvert Lourd & -2 \tabularnewline
+\raggedleft{}Bouger et Tirer & -1 \tabularnewline
+\raggedleft{}Longue Portée & -1 \tabularnewline
+\raggedleft{}Tenir la Position et Tirer & -1 \tabularnewline
+\raggedleft{}Couvert Léger & -1 \tabularnewline
+\raggedleft{}Couvert Lourd & -2 \tabularnewline
+\textbf{Règles Spéciales} & \tabularnewline
+\raggedleft{}\hardtarget{} & -1 \tabularnewline
+\raggedleft{}\skirmishers{} & -1 \tabularnewline
+\raggedleft{}\multipleshots{} & -1 \tabularnewline
 \hline
 \end{tabular}
 
@@ -53,6 +57,9 @@ Couvert Lourd & -2 \tabularnewline
 
 \vspace*{\fill}\columnbreak
 
+La table ci-dessous résume le résultat à obtenir sur le jet pour toucher selon la CT et les modificateurs.
+
+\vspace*{10pt}
 \begin{center}
 \begin{tabular}{rl}
 \hline
@@ -91,6 +98,7 @@ Les Attaques de Tir réalisées pendant la réaction à la charge Tenir la Posit
 
 Le Couvert est déterminé individuellement, pour chaque tireur. Il existe deux types de Couvert, Léger et Lourd. Dans les deux cas, le couvert est déterminé en observant la Ligne de Vue de la figurine qui tire. Tracez toutes les Lignes de Vue depuis un point de votre choix à l'avant du socle du tireur jusqu'à tout point de l'Empreinte au Sol de la cible. Exceptionnellement, ces Lignes de Vues peuvent sortir de l'arc frontal du tireur. Si ces lignes sont interrompues par un Décor ou des figurines, selon la nature et la position de ces derniers, le tir peut subir un malus pour toucher. Pour la détermination du Couvert, un tireur ignore toujours les figurines de sa propre unité et de l'unité ciblée, ainsi que le Décor dans lequel il se trouve. Une unité située dans une Forêt ne subit donc pas de malus de Couvert Léger à cause de la Forêt.
 
+\newpage
 \paragraph{Cible derrière un Couvert Léger (-1)}
 
 Une figurine tirant sur une cible derrière un Couvert Léger subit un malus de -1 pour toucher. Le Couvert Léger s'applique si au moins la moitié de l'Empreinte au Sol de la cible est cachée par un ou plusieurs des éléments suivants (voir figure \ref{figure/soft_cover}) :
