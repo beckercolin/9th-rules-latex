@@ -1,49 +1,178 @@
 
-\newgeometry{top=2.5cm, bottom=2.2cm, left=1.5cm, right=1.5cm}
+\newgeometry{top=2cm, bottom=2cm, left=1.5cm, right=1.5cm}
+\newcommand{\bluehyperlink}[2]{\hyperlink{#1}{\textbf{\textcolor{blue}{#2}}}}
 
+\vspace*{-2cm}
 \hypertarget{summaries}{\part{Résumés}}
 
 {\normalfontsize
 
-\vspace*{10pt}
+\begin{center}\Largerfontsize\textbf{Pré et Post-Partie}\end{center}
+
+\begin{minipage}[t]{.35\linewidth}
+
+\paragraph{Séquence Pré-Partie}
+
+\begin{tabular}{c|l}
+1 & Décidez de la \bluehyperlink{gamesize}{Taille de la Partie}. \tabularnewline
+2 & \bluehyperlink{sharearmylist}{Montrez-vous vos Listes d'Armée}. \tabularnewline
+3 & \bluehyperlink{buildbattlefield}{Installez le champ de bataille}. \tabularnewline
+4 & Déterminez le \bluehyperlink{deploymenttype}{Type de Déploiement}. \tabularnewline
+5 & Déterminez les \bluehyperlink{secondaryobjectives}{Objectifs Secondaires}. \tabularnewline
+6 & Déterminez les \bluehyperlink{deploymentzones}{Zones de Déploiement}. \tabularnewline
+7 & \bluehyperlink{generatespells}{Générez les Sorts}. \tabularnewline
+8 & \bluehyperlink{deploymentphase}{Phase de Déploiement}. \tabularnewline
+\end{tabular}
+
+\vspace*{5pt}
+\paragraph{Séquence de Déploiement}
+
+\begin{tabular}{c|l}
+1 & \bluehyperlink{whodeploysfirst}{Déterminez qui commence à se déployer}. \tabularnewline
+2 & \bluehyperlink{deployunits}{Déployez des unités} chacun votre tour. \tabularnewline
+3 & Déterminez qui veut jouer en premier. \tabularnewline
+4 & \bluehyperlink{deployremainingunits}{Déployez les unités restantes}. \tabularnewline
+5 & Déployez les \bluehyperlink{scout}{Éclaireurs}. \tabularnewline
+6 & Déplacez les unités avec \bluehyperlink{vanguard}{\vanguard{}}. \tabularnewline
+7 & Autres règles et capacités. \tabularnewline
+8 & \bluehyperlink{rollforfirstturn}{Lancez le dé pour le premier tour}. \tabularnewline
+\end{tabular}
+
+\end{minipage}\hfill\begin{minipage}[t]{.62\linewidth}
+
+\paragraph{Tirez au sort le Type de Déploiement}
+
+Sur 1D6 :
+
+\begin{minipage}[t]{0.48\textwidth}
+
+\begin{center}
+1-2 : \bluehyperlink{frontlineclash}{\frontlineclash}
+
+\def\svgwidth{\textwidth}
+\input{pics/deployment_one.pdf_tex}
+\end{center}
+
+\begin{center}
+5 : \bluehyperlink{encircle}{\encircle}
+
+\def\svgwidth{\textwidth}
+\input{pics/deployment_three.pdf_tex}
+\end{center}
+
+\end{minipage}\hfill\begin{minipage}[t]{0.48\textwidth}
+
+\begin{center}
+3-4 : \bluehyperlink{refusedflank}{\refusedflank}
+
+\def\svgwidth{\textwidth}
+\input{pics/deployment_two.pdf_tex}
+\end{center}
+
+\begin{center}
+6 : \bluehyperlink{counterthrust}{\counterthrust}
+
+\def\svgwidth{\textwidth}
+\input{pics/deployment_four.pdf_tex}
+\end{center}
+
+\end{minipage}
+\end{minipage}
+
+\vspace*{-10pt}
+\paragraph{Tirez au sort les Objectifs Secondaires}
+
+\vspace*{-5pt}
+Sur 1D6 :
+
+\textbf{1-2 : Tenez la Ligne}\newline
+Le joueur avec le plus d'\scoringunits{} à moins de \distance{6} du centre du champ de bataille à la fin de la partie gagne cet Objectif Secondaire.
+
+\textbf{3-4 : Percée}\newline
+Le joueur qui a le plus d'\scoringunits{} dans la zone de déploiement de son adversaire à la fin de la partie remporte cet Objectif Secondaire. 
+
+\textbf{5 : Capturez les Étendards}\newline
+Après avoir déplacé les unités avec la règle \vanguard{} et avant de déterminer qui aura le premier Tour de Joueur, les deux joueurs doivent désigner chacun leur tour et ouvertement une unité ennemie avec la règle \scoring{}, jusqu'à en avoir choisi trois. Le joueur qui a fini de se déployer en premier commence à choisir. Le joueur qui possède le plus grand nombre d'\scoringunits{} en vie, parmi ceux qui avaient été désignés au début de la partie, remporte cet Objectif Secondaire.
+
+\textbf{6 : Sécurisez la Cible}\newline
+Après avoir choisi les zones de déploiement, chaque joueur place un marqueur sur le champ de bataille, en commençant par celui qui a choisi sa zone de déploiement. Ces marqueurs doivent être positionnés à plus de \distance{12} de la zone de déploiement du joueur qui le place, et à plus de \distance{24} l'un de l'autre. À la fin de la partie, le joueur qui contrôle le plus de marqueurs remporte cet Objectif Secondaire. Pour contrôler un marqueur, il faut avoir plus d'\scoringunits{} que son adversaire à moins de \distance{6} du marqueur. Si une même unité est à moins de \distance{6} des deux marqueurs, elle ne compte que pour le marqueur le plus proche de son centre. Déterminez-le aléatoirement si les deux marqueurs sont à égale distance.
+
+\vspace*{-20pt}
+\bluehyperlink{victorypoints}{\paragraph{Points de Victoire}}
+
+\begin{minipage}[c]{0.48\textwidth}
+À la fin de la partie, ajoutez vos Points de Victoire (VP). Les Personnages sont comptés séparément des unités qu'ils ont rejointes.
+
+\vspace*{5pt}
+\begin{center}\begin{tabular}{>{\raggedleft}p{0.4\textwidth}p{0.47\textwidth}}
+\hline
+Unité tuée & Valeur en points de l'unité en VP. \tabularnewline
+Unité en fuite & Moitié de la valeur en points en VP. \tabularnewline
+Unité à ou en dessous de 25\% de ses PVs de départ & Moitié de la valeur en points en VP. \tabularnewline
+En fuite et à ou en dessous de 25\% & Valeur en points totale de l'unité en VP. \tabularnewline
+Général tué & +200 VP. \tabularnewline
+Grande Bannière tuée & +200 VP. \tabularnewline
+\hline
+\end{tabular}\end{center}
+
+\end{minipage}\hfill\begin{minipage}[c]{0.48\textwidth}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.1}
+\noindent\begin{tabular}{M{2.7cm}M{2cm}M{1.1cm}M{1.1cm}}
+\hline
+\multicolumn{2}{c}{\textbf{Différence de Points de Victoire}} & \multicolumn{2}{c}{\textbf{Points de Bataille}} \tabularnewline
+Pourcentage de l'Armée & (à 4500 pts) & Gagnant & Perdant \tabularnewline
+0 - 5\% & 0 - 225 & 10 & 10 \tabularnewline
+>5 - 10\% & 226 - 450 & 11 & 9 \tabularnewline
+>10 - 20\% & 451 - 900 & 12 & 8 \tabularnewline
+>20 - 30\% & 901 - 1350 & 13 & 7 \tabularnewline
+>30 - 40\% & 1351 - 1800 & 14 & 6 \tabularnewline
+>40 - 50\% & 1801 - 2250 & 15 & 5 \tabularnewline
+>50 - 70\% & 2251 - 3150 & 16 & 4 \tabularnewline
+>70\% & >3150 & 17 & 3 \tabularnewline
+\multicolumn{2}{c}{\textbf{Remporter un Objectif Secondaire}} & +3 & -3 \tabularnewline
+\hline
+\end{tabular}
+\end{center}
+
+\end{minipage}
+
+
+
+\newpage
+
+\begin{center}\Largerfontsize\textbf{Phase de Mouvement}\end{center}
+
 \begin{minipage}[t]{.35\linewidth}
 
 \paragraph{Structure du Tour}
 
 \begin{tabular}{c|l}
-1 & \hyperlink{movementphase}{Phase de Mouvement}. \tabularnewline
-2 & \hyperlink{magicphase}{Phase de Magie}. \tabularnewline
-3 & \hyperlink{shootingphase}{Phase de Tir}. \tabularnewline
-4 & \hyperlink{closecombatphase}{Phase de Corps à Corps}. \tabularnewline
+1 & \bluehyperlink{movementphase}{Phase de Mouvement}. \tabularnewline
+2 & \bluehyperlink{magicphase}{Phase de Magie}. \tabularnewline
+3 & \bluehyperlink{shootingphase}{Phase de Tir}. \tabularnewline
+4 & \bluehyperlink{closecombatphase}{Phase de Corps à Corps}. \tabularnewline
 \end{tabular}
 
-\vspace*{20pt}
-\paragraph{Séquence Pré-Partie}
+\vspace*{10pt}
+\begin{framed}
+\bluehyperlink{dangerousterrain}{\paragraph{Terrain Dangereux}}
 
-\begin{tabular}{c|l}
-1 & Décidez de la \hyperlink{gamesize}{Taille de la Partie}. \tabularnewline
-2 & \hyperlink{sharearmylist}{Montrez-vous vos Listes d'Armée}. \tabularnewline
-3 & \hyperlink{buildbattlefield}{Installez le champ de bataille}. \tabularnewline
-4 & Déterminez le \hyperlink{deploymenttype}{Type de Déploiement}. \tabularnewline
-5 & Choisissez les \hyperlink{secondaryobjectives}{Objectifs Secondaires}. \tabularnewline
-6 & Déterminez les \hyperlink{deploymentzones}{Zones de Déploiement}. \tabularnewline
-7 & \hyperlink{generatespells}{Générez les Sorts}. \tabularnewline
-8 & \hyperlink{deploymentphase}{Phase de Déploiement}. \tabularnewline
-\end{tabular}
+Lancez le nombre de dés qui correspond au Type de Troupe de la figurine.
 
-\vspace*{20pt}
-\paragraph{Séquence de Déploiement}
+\vspace*{3pt}
+Terrain Dangereux (1) : le test rate sur un \result{1}.
 
-\begin{tabular}{c|l}
-1 & \hyperlink{whodeploysfirst}{Déterminez qui commence à se déployer}. \tabularnewline
-2 & \hyperlink{deployunits}{Déployez des unités} chacun votre tour. \tabularnewline
-3 & Déterminez qui veut jouer en premier. \tabularnewline
-4 & \hyperlink{deployremainingunits}{Déployez les unités restantes}. \tabularnewline
-5 & Déployez les \hyperlink{scout}{Éclaireurs}. \tabularnewline
-6 & Déplacez les unités avec \hyperlink{vanguard}{\vanguard{}}. \tabularnewline
-7 & Autres règles et capacités. \tabularnewline
-8 & \hyperlink{rollforfirstturn}{Lancez le dé pour le premier tour}. \tabularnewline
-\end{tabular}
+\vspace*{3pt}
+Terrain Dangereux (2) : le test rate sur \result{1} ou \result{2}.
+
+\vspace*{3pt}
+Terrain Dangereux (3) : le test rate sur \result{1}, \result{2} ou \result{3}.
+
+\vspace*{3pt}
+Une blessure avec la règle \armourpiercing{6} pour chaque test raté.
+\end{framed}
 
 \end{minipage}\hfill\begin{minipage}[t]{.60\linewidth}
 
@@ -52,45 +181,86 @@
 \begin{tabular}{c|p{9.6cm}}
 1 & Début de la phase. \tabularnewline
 2 & Début de l'étape des Charges. \tabularnewline
-3 & Le Joueur Actif \hyperlink{declarecharges}{Déclare ses Charges}. Il nomme l'unité qui charge et sa cible. À chaque fois que le Joueur Actif déclare une charge, le Joueur Réactif doit annoncer et effectuer la \hyperlink{chargereaction}{Réaction à la Charge} de l'unité ciblée. \tabularnewline
-4 & Une fois que toutes les charges et réactions ont été déclarées, les unités en charge tentent d'arriver au Corps à Corps : \hyperlink{movechargers}{le Joueur Actif effectue les jets de Distance de Charge}. \tabularnewline
-5 & Si une unité en charge n'arrive pas à atteindre sa cible, elle doit faire un \hyperlink{failedchargemove}{Mouvement de Charge Ratée}. \tabularnewline
+3 & Le Joueur Actif \bluehyperlink{declarecharges}{Déclare ses Charges}. Il nomme l'unité qui charge et sa cible. À chaque fois que le Joueur Actif déclare une charge, le Joueur Réactif doit annoncer et effectuer la \bluehyperlink{chargereaction}{Réaction à la Charge} de l'unité ciblée. \tabularnewline
+4 & Une fois que toutes les charges et réactions ont été déclarées, les unités en charge tentent d'arriver au Corps à Corps : \bluehyperlink{movechargers}{le Joueur Actif effectue les jets de Distance de Charge}. \tabularnewline
+5 & Si une unité en charge n'arrive pas à atteindre sa cible, elle doit faire un \bluehyperlink{failedchargemove}{Mouvement de Charge Ratée}. \tabularnewline
 6 & Si une unité en charge a obtenu une distance suffisante pour atteindre sa cible, le Joueur Actif la déplace puis l'aligne en contact avec l'unité ciblée de manière à maximiser le contact. L'unité en charge et sa cible sont maintenant au Corps à Corps. \tabularnewline
 7 & Fin de l'étape des Charges. \tabularnewline
-8 & Début de l'étape des \hyperlink{compulsorymoves}{Mouvements Obligatoires}. \tabularnewline
-9 & Le Joueur Actif peut essayer de rallier ses unités en fuite en passant des \hyperlink{rallytest}{Tests de Ralliement}. \tabularnewline
-10 & Les unités toujours en fuite doivent effectuer un \hyperlink{fleemove}{Mouvement de Fuite}. \tabularnewline
-11 & Les unités avec la règle \hyperlink{randommovement}{\randommovement{}} ou tout autre forme de mouvement obligatoire doivent maintenant se déplacer. \tabularnewline
+8 & Début de l'étape des \bluehyperlink{compulsorymoves}{Mouvements Obligatoires}. \tabularnewline
+9 & Le Joueur Actif peut essayer de rallier ses unités en fuite en passant des \bluehyperlink{rallytest}{Tests de Ralliement}. \tabularnewline
+10 & Les unités toujours en fuite doivent effectuer un \bluehyperlink{fleemove}{Mouvement de Fuite}. \tabularnewline
+11 & Les unités avec la règle \bluehyperlink{randommovement}{\randommovement{}} ou tout autre forme de mouvement obligatoire doivent maintenant se déplacer. \tabularnewline
 12 & Fin de l'étape des Mouvements Obligatoires. \tabularnewline
-13 & Début de l'étape des \hyperlink{remainingmoves}{Autres Mouvements}. \tabularnewline
-14 & Les unités du Joueur Actif qui ne se sont pas encore déplacées pendant cette Phase de Mouvement peuvent maintenant effectuer un \hyperlink{advancemove}{Mouvement Simple}, une \hyperlink{marchmove}{Marche Forcée} ou une \hyperlink{reform}{Reformation}. \tabularnewline
+13 & Début de l'étape des \bluehyperlink{remainingmoves}{Autres Mouvements}. \tabularnewline
+14 & Les unités du Joueur Actif qui ne se sont pas encore déplacées pendant cette Phase de Mouvement peuvent maintenant effectuer un \bluehyperlink{advancemove}{Mouvement Simple}, une \bluehyperlink{marchmove}{Marche Forcée} ou une \bluehyperlink{reform}{Reformation}. \tabularnewline
 15 & Fin de l'étape des Autres Mouvements. \tabularnewline
 16 & Fin de la phase. \tabularnewline
 \end{tabular}
 
-\vspace*{20pt}
-\begin{framed}
-\paragraph{Terrains Dangereux}
-
-Lancez le nombre de dés correspondant au Type de Troupe de la figurine.\newline
-Terrain Dangereux (1) : le test rate sur un \result{1}.\newline
-Terrain Dangereux (2) : le test rate sur \result{1} ou \result{2}.\newline
-Terrain Dangereux (3) : le test rate sur \result{1}, \result{2} ou \result{3}.\newline
-Une blessure avec la règle \armourpiercing{6} pour chaque test raté.
-\end{framed}
-
 \end{minipage}
 
+\textit{TD : Terrain Dangereux. CCCM : Cavalerie, Chars et Cavalerie Monstrueuse.}
+
+\vspace*{-5pt}
+\rowcolors{1}{white}{black!10}
+\begin{center}
+\begin{tabular}{@{}>{\bfseries}M{2cm}M{3.8cm}M{5.3cm}M{5.3cm}}
+\textbf{Décor} & \textbf{Mouvement} & \textbf{Couvert} & \textbf{Autres} \tabularnewline
+\bluehyperlink{buildings}{Bâtiment} &
+\distance{1} d'écart.\newline
+TD (3) pour les unités en fuite. &
+Décor Occultant, Couvert Lourd\newline
+Une unité qui se déplace à travers bénéficie d'un Couvert Lourd jusqu'à ce qu'elle tire ou jusqu'au début du prochain Tour de Joueur allié. &
+Compte comme Terrain Découvert pendant l'étape des Autres Mouvements pour : Infanterie, Bêtes de Guerre, Nuées, Infanterie Monstrueuse, Bêtes Monstrueuses ou un mélange de ces types. \tabularnewline
+\bluehyperlink{fields}{Champ} &
+TD (1) pour CCCM et figurines avec \flamingattacks{}. &
+Offre un Couvert Léger si plus de la moitié de l'Empreinte au Sol est dans le Champ. Ne s'applique pas à une figurine avec \toweringpresence{}. &
+Donne \flammable{}. \tabularnewline
+\bluehyperlink{hills}{Colline} &
+- &
+Décor Occultant.\newline
+Partiellement sur la Colline : Couvert Léger.\newline
+Complétement hors de la Colline : Couvert Lourd.&
+Donne une Taille Gigantesque.\newline
+Charger depuis la Colline donne +1 au Résultat de Combat. \tabularnewline
+\bluehyperlink{water}{\water} &
+TD (1) pour CCCM. &
+- &
+Supprime les Rangs Complets.\tabularnewline
+\bluehyperlink{forests}{Forêt} &
+TD (1) pour CCCM et les unités effectuant un Mouvement de \fly{}. &
+Offre un Couvert Léger. &
+Supprime Indomptable. Donne \stubborn{} aux \skirmishers{} et aux Personnages d'Infanterie seuls.\tabularnewline
+\bluehyperlink{walls}{Mur} &
+Ignorer le Mur pour le déplacement et le positionnement. TD (1) pour CCCM. &
+Offre un Couvert Lourd. \distracting{} à la première Manche de Corps à Corps. Ne s'applique pas à une figurine avec \toweringpresence{}. &
+- \tabularnewline
+\bluehyperlink{ruins}{Ruines} &
+TD (1) pour toute unité non \skirmisher{}. TD(2) pour CCCM. &
+Partiellement dans les Ruines : Couvert Lourd. Ne s'applique pas à une figurine avec \toweringpresence{}. &
+- \tabularnewline
+\bluehyperlink{impassableterrain}{Terrain Infranchissable} &
+\distance{1} d'écart.\newline
+TD (3) pour les unités en fuite. &
+Décor Occultant\newline
+Couvert Lourd &
+- \tabularnewline
+\end{tabular}
+\end{center}
+\rowcolors{1}{white}{white}
+
 \newpage
+
+\begin{center}\Largerfontsize\textbf{Phase de Magie}\end{center}
 
 \begin{multicols}{2}\raggedcolumns
 
 \paragraph{Séquence de la Phase de Magie}
 
 \begin{tabular}{c|p{7.4cm}}
-1 & Début de la Phase de Magie. Lancez les dés pour les \hyperlink{magicflux}{\textbf{Flux de Magie}} et la \hyperlink{magicflux}{\textbf{\channel}}. \tabularnewline
-2 & Les sorts de type \hyperlink{remainsinplay}{\textbf{\remainsinplay}} peuvent être dissipés. \tabularnewline
-3 & Le Joueur Actif peut \hyperlink{spellcastingsequence}{\textbf{tenter de lancer un sort}}. \tabularnewline
+1 & Début de la Phase de Magie. Lancez les dés pour les \bluehyperlink{magicflux}{\textbf{Flux de Magie}} et la \bluehyperlink{magicflux}{\textbf{\channel}}. \tabularnewline
+2 & Les sorts de type \bluehyperlink{remainsinplay}{\textbf{\remainsinplay}} peuvent être dissipés. \tabularnewline
+3 & Le Joueur Actif peut \bluehyperlink{spellcastingsequence}{\textbf{tenter de lancer un sort}}. \tabularnewline
 4 & Répétez les étapes 2 et 3 jusqu'à ce qu'aucun joueur ne tente quoi que ce soit. \tabularnewline
 5 & Fin de la Phase de Magie. Les capacités prenant effet à la fin de la phase sont déclenchées. \tabularnewline
 \end{tabular}
@@ -99,100 +269,111 @@ Une blessure avec la règle \armourpiercing{6} pour chaque test raté.
 \paragraph{Tentative de Lancement de Sort}
 
 \begin{tabular}{c|m{7.4cm}}
-1 & Le Joueur Actif indique quel Sorcier tente de lancer quel sort. Il doit préciser s'il opte pour une version améliorée du sort, ainsi que la cible du sort et de celle de l'attribut si nécessaire. Il indique enfin le nombre de Dés de Pouvoir utilisés, entre 1 et 5. \tabularnewline
-2 & Le Joueur Actif lance le nombre de Dés de Pouvoir annoncé, en les retirant de sa réserve. Additionnez les résultats des dés avec les modificateurs magiques (tels qu'un Pouvoir Irrésistible) pour obtenir le total de lancement. \tabularnewline
-3 & La tentative de lancement réussit si le total de lancement est \textbf{supérieur ou égal} à la valeur de lancement. Sinon, le lancement de sort échoue et le lanceur subit une \lostfocus{}. \tabularnewline
+1 & Le Joueur Actif indique quel \wizard{} tente de lancer quel sort. Il doit préciser s'il opte pour une version améliorée du sort, ainsi que la cible du sort et de celle de l'attribut si nécessaire. Il indique enfin le nombre de Dés de Magie utilisés, entre 1 et 5. \tabularnewline
+2 & Le Joueur Actif lance le nombre de Dés de Magie annoncé, en les retirant de sa réserve. Additionnez les résultats des dés avec les modificateurs magiques pour obtenir le total de lancement. \tabularnewline
+3 & La tentative de lancement réussit si le total de lancement est \textbf{supérieur ou égal} à la valeur de lancement. Sinon, le lancement de sort échoue et le lanceur subit une \bluehyperlink{lostfocus}{\lostfocus{}}. \tabularnewline
 \end{tabular}
 
 \vspace*{10pt}
 \paragraph{Tentative de Dissipation}
 
 \begin{tabular}{c|m{7.4cm}}
-1 & Le Joueur Réactif peut désigner un Sorcier n'étant pas en fuite pour tenter la dissipation et annonce combien de Dés de Dissipation il va utiliser. Il doit utiliser au moins un dé et jusqu'à la totalité de sa réserve. Il est possible de tenter une dissipation même sans avoir de Sorcier. \tabularnewline
-2 & Le Joueur Réactif lance le nombre de Dés de Dissipation annoncé, en les retirant de sa réserve. Additionnez les résultats des dés avec les modificateurs magiques (tels qu'un Pouvoir Irrésistible) pour obtenir le total de dissipation. \tabularnewline
-3 & La tentative de dissipation réussit si le total de dissipation est \textbf{supérieur ou égal} au total de lancement. Le sort est alors dissipé et le lancement échoue. Sinon, la tentative de dissipation échoue et le Sorcier à l'origine de cette tentative subit une \lostfocus{}. \tabularnewline
+1 & Le Joueur Réactif peut désigner un \wizard{} n'étant pas en fuite pour tenter la dissipation et annonce combien de Dés de Magie il va utiliser. Il doit utiliser au moins un dé et jusqu'à la totalité de sa réserve. Il est possible de tenter une dissipation même sans avoir de \wizard{}. \tabularnewline
+2 & Le Joueur Réactif lance le nombre de Dés de Magie annoncé, en les retirant de sa réserve. Additionnez les résultats des dés avec les modificateurs magiques pour obtenir le total de dissipation. \tabularnewline
+3 & La tentative de dissipation réussit si le total de dissipation est \textbf{supérieur ou égal} au total de lancement. Le sort est alors dissipé et le lancement échoue. Sinon, la tentative de dissipation échoue et le \wizard{} à l'origine de cette tentative subit une \bluehyperlink{lostfocus}{\lostfocus{}}. \tabularnewline
 \end{tabular}
 
 \vspace*{20pt}
+
 \begin{framed}
-\vspace*{-17pt}
-\paragraph{Modificateurs Magiques}
+\vspace*{-25pt}
+\bluehyperlink{magicmodifiers}{\paragraph{Modificateurs Magiques}}
 
-\noindent Sorcier Apprenti, Niveau 1 à 2 : +1
-
-\vspace*{3pt}
-\noindent Maître Sorcier, Niveau 3 à 4 : +2
+\noindent \wizardapprentice{} : +1
 
 \vspace*{3pt}
-\noindent \overwhelmingpower{} : + 1D3 + NDU.
+\noindent \wizardmaster{} : +2
 
 \vspace*{3pt}
-\noindent La somme des modificateurs hors \overwhelmingpower{} ne peut pas dépasser +3.
+\noindent La somme des modificateurs ne peut pas dépasser +3.
+
+\vspace*{3pt}
+\noindent Dissiper un \boundspell{} : +1 (peut dépasser +3)
 
 \end{framed}
 
 \vspace*{\fill}
 \columnbreak
 
-\paragraph{Table des \miscasts{}}
+\begin{framed}
+\vspace*{-17pt}
+\paragraph{\overwhelmingpower}
 
+Quand vous lancez un sort, et qu'au moins deux Dés  de Magie donnent des \result{6} naturels, la tentative de lancement bénéficie d'un \overwhelmingpower{}. Quand cela arrive, lancez immédiatement un Dé de Magie supplémentaire provenant de votre réserve, s'il vous en restait, et ajoutez le au total de lancement. Cela peut permettre de dépasser la limite usuelle de 5 Dés de Magie maximum pour une tentative de lancement. Si un sort est lancé avec un \overwhelmingpower{} et n'est pas dissipé, le lanceur subit un \bluehyperlink{miscast}{\miscast}.
+
+\end{framed}
+
+\vspace*{-20pt}
+\bluehyperlink{miscast}{\paragraph{Table des \miscasts{}}}
+
+\renewcommand{\arraystretch}{2}
 \begin{center}
-\begin{tabular}{cm{6.75cm}@{}}
+\begin{tabular}{>{\raggedleft}p{1.8cm}p{5.8cm}}
 \hline
-\textbf{2 à 4} & \textbf{\breachintheveil}
+
+\textbf{Jet de \miscast{} :}
+
+(1D3+1)$\times$NDU &
+\textbf{Effets du \miscast{}}\tabularnewline
+
+
+\hline
+
+\textbf{Toujours} & \textbf{\witchfire}
 
 \vspace*{3pt}
-Centrez le gabarit de \distance{5} sur le lanceur. Toute figurine touchée par le gabarit subit une touche. Le lanceur doit subir une touche.
+L'unité du lanceur subit un nombre de touches égal au résultat du jet de \miscast{}. Le nombre de touches ne peut pas être supérieur au nombre de Points de Vie dans l'unité. Ces touches sont de Force NDU et ont les règles \magicalattacks{} et \armourpiercing{1}.\tabularnewline
+
+\textbf{10+} & \textbf{\amnesia}
 
 \vspace*{3pt}
-Si \textbf{4} Dés de Pouvoir ont été utilisés, lancez un dé. Sur un résultat de 1 à 3, retirez le lanceur de la partie.
+Lancez 1D6. Sur 4+, le \wizard{} ne peut plus lancer le sort qui a provoqué le \miscast{} de la partie.\tabularnewline
+
+\textbf{15+} & \textbf{\catastrophicdetonation}
 
 \vspace*{3pt}
-Si \textbf{5} Dés de Pouvoir ont été utilisés, retirez le lanceur de la partie.\tabularnewline
-\textbf{5 à 6} & \textbf{\catastrophicdetonation}
+Lancez 1D6. Sur 4+, le \wizard{} perd un nombre de Points de Vie égal à la moitié de son nombre de Points de Vie de départ, en arrondissant au supérieur, sans sauvegarde d'aucune sorte possible.\tabularnewline
+
+\textbf{20+} & \textbf{\breachintheveil}
 
 \vspace*{3pt}
-Centrez le gabarit de \distance{3} sur le lanceur. Toute figurine touchée par le gabarit subit une touche. Le lanceur doit subir une touche.\tabularnewline
-\textbf{7} & \textbf{\witchfire}
-
-\vspace*{3pt}
-L'unité du lanceur subit NDU touches, distribuées comme des tirs. Le lanceur ne peut cependant subir qu'une seule touche au plus.\tabularnewline
-\textbf{8 à 9} & \textbf{LALLA}
-
-\vspace*{3pt}
-Tous les Sorciers alliés subissent une touche. Une figurine en plusieurs éléments comprenant plusieurs Sorciers subit une touche par élément de figurine étant Sorcier. \tabularnewline
-\textbf{10 à 12} & \textbf{\amnesia}
-
-\vspace*{3pt}
-Le Niveau de Magie du lanceur est diminué de NDU-2. Rappel : un Sorcier perd un sort pour chaque Niveau de Magie perdu. Commencez par le sort ayant causé le \miscast{} puis tirez les autres au hasard.\tabularnewline
+Lancez 1D6. Sur 4+, le \wizard{} est mort, sans sauvegarde d'aucune sorte possible. Retirez-le du jeu comme perte.\tabularnewline
 \hline
 \end{tabular}
 \end{center}
+\renewcommand{\arraystretch}{1.5}
 
 \vspace*{5pt}
-\noindent Les touches infligées par un \miscast{} ont une Force de NDU+2 et les règles \magicalattacks{} et \armourpiercing{1}. Le Sorcier ayant provoqué le \miscast{} ne peut utiliser aucune sauvegarde.
+\noindent Appliquez tous les effets cumulés correspondant au résultat du jet.\newline
+\textbf{NDU} : Nombre de Dés de magie Utilisés, sans compter le dé additionnel du \overwhelmingpower{}.
 
-\vspace*{5pt}
-\noindent Quel que soit le résultat du jet, retirez NDU Dés de Pouvoir de la réserve du propriétaire du lanceur.
+\vspace*{10pt}
 
-\vspace*{30pt}
 \begin{framed}
-\vspace*{-17pt}
-\paragraph{\boundspells{}}
+\vspace*{-25pt}
+\bluehyperlink{boundspells}{\paragraph{\boundspells{}}}
 
-\noindent Pour lancer un sort lié à un Objet de Sort avec succès, le jet de lancement doit être supérieur ou égal à son Niveau de Puissance.
+Pour lancer un sort lié à un Objet de Sort avec succès, le jet de lancement doit être supérieur ou égal à son Niveau de Puissance.
 \begin{itemize}[label={-}]
 \item Aucun modificateur positif ne peut être ajouté au jet de lancement.
-\item Un échec ne provoque pas de \lostfocus{} pour le lanceur.
-\item Un objet de sort ne bénéficie pas du bonus de lancement d'un Pouvoir Irrésistible.
+\item Un échec ne provoque pas de \bluehyperlink{lostfocus}{\lostfocus{}} pour le lanceur.
+\item Un Objet de Sort ne bénéficie pas du bonus de lancement d'un Pouvoir Irrésistible.
 \item L'Attribut de la Voie est lancé normalement.
+\item Se dissipe avec un bonus de +1 qui peut dépasser la limite normale des modificateurs (+3).
 \end{itemize}
 
-\noindent En cas de Pouvoir Irrésistible :
-\begin{itemize}[label={-}, itemsep=3pt]
-\item Si 4 dés ou plus ont été lancés, l'\boundspell{} est perdu et le sort ne peut plus être lancé de la partie.
-\item Retirez NDU Dés de Pouvoir de la réserve du propriétaire du lanceur.
-\end{itemize}
+En cas de Pouvoir Irrésistible sur un sort non dissipé :\newline
+Si NDU ou plus ont été lancés, l'\boundspell{} est perdu et le sort ne peut plus être lancé de la partie.
 \end{framed}
 
 \vspace*{\fill}
@@ -200,19 +381,21 @@ Le Niveau de Magie du lanceur est diminué de NDU-2. Rappel : un Sorcier perd un
 
 \newpage
 
+\begin{center}\Largerfontsize\textbf{Phase de Tir}\end{center}
+
 \begin{minipage}[t]{.68\linewidth}
 
 \paragraph{Phase de Tir}
 
 \begin{tabular}{c|p{11cm}}
 1 & Le Joueur Actif peut choisir une unité autorisée à effectuer une Attaque de Tir et déclarer la cible. \tabularnewline
-2 & Le Joueur Actif doit \hyperlink{measuringdistances}{Mesurer la Distance} pour s'assurer que l'unité ennemie ciblée est bien à portée de l'Attaque de Tir. Il doit aussi vérifier que la cible est en \hyperlink{lineofsight}{Ligne de Vue}. \tabularnewline
+2 & Le Joueur Actif doit \bluehyperlink{measuringdistances}{Mesurer la Distance} pour s'assurer que l'unité ennemie ciblée est bien à portée de l'Attaque de Tir. Il doit aussi vérifier que la cible est en \bluehyperlink{lineofsight}{Ligne de Vue}. \tabularnewline
 3 & Le Joueur Actif effectue les jets pour toucher et compare avec la Table pour toucher au Tir. \tabularnewline
-4 & Il fait un \hyperlink{towoundroll}{Jet pour Blesser} pour chaque touche réussie. \tabularnewline
-5 & Pour chaque blessure reçue, le Joueur Réactif peut tenter une \hyperlink{armoursaveandmodifiers}{Sauvegarde d'Armure} et une \hyperlink{regeneration}{Sauvegarde de \regeneration{}} ou une \hyperlink{wardsave}{\wardsave{}} selon les possibilités de la figurine blessée. \tabularnewline
-6 & Le Joueur Réactif \hyperlink{removecasualties}{Retire les Pertes} pour chaque blessure non sauvegardée et marque les blessures infligées aux figurines à plusieurs PVs. \tabularnewline
+4 & Il fait un \bluehyperlink{towoundroll}{Jet pour Blesser} pour chaque touche réussie. \tabularnewline
+5 & Pour chaque blessure reçue, le Joueur Réactif peut tenter une \bluehyperlink{armoursaveandmodifiers}{Sauvegarde d'Armure} et une \bluehyperlink{regeneration}{Sauvegarde de \regeneration{}} ou une \bluehyperlink{wardsave}{\wardsave{}} selon les possibilités de la figurine blessée. \tabularnewline
+6 & Le Joueur Réactif \bluehyperlink{removecasualties}{Retire les Pertes} pour chaque blessure non sauvegardée et marque les blessures infligées aux figurines à plusieurs PVs. \tabularnewline
 7 & Le Joueur Actif peut sélectionner une nouvelle unité pour tirer et retourner à l'étape 1. \tabularnewline
-8 & Dès qu'une unité atteint de Lourdes Pertes, c'est-à-dire dès qu'elle a perdu au moins 25\% de ses effectifs pendant la Phase de Tir, elle doit passer un \hyperlink{panictest}{Test de Panique}. \tabularnewline
+8 & Dès qu'une unité atteint de Lourdes Pertes, c'est-à-dire dès qu'elle a perdu au moins 25\% de ses effectifs pendant la Phase de Tir, elle doit passer un \bluehyperlink{panictest}{Test de Panique}. \tabularnewline
 9 & Fin de la phase. \tabularnewline
 \end{tabular}
 
@@ -261,18 +444,27 @@ La figurine subit une blessure sans sauvegarde d'aucune sorte possible. \tabular
 \paragraph{Pénalités pour toucher}
 
 \begin{center}
-\begin{tabular}{rl}
+\begin{tabular}{p{4cm}l}
 \hline
-Bouger et Tirer & -1 \tabularnewline
-Longue Portée & -1 \tabularnewline
-Tenir la Position et Tirer & -1 \tabularnewline
-Couvert Léger & -1 \tabularnewline
-Couvert Lourd & -2 \tabularnewline
+\raggedleft{}Bouger et Tirer & -1 \tabularnewline
+\raggedleft{}Longue Portée & -1 \tabularnewline
+\raggedleft{}Tenir la Position et Tirer & -1 \tabularnewline
+\raggedleft{}Couvert Léger & -1 \tabularnewline
+\raggedleft{}Couvert Lourd & -2 \tabularnewline
+\textbf{Règles Spéciales} & \tabularnewline
+\raggedleft{}\hardtarget{} & -1 \tabularnewline
+\raggedleft{}\skirmishers{} & -1 \tabularnewline
+\raggedleft{}\multipleshots{} & -1 \tabularnewline
 \hline
 \end{tabular}
 \end{center}
 
 \end{minipage}
+
+\renewcommand{\figureLoSCSoftcover}{\textbf{Couvert Léger (-1)}}
+\renewcommand{\figureLoSCHardcover}{\textbf{Couvert Lourd (-2)}}
+\renewcommand{\figureLoSCNocover}{\textbf{Pas de Couvert}}
+\renewcommand{\figureLoSCNolineofsight}{\textbf{Pas de Ligne de Vue}}
 
 \vspace*{20pt}
 \def\svgwidth{\textwidth}
@@ -280,12 +472,14 @@ Couvert Lourd & -2 \tabularnewline
 
 \newpage
 
+\begin{center}\Largerfontsize\textbf{Phase de Corps à Corps}\end{center}
+
 \begin{multicols}{2}\raggedcolumns
 
-\paragraph{Phase de Corps à Corps}
+\paragraph{Séquence de la Phase de Corps à Corps}
 
 \begin{tabular}{c|p{7.4cm}}
-1 & Début de la Phase de Corps à Corps. Appliquez la règle \hyperlink{nolongerengaged}{Plus Engagés} si nécessaire. \tabularnewline
+1 & Début de la Phase de Corps à Corps. Appliquez la règle \bluehyperlink{nolongerengaged}{Plus Engagés} si nécessaire. \tabularnewline
 2 & Le Joueur Actif choisit un combat. \tabularnewline
 3 & Résolvez cette Manche de Corps à Corps. \tabularnewline
 4 & Répétez les étapes 2 et 3 pour chaque combat qui n'a pas encore eu lieu pendant cette phase. \tabularnewline
@@ -297,35 +491,35 @@ Couvert Lourd & -2 \tabularnewline
 \begin{tabular}{c|p{7.3cm}}
 1 & Début de la Manche de Corps à Corps. \tabularnewline
 2 & Choisissez les armes. \tabularnewline
-3 & Appliquez la règle \hyperlink{makeway}{Faites Place}. \tabularnewline
-4 & Lancez et relevez ou refusez les \hyperlink{challenges}{Défis}. \tabularnewline
+3 & Appliquez la règle \bluehyperlink{makeway}{Faites Place}. \tabularnewline
+4 & Lancez et relevez ou refusez les \bluehyperlink{challenges}{Défis}. \tabularnewline
 5 & Exécutez les attaques par palier d'Initiative :
 	\begin{enumerate}[parsep=0cm,itemsep=0.05cm, topsep=3pt]
 		\item Allouez les attaques.
 		\item Lancez les jets pour toucher, pour blesser, les jets de sauvegarde et retirez les pertes.
 		\item Recommencez pour le palier d'Initiative suivant.
  	\end{enumerate}\tabularnewline
-6 & Déterminez quel camp a gagné cette Manche de Corps à Corps. Le(s) perdant(s) passent un \hyperlink{breaktest}{Test de Moral}. \tabularnewline
-7 & En cas d'échec, les unités alliées à moins de \distance{6} passent un \hyperlink{panictest}{Test de Panique}. \tabularnewline
+6 & Déterminez quel camp a gagné cette Manche de Corps à Corps. Le(s) perdant(s) passent un \bluehyperlink{breaktest}{Test de Moral}. \tabularnewline
+7 & En cas d'échec, les unités alliées à moins de \distance{6} passent un \bluehyperlink{panictest}{Test de Panique}. \tabularnewline
 8 & En cas de fuite, choisissez de poursuivre ou de vous réfréner. \tabularnewline
 9 & Jet des distances de fuite. \tabularnewline
 10 & Jet des distances de poursuite. \tabularnewline
 11 & Déplacement des unités en fuite. \tabularnewline
 12 & Déplacement des unités poursuivantes. \tabularnewline
-13 & \hyperlink{postcombatpivots}{Pivots Post-Combat ou Reformations Post-Combat}. \tabularnewline
-14 & \hyperlink{combatreform}{Reformations de Combat}. \tabularnewline
+13 & \bluehyperlink{postcombatpivots}{Pivots Post-Combat ou Reformations Post-Combat}. \tabularnewline
+14 & \bluehyperlink{combatreform}{Reformations de Combat}. \tabularnewline
 15 & Fin de la manche, passez au prochain Corps à Corps. \tabularnewline
 \end{tabular}
 
 \paragraph{Quand une attaque touche}
 
 \begin{tabular}{c|p{7.4cm}}
-1 & L'Attaquant \hyperlink{distributehits}{Répartit les touches}. \tabularnewline
+1 & L'Attaquant \bluehyperlink{distributehits}{Répartit les touches}. \tabularnewline
 2 & L'Attaquant lance les jets pour blesser. Passez à l'étape suivante pour les jets réussis. \tabularnewline
 3 & Le Défenseur tente ses Sauvegardes d'Armure. Passez à l'étape suivante pour les jets ratés. \tabularnewline
 4 & Le Défenseur tente ses sauvegardes spéciales. Passez à l'étape suivante pour les jets ratés. \tabularnewline
 5 & Le Défenseur retire les PVs et les pertes. \tabularnewline
-6 & Le Défenseur passe éventuellement un \hyperlink{panictest}{Test de Panique}. \tabularnewline
+6 & Le Défenseur passe éventuellement un \bluehyperlink{panictest}{Test de Panique}. \tabularnewline
 \end{tabular}
 
 \paragraph{Modificateur d'Armure}
@@ -351,7 +545,7 @@ Blessures Infligées & \textbf{+1} par blessure \tabularnewline
 Massacre & \textbf{+1} par blessure (max. \textbf{+3}) \tabularnewline
 Charge & \textbf{+1} (\textbf{+2} depuis une Colline) \tabularnewline
 Bonus de Rang & \textbf{+1} par rang (max. \textbf{+3}) \tabularnewline
-Porte-Étendard & \textbf{+1} \tabularnewline
+Porte-Étendard & \textbf{+1} par Étendard \tabularnewline
 Grande Bannière & \textbf{+1} \tabularnewline
 Attaque de Flanc & \textbf{+1} ou \textbf{+2} \tabularnewline
 Attaque de l'Arrière & \textbf{+2} ou \textbf{+3} \tabularnewline
@@ -367,17 +561,21 @@ Attaque de l'Arrière & \textbf{+2} ou \textbf{+3} \tabularnewline
 \begin{itemize}[label={-}]
 \item Un Général non en fuite donne son Commandement à toutes les unités alliées à moins de \distance{12}.
 \item Un Porteur de la Grande Bannière non en fuite donne la capacité de relancer leurs tests de Commandement ratés à toutes les unités alliées à moins de \distance{12}.
-\item Une \largetarget{} augmente la portée des deux règles précédentes de \distance{6}.
+\item La règle \toweringpresence{} augmente la portée des deux règles précédentes de \distance{6}.
 \end{itemize}
 \end{framed}
 
+\vspace*{-5pt}
+
 \paragraph{Table pour toucher au Corps à Corps}
+
+\vspace*{-5pt}
 
 \begin{center}
 \begin{tabular}{c|cccccccccc@{}}
-\backslashbox{\textbf{D}}{\textbf{A}} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} \\
+\textbf{CC} & \textbf{A : 1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} \\
 \hline
-\textbf{1} & \yel 4+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ \\
+\textbf{D : 1} & \yel 4+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ \\
 \textbf{2} & \yel 4+ & \yel 4+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ \\
 \textbf{3} & \ora 5+ & \yel 4+ & \yel 4+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ \\
 \textbf{4} & \ora 5+ & \yel 4+ & \yel 4+ & \yel 4+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ & \lem 3+ \\
@@ -388,15 +586,21 @@ Attaque de l'Arrière & \textbf{+2} ou \textbf{+3} \tabularnewline
 \textbf{9} & \ora 5+ & \ora 5+ & \ora 5+ & \ora 5+ & \yel 4+ & \yel 4+ & \yel 4+ & \yel 4+ & \yel 4+ & \lem 3+ \\
 \textbf{10} & \ora 5+ & \ora 5+ & \ora 5+ & \ora 5+ & \yel 4+ & \yel 4+ & \yel 4+ & \yel 4+ & \yel 4+ & \yel 4+ \\
 \end{tabular}
+
+Comparer les CC de l'\textbf{A}ttaquant et du \textbf{D}éfenseur
 \end{center}
+
+\vspace*{-5pt}
 
 \paragraph{Table pour blesser}
 
+\vspace*{-5pt}
+
 \begin{center}
 \begin{tabular}{c|cccccccccc@{}}
-\backslashbox{\textbf{E}}{\textbf{F}} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} \tabularnewline
+ & \textbf{F : 1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} \tabularnewline
 \hline
-\textbf{1} & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ \tabularnewline
+\textbf{E : 1} & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ \tabularnewline
 \textbf{2} & \ora 5+ & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ \tabularnewline
 \textbf{3} & \red 6+ & \ora 5+ & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ \tabularnewline
 \textbf{4} & \red 6+ & \red 6+ & \ora 5+ & \yel 4+ & \lem 3+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ & \gre 2+ \tabularnewline
@@ -407,6 +611,8 @@ Attaque de l'Arrière & \textbf{+2} ou \textbf{+3} \tabularnewline
 \textbf{9} & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \ora 5+ & \yel 4+ & \lem 3+ \tabularnewline
 \textbf{10} & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \red 6+ & \ora 5+ & \yel 4+ \tabularnewline
 \end{tabular}
+
+\textbf{F} : Force - \textbf{E} : Endurance
 \end{center}
 
 \vspace*{\fill}
@@ -414,79 +620,38 @@ Attaque de l'Arrière & \textbf{+2} ou \textbf{+3} \tabularnewline
 
 \newpage
 
-\paragraph{Résumé des Types de Troupe}
+\begin{center}\Largerfontsize\textbf{Résumé des Types de Troupe}\end{center}
 
 \rowcolors{1}{white}{black!10}
 \begin{center}
 \begin{tabular}{@{}>{\bfseries}M{2.5cm}M{2cm}M{2.2cm}M{2.2cm}M{3cm}M{1.8cm}M{1.3cm}@{}}
  & \textbf{Type de Profil} & \textbf{Rang Complet (Horde)} & \textbf{Soutien} & \textbf{Règles Spéciales} & \textbf{Taille$^{2}$} & \textbf{DTD$^{3}$} \tabularnewline
-\infantry{} & - & 5 (10) & 1 & - & Petite & 1 \tabularnewline
+\infantry{} & - & 5 (10) & 1 & \lighttroops{} (Personnage uniquement) & Standard & 1 \tabularnewline
 
-\warbeast{} & - & 5 (10) & 1 & \swiftstride{} & Petite & 1 \tabularnewline
+\warbeast{} & - & 5 (10) & 1 & \swiftstride{} & Standard & 1 \tabularnewline
 
-\cavalry{} & \combinedprofile{} & 5 (10) & 1 (cavalier uniquement) & \swiftstride{} & Moyenne & 1 \tabularnewline
+\cavalry{} & \combinedprofile{} & 5 (10) & 1 (cavalier uniquement) & \swiftstride{} & Grande & 1 \tabularnewline
 
-\monstrousinfantry{} & - & 3 (6) & jusqu'à 3 & \stomp{1} & Moyenne & 2 \tabularnewline
+\monstrousinfantry{} & - & 3 (6) & jusqu'à 3 & \stomp{1} & Grande & 2 \tabularnewline
 
-\monstrousbeast{} & - & 3 (6) & jusqu'à 3 & \swiftstride{}\newline \stomp{1} & Moyenne & 2 \tabularnewline
+\monstrousbeast{} & - & 3 (6) & jusqu'à 3 & \swiftstride{}\newline \stomp{1} & Grande & 2 \tabularnewline
 
-\monstrouscavalry{} & \combinedprofile{} & 3 (6) & jusqu'à 3 (cavalier uniquement) & \swiftstride{}\newline \stomp{1} & Moyenne & 2 \tabularnewline
+\monstrouscavalry{} & \combinedprofile{} & 3 (6) & jusqu'à 3 (cavalier uniquement) & \swiftstride{}\newline \stomp{1} & Grande & 2 \tabularnewline
 
-\chariot{} & \combinedprofile{} & 3 (6) & 1 (1 membre d'équipage uniquement) & \swiftstride{} \newline \cannotmarch{} \newline \impacthits{1D6} & Moyenne & 4 \tabularnewline
+\chariot{} & \combinedprofile{} & 3 (6) & 1 (1 membre d'équipage uniquement) & \swiftstride{} \newline \cannotmarch{} \newline \impacthits{1D6} & Grande & 4 \tabularnewline
 
-\monster{} & - & 1 & - & \largetarget{} \newline \stomp{1D6} \newline \terror{} & Grande & 4 \tabularnewline
+\monster{} & - & 1 & - & \stomp{1D6} \newline \toweringpresence{} \newline \terror{} & Gigantesque & 4 \tabularnewline
 
-\riddenmonster{} & Profil de Monstre Monté & 1 & - & \largetarget{} \newline \stomp{1D6} \newline \terror{} & Grande & 4 \tabularnewline
+\riddenmonster{} & Profil de Monstre Monté & 1 & - & \stomp{1D6} \newline \toweringpresence{} \newline \terror{} & Gigantesque & 4 \tabularnewline
 
-\swarm{} & - & $^{1}$ (10) & 1 & \unbreakable{} \newline \unstable{} \newline \skirmisher{} & Petite & 1 \tabularnewline
+\swarm{} & - & $^{1}$ (10) & 1 & \immunetopsychology{} \newline \unstable{} \newline \skirmisher{} & Standard & 1 \tabularnewline
 
-\warmachine{} & Profil de Machine de Guerre & Pas de rangs & - & \moveorfire{} \newline \cannotmarch{} \newline \reload{} & Petite & 1 \tabularnewline
+\warmachine{} & Profil de Machine de Guerre & Pas de rangs & - & \moveorfire{} \newline \cannotmarch{} \newline \reload{} & Standard & 1 \tabularnewline
 \end{tabular}
 \end{center}
 \noindent $^{1}$ Les Nuées ne peuvent pas avoir de Rang Complet puisqu'elles ont la règle \skirmisher{}.\newline
-\noindent $^{2}$ Une figurine avec la règle \largetarget{} est de Grande Taille.\newline
+\noindent $^{2}$ Une figurine avec la règle \toweringpresence{} est de Taille Gigantesque.\newline
 \noindent $^{3}$ DTD : Dés utilisés pour les tests de Terrain Dangereux.
 
-\paragraph{Décors Particuliers}
 
-\noindent TD : Terrain Dangereux. CCCM : Cavalerie, Chars et Cavalerie Monstrueuse.
 
-\rowcolors{1}{white}{black!10}
-\begin{center}
-\begin{tabular}{@{}>{\bfseries}M{2cm}M{4.8cm}M{4.8cm}M{4.8cm}}
-\textbf{Décor} & \textbf{Mouvement} & \textbf{Couvert} & \textbf{Autres} \tabularnewline
-\hyperlink{fields}{Champ} &
-TD (1) pour CCCM et figurines avec \flamingattacks{}. &
-Offre un Couvert Léger si au moins de la moitié de l'Empreinte au Sol est dans le Champ. Ne s'applique pas à une \largetarget{}. &
-Donne \flammable{}. \tabularnewline
-\hyperlink{hills}{Colline} &
-- &
-Décor Occultant.\newline
-Partiellement sur la Colline : Couvert Léger.\newline
-Complétement hors de la Colline : Couvert Lourd.&
-Donne \largetarget{}.\newline
-Charger depuis la Colline donne +1 au Résultat de Combat. \tabularnewline
-\hyperlink{water}{\water} &
-TD (1) pour CCCM. &
-- &
-Supprime les Rangs Complets.\tabularnewline
-\hyperlink{forests}{Forêt} &
-TD (1) pour CCCM et les unités effectuant un Mouvement de \fly{}. &
-Offre un Couvert Léger. &
-Supprime Indomptable. Donne \stubborn{} aux \skirmishers{} et aux Personnages d'Infanterie seuls.\tabularnewline
-\hyperlink{walls}{Mur} &
-Ignorer le Mur pour le déplacement et le positionnement. TD (1) pour CCCM. &
-Offre un Couvert Lourd. \distracting{} à la première Manche de Corps à Corps. Ne s'applique pas à une \largetarget{}. &
-- \tabularnewline
-\hyperlink{ruins}{Ruines} &
-TD (1) pour toute unité non \skirmisher{}. TD(2) pour CCCM. &
-Partiellement dans les Ruines : Couvert Lourd. Ne s'applique pas à une \largetarget{}. &
-- \tabularnewline
-\hyperlink{impassableterrain}{Terrain Infranchissable} &
-\distance{1} d'écart.\newline
-TD (3) pour les unités en fuite. &
-Décor Occultant\newline
-Couvert Lourd &
-- \tabularnewline
-\end{tabular}
-\end{center}

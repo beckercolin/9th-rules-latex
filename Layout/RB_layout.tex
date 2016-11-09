@@ -73,7 +73,6 @@
 
 %%% Technical commands %%%
 
-\newcommand{\newfromWHB}{\textcolor{blue}} % deprecated
 \newcommand{\newrule}{\textcolor{green!50!black}}
 \newcommand{\removedrule}[1]{\textcolor{green!50!black}{\sout{#1}}}
 \newcommand{\starsymbol}{$\star$}
@@ -86,8 +85,6 @@
 \newcommand{\distance}[1] {\unit{#1}{\inch}}
 \newcommand{\result}[1] {\texttt{'}#1\texttt{'}}
 \newcommand{\plusone}{+1}
-
-\ifdef{\disablenewfromWHB}{\renewcommand{\newfromWHB}{}}{} % deprecated
 
 \newcommand{\pts}[1]{#1~\labels@points}
 
