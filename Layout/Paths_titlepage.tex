@@ -6,19 +6,63 @@
 \ifdef{\booktitle}{}{\newcommand{\booktitle}{Missing title}}
 \ifdef{\version}{}{\newcommand{\version}{Missing version}}
 
-{\antiquefont\fontsize{40}{48}\selectfont\noindent\labels@fantasybattles
+{\titlefont\fontsize{40}{48}\selectfont\noindent\labels@fantasybattles
 
 \labels@NinthAge}
 
-\vspace*{0.5cm}
-\ifdef{\booklogo}{%
-\includegraphics[height=10cm]{\booklogo}%
-}{%
-\includegraphics[height=10cm]{../Layout/pics/logo_9th.png}%
-}
+\vspace*{0.7cm}
 
-\vspace*{-1cm}
-{\antiquefont\fontsize{50}{60}\selectfont \booktitle
+\newcommand{\iconheight}{1.6cm}
+\newcommand{\minipagewidth}{6cm}
+\newcommand{\spacebetweeniconrows}{0.3cm}
+
+\hfill\begin{minipage}[c]{\minipagewidth}
+\begin{center}
+\includegraphics[height=\iconheight]{\alchemyicon}
+
+\vspace*{\spacebetweeniconrows}
+
+\includegraphics[height=\iconheight]{\shamanismicon}
+
+\vspace*{\spacebetweeniconrows}
+
+\includegraphics[height=\iconheight]{\cosmologyicon}
+
+\vspace*{\spacebetweeniconrows}
+
+\includegraphics[height=\iconheight]{\divinationicon}
+
+\vspace*{\spacebetweeniconrows}
+
+\includegraphics[height=\iconheight]{\druidismicon}
+
+\end{center}
+\end{minipage}\begin{minipage}[c]{\minipagewidth}
+\begin{center}
+\includegraphics[height=\iconheight]{\evocationicon}
+
+\vspace*{\spacebetweeniconrows}
+
+\includegraphics[height=\iconheight]{\occultismicon}
+
+\vspace*{\spacebetweeniconrows}
+
+\includegraphics[height=\iconheight]{\pyromancyicon}
+
+\vspace*{\spacebetweeniconrows}
+
+\includegraphics[height=\iconheight]{\witchcrafticon}
+
+\vspace*{\spacebetweeniconrows}
+
+\includegraphics[height=\iconheight]{\thaumaturgyicon}
+\end{center}
+\end{minipage}\hspace*{\fill}
+
+
+\vspace*{0.7cm}
+
+{\titlefont\fontsize{50}{60}\selectfont \booktitle
 \vspace{0.4cm}
 
 \fontsize{14}{16.8}\selectfont Beta v\version{} - \today{}}
@@ -51,9 +95,6 @@
 \vspace*{0.2cm}
 
 \begin{center}
-\noindent\hyperlink{whatisFBTNA}{\whatisFBTNA}
-
-\vspace*{5pt}
 \noindent\hyperlink{howtousethisdoc}{\howtousethisdoc}
 \end{center}
 
@@ -61,49 +102,25 @@
 
 \tocentry{alchemy}{\alchemyTOC}
 
-\tocentry{heavens}{\heavensTOC}
+\tocentry{shamanism}{\shamanismTOC}
 
-\tocentry{fire}{\fireTOC}
+\tocentry{cosmology}{\cosmologyTOC}
 
-\tocentry{light}{\lightTOC}
+\tocentry{divination}{\divinationTOC}
 
-\tocentry{death}{\deathTOC}
+\tocentry{druidism}{\druidismTOC}
 
-\tocentry{nature}{\natureTOC}
+\tocentry{evocation}{\evocationTOC}
 
-\tocentry{shadows}{\shadowsTOC}
+\tocentry{occultism}{\occultismTOC}
 
-\tocentry{wilderness}{\wildernessTOC}
+\tocentry{pyromancy}{\pyromancyTOC}
 
-\vspace*{0.5cm}\tocentry{eightfoldpath}{\eightfoldpathTOC}
+\tocentry{witchcraft}{\witchcraftTOC}
 
-\vspace*{\fill}\columnbreak
+\tocentry{thaumaturgy}{\thaumaturgyTOC}
 
-\tocentry{butchery}{\butcheryTOC}
-
-\tocentry{change}{\changeTOC}
-
-\tocentry{biggreengods}{\biggreengodsTOC}
-
-\tocentry{littlegreengods}{\littlegreengodsTOC}
-
-\tocentry{forge}{\forgeTOC}
-
-\tocentry{lust}{\lustTOC}
-
-\tocentry{whitemagic}{\whitemagicTOC}
-
-\tocentry{blackmagic}{\blackmagicTOC}
-
-\tocentry{disease}{\diseaseTOC}
-
-\tocentry{necromancy}{\necromancyTOC}
-
-\tocentry{ruin}{\ruinTOC}
-
-\tocentry{sands}{\sandsTOC}
-
-\vspace*{\fill}\end{multicols}
+\end{multicols}
 
 \begin{center}
 \noindent\hyperlink{magicphasesummary}{\magicphasesummary}
