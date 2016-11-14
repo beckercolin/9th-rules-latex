@@ -22,6 +22,7 @@
 \usepackage{array}				% Additionnal options for arrays.
 \usepackage{colortbl}			% Additionnal options for coloring arrays.
 \usepackage[table]{xcolor}		% Auto alternate grey-white rows.
+\usepackage{multirow}		% make a row from multiple rows
 
 %% List utilities
 \usepackage[inline]{enumitem}   % Display inline lists.
@@ -50,9 +51,9 @@
 
 %%% Technical commands %%%
 
-\newcommand{\amel}[1]{\textcolor{blue}{[#1]}}
+\newcommand{\boosted}[1]{\textbf{\textcolor{blue}{[#1]}}}
 \newcommand{\base}{\textcolor{red}}
-\newcommand{\amelbis}[1]{\textcolor{olive}{\{#1\}}}
+\newcommand{\secboosted}[1]{\textbf{\textcolor{olive}{\{#1\}}}}
 
 \newcommand{\newrule}{\textcolor{green!50!black}}
 \newcommand{\removedrule}[1]{\textcolor{green!50!black}{\sout{#1}}}
@@ -62,7 +63,7 @@
 \newcommand{\inch}{\arcsecond}
 \newcommand{\foot}{\arcminute}
 \newcommand{\range}[1] {\labels@range~\unit{#1}{\inch}}
-\newcommand{\distance}[1] {\unit{#1}{\inch}}
+\newcommand{\distance}[1] {#1{\inch}}
 \newcommand{\result}[1] {\texttt{'}#1\texttt{'}}
 
 \newcommand{\verysmallfontsize}{\fontsize{4}{4.8}\selectfont}
@@ -130,22 +131,63 @@
 
 \newcolumntype{M}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
-\renewcommand{\arraystretch}{3.2}
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\arraystretch}{2.1}
 
 \arrayrulecolor{black!30}
 \setlength{\arrayrulewidth}{0.5pt}
 
-\newcommand{\starttable}[2][black]{%
-\vspace{0.3cm}
+\newcommand{\newpathlogo}[2]{\clearpage\begin{center}\toctarget{#2}{\includegraphics[height=2cm]{#1}}\end{center}}
+
+\newcommand{\starttable}[2]{%
 \begin{center}
-\begin{tabular}{@{}>{\vspace*{-0.2cm}\bf\hugefontsize}M{0.7cm}>{\raggedright}m{3cm}M{1cm}M{1.9cm}M{1.5cm}m{7.5cm}@{}}
-\rowcolor[HTML]{#2} &
-\textcolor{#1}{\textbf{TEMPO}} &
-\textcolor{#1}{\textbf{\spellsCastingValue}} &
-\textcolor{#1}{\textbf{\spellsType}} &
-\textcolor{#1}{\textbf{\spellsDuration}} &
-\centering\textcolor{#1}{\textbf{\spellsEffect}}
-\tabularnewline
+\begin{tabular}{m{0.5\linewidth}m{0.5\linewidth}}
+\rowcolor[RGB]{#1}\multicolumn{2}{p{\linewidth}}{\centering\hugefontsize\textbf{#2}}\tabularnewline
+}
+
+\newcommand{\tablepassive}[2]{%
+\multicolumn{2}{p{\linewidth}}{%
+\textbf{#1}\spacebeforecolon{}: #2}\tabularnewline
+}
+
+\newcommand{\tablelabels}{%
+\hspace*{0.08\linewidth}\begin{tabular}{M{0.15\linewidth}M{0.24\linewidth}m{0.255\linewidth}m{0.275\linewidth}}
+\textit{\spellsCastingValue}&
+\textit{\spellsRange}&
+\textit{\spellsType}&
+\textit{\spellsDuration}\tabularnewline
+\end{tabular}&
+\textit{\spellsEffect}\tabularnewline
+\hline
+}
+
+\newcommand{\spelllabelandtitle}[2]{%
+\makebox[0.08\linewidth]{\Largefontsize\textbf{#1}}
+{\Largefontsize\textbf{#2}}
+}
+
+\newcommand{\tablespellcastingvalue}[1]{%
+\vspace*{-5pt}
+\hspace*{0.08\linewidth}\begin{tabular}{M{0.15\linewidth}M{0.24\linewidth}m{0.255\linewidth}m{0.275\linewidth}}
+\textbf{#1}&
+}
+
+\newcommand{\tablespellrange}[1]{%
+\textbf{#1}&
+}
+
+\newcommand{\tablespelltype}[1]{%
+#1 &
+}
+
+\newcommand{\tablespellduration}[1]{%
+#1\tabularnewline
+\end{tabular}
+&
+}
+
+\newcommand{\tablespelleffect}[1]{%
+#1\tabularnewline
 }
 
 \newcommand{\closetable}{%
@@ -153,26 +195,60 @@
 \end{center}
 }
 
-\def\colors@alchemy{FFD966}
-\def\colors@death{434343}
-\def\colors@fire{FF0000}
-\def\colors@heavens{C9DAF8}
-\def\colors@light{FFF2CC}
-\def\colors@nature{274E13}
-\def\colors@shadows{999999}
-\def\colors@wilderness{7F6000}
-\def\colors@butchery{85200C}
-\def\colors@change{9900FF}
-\def\colors@forge{5B0F00}
-\def\colors@biggreengods{38761D}
-\def\colors@littlegreengods{93C47D}
-\def\colors@lust{D5A6BD}
-\def\colors@whitemagic{CFE2F3}
-\def\colors@blackmagic{20124D}
-\def\colors@disease{7F6000}
-\def\colors@necromancy{000000}
-\def\colors@ruin{69431C}
-\def\colors@sand{FFD966}
+\newcommand{\newcosmologylogo}{\clearpage\begin{center}\toctarget{cosmology}{\hspace*{0.4cm}\includegraphics[width=0.5cm]{\cosmologycosmosicon}\hspace*{4.1cm}\includegraphics[height=2cm]{\cosmologyicon}\hspace*{4.1cm}\includegraphics[width=0.8cm]{\cosmologychaosicon}}\end{center}}
+
+\newcommand{\starttablecosmology}{%
+\begin{center}%
+\begin{tabular}{M{0.05\linewidth}m{0.15\linewidth}M{0.15\linewidth}m{0.15\linewidth}M{0.15\linewidth}M{0.1\linewidth}m{0.25\linewidth}}%
+\rowcolor[RGB]{\colors@cosmology}\multicolumn{7}{p{\linewidth}}{\centering\textbf{\textcolor{white}{\cosmos}}\hspace*{3.5cm}{\hugefontsize\textbf{\textcolor{white}{\cosmology}}}\hspace*{3.5cm}\textbf{\textcolor{white}{\chaos}}}\tabularnewline%
+}
+
+\newcommand{\tablepassivecosmology}[2]{%
+\multicolumn{7}{p{\linewidth}}{%
+\textbf{#1}\spacebeforecolon{}: #2}\tabularnewline
+}
+
+\newcommand{\tablelabelscosmology}{%
+\hline
+&\textit{\spellsType}&
+\textit{\spellsDuration}&&
+\textit{\spellsCastingValue}&
+\textit{\spellsRange}&
+\tabularnewline
+\hline
+}
+
+\newcommand{\spelllabelandtitlecosmology}[2]{%
+\Largefontsize\textbf{#1}&
+\multicolumn{2}{m{0.30\linewidth}}{\Largefontsize\textbf{#2}}&&
+}
+
+\newcommand{\tablespellcastingvaluecosmology}[2]{%
+\textbf{#1 \secboosted{#2}}&
+}
+
+\newcommand{\tablespellrangecosmology}[1]{%
+\textbf{#1}&\tabularnewline
+}
+
+\newcommand{\tablecosmosicon}{\vspace*{-0.1cm}\includegraphics[width=0.4cm]{\cosmologycosmosicon}&}
+\newcommand{\tablechaosicon}{\includegraphics[width=0.5cm]{\cosmologychaosicon}&}
+
+\newcommand{\tablespelltextcosmology}[1]{\multicolumn{4}{m{0.65\linewidth}}{#1}\tabularnewline}
+
+
+
+
+\def\colors@alchemy{255,215,0}
+\def\colors@shamanism{80,56,16}
+\def\colors@cosmology{0,57,116}
+\def\colors@divination{47,191,226}
+\def\colors@druidism{127,223,90}
+\def\colors@evocation{94,29,101}
+\def\colors@occultism{0,80,0}
+\def\colors@pyromancy{204,75,0}
+\def\colors@witchcraft{135,139,166}
+\def\colors@thaumaturgy{222,0,100}
 
 
 % Titles
@@ -186,32 +262,4 @@
 \newcommand{\basicsubtitle}[1]{%
 \subsection*{}\noindent{\Largefontsize\textbf{#1}}
 \vspace*{10pt}%
-}
-
-\newcommand{\newbattlepath}[2]{%
-\newpage%
-\vspace*{-2.0cm}\section*{}\noindent\begin{center}%
-\includegraphics[width=1.5cm]{pics/#1.png}%
-
-\vspace*{0.3cm}
-\toctarget{#1}{\hugefontsize\textbf{\antiquefont\expandafter\uppercase\expandafter{\Pathof} \expandafter\uppercase\expandafter{\battle}\spacebeforecolon{}: \expandafter\uppercase\expandafter{#2}}}%
-\end{center}%
-}
-
-\newcommand{\eightfoldpathtitle}[2]{%
-\newpage%
-\vspace*{-1.5cm}\section*{}\noindent\begin{center}%
-\edef\tempchar{#2}%
-\toctarget{#1}{\hugefontsize\textbf{\antiquefont{\expandafter\uppercase\expandafter{\tempchar}}}}%
-\end{center}%
-}
-
-\newcommand{\newspecificpath}[2]{%
-\newpage%
-\vspace*{-2.0cm}\section*{}\noindent\begin{center}%
-\includegraphics[width=1.5cm]{pics/#1.png}%
-
-\vspace*{0.3cm}
-\toctarget{#1}{\hugefontsize\textbf{\antiquefont{\expandafter\uppercase\expandafter{\Pathof} \expandafter\uppercase\expandafter{#2}}}}%
-\end{center}%
 }

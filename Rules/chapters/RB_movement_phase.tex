@@ -109,7 +109,7 @@ Quand les mouvements de charge sont effectués, une unité peut quelquefois en e
 \paragraph{Chemin Bloqué}
 \label{blocked_path}
 
-Pour éviter certaines situations d'abus où une unité ne peut pas charger une unité ennemie pourtant bien à portée et dans son champ de vision à cause d'un positionnement alambiqué des unités ennemies, appliquez la règle suivante. Si une unité ne peut pas réussir une charge seulement à cause d'unités ennemies non engagées dans des Corps à Corps qu'elle ne pourrait pas charger normalement, elle peut faire un mouvement spécial de charge. Bougez l'unité droit devant elle, jusqu'à sa distance de charge obtenue aux dés. Si cela amène l'unité en contact avec un ou plusieurs ennemis, ils comptent comme étant chargés. Au lieu de faire l'alignement normal, l'ennemi fait une Reformation de Combat de manière à ce que les unités soient alignées l'une avec l'autre. La Reformation doit être effectuée de façon à ce que le côté par lequel l'unité est chargé reste le même, que l'unité chargée conserve le même nombre de rangs et de colonnes, et que le nombre maximal de figurines dans les deux camps est en contact avec un ennemi. S'il n'est pas possible d'aligner les unités sans changer le nombre de rangs et de colonnes, vous pouvez le changer et vous n'avez alors pas à maximiser le nombre de figurines au contact. Si l'unité ennemie ne peut pas faire la Reformation de Combat de manière à s'aligner, ce mouvement spécial de charge ne peut pas être utilisé.
+Pour éviter certaines situations d'abus où une unité ne peut pas charger une unité ennemie pourtant bien à portée et dans son champ de vision à cause d'un positionnement alambiqué des unités ennemies, appliquez la règle suivante. Si une unité ne peut pas réussir une charge seulement à cause d'unités ennemies non engagées dans des Corps à Corps qu'elle ne pourrait pas charger normalement, elle peut faire un mouvement spécial de charge. Bougez l'unité droit devant elle, jusqu'à sa distance de charge obtenue aux dés. Si cela amène l'unité en contact avec un ou plusieurs ennemis, ils comptent comme étant chargés. Au lieu de procéder à l'alignement normal, l'ennemi fait une Reformation de Combat de manière à ce que les unités soient alignées l'une avec l'autre. La Reformation doit être effectuée de façon à ce que le côté par lequel l'unité est chargée reste le même, que l'unité chargée conserve le même nombre de rangs et de colonnes, et que le nombre maximal de figurines dans les deux camps est en contact avec un ennemi. S'il n'est pas possible d'aligner les unités sans changer le nombre de rangs et de colonnes, vous pouvez le modifier et vous n'avez alors pas à maximiser le nombre de figurines au contact. Si l'unité ennemie ne peut pas faire la Reformation de Combat de manière à s'aligner, ce mouvement spécial de charge ne peut pas être utilisé.
 
 La figure \ref{figure/blockedpath} présente un cas où la règle Chemin Bloqué est applicable.
 
@@ -136,7 +136,7 @@ La majorité de l'avant de l'unité verte, qui charge, est dans l'arc frontal de
 \def\svgwidth{0.6\textwidth}
 \input{pics/blocked_path.pdf_tex}
 \caption{Cas d'application de la règle Chemin Bloqué.\vspace*{10pt}\newline
-L'unité bleue charge l'unité verte à gauche mais aucune des deux unités ne peut s'aligner, et ce uniquement à cause de l'unité jaune à droite. L'unité bleue fait un mouvement de charge de Chemin Bloqué : elle avance droit devant, jusqu'à entrer en contact avec l'unité verte qui effectue ensuite une Reformation de Combat afin de s'aligner.}
+L'unité bleue charge l'unité verte à gauche mais aucune des deux unités ne peut s'aligner, et ce uniquement à cause de l'unité vert clair à droite. L'unité bleue fait un mouvement de charge de Chemin Bloqué : elle avance droit devant, jusqu'à entrer en contact avec l'unité verte qui effectue ensuite une Reformation de Combat afin de s'aligner.}
 \label{figure/blockedpath}
 \end{figure}
 
@@ -181,13 +181,13 @@ b) Comme l'unité violette pourrait charger de manière à ce que l'unité verte
 \end{enumerate}
 
 \vspace*{10pt}
-\noindent 2.a) Le nombre d'unités est maximisé (4). Une fois cette priorité respectée, le nombre de figurines en contact socle à socle doit être maximisé (11 : 7 contre 4).
+\noindent 2.a) Le nombre d'unités est maximisé (4). Une fois cette priorité respectée, le nombre de figurines en contact socle à socle est maximisé (7 contre 4 = 11 figurines).
 
 \vspace*{10pt}
-\noindent 2.b) Le nombre d'unités est maximisé (4). Une fois cette priorité respectée, le nombre de figurines en contact socle à socle doit être maximisé (11 : 7 contre 4).
+\noindent 2.b) Autre possibilité : le nombre d'unités est maximisé (4). Une fois cette priorité respectée, le nombre de figurines en contact socle à socle est maximisé (7 contre 4 = 11 figurines).
 
 \vspace*{10pt}
-\noindent 2.c) Le nombre d'unités est maximisé (4). Cependant, le nombre de figurines en contact socle à socle n'est pas maximisé (10 : 6 contre 4).
+\noindent 2.c) Le nombre d'unités est maximisé (4). Cependant, le nombre de figurines en contact socle à socle n'est pas maximisé (6 contre 4 = 10 figurines).
 
 \vspace*{10pt}
 \noindent 2.d) Le nombre d'unités n'est pas maximisé (3).
@@ -201,7 +201,7 @@ Pendant cette étape de la Phase de Mouvement, toutes les unités qui ne choisis
 
 \hypertarget{rallytest}{\paragraph{Test de Ralliement}}
 
-Au début de l'étape des Mouvements obligatoires, toutes les unités alliées en fuite doivent passer un test de Commandement, dans l'ordre souhaité par le Joueur Actif. Les unités qui tombent à un quart ou moins de leur effectif initial, l'effectif inscrit sur la liste d'armée, en prenant en compte les Personnages ayant rejoint l'unité, doivent passer leur test de Ralliement avec une valeur de Commandement divisée par deux, en arrondissant au supérieur. Par exemple, prenons une unité qui a commencé la partie avec 40 figurines. S'il en reste 9, mais que 2 Personnages ont rejoint l'unité, elle peut tout juste tenter un test de Ralliement avec son Commandement non divisé. Une unité qui réussit ce test n'est plus en fuite et peut immédiatement faire une Reformation. Une unité qui vient de se rallier ne peut plus bouger durant cette Phase de Mouvement, ni tirer durant la Phase de Tir qui suit. Si le test de Ralliement est raté, l'unité effectue immédiatement un mouvement de fuite.
+Au début de l'étape des Mouvements obligatoires, toutes les unités alliées en fuite doivent passer un test de Commandement, dans l'ordre souhaité par le Joueur Actif. Les unités qui tombent à un quart ou moins de leur effectif initial, l'effectif inscrit sur la liste d'armée, en prenant en compte les Personnages ayant rejoint l'unité, doivent passer leur test de Ralliement avec une valeur de Commandement divisée par deux, en arrondissant au supérieur. Par exemple, prenons une unité qui a commencé la partie avec 40 figurines. S'il en reste 9, mais que 2 Personnages ont rejoint l'unité, elle peut tout juste tenter un test de Ralliement avec son Commandement non divisé. Une unité qui réussit ce test n'est plus en fuite et peut immédiatement effectuer une Reformation. Une unité qui vient de se rallier ne peut plus bouger durant cette Phase de Mouvement, ni tirer durant la Phase de Tir qui suit. Si le test de Ralliement est raté, l'unité effectue immédiatement un mouvement de fuite.
 
 \hypertarget{fleemove}{\paragraph{Mouvement de fuite}}
 
@@ -209,7 +209,7 @@ La distance de fuite est normalement de \distance{2D6}. Déplacez l'unité en fu
 
 \subsection{Unités en fuite}
 
-Quand une unité fuit, elle ne peut effectuer aucune action volontaire. Cela signifie que si une unité aurait normalement la possibilité de ne pas effectuer une action, alors elle ne peut pas effectuer cette action lors d'une fuite. Cela inclut, par exemple, déclarer des charges, déclarer une réaction à une charge autre que la fuite, se déplacer d'une autre façon qu'avec un mouvement de fuite, tirer, canaliser un Dé de Magie, lancer des sorts, dissiper des sorts ou encore activer des objets à Usage Unique. Enfin, une figurine en fuite ne peut pas faire profiter les unités proches de ses règles \inspiringpresence{} ou \holdyourground{}.
+Quand une unité fuit, elle ne peut effectuer aucune action volontaire. Cela signifie que si une unité a normalement la possibilité de ne pas effectuer une action, alors elle ne peut pas effectuer cette action lors d'une fuite. Cela inclut, par exemple, déclarer des charges, déclarer une réaction à une charge autre que la fuite, se déplacer d'une autre façon qu'avec un mouvement de fuite, tirer, canaliser un Dé de Magie, lancer des sorts, dissiper des sorts ou encore activer des objets à Usage Unique. Enfin, une figurine en fuite ne peut pas faire profiter les unités proches de ses règles \inspiringpresence{} ou \holdyourground{}.
 
 \newpage
 \hypertarget{remainingmoves}{\section{Autres Mouvements}}
@@ -230,9 +230,9 @@ Pendant un Mouvement Simple, une unité peut avancer, reculer ou faire des pas d
 
 \noindent\textbf{En Avant :} L'unité avance droit devant sur une distance maximale de la valeur de son Mouvement, en pouces. Elle peut faire autant de Roues que vous le souhaitez.
 
-\noindent\textbf{En Arrière :} L'unité recule droit sur une distance maximale de la moitié de la valeur de son Mouvement. Par exemple, une unité avec une Caractéristique de Mouvement de 5 peut reculer de \distance{2,5}.
+\noindent\textbf{En Arrière :} L'unité recule droit sur une distance maximale de la moitié de la valeur de son Mouvement. Par exemple, une unité avec une Caractéristique de Mouvement de 5 peut reculer de 2,5\distance{}.
 
-\noindent\textbf{Pas de Côté :} L'unité se déplace d'un des deux côtés sur une distance maximale de la moitié de la valeur de son Mouvement.
+\noindent\textbf{Pas de Côté :} L'unité se déplace d'un des deux côtés sur une distance maximale de la moitié de sa valeur de Mouvement.
 
 \hypertarget{marchmove}{\subsection{Marche Forcée}}
 \label{march_move}
@@ -243,12 +243,12 @@ Si des unités ennemies se trouvent à moins de \distance{8} de l'unité voulant
 
 \hypertarget{reform}{\subsection{Reformation}}
 
-Repérez le centre de l'unité, puis retirez l'unité du champ de bataille. Vous pouvez la replacer dans n'importe quelle formation autorisée et orientée dans n'importe quelle direction, en suivant la Règle du Pouce d'Écart, tant que son centre reste à l'emplacement repéré. Après la Reformation, aucune figurine ne peut se retrouver à plus de deux fois la valeur de son Mouvement de sa position initiale. Une unité qui s'est reformée ne peut pas tirer lors de la Phase de Tir qui suit.
+Repérez le centre de l'unité, puis retirez l'unité du champ de bataille. Vous pouvez la replacer dans n'importe quelle formation autorisée et l'orienter dans n'importe quelle direction, en suivant la Règle du Pouce d'Écart, tant que son centre reste à l'emplacement repéré. Après la Reformation, aucune figurine ne peut se retrouver à plus de deux fois la valeur de son Mouvement de sa position initiale. Une unité qui s'est reformée ne peut pas tirer lors de la Phase de Tir qui suit.
 
 \newpage
 \section{Pivots et Roues}
 
-Un Pivot est pratiqué principalement par les figurines seules. Pour effectuer un Pivot, repérez le centre de l'unité et retirez-la du champ de bataille. Replacez-la ensuite dans la même formation, orientée dans la direction de votre choix, et en maintenant son centre à l'emplacement repéré. Suivez normalement la Règle du Pouce d'Écart.
+Un Pivot est pratiqué principalement par les figurines seules. Pour effectuer un Pivot, repérez le centre de l'unité et retirez-la du champ de bataille. Replacez-la ensuite dans la même formation, orientée dans la direction de votre choix, tout en maintenant son centre à l'emplacement repéré. Suivez normalement la Règle du Pouce d'Écart.
 
 Quand une unité effectue une Roue, elle fait une rotation autour d'un de ses coins avant, vers l'avant. La distance parcourue par l'unité est égale à celle parcourue par la figurine du coin avant opposé. On considère que toutes les figurines de l'unité ont parcouru cette distance.
 
