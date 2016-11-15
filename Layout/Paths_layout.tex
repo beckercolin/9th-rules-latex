@@ -33,6 +33,7 @@
 \usepackage{parskip} 			% no paragraph indentation and spaces between paragraphs.
 \usepackage{multicol}			% Allows to divide a part of the page in multiple columns.
 \usepackage{fancyhdr}		% For custom headers and foot texts
+\usepackage{titlesec}			% title customization
 \pagestyle{fancy}
 \usepackage{framed}
 	
@@ -205,7 +206,7 @@
 
 \newcommand{\tablepassivecosmology}[2]{%
 \multicolumn{7}{p{\linewidth}}{%
-\textbf{#1}\spacebeforecolon{}: #2}\tabularnewline
+\normalfontsize{}\textbf{#1}\spacebeforecolon{}: #2}\tabularnewline
 }
 
 \newcommand{\tablelabelscosmology}{%
@@ -252,6 +253,9 @@
 
 
 % Titles
+
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 \newcommand{\spaceaftersection}{\vspace{0.8cm}}
 

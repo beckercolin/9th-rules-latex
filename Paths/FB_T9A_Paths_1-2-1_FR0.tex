@@ -254,6 +254,8 @@ Invoque une \totemicbeast{} (caractéristiques ci-dessous). Elle doit être plac
 
 \newcosmologylogo
 
+{
+\renewcommand{\arraystretch}{1.65}
 \starttablecosmology
 
 \tablepassivecosmology{\cosmologypassive}{Les sorts de la \cosmology{} sont divisés en deux versions : \textbf{\cosmos} et \textbf{\chaos}. Déclarez quelle version du sort vous utilisez au lancement.\newline
@@ -294,7 +296,7 @@ La valeur de lancement des sorts non liés à des \boundspells{} de la \cosmolog
 \tablespellrangecosmology{\distance{18}}
 \tablecosmosicon{}
 \textbf{\augment}&
-\multirow{2}{*}{\remainsinplay}&
+\multirow{2}{*}{\vspace*{-0.2cm}\remainsinplay}&
 \tablespelltextcosmology{La cible gagne \textbf{+1} en Commandement.}
 \tablechaosicon{}
 \textbf{\hex}&
@@ -302,10 +304,59 @@ La valeur de lancement des sorts non liés à des \boundspells{} de la \cosmolog
 \tablespelltextcosmology{La cible subit un malus de \textbf{-1} en Commandement.}
 \hline
 
+\spelllabelandtitlecosmology{3}{\cosmologyspellthree}
+\tablespellcastingvaluecosmology{9+}{7+}
+\tablespellrangecosmology{\distance{18}}
+\tablecosmosicon{}
+\textbf{\augment}&
+\multirow{2}{*}{\vspace*{-0.5cm}\lastsoneturn}&
+\tablespelltextcosmology{La cible jette un dé additionnel et ignore celui ayant donné le résultat le plus \textbf{petit} pour la Charge, Charge Irrésistible, Fuite et Poursuite.}
+\tablechaosicon{}
+\textbf{\hex}&
+&
+\tablespelltextcosmology{La cible jette un dé additionnel et ignore celui ayant donné le résultat le plus \textbf{grand} pour la Charge, Charge Irrésistible, Fuite et Poursuite.}
+\hline
 
+\spelllabelandtitlecosmology{4}{\cosmologyspellfour}
+\tablespellcastingvaluecosmology{9+}{7+}
+\tablespellrangecosmology{\distance{18}}
+\tablecosmosicon{}
+\multirow{2}{2.5cm}{\vspace*{-0.22cm}\newline\hex{},\newline\missile{},\newline\damage}&
+\multirow{2}{*}{\vspace*{-0.3cm}\instant}&
+\tablespelltextcosmology{La cible subit 2D6 touches de Force 3 avec les règles \textbf{\divineattacks{} et \flamingattacks{}}.}
+\tablechaosicon{}
+&
+&
+\tablespelltextcosmology{La cible subit 2D6 touches de Force 3 avec la règle \textbf{\armourpiercing{3}}.}
+\hline
 
+\spelllabelandtitlecosmology{5}{\cosmologyspellfive}
+\tablespellcastingvaluecosmology{10+}{8+}
+\tablespellrangecosmology{\distance{18}}
+\tablecosmosicon{}
+\textbf{\augment}&
+\multirow{2}{*}{\vspace*{-0.2cm}\lastsoneturn}&
+\tablespelltextcosmology{La cible gagne \textbf{+1} en Force.}
+\tablechaosicon{}
+\textbf{\hex}&
+&
+\tablespelltextcosmology{La cible subit un malus de \textbf{-1} en Force.}
+\hline
+
+\spelllabelandtitlecosmology{6}{\cosmologyspellsix}
+\tablespellcastingvaluecosmology{11+}{9+}
+\tablespellrangecosmology{\distance{18}}
+\tablecosmosicon{}
+\textbf{\augment}&
+\textbf{\lastsoneturn}&
+\tablespelltextcosmology{Toutes les figurines de l'unité ciblée \textbf{gagnent une \wardsave{5}}.}
+\tablechaosicon{}
+\textbf{\hex},\newline\textbf{\direct}, \textbf{\damage}&
+\textbf{\instant}&
+\tablespelltextcosmology{Toutes les figurines de l'unité ciblée \textbf{subissent une touche de Force 3}.}
 
 \closetable{}
+}
 
 
 
@@ -912,5 +963,139 @@ Placez un marqueur à portée sur la table. À la fin de chaque Phase de Magie a
 
 \closetable{}
 
+\clearpage
+\toctarget{magicphasesummary}{\begin{center}\Largerfontsize\textbf{Résumé de la Phase de Magie}\end{center}}
+\vspace*{10pt}
+{
+\normalfontsize
+\renewcommand{\arraystretch}{1.5}
+\setlength{\tabcolsep}{6pt}
+\begin{multicols}{2}\raggedcolumns
+
+\paragraph{Séquence de la Phase de Magie}
+
+\begin{tabular}{c|p{7.35cm}}
+1 & Début de la Phase de Magie. Lancez les dés pour les Flux de Magie et la \channel{}. \tabularnewline
+2 & Les sorts de type \remainsinplay{} peuvent être dissipés. \tabularnewline
+3 & Le Joueur Actif peut tenter de lancer un sort. \tabularnewline
+4 & Répétez les étapes 2 et 3 jusqu'à ce qu'aucun joueur ne tente quoi que ce soit. \tabularnewline
+5 & Fin de la Phase de Magie. Les capacités prenant effet à la fin de la phase sont déclenchées. \tabularnewline
+\end{tabular}
+
+\vspace*{10pt}
+\paragraph{Tentative de Lancement de Sort}
+
+\begin{tabular}{c|m{7.35cm}}
+1 & Le Joueur Actif indique quel \wizard{} tente de lancer quel sort. Il doit préciser s'il opte pour une version améliorée du sort, ainsi que la cible du sort et de celle de l'attribut si nécessaire. Il indique enfin le nombre de Dés de Magie utilisés, entre 1 et 5. \tabularnewline
+2 & Le Joueur Actif lance le nombre de Dés de Magie annoncé, en les retirant de sa réserve. Additionnez les résultats des dés avec les modificateurs magiques pour obtenir le total de lancement. \tabularnewline
+3 & La tentative de lancement réussit si le total de lancement est \textbf{supérieur ou égal} à la valeur de lancement. Sinon, le lancement de sort échoue et le lanceur subit une \lostfocus{}. \tabularnewline
+\end{tabular}
+
+\vspace*{10pt}
+\paragraph{Tentative de Dissipation}
+
+\begin{tabular}{c|m{7.35cm}}
+1 & Le Joueur Réactif peut désigner un \wizard{} n'étant pas en fuite pour tenter la dissipation et annonce combien de Dés de Magie il va utiliser. Il doit utiliser au moins un dé et jusqu'à la totalité de sa réserve. Il est possible de tenter une dissipation même sans avoir de \wizard{}. \tabularnewline
+2 & Le Joueur Réactif lance le nombre de Dés de Magie annoncé, en les retirant de sa réserve. Additionnez les résultats des dés avec les modificateurs magiques pour obtenir le total de dissipation. \tabularnewline
+3 & La tentative de dissipation réussit si le total de dissipation est \textbf{supérieur ou égal} au total de lancement. Le sort est alors dissipé et le lancement échoue. Sinon, la tentative de dissipation échoue et le \wizard{} à l'origine de cette tentative subit une \lostfocus{}. \tabularnewline
+\end{tabular}
+
+\vspace*{20pt}
+
+\begin{framed}
+\vspace*{-17pt}
+\paragraph{Modificateurs Magiques}
+
+\noindent \wizardapprentice{} : +1
+
+\vspace*{3pt}
+\noindent \wizardmaster{} : +2
+
+\vspace*{3pt}
+\noindent La somme des modificateurs ne peut pas dépasser +3.
+
+\vspace*{3pt}
+\noindent Dissiper un \boundspell{} : +1 (peut dépasser +3)
+
+\end{framed}
+
+\vspace*{\fill}
+\columnbreak
+
+\begin{framed}
+\vspace*{-17pt}
+\paragraph{\overwhelmingpower}
+
+Quand vous lancez un sort, et qu'au moins deux Dés  de Magie donnent des \result{6} naturels, la tentative de lancement bénéficie d'un \overwhelmingpower{}. Quand cela arrive, lancez immédiatement un Dé de Magie supplémentaire provenant de votre réserve, s'il vous en restait, et ajoutez le au total de lancement. Cela peut permettre de dépasser la limite usuelle de 5 Dés de Magie maximum pour une tentative de lancement. Si un sort est lancé avec un \overwhelmingpower{} et n'est pas dissipé, le lanceur subit un \miscast{}.
+
+\end{framed}
+
+\paragraph{Table des \miscasts{}}
+
+\vspace*{-10pt}
+\renewcommand{\arraystretch}{2}
+\begin{center}
+\begin{tabular}{>{\raggedleft}p{1.8cm}p{5.75cm}}
+\hline
+
+\textbf{Jet de \miscast{} :}
+
+(1D3+1)$\times$NDU &
+\textbf{Effets du \miscast{}}\tabularnewline
+
+
+\hline
+
+\textbf{Toujours} & \textbf{\witchfire}
+
+\vspace*{3pt}
+L'unité du lanceur subit un nombre de touches égal au résultat du jet de \miscast{}. Le nombre de touches ne peut pas être supérieur au nombre de Points de Vie dans l'unité. Ces touches sont de Force NDU et ont les règles \magicalattacks{} et \armourpiercing{1}.\tabularnewline
+
+\textbf{10+} & \textbf{\amnesia}
+
+\vspace*{3pt}
+Lancez 1D6. Sur 4+, le \wizard{} ne peut plus lancer le sort qui a provoqué le \miscast{} de la partie.\tabularnewline
+
+\textbf{15+} & \textbf{\catastrophicdetonation}
+
+\vspace*{3pt}
+Lancez 1D6. Sur 4+, le \wizard{} perd un nombre de Points de Vie égal à la moitié de son nombre de Points de Vie de départ, en arrondissant au supérieur, sans sauvegarde d'aucune sorte possible.\tabularnewline
+
+\textbf{20+} & \textbf{\breachintheveil}
+
+\vspace*{3pt}
+Lancez 1D6. Sur 4+, le \wizard{} est mort, sans sauvegarde d'aucune sorte possible. Retirez-le du jeu comme perte.\tabularnewline
+\hline
+\end{tabular}
+\end{center}
+\renewcommand{\arraystretch}{1.5}
+
+\vspace*{5pt}
+\noindent Appliquez tous les effets cumulés correspondant au résultat du jet.\newline
+\textbf{NDU} : Nombre de Dés de magie Utilisés, sans compter le dé additionnel du \overwhelmingpower{}.
+
+\vspace*{10pt}
+
+\begin{framed}
+\vspace*{-17pt}
+\paragraph{\boundspells{}}
+
+Pour lancer un sort lié à un Objet de Sort avec succès, le jet de lancement doit être supérieur ou égal à son Niveau de Puissance.
+\begin{itemize}[label={-}]
+\item Aucun modificateur positif ne peut être ajouté au jet de lancement.
+\item Un échec ne provoque pas de \lostfocus{}
+ pour le lanceur.
+\item Un Objet de Sort ne bénéficie pas du bonus de lancement d'un Pouvoir Irrésistible.
+\item L'Attribut de la Voie est lancé normalement.
+\item Se dissipe avec un bonus de +1 qui peut dépasser la limite normale des modificateurs (+3).
+\end{itemize}
+
+En cas de Pouvoir Irrésistible sur un sort non dissipé :\newline
+Si NDU ou plus ont été lancés, l'\boundspell{} est perdu et le sort ne peut plus être lancé de la partie.
+\end{framed}
+
+\vspace*{\fill}
+\end{multicols}
+}
 
 \end{document}
