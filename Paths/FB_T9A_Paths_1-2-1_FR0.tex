@@ -33,6 +33,11 @@
 \newcommand{\witchcraftTOC}{Sorcellerie}
 \newcommand{\thaumaturgyTOC}{Thaumaturgie}
 
+% Footers initials
+
+\newcommand{\tableofcontentsInitials}{Sommaire}
+\newcommand{\summariesInitials}{Résumé}
+
 \newcommand{\characteronly}{Personnage uniquement}
 
 
@@ -47,15 +52,92 @@
 
 \basictitle{howtousethisdoc}{\howtousethisdoc}
 
-\spaceaftersection{}
+Toutes les Voies de Magie sont présentées dans ce livre. Chaque Voie comprend un certain nombre de sorts. On tire en général au hasard au début de la partie les sorts que connaissent chaque \wizard{}, en utilisant les règles décrites dans le paragraphe \og Générer les Sorts \fg{} du Livre de Règles. Chaque \wizard{} doit choisir une Voie de Magie parmi celles auxquelles il a accès. Ce choix doit être indiqué dans la Liste d'Armée. Les sorts sont répartis en plusieurs catégories :
 
-Dans ce livre, toutes les Voies de Magie sont présentées. Elles comprennent les 8 \textbf{Voies Communes} et les \textbf{Voies Spécifiques} des différentes armées. Pour plus d'informations sur les règles du jeu et en particulier la Phase de Magie, merci de vous référer au Livre de Règles.
+\vspace*{-10pt}
+\begin{multicols}{2}
 
-\vspace*{10pt}
-Chaque Voie comprend 8 sorts. Le premier est appelé l’\textbf{Attribut} de la Voie, qui est indiqué par la mention \og A \fg{} à la place du numéro du sort. C'est un sort particulier qui est automatiquement lancé quand un autre sort de la même Voie est lancé avec succès. Les sept sorts suivants sont numérotés de 0 à 6. Le sort 0 est le sort \textbf{Primaire} de la Voie. Un Sorcier peut toujours choisir d'échanger l'un de ses sorts générés aléatoirement par le sort Primaire, et plusieurs Sorciers peuvent connaître ce sort en même temps.
+\basictitlenotoc{1-6}
 
-\vspace*{10pt}
-Certains sorts disposent de plusieurs valeurs de lancement. La ou les plus grandes sont pour la  ou les versions \textbf{améliorée(s)} du sort. Le joueur doit choisir la version du sort à lancer, sachant que plus la valeur de lancement est grande, plus le sort sera difficile à lancer, mais aussi plus il sera puissant. Parfois, les versions améliorées voient leur portée et le nombre de cibles augmenter, tandis que pour d'autres sorts, les effets peuvent être modifiés. Les différences entre versions améliorée(s) et basique suivent un code couleur. La partie en noir s'applique à toutes les versions du sort. Les textes en \base{rouge} s'appliquent à la version basique, tandis que les textes en \boosted{bleu et entre crochets} s'appliquent à la version améliorée. Dans certains cas, il existe une deuxième \augment{} au sort, marquée en \secboosted{vert olive entre accolades}. 
+\basicsubtitle{\learnedspells}
+
+Ce sont les sorts numérotés entre 1 et 6. Ils n'ont pas d'effets particuliers en dehors de la façon dont ils sont générés (voir \og Générer les Sorts \fg{}).
+
+\vspace*{-25pt}
+\basictitlenotoc{\attributespellnumber}
+
+\basicsubtitle{\attributespells}
+
+Ce sont les sorts dont le label est un \og \attributespellnumber{} \fg{}. Tout \wizard{} qui génère au moins un Sort depuis une Voie connaît automatiquement l'\attributespell{}. Les \attributespells{} sont des sorts spéciaux qui ne peuvent pas être lancés indépendamment. Un lanceur peut s'il le souhaite lancer l'\attributespell{} à chaque fois qu'il lance avec succès un Sort non Attribut de la même Voie, après que l'effet du Sort a été résolu. Les Attributs ne peuvent pas être dissipés.
+
+\columnbreak
+
+\basictitlenotoc{0}
+
+\basicsubtitle{\learnedspell{} 0}
+
+Le \learnedspell{} numéroté 0 est un type spécial de \learnedspell{} qu'un \wizard{} peut obtenir en remplaçant un autre de ses \learnedspells{}.
+
+\vspace*{-25pt}
+\basictitlenotoc{\traitspellnumber}
+
+\basicsubtitle{\traitspells}
+
+Ce sont les sorts dont le label est un \og \traitspellnumber{} \fg{}. Ils n'ont pas d'effets particuliers en dehors de la façon dont ils sont générés : tout \wizard{} qui génère au moins un Sort d'une Voie connaît automatiquement le \traitspell{} de cette Voie.
+
+\vspace*{\fill}
+\end{multicols}
+
+Les sorts sont définis par six propriétés :
+
+\begin{multicols}{3}\raggedcolumns
+
+\begin{center}
+\basicsubtitle{Nom du Sort}
+
+Utilisé pour nommer le sort que vous voulez lancer.
+
+\basicsubtitle{\spellsEffect}
+
+L'Effet détermine ce qui arrive à la cible quand le sort est lancé avec succès. Les Effets de sort ne sont jamais affectés par les règles spéciales, les Objets Magiques, les Effets d'autres sorts ou des capacités similaires qui donnent des bonus à la figurine qui lance le sort, à moins que le contraire ne soit précisé.
+\end{center}
+
+\vspace*{\fill}\columnbreak
+
+\begin{center}
+\basicsubtitle{\spellsType}
+
+Le Type décrit les contraintes sur le choix des cibles du sort. Le Livre de Règles contient une description détaillée des Types de sort.
+
+\basicsubtitle{\spellsDuration}
+
+La Durée précise combien de temps sont appliqués les effets du sort. Le Livre de Règles contient une description détaillée des Durées de sort.
+\end{center}
+\vspace*{\fill}\columnbreak
+
+\begin{center}
+\basicsubtitle{Valeur de Lancement}
+
+La Valeur de Lancement est la valeur minimale à atteindre pour réussir une tentative de lancement. Un sort peut posséder plusieurs Valeurs de Lancement (voir \og Sorts Améliorés \fg{}).
+
+\basicsubtitle{\spellsRange}
+
+La Portée donne la distance maximale entre le Lanceur du sort et sa cible.
+\end{center}
+\vspace*{\fill}
+\end{multicols}
+
+\vspace*{5pt}
+
+\textbf{\Largerfontsize{}Sorts Améliorés}
+
+\vspace*{5pt}
+
+Certains sorts ont plusieurs Valeurs de Lancement, les Valeurs au-delà de la première étant appelées versions améliorées du sort. La Portée et les restrictions de cible des versions améliorées peuvent changer, voire les effets du sort : la Portée peut par exemple être augmentée. Déclarez si vous tentez de lancer une version améliorée, et laquelle, avant de lancer les dés. Si aucune déclaration n'est faite, on suppose qu'il s'agit de la version non améliorée du sort.
+
+Les éléments du sort qui changent sur les versions améliorées et ceux qui restent identiques sont mis en valeur par un code couleur. Le \base{texte rouge} réfère à la version non améliorée du sort tandis que le \boosted{texte en bleu, gras et entre crochets} correspond à la version améliorée. Dans quelques rares cas, une seconde version améliorée ou une autre façon de lancer les sorts est disponible et est représentée en \secboosted{vert olive, gras et entre accolades}.
+
+
 
 \newpathlogo{\alchemyicon}{alchemy}
 
@@ -964,8 +1046,8 @@ Placez un marqueur à portée sur la table. À la fin de chaque Phase de Magie a
 \closetable{}
 
 \clearpage
-\toctarget{magicphasesummary}{\begin{center}\Largerfontsize\textbf{Résumé de la Phase de Magie}\end{center}}
-\vspace*{10pt}
+\basictitle{magicphasesummary}{Résumé de la Phase de Magie}
+
 {
 \normalfontsize
 \renewcommand{\arraystretch}{1.5}

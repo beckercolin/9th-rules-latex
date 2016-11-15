@@ -110,6 +110,7 @@
 \renewcommand{\headrulewidth}{0pt}
 \fancyfoot[L]{\textcolor{black!30}{%
 \normalfontsize
+\hyperlink{tableofcontents}{\tableofcontentsInitials}\hspace*{1cm}
 \hyperlink{alchemy}{\alchemyInitials}\hspace*{0.3cm}
 \hyperlink{shamanism}{\shamanismInitials}\hspace*{0.3cm}
 \hyperlink{cosmology}{\cosmologyInitials}\hspace*{0.3cm}
@@ -122,7 +123,8 @@
 \hyperlink{occultism}{\occultismInitials}\hspace*{0.3cm}
 \hyperlink{pyromancy}{\pyromancyInitials}\hspace*{0.3cm}
 \hyperlink{witchcraft}{\witchcraftInitials}\hspace*{0.3cm}
-\hyperlink{thaumaturgy}{\thaumaturgyInitials}
+\hyperlink{thaumaturgy}{\thaumaturgyInitials}\hspace*{1cm}
+\hyperlink{magicphasesummary}{\summariesInitials}
 }}
 
 
@@ -257,13 +259,14 @@
 \titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
-\newcommand{\spaceaftersection}{\vspace{0.8cm}}
-
 \newcommand{\basictitle}[2]{%
-\vspace*{-1.5cm}\section*{}\noindent\begin{center}\toctarget{#1}{\hugefontsize\textbf{\expandafter\uppercase\expandafter{#2}}}\end{center}
+\section*{}\vspace*{-20pt}\noindent\begin{center}\toctarget{#1}{\Largerfontsize\textbf{#2}}\end{center}\vspace*{10pt}
+}
+
+\newcommand{\basictitlenotoc}[1]{%
+\section*{}\vspace*{-20pt}\noindent\begin{center}\Largerfontsize\textbf{#1}\end{center}
 }
 
 \newcommand{\basicsubtitle}[1]{%
-\subsection*{}\noindent{\Largefontsize\textbf{#1}}
-\vspace*{10pt}%
+\noindent{\largefontsize\textbf{#1}}
 }
