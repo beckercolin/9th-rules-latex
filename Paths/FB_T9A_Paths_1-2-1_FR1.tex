@@ -3,7 +3,7 @@
 
 \newcommand{\booktitle}{Livre de Magie}
 \newcommand{\version}{1.2.1}
-\newcommand{\frenchversion}{0.1}
+\newcommand{\frenchversion}{0.2}
 
 \hypersetup{pdftitle={T9A - \booktitle}}
 
@@ -68,7 +68,7 @@ Ce sont les sorts numérotés entre 1 et 6. Ils n'ont pas d'effets particuliers 
 
 \basicsubtitle{\attributespells}
 
-Ce sont les sorts dont le label est un \og \attributespellnumber{} \fg{}. Tout \wizard{} qui génère au moins un Sort depuis une Voie connaît automatiquement l'\attributespell{}. Les \attributespells{} sont des sorts spéciaux qui ne peuvent pas être lancés indépendamment. Un lanceur peut s'il le souhaite lancer l'\attributespell{} à chaque fois qu'il lance avec succès un Sort non Attribut de la même Voie, après que l'effet du Sort a été résolu. Les Attributs ne peuvent pas être dissipés.
+Ce sont les sorts dont le label est un \og \attributespellnumber{} \fg{}. Tout \wizard{} qui génère au moins un Sort depuis une Voie connaît automatiquement l'\attributespell{}. Les \attributespells{} sont des sorts particuliers qui ne peuvent pas être lancés indépendamment. Ils peuvent être lancés gratuitement, si le lanceur le souhaite, après qu'un sort de la même Voie a été lancé avec succès. La cible doit être choisie en même temps que celle du sort déclenchant. Les Attributs ne peuvent pas être dissipés.
 
 \columnbreak
 
@@ -679,7 +679,7 @@ La cible gagne la règle \lethalstrike{}. Les Attaques qui bénéficiaient déj�
 \tablespelltype{\augment}
 \tablespellduration{\lastsoneturn}
 \tablespelleffect{%
-La cible doit relancer ses jets pour toucher des Attaques de Corps à Corps \boosted{et de Tir}.
+La cible doit relancer ses jets pour toucher ratés des Attaques de Corps à Corps \boosted{et de Tir}.
 }
 \hline
 \spelllabelandtitle{3}{\evocationspellthree}
