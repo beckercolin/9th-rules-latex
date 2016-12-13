@@ -26,12 +26,12 @@ Les règles spéciales sont des effets ou capacités liés à des éléments de 
 \hyperlink{areaattack}{\areaattack{}}\newline
 \hyperlink{vanguard}{\vanguard}\newline
 \hyperlink{multiplewounds}{\multiplewounds{}{}}\newline
-\hyperlink{hardtarget}{\hardtarget}\newline
 \hyperlink{channel}{\channel}\newline
 \hyperlink{scoring}{\scoring}\newline
 \hyperlink{fastcavalry}{\fastcavalry}\newline
 \hyperlink{devastatingcharge}{\devastatingcharge}\newline
 \hyperlink{thunderouscharge}{\thunderouscharge}\newline
+\hyperlink{hardtarget}{\hardtarget}\newline
 \hyperlink{fightinextrarank}{\fightinextrarank}\newline
 \hyperlink{wizardconclave}{\wizardconclave{}}\newline
 \hyperlink{lethalstrike}{\lethalstrike}\newline
@@ -223,10 +223,6 @@ Si \textbf{(\clippedwings{})} est précisé après la valeur X, toute blessure n
 
 Parfois, cette règle est liée à certains Types de Troupe ou règles spéciales. Dans ce cas, ce sera précisé entre parenthèses (Y), comme dans \og \multiplewounds{2}{\infantry} \fg{}. Dans ce cas, la règle \multiplewounds{}{} ne s'applique que lorsque les attaques sont dirigées contre le Type de Troupe donné, ou contre un propriétaire de la règle spéciale donnée.
 
-\newspecialrule{hardtarget}{\hardtarget}
-
-Les Attaques de Tir ciblant une unité dont la majorité des figurines disposent de cette règle subissent une pénalité de -1 sur leurs jets pour toucher.
-
 \newspecialrule{channel}{\channel}
 \label{channel_special_rule}
 
@@ -259,6 +255,10 @@ L'élément de figurine gagne +1 Attaque lors de la première Manche de Corps à
 
 L'élément de figurine gagne +1 en Force pour ses Attaques normales de Corps à Corps lors de la première Manche de Corps à Corps après que la figurine a chargé avec succès. Ce bonus ne peut être utilisé que pour des attaques dirigées contre l'unité ennemie chargée.
 
+\newspecialrule{hardtarget}{\hardtarget}
+
+Les Attaques de Tir ciblant une unité dont la majorité des figurines disposent de cette règle subissent une pénalité de -1 sur leurs jets pour toucher.
+
 \newspecialrule{fightinextrarank}{\fightinextrarank}
 
 La figurine peut porter des Attaques de Soutien depuis un rang supplémentaire. Cela permettra normalement aux figurines avec cette règle de porter des attaques depuis les trois premiers rangs. Cette règle est cumulable, permettant à un rang supplémentaire d'attaquer pour chaque instance de la règle.
@@ -269,7 +269,7 @@ Le Champion de l'unité gagne +1 PV en plus des augmentations de Caractéristiqu
 
 \newspecialrule{lethalstrike}{\lethalstrike}
 
-Si une attaque avec cette règle, ou provenant d'un élément de figurine ayant cette règle, obtient un \result{6} non modifié sur le jet pour blesser, alors elle gagne la règle \armourpiercing{6} et ignore les Sauvegardes de \regeneration{}.
+Si une attaque avec cette règle, ou une attaque de Corps à Corps provenant d'un élément de figurine ayant cette règle, obtient un \result{6} non modifié sur le jet pour blesser, alors elle gagne la règle \armourpiercing{6} et ignore les Sauvegardes de \regeneration{}.
 
 \newspecialrule{swiftstride}{\swiftstride}
 
