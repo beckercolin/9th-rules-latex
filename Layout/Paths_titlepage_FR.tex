@@ -1,7 +1,8 @@
-\newgeometry{margin=1in}
 
 \begin{titlepage}
 \begin{center}
+
+\vspace*{10pt}
 
 \ifdef{\booktitle}{}{\newcommand{\booktitle}{Missing title}}
 \ifdef{\version}{}{\newcommand{\version}{Missing version}}
@@ -10,13 +11,22 @@
 
 \labels@NinthAge}
 
-\vspace*{0.7cm}
+\vspace*{10pt}
+
+{\titlefont\fontsize{50}{60}\selectfont \booktitle
+\vspace{5pt}
+
+\fontsize{14}{16.8}\selectfont v\version{} - \today{}}
+
+\ifdef{\frenchversion}{{\fontsize{14}{16.8}\selectfont \vspace{0.2cm}\noindent\texttt{VF \frenchversion}}}{}
+
+\vspace*{20pt}
 
 \newcommand{\iconheight}{1.6cm}
-\newcommand{\minipagewidth}{6cm}
-\newcommand{\spacebetweeniconrows}{0.3cm}
+\newcommand{\minipagewidth}{3cm}
+\newcommand{\spacebetweeniconrows}{0.8cm}
 
-\hfill\begin{minipage}[c]{\minipagewidth}
+\hspace*{0.5cm}\begin{minipage}[c]{\minipagewidth}
 \begin{center}
 \includegraphics[height=\iconheight]{\alchemyicon}
 
@@ -37,68 +47,15 @@
 \includegraphics[height=\iconheight]{\druidismicon}
 
 \end{center}
-\end{minipage}\begin{minipage}[c]{\minipagewidth}
-\begin{center}
-\includegraphics[height=\iconheight]{\evocationicon}
+\end{minipage}
+\hfill\begin{minipage}[c]{8cm}
 
-\vspace*{\spacebetweeniconrows}
-
-\includegraphics[height=\iconheight]{\occultismicon}
-
-\vspace*{\spacebetweeniconrows}
-
-\includegraphics[height=\iconheight]{\pyromancyicon}
-
-\vspace*{\spacebetweeniconrows}
-
-\includegraphics[height=\iconheight]{\witchcrafticon}
-
-\vspace*{\spacebetweeniconrows}
-
-\includegraphics[height=\iconheight]{\thaumaturgyicon}
-\end{center}
-\end{minipage}\hspace*{\fill}
-
-
-\vspace*{0.7cm}
-
-{\titlefont\fontsize{50}{60}\selectfont \booktitle
-\vspace{0.4cm}
-
-\fontsize{14}{16.8}\selectfont Beta v\version{} - \today{}}
-
-\ifdef{\frenchversion}{{\fontsize{14}{16.8}\selectfont \vspace{0.2cm}\noindent\texttt{VF \frenchversion}}}{}
-\vfill
-
-\begin{tabular}{@{}m{2cm}@{\hskip 20pt}m{13cm}@{}}
-\includegraphics[width=2cm]{../Layout/pics/seal_9th.png} &
-{\fontsize{10}{12}\selectfont \textcolor{black!50}{\noindent\labels@frontpagecredits}}
-
-\ifdef{\frontpageaddstuff}{{\fontsize{10}{12}\selectfont \noindent\textcolor{black!50}{\frontpageaddstuff}}}{}
-
-\vspace*{10pt}
-\noindent{\fontsize{10}{12}\selectfont \textcolor{black!50}{\labels@license}}
-\tabularnewline
-\end{tabular}
-
-
-\end{center}
-
-\newpage
-
-\thispagestyle{empty}
-
-{\fontsize{10}{12}\selectfont
-
-\begin{center}\hypertarget{tableofcontents}{\noindent{\Largerfontsize\textbf{\labels@tableofcontents}}}\end{center}
-
-\vspace*{0.2cm}
+{\fontsize{12}{14.4}\selectfont
 
 \begin{center}
-\noindent\hyperlink{howtousethisdoc}{\howtousethisdoc}
-\end{center}
+\hypertarget{tableofcontents}{\noindent\hyperlink{howtousethisdoc}{\howtousethisdoc}}
 
-\begin{multicols}{2}
+\vspace*{20pt}
 
 \tocentry{alchemy}{\alchemyTOC}
 
@@ -120,22 +77,49 @@
 
 \tocentry{thaumaturgy}{\thaumaturgyTOC}
 
-\end{multicols}
+\vspace*{20pt}
 
-\begin{center}
 \noindent\hyperlink{magicphasesummary}{\magicphasesummary}
 \end{center}
-
-\ifdef{\labels@introduction}{\vspace{0.7cm}\labels@introduction}{\vphantom{1pt}}
-\vfill
-
-\noindent\newrule{\labels@rulechanges}
-
-\bigskip
-\noindent \labels@latexcredit
 }
 
+\end{minipage}\hfill
+\begin{minipage}[c]{\minipagewidth}
+\begin{center}
 
+\includegraphics[height=\iconheight]{\evocationicon}
+
+\vspace*{\spacebetweeniconrows}
+
+\includegraphics[height=\iconheight]{\occultismicon}
+
+\vspace*{\spacebetweeniconrows}
+
+\includegraphics[height=\iconheight]{\pyromancyicon}
+
+\vspace*{\spacebetweeniconrows}
+
+\includegraphics[height=\iconheight]{\witchcrafticon}
+
+\vspace*{\spacebetweeniconrows}
+
+\includegraphics[height=\iconheight]{\thaumaturgyicon}
+\end{center}
+\end{minipage}\hspace*{0.5cm}
+
+\vfill
+
+\begin{tabular}{@{}m{2cm}@{\hskip 20pt}m{13cm}@{}}
+\includegraphics[width=2cm]{../Layout/pics/seal_9th.png} &
+{\fontsize{10}{12}\selectfont \textcolor{black!50}{\noindent\labels@frontpagecredits}}
+
+\ifdef{\frontpageaddstuff}{{\fontsize{10}{12}\selectfont \noindent\textcolor{black!50}{\frontpageaddstuff}}}{}
+
+\vspace*{10pt}
+\noindent{\fontsize{10}{12}\selectfont \textcolor{black!50}{\labels@license}}
+\tabularnewline
+\end{tabular}
+
+
+\end{center}
 \end{titlepage}
-
-\restoregeometry

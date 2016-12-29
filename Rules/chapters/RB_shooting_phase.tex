@@ -96,14 +96,14 @@ Les Attaques de Tir réalisées pendant la réaction à la charge Tenir la Posit
 
 \paragraph{Couvert}
 
-Le Couvert est déterminé individuellement, pour chaque tireur. Il existe deux types de Couvert, Léger et Lourd. Dans les deux cas, le couvert est déterminé en observant la Ligne de Vue de la figurine qui tire. Tracez toutes les Lignes de Vue depuis un point de votre choix à l'avant du socle du tireur jusqu'à tout point de l'Empreinte au Sol de la cible. Exceptionnellement, ces Lignes de Vues peuvent sortir de l'arc frontal du tireur. Si ces lignes sont interrompues par un Décor ou des figurines, selon la nature et la position de ces derniers, le tir peut subir un malus pour toucher. Pour la détermination du Couvert, un tireur ignore toujours les figurines de sa propre unité et de l'unité ciblée, ainsi que le Décor dans lequel il se trouve. Une unité située dans une Forêt ne subit donc pas de malus de Couvert Léger à cause de la Forêt.
+Le Couvert est déterminé individuellement, pour chaque tireur. Il existe deux types de Couvert, Léger et Lourd. Dans les deux cas, le couvert est déterminé en observant la Ligne de Vue de la figurine qui tire. Tracez toutes les Lignes de Vue depuis un point de votre choix à l'avant du socle du tireur jusqu'à tout point de l'Empreinte au Sol de la cible. Exceptionnellement, ces Lignes de Vues peuvent sortir de l'arc frontal du tireur. Si ces lignes sont interrompues par un Décor ou des figurines, selon la nature et la position de ces derniers, le tir peut subir un malus pour toucher. Pour la détermination du Couvert, un tireur ignore toujours les figurines de sa propre unité et de l'unité ciblée, ainsi que le Décor dans lequel il se trouve. Une unité située dans une Forêt ne subit donc pas de malus de Couvert Léger pour tirer depuis la Forêt.
 
 \newpage
 \paragraph{Cible derrière un Couvert Léger (-1)}
 
 Une figurine tirant sur une cible derrière un Couvert Léger subit un malus de -1 pour toucher. Le Couvert Léger s'applique si au moins la moitié de l'Empreinte au Sol de la cible est cachée par un ou plusieurs des éléments suivants (voir figure \ref{figure/soft_cover}) :
 \begin{itemize}[label={-}]
-\item Décor offrant un Couvert Léger.
+\item \softterrain{}.
 \item Figurines de n'importe quelle taille. Si vous tirez avec ou sur des figurines de Taille Gigantesque (voir le paragraphe \ref{modelheight}, page \pageref{modelheight}), ignorez les figurines de Taille Standard pour déterminer le Couvert.
 \end{itemize}
 
@@ -111,13 +111,13 @@ Une figurine tirant sur une cible derrière un Couvert Léger subit un malus de 
 
 Une figurine tirant sur une cible derrière un Couvert Lourd subit un malus de -2 pour toucher. Le Couvert Lourd s'applique si au moins la moitié de l'Empreinte au Sol de la cible est cachée par un ou plusieurs des éléments suivants (voir figure \ref{figure/hard_cover}) :
 \begin{itemize}[label={-}]
-\item Décor offrant un Couvert Lourd.
+\item \hardterrain{}.
 \item Figurines \textbf{de même Taille ou plus grand} que le tireur \textbf{et} sa cible (voir le paragraphe \ref{modelheight}, page \pageref{modelheight}).
 \end{itemize}
 
 \paragraph{Cible derrière un Couvert Léger et un Couvert Lourd}
 
-Si un tireur subit à la fois des malus de Couvert Léger et de Couvert Lourd, ne comptez que le Couvert Lourd. Si l'Empreinte au Sol de la cible est cachée à la fois par des éléments pouvant offrir un Couvert Léger et un Couvert Lourd, mais pas assez pour obtenir l'un ou l'autre des Couverts, le tireur subit la pénalité de Couvert Léger si au moins la moitié de l'Empreinte au Sol de l'unité visée est cachée par l'ensemble des éléments. Par exemple, si la cible est cachée à 30 \% par des éléments offrant un Couvert Léger et à 30 \% par des éléments offrant un Couvert Lourd, le tireur subit la pénalité de Couvert Léger (voir figure \ref{figure/soft_and_hard_cover}).
+Si un tireur subit à la fois des malus de Couvert Léger et de Couvert Lourd, ne comptez que le Couvert Lourd. Si l'Empreinte au Sol de la cible est cachée à la fois par des éléments pouvant offrir un Couvert Léger et un Couvert Lourd, mais pas assez pour obtenir l'un ou l'autre des Couverts, le tireur subit la pénalité de Couvert Léger si au moins la moitié de l'Empreinte au Sol de l'unité visée est cachée par l'ensemble des éléments. Par exemple, si la cible est cachée à 30 \% par un \softterrain{} et à 30 \% par un \hardterrain{}, le tireur subit la pénalité de Couvert Léger (voir figure \ref{figure/soft_and_hard_cover}).
 
 \newcommand{\figureSCNotinlightofsight}{\normalfontsize{\textit{Pas de Ligne de Vue}}}
 \newcommand{\figureSCA}{a)}
@@ -166,7 +166,7 @@ c) Ces figurines peuvent tirer, et il n'y a pas de Couvert car moins de la moiti
 \input{pics/soft_and_hard_cover.pdf_tex}
 \end{minipage}\hfill\begin{minipage}[b]{0.42\textwidth}
 \caption{Cas de mélange de Couvert Léger et Lourd.\vspace*{10pt}\newline
-Dans cet exemple, moins de la moitié de l'Empreinte au Sol de la cible est cachée par un Couvert Léger ou un Couvert Lourd. Toutefois, la combinaison des deux en cache plus de la moitié, donc la cible compte comme étant derrière un Couvert Léger.}
+Dans cet exemple, moins de la moitié de l'Empreinte au Sol de la cible est cachée par un \softterrain{} ou un \hardterrain{}. Toutefois, la combinaison des deux en cache plus de la moitié, donc la cible compte comme étant derrière un Couvert Léger.}
 \label{figure/soft_and_hard_cover}
 \end{minipage}
 \end{figure}

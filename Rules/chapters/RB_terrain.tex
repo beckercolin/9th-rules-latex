@@ -16,19 +16,19 @@ Les tests de Terrain Dangereux doivent être passés dès que la figurine touche
 
 Aucune Ligne de Vue ne peut être tracée au travers d'un Décor Occultant. Il est possible de se déplacer à travers certains Décors Occultants, comme les Collines. Pour ces derniers, les Lignes de Vue peuvent être tracées depuis ou vers l'intérieur du Décor, mais jamais au travers. 
 
-\paragraph{Décor et Couvert Léger}
+\paragraph{\softterrain}
 
-Une unité sur, dans ou occultée par un Décor offrant un Couvert Léger bénéficie d'un Couvert Léger si plus de la moitié de son Empreinte au Sol est occultée par ce Décor (vis-à-vis des Lignes de Vue du tireur). Les Lignes de Vue d'une figurine ne sont pas affectées par le Décor sur ou dans lequel elle se trouve.
+Une unité sur, dans ou cachée par un \softterrain{} bénéficie d'un Couvert Léger si plus de la moitié de son Empreinte au Sol est cachée par ce Décor, c'est à dire que les Lignes de Vue du tireur passent par le Décor. Les Lignes de Vue d'une figurine ne sont pas affectées par le Décor sur ou dans lequel elle se trouve.
 
-\paragraph{Décor et Couvert Lourd}
+\paragraph{\hardterrain}
 
-Une unité sur, dans ou occultée par un Décor offrant un Couvert Lourd bénéficie d'un Couvert Lourd si plus de la moitié de son Empreinte au Sol est occultée par ce Décor (vis-à-vis des Lignes de Vue du tireur). Les Lignes de Vue d'une figurine ne sont pas affectées par le Décor sur ou dans lequel elle se trouve.
+Une unité sur, dans ou cachée par un \hardterrain{} bénéficie d'un Couvert Lourd si plus de la moitié de son Empreinte au Sol est cachée par ce Décor, c'est à dire que les Lignes de Vue du tireur passent par le Décor. Les Lignes de Vue d'une figurine ne sont pas affectées par le Décor sur ou dans lequel elle se trouve.
 
 \newpage
 \hypertarget{terrainfeatures}{\section{Liste des Décors particuliers}}
 \label{terrain_features}
 
-Un Terrain ou Décor est une zone topographique du champ de bataille qui peut mélanger Terrain Dangereux, Décor Occultant, Couvert Léger ou Lourd, voire d'autres règles spéciales selon son type.
+Un Terrain ou Décor est une zone topographique du champ de bataille qui peut mélanger Terrain Dangereux, Décor Occultant, \softterrain{} ou \hardterrain{}, voire d'autres règles spéciales selon son type.
 
 \subsection{Terrain Découvert}
 
@@ -38,14 +38,14 @@ Les Terrains Découverts n'ont normalement aucun effet sur les Lignes de Vue, le
 
 \noindent\begin{tabular}{>{\bfseries\raggedleft}p{2.2cm}p{13.5cm}}
 Ligne de Vue & Un Terrain Infranchissable est un Décor Occultant. \tabularnewline
-Couvert & Un Terrain Infranchissable offre un Couvert Lourd. \tabularnewline
+Couvert & Un Terrain Infranchissable est un \hardterrain{}. \tabularnewline
 Mouvement & Aucune figurine ne peut se déplacer dans ou à travers un Terrain Infranchissable. Si un mouvement de charge amène une figurine à moins d'\distance{1} d'un Terrain Infranchissable, son unité ignore l'écart d'un pouce jusqu'à ce qu'elle se soit éloignée à plus d'\distance{1}. \tabularnewline
 \end{tabular}
 
 \hypertarget{fields}{\subsection{Champ}}
 
 \noindent\begin{tabular}{>{\bfseries\raggedleft}p{2.2cm}p{13.5cm}}
-Couvert & Un Champ offre un Couvert Léger à toute unité dont plus de la moitié de l'Empreinte au Sol est dans le Champ, sauf pour les figurines avec la règle \toweringpresence{}. \tabularnewline
+Couvert & Un Champ compte comme un \softterrain{} pour toute unité dont plus de la moitié de l'Empreinte au Sol est dans le Champ, sauf s'il s'agit d'une figurine avec la règle \toweringpresence{}. \tabularnewline
 Mouvement & Un Champ est un Terrain Dangereux (1) pour la Cavalerie, les Chars et la Cavalerie Monstrueuse. \tabularnewline
 Facile à Embraser & Une unité dont plus de la moitié de l'Empreinte au Sol est dans un Champ gagne la règle \flammable{}. Un Champ est un Terrain Dangereux (1) pour une figurine avec des \flamingattacks{} (sur la figurine ou son arme). \tabularnewline
 \end{tabular}
@@ -54,25 +54,25 @@ Facile à Embraser & Une unité dont plus de la moitié de l'Empreinte au Sol es
 
 \noindent\begin{tabular}{>{\bfseries\raggedleft}p{2.2cm}p{13.5cm}}
 Ligne de Vue & Une Colline est un Décor Occultant. \tabularnewline
-Couvert & Une Colline offre un Couvert Léger aux unités partiellement sur elle.\newline
-Une Colline offre un Couvert Lourd aux unités complètement hors de la Colline. \tabularnewline
+Couvert & Une Colline compte comme un \softterrain{} pour toute unité partiellement sur elle : au moins la moitié de l'Empreinte au Sol non située sur la Colline doit être occultée par celle-ci pour obtenir le Couvert Léger.\newline
+Une Colline compte comme un \hardterrain{} pour toute unité complètement hors de la Colline. \tabularnewline
 Position surélevée & Une figurine dont au moins la moitié du socle repose sur une Colline est considérée comme étant de Taille Gigantesque pour les Lignes de Vue et le Couvert. \tabularnewline
-Charger d'une Colline & Lors de la Manche de Corps à Corps d'un tour où une unité charge, si plus de la moitié de son Empreinte au Sol était sur une Colline au début de son mouvement de charge, et que plus de la moitié de son Empreinte au Sol est toujours sur la Colline à la fin de ce mouvement, elle gagne un bonus de +1 au Résultat de Combat. \tabularnewline
+Charger d'une Colline & Quand une unité charge, si plus de la moitié de son Empreinte au Sol était sur une Colline au début de son mouvement de charge, et que plus de la moitié de son Empreinte au Sol est hors de la Colline à la fin de ce mouvement, elle gagne un bonus de +1 au Résultat de Combat lors de la Manche de Corps à Corps qui suit. \tabularnewline
 \end{tabular}
 
 \hypertarget{forests}{\subsection{Forêt}}
 
 \noindent\begin{tabular}{>{\bfseries\raggedleft}p{2.2cm}p{13.5cm}}
-Couvert & Une Forêt offre un Couvert Léger. \tabularnewline
+Couvert & Une Forêt est un \softterrain{}. \tabularnewline
 Mouvement & Une Forêt est un Terrain Dangereux (1) pour la Cavalerie, les Chars, la Cavalerie Monstrueuse et les unités qui effectuent un mouvement de Vol. \tabularnewline
 Rangs Brisés & Une unité dont plus de la moitié de son Empreinte au Sol est dans une Forêt ne peut jamais être Indomptable. \tabularnewline
-\stubborn{} & Une unité avec la règle \skirmisher{} ou un Personnage d'Infanterie seul dont plus de la moitié de l'Empreinte au Sol est dans une Forêt gagne la règle \stubborn{}. \tabularnewline
+\stubborn{} & Une unité dont plus de la moitié de l'Empreinte au Sol est dans une Forêt gagne la règle \stubborn{} si elle est composée uniquement de figurines d'Infanterie et d'Infanterie Monstrueuse avec la règle \lighttroops{} mais sans la règle \fly{}. \tabularnewline
 \end{tabular}
 
 \hypertarget{ruins}{\subsection{Ruines}}
 
 \noindent\begin{tabular}{>{\bfseries\raggedleft}p{2.2cm}p{13.5cm}}
-Couvert & Des Ruines offrent un Couvert Lourd à toute unité dont plus de la moitié de l'Empreinte au Sol est à l'intérieur, sauf pour les figurines avec la règle \toweringpresence{}. \tabularnewline
+Couvert & Des Ruines comptent comme un \hardterrain{} pour toute unité dont plus de la moitié de l'Empreinte au Sol est à l'intérieur, sauf s'il s'agit d'une figurine avec la règle \toweringpresence{}. \tabularnewline
 Mouvement & Les Ruines sont un Terrain Dangereux (1) pour toute unité qui n'a pas la règle \skirmisher{}. Elles sont un Terrain Dangereux (2) pour la Cavalerie, les Chars et la Cavalerie Monstrueuse. \tabularnewline
 \end{tabular}
 
@@ -80,7 +80,7 @@ Mouvement & Les Ruines sont un Terrain Dangereux (1) pour toute unité qui n'a p
 
 \noindent\begin{tabular}{>{\bfseries\raggedleft}p{2.2cm}p{13.5cm}}
 Mouvement & Aucune unité ne peut effectuer de Marche Forcée dans, à travers ou pour sortir d'\water{}. Les \water{} sont un Terrain Dangereux (1) pour la Cavalerie, les Chars et la Cavalerie Monstrueuse. \tabularnewline
-Désordre & Un rang au moins partiellement immergé ne compte jamais comme un Rang Complet. Si plus de la moitié de l'Empreinte au Sol d'une unité se situe dans des \water{}, elle compte comme n'ayant aucun Rang Complet. Cette règle n'affecte pas les unités avec la règle \strider{} ou \strider{\water}. \tabularnewline
+Désordre & Un rang au moins partiellement immergé ne compte jamais comme un Rang Complet. Si plus de la moitié de l'Empreinte au Sol d'une unité se situe dans des \water{}, elle compte comme n'ayant aucun Rang Complet. Cette règle n'affecte pas les unités dont plus de la moitié des figurines ont la règle \strider{} ou \strider{\water}. \tabularnewline
 \end{tabular}
 
 \hypertarget{walls}{\subsection{Mur}}
@@ -97,7 +97,7 @@ Combat & Les figurines qui Défendent un Mur gagnent la règle \distracting{} co
 
 \noindent\begin{tabular}{>{\bfseries\raggedleft}p{2.2cm}p{13.5cm}}
 Ligne de Vue & Un Bâtiment est un Décor Occultant. \tabularnewline
-Couvert & Un Bâtiment offre un Couvert Lourd. \tabularnewline
+Couvert & Un Bâtiment est un \hardterrain{}. \tabularnewline
 Mouvement & Une unité constituée uniquement d'Infanterie, de Bêtes de Guerre, de Nuées, d'Infanterie Monstrueuse, de Bêtes Monstrueuses ou d'un mélange de ces types traite un Bâtiment comme du Terrain Découvert pendant l'étape des Autres Mouvements, mais elles ne peuvent pas finir leur mouvement dans ou à moins de \distance{1} du Bâtiment. Dans toutes les autres situations, un Bâtiment est traité comme un Terrain Infranchissable. \tabularnewline
 À Couvert & Une unité dont plus de la moitié de l'Empreinte au Sol traverse un Bâtiment (sauf mouvement de \fly{}) bénéficie d'un Couvert Lourd jusqu'au début du prochain Tour de Joueur allié, ou jusqu'à ce qu'elle utilise une Attaque à Distance, selon la situation qui arrive en premier. \tabularnewline
 \end{tabular}

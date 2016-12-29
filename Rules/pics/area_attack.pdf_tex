@@ -66,7 +66,7 @@
     \put(0.90335427,0.11929709){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figAAThreeHits}}}%
     \put(0.69797073,0.02235739){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figAATotalSixHits}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{pics/area_attack.pdf}}%
-    \put(0.16281676,0.38972054){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figAAAreaAttack{X}}}}%
+    \put(0.16281676,0.38972054){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figAAAreaAttack{4}}}}%
     \put(0.27365058,0.20884937){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figAAOneHit}}}%
     \put(0.16217814,0.02235739){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figAATotalOneHit}}}%
   \end{picture}%

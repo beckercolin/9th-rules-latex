@@ -2,8 +2,8 @@
 \input{../Layout/Paths_layout.tex}
 
 \newcommand{\booktitle}{Livre de Magie}
-\newcommand{\version}{1.2.1}
-\newcommand{\frenchversion}{0.3}
+\newcommand{\version}{1.3.2}
+\newcommand{\frenchversion}{0.1}
 
 \hypersetup{pdftitle={T9A - \booktitle}}
 
@@ -48,7 +48,8 @@
 
 \begin{document}
 
-\input{../Layout/Paths_titlepage.tex}
+% EDIT THE TITLEPAGE TO PUT THE LOGOS AND THE TABLE OF CONTENT IN YOUR PREFFERED ORDER.
+\input{../Layout/Paths_titlepage_FR.tex}
 
 \basictitle{howtousethisdoc}{\howtousethisdoc}
 
@@ -168,11 +169,11 @@ La cible subit 1D3+1 touches avec la règle \metalshifting{}.
 \spelllabelandtitle{1}{\alchemyspellone}
 
 \tablespellcastingvalue{\base{6+}\newline\boosted{9+}}
-\tablespellrange{\base{\distance{24}}\newline\boosted{\distance{48}}}
+\tablespellrange{\distance{24}}
 \tablespelltype{\augment}
 \tablespellduration{\lastsoneturn}
 \tablespelleffect{%
-La cible gagne +1 à sa Sauvegarde d'Armure.
+La cible gagne \base{+1} \boosted{+2} à sa Sauvegarde d'Armure.
 }
 \hline
 \spelllabelandtitle{2}{\alchemyspelltwo}
@@ -187,22 +188,22 @@ La cible subit \base{2D6} \boosted{3D6} touches de Force 2 avec les règles \fla
 \hline
 \spelllabelandtitle{3}{\alchemyspellthree}
 
+\tablespellcastingvalue{\base{7+}\newline\boosted{10+}}
+\tablespellrange{\base{\distance{18}}\newline\boosted{\distance{36}}}
+\tablespelltype{\hex\newline\missile\newline\damage}
+\tablespellduration{\instant}
+\tablespelleffect{%
+La cible subit une touche de Force 3 [6] avec les règles \penetrating{}, \multiplewounds{1D3}{} et \armourpiercing{6}.
+}
+\hline
+\spelllabelandtitle{4}{\alchemyspellfour}
+
 \tablespellcastingvalue{\base{8+}\newline\boosted{11+}}
 \tablespellrange{\base{\distance{24}}\newline\boosted{\distance{48}}}
 \tablespelltype{\hex}
 \tablespellduration{\permanent}
 \tablespelleffect{%
 La cible subit un malus de -1 à sa Sauvegarde d'Armure.
-}
-\hline
-\spelllabelandtitle{4}{\alchemyspellfour}
-
-\tablespellcastingvalue{\base{8+}\newline\boosted{11+}}
-\tablespellrange{\base{\distance{18}}\newline\boosted{\distance{36}}}
-\tablespelltype{\hex\newline\missile\newline\damage}
-\tablespellduration{\instant}
-\tablespelleffect{%
-La cible subit une touche de Force 6 avec les règles \penetrating{}, \multiplewounds{1D3}{} et \armourpiercing{6}.
 }
 \hline
 \spelllabelandtitle{5}{\alchemyspellfive}
@@ -260,9 +261,9 @@ La cible gagne +1 en \base{Force} \boosted{Endurance}.
 \tablespellcastingvalue{\base{5+}\newline\boosted{8+}}
 \tablespellrange{\base{\distance{24}}\newline\boosted{\distance{48}}}
 \tablespelltype{\hex\newline\missile\newline\damage}
-\tablespellduration{\instant}
+\tablespellduration{\permanent}
 \tablespelleffect{%
-La cible subit 5D6 touches de Force 1.
+La cible subit 5D6 touches de Force 1 immédiatement. Si au moins une blessure est infligée et n'est pas sauvegardée, la cible subit un malus de -1 en Capacité de Tir. Cet effet prend fin quand la cible effectue un Mouvement Simple, une Marche Forcée ou un mouvement de Charge.
 }
 \hline
 \spelllabelandtitle{2}{\shamanismspelltwo}
@@ -288,7 +289,7 @@ La cible effectue un Mouvement Magique de \distance{2D6} droit devant. Elle ne p
 \hline
 \spelllabelandtitle{4}{\shamanismspellfour}
 
-\tablespellcastingvalue{\base{7+}\newline\boosted{10+}}
+\tablespellcastingvalue{\base{6+}\newline\boosted{9+}}
 \tablespellrange{\base{\distance{18}}\newline\boosted{\aura{} \distance{12}}}
 \tablespelltype{\augment}
 \tablespellduration{\lastsoneturn}
@@ -299,7 +300,7 @@ Les jets pour blesser des Attaques de Tir dirigées contre la cible subissent un
 \spelllabelandtitle{5}{\shamanismspellfive}
 
 \tablespellcastingvalue{\base{9+}\newline\boosted{12+}}
-\tablespellrange{\base{\distance{36}}\newline\boosted{\distance{72}}}
+\tablespellrange{\base{\distance{18}}\newline\boosted{\distance{36}}}
 \tablespelltype{\hex}
 \tablespellduration{\lastsoneturn}
 \tablespelleffect{%
@@ -308,7 +309,7 @@ La cible subit un malus de -1 pour toucher et traite tous les terrains, y-compri
 \hline
 \spelllabelandtitle{6}{\shamanismspellsix}
 
-\tablespellcastingvalue{\base{10+}\newline\boosted{13+}}
+\tablespellcastingvalue{\base{11+}\newline\boosted{14+}}
 \tablespellrange{\distance{96}}
 \tablespelltype{\ground}
 \tablespellduration{\instant}
@@ -348,7 +349,7 @@ La valeur de lancement des sorts non liés à des \boundspells{} de la \cosmolog
 \tablelabelscosmology
 
 \spelllabelandtitlecosmology{0}{\cosmologyspellzero}
-\tablespellcastingvaluecosmology{8+}{6+}
+\tablespellcastingvaluecosmology{7+}{5+}
 \tablespellrangecosmology{\distance{24}}
 \tablecosmosicon{}
 \textbf{\augment}&
@@ -392,11 +393,11 @@ La valeur de lancement des sorts non liés à des \boundspells{} de la \cosmolog
 \tablecosmosicon{}
 \textbf{\augment}&
 \multirow{2}{*}{\vspace*{-0.5cm}\lastsoneturn}&
-\tablespelltextcosmology{La cible jette un dé additionnel et ignore celui ayant donné le résultat le plus \textbf{petit} pour la Charge, Charge Irrésistible, Fuite et Poursuite.}
+\tablespelltextcosmology{La cible jette un dé \textbf{additionnel} pour les jets de distance de Charge, Charge Irrésistible, Fuite et Poursuite.}
 \tablechaosicon{}
 \textbf{\hex}&
 &
-\tablespelltextcosmology{La cible jette un dé additionnel et ignore celui ayant donné le résultat le plus \textbf{grand} pour la Charge, Charge Irrésistible, Fuite et Poursuite.}
+\tablespelltextcosmology{La cible jette un dé \textbf{de moins} pour les jets de distance de Charge, Charge Irrésistible, Fuite et Poursuite.}
 \hline
 
 \spelllabelandtitlecosmology{4}{\cosmologyspellfour}
@@ -569,45 +570,45 @@ La cible ou son unité Récupère \secboosted{Ressuscite} 1 Point de Vie. Aucune
 \tablespelltype{}
 \tablespellduration{\remainsinplay}
 \tablespelleffect{%
-Si le Lanceur a ce sort en jeu quand il lance d'autres sorts de cette Voie, la version améliorée des sorts, marquée par \secboosted{ }, est utilisée. Pour l'Attribut de la Voie, \druidismtraitspell{} doit être en jeu quand le sort déclenchant l'Attribut est lancé.
+Si le Lanceur a ce sort en jeu quand il lance d'autres sorts de cette Voie, utilisez la version \secboosted{améliorée} des sorts. Ignorez le texte en \base{rouge} et prenez en compte celui marqué par \secboosted{ }. Pour l'Attribut de la Voie, \druidismtraitspell{} doit être en jeu quand le sort déclenchant l'Attribut est lancé.
 }
 \hline
 \spelllabelandtitle{1}{\druidismspellone}
 
-\tablespellcastingvalue{6+}
+\tablespellcastingvalue{\base{6+}\newline\secboosted{5+}}
 \tablespellrange{\distance{18}}
 \tablespelltype{\hex\newline\direct\newline\damage}
 \tablespellduration{\instant}
 \tablespelleffect{%
 La Portée de ce sort peut être mesurée depuis le lanceur ou depuis n'importe quel décor de \textbf{\impassableterrain} de la table.\newline
-La cible subit 1D6 touches de Force 4 \secboosted{5}.
+La cible subit 1D6 touches de Force \base{4} \secboosted{5}.
 }
 \hline
 \spelllabelandtitle{2}{\druidismspelltwo}
 
-\tablespellcastingvalue{8+}
+\tablespellcastingvalue{\base{8+}\newline\secboosted{7+}}
 \tablespellrange{\distance{12}}
 \tablespelltype{\augment}
 \tablespellduration{\lastsoneturn}
 \tablespelleffect{%
 La Portée de ce sort peut être mesurée depuis le lanceur ou depuis n'importe quel décor d'\textbf{\water} de la table.\newline
-La cible gagne la règle \regeneration{5} \secboosted{(4+)}.
+La cible gagne la règle \regeneration{} \base{(5+)} \secboosted{(4+)}.
 }
 \hline
 \spelllabelandtitle{3}{\druidismspellthree}
 
-\tablespellcastingvalue{8+}
+\tablespellcastingvalue{\base{8+}\newline\secboosted{7+}}
 \tablespellrange{\distance{12}}
 \tablespelltype{\hex}
 \tablespellduration{\lastsoneturn}
 \tablespelleffect{%
 La Portée de ce sort peut être mesurée depuis le lanceur ou depuis n'importe quel décor de \textbf{\forest} de la table.\newline
-La cible subit un malus de -1 \secboosted{-1D3} en Capacité de Combat et en Capacité de Tir, jusqu'à un minimum de 1.
+La cible subit un malus de \base{-1} \secboosted{-2} en Capacité de Combat et en Capacité de Tir, jusqu'à un minimum de 1.
 }
 \hline
 \spelllabelandtitle{4}{\druidismspellfour}
 
-\tablespellcastingvalue{9+}
+\tablespellcastingvalue{\base{9+}\newline\secboosted{8+}}
 \tablespellrange{\distance{12}}
 \tablespelltype{\augment\newline\secboosted{\universal}}
 \tablespellduration{\lastsoneturn}
@@ -618,26 +619,26 @@ Toutes les figurines de l'unité ciblée sont considérées comment se trouvant 
 \hline
 \spelllabelandtitle{5}{\druidismspellfive}
 
-\tablespellcastingvalue{11+}
+\tablespellcastingvalue{\base{10+}\newline\secboosted{9+}}
 \tablespellrange{\distance{12}}
 \tablespelltype{\augment}
 \tablespellduration{\lastsoneturn}
 \tablespelleffect{%
 La Portée de ce sort peut être mesurée depuis le lanceur ou depuis n'importe quel décor de \textbf{Colline} de la table.\newline
-La cible gagne +2 \secboosted{+3} en Endurance.
+La cible gagne \base{+2} \secboosted{+3} en Endurance.
 }
 \hline
 \spelllabelandtitle{6}{\druidismspellsix}
 
-\tablespellcastingvalue{11+}
+\tablespellcastingvalue{\base{11+}\newline\secboosted{10+}}
 \tablespellrange{\distance{24}}
 \tablespelltype{\augment}
 \tablespellduration{\instant}
 \tablespelleffect{%
 Ce sort a un effet différent selon la Taille de la plus grande fraction des figurines de l'unité ciblée. Utilisez l'effet de la plus grande Taille en cas d'égalité.\newline
-\textbf{Standard} : Ressuscite 1D3+3 \secboosted{1D3+5} Points de Vie.\newline
-\textbf{Grande} : Ressuscite 1D3 \secboosted{1D3+1} Points de Vie.\newline
-\textbf{Gigantesque} : Ressuscite 1 \secboosted{1} Point de Vie.
+\textbf{Standard} : Ressuscite \base{5} \secboosted{7} Points de Vie.\newline
+\textbf{Grande} : Ressuscite \base{2} \secboosted{3} Points de Vie.\newline
+\textbf{Gigantesque} : Ressuscite \base{1} \secboosted{1} Point de Vie.
 }
 
 \closetable{}
@@ -651,28 +652,39 @@ Ce sort a un effet différent selon la Taille de la plus grande fraction des fig
 
 \spelllabelandtitle{\traitspellnumber}{\evocationtraitspell}
 
-\tablespellcastingvalue{\base{5+}\newline\boosted{8+}}
-\tablespellrange{\base{\distance{18}}\newline\boosted{\aura{} \distance{6}}}
+\tablespellcastingvalue{\base{5+}\newline\boosted{8+}\newline\secboosted{11+}}
+\tablespellrange{\base{\distance{18}}\newline\boosted{\aura{} \distance{6}}\newline\secboosted{\aura{} \distance{12}}}
 \tablespelltype{\augment}
-\tablespellduration{\instant\vspace*{25pt}\newline\lastsoneturn}
+\tablespellduration{\instant\vspace*{80pt}\newline\lastsoneturn}
 \tablespelleffect{%
 \textbf{Si la cible possède au moins une figurine avec une valeur \evoked{} :}\newline
-L'unité ciblée ou un unique Personnage dans l'unité ciblée Ressuscite un nombre de Points de Vie correspondant à la valeur d'\evoked{} précisée dans son profil.\vspace*{5pt}\newline
+L'unité ciblée ou un unique Personnage dans l'unité ciblée Ressuscite un nombre de Points de Vie correspondant à la valeur d'\evoked{} précisée dans son profil. Les Personnages et les figurines ayant la règle \toweringpresence{} ne peuvent récupérer que 2 PVs au plus grâce à ce sort lors d'une Phase de Magie.\vspace*{5pt}\newline
 \textbf{Si la cible ne possède pas de figurine avec une valeur \evoked{} :}\newline
-L'unité ciblée gagne les règles \immunetopsychology{} et \fear{}.
+La cible gagne la règle \fear{}, et toutes les unités ennemies à moins de \distance{6} de la cible subissent un malus de -1 en Commandement. Vérifier la portée à chaque fois que le Commandement est utilisé (pas au lancement du sort). Cet effet ne peut pas être cumulé.
 }
 \hline
 \spelllabelandtitle{1}{\evocationspellone}
 
 \tablespellcastingvalue{\base{5+}\newline\boosted{10+}}
-\tablespellrange{\base{\distance{18}}\newline\boosted{\aura{} \distance{12}}}
+\tablespellrange{\distance{18}}
 \tablespelltype{\augment}
 \tablespellduration{\lastsoneturn}
 \tablespelleffect{%
-La cible gagne la règle \lethalstrike{}. Les Attaques qui bénéficiaient déjà de cette règle peuvent relancer leurs jets pour blesser ratés au Corps à Corps.
+La cible doit relancer ses jets pour blesser ratés au Corps à Corps.\newline
+\boosted{La cible gagne la règle \lethalstrike{}.}
 }
 \hline
 \spelllabelandtitle{2}{\evocationspelltwo}
+
+\tablespellcastingvalue{\base{6+}\newline\boosted{11+}}
+\tablespellrange{\base{\distance{12}}\newline\boosted{\aura{} \distance{12}}}
+\tablespelltype{\augment}
+\tablespellduration{\instant}
+\tablespelleffect{%
+La cible peut effectuer un Mouvement Magique de \distance{8}. Elle compte comme ayant la règle \ethereal{} pendant ce déplacement.
+}
+\hline
+\spelllabelandtitle{3}{\evocationspellthree}
 
 \tablespellcastingvalue{\base{7+}\newline\boosted{9+}}
 \tablespellrange{\distance{12}}
@@ -682,7 +694,7 @@ La cible gagne la règle \lethalstrike{}. Les Attaques qui bénéficiaient déj�
 La cible doit relancer ses jets pour toucher ratés des Attaques de Corps à Corps \boosted{et de Tir}.
 }
 \hline
-\spelllabelandtitle{3}{\evocationspellthree}
+\spelllabelandtitle{4}{\evocationspellfour}
 
 \tablespellcastingvalue{\base{7+}\newline\boosted{10+}}
 \tablespellrange{\base{\distance{12}}\newline\boosted{\distance{24}}}
@@ -690,16 +702,6 @@ La cible doit relancer ses jets pour toucher ratés des Attaques de Corps à Cor
 \tablespellduration{\instant}
 \tablespelleffect{%
 La cible subit 1D3 touches de Force 10 avec la règle \armourpiercing{6}. Utilisez le Commandement de la cible à la place de son Endurance pour les jets pour blesser.
-}
-\hline
-\spelllabelandtitle{4}{\evocationspellfour}
-
-\tablespellcastingvalue{\base{7+}\newline\boosted{12+}}
-\tablespellrange{\base{\distance{12}}\newline\boosted{\aura{} \distance{12}}}
-\tablespelltype{\augment}
-\tablespellduration{\instant}
-\tablespelleffect{%
-La cible peut effectuer un Mouvement Magique de \distance{8}. Elle compte comme ayant la règle \ethereal{} pendant ce déplacement.
 }
 \hline
 \spelllabelandtitle{5}{\evocationspellfive}
@@ -714,12 +716,12 @@ La cible subit un malus de -1 en Commandement et de -2 en Capacité de Combat, j
 \hline
 \spelllabelandtitle{6}{\evocationspellsix}
 
-\tablespellcastingvalue{14+}
+\tablespellcastingvalue{12+}
 \tablespellrange{\distance{18}}
 \tablespelltype{\hex\newline\direct\newline\damage}
 \tablespellduration{\instant}
 \tablespelleffect{%
-Chaque Personnage et Champion de l'unité ciblée subit une touche qui blesse automatiquement sans sauvegarde d'aucune sorte possible.
+Choisissez jusqu'à 3 figurines différentes dans l'unité ciblée (cela peut être des Personnages ou des Champions). Chacun d'eux subit une touche qui blesse automatiquement avec la règle \armourpiercing{6}.
 }
 
 \closetable{}
@@ -754,7 +756,7 @@ La cible subit 1D6 touches de Force 4. L'unité du Lanceur n'est pas affectée.\
 \tablespelltype{}
 \tablespellduration{\lastsoneturn}
 \tablespelleffect{%
-La cible gagne une \wardsave{5}. La \wardsave{} des figurines affectées qui en possédaient déjà une est améliorée d'un point jusqu'à obtenir 3+ au mieux.
+La cible \secboosted{et toutes les figurines de son unité} gagne\secboosted{nt} une \wardsave{5}. La \wardsave{} des figurines affectées qui en possédaient déjà une est améliorée d'un point jusqu'à obtenir 3+ au mieux.
 }
 \hline
 \spelllabelandtitle{2}{\occultismspelltwo}
@@ -764,7 +766,8 @@ La cible gagne une \wardsave{5}. La \wardsave{} des figurines affectées qui en 
 \tablespelltype{\focused}
 \tablespellduration{\lastsoneturn}
 \tablespelleffect{%
-La cible gagne une \breathweapon{\toxicattacks}.
+La cible gagne une \breathweapon{\toxicattacks}.\newline
+\secboosted{Si l'\breathweapon{} est utilisée comme une Attaque de Tir, sa portée est améliorée à \distance{18}.}
 }
 \hline
 \spelllabelandtitle{3}{\occultismspellthree}
@@ -774,12 +777,13 @@ La cible gagne une \breathweapon{\toxicattacks}.
 \tablespelltype{}
 \tablespellduration{\remainsinplay}
 \tablespelleffect{%
-La cible peut relancer ses jets de lancement de sort quand elle lance des sorts non liés à des \boundspells{} de cette Voie.
+La cible peut relancer ses jets de lancement de sort quand elle lance des sorts non liés à des \boundspells{} de cette Voie.\newline
+\secboosted{La cible peut relancer un et un seul Jet de Dissipation à chaque Phase de Magie.}
 }
 \hline
 \spelllabelandtitle{4}{\occultismspellfour}
 
-\tablespellcastingvalue{9+}
+\tablespellcastingvalue{8+}
 \tablespellrange{\distance{24}}
 \tablespelltype{\hex}
 \tablespellduration{\permanent}
@@ -806,8 +810,7 @@ La cible subit une touche de Force 10 avec la règle \multiplewounds{1D3}{}.\new
 \tablespelltype{\hex\newline\direct\newline\damage}
 \tablespellduration{\instant}
 \tablespelleffect{%
-La cible subit 2D6 touches de Force 5.\newline
-\secboosted{La Force des touches passe à 6.}
+La cible subit 2D6 touches de Force \base{5} \secboosted{6}.
 }
 
 \closetable{}
@@ -819,14 +822,14 @@ La cible subit 2D6 touches de Force 5.\newline
 
 \tablelabels
 
-\spelllabelandtitle{\traitspellnumber}{\pyromancytraitspell}
+\spelllabelandtitle{\attributespellnumber}{\pyromancyattribute}
 
-\tablespellcastingvalue{4+}
+\tablespellcastingvalue{}
 \tablespellrange{\distance{24}}
 \tablespelltype{\hex\newline\missile\newline\damage}
 \tablespellduration{\instant}
 \tablespelleffect{%
-La cible subit 1D3+1 touches de Force 4 avec la règle \flamingattacks{}.
+La cible subit 1D3 touches de Force 4 avec la règle \flamingattacks{}.
 }
 \hline
 \spelllabelandtitle{1}{\pyromancyspellone}
@@ -852,7 +855,7 @@ Toutes les figurines ennemies en contact socle à socle avec l'unité ciblée su
 \spelllabelandtitle{3}{\pyromancyspellthree}
 
 \tablespellcastingvalue{\base{7+}\newline\boosted{10+}}
-\tablespellrange{\aura{} \distance{18}}
+\tablespellrange{\aura{} \distance{24}}
 \tablespelltype{\hex\newline\damage}
 \tablespellduration{\instant}
 \tablespelleffect{%
@@ -899,24 +902,26 @@ Chaque figurine de l'unité ciblée subit une touche de Force 3 avec la règle \
 
 \tablelabels
 
-\spelllabelandtitle{0}{\witchcraftspellzero}
+\spelllabelandtitle{0}{\witchcraftattribute}
 
-\tablespellcastingvalue{6+}
-\tablespellrange{\distance{36}}
-\tablespelltype{\hex}
+\tablespellcastingvalue{}
+\tablespellrange{\distance{24}}
+\tablespelltype{\universal}
 \tablespellduration{\lastsoneturn}
 \tablespelleffect{%
-La cible subit un malus de -1D3 en Mouvement, jusqu'à un minimum de 3, et un malus de -1 en Initiative jusqu'à un minimum de 1.
+Si la cible est une unité alliée, elle gagne +1 en Mouvement.\newline
+Si la cible est une unité ennemie, elle subit un malus de -1 en Mouvement jusqu'à un minimum de 3.\newline
+Une unité ne peut être affectée par ce sort que deux fois au plus par Phase de Magie.
 }
 \hline
 \spelllabelandtitle{1}{\witchcraftspellone}
 
 \tablespellcastingvalue{\base{5+}\newline\boosted{8+}}
-\tablespellrange{\base{\distance{18}}\newline\boosted{\aura{} \distance{6}}}
-\tablespelltype{\augment}
+\tablespellrange{\base{\distance{18}}\newline\boosted{\distance{36}}}
+\tablespelltype{\hex}
 \tablespellduration{\lastsoneturn}
 \tablespelleffect{%
-La cible gagne les règles \hardtarget{} et \distracting{}.
+La cible subit un malus de -1 pour toucher.
 }
 \hline
 \spelllabelandtitle{2}{\witchcraftspelltwo}
@@ -956,14 +961,14 @@ La cible gagne la règle \randommovement{2D6}.
 \tablespelltype{\hex}
 \tablespellduration{\remainsinplay}
 \tablespelleffect{%
-La cible gagne la règle \stupidity{}. Elle subit un malus de -1 en Commandement pour ses Tests de \stupidity{} pour chaque Personnage dans l'unité ciblée.
+La cible gagne la règle \stupidity{}. Elle subit un malus de -1 en Commandement pour chaque Personnage dans l'unité ciblée.
 }
 \hline
 \spelllabelandtitle{6}{\witchcraftspellsix}
 
-\tablespellcastingvalue{10+}
+\tablespellcastingvalue{\base{9+}\newline\boosted{11+}}
 \tablespellrange{\distance{24}}
-\tablespelltype{\hex}
+\tablespelltype{\base{\hex}\newline\boosted{Amélior.}} % care here plain french because augment was too long, so replace it with \augment for your language
 \tablespellduration{\lastsoneturn}
 \tablespelleffect{%
 Les Attaques de Corps à Corps des figurines ordinaires de l'unité ciblée touchent et blessent sur 4+, quels que soient leurs Capacité de Combat, Force et Endurance. Appliquez cet effet avant tout autre modificateur.
@@ -976,7 +981,7 @@ Les Attaques de Corps à Corps des figurines ordinaires de l'unité ciblée touc
 
 \starttable{\colors@thaumaturgy}{\textcolor{white}{\thaumaturgy}}
 
-\tablepassive{\thaumaturgypassive}{Quand vous lancez un sort de cette Voie, tous les Dés de Magie ayant donné \result{1} doivent être relancés. Si le lanceur obtient un \miscast{} en lançant un sort de cette Voie, il compte comme ayant utilisé un Dé de Magie en plus lors de la tentative de lancement.}
+\tablepassive{\thaumaturgypassive}{Quand vous lancez un sort de cette Voie non lié à un Objet de Sort, tous les Dés de Magie ayant donné \result{1} doivent être relancés. Si le lanceur obtient un \miscast{} en lançant un sort de cette Voie non lié à un Objet de Sort, il compte comme ayant utilisé un Dé de Magie en plus lors de la tentative de lancement.}
 
 \hline
 \tablelabels
@@ -993,12 +998,13 @@ La cible subit \base{1D6} \boosted{1D6+1} touches de Force \base{1D6} \boosted{1
 \hline
 \spelllabelandtitle{2}{\thaumaturgyspelltwo}
 
-\tablespellcastingvalue{\base{6+}\newline\boosted{11+}}
+\tablespellcastingvalue{\base{6+}\newline\boosted{10+}}
 \tablespellrange{\base{\caster}\newline\boosted{\distance{24}}}
 \tablespelltype{\focused\newline\boosted{Amélior.}} % care here plain french because augment was too long, so replace it with \augment for your language
 \tablespellduration{\lastsoneturn}
 \tablespelleffect{%
-La cible gagne une \breathweapon{\Strength{} 1D3+2}.
+La cible gagne une \breathweapon{\Strength{} 1D3+2}. Déterminez la Force dès que le sort est lancé avec succès.\newline
+\boosted{Ce sort ne peut cibler que les Personnages, les Champions et les unités composées d'une figurine seule.}
 }
 \hline
 \spelllabelandtitle{3}{\thaumaturgyspellthree}
@@ -1029,8 +1035,9 @@ La cible ne peut pas bénéficier de la règle \inspiringpresence{}.
 \tablespelltype{\hex}
 \tablespellduration{\lastsoneturn}
 \tablespelleffect{%
-Lancez 1D6 immédiatement après avoir lancé ce sort. Si vous obtenez un 4+, lancez un autre dé, et continuez jusqu'à ce que vous n'obteniez pas un 4+. Pour chaque 4+ obtenu, la cible subit un malus de -1 en Endurance, jusqu'à un minimum de 1.\newline
-Répétez ensuite le processus de lancer de dés. Pour chaque 4+ obtenu, la cible subit maintenant un malus de -1 en Force, jusqu'à un minimum de 1.
+Lancez 1D6 immédiatement après avoir lancé ce sort.\newline
+Sur un résultat de 1 à 3, la cible subit un malus de -1 en Endurance.\newline
+Sur un résultat de 4 à 6, la cible subit un malus de -1 en Force.
 }
 \hline
 \spelllabelandtitle{6}{\thaumaturgyspellsix}

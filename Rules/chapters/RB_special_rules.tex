@@ -134,7 +134,7 @@ Les Sauvegardes Invulnérables réussies contre des attaques avec cette règle, 
 
 \newspecialrule{crushattack}{\crushattack{} (Attaque Spéciale)}
 
-L'élément de figurine peut échanger toutes ses Attaques normales de Corps à Corps contre une unique Attaque Spéciale. Elle ne peut pas être portée comme Attaque de Soutien. Elle est résolue à Initiative 0 avec une Force de 10 et la règle \multiplewounds{1D3+1, \clippedwings}{}. Une \crushattack{} est une Attaque Spéciale, donc elle ne bénéficie jamais des équipements et règles spéciales de la figurine. Elle est cependant allouée comme si c'était une Attaque normale de Corps à Corps. La figurine peut utiliser d'autres Attaques Spéciales comme le \stomp{} ou les \impacthits{}.
+L'élément de figurine peut échanger toutes ses Attaques normales de Corps à Corps contre une unique Attaque Spéciale. Elle ne peut pas être portée comme Attaque de Soutien. Elle est résolue à Initiative 0 avec une Force de 10 et la règle \multiplewounds{1D3+1}{}. Une \crushattack{} est une Attaque Spéciale, donc elle ne bénéficie jamais des équipements et règles spéciales de la figurine. Elle est cependant allouée comme si c'était une Attaque normale de Corps à Corps. La figurine peut utiliser d'autres Attaques Spéciales comme le \stomp{} ou les \impacthits{}.
 
 \newspecialrule{poisonedattacks}{\poisonedattacks}
 
@@ -203,7 +203,7 @@ L'unité verte est touchée par une \areaattack{2}. Il y a au moins deux rangs a
 Nombre de touches : $ 2 + 2 = 4 $.\vspace*{10pt}\newline
 L'unité orange est touchée par une \areaattack{3}. Le premier rang a au moins trois figurines, tandis que le second rang n'en a qu'une. Il n'y a pas de troisième rang.\newline
 Nombre de touches : $ 3 + 1 = 4 $.\vspace*{10pt}\newline
-L'unité violette est touchée par une \areaattack{}. La valeur de l'\areaattack{} n'a pas d'importance puisqu'il n'y a qu'une seule figurine, donc il n'y a qu'un seul rang d'une seule figurine.\newline
+L'unité violette est touchée par une \areaattack{4}. Il n'y a qu'une seule figurine, donc il n'y a qu'un seul rang d'une seule figurine.\newline
 Nombre de touches : $ 1 $.\vspace*{10pt}\newline
 L'unité bleue est touchée par une \areaattack{4}. Le premier et le second rang ont trois figurines. Il n'y a pas de troisième et quatrième rang.\newline
 Nombre de touches : $ 3 + 3 = 6 $.%
@@ -257,7 +257,7 @@ L'élément de figurine gagne +1 en Force pour ses Attaques normales de Corps à
 
 \newspecialrule{hardtarget}{\hardtarget}
 
-Les Attaques de Tir ciblant une unité dont la majorité des figurines disposent de cette règle subissent une pénalité de -1 sur leurs jets pour toucher.
+Les Attaques de Tir ciblant une unité dont plus de la moitié des figurines disposent de cette règle subissent une pénalité de -1 sur leurs jets pour toucher.
 
 \newspecialrule{fightinextrarank}{\fightinextrarank}
 
@@ -301,7 +301,7 @@ La figurine traite tous les Décors comme du Terrain Découvert pour son mouveme
 
 \newspecialrule{hellfire}{\hellfire}
 
-Les sauvegardes de \regeneration{} ne peuvent pas être utilisées contre des attaques avec cette règle ou provenant d'éléments de figurine ayant cette règle. À la fin de chaque phase, toute unité ayant subi pendant cette phase au moins une blessure non sauvegardée provenant d'un élément de figurine ou d'une attaque avec cette règle subit 1D3 touches additionnelles de Force 3.
+Les sauvegardes de \regeneration{} ne peuvent pas être utilisées contre des attaques avec cette règle ou provenant d'éléments de figurine ayant cette règle. À la fin de chaque phase, toute unité ayant subi pendant cette phase au moins une blessure non sauvegardée provenant d'éléments de figurine ou d'attaques avec cette règle subit 1D3 touches additionnelles de Force 3.
 
 \newspecialrule{frenzy}{\frenzy}
 
@@ -317,7 +317,7 @@ Un Personnage qui rejoint une unité qui contient au moins une figurine avec cet
 
 \newspecialrule{strider}{\strider{}}
 
-La figurine réussit automatiquement tout test de Terrain Dangereux provoqué par les Décors. Les Décors ne peuvent pas l'empêcher d'effectuer une Marche Forcée, ni lui faire perdre des Bonus de Rangs ou la règle Indomptable. Parfois, cette règle ne fonctionne que pour certains types de Décors, qui sont alors précisés entre parenthèses.
+La figurine réussit automatiquement tout test de Terrain Dangereux provoqué par les Décors. Les Décors ne peuvent pas l'empêcher d'effectuer une Marche Forcée. Une unité dont plus de la moitié des figurines dispose de cette règle ne peut pas perdre des Bonus de Rangs ou la règle Indomptable à cause des Décors. Parfois, cette règle ne fonctionne que pour certains types de Décors, qui sont alors précisés entre parenthèses. Dans ce cas, la figurine n'est considérée comme possédant cette règle que lorsqu'elle interagit avec ce ou ces types de Décors.
 
 \newspecialrule{hatred}{\hatred}
 
@@ -428,7 +428,7 @@ Pour les figurines en plusieurs éléments, les cavaliers ne peuvent jamais port
 \newspecialrule{warplatform}{\warplatform}
 \label{warplatform}
 
-La figurine peut rejoindre et quitter une unité comme si elle était un Personnage, même si elle n'est pas un Personnage, et même si elle possède la règle \toweringpresence{}. Elle suit les règles des Personnages pour la distribution des touches. Quand elle rejoint une unité d'au moins 5 figurines (sans compter la \warplatform{}) et se déplace avec elle, elle peut effectuer une Marche Forcée même si son Type de Troupe le lui interdit normalement, par exemple si c'est un \chariot{}. Elle doit toujours être placée au centre du premier rang de l'unité qu'elle rejoint, repoussant éventuellement en arrière des figurines avec la règle \frontrank{}, et doit garder cette position à tous moments. Si deux positions sont également centrées, par exemple dans une unité avec un nombre impair de figurines au premier rang, la \warplatform{} peut être placée indifféremment aux deux endroits. Si elle ne peut pas être placée au centre du premier rang, par exemple à cause de Socles Incompatibles, ou si le premier rang est trop étroit, alors elle ne peut pas rejoindre l'unité. Ainsi, elle ne peut jamais rejoindre une unité dont les Socles sont Incompatibles et il ne peut y avoir qu'une seule \warplatform{} par unité. La figurine perd la règle \swiftstride{} associée à son Type de Troupe si c'est un \chariot{}.
+La figurine peut rejoindre et quitter une unité comme si elle était un Personnage, même si elle n'est pas un Personnage, et même si elle possède la règle \toweringpresence{}. Elle suit les règles des Personnages pour la distribution des touches. Quand elle rejoint une unité d'au moins 5 figurines (sans compter la \warplatform{}) et se déplace avec elle, elle peut effectuer une Marche Forcée même si son Type de Troupe le lui interdit normalement, par exemple si c'est un \chariot{}. Elle doit toujours être placée au centre du premier rang de l'unité qu'elle rejoint, repoussant éventuellement en arrière des figurines avec la règle \frontrank{}, et doit garder cette position à tous moments. Si deux positions sont également centrées, par exemple dans une unité avec un nombre impair de figurines au premier rang, la \warplatform{} peut être placée indifféremment aux deux endroits. Si elle ne peut pas être placée au centre du premier rang, par exemple à cause de Socles Incompatibles, ou si le premier rang est trop étroit, alors elle ne peut pas rejoindre l'unité. Ainsi, elle ne peut jamais rejoindre une unité dont les Socles sont Incompatibles et il ne peut y avoir qu'une seule \warplatform{} par unité. Une figurine de type \chariot{} perd la règle \swiftstride{} associée à son Type de Troupe, mais peut la retrouver via d'autres moyens.
 
 \newspecialrule{accurate}{\accurate}
 
