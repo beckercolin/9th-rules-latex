@@ -3,7 +3,7 @@
 
 \newcommand{\booktitle}{Livre de Magie}
 \newcommand{\version}{1.3.2}
-\newcommand{\frenchversion}{0.1}
+\newcommand{\frenchversion}{0.3}
 
 \hypersetup{pdftitle={T9A - \booktitle}}
 
@@ -53,7 +53,7 @@
 
 \basictitle{howtousethisdoc}{\howtousethisdoc}
 
-Toutes les Voies de Magie sont présentées dans ce livre. Chaque Voie comprend un certain nombre de sorts. On tire en général au hasard au début de la partie les sorts que connaissent chaque \wizard{}, en utilisant les règles décrites dans le paragraphe \og Générer les Sorts \fg{} du Livre de Règles. Chaque \wizard{} doit choisir une Voie de Magie parmi celles auxquelles il a accès. Ce choix doit être indiqué dans la Liste d'Armée. Les sorts sont répartis en plusieurs catégories :
+Toutes les Voies de Magie sont présentées dans ce livre. Chaque \wizard{} doit choisir une Voie de Magie parmi celles auxquelles il a accès. Ce choix doit être indiqué dans la Liste d'Armée. Chaque Voie comprend un certain nombre de sorts. En général, on tire au hasard au début de la partie les sorts que connaît chaque \wizard{}, en utilisant les règles décrites dans le paragraphe \og Générer les Sorts \fg{} du Livre de Règles. Les sorts sont répartis en plusieurs catégories :
 
 \vspace*{-10pt}
 \begin{multicols}{2}
@@ -62,14 +62,14 @@ Toutes les Voies de Magie sont présentées dans ce livre. Chaque Voie comprend 
 
 \basicsubtitle{\learnedspells}
 
-Ce sont les sorts numérotés entre 1 et 6. Ils n'ont pas d'effets particuliers en dehors de la façon dont ils sont générés (voir \og Générer les Sorts \fg{}).
+Ce sont les sorts numérotés entre 1 et 6. Ils n'ont pas d'effet particulier en dehors de la façon dont ils sont générés (voir \og Générer les Sorts \fg{}).
 
 \vspace*{-25pt}
 \basictitlenotoc{\attributespellnumber}
 
 \basicsubtitle{\attributespells}
 
-Ce sont les sorts dont le label est un \og \attributespellnumber{} \fg{}. Tout \wizard{} qui génère au moins un Sort depuis une Voie connaît automatiquement l'\attributespell{}. Les \attributespells{} sont des sorts particuliers qui ne peuvent pas être lancés indépendamment. Ils peuvent être lancés gratuitement, si le lanceur le souhaite, après qu'un sort de la même Voie a été lancé avec succès. La cible doit être choisie en même temps que celle du sort déclenchant. Les Attributs ne peuvent pas être dissipés.
+Ce sont les sorts dont le label est un \og \attributespellnumber{} \fg{}. Tout \wizard{} qui génère au moins un Sort depuis une Voie connaît automatiquement l'\attributespell{}. Les \attributespells{} sont des sorts particuliers qui ne peuvent pas être lancés indépendamment. Ils peuvent être lancés gratuitement, si le lanceur le souhaite, après qu'un sort de la même Voie a été lancé avec succès. La cible doit être choisie en même temps que celle du sort le déclenchant. Les Attributs ne peuvent pas être dissipés.
 
 \columnbreak
 
@@ -84,7 +84,7 @@ Le \learnedspell{} numéroté 0 est un type spécial de \learnedspell{} qu'un \w
 
 \basicsubtitle{\traitspells}
 
-Ce sont les sorts dont le label est un \og \traitspellnumber{} \fg{}. Ils n'ont pas d'effets particuliers en dehors de la façon dont ils sont générés : tout \wizard{} qui génère au moins un Sort d'une Voie connaît automatiquement le \traitspell{} de cette Voie.
+Ce sont les sorts dont le label est un \og \traitspellnumber{} \fg{}. Ils n'ont pas d'effet particulier en dehors de la façon dont ils sont générés : tout \wizard{} qui génère au moins un Sort d'une Voie connaît automatiquement le \traitspell{} de cette Voie.
 
 \vspace*{\fill}
 \end{multicols}
@@ -971,7 +971,7 @@ La cible gagne la règle \stupidity{}. Elle subit un malus de -1 en Commandement
 \tablespelltype{\base{\hex}\newline\boosted{Amélior.}} % care here plain french because augment was too long, so replace it with \augment for your language
 \tablespellduration{\lastsoneturn}
 \tablespelleffect{%
-Les Attaques de Corps à Corps des figurines ordinaires de l'unité ciblée touchent et blessent sur 4+, quels que soient leurs Capacité de Combat, Force et Endurance. Appliquez cet effet avant tout autre modificateur.
+Les Attaques de Corps à Corps des figurines ordinaires de l'unité ciblée touchent et blessent sur 4+, quelles que soient leurs Capacité de Combat, Force et Endurance. Appliquez cet effet avant tout autre modificateur.
 }
 
 \closetable{}
@@ -1009,7 +1009,7 @@ La cible gagne une \breathweapon{\Strength{} 1D3+2}. Déterminez la Force dès q
 \hline
 \spelllabelandtitle{3}{\thaumaturgyspellthree}
 
-\tablespellcastingvalue{\base{5+}\newline\boosted{11+}}
+\tablespellcastingvalue{\base{7+}\newline\boosted{11+}}
 \tablespellrange{\base{\distance{12}}\newline\boosted{\distance{24}}}
 \tablespelltype{\focused\newline\hex\newline\direct\newline\damage}
 \tablespellduration{\instant}
